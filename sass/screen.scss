@@ -1,0 +1,43 @@
+// reset everything
+@import "compass/reset";
+
+// variables and macros
+@import "core/colours_default";
+@import "colours_nigeria";
+@import "core/core";
+
+// very general styling
+@import "core/common";
+@import "core/html_elements";
+@import "core/buttons";
+
+// specific chunks of all or several pages
+@import "core/header";
+@import "core/menu";
+@import "core/breadcrumb";
+@import "core/footer";
+@import "core/page";
+@import "core/object_menu";
+@import "core/search";
+@import "core/vcard";
+@import "core/social-and-tools";
+
+// specific pages and parts of pages
+@import "core/hansard";
+@import "core/comments";
+@import "core/listing";
+@import "core/scorecard";
+@import "core/pagination";
+@import "core/ajax_dialog";
+@import "core/home_page";
+@import "core/info_pages";
+@import "core/hide-reveal";
+
+// printer specific
+@import "core/print";
+
+// overides to external features
+@import "core/social";
+
+// Nigeria specific
+@import "nigeria_overrides";

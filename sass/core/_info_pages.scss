@@ -1,0 +1,74 @@
+// ============ info page markdown styles ============
+
+.infopage {
+  margin: 20px 0;
+  h1 {
+    margin: 0 10px 20px 10px; }
+  h2, h3 {}
+  h4 {
+    margin: 30px 0 10px 0;
+    padding: 0 10px 5px 10px;
+    border-bottom: 2px solid $colour_muted;
+    line-height: 20px; }
+  p {
+    padding: 0 10px; }
+  ul, ol, dl {
+    margin: 0 10px; }
+  hr {
+    border: none;
+    background: $colour_primary;
+    height: 2px; }
+  table {
+    border: 2px solid $colour_muted;
+  }
+  th, td {
+    padding: 0.5em 1em;
+    border-width: 0;
+    border-right-width: 1px;
+    border-style:  solid;
+    border-color:  $colour_muted;
+    &:last-child {
+      border-right: none; } }
+  th {
+    font-weight: bold;
+    background-color: $colour_lighter_grey;
+    border-bottom-width: 2px; }
+  td {
+    border-bottom-width: 1px; }
+  tr:last-child td {
+    border-bottom: none; } }
+
+.infopage-tag-list {
+  li {
+    float: left;
+    display: inline;
+
+    padding: 0.5em 1em;
+    margin-right: 0.5em;
+
+    background-color: $colour_lighter_grey;
+    border: 1px solid $colour_muted;
+    @include border-radius(0.25em);
+  }
+}
+
+.infopage-category-summary {
+  position: relative;
+  left: -1em;
+  margin-bottom: 1em;
+  padding: 0.5em 1em;
+  background-color: $colour_lighter_grey;
+  @include border-radius(1em);
+}
+
+@media only all and (min-width: 640px), print {
+  .infopage {
+    margin: 0;
+    h1 {
+      margin: 0 0 20px 0; }
+    h4 {
+      padding: 0 0 5px 0; }
+    p {
+      padding: 0; }
+    ul, ol, dl {
+      margin: 0; } } }

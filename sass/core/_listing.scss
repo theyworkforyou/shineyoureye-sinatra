@@ -1,0 +1,150 @@
+ul.listing {
+  @include list-reset-soft;
+  li {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    background: $colour_lighter_grey;
+    margin-bottom: 5px;
+    padding: 15px;
+    h4 a {
+      text-decoration: none;
+      color: $colour_black; }
+    img {
+      border: 5px solid $colour_muted;
+      float: left;
+      width: 60px;
+      height: 60px;
+      margin: 0 20px 0 0; }
+    section {
+      max-width: 840px;
+      float: none;
+      clear: none;
+      padding: 0 40px 0 90px;
+      h4 {
+        font-weight: bold; }
+      ul {
+        @include list-reset-copy;
+        &.tools {
+          @include list-reset;
+          position: absolute;
+          right: 15px;
+          top: 15px;
+          li {
+            margin-left: 5px;
+            a {
+              @include button-reset-text;
+              &.like {
+                @include button-text-green; }
+              &.report {
+                @include button-text-red; } } } } }
+      p {
+        font-size: 12px;
+        &.meta {
+          font-style: italic; }
+        margin: 0 !important; }
+      .read-more-wrap {
+        position: absolute;
+        right: 15px;
+        top: 35px;
+        bottom: auto; }
+      .meta {
+        color: $colour_grey; }
+      a.read-more {
+        @include button-reset-text;
+        display: block;
+        text-indent: -999999px;
+        padding: 0;
+        width: 24px;
+        height: 24px;
+        background: $colour_black url(/static/images/chevron-right.png) 6px 2px no-repeat;
+        @include border-radius(24px);
+        &:hover {
+          background: $colour_blackish url(/static/images/chevron-right.png) 6px center no-repeat; } } } } }
+
+@media only all and (min-width: 640px), print {
+  ul.listing {
+    li {
+      img {
+        width: auto;
+        height: auto;
+        max-width: 90px;
+        max-height: 90px; }
+      .thumbnail-image-link {
+        width: 90px;
+        /* force fixed width for links that may contain narrow images */
+        text-align: right; }
+      section {
+        clear: none;
+        .read-more-wrap {
+          top: auto;
+          bottom: 15px; }
+        a.read-more {
+          @include button-reset-text;
+          text-indent: 0;
+          width: auto;
+          height: auto; } } } } }
+
+
+ul.position-listing {
+
+  padding: 0;
+  border-color: #bbb;
+  border-style: solid;
+  border-width: 0 1px;
+
+  li {
+
+    margin: 0;
+    padding: 4px;
+    min-height: 50px;
+    
+    list-style: none;
+    border-bottom: 1px solid #bbb;
+
+    &:first-child {
+      border-top: 1px solid #bbb;
+    }
+
+    &:nth-child(odd) {
+      background-color: #f4f4f4;
+    }
+
+    span.name {
+      font-size: 125%;
+    }
+
+    span.more {
+      float: right;
+    }
+
+    .position-image-wrapper {
+      width: 50px;
+      height: 50px;
+      overflow: hidden;
+      display: inline-block;
+      float: left;
+      margin-right: 1.5em;
+      position: relative;
+
+      img {
+        width:  50px;
+        height: auto;
+      }
+    }
+  }
+}
+
+div.search-filters, div.search-pagination {
+  color: #eee;
+  padding: 8px;
+  min-height: 1.5em;
+  font-size: 90%;
+}
+
+div.search-filters {
+  @include background(linear-gradient(#27A942, #22913B));
+}
+div.search-pagination {
+  @include background(linear-gradient(#333132, #4C4C4E));
+}

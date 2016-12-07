@@ -1,0 +1,186 @@
+// --------------------------------------------------------------
+
+// _CORE CSS
+// mzalendo.com
+
+// AUTHOR: Josh Angell, Supercool
+// josh [at] supercooldesign.co.uk
+
+// 1. VARIABLES
+// 2. MIXINS
+// 3. FUNCTIONS
+
+// --------------------------------------------------------------
+@import "compass";
+
+
+// Would like to add the size for the media queries as variables too, but that
+// is not currently supported. Should be from Sass 3.2.0 onwards though.
+
+// 2. MIXINS
+// --------------------------------------------------------------
+// Green Gradient
+@mixin gradient1 {
+  background: $colour_primary_light;
+  @include background(linear-gradient($colour_primary_light, $colour_primary)); }
+
+@mixin gradient1b {
+  background: $colour_primary;
+  @include background(linear-gradient($colour_primary, $colour_primary_light)); }
+
+// Light Grey Gradient
+@mixin gradient2 {
+  background: #ebebeb;
+  @include background(linear-gradient(#ebebeb, #f5f5f5)); }
+
+@mixin gradient2b {
+  background: #f5f5f5;
+  @include background(linear-gradient(#f5f5f5, #ebebeb)); }
+
+// Button reset
+@mixin button-reset {
+  cursor: pointer;
+  display: block;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: auto;
+  height: auto;
+  text-indent: -999999px;
+  @include border-radius(2px); }
+
+@mixin button-reset-text {
+  @include inline-block;
+  cursor: pointer;
+  background: $colour_grey;
+  color: $colour_white;
+  text: {
+    decoration: none;
+    transform: uppercase; };
+  font: {
+    size: 10px;
+    weight: bold; };
+  line-height: 1;
+  padding: 5px 8px;
+  @include border-radius(2px);
+  &:hover {
+    background: $colour_grey / 0.8;
+    color: $colour_white;
+    text-decoration: none; } }
+
+@mixin button-text-red {
+  @include button-reset-text;
+  background: $colour_red;
+  &:hover {
+    background: $colour_red / 0.7; } }
+
+@mixin button-text-green {
+  @include button-reset-text;
+  background: $colour_primary_light;
+  &:hover {
+    background: $colour_primary_light / 0.9; } }
+
+@mixin big-button-reset-text($rad: 5px) {
+  @include button-reset-text;
+  text-transform: none;
+  font-size: 14px;
+  padding: 5px 8px;
+  @include inline-block;
+  @include border-radius($rad); }
+
+@mixin big-button-text-green {
+  @include big-button-reset-text;
+  background: $colour_primary_light;
+  @include background(linear-gradient($colour_primary_light / 0.9, $colour_primary_light));
+  &:hover {
+    background: $colour_primary_light / 0.9;
+    @include background(linear-gradient($colour_primary_light, $colour_primary_light / 0.9)); } }
+
+@mixin big-button-text-red {
+  @include big-button-reset-text;
+  background: $colour_red;
+  @include background(linear-gradient($colour_red / 0.7, $colour_red));
+  &:hover {
+    background: $colour_red / 0.7;
+    @include background(linear-gradient($colour_red, $colour_red / 0.7)); } }
+
+// list resets
+@mixin list-reset-copy {
+  padding-left: 30px;
+  margin-bottom: 20px;
+  li {
+    font-size: 14px;
+    line-height: 20px;
+    list-style: disc;
+    margin-bottom: 10px;
+    background: none;
+    padding: 0; } }
+
+@mixin list-reset-soft {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border: 0; } }
+
+@mixin list-reset {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    float: left;
+    display: inline;
+    a {
+      float: left;
+      display: block; } } }
+
+@mixin list-reset-nopad {
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+    li {
+      list-style-type: none;
+      margin: 0;
+      border: 0; } }
+
+// Clearfix
+.clearfix { zoom: 1; }
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after { clear: both; }
+
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    & {
+        *zoom: 1;
+    }
+}
+
+// .ellipsis {
+//   text-overflow: ellipsis;
+//   overflow: hidden;
+//   white-space: nowrap;
+// }
+
+// textarea[contenteditable] {-webkit-appearance: none;}
+
+// 3. FUNCTIONS
+// --------------------------------------------------------------
