@@ -1,0 +1,7 @@
+<p><%= @country.name %></p>
+
+<ul>
+  <% @country.legislatures.first.popolo.areas.each do |area| %>
+  <li><%= area.name %></li>
+  <% end %>
+</ul>
