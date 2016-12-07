@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+  <%= erb :_head %>
+
+  <body>
+    <!-- {% if jekyll.environment == 'production' %}
+      {% google_analytics %}
+    {% endif %}
+
+    {% facebook_javascript_sdk %} -->
+
+
+    <%= erb :_main_menu %>
+
+    <%= erb :_header %>
+
+    <!-- {% include breadcrumbs.html %} -->
+
+    <div id="page">
+      <div class="page-wrapper wrapper">
+        <%= yield %>
+        <br clear="both">
+      </div>
+    </div>
+
+    <%= erb :_footer %>
+
+  </body>
+</html>
