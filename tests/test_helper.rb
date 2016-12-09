@@ -14,5 +14,12 @@ module Minitest
     def app
       Sinatra::Application
     end
+
+    def new_file(contents)
+      file = Tempfile.new(['foo', '.md'])
+      file.write(contents)
+      file.close
+      file
+    end
   end
 end
