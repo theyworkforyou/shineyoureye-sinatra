@@ -17,3 +17,4 @@ Rake::TestTask.new do |t|
   t.libs << 'tests'
 end
 
+task default: ['test:doc', 'test:web']
