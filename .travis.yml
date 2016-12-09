@@ -1,0 +1,7 @@
+language: ruby
+cache: bundler
+script:
+  - bundle exec rake test:web
+sudo: false
+rvm:
+  - 2.3.1
