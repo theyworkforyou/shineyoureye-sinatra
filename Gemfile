@@ -9,6 +9,7 @@ gem 'compass'
 gem 'everypolitician', '~> 0.20.0', github: 'everypolitician/everypolitician-ruby'
 gem 'nokogiri', '>= 1.6.7'
 gem 'rake'
+gem 'rdiscount'
 gem 'sinatra'
 
 group :test do
