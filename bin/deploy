@@ -1,0 +1,24 @@
+#!/bin/bash
+
+set -e
+
+PROSE_REPO_URL='https://github.com/theyworkforyou/shineyoureye-prose.git'
+PROSE_DIR='prose'
+
+# Make sure we're in the right directory:
+cd "$(dirname ${BASH_SOURCE[0]})"/..
+
+# Extract the latest prose.io-generated content:
+if [ -d "$PROSE_DIR" ]
+then
+    (cd "$PROSE_DIR" && git fetch origin && git reset --hard origin/gh-pages)
+else
+    git clone "$PROSE_REPO_URL" "$PRaOSE_DIR"
+fi
+
+# Symlink the media directories into the right place:
+for e in "${PROSE_DIR}"/media/*
+do
+    DIR="${e##*/}"
+    ln -snf "../prose/media/$DIR" "public/$DIR"
+done
