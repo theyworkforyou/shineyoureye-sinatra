@@ -4,6 +4,10 @@ module Document
     def initialize(filename:, baseurl:)
       @filename = filename
       @baseurl = baseurl
+      @date = nil
+      if /^(\d{4}-\d{2}-\d{2})/ =~ File.basename(filename)
+        @date = Date.iso8601($1)
+      end
     end
 
     def title
@@ -21,6 +25,8 @@ module Document
     def body
       markdown.as_html
     end
+
+    attr_reader :date
 
     private
 
