@@ -32,12 +32,16 @@ module Document
 
     attr_reader :filename, :baseurl
 
+    def filecontents
+      @contents ||= File.open(filename, 'r') { |f| f.read }
+    end
+
     def frontmatter
-      @frontmatter ||= Frontmatter.new(filename: filename)
+      @frontmatter ||= Frontmatter.new(filecontents: filecontents)
     end
 
     def markdown
-      @markdown ||= Markdown.new(filename: filename)
+      @markdown ||= Markdown.new(filecontents: filecontents)
     end
   end
 end

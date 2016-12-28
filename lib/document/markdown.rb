@@ -8,12 +8,12 @@ module Document
     #     lib/jekyll/document.rb#L10
     YAML_FRONT_MATTER_REGEXP = %r!\A(---\s*\n.*?\n?)^((---|\.\.\.)\s*$\n?)!m
 
-    def initialize(filename:)
-      @filename = filename
+    def initialize(filecontents:)
+      @filecontents = filecontents
     end
 
     def raw
-      contents.sub(YAML_FRONT_MATTER_REGEXP, '')
+      filecontents.sub(YAML_FRONT_MATTER_REGEXP, '')
     end
 
     def as_html
@@ -22,20 +22,10 @@ module Document
 
     private
 
-    attr_reader :filename
-
-    def file
-      @file_memo ||= File.open(filename, 'r')
-    end
+    attr_reader :filecontents
 
     def parser
       @parser ||= RDiscount.new(raw)
-    end
-
-    def contents
-      @contents ||= file.read
-      file.close
-      @contents
     end
   end
 end

@@ -3,8 +3,8 @@ require 'yaml'
 
 module Document
   class Frontmatter
-    def initialize(filename:)
-      @filename = filename
+    def initialize(filecontents:)
+      @filecontents = filecontents
     end
 
     def title
@@ -21,10 +21,10 @@ module Document
 
     private
 
-    attr_reader :filename
+    attr_reader :filecontents
 
     def parse
-      @hash_memo ||= YAML::load_file(filename) || {}
+      YAML::load(filecontents) || {}
     end
 
     def fetch(key, default_value = '')
