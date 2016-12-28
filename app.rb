@@ -12,12 +12,13 @@ require_relative 'lib/page/homepage'
 require_relative 'lib/page/info'
 require_relative 'lib/page/places'
 require_relative 'lib/page/people'
+require_relative 'lib/page/person'
 require_relative 'lib/page/posts'
 require_relative 'lib/page/post'
 
+set :content_dir, File.join(__dir__, 'prose')
 set :datasource, ENV.fetch('DATASOURCE', 'https://github.com/everypolitician/everypolitician-data/raw/master/countries.json')
 set :index, EveryPolitician::Index.new(index_url: settings.datasource)
-set :content_dir, File.join(__dir__, 'prose')
 set :mapit_url, 'http://nigeria.mapit.mysociety.org/areas/'
 
 get '/' do
@@ -68,6 +69,12 @@ end
 get '/position/representative/' do
   @page = Page::People.new(title: 'Federal Representative', people_by_legislature: representatives)
   erb :representatives
+end
+
+get '/person/:id/' do |id|
+  pass if representatives.none?(id)
+  @page = Page::Person.new(person: representatives.find_single(id))
+  erb :person
 end
 
 get '/fonts/bootstrap/:filename' do |filename|

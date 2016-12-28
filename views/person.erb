@@ -1,0 +1,78 @@
+<div class="title-space">
+  <div class="title-space__name">
+    <h1><%= @page.title %></h1>
+    <p>Politician profile</p>
+  </div>
+</div>
+
+<div class="profile-pic">
+  <% if @page.person.proxy_image %>
+    <img src="<%= @page.person.proxy_image %>" srcset="<%= @page.person.proxy_image %>" alt="<%= @page.person.name %>">
+  <% else %>
+    <img src="/images/person-210x210.jpg" alt="Person logo">
+  <% end %>
+</div>
+
+<div class="profile-info">
+
+  <div class="sidebar">
+    <div class="constituency-party">
+      <% if @page.person.area %>
+      <h3>Constituency</h3>
+      <ul>
+        <li><a href="<%= @page.person.area.url %>"><%= @page.person.area.name %></a></li>
+      </ul>
+      <% end %>
+
+      <h3>Party</h3>
+      <ul class="party-memberships">
+        <li><a href="<%= @page.person.party_url %>" class="party-membership party-membership--political-party"><%= @page.person.party_name %></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="large-container profile-bulk">
+
+  <% if @page.summary %>
+  <h2>Summary</h2>
+  <div class="person-summary">
+    <p><%= @page.summary %></p>
+  </div>
+  <% end %>
+
+  <% if @page.executive_positions.size > 0 %>
+  <h2>Experience</h2>
+  <ul class="unstyled-list">
+    <% @page.executive_positions.each do |position| %>
+    <li>
+      <a href="<%= position.executive_positions_by_role.url %>" class="experience__item">
+        <%= 'include person_experience_item.html item=position' %>
+      </a>
+    </li>
+    <% end %>
+  </ul>
+  <% end %>
+
+  <% if @page.job_history.size > 0 %>
+  <h2>Job history</h2>
+  <ul class="unstyled-list">
+    <% @page.job_history.each do |job| %>
+    <li class="experience__item">
+      <%= 'include person_experience_item.html item=job' %>
+    </li>
+    <% end %>
+  </ul>
+  <% end %>
+
+  <% if @page.education.size > 0 %>
+  <h2>Education</h2>
+  <ul class="unstyled-list">
+    <% @page.education.each do |education| %>
+    <li>
+      <%= 'include person_experience_item.html item=education' %>
+    </li>
+    <% end %>
+  </ul>
+  <% end %>
+</div>
