@@ -3,6 +3,7 @@ require 'sinatra'
 
 require_relative 'lib/document/markdown_with_frontmatter'
 require_relative 'lib/helpers/constants_helper'
+require_relative 'lib/page/posts'
 
 set :datasource, ENV.fetch('DATASOURCE', 'https://github.com/everypolitician/everypolitician-data/raw/master/countries.json')
 set :index, EveryPolitician::Index.new(index_url: settings.datasource)
@@ -18,9 +19,7 @@ get '/places/' do
 end
 
 get '/blog/' do
-  @posts = Dir.glob("#{posts_dir}/*.md").map do |filename|
-    Document::MarkdownWithFrontmatter.new(filename: filename, baseurl: '/blog/')
-  end.sort_by { |d| d.date }.reverse
+  @page = Page::Posts.new(directory: posts_dir)
   erb :posts
 end
 

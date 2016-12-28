@@ -1,7 +1,23 @@
 <h1>Blog</h1>
 
-<ul>
-  <% @posts.each do |post| %>
-  <li><a href="<%= post.url %>"><%= post.title %></a></li>
+<div class="blog-list">
+
+  <% @page.sorted_posts.each do |post| %>
+
+  <div class="blog-in-a-list">
+
+    <h2><a href="<%= post.url %>"><%= post.title %></a></h2>
+
+    <p class="meta"><%= @page.format_date(post.date) %></p>
+
+    <div>
+      <%= post.body %>
+    </div>
+
+    <p><a href="<%= post.url %>">Read more …</a></p>
+
+  </div>
+
   <% end %>
-</ul>
+
+</div>
