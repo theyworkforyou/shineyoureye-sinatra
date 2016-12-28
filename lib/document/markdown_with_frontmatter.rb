@@ -41,7 +41,7 @@ module Document
     end
 
     def markdown
-      @markdown ||= Markdown.new(filecontents: filecontents)
+      @markdown ||= MarkdownParser.new(filecontents: filecontents)
     end
   end
 end

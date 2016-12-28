@@ -2,7 +2,7 @@
 require 'rdiscount'
 
 module Document
-  class Markdown
+  class MarkdownParser
     # Regex from Jekyll
     # https://github.com/jekyll/jekyll/blob/fac041933c3e328ff73dc91faeaeb08182ae3c74/
     #     lib/jekyll/document.rb#L10

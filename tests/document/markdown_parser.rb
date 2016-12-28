@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 require 'test_helper'
-require_relative '../../lib/document/markdown'
+require_relative '../../lib/document/markdown_parser'
 
-describe 'Document::Markdown' do
+describe 'Document::MarkdownParser' do
   describe '#raw' do
     it 'detects an empty file' do
       contents = ''
@@ -41,6 +41,6 @@ foo: bar
   end
 
   def parser(contents)
-    Document::Markdown.new(filecontents: contents)
+    Document::MarkdownParser.new(filecontents: contents)
   end
 end
