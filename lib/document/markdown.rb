@@ -4,7 +4,8 @@ require 'rdiscount'
 module Document
   class Markdown
     # Regex from Jekyll
-    # https://github.com/jekyll/jekyll/blob/master/lib/jekyll/document.rb#L10
+    # https://github.com/jekyll/jekyll/blob/fac041933c3e328ff73dc91faeaeb08182ae3c74/
+    #     lib/jekyll/document.rb#L10
     YAML_FRONT_MATTER_REGEXP = %r!\A(---\s*\n.*?\n?)^((---|\.\.\.)\s*$\n?)!m
 
     def initialize(filename:)
