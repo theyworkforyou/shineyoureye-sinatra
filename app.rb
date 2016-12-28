@@ -3,7 +3,7 @@ require 'everypolitician'
 
 require_relative 'lib/document/frontmatter'
 require_relative 'lib/document/markdown'
-require_relative 'lib/document/document'
+require_relative 'lib/document/markdown_with_frontmatter'
 
 set :datasource, ENV.fetch('DATASOURCE', 'https://github.com/everypolitician/everypolitician-data/raw/master/countries.json')
 set :index, EveryPolitician::Index.new(index_url: settings.datasource)
@@ -24,7 +24,7 @@ end
 
 get '/blog/' do
   @posts = Dir.glob("#{prose_dir('posts')}/*.md").map do |filename|
-    Document::Document.new(filename: filename, baseurl: '/blog/')
+    Document::MarkdownWithFrontmatter.new(filename: filename, baseurl: '/blog/')
   end.sort_by { |d| d.date }.reverse
   erb :posts
 end
@@ -34,6 +34,6 @@ get '/blog/:slug' do |slug|
   posts = Dir.glob("#{prose_dir('posts')}/#{date_glob}-#{slug}.md")
   raise Sinatra::NotFound if posts.length == 0
   raise "Multiple posts matched '#{slug}': #{posts}" if posts.length > 1
-  @post = Document::Document.new(filename: posts[0], baseurl: '/blog/')
+  @post = Document::MarkdownWithFrontmatter.new(filename: posts[0], baseurl: '/blog/')
   erb :post
 end

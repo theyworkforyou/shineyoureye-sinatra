@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 module Document
-  class Document
+  class MarkdownWithFrontmatter
     def initialize(filename:, baseurl:)
       @filename = filename
       @baseurl = baseurl

@@ -1,15 +1,19 @@
 # frozen_string_literal: true
 require 'test_helper'
-require_relative '../../lib/document/document'
+require_relative '../../lib/document/markdown_with_frontmatter'
 
-describe 'Document::Document' do
+describe 'Document::MarkdownWithFrontmatter' do
   let(:file) { new_file('---
 title: A Title
 slug: a-slug
 published: true
 ---
-# Hello World') }
-  let(:document) { Document::Document.new(filename: file.path, baseurl: '/events/') }
+# Hello World')
+  }
+  let(:document) { Document::MarkdownWithFrontmatter.new(
+    filename: file.path,
+    baseurl: '/events/')
+  }
 
   it 'has a title' do
     document.title.must_equal('A Title')
