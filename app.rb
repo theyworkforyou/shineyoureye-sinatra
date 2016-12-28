@@ -1,15 +1,17 @@
+require 'bootstrap-sass'
 require 'everypolitician'
 require 'sinatra'
-require 'bootstrap-sass'
 
 require_relative 'lib/document/finder'
+require_relative 'lib/ep/people_by_legislature'
 require_relative 'lib/helpers/filepaths_helper'
 require_relative 'lib/helpers/layout_helper'
-require_relative 'lib/mapit/mappings'
+require_relative 'lib/helpers/settings_helper'
 require_relative 'lib/mapit/wrapper'
 require_relative 'lib/page/homepage'
 require_relative 'lib/page/info'
 require_relative 'lib/page/places'
+require_relative 'lib/page/people'
 require_relative 'lib/page/posts'
 require_relative 'lib/page/post'
 
@@ -59,14 +61,13 @@ get '/info/:slug' do |slug|
 end
 
 get '/place/is/federal-constituency/' do
-  mappings = Mapit::Mappings.new(
-    fed_to_sta_ids_mapping_filename: './mapit/fed_to_sta_area_ids_mapping.csv',
-    pombola_slugs_to_mapit_ids_filename: './mapit/pombola_place_slugs_to_mapit.csv',
-    mapit_to_ep_areas_filename: './mapit/mapit_to_ep_area_ids_mapping.csv'
-  )
-  mapit = Mapit::Wrapper.new(mapit_url: settings.mapit_url, mapit_mappings: mappings, baseurl: '/place/')
   @page = Page::Places.new('Federal Constituencies (Current)', mapit.federal_constituencies)
   erb :federal
+end
+
+get '/position/representative/' do
+  @page = Page::People.new(title: 'Federal Representative', people_by_legislature: representatives)
+  erb :representatives
 end
 
 get '/fonts/bootstrap/:filename' do |filename|
@@ -75,4 +76,12 @@ end
 
 get '/javascripts/bootstrap/:filename' do |filename|
   send_file(File.join(Bootstrap.javascripts_path, filename))
+end
+
+def representatives
+  EP::PeopleByLegislature.new(legislature: house, mapit: mapit, baseurl: '/person/')
+end
+
+def mapit
+  Mapit::Wrapper.new(mapit_url: mapit_url, mapit_mappings: mappings, baseurl: '/place/')
 end
