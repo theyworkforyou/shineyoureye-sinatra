@@ -1,8 +1,6 @@
 require 'sinatra'
 require 'everypolitician'
 
-require_relative 'lib/document/frontmatter_parser'
-require_relative 'lib/document/markdown_parser'
 require_relative 'lib/document/markdown_with_frontmatter'
 
 set :datasource, ENV.fetch('DATASOURCE', 'https://github.com/everypolitician/everypolitician-data/raw/master/countries.json')
