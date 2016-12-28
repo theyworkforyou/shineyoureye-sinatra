@@ -10,7 +10,7 @@ module Document
     end
 
     def date
-      Date.iso8601($1) if /^(\d{4}-\d{2}-\d{2})/ =~ File.basename(filename)
+      Date.iso8601($1) if /^(\d{4}-\d{2}-\d{2})/ =~ basename
     end
 
     def title
@@ -32,6 +32,10 @@ module Document
     private
 
     attr_reader :filename, :baseurl
+
+    def basename
+      File.basename(filename)
+    end
 
     def filecontents
       @contents ||= File.open(filename, 'r') { |f| f.read }
