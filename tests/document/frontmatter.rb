@@ -27,7 +27,14 @@ slug: a-slug
 
     it 'knows if it is published' do
       file = new_file('---
-published: true
+published: false
+---')
+      Document::Frontmatter.new(filename: file.path).published?.must_equal(false)
+    end
+
+    it 'publishes by default if there is no published field' do
+      file = new_file('---
+foo: bar
 ---')
       Document::Frontmatter.new(filename: file.path).published?.must_equal(true)
     end

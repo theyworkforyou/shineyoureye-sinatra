@@ -16,7 +16,7 @@ module Document
     end
 
     def published?
-      fetch('published')
+      fetch('published', true)
     end
 
     private
@@ -27,8 +27,8 @@ module Document
       @hash_memo ||= YAML::load_file(filename) || {}
     end
 
-    def fetch(key)
-      parse.fetch(key, '')
+    def fetch(key, default_value = '')
+      parse.fetch(key, default_value)
     end
   end
 end
