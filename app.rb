@@ -4,6 +4,7 @@ require 'sinatra'
 require_relative 'lib/document/markdown_with_frontmatter'
 require_relative 'lib/helpers/constants_helper'
 require_relative 'lib/page/posts'
+require_relative 'lib/page/post'
 
 set :datasource, ENV.fetch('DATASOURCE', 'https://github.com/everypolitician/everypolitician-data/raw/master/countries.json')
 set :index, EveryPolitician::Index.new(index_url: settings.datasource)
@@ -24,10 +25,6 @@ get '/blog/' do
 end
 
 get '/blog/:slug' do |slug|
-  date_glob = '[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]'
-  posts = Dir.glob("#{posts_dir}/#{date_glob}-#{slug}.md")
-  raise Sinatra::NotFound if posts.length == 0
-  raise "Multiple posts matched '#{slug}': #{posts}" if posts.length > 1
-  @post = Document::MarkdownWithFrontmatter.new(filename: posts[0], baseurl: '/blog/')
+  @page = Page::Post.new(directory: posts_dir, slug: slug)
   erb :post
 end

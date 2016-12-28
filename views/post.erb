@@ -1,5 +1,13 @@
-<h1><%= @post.title %></h1>
+<div class="blog-post">
 
-<p><%= @post.date.strftime("%B %-d, %Y") %></p>
+  <h1 class="page-title"><%= @page.title %></h1>
 
-<%= @post.body %>
+  <p class="meta"><%= @page.date %></p>
+
+  <div class="markdown infopage">
+    <%= @page.body %>
+  </div>
+
+</div>
+
+<%= erb :_comments %>
