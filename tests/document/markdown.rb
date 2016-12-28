@@ -6,20 +6,19 @@ describe 'Document::Markdown' do
   describe '#raw' do
     it 'detects an empty file' do
       contents = ''
-      Document::Markdown.new(filecontents: contents).raw.must_equal('')
+      parser(contents).raw.must_equal('')
     end
 
     it 'returns nothing if there is frontmatter but no markdown' do
       contents = '---
 foo: bar
 ---'
-      Document::Markdown.new(filecontents: contents).raw.must_equal('')
+      parser(contents).raw.must_equal('')
     end
 
     it 'returns only markdown if there is no frontmatter' do
       contents = '# A markdown header'
-      markdown = Document::Markdown.new(filecontents: contents)
-      markdown.raw.must_equal('# A markdown header')
+      parser(contents).raw.must_equal('# A markdown header')
     end
 
     it 'returns only markdown if it has a frontmatter' do
@@ -27,8 +26,7 @@ foo: bar
 foo: bar
 ---
 # A markdown header'
-      markdown = Document::Markdown.new(filecontents: contents)
-      markdown.raw.must_equal('# A markdown header')
+      parser(contents).raw.must_equal('# A markdown header')
     end
   end
 
@@ -38,8 +36,11 @@ foo: bar
 foo: bar
 ---
 # A markdown header'
-      markdown = Document::Markdown.new(filecontents: contents)
-      markdown.as_html.strip.must_equal('<h1>A markdown header</h1>')
+      parser(contents).as_html.strip.must_equal('<h1>A markdown header</h1>')
     end
+  end
+
+  def parser(contents)
+    Document::Markdown.new(filecontents: contents)
   end
 end
