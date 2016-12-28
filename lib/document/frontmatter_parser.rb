@@ -2,7 +2,7 @@
 require 'yaml'
 
 module Document
-  class Frontmatter
+  class FrontmatterParser
     def initialize(filecontents:)
       @filecontents = filecontents
     end

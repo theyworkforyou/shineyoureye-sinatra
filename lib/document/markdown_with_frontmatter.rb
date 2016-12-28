@@ -37,7 +37,7 @@ module Document
     end
 
     def frontmatter
-      @frontmatter ||= Frontmatter.new(filecontents: filecontents)
+      @frontmatter ||= FrontmatterParser.new(filecontents: filecontents)
     end
 
     def markdown

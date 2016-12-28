@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 require 'test_helper'
-require_relative '../../lib/document/frontmatter'
+require_relative '../../lib/document/frontmatter_parser'
 
-describe 'Document::Frontmatter' do
+describe 'Document::FrontmatterParser' do
   describe 'when file has frontmatter' do
     it 'finds the title' do
       contents = '---
@@ -66,6 +66,6 @@ title: A Title
   end
 
   def parser(contents)
-    Document::Frontmatter.new(filecontents: contents)
+    Document::FrontmatterParser.new(filecontents: contents)
   end
 end

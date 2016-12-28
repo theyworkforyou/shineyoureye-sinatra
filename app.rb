@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'everypolitician'
 
-require_relative 'lib/document/frontmatter'
+require_relative 'lib/document/frontmatter_parser'
 require_relative 'lib/document/markdown'
 require_relative 'lib/document/markdown_with_frontmatter'
 
