@@ -30,4 +30,15 @@ published: true
   it 'has a body' do
     document.body.strip.must_equal('<h1>Hello World</h1>')
   end
+
+  it 'has a date' do
+    file = new_file('', '1000-10-01-filename')
+    document = Document::MarkdownWithFrontmatter.new(
+      filename: file.path,
+      baseurl: '/events/'
+    )
+    document.date.year.must_equal(1000)
+    document.date.month.must_equal(10)
+    document.date.day.must_equal(1)
+  end
 end
