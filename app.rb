@@ -5,7 +5,6 @@ require_relative 'lib/document/markdown_with_frontmatter'
 
 set :datasource, ENV.fetch('DATASOURCE', 'https://github.com/everypolitician/everypolitician-data/raw/master/countries.json')
 set :index, EveryPolitician::Index.new(index_url: settings.datasource)
-set :country, settings.index.country('Nigeria')
 
 def prose_dir(directory)
   File.join(__dir__, 'prose', directory)
@@ -16,7 +15,7 @@ get '/' do
 end
 
 get '/places/' do
-  @country = settings.country
+  @country = settings.index.country('Nigeria')
   erb :places
 end
 
