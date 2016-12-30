@@ -4,8 +4,8 @@ ENV['RACK_ENV'] = 'test'
 require 'everypolitician'
 require 'minitest/autorun'
 require 'nokogiri'
-require 'rack/test'
 require 'pry'
+require 'rack/test'
 
 module Minitest
   class Spec

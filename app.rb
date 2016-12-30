@@ -1,5 +1,5 @@
-require 'sinatra'
 require 'everypolitician'
+require 'sinatra'
 
 require_relative 'lib/document/markdown_with_frontmatter'
 
