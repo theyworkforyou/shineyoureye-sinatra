@@ -32,7 +32,7 @@ end
 get '/blog/:slug' do |slug|
   date_glob = '[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]'
   posts = Dir.glob("#{prose_dir('posts')}/#{date_glob}-#{slug}.md")
-  raise Sintra:NotFound if posts.length == 0
+  raise Sinatra::NotFound if posts.length == 0
   raise "Multiple posts matched '#{slug}': #{posts}" if posts.length > 1
   @post = Document::Document.new(filename: posts[0], baseurl: '/blog/')
   erb :post
