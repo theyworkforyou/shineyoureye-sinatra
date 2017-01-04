@@ -15,11 +15,11 @@ module Minitest
       Sinatra::Application
     end
 
-    def new_file(contents, filename = 'foo')
-      file = Tempfile.new([filename, '.md'])
-      file.write(contents)
-      file.close
-      file
+    def new_tempfile(contents, filename = 'sye-tests')
+      Tempfile.open([filename, '.md']) do |f|
+        f.write(contents)
+        f.path
+      end
     end
   end
 end

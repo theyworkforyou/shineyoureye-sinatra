@@ -3,7 +3,7 @@ require 'test_helper'
 require_relative '../../lib/document/markdown_with_frontmatter'
 
 describe 'Document::MarkdownWithFrontmatter' do
-  let(:file) { new_file('---
+  let(:filename) { new_tempfile('---
 title: A Title
 slug: a-slug
 published: true
@@ -11,7 +11,7 @@ published: true
 # Hello World')
   }
   let(:document) { Document::MarkdownWithFrontmatter.new(
-    filename: file.path,
+    filename: filename,
     baseurl: '/events/')
   }
 
@@ -32,9 +32,9 @@ published: true
   end
 
   it 'has a date' do
-    file = new_file('', '1000-10-01-filename')
+    filename_with_date = new_tempfile('', '1000-10-01-filename')
     document = Document::MarkdownWithFrontmatter.new(
-      filename: file.path,
+      filename: filename_with_date,
       baseurl: '/events/'
     )
     document.date.year.must_equal(1000)
