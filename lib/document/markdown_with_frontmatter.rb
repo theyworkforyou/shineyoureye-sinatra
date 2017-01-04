@@ -10,7 +10,7 @@ module Document
     end
 
     def date
-      Date.iso8601($1) if /^(\d{4}-\d{2}-\d{2})/ =~ basename
+      Date.iso8601($1) if DATE_PATTERN =~ basename
     end
 
     def title
@@ -18,7 +18,7 @@ module Document
     end
 
     def url
-      baseurl + frontmatter.slug
+      baseurl + slug
     end
 
     def published?
@@ -31,10 +31,24 @@ module Document
 
     private
 
+    DATE_PATTERN = /^(\d{4}-\d{2}-\d{2})/
     attr_reader :filename, :baseurl
 
     def basename
       File.basename(filename)
+    end
+
+    def extname
+      File.extname(filename)
+    end
+
+    def rawname
+      basename.gsub(DATE_PATTERN, '').gsub(extname, '')[1..-1]
+    end
+
+    def slug
+      slug = frontmatter.slug
+      slug.empty? ? rawname : slug
     end
 
     def filecontents

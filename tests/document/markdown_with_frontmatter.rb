@@ -41,4 +41,14 @@ published: true
     document.date.month.must_equal(10)
     document.date.day.must_equal(1)
   end
+
+  describe 'when there is no slug field' do
+    it 'builds the url from the filename' do
+      document = Document::MarkdownWithFrontmatter.new(
+        filename: new_tempfile('', '2000-20-02-file-name'),
+        baseurl: '/somepath/'
+      )
+      document.url.must_include('/somepath/file-name')
+    end
+  end
 end
