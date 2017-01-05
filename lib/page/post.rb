@@ -26,6 +26,10 @@ module Page
       found.size > 1
     end
 
+    def none?
+      found.empty?
+    end
+
     private
 
     attr_reader :directory, :slug

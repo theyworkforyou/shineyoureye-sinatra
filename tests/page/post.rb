@@ -33,11 +33,18 @@ published: true
     end
   end
 
-  describe 'when found fails' do
+  describe 'when it fails to find a post' do
     it 'detects multiple posts with same name and different dates' do
       filenames = ['2016-01-01-foo', '2012-01-01-foo']
       Dir.stub :glob, filenames do
         page.multiple?.must_equal(true)
+      end
+    end
+
+    it 'detects that there are no posts with a slug' do
+      filenames = []
+      Dir.stub :glob, filenames do
+        page.none?.must_equal(true)
       end
     end
   end
