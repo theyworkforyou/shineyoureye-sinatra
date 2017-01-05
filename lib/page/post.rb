@@ -22,6 +22,10 @@ module Page
       post.body
     end
 
+    def multiple?
+      found.size > 1
+    end
+
     private
 
     attr_reader :directory, :slug

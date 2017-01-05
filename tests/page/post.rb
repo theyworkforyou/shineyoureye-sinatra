@@ -32,4 +32,13 @@ published: true
       page.body.must_include('<h1>Hello World</h1>')
     end
   end
+
+  describe 'when found fails' do
+    it 'detects multiple posts with same name and different dates' do
+      filenames = ['2016-01-01-foo', '2012-01-01-foo']
+      Dir.stub :glob, filenames do
+        page.multiple?.must_equal(true)
+      end
+    end
+  end
 end

@@ -26,5 +26,6 @@ end
 
 get '/blog/:slug' do |slug|
   @page = Page::Post.new(directory: posts_dir, slug: slug)
+  raise "Multiple posts matched '#{slug}'" if @page.multiple?
   erb :post
 end
