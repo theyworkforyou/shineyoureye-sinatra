@@ -1,6 +1,7 @@
 language: ruby
 cache: bundler
 script:
+  - bin/deploy
   - bundle exec rake
 sudo: false
 rvm:
