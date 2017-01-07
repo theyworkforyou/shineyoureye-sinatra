@@ -6,6 +6,11 @@ describe 'Posts Page' do
   before { get '/blog/' }
   subject { Nokogiri::HTML(last_response.body) }
 
+  it 'shows the breadcrumbs' do
+    subject.css('.breadcrumb li').count.must_equal(2)
+    subject.css('.breadcrumb .active').text.must_equal('Blog')
+  end
+
   it 'shows the title' do
     subject.css('h1').first.text.must_equal('Blog')
   end

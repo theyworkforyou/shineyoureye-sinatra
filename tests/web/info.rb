@@ -6,6 +6,11 @@ describe 'Info Page' do
   before { get '/info/about' }
   subject { Nokogiri::HTML(last_response.body) }
 
+  it 'shows the breadcrumbs' do
+    subject.css('.breadcrumb li').count.must_equal(2)
+    subject.css('.breadcrumb .active').text.must_equal('About')
+  end
+
   it 'shows the post title' do
     subject.css('.page-title').text.must_equal("About")
   end

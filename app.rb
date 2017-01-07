@@ -2,6 +2,7 @@ require 'everypolitician'
 require 'sinatra'
 
 require_relative 'lib/document/finder'
+require_relative 'lib/helpers/breadcrumbs_helper'
 require_relative 'lib/helpers/filepaths_helper'
 require_relative 'lib/helpers/layout_helper'
 require_relative 'lib/page/homepage'

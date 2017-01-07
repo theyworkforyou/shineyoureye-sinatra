@@ -1,0 +1,14 @@
+<% if disable_breadcrumbs_for_current_page? %>
+
+  <div id="breadcrumb-replacement">&nbsp;</div>
+
+<% else %>
+
+  <ol class="breadcrumb">
+    <% breadcrumbs.each do |breadcrumb| %>
+    <li><a href="<%= breadcrumb.route %>"><%= breadcrumb.display_text %></a> </li>
+    <% end %>
+    <li class="active"><%= @page.title %></li>
+  </ol>
+
+<% end %>

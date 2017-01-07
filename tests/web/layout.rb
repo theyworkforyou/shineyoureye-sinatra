@@ -14,6 +14,10 @@ describe 'Layout' do
     refute_empty(subject.css('#main-menu'))
   end
 
+  it 'shows the breadcrumbs' do
+    refute_empty(subject.css('.breadcrumb'))
+  end
+
   it 'includes the header' do
     refute_empty(subject.css('header menu'))
   end
