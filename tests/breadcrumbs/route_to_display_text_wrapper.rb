@@ -20,4 +20,8 @@ describe 'Breadcrumbs::RouteToDisplayTextWrapper' do
     wrapper.breadcrumbify.last.route.must_equal('/foo/bar/')
     wrapper.breadcrumbify.last.display_text.must_equal('Display Text')
   end
+
+  it 'finds a breadcrumb with a specific url' do
+    wrapper.find_breadcrumb_by_route('/foo/bar/').display_text.must_equal('Display Text')
+  end
 end

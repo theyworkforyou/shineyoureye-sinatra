@@ -11,6 +11,10 @@ module Breadcrumbs
       routes.map { |route, display_text| create_breadcrumb(route, display_text) }
     end
 
+    def find_breadcrumb_by_route(route)
+      breadcrumbify.find { |breadcrumb| breadcrumb.route == route }
+    end
+
     private
 
     attr_reader :routes
