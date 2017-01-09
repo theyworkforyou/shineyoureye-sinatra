@@ -127,3 +127,16 @@ bundle exec rake test
 ```bash
 bundle exec rake test TEST='path/to/test/file'
 ```
+
+## Site specific stuff
+
+### How to add breadcrumbs
+
+Define the route and associated display name in
+`helpers/breadcrumbs_helper/ROUTE_TO_DISPLAY_TEXT`.
+
+If you change this data structure to be more flexible to your needs, you only
+have to update the implementation of
+`lib/breadcrumbs/route_to_display_text_wrapper#breadcrumbify` to parse the new
+structure. The only condition is that you return an array of things that
+`respond_to?` both `route` and `display_text`.
