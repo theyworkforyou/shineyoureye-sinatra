@@ -1,37 +1,32 @@
-require 'sinatra'
 require 'everypolitician'
+require 'sinatra'
 
 require_relative 'lib/document/markdown_with_frontmatter'
+require_relative 'lib/helpers/constants_helper'
+require_relative 'lib/page/posts'
+require_relative 'lib/page/post'
 
 set :datasource, ENV.fetch('DATASOURCE', 'https://github.com/everypolitician/everypolitician-data/raw/master/countries.json')
 set :index, EveryPolitician::Index.new(index_url: settings.datasource)
-set :country, settings.index.country('Nigeria')
-
-def prose_dir(directory)
-  File.join(__dir__, 'prose', directory)
-end
+set :content_dir, File.join(__dir__, 'prose')
 
 get '/' do
   erb :homepage
 end
 
 get '/places/' do
-  @country = settings.country
+  @country = settings.index.country('Nigeria')
   erb :places
 end
 
 get '/blog/' do
-  @posts = Dir.glob("#{prose_dir('posts')}/*.md").map do |filename|
-    Document::MarkdownWithFrontmatter.new(filename: filename, baseurl: '/blog/')
-  end.sort_by { |d| d.date }.reverse
+  @page = Page::Posts.new(directory: posts_dir)
   erb :posts
 end
 
 get '/blog/:slug' do |slug|
-  date_glob = '[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]'
-  posts = Dir.glob("#{prose_dir('posts')}/#{date_glob}-#{slug}.md")
-  raise Sinatra::NotFound if posts.length == 0
-  raise "Multiple posts matched '#{slug}': #{posts}" if posts.length > 1
-  @post = Document::MarkdownWithFrontmatter.new(filename: posts[0], baseurl: '/blog/')
+  @page = Page::Post.new(directory: posts_dir, slug: slug)
+  raise Sinatra::NotFound if @page.none?
+  raise "Multiple posts matched '#{slug}'" if @page.multiple?
   erb :post
 end
