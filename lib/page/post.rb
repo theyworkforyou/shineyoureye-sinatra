@@ -44,7 +44,7 @@ module Page
     end
 
     def post
-      Document::MarkdownWithFrontmatter.new(filename: found.first, baseurl: 'BASEURL')
+      Document::MarkdownWithFrontmatter.new(filename: found.first, baseurl: BASEURL)
     end
   end
 end
