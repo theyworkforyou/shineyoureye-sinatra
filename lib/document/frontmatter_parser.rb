@@ -19,6 +19,10 @@ module Document
       fetch('published', true)
     end
 
+    def featured?
+      fetch('featured', false)
+    end
+
     private
 
     attr_reader :filecontents

@@ -38,6 +38,20 @@ foo: bar
 ---'
       parser(contents).published?.must_equal(true)
     end
+
+    it 'knows if it is featured' do
+      contents = '---
+featured: true
+---'
+      parser(contents).featured?.must_equal(true)
+    end
+
+    it 'is not featured by default' do
+      contents = '---
+foo: bar
+---'
+      parser(contents).featured?.must_equal(false)
+    end
   end
 
   describe 'when file has frontmatter and markdown' do

@@ -36,6 +36,10 @@ published: true
     document.date.day.must_equal(1)
   end
 
+  it 'is not featured' do
+    document.featured?.must_equal(false)
+  end
+
   describe 'when there is no slug field' do
     it 'builds the url from the filename' do
       document = Document::MarkdownWithFrontmatter.new(

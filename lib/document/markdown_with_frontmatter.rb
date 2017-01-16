@@ -25,6 +25,10 @@ module Document
       frontmatter.published?
     end
 
+    def featured?
+      frontmatter.featured?
+    end
+
     def body
       markdown.as_html
     end
