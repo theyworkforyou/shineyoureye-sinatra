@@ -33,7 +33,7 @@ get '/blog/:slug' do |slug|
 end
 
 get '/info/:slug' do |slug|
-  @page = Page::Info.new(directory: info_dir, slug: slug)
+  @page = Page::Info.new(baseurl: '/info/', directory: info_dir, slug: slug)
   raise Sinatra::NotFound if @page.none?
   erb :info
 end

@@ -3,9 +3,8 @@ require_relative '../document/markdown_with_frontmatter'
 
 module Page
   class Info
-    BASEURL = '/info/'
-
-    def initialize(directory:, slug:)
+    def initialize(baseurl:, directory:, slug:)
+      @baseurl = baseurl
       @directory = directory
       @slug = slug
     end
@@ -24,7 +23,7 @@ module Page
 
     private
 
-    attr_reader :directory, :slug
+    attr_reader :baseurl, :directory, :slug
 
     def found
       @found ||= Dir.glob(pattern)
@@ -35,7 +34,7 @@ module Page
     end
 
     def static_page
-      Document::MarkdownWithFrontmatter.new(filename: found.first, baseurl: BASEURL)
+      Document::MarkdownWithFrontmatter.new(filename: found.first, baseurl: baseurl)
     end
   end
 end

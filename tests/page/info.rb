@@ -8,7 +8,8 @@ title: A Title
 ---
 # Hello World' }
   let(:filenames) { [new_tempfile(contents, 'info-page-slug')] }
-  let(:page) { Page::Info.new(directory: Dir.tmpdir, slug: 'info-page-slug') }
+  let(:page) { Page::Info.new(
+    baseurl: '', directory: Dir.tmpdir, slug: 'info-page-slug') }
 
   it 'has a title' do
     Dir.stub :glob, filenames do
