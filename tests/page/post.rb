@@ -13,7 +13,7 @@ published: true
     new_tempfile(contents, '2016-01-01-foo'),
     new_tempfile('irrelevant', '2012-01-01-bar')
   ] }
-  let(:page) { Page::Post.new(directory: Dir.tmpdir, slug: 'foo') }
+  let(:page) { Page::Post.new(baseurl: '', directory: Dir.tmpdir, slug: 'foo') }
 
   it 'has a title' do
     Dir.stub :glob, filenames do
