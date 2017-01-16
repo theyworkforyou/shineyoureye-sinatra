@@ -27,7 +27,12 @@ module Page
     attr_reader :directory, :slug
 
     def found
-      @found ||= Dir.glob(pattern)
+      @found ||= Dir.glob(pattern) + Dir.glob(date_pattern)
+    end
+
+    def date_pattern
+      date_glob = '[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]'
+      "#{directory}/#{date_glob}-#{slug}.md"
     end
 
     def pattern
