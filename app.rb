@@ -21,7 +21,7 @@ get '/places/' do
 end
 
 get '/blog/' do
-  @page = Page::Posts.new(directory: posts_dir)
+  @page = Page::Posts.new(baseurl: '/blog/', directory: posts_dir)
   erb :posts
 end
 

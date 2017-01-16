@@ -3,7 +3,7 @@ require 'test_helper'
 require_relative '../../lib/page/posts'
 
 describe 'Page::Posts' do
-  let(:page) { Page::Posts.new(directory: Dir.tmpdir) }
+  let(:page) { Page::Posts.new(baseurl: '/blog/', directory: Dir.tmpdir) }
   let(:filenames) { ['2016-01-01-foo.md', '2012-01-01-bar.md'] }
 
   it 'retrieves all posts' do
@@ -13,14 +13,13 @@ describe 'Page::Posts' do
   end
 
   it 'links posts to a url under the blog path' do
-    blog_path = Page::Posts::BASEURL
     filenames = [
       new_tempfile('', '2016-01-01-foo'),
       new_tempfile('', '2012-01-01-bar')
     ]
     Dir.stub :glob, filenames do
-      first.url.must_include("#{blog_path}foo")
-      last.url.must_include("#{blog_path}bar")
+      first.url.must_include("/blog/foo")
+      last.url.must_include("/blog/bar")
     end
   end
 

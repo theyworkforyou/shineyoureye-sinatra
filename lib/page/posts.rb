@@ -3,9 +3,8 @@ require_relative '../document/markdown_with_frontmatter'
 
 module Page
   class Posts
-    BASEURL = '/blog/'
-
-    def initialize(directory:)
+    def initialize(baseurl:, directory:)
+      @baseurl = baseurl
       @directory = directory
     end
 
@@ -19,7 +18,7 @@ module Page
 
     private
 
-    attr_reader :directory
+    attr_reader :baseurl, :directory
 
     def posts
       filenames.map { |filename| create_post(filename) }
@@ -35,7 +34,7 @@ module Page
     end
 
     def create_post(filename)
-      Document::MarkdownWithFrontmatter.new(filename: filename, baseurl: BASEURL)
+      Document::MarkdownWithFrontmatter.new(filename: filename, baseurl: baseurl)
     end
   end
 end
