@@ -3,6 +3,7 @@ require 'sinatra'
 
 require_relative 'lib/document/markdown_with_frontmatter'
 require_relative 'lib/helpers/constants_helper'
+require_relative 'lib/page/info'
 require_relative 'lib/page/posts'
 require_relative 'lib/page/post'
 
@@ -29,4 +30,10 @@ get '/blog/:slug' do |slug|
   raise Sinatra::NotFound if @page.none?
   raise "Multiple posts matched '#{slug}'" if @page.multiple?
   erb :post
+end
+
+get '/info/:slug' do |slug|
+  @page = Page::Info.new(directory: info_dir, slug: slug)
+  raise Sinatra::NotFound if @page.none?
+  erb :info
 end
