@@ -1,6 +1,7 @@
 require 'everypolitician'
 require 'sinatra'
 
+require_relative 'lib/document/finder'
 require_relative 'lib/document/markdown_with_frontmatter'
 require_relative 'lib/helpers/constants_helper'
 require_relative 'lib/page/info'
@@ -21,19 +22,19 @@ get '/places/' do
 end
 
 get '/blog/' do
-  @page = Page::Posts.new(baseurl: '/blog/', directory: posts_dir)
+  finder = Document::Finder.new(pattern: posts_pattern, baseurl: '/blog/')
+  @page = Page::Posts.new(posts: finder.find_all)
   erb :posts
 end
 
 get '/blog/:slug' do |slug|
-  @page = Page::Post.new(baseurl: '/blog/', directory: posts_dir, slug: slug)
-  raise Sinatra::NotFound if @page.none?
-  raise "Multiple posts matched '#{slug}'" if @page.multiple?
+  finder = Document::Finder.new(pattern: post_pattern(slug), baseurl: '/blog/')
+  @page = Page::Post.new(post: finder.find_single)
   erb :post
 end
 
 get '/info/:slug' do |slug|
-  @page = Page::Info.new(baseurl: '/info/', directory: info_dir, slug: slug)
-  raise Sinatra::NotFound if @page.none?
+  finder = Document::Finder.new(pattern: info_pattern(slug), baseurl: '/info/')
+  @page = Page::Info.new(static_page: finder.find_single)
   erb :info
 end

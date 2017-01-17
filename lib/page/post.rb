@@ -1,12 +1,8 @@
 # frozen_string_literal: true
-require_relative '../document/markdown_with_frontmatter'
-
 module Page
   class Post
-    def initialize(baseurl:, directory:, slug:)
-      @baseurl = baseurl
-      @directory = directory
-      @slug = slug
+    def initialize(post:)
+      @post = post
     end
 
     def title
@@ -21,29 +17,8 @@ module Page
       post.body
     end
 
-    def multiple?
-      found.size > 1
-    end
-
-    def none?
-      found.empty?
-    end
-
     private
 
-    attr_reader :baseurl, :directory, :slug
-
-    def found
-      @found ||= Dir.glob(pattern)
-    end
-
-    def pattern
-      date_glob = '[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]'
-      "#{directory}/#{date_glob}-#{slug}.md"
-    end
-
-    def post
-      Document::MarkdownWithFrontmatter.new(filename: found.first, baseurl: baseurl)
-    end
+    attr_reader :post
   end
 end

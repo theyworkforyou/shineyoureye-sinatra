@@ -3,32 +3,24 @@ require 'test_helper'
 require_relative '../../lib/page/info'
 
 describe 'Page::Info' do
-  let(:contents) { '---
-title: A Title
----
-# Hello World' }
-  let(:filenames) { [new_tempfile(contents, 'info-page-slug')] }
-  let(:page) { Page::Info.new(
-    baseurl: '', directory: Dir.tmpdir, slug: 'info-page-slug') }
+  let(:page) { Page::Info.new(static_page: FakeInfo.new) }
+
 
   it 'has a title' do
-    Dir.stub :glob, filenames do
-      page.title.must_equal('A Title')
-    end
+    page.title.must_equal('A Title')
   end
 
   it 'has a body' do
-    Dir.stub :glob, filenames do
-      page.body.must_include('<h1>Hello World</h1>')
-    end
+    page.body.must_include('Hello World')
   end
 
-  describe 'when it fails to find a static page' do
-    it 'detects that there are no pages with a slug' do
-      filenames = []
-      Dir.stub :glob, filenames do
-        page.none?.must_equal(true)
-      end
+  class FakeInfo
+    def title
+      'A Title'
+    end
+
+    def body
+      'Hello World'
     end
   end
 end

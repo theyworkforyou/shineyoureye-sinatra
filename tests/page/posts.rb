@@ -3,31 +3,24 @@ require 'test_helper'
 require_relative '../../lib/page/posts'
 
 describe 'Page::Posts' do
-  let(:page) { Page::Posts.new(baseurl: '/blog/', directory: Dir.tmpdir) }
-  let(:filenames) { ['2016-01-01-foo.md', '2012-01-01-bar.md'] }
+  let(:posts) { [
+    FakeDoc.new('2016-01-01-foo', '/blog/'),
+    FakeDoc.new('2012-01-01-bar', '/blog/')
+  ] }
+  let(:page) { Page::Posts.new(posts: posts) }
 
   it 'retrieves all posts' do
-    Dir.stub :glob, filenames do
-      page.sorted_posts.count.must_equal(2)
-    end
+    page.sorted_posts.count.must_equal(2)
   end
 
   it 'links posts to a url under the blog path' do
-    filenames = [
-      new_tempfile('', '2016-01-01-foo'),
-      new_tempfile('', '2012-01-01-bar')
-    ]
-    Dir.stub :glob, filenames do
-      first.url.must_include("/blog/foo")
-      last.url.must_include("/blog/bar")
-    end
+    first.url.must_equal("/blog/foo")
+    last.url.must_equal("/blog/bar")
   end
 
   it 'sorts the posts from newer to older' do
-    Dir.stub :glob, filenames do
-      first_is_newer = first.date > last.date
-      first_is_newer.must_equal(true)
-    end
+    first_is_newer = first.date > last.date
+    first_is_newer.must_equal(true)
   end
 
   it 'formats the date' do
@@ -40,5 +33,15 @@ describe 'Page::Posts' do
 
   def last
     page.sorted_posts.last
+  end
+
+  FakeDoc = Struct.new(:filename, :baseurl) do
+    def url
+      baseurl + filename[-3..-1]
+    end
+
+    def date
+      Date.iso8601(filename[0..9])
+    end
   end
 end

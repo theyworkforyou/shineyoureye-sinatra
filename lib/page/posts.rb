@@ -1,11 +1,8 @@
 # frozen_string_literal: true
-require_relative '../document/markdown_with_frontmatter'
-
 module Page
   class Posts
-    def initialize(baseurl:, directory:)
-      @baseurl = baseurl
-      @directory = directory
+    def initialize(posts:)
+      @posts = posts
     end
 
     def sorted_posts
@@ -18,23 +15,6 @@ module Page
 
     private
 
-    attr_reader :baseurl, :directory
-
-    def posts
-      filenames.map { |filename| create_post(filename) }
-    end
-
-    def filenames
-      @filenames ||= Dir.glob(pattern)
-    end
-
-    def pattern
-      date_glob = '[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]'
-      "#{directory}/#{date_glob}-*.md"
-    end
-
-    def create_post(filename)
-      Document::MarkdownWithFrontmatter.new(filename: filename, baseurl: baseurl)
-    end
+    attr_reader :posts
   end
 end

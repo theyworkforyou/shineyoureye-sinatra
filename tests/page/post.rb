@@ -3,49 +3,31 @@ require 'test_helper'
 require_relative '../../lib/page/post'
 
 describe 'Page::Post' do
-  let(:contents) { '---
-title: A Title
-slug: a-slug
-published: true
----
-# Hello World' }
-  let(:filenames) { [
-    new_tempfile(contents, '2016-01-01-foo'),
-    new_tempfile('irrelevant', '2012-01-01-bar')
-  ] }
-  let(:page) { Page::Post.new(baseurl: '', directory: Dir.tmpdir, slug: 'foo') }
+  let(:page) { Page::Post.new(post: FakePost.new('2016-01-01-foo')) }
 
   it 'has a title' do
-    Dir.stub :glob, filenames do
-      page.title.must_equal('A Title')
-    end
+    page.title.must_equal('A Title')
   end
 
   it 'formats the post date' do
-    Dir.stub :glob, filenames do
-      page.date.must_equal('January 1, 2016')
-    end
+    page.date.must_equal('January 1, 2016')
   end
 
   it 'has the post contents' do
-    Dir.stub :glob, filenames do
-      page.body.must_include('<h1>Hello World</h1>')
-    end
+    page.body.must_include('Hello World')
   end
 
-  describe 'when it fails to find a post' do
-    it 'detects multiple posts with same name and different dates' do
-      filenames = ['2016-01-01-foo', '2012-01-01-foo']
-      Dir.stub :glob, filenames do
-        page.multiple?.must_equal(true)
-      end
+  FakePost = Struct.new(:filename) do
+    def title
+      'A Title'
     end
 
-    it 'detects that there are no posts with a slug' do
-      filenames = []
-      Dir.stub :glob, filenames do
-        page.none?.must_equal(true)
-      end
+    def date
+      Date.iso8601(filename[0..9])
+    end
+
+    def body
+      'Hello World'
     end
   end
 end
