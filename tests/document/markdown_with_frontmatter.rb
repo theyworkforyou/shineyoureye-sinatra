@@ -45,4 +45,14 @@ published: true
       document.url.must_include('/somepath/file-name')
     end
   end
+
+  describe 'when there is no date in the filename' do
+    it 'returns nil' do
+      document = Document::MarkdownWithFrontmatter.new(
+        filename: 'file-name',
+        baseurl: 'irrelevant'
+      )
+      assert_nil(document.date)
+    end
+  end
 end
