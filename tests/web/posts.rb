@@ -6,6 +6,10 @@ describe 'Posts Page' do
   before { get '/blog/' }
   subject { Nokogiri::HTML(last_response.body) }
 
+  it 'shows the title' do
+    subject.css('h1').first.text.must_equal('Blog')
+  end
+
   it 'shows all posts' do
     more_than_one = subject.css('.blog-in-a-list').count > 1
     more_than_one.must_equal(true)

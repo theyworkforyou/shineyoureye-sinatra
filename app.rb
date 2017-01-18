@@ -22,7 +22,7 @@ end
 
 get '/blog/' do
   finder = Document::Finder.new(pattern: posts_pattern, baseurl: '/blog/')
-  @page = Page::Posts.new(posts: finder.find_all)
+  @page = Page::Posts.new(posts: finder.find_all, title: 'Blog')
   erb :posts
 end
 

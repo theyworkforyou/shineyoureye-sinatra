@@ -7,7 +7,11 @@ describe 'Page::Posts' do
     FakeDoc.new('2016-01-01-foo', '/blog/'),
     FakeDoc.new('2012-01-01-bar', '/blog/')
   ] }
-  let(:page) { Page::Posts.new(posts: posts) }
+  let(:page) { Page::Posts.new(posts: posts, title: 'Blog') }
+
+  it 'has a title' do
+    page.title.must_equal('Blog')
+  end
 
   it 'retrieves all posts' do
     page.sorted_posts.count.must_equal(2)

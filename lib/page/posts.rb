@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 module Page
   class Posts
-    def initialize(posts:)
+    attr_reader :title
+
+    def initialize(posts:, title:)
       @posts = posts
+      @title = title
     end
 
     def sorted_posts
