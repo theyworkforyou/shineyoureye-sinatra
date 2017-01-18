@@ -1,4 +1,4 @@
-module ConstantsHelper
+module FilepathsHelper
   def content_dir
     settings.content_dir
   end
@@ -42,4 +42,4 @@ module ConstantsHelper
   end
 end
 
-helpers ConstantsHelper
+helpers FilepathsHelper
