@@ -13,16 +13,24 @@
 
     <%= erb :_main_menu %>
 
-    <%= erb :_header %>
+    <% if is_homepage? %>
 
-    <!-- {% include breadcrumbs.html %} -->
+      <%= yield %>
 
-    <div id="page">
-      <div class="page-wrapper wrapper">
-        <%= yield %>
-        <br clear="both">
+    <% else %>
+
+      <%= erb :_header %>
+
+      <!-- {% include breadcrumbs.html %} -->
+
+      <div id="page">
+        <div class="page-wrapper wrapper">
+          <%= yield %>
+          <br clear="both">
+        </div>
       </div>
-    </div>
+
+    <% end %>
 
     <%= erb :_footer %>
 

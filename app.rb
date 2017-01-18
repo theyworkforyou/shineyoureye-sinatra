@@ -3,6 +3,7 @@ require 'sinatra'
 
 require_relative 'lib/document/finder'
 require_relative 'lib/helpers/filepaths_helper'
+require_relative 'lib/helpers/layout_helper'
 require_relative 'lib/page/info'
 require_relative 'lib/page/posts'
 require_relative 'lib/page/post'

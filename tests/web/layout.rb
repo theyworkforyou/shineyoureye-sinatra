@@ -3,7 +3,7 @@ require 'test_helper'
 require_relative '../../app'
 
 describe 'Layout' do
-  before  { get '/' }
+  before  { get '/info/about' }
   subject { Nokogiri::HTML(last_response.body) }
 
   it 'includes the head' do
