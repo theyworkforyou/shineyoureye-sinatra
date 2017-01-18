@@ -4,6 +4,7 @@ require 'sinatra'
 require_relative 'lib/document/finder'
 require_relative 'lib/helpers/filepaths_helper'
 require_relative 'lib/helpers/layout_helper'
+require_relative 'lib/page/homepage'
 require_relative 'lib/page/info'
 require_relative 'lib/page/posts'
 require_relative 'lib/page/post'
@@ -13,6 +14,9 @@ set :index, EveryPolitician::Index.new(index_url: settings.datasource)
 set :content_dir, File.join(__dir__, 'prose')
 
 get '/' do
+  posts_finder = Document::Finder.new(pattern: posts_pattern, baseurl: '/blog/')
+  events_finder = Document::Finder.new(pattern: events_pattern, baseurl: '/info/events/')
+  @page = Page::Homepage.new(posts: posts_finder.find_all, events: events_finder.find_all)
   erb :homepage
 end
 

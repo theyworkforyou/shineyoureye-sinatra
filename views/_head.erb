@@ -7,13 +7,24 @@
   <title><%= meta_title(@page) %></title>
 
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" type="text/css" href="/javascripts/jquery-ui-1.11.4.custom/jquery-ui.css">
 
+  <% if is_homepage? %>
+  <link rel="stylesheet" href="http://www.eie.ng/syedemo/css/normalize.css">
+  <link rel="stylesheet" href="http://www.eie.ng/syedemo/css/skeleton.css">
+  <link rel="stylesheet" href="/css/menu.css">
+
+  <link rel="icon" type="image/png" href="http://eie.ng/nl/images/sye.png">
+
+  <% else %>
+  <link rel="stylesheet" type="text/css" href="/javascripts/jquery-ui-1.11.4.custom/jquery-ui.css">
   <link href="/css/screen.css" rel="stylesheet">
+
   <link rel="icon" href="/images/favicon.png">
 
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="/javascripts/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+  <% end %>
+
 
   <!-- {% jekyll_search_assets %} -->
 
