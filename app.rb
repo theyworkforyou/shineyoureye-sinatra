@@ -32,6 +32,18 @@ get '/blog/:slug' do |slug|
   erb :post
 end
 
+get '/info/events' do
+  finder = Document::Finder.new(pattern: events_pattern, baseurl: '/info/events/')
+  @page = Page::Posts.new(posts: finder.find_all, title: 'Events')
+  erb :posts
+end
+
+get '/info/events/:slug' do |slug|
+  finder = Document::Finder.new(pattern: event_pattern(slug), baseurl: '/info/events/')
+  @page = Page::Post.new(post: finder.find_single)
+  erb :post
+end
+
 get '/info/:slug' do |slug|
   finder = Document::Finder.new(pattern: info_pattern(slug), baseurl: '/info/')
   @page = Page::Info.new(static_page: finder.find_single)
