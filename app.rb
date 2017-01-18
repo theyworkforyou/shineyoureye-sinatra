@@ -16,11 +16,6 @@ get '/' do
   erb :homepage
 end
 
-get '/places/' do
-  @country = settings.index.country('Nigeria')
-  erb :places
-end
-
 get '/blog/' do
   finder = Document::Finder.new(pattern: posts_pattern, baseurl: '/blog/')
   @page = Page::Posts.new(posts: finder.find_all, title: 'Blog')
