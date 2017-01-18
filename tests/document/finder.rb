@@ -31,7 +31,7 @@ slug: a-slug
     it 'detects multiple documents with same name and different dates' do
       Dir.stub :glob, ['2016-01-01-file-name', '2012-01-01-file-name'] do
         error = assert_raises(RuntimeError) { finder.find_single }
-        assert_match /file-name.md/, error.message
+        error.message.must_include('file-name.md')
       end
     end
 
