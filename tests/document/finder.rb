@@ -37,8 +37,8 @@ slug: a-slug
 
     it 'detects that there are no documents with a slug' do
       Dir.stub :glob, [] do
-        require 'sinatra'
-        assert_raises(Sinatra::NotFound) { finder.find_single }
+        error = assert_raises(Document::NoFilesFoundError) { finder.find_single }
+        error.message.must_include('file-name.md')
       end
     end
   end

@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require_relative 'exceptions'
 require_relative 'markdown_with_frontmatter'
 
 module Document
@@ -10,7 +11,7 @@ module Document
 
     def find_single
       raise "Multiple posts matched '#{pattern}'" if multiple?
-      raise Sinatra::NotFound if none?
+      raise_error_if_no_files_found
       find_all.first
     end
 
@@ -21,6 +22,11 @@ module Document
     private
 
     attr_reader :pattern, :baseurl
+
+    def raise_error_if_no_files_found
+      message = "No documents matched '#{pattern}'"
+      raise Document::NoFilesFoundError, message if none?
+    end
 
     def multiple?
       filenames.size > 1
