@@ -78,6 +78,7 @@ DEPENDENCIES
   rack-test
   rake
   rdiscount
+  sass
   sinatra
   webmock
 
