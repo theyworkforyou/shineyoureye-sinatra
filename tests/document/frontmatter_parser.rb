@@ -52,6 +52,20 @@ foo: bar
 ---'
       parser(contents).featured?.must_equal(false)
     end
+
+    it 'has an event date' do
+      contents = "---
+eventdate: '2010-01-01 10:00 +0000'
+---"
+      parser(contents).event_date.must_equal('2010-01-01 10:00 +0000')
+    end
+
+    it 'if there is no event date, returns an empty string' do
+      contents = '---
+foo: bar
+---'
+      parser(contents).event_date.must_equal('')
+    end
   end
 
   describe 'when file has frontmatter and markdown' do
@@ -65,7 +79,7 @@ title: A Title
   end
 
   describe 'when frontmatter is empty' do
-    it 'sends an empty field' do
+    it 'returns an empty string' do
       contents = '---
 ---'
       parser(contents).title.must_equal('')

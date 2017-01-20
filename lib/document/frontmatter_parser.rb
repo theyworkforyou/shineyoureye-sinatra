@@ -23,6 +23,10 @@ module Document
       fetch('featured', false)
     end
 
+    def event_date
+      fetch('eventdate')
+    end
+
     private
 
     attr_reader :filecontents
