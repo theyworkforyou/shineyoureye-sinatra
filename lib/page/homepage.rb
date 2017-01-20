@@ -11,7 +11,7 @@ module Page
     end
 
     def featured_events
-      events.sort_by { |d| d.date }.reverse.first(3)
+      future_events.sort_by { |d| d.event_date }.first(3)
     end
 
     def no_events?
@@ -25,5 +25,16 @@ module Page
     private
 
     attr_reader :posts, :events
+
+    def future_events
+      events.select do |d|
+        raise_no_event_date_error(d)
+        d.event_date >= Date.today
+      end
+    end
+
+    def raise_no_event_date_error(d)
+      raise "No event date for #{d.title}" unless d.event_date
+    end
   end
 end
