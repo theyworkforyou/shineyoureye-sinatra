@@ -29,6 +29,11 @@ module Document
       frontmatter.featured?
     end
 
+    def event_date
+      return nil if frontmatter.event_date.empty?
+      Date.parse(frontmatter.event_date)
+    end
+
     def body
       markdown.as_html
     end

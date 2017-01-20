@@ -3,12 +3,13 @@ require 'test_helper'
 require_relative '../../lib/document/markdown_with_frontmatter'
 
 describe 'Document::MarkdownWithFrontmatter' do
-  let(:contents) { '---
+  let(:contents) { "---
 title: A Title
 slug: a-slug
 published: true
+eventdate: '2000-01-01 15:00 +0000'
 ---
-# Hello World' }
+# Hello World" }
   let(:document) { Document::MarkdownWithFrontmatter.new(
     filename: new_tempfile(contents, '1000-10-01-file-name'),
     baseurl: '/events/')
@@ -40,6 +41,12 @@ published: true
     document.featured?.must_equal(false)
   end
 
+  it 'has an event date' do
+    document.event_date.year.must_equal(2000)
+    document.event_date.month.must_equal(1)
+    document.event_date.day.must_equal(1)
+  end
+
   describe 'when there is no slug field' do
     it 'builds the url from the filename' do
       document = Document::MarkdownWithFrontmatter.new(
@@ -52,11 +59,44 @@ published: true
 
   describe 'when there is no date in the filename' do
     it 'returns nil' do
-      document = Document::MarkdownWithFrontmatter.new(
-        filename: 'file-name',
-        baseurl: 'irrelevant'
-      )
+      document = basic_document('file-name')
       assert_nil(document.date)
+    end
+  end
+
+  describe 'when there is no event date field' do
+    it 'returns nil' do
+      document = basic_document(new_tempfile('', '2000-20-02-file-name'))
+      assert_nil(document.event_date)
+    end
+  end
+
+  describe 'when other formats in event date field' do
+    it 'parses a slashed date' do
+      document = basic_document(new_tempfile("---
+eventdate: '24/1/2017'
+---", '2000-20-02-file-name'))
+      document.event_date.year.must_equal(2017)
+      document.event_date.month.must_equal(1)
+      document.event_date.day.must_equal(24)
+    end
+
+    it 'parses a date with spaces and named month' do
+      document = basic_document(new_tempfile("---
+eventdate: '24 March 2017'
+---", '2000-20-02-file-name'))
+      document.event_date.year.must_equal(2017)
+      document.event_date.month.must_equal(3)
+      document.event_date.day.must_equal(24)
+    end
+
+    it 'parses a plain ISO-8601 date' do
+      document = basic_document(new_tempfile("---
+eventdate: '2017-01-24'
+---", '2000-20-02-file-name'))
+      document.event_date.year.must_equal(2017)
+      document.event_date.month.must_equal(1)
+      document.event_date.day.must_equal(24)
     end
   end
 end

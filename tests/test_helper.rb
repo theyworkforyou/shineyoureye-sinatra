@@ -28,6 +28,10 @@ module Minitest
       end
     end
 
+    def basic_document(filename)
+      Document::MarkdownWithFrontmatter.new(filename: filename, baseurl: 'irrelevant')
+    end
+
     private
 
     DATASOURCE = 'https://github.com/everypolitician/everypolitician-data/raw/master/countries.json'
