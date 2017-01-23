@@ -13,6 +13,7 @@ gem 'rake'
 gem 'rdiscount'
 gem 'sass'
 gem 'sinatra'
+gem 'bootstrap-sass'
 
 group :test do
   gem 'minitest'
