@@ -11,4 +11,8 @@
         padding-top: 4em;
         padding-bottom: 4em;
     }
+
+    & > .container > :first-child {
+        margin-top: 0;
+    }
 }

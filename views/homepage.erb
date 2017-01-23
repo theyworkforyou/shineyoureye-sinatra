@@ -1,12 +1,12 @@
-<div style="padding: 5rem 0 4rem;">
+<div class="page-section homepage__hero">
   <div class="container">
     <div class="row">
-      <div class="five columns">
-        <img src="/static/images/mz-nigeria-logo-symbol.png" class="u-max-full-width"/>
+      <div class="col-sm-5 homepage__hero__secondary">
+        <img src="/static/images/mz-nigeria-logo-symbol.png">
       </div>
-      <div class="seven columns" style="padding-top: 4rem;">
-        <h5><b>Shine Your Eye</b> is an SMS and web platform that facilitates engagement with National Assembly members and other elected officials.</h5>
-        <a class="button button-primary" href="/search/">
+      <div class="col-sm-7 homepage__hero__primary">
+        <h1><b>Shine Your Eye</b> is an SMS and web platform that facilitates engagement with National Assembly members and other elected officials.</h1>
+        <a class="btn btn-primary" href="/search/">
           Find your Representative
         </a>
       </div>
@@ -15,61 +15,68 @@
 </div>
 
 
-<div style="padding: 4rem 0 0; background: #bbf6d7; text-align: center;">
+<div class="page-section homepage__reps">
   <div class="container">
-    <h4><b>Find more information about your government representatives</b></h4>
-    <div class="row" >
-      <div class="four columns" >
+    <h2>Find more information about your government representatives</h2>
+    <div class="row">
+      <div class="col-sm-4 homepage__reps__rep">
         <a href="/governors/person/nasir-el-rufai/">
-          <img src="http://www.shineyoureye.org/media_root/cache/fa/18/fa18778ccb20510ac887c07750e47fa3.jpg" class="u-max-full-width"/>
-        </a><br>
-        <span style="font-size: 0.9em;">Nasir El-Rufai,</span> <span style="font-size: 0.8em;">  APC, Kaduna</span><br>
-        <a class="button" href="/position/executive-governor/"><b>Governors</b></a>
-        <p>&nbsp;</p>
+          <img src="http://www.shineyoureye.org/media_root/cache/fa/18/fa18778ccb20510ac887c07750e47fa3.jpg">
+        </a>
+        <p>
+            <strong>Nasir El-Rufai,</strong>
+            APC, Kaduna
+        </p>
+        <a class="btn btn-default" href="/position/executive-governor/"><b>Governors</b></a>
       </div>
-      <div class="four columns" >
+      <div class="col-sm-4 homepage__reps__rep">
         <a href="/senate/person/76d38ffb-0b7e-4b3e-b5a6-92eed438c4c8/">
-          <img src="http://www.shineyoureye.org/media_root/images/1014158160editor_Chris_Anyanwu.jpg" class="u-max-full-width"/>
-        </a><br>
-        <span style="font-size: 0.9em;">Anyanwu Chris N. D,</span> <span style="font-size: 0.8em;">  APC, Abuja</span><br>
-        <a class="button" href="/position/senator/"><b>Senators</b></a>
-        <p>&nbsp;</p>
+          <img src="http://www.shineyoureye.org/media_root/images/1014158160editor_Chris_Anyanwu.jpg">
+        </a>
+        <p>
+            <strong>Anyanwu Chris N. D,</strong>
+            APC, Abuja
+        </p>
+        <a class="btn btn-default" href="/position/senator/"><b>Senators</b></a>
       </div>
-      <div class="four columns" >
-        <a  href="/assembly/person/ed60d392-ebe6-49f6-8174-10eb29dbb216/">
-          <img src="http://www.shineyoureye.org/media_root/cache/7a/bb/7abb1cb47babe064deba452e976dc6cc.jpg" class="u-max-full-width"/>
-        </a><br>
-        <span style="font-size: 0.9em;">Lawali Hassan,</span> <span style="font-size: 0.8em;">  APC, Zamfara</span><br>
-        <a class="button" href="/position/representative/"><b>Representatives</b></a>
-        <p>&nbsp;</p>
+      <div class="col-sm-4 homepage__reps__rep">
+        <a href="/assembly/person/ed60d392-ebe6-49f6-8174-10eb29dbb216/">
+          <img src="http://www.shineyoureye.org/media_root/cache/7a/bb/7abb1cb47babe064deba452e976dc6cc.jpg">
+        </a>
+        <p>
+            <strong>Lawali Hassan,</strong>
+            APC, Zamfara
+        </p>
+        <a class="btn btn-default" href="/position/representative/"><b>Representatives</b></a>
       </div>
     </div>
   </div>
 </div>
 
 
-<div style=" padding: 4rem 0 4rem; ">
+<div class="page-section">
   <div class="container">
     <div class="row">
-      <div class="six columns">
-        <h4><b><a href="/blog/">News</a></b></h4>
-        <% @page.featured_posts.each do |post| %>
-        <h5 style="font-weight: inherit;">
-          <a style="display: block;" href="<%= post.url %>"><%= post.title %></a>
-          <small style="display: block; font-size: 0.7em;"><%= @page.format_date(post.date) %></small>
-        </h5>
+      <div class="col-sm-6">
+        <h2><a href="/blog/">News</a></h2>
+        <% unless @page.featured_posts.empty? %>
+          <% @page.featured_posts.each do |post| %>
+            <a href="<%= post.url %>"><h3><%= post.title %></h3></a>
+            <p><%= @page.format_date(post.date) %></p>
+          <% end %>
+        <% else %>
+          <p>There are no blog posts.</p>
         <% end %>
       </div>
-      <div class="six columns">
-        <h4><b><a href="/info/events">Events</a></b></h4>
-        <% @page.featured_events.each do |event| %>
-        <h5 style="font-weight: inherit;">
-          <a style="display: block;" href="<%= event.url %>"><%= event.title %></a>
-          <small style="display: block; font-size: 0.7em;"><%= @page.format_date(event.date) %></small>
-        </h5>
-        <% end %>
-        <% if @page.no_events? %>
-        <p>There are no upcoming events.</p>
+      <div class="col-sm-6">
+        <h2><a href="/info/events">Events</a></h2>
+        <% unless @page.featured_events.empty? %>
+          <% @page.featured_events.each do |event| %>
+            <a href="<%= event.url %>"><h3><%= event.title %></h3></a>
+            <p><%= @page.format_date(event.date) %></p>
+          <% end %>
+        <% else %>
+          <p>There are no upcoming events.</p>
         <% end %>
       </div>
     </div>
@@ -77,31 +84,33 @@
 </div>
 
 
-<div style=" padding: 5rem 0 4rem; background: #bbf6d7 ; ">
+<div class="page-section homepage__quote">
   <div class="container">
     <div class="row">
-      <div class="six columns"><h1>Quote of the Week</h1> </div>
-      <div class="six columns">
-        <em>"Followers who tell the truth and leaders who listen to it, are an unbeatable combination."</em>
-        <p style="color:#000; margin-top:0px; font-weight:bold">- Warren Bennis </p>
+      <div class="col-sm-6 col-lg-5 col-lg-push-1">
+          <h1>Quote of the Week</h1>
+      </div>
+      <div class="col-sm-6 col-lg-5 col-lg-push-1">
+          <p>
+              <em>”Followers who tell the truth and leaders who listen to it, are an unbeatable combination.”</em>
+              <strong style="display: block;">- Warren Bennis</strong>
+          </p>
       </div>
     </div>
   </div>
 </div>
 
 
-
-
-
-<div style=" padding: 5rem 0 4rem;">
+<div class="page-section">
   <div class="container">
-    <div class="row" >
-      <div class="six columns">
-        <iframe width="100%" height="315px" src="https://www.youtube.com/embed/NDSIJfYWgko" frameborder="0" allowfullscreen></iframe>
-        <p>&nbsp;</p>
+    <div class="row">
+      <div class="col-sm-6">
+        <iframe style="width: 100%; height: 315px; margin-bottom: 1em;" src="https://www.youtube.com/embed/NDSIJfYWgko" frameborder="0" allowfullscreen></iframe>
       </div>
-      <div class="six columns">
-        <div align="center"><span style="font-size: 1em; "><a class="button" href="https://twitter.com/NGShineYourEye">Shine Your Eye on Twitter</a></span></div>
+      <div class="col-sm-6">
+        <div style="text-align: center; margin-bottom: 1em;">
+            <a class="btn btn-default" href="https://twitter.com/NGShineYourEye">Shine Your Eye on Twitter</a>
+        </div>
         <a style="color: white !important;" class="twitter-timeline"  href="https://twitter.com/NGShineYourEye" data-widget-id="661503293731000320" width="600px" data-chrome="nofooter noborders noheader noscrollbar transparent"  data-tweet-limit="3">Tweets by @NGShineYourEye</a>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
       </div>
