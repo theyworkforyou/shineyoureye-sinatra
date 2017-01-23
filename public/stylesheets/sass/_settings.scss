@@ -18,3 +18,26 @@ $line-height-base: 1.5;
 
 //== Iconography
 $icon-font-path: "/fonts/bootstrap/";
+
+//== Dropdowns
+$dropdown-link-hover-bg: mix($color-mint-green, #fff, 50%);
+
+//== Navbar
+$navbar-default-color: $color-dark-grey;
+$navbar-default-bg: $color-mint-green;
+$navbar-default-border: mix($color-mint-green, #000, 90%);
+
+$navbar-default-link-color: $color-dark-grey;
+$navbar-default-link-hover-color: $color-black;
+$navbar-default-link-hover-bg: mix($color-mint-green, #fff, 60%);
+$navbar-default-link-active-color: $color-black;
+$navbar-default-link-active-bg: mix($color-mint-green, #fff, 40%);
+
+$navbar-default-toggle-hover-bg: mix($color-mint-green, #fff, 60%);
+$navbar-default-toggle-icon-bar-bg: $color-dark-grey;
+$navbar-default-toggle-border-color: mix($color-mint-green, #000, 80%);
+
+// ShineYourEye main menu
+$main-menu-border-radius: 0;
+$main-menu-font-size: 14px;
+$main-menu-item-padding-horizontal: 12px; // down from bootstrap default 15px

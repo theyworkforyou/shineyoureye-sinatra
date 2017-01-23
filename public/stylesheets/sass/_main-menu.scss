@@ -1,0 +1,26 @@
+.main-menu {
+    border-radius: $main-menu-border-radius;
+    font-size: $main-menu-font-size;
+    border-width: 0 0 1px 0;
+
+    @media (min-width: $grid-float-breakpoint) {
+        .nav > li > a {
+            padding-left: $main-menu-item-padding-horizontal;
+            padding-right: $main-menu-item-padding-horizontal;
+        }
+    }
+
+    .dropdown-menu {
+        font-size: $main-menu-font-size;
+
+        & > li > a {
+            // Bigger click targets for dropdown menu items
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+}

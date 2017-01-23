@@ -11,7 +11,7 @@ describe 'Layout' do
   end
 
   it 'includes the main menu' do
-    refute_empty(subject.css('#main-menu'))
+    refute_empty(subject.css('.main-menu'))
   end
 
   it 'includes the header' do
