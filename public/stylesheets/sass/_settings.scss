@@ -1,1 +1,20 @@
-$body-font-family: $font-family-raleway !default;
+// Use this file to customise Bootstrap settings (bootstrap/_variables.scss)
+// and other settings used by the custom ShineYourEye components.
+
+// The headings are taken from bootstrap/_variables.scss, so when you
+// override a new setting, try to place it under the right heading.
+// It'll help you and future developers find the setting more quickly!
+
+//== Colors
+$brand-primary: $color-sky-blue;
+
+//== Scaffolding
+$text-color: $color-dark-grey;
+
+//== Typography
+$font-family-base: $font-family-raleway;
+$font-size-base: 16px;
+$line-height-base: 1.5;
+
+//== Iconography
+$icon-font-path: "/fonts/bootstrap/";

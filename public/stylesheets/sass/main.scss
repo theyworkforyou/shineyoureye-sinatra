@@ -1,6 +1,4 @@
 @import "variables";
 @import "settings";
 
-body {
-    font-family: $body-font-family;
-}
+@import "bootstrap";
