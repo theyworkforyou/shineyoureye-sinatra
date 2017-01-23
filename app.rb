@@ -2,6 +2,7 @@ require 'everypolitician'
 require 'sinatra'
 
 require_relative 'lib/document/finder'
+require_relative 'lib/helpers/breadcrumbs_helper'
 require_relative 'lib/helpers/filepaths_helper'
 require_relative 'lib/helpers/layout_helper'
 require_relative 'lib/page/homepage'
@@ -12,6 +13,14 @@ require_relative 'lib/page/post'
 set :datasource, ENV.fetch('DATASOURCE', 'https://github.com/everypolitician/everypolitician-data/raw/master/countries.json')
 set :index, EveryPolitician::Index.new(index_url: settings.datasource)
 set :content_dir, File.join(__dir__, 'prose')
+# The breadcrumb map should not have trailing slashes (except for the
+# root, '/'). If a prefix maps to nil, a breadcrumb won't be generated
+# for that prefix.
+set :breadcrumbs,
+    '/' => 'Home',
+    '/blog' => 'Blog',
+    '/info' => nil,
+    '/info/events' => 'Events'
 
 get '/' do
   posts_finder = Document::Finder.new(pattern: posts_pattern, baseurl: '/blog/')
