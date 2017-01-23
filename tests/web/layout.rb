@@ -19,6 +19,6 @@ describe 'Layout' do
   end
 
   it 'includes the footer' do
-    refute_empty(subject.css('#site-footer'))
+    refute_empty(subject.css('.site-footer'))
   end
 end
