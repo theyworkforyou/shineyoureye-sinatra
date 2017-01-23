@@ -1,7 +1,11 @@
+// We use Bootstrap's `.navbar` as a basis for the main-menu, but customise it
+// quite heavily, to make a bigger feature out of the `.navbar-brand` logo.
+
 .main-menu {
     border-radius: $main-menu-border-radius;
     font-size: $main-menu-font-size;
     border-width: 0 0 1px 0;
+    margin-bottom: 0;
 
     @media (min-width: $grid-float-breakpoint) {
         .nav > li > a {
@@ -22,5 +26,54 @@
 
     a {
         text-decoration: none;
+    }
+
+    .navbar-brand {
+        width: 150px;
+        height: 0;
+        padding: $navbar-height 0 0 0;
+        background: transparent none 50% 30% no-repeat;
+        overflow: hidden;
+
+        margin-left: 0 !important; // custom padding means we don't need to compensate for gutter
+
+        @include img-retina(
+            '/static/images/mz-nigeria-logo-text-small.png',
+            '/static/images/mz-nigeria-logo-text.png',
+            150px,
+            41px
+        );
+
+        @media (min-width: $grid-float-breakpoint) {
+            position: absolute;
+            top: 0;
+            padding: 117px 0 0 0;
+
+            @include img-retina(
+                '/static/images/mz-nigeria-logo-symbol-small.png',
+                '/static/images/mz-nigeria-logo-symbol.png',
+                150px,
+                117px
+            );
+        }
+    }
+
+    @media (min-width: $grid-float-breakpoint) {
+        .navbar-collapse {
+            margin-left: 150px; // make space for absolutely positioned logo
+        }
+    }
+
+    // The homepage has a slightly different nav (to avoid two big logos on one page)
+    .page--homepage & {
+        @media (min-width: $grid-float-breakpoint) {
+            .navbar-brand {
+                display: none;
+            }
+
+            .navbar-collapse {
+                margin-left: 0;
+            }
+        }
     }
 }

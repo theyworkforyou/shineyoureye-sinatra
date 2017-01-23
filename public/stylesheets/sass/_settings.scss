@@ -42,6 +42,9 @@ $main-menu-border-radius: 0;
 $main-menu-font-size: 14px;
 $main-menu-item-padding-horizontal: 12px; // down from bootstrap default 15px
 
+// ShineYourEye page headers:
+$site-header-background-color: mix($navbar-default-bg, #fff, 50%);
+
 // ShineYourEye footer
 $site-footer-background-color: $color-dark-green;
 $site-footer-text-color: #fff;
