@@ -18,7 +18,7 @@ module Minitest
 
     before do
       get_from_disk(DATASOURCE, countries_json)
-      get_from_disk(assembly_json_url, assembly_json)
+      get_from_disk(reps_json_url, reps_json)
     end
 
     def new_tempfile(contents, filename = 'sye-tests')
@@ -33,23 +33,23 @@ module Minitest
     DATASOURCE = 'https://github.com/everypolitician/everypolitician-data/raw/master/countries.json'
     REPO_URL = 'https://cdn.rawgit.com/everypolitician/everypolitician-data'
     DISK_PATH = 'tests/fixtures/ep_data'
-    COUNTRIES_SHA = 'd8a4682'
-    ASSEMBLY_SHA = '75b7651'
+    COUNTRIES_COMMIT = '2dd531c'
+    REPS_COMMIT = 'd5a1eb7'
 
     def get_from_disk(url, json_file)
       stub_request(:get, url).to_return(body: json_file)
     end
 
-    def assembly_json_url
-      "#{REPO_URL}/#{ASSEMBLY_SHA}/data/Nigeria/Assembly/ep-popolo-v1.0.json"
+    def reps_json_url
+      "#{REPO_URL}/#{REPS_COMMIT}/data/Nigeria/Representatives/ep-popolo-v1.0.json"
     end
 
     def countries_json
-      @countries_json ||= File.read("#{DISK_PATH}/#{COUNTRIES_SHA}/countries.json")
+      @countries_json ||= File.read("#{DISK_PATH}/#{COUNTRIES_COMMIT}/countries.json")
     end
 
-    def assembly_json
-      @assembly_json ||= File.read("#{DISK_PATH}/#{ASSEMBLY_SHA}/ep-popolo-v1.0.json")
+    def reps_json
+      @reps_json ||= File.read("#{DISK_PATH}/#{REPS_COMMIT}/ep-popolo-v1.0.json")
     end
   end
 end
