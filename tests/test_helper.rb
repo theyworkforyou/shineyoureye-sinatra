@@ -8,6 +8,7 @@ require 'pry'
 require 'rack/test'
 require 'webmock/minitest'
 
+require_relative '../lib/document/markdown_with_frontmatter'
 require_relative './fixtures/mapit_data'
 
 module Minitest
