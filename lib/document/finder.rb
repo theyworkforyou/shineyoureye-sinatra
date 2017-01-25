@@ -10,7 +10,7 @@ module Document
     end
 
     def find_single
-      raise "Multiple posts matched '#{pattern}'" if multiple?
+      raise_error_if_multiple_files_found
       raise_error_if_no_files_found
       find_all.first
     end
@@ -22,6 +22,10 @@ module Document
     private
 
     attr_reader :pattern, :baseurl
+
+    def raise_error_if_multiple_files_found
+      raise "Multiple posts matched '#{pattern}'" if multiple?
+    end
 
     def raise_error_if_no_files_found
       message = "No documents matched '#{pattern}'"
