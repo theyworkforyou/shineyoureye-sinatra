@@ -28,17 +28,33 @@ slug: a-slug
   end
 
   describe 'when it fails to find a document' do
-    it 'detects multiple documents with same name and different dates' do
-      Dir.stub :glob, ['2016-01-01-file-name', '2012-01-01-file-name'] do
-        error = assert_raises(RuntimeError) { finder.find_single }
-        error.message.must_include('file-name.md')
+    describe 'when multiple documents with same name and different dates' do
+      it 'raises an exception if method is called directly' do
+        Dir.stub :glob, ['2016-01-01-file-name', '2012-01-01-file-name'] do
+          error = assert_raises(RuntimeError) { finder.find_single }
+          error.message.must_include('file-name.md')
+        end
+      end
+
+      it 'can check before calling the method' do
+        Dir.stub :glob, ['2016-01-01-file-name', '2012-01-01-file-name'] do
+          finder.multiple?.must_equal(true)
+        end
       end
     end
 
-    it 'detects that there are no documents with a slug' do
-      Dir.stub :glob, [] do
-        error = assert_raises(Document::NoFilesFoundError) { finder.find_single }
-        error.message.must_include('file-name.md')
+    describe 'when there are no documents with a slug' do
+      it 'raises an exception if method is called directly' do
+        Dir.stub :glob, [] do
+          error = assert_raises(Document::NoFilesFoundError) { finder.find_single }
+          error.message.must_include('file-name.md')
+        end
+      end
+
+      it 'can check before calling the method' do
+        Dir.stub :glob, [] do
+          finder.none?.must_equal(true)
+        end
       end
     end
   end

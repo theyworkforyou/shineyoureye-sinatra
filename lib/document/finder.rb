@@ -19,6 +19,14 @@ module Document
       filenames.map { |filename| create_document(filename) }
     end
 
+    def multiple?
+      filenames.size > 1
+    end
+
+    def none?
+      filenames.empty?
+    end
+
     private
 
     attr_reader :pattern, :baseurl
@@ -30,14 +38,6 @@ module Document
     def raise_error_if_no_files_found
       message = "No documents matched '#{pattern}'"
       raise Document::NoFilesFoundError, message if none?
-    end
-
-    def multiple?
-      filenames.size > 1
-    end
-
-    def none?
-      filenames.empty?
     end
 
     def filenames
