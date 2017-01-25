@@ -29,6 +29,7 @@ end
 
 get '/blog/:slug' do |slug|
   finder = Document::Finder.new(pattern: post_pattern(slug), baseurl: '/blog/')
+  pass if finder.none?
   @page = Page::Post.new(post: finder.find_single)
   erb :post
 end
@@ -41,12 +42,14 @@ end
 
 get '/info/events/:slug' do |slug|
   finder = Document::Finder.new(pattern: event_pattern(slug), baseurl: '/info/events/')
+  pass if finder.none?
   @page = Page::Post.new(post: finder.find_single)
   erb :post
 end
 
 get '/info/:slug' do |slug|
   finder = Document::Finder.new(pattern: info_pattern(slug), baseurl: '/info/')
+  pass if finder.none?
   @page = Page::Info.new(static_page: finder.find_single)
   erb :info
 end

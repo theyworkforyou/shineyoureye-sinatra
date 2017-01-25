@@ -17,4 +17,10 @@ describe 'Post Page' do
   it 'displays the contents of the post' do
     subject.css('.markdown.infopage').text.must_include('Nigerians woke up to news')
   end
+
+  it 'throws a 404 error if no file is found' do
+    get '/blog/i-dont-exist'
+    subject = Nokogiri::HTML(last_response.body)
+    subject.css('h1').first.text.must_equal('Not Found')
+  end
 end

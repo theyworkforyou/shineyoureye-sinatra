@@ -14,4 +14,10 @@ describe 'Info Page' do
     subject.css('.markdown.infopage').text
       .must_include('Shine your Eye is an initiative of Enough is Enough Nigeria')
   end
+
+  it 'throws a 404 error if no file is found' do
+    get '/info/i-dont-exist'
+    subject = Nokogiri::HTML(last_response.body)
+    subject.css('h1').first.text.must_equal('Not Found')
+  end
 end
