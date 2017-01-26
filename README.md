@@ -101,10 +101,10 @@ bundle exec rake
 Type:
 
 ```bash
-bundle exec ruby app.rb
+bundle exec rackup
 ```
 
-and go to <http://localhost:4567/>
+and go to <http://localhost:9292/>
 
 
 ## Tests

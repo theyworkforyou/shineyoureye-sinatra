@@ -12,6 +12,8 @@ gem 'nokogiri', '>= 1.6.7'
 gem 'rake'
 gem 'rdiscount'
 gem 'sinatra'
+gem 'sass'
+gem 'bootstrap-sass'
 
 group :test do
   gem 'minitest'
