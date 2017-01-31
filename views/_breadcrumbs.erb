@@ -1,0 +1,17 @@
+<% breadcrumbs_data.tap do |paths_and_link_text| %>
+  <%# This prevents breadcrumbs from being shown on the homepage: %>
+  <% if paths_and_link_text.count > 1 %>
+    <% item_count = paths_and_link_text.count %>
+    <ol class="breadcrumb">
+      <% breadcrumbs_data.each_with_index do |path_and_link_text, i| %>
+        <% path, link_text = path_and_link_text %>
+        <% if (i + 1) == item_count %>
+          <%# The last breadcrumb is the current page, so don't link it %>
+          <li class="active"><%= link_text %></li>
+        <% else %>
+          <li><a href="<%= path %>"><%= link_text %></a></li>
+        <% end %>
+      <% end %>
+    </ol>
+  <% end %>
+<% end %>

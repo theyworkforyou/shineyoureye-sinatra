@@ -10,7 +10,6 @@
 
     {% facebook_javascript_sdk %} -->
 
-
     <%= erb :_main_menu %>
 
     <% if is_homepage? %>
@@ -21,7 +20,7 @@
 
       <%= erb :_header %>
 
-      <!-- {% include breadcrumbs.html %} -->
+      <%= erb :_breadcrumbs %>
 
       <div id="page">
         <div class="page-wrapper wrapper">
