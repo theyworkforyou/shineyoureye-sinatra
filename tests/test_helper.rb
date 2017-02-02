@@ -8,6 +8,8 @@ require 'pry'
 require 'rack/test'
 require 'webmock/minitest'
 
+require_relative './fixtures/mapit_data'
+
 module Minitest
   class Spec
     include Rack::Test::Methods
@@ -19,6 +21,8 @@ module Minitest
     before do
       get_from_disk(DATASOURCE, countries_json)
       get_from_disk(reps_json_url, reps_json)
+      get_from_disk("#{mapit_url}STA", STA_JSON)
+      get_from_disk("#{mapit_url}FED", FED_JSON)
     end
 
     def new_tempfile(contents, filename = 'sye-tests')
@@ -30,6 +34,10 @@ module Minitest
 
     def basic_document(filename)
       Document::MarkdownWithFrontmatter.new(filename: filename, baseurl: 'irrelevant')
+    end
+
+    def mapit_url
+      'http://nigeria.mapit.mysociety.org/areas/'
     end
 
     private
