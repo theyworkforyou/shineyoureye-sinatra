@@ -10,6 +10,7 @@ require 'webmock/minitest'
 
 require_relative '../lib/document/markdown_with_frontmatter'
 require_relative './fixtures/mapit_data'
+require_relative './test_doubles'
 
 module Minitest
   class Spec
@@ -39,6 +40,10 @@ module Minitest
 
     def mapit_url
       'http://nigeria.mapit.mysociety.org/areas/'
+    end
+
+    def nigeria_at_known_revision
+      @ng ||= EveryPolitician::Index.new(index_url: DATASOURCE).country('Nigeria')
     end
 
     private
