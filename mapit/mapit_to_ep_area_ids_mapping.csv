@@ -342,9 +342,13 @@
 1060,"area/ido/osi,_moba/ilejeme,_ekiti_state"
 1022,"area/aniocha_north/aniocha_south/_oshimili_n_&_s"
 1179,"area/bodinga/dange-shuni/tureta,_sokoto_state"
+# These next two have no generation_low / generation_high
+10092,"area/lagos_mainland,_lagos_state"
 10091,"area/fufore/song,_adamawa_state"
 1232,"area/isu/njaba/nkwerre/nwangele,_imo_state"
-10092,"area/lagos_mainland,_lagos_state"
+1022,"area/aniocha_north/aniocha_south/_oshimili_n_&_s,_delta_state"
+951,"area/karu/keffi/kokona,_nassarawa_state"
+1125,"area/abuja_municipal_/bwari,_federal_capital_territory_state"
 918,"area/rimi/charanchi/batagarawa,_katsina_state"
 1239,"area/akamkpa/biase,_cross_river_state"
 1244,"area/akoko_south_east/south_west,_ondo_state"
@@ -353,3 +357,8 @@
 1147,"area/ekiti_south_west/ikere/ise/orun,_ekiti_state"
 987,"area/ado_ekiti/irepodun-ifelodun,_ekiti_state"
 1132,"area/kontagora/wushishi/mariga/masheg,_niger_state"
+# 981,"area/ife_federal_constituency,_osun_state"
+# Suspect that area/aniocha_north/aniocha_south/_oshimili_n_&_s,_delta_state is AKUKU-TORU/ASARI-TORU (1243) in Rivers in MapIt
+# A useful document: http://www.nass.gov.ng/document/download/6545
+# Methodology: look for the state names in there - Google the people
+# Also useful: http://www.inecnigeria.org/wp-content/uploads/2015/05/2015-UPDATED-ELECTED-REPS-MEMBERS-ELECTED-ONLY-10.04.15.xlsx
