@@ -1,30 +1,26 @@
-<% if is_homepage? %>
-<div style=" padding: 5rem 0 4rem;  background: #253130; color: white;">
+<div class="site-footer">
   <div class="container">
-<% else %>
-<footer id="site-footer">
-  <div class="wrapper">
-<% end %>
-
     <div class="row">
-      <div class="seven columns">
-        <h5>About Shine Your Eye</h5>
+      <div class="site-footer__primary">
+        <h3>About Shine Your Eye</h3>
         <p>Shine your Eye is an initiative of <a href="http://eie.ng" target="_blank" title="EiE Nigeria">Enough is Enough Nigeria (EiENigeria)</a>  with support from <a href="http://www.placng.org/" target="_blank" title="PLAC NG">Policy and Legal Advocacy Center</a>.</p>
         <p>Shine Your Eye lets you follow the activities of elected officials, connect with them and share your concerns. You can view profiles of elected officials that include such information as educational background, experience, legislative interests, phone numbers and email addresses.</p>
         <p>Our goal is to increase accountability in governance by making it easier for Nigerians to follow the activities of elected officials and connect with them. Curating the activities of elected officials also makes it easier to review track records at election time.</p>
       </div>
-      <div class="two columns">&nbsp;</div>
-      <div class="three columns">
-        <h5>Quick Links</h5>
-        <span style="font-size: 0.9em; ">
-          <a class="button button-primary" href="/search/" >Find your Representative</a>
-          <a class="button" href="/blog/">Latest News</a>
-          <a class="button" href="/info/democracy-resources">Democractic Resources</a>
-          <a class="button" href="/info/elections">Elections</a>
-          <a class="button" href="/info/events">Events</a>
-        </span>
+      <div class="site-footer__secondary">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a class="btn btn-primary" href="/search/">Find your Representative</a></li>
+          <li><a class="btn btn-default" href="/blog/">Latest News</a></li>
+          <li><a class="btn btn-default" href="/info/democracy-resources">Democractic Resources</a></li>
+          <li><a class="btn btn-default" href="/info/elections">Elections</a></li>
+          <li><a class="btn btn-default" href="/info/events">Events</a></li>
+        </li>
       </div>
     </div>
-
   </div>
-</footer>
+</div>
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="/javascripts/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+<script src="/javascripts/bootstrap/bootstrap.min.js"></script>

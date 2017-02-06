@@ -1,5 +1,6 @@
 require 'everypolitician'
 require 'sinatra'
+require 'bootstrap-sass'
 
 require_relative 'lib/document/finder'
 require_relative 'lib/helpers/filepaths_helper'
@@ -48,4 +49,12 @@ get '/info/:slug' do |slug|
   finder = Document::Finder.new(pattern: info_pattern(slug), baseurl: '/info/')
   @page = Page::Info.new(static_page: finder.find_single)
   erb :info
+end
+
+get '/fonts/bootstrap/:filename' do |filename|
+  send_file(File.join(Bootstrap.fonts_path, 'bootstrap', filename))
+end
+
+get '/javascripts/bootstrap/:filename' do |filename|
+  send_file(File.join(Bootstrap.javascripts_path, filename))
 end

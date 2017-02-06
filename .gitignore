@@ -1,4 +1,5 @@
 .sass-cache
-/public/css
 /prose
 /public/media_root
+/public/stylesheets/*.css
+/public/stylesheets/*.css.map

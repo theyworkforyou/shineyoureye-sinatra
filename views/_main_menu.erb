@@ -1,60 +1,55 @@
-<div id="main-menu">
-  <nav class="wrapper container">
-    <ul>
+<nav class="navbar navbar-default main-menu" id="main-menu">
+  <div class="container">
 
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu-links" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">ShineYourEye</a>
+    </div>
 
+    <div class="collapse navbar-collapse" id="main-menu-links">
+      <ul class="nav navbar-nav navbar-right">
 
-      <li><a href="/">Home</a></li>
+        <li><a href="/">Home</a></li>
 
+        <li><a href="/info/democracy-resources">Democracy Resources</a></li>
 
-      <li><a href="/info/democracy-resources">Democracy Resources</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">Elections <span class="caret"></span></a>
+          <ul class="dropdown-menu" id="elections">
+            <li><a href="/info/elections">Elections</a></li>
+            <li><a href="/info/inec-2014-voter-registration-and-pvc-distribution">Voting Information</a></li>
+          </ul>
+        </li>
 
-      <li><a href="/info/elections">Elections</a>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">Government Officials <span class="caret"></span></a>
+          <ul class="dropdown-menu" id="government-officials">
+            <li><a href="/info/government-officials">Government Officials</a></li>
+            <li><a href="/position/senator/">Senators</a></li>
+            <li><a href="/position/representative/">Representatives</a></li>
+            <li><a href="/position/executive-governor/">Governors</a></li>
+            <!-- Hide these for now as we don't have the necessary info in EveryPolitician -->
+            <!-- <li>
+              <a href="/position/state-legislator/">State Legislators</a>
+            </li> -->
+          </ul>
+        </li>
 
-        <ul id="elections">
-          <li>
-            <a href="/info/inec-2014-voter-registration-and-pvc-distribution">Voting Information</a>
-          </li>
-        </ul>
+        <li><a href="/info/places-overview">Places</a></li>
 
-      </li>
+        <li><a href="/info/events">Events</a></li>
 
-      <li><a href="/info/government-officials">Government Officials</a>
+        <li><a href="/blog/">Blog</a></li>
 
-        <ul id="government-officials">
-          <li>
-            <a href="/position/senator/">Senators</a>
-          </li>
-          <li>
-            <a href="/position/representative/">Representatives</a>
-          </li>
+        <li><a href="/info/about">About</a></li>
 
-          <li>
-            <a href="/position/executive-governor/">Governors</a>
-          </li>
+      </ul>
+    </div>
 
-          <!-- Hide these for now as we don't have the necessary info in EveryPolitician -->
-          <!-- <li>
-            <a href="/position/state-legislator/">State Legislators</a>
-          </li> -->
-
-        </ul>
-
-      </li>
-
-
-      <li><a href="/info/places-overview">Places</a></li>
-
-
-      <li><a href="/info/events">Events</a></li>
-
-
-      <li><a href="/blog/">Blog</a></li>
-
-
-      <li><a href="/info/about">About</a></li>
-
-
-    </ul>
-  </nav>
-</div>
+  </div>
+</nav>

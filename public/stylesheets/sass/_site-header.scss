@@ -1,0 +1,11 @@
+.site-header {
+    background-color: $site-header-background-color;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.page--homepage {
+    .site-header {
+        display: none;
+    }
+}

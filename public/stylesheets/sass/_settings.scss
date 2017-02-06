@@ -1,0 +1,50 @@
+// Use this file to customise Bootstrap settings (bootstrap/_variables.scss)
+// and other settings used by the custom ShineYourEye components.
+
+// The headings are taken from bootstrap/_variables.scss, so when you
+// override a new setting, try to place it under the right heading.
+// It'll help you and future developers find the setting more quickly!
+
+//== Colors
+$brand-primary: $color-sky-blue;
+
+//== Scaffolding
+$text-color: $color-dark-grey;
+
+//== Typography
+$font-family-base: $font-family-raleway;
+$font-size-base: 16px;
+$line-height-base: 1.5;
+
+//== Iconography
+$icon-font-path: "/fonts/bootstrap/";
+
+//== Dropdowns
+$dropdown-link-hover-bg: mix($color-mint-green, #fff, 50%);
+
+//== Navbar
+$navbar-default-color: $color-dark-grey;
+$navbar-default-bg: $color-mint-green;
+$navbar-default-border: mix($color-mint-green, #000, 90%);
+
+$navbar-default-link-color: $color-dark-grey;
+$navbar-default-link-hover-color: $color-black;
+$navbar-default-link-hover-bg: mix($color-mint-green, #fff, 60%);
+$navbar-default-link-active-color: $color-black;
+$navbar-default-link-active-bg: mix($color-mint-green, #fff, 40%);
+
+$navbar-default-toggle-hover-bg: mix($color-mint-green, #fff, 60%);
+$navbar-default-toggle-icon-bar-bg: $color-dark-grey;
+$navbar-default-toggle-border-color: mix($color-mint-green, #000, 80%);
+
+// ShineYourEye main menu
+$main-menu-border-radius: 0;
+$main-menu-font-size: 14px;
+$main-menu-item-padding-horizontal: 12px; // down from bootstrap default 15px
+
+// ShineYourEye page headers:
+$site-header-background-color: mix($navbar-default-bg, #fff, 50%);
+
+// ShineYourEye footer
+$site-footer-background-color: $color-dark-green;
+$site-footer-text-color: #fff;

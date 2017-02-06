@@ -73,7 +73,7 @@ rbenv rehash
 * `prose`: where the `shineyoureye-prose` repository will be cloned. Contains
 user introduced content, like blog posts, events, etc.
 * `public`: static assets
-* `sass`: sass files which will create the css files in `public`
+* `public/stylesheets/sass`: sass files automatically compiled into css
 * `tests`: all the tests
 * `views`: the erb templates to build the site
 
@@ -101,10 +101,10 @@ bundle exec rake
 Type:
 
 ```bash
-bundle exec ruby app.rb
+bundle exec rackup
 ```
 
-and go to <http://localhost:4567/>
+and go to <http://localhost:9292/>
 
 
 ## Tests

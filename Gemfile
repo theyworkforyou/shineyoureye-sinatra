@@ -11,7 +11,9 @@ gem 'everypolitician', '~> 0.20.0', github: 'everypolitician/everypolitician-rub
 gem 'nokogiri', '>= 1.6.7'
 gem 'rake'
 gem 'rdiscount'
+gem 'sass'
 gem 'sinatra'
+gem 'bootstrap-sass'
 
 group :test do
   gem 'minitest'

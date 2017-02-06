@@ -11,14 +11,14 @@ describe 'Layout' do
   end
 
   it 'includes the main menu' do
-    refute_empty(subject.css('#main-menu'))
+    refute_empty(subject.css('.main-menu'))
   end
 
   it 'includes the header' do
-    refute_empty(subject.css('header menu'))
+    refute_empty(subject.css('.site-header'))
   end
 
   it 'includes the footer' do
-    refute_empty(subject.css('#site-footer'))
+    refute_empty(subject.css('.site-footer'))
   end
 end

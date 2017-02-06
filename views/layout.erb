@@ -3,34 +3,33 @@
 
   <%= erb :_head %>
 
-  <body>
+  <body class="<% if is_homepage? %>page--homepage<% end %>">
     <!-- {% if jekyll.environment == 'production' %}
       {% google_analytics %}
     {% endif %}
 
     {% facebook_javascript_sdk %} -->
 
-
     <%= erb :_main_menu %>
 
-    <% if is_homepage? %>
+    <%= erb :_header %>
 
-      <%= yield %>
+    <div id="page">
 
-    <% else %>
+      <% if is_homepage? %>
+        <%= yield %>
 
-      <%= erb :_header %>
-
-      <!-- {% include breadcrumbs.html %} -->
-
-      <div id="page">
-        <div class="page-wrapper wrapper">
-          <%= yield %>
-          <br clear="both">
+      <% else %>
+        <!-- {% include breadcrumbs.html %} -->
+        <div class="page-section">
+          <div class="container">
+             <%= yield %>
+          </div>
         </div>
-      </div>
 
-    <% end %>
+      <% end %>
+
+    </div>
 
     <%= erb :_footer %>
 
