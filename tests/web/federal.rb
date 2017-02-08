@@ -16,9 +16,8 @@ describe 'Federal Constituencies Page' do
   end
 
   it 'links to each constituency page' do
-    subject.css('.media-left a/@href').last.text.must_equal('/place/abakalikiizzi/')
-    subject.css('.media-heading/@href').last.text.must_equal('/place/abakalikiizzi/')
-    subject.css('.read-more/@href').last.text.must_equal('/place/abakalikiizzi/')
+    subject.css('.media-left a/@href').first.text.must_equal('/place/gwagwaladakuje/')
+    subject.css('.media-body a/@href').first.text.must_equal('/place/gwagwaladakuje/')
   end
 
   it 'shows each constituency name' do
@@ -26,10 +25,10 @@ describe 'Federal Constituencies Page' do
   end
 
   it 'links to each parent place' do
-    subject.css('.media-heading ~ p a/@href').last.text.must_equal('/place/ebonyi/')
+    subject.css('.parent-place a/@href').last.text.must_equal('/place/ebonyi/')
   end
 
   it 'shows each parent place name' do
-    subject.css('.media-heading ~ p a').last.text.must_equal('Ebonyi')
+    subject.css('.parent-place a').last.text.must_equal('Ebonyi')
   end
 end

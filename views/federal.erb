@@ -36,13 +36,9 @@
         </a>
       </div>
       <div class="media-body">
-        <a class="media-heading" href="<%= place.url %>"><%= place.name %></a>
-        <p>Parent place: <a href="<%= place.parent_url %>"><%= place.parent_name %></a></p>
-        <p class="meta"></p>
-        <div class="kind">Federal Constituency<br>House of Representatives 2011-</div>
-        <div class="read-more-wrap">
-          <a class="read-more" href="<%= place.url %>">read more</a>
-        </div>
+        <a href="<%= place.url %>"><h3 class="media-heading"><%= place.name %></h3></a>
+        <p class="parent-place">Parent place: <a href="<%= place.parent_url %>"><%= place.parent_name %></a></p>
+        <div class="kind">Federal Constituency<br>House of Representatives 2011-current</div>
       </div>
     </li>
     <% end %>
