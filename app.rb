@@ -20,6 +20,7 @@ set :content_dir, File.join(__dir__, 'prose')
 set :datasource, ENV.fetch('DATASOURCE', 'https://github.com/everypolitician/everypolitician-data/raw/master/countries.json')
 set :index, EveryPolitician::Index.new(index_url: settings.datasource)
 set :mapit_url, 'http://nigeria.mapit.mysociety.org/areas/'
+set :twitter_user, 'NGShineyoureye'
 
 get '/' do
   posts_finder = Document::Finder.new(pattern: posts_pattern, baseurl: '/blog/')

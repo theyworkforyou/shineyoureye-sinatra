@@ -7,6 +7,10 @@ module SettingsHelper
   def mapit_url
     settings.mapit_url
   end
+
+  def twitter_user
+    settings.twitter_user
+  end
 end
 
 helpers SettingsHelper

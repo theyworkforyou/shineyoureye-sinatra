@@ -66,4 +66,20 @@ describe 'Person Page' do
       subject.css('h1').first.text.must_equal('Not Found')
     end
   end
+
+  describe 'social block' do
+    it 'links to facebook share' do
+      subject.css('.big-btn-text-fb/@href').text.must_include('/person/b2a7f72a-9ecf-4263-83f1-cb0f8783053c/&t=ABDUKADIR RAHIS')
+    end
+
+    it 'links to twitter share' do
+      subject.css('.big-btn-text-tw/@href').text.must_include('NGShineyoureye')
+      subject.css('.big-btn-text-tw/@href').text.must_include('&text=ABDUKADIR RAHIS')
+      subject.css('.big-btn-text-tw/@href').text.must_include('/person/b2a7f72a-9ecf-4263-83f1-cb0f8783053c/')
+    end
+
+    it 'links to comments' do
+      subject.css('.big-btn-text-green/@href').text.must_include('/person/b2a7f72a-9ecf-4263-83f1-cb0f8783053c/#comments')
+    end
+  end
 end
