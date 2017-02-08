@@ -20,7 +20,8 @@ describe 'List of Representatives' do
     let(:person) { subject.css('.media').first }
 
     it 'links to the person page' do
-      person.css('a/@href').first.text.must_equal('/person/b2a7f72a-9ecf-4263-83f1-cb0f8783053c/')
+      person.css('.media-left a/@href').first.text.must_equal('/person/b2a7f72a-9ecf-4263-83f1-cb0f8783053c/')
+      person.css('.media-body a/@href').first.text.must_equal('/person/b2a7f72a-9ecf-4263-83f1-cb0f8783053c/')
     end
 
     describe 'when person has an image' do
@@ -49,7 +50,7 @@ describe 'List of Representatives' do
     end
 
     it 'displays the representative name' do
-      person.css('h4 a').text.must_equal('ABDUKADIR RAHIS')
+      person.css('.media-heading').text.must_equal('ABDUKADIR RAHIS')
     end
 
     it 'links to area page' do
