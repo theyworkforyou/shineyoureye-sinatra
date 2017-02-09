@@ -6,7 +6,8 @@ describe 'Place' do
   describe 'if area has a parent' do
     let(:place) { Mapit::Place.new(
       place: area_with_parent,
-      mapit_ids_to_pombola_slugs: mapit_ids_to_pombola_slugs,
+      parent: parent,
+      pombola_slug: 'gwagwaladakuje',
       baseurl: '/baseurl/'
     ) }
 
@@ -19,7 +20,7 @@ describe 'Place' do
     end
 
     it 'knows its parent name' do
-      place.parent_name.must_equal('Federal Capital Territory')
+      place.parent.name.must_equal('Federal Capital Territory')
     end
 
     it 'builds the place url with the baseurl' do
@@ -27,36 +28,32 @@ describe 'Place' do
     end
 
     it 'builds the parent url with the baseurl' do
-      place.parent_url.must_equal('/baseurl/federal-capital-territory/')
+      place.parent.url.must_equal('/baseurl/federal-capital-territory/')
     end
   end
 
   describe 'if area has no parent' do
-    let(:place) { Mapit::Place.new(
-      place: area_with_no_parent,
-      mapit_ids_to_pombola_slugs: mapit_ids_to_pombola_slugs,
-      baseurl: '/baseurl/'
-    ) }
+    let(:place) { parent }
 
-    it 'returns nil for the parent name' do
-      assert_nil(place.parent_name)
+    it 'returns nil for the parent' do
+      assert_nil(place.parent)
     end
-
-    it 'returns nil for the parent url' do
-      assert_nil(place.parent_url)
-    end
-  end
-
-  def mapit_ids_to_pombola_slugs
-    { '949' => 'gwagwaladakuje', '16' => 'federal-capital-territory' }
   end
 
   def area_with_parent
-    parent = {'parent_id' => 16, 'parent_name' => 'Federal Capital Territory'}
-    JSON.parse(FED_JSON).values.first.merge(parent)
+    JSON.parse(FED_JSON).values.first
   end
 
   def area_with_no_parent
     JSON.parse(STA_JSON).values.first
+  end
+
+  def parent
+    Mapit::Place.new(
+      place: area_with_no_parent,
+      parent: nil,
+      pombola_slug: 'federal-capital-territory',
+      baseurl: '/baseurl/'
+    )
   end
 end
