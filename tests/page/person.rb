@@ -11,7 +11,8 @@ describe 'Page::Person' do
   ) }
   let(:page) { Page::Person.new(
     person: people.find_single('b2a7f72a-9ecf-4263-83f1-cb0f8783053c'),
-    position: 'Position'
+    position: 'Position',
+    summary_doc: FakeSummary.new('<p>foo</p>')
   ) }
 
   it 'knows the position' do
@@ -55,25 +56,7 @@ describe 'Page::Person' do
   end
 
   it 'has a summary' do
-    # Patch the summary_markdown_filename to point to a file with
-    # known Markdown content.
-    def page.summary_markdown_filename
-      File.join(
-        File.dirname(__FILE__), '..', 'fixtures', 'example-summary.md'
-      )
-    end
-    page.summary.must_equal(
-      "<p>Some example summary text</p>
-
-<h3>Positions</h3>
-
-<ul>
-<li>First item in the list</li>
-<li>Second item in the list</li>
-</ul>
-
-"
-    )
+    page.summary.must_equal('<p>foo</p>')
   end
 
   it 'knows the executive positions' do
@@ -88,15 +71,5 @@ describe 'Page::Person' do
     page.education.must_equal([])
   end
 
-  it 'can find the filename for the Markdown summary text' do
-    expected_relative = File.join(
-      File.dirname(__FILE__), '..', '..', 'prose', 'summaries',
-      'b2a7f72a-9ecf-4263-83f1-cb0f8783053c.md'
-    )
-    expected_absolute = Pathname.new(expected_relative).cleanpath
-    actual_relative = page.send(:summary_markdown_filename)
-    actual_absolute = Pathname.new(actual_relative).cleanpath
-    actual_absolute.must_equal(expected_absolute)
-  end
-
+  FakeSummary = Struct.new(:body)
 end

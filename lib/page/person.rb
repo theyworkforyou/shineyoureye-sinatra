@@ -3,9 +3,10 @@ module Page
   class Person
     attr_reader :person, :position
 
-    def initialize(person:, position:)
+    def initialize(person:, position:, summary_doc:)
       @person = person
       @position = position
+      @summary_doc = summary_doc
     end
 
     def title
@@ -25,11 +26,7 @@ module Page
     end
 
     def summary
-      @summary ||= Document::MarkdownWithFrontmatter.new(
-        filename: summary_markdown_filename, baseurl: nil
-      ).body
-    rescue Errno::ENOENT
-      ''
+      summary_doc.body
     end
 
     def executive_positions
@@ -46,11 +43,6 @@ module Page
 
     private
 
-    def summary_markdown_filename
-      leafname = "#{person.id}.md"
-      File.join(
-        File.dirname(__FILE__), '..', '..', 'prose', 'summaries', leafname
-      )
-    end
+    attr_reader :summary_doc
   end
 end
