@@ -57,5 +57,24 @@ slug: a-slug
         end
       end
     end
+
+    describe 'when searching for a summary' do
+      it 'can find a summary' do
+        contents = '---
+---
+summary'
+        Dir.stub :glob, [new_tempfile(contents)] do
+          finder.find_or_empty.body.strip.must_equal('<p>summary</p>')
+        end
+      end
+    end
+
+    describe 'when no summary is found' do
+      it 'returns a duck type' do
+        Dir.stub :glob, [] do
+          finder.find_or_empty.body.strip.must_equal('')
+        end
+      end
+    end
   end
 end

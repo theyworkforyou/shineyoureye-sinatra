@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 require_relative 'exceptions'
 require_relative 'markdown_with_frontmatter'
+require_relative 'empty_document'
 
 module Document
   class Finder
@@ -13,6 +14,10 @@ module Document
       raise_error_if_multiple_files_found
       raise_error_if_no_files_found
       find_all.first
+    end
+
+    def find_or_empty
+      none? ? create_empty_document : find_all.first
     end
 
     def find_all
@@ -46,6 +51,10 @@ module Document
 
     def create_document(filename)
       Document::MarkdownWithFrontmatter.new(filename: filename, baseurl: baseurl)
+    end
+
+    def create_empty_document
+      Document::EmptyDocument.new
     end
   end
 end
