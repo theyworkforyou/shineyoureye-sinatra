@@ -147,13 +147,15 @@ end
 
 get '/person/:id/' do |id|
   pass if representatives.none?(id)
-  @page = Page::Person.new(person: representatives.find_single(id), position: 'Representative')
+  summary_finder = Document::Finder.new(pattern: summary_pattern(id), baseurl: '')
+  @page = Page::Person.new(person: representatives.find_single(id), position: 'Representative', summary_doc: summary_finder.find_or_empty)
   erb :person
 end
 
 get '/person/:id/' do |id|
   pass if senators.none?(id)
-  @page = Page::Person.new(person: senators.find_single(id), position: 'Senator')
+  summary_finder = Document::Finder.new(pattern: summary_pattern(id), baseurl: '')
+  @page = Page::Person.new(person: senators.find_single(id), position: 'Senator', summary_doc: summary_finder.find_or_empty)
   erb :person
 end
 

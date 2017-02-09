@@ -18,6 +18,10 @@ module FilepathsHelper
     "#{content_dir}/posts"
   end
 
+  def summaries_dir
+    "#{content_dir}/summaries"
+  end
+
   def events_pattern
     "#{events_dir}/#{date_glob}-*.md"
   end
@@ -36,6 +40,10 @@ module FilepathsHelper
 
   def post_pattern(slug)
     "#{posts_dir}/#{date_glob}-#{slug}.md"
+  end
+
+  def summary_pattern(id)
+    "#{summaries_dir}/#{id}.md"
   end
 
   private

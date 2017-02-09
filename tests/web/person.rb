@@ -59,6 +59,31 @@ describe 'Person Page' do
     subject.css('.person__party a').first.text.must_equal('All Progressives Congress')
   end
 
+  describe 'summary section' do
+    before { get '/person/0baa5a03-b1e0-4e66-b3f9-daee8bacb87d/' }
+
+    it 'edit link points to the right person id' do
+      subject.css('.person-edit-link a/@href').text
+        .must_include('/summaries/0baa5a03-b1e0-4e66-b3f9-daee8bacb87d.md')
+    end
+
+    it 'shows summary contents if person has summary' do
+      subject.css('.person-summary li').last.text
+        .must_include('Student at LEA PRI.SCH. from 1969 to 1974')
+    end
+  end
+
+  describe 'when person has no summary' do
+    it 'edit link points to the right person id' do
+      subject.css('.person-edit-link a/@href').text
+        .must_include('/summaries/b2a7f72a-9ecf-4263-83f1-cb0f8783053c.md')
+    end
+
+    it 'shows nothing in the summary' do
+      subject.css('.person-summary').text.strip.must_equal('')
+    end
+  end
+
   describe 'when requesting a senator page' do
     before { get '/person/6b0cdd74-7960-478f-ac93-d230f486a5b9/' }
 
