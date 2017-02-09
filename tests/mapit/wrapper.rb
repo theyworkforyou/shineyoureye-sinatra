@@ -27,8 +27,7 @@ describe 'Mappit::Wrapper' do
     end
 
     it 'does not have parent data for the states' do
-      assert_nil(mapit.states.first.parent_name)
-      assert_nil(mapit.states.first.parent_url)
+      assert_nil(mapit.states.first.parent)
     end
   end
 
@@ -46,11 +45,11 @@ describe 'Mappit::Wrapper' do
     end
 
     it 'has federal constituencies with a parent name' do
-      mapit.federal_constituencies.first.parent_name.must_equal('Federal Capital Territory')
+      mapit.federal_constituencies.first.parent.name.must_equal('Federal Capital Territory')
     end
 
     it 'has federal constituencies with a parent url' do
-      mapit.federal_constituencies.first.parent_url.must_equal('/baseurl/federal-capital-territory/')
+      mapit.federal_constituencies.first.parent.url.must_equal('/baseurl/federal-capital-territory/')
     end
   end
 
@@ -68,7 +67,11 @@ describe 'Mappit::Wrapper' do
     end
 
     it 'has senatorial districts with a parent name' do
-      mapit.senatorial_districts.first.parent_name.must_equal('Abia')
+      mapit.senatorial_districts.first.parent.name.must_equal('Abia')
+    end
+
+    it 'has senatorial districts with a parent url' do
+      mapit.senatorial_districts.first.parent.url.must_equal('/baseurl/abia/')
     end
   end
 
@@ -86,7 +89,11 @@ describe 'Mappit::Wrapper' do
 
   class FakeMappings
     def fed_to_sta_mapping
-      { '949' => '16', '1091' => '12', '963' => '9', '809' => '2' }
+      { '949' => '16', '1091' => '12', '963' => '9' }
+    end
+
+    def sen_to_sta_mapping
+      { '809' => '2' }
     end
 
     def mapit_ids_to_pombola_slugs
