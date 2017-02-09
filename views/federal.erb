@@ -1,0 +1,68 @@
+<h1 class="page-title">Places</h1>
+
+<!-- Commenting these until we start working on those pages -->
+<!-- <div class="object_menu">
+  <nav>
+    <ul class="nav nav-pills">
+      <li role="presentation"><a href="/place/all/">All</a></li>
+      <li role="presentation"><a href="/place/is/continent/">Continents</a></li>
+      <li role="presentation"><a href="/place/is/country/">Countries</a></li>
+      <li role="presentation"><a href="/place/is/federal-constituency/hr2011">Federal Constituencies (Current)</a></li>
+      <li role="presentation"><a href="/place/is/local-community/">Local Communities</a></li>
+      <li role="presentation"><a href="/place/is/local-government-area/">Local Government Areas</a></li>
+      <li role="presentation"><a href="/place/is/other/">Other</a></li>
+      <li role="presentation"><a href="/place/is/senatorial-district/s2011">Senatorial District (Current)</a></li>
+      <li role="presentation"><a href="/place/is/state/">States</a></li>
+      <li role="presentation"><a href="/place/is/state-constituency/">State Constituencies</a></li>
+      <li role="presentation"><a href="/place/is/territory/">Territories</a></li>
+      <li role="presentation"><a href="/place/is/ward/">Wards</a></li>
+    </ul>
+  </nav>
+</div> -->
+
+<hr>
+
+<div>
+  <h2><%= @page.title %></h2>
+  <!-- Commented until we implement pagination -->
+  <!-- <h3>Entries 1 to 10 of 360.</h3> -->
+
+  <ul class="media-list media-list--places">
+    <% @page.places.each do |place| %>
+    <li class="media">
+      <div class="media-left">
+        <a href="<%= place.url %>">
+          <img class="media-object" src="/images/place-200x200.jpg" alt="default image for places">
+        </a>
+      </div>
+      <div class="media-body">
+        <a href="<%= place.url %>"><h3 class="media-heading"><%= place.name %></h3></a>
+        <p class="parent-place">Parent place: <a href="<%= place.parent_url %>"><%= place.parent_name %></a></p>
+        <div class="kind">Federal Constituency<br>House of Representatives 2011-current</div>
+      </div>
+    </li>
+    <% end %>
+  </ul>
+
+  <!-- Commenting the pagination for now until it is implemented -->
+  <!-- <nav aria-label="Page navigation">
+    <ul class="pagination">
+      <li>
+        <a href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li>
+        <a href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav> -->
+
+</div>

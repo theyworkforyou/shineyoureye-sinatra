@@ -1,0 +1,22 @@
+// Some custom styles that work nicely with the Bootstrap media component
+// we use on, eg, the Places page.
+
+.media-list--places {
+    .media {
+        margin-top: 0; // margin doesn't play nicely with borders
+        padding: 2em 0; // so use padding instead
+    }
+
+    .media + .media {
+        border-top: 1px solid $hr-border;
+    }
+
+    .media-object {
+        max-width: 100px; // prevent huge images breaking layout
+    }
+
+    .media-left,
+    .media > .pull-left {
+        padding-right: 1.5em; // up from the default 10px
+    }
+}
