@@ -61,7 +61,8 @@ end
 get '/place/is/federal-constituency/' do
   mappings = Mapit::Mappings.new(
     fed_to_sta_ids_mapping_filename: './mapit/fed_to_sta_area_ids_mapping.csv',
-    pombola_slugs_to_mapit_ids_filename: './mapit/pombola_place_slugs_to_mapit.csv'
+    pombola_slugs_to_mapit_ids_filename: './mapit/pombola_place_slugs_to_mapit.csv',
+    mapit_to_ep_areas_filename: './mapit/mapit_to_ep_area_ids_mapping.csv'
   )
   mapit = Mapit::Wrapper.new(mapit_url: settings.mapit_url, mapit_mappings: mappings, baseurl: '/place/')
   @page = Page::Places.new('Federal Constituencies (Current)', mapit.federal_constituencies)
