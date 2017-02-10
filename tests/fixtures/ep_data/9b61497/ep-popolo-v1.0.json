@@ -1,0 +1,3840 @@
+{
+  "posts": [
+
+  ],
+  "persons": [
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08033304041"
+        }
+      ],
+      "id": "0577f346-e883-4e1d-94eb-e3050d5c15f1",
+      "image": "http://www.nass.gov.ng/images/mps/942.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/942.jpg"
+        }
+      ],
+      "name": "Fatimat Raji-Rasaki"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08037865570"
+        }
+      ],
+      "id": "0b536a2c-2bc9-46a0-8d40-0deb9241cb31",
+      "image": "http://www.nass.gov.ng/images/mps/834.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/834.jpg"
+        }
+      ],
+      "name": "AHMAD ABUBAKAR"
+    },
+    {
+      "id": "0de9e40b-52bc-459f-978b-2aea514eec79",
+      "image": "http://www.nass.gov.ng/images/mps/745.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/745.jpg"
+        }
+      ],
+      "name": "JOSHUA CHIBI"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08033151232,08122266"
+        }
+      ],
+      "id": "10ab1957-94a3-4d99-b31d-6236c624921e",
+      "image": "http://www.nass.gov.ng/images/mps/714.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/714.jpg"
+        }
+      ],
+      "name": "EMMANUEL BWACHA, CON"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "07033399992"
+        }
+      ],
+      "id": "129b69f6-8a86-4407-9525-8a2f8caa5828",
+      "image": "http://www.nass.gov.ng/images/mps/945.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/945.jpg"
+        }
+      ],
+      "name": "Danjuma Laah"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "0802772605"
+        }
+      ],
+      "id": "13721811-4357-419c-8ca7-8f1170b36f1a",
+      "image": "http://www.nass.gov.ng/images/mps/941.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/941.jpg"
+        }
+      ],
+      "name": "Ben Murray-Bruce"
+    },
+    {
+      "id": "16f44adf-2bc8-469d-aef1-5d04bfc3a6b9",
+      "image": "http://www.nass.gov.ng/images/mps/409.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/409.jpg"
+        }
+      ],
+      "name": "MOHAMMED NDUME"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08037750605"
+        }
+      ],
+      "id": "18771cbf-47e1-4e0f-bbc5-a65b1e11a8c8",
+      "image": "http://www.nass.gov.ng/images/mps/avatar.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/avatar.jpg"
+        }
+      ],
+      "name": "PAULKER EMMANUEL"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08131267378"
+        }
+      ],
+      "id": "1aec662e-0836-43d1-832a-0e65686766bb",
+      "image": "http://www.nass.gov.ng/images/mps/935.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/935.jpg"
+        }
+      ],
+      "name": "FOSTER OGOLA"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08028505890"
+        }
+      ],
+      "id": "1d5de848-fe51-4511-8856-1a2090a38c00",
+      "image": "http://www.nass.gov.ng/images/mps/813.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/813.jpg"
+        }
+      ],
+      "name": "MUHAMMAD SHITU"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08033579273"
+        }
+      ],
+      "id": "223679e6-ac35-4ced-944b-b1109d9e4b1d",
+      "image": "http://www.nass.gov.ng/images/mps/536.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/536.jpg"
+        }
+      ],
+      "name": "BUKOLA SARAKI"
+    },
+    {
+      "id": "2696e29d-79f3-4db3-b50e-31ceeaae2ae0",
+      "image": "http://www.nass.gov.ng/images/mps/810.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/810.jpg"
+        }
+      ],
+      "name": "JOSHUA MOLTOBOK"
+    },
+    {
+      "id": "281e0ba8-5b87-40e2-98e4-454d57b96b4c",
+      "image": "http://www.nass.gov.ng/images/mps/508.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/508.jpg"
+        }
+      ],
+      "name": "JONAH JANG"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08033496777"
+        }
+      ],
+      "id": "29a44bbd-0dc5-433a-85b1-d75ac81023ba",
+      "image": "http://www.nass.gov.ng/images/mps/774.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/774.jpg"
+        }
+      ],
+      "name": "ISAH MISAU"
+    },
+    {
+      "id": "2d19dc00-2a3d-48a4-9373-f05e3fec46c9",
+      "image": "http://www.nass.gov.ng/images/mps/91.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/91.jpg"
+        }
+      ],
+      "name": "LILIAN EKWUNIFE"
+    },
+    {
+      "id": "304e59f1-7d74-4908-a105-f97b3d93e333",
+      "image": "http://www.nass.gov.ng/images/mps/525.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/525.jpg"
+        }
+      ],
+      "name": "NYAKO ABDUL-AZIZ"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08037791346"
+        }
+      ],
+      "id": "30d9e31f-8113-423b-992b-124f97ea02aa",
+      "image": "http://www.nass.gov.ng/images/mps/523.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/523.jpg"
+        }
+      ],
+      "name": "JOSEPH OGBA"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08065290996"
+        }
+      ],
+      "id": "31a25c6a-76fc-4b1b-8bb4-22f15a8d6612",
+      "image": "http://www.nass.gov.ng/images/mps/817.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/817.jpg"
+        }
+      ],
+      "name": "IKE EKWEREMADU"
+    },
+    {
+      "id": "34047ee1-4c7e-4e46-a439-1372b2d7e231",
+      "image": "http://www.nass.gov.ng/images/mps/70.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/70.jpg"
+        }
+      ],
+      "name": "JAMES MANAGER"
+    },
+    {
+      "id": "37ca02c4-a0d0-4dd4-bc5e-ffe082f9a1b5",
+      "image": "http://www.nass.gov.ng/images/mps/111.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/111.jpg"
+        }
+      ],
+      "name": "HOPE UZODINMA"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08033350616"
+        }
+      ],
+      "id": "3d51d1a9-c023-4a8b-baae-36fb2618bae0",
+      "image": "http://www.nass.gov.ng/images/mps/806.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/806.jpg"
+        }
+      ],
+      "name": "JOHN ENOH"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08033352727"
+        }
+      ],
+      "id": "4655396b-0d12-4bdb-a288-c1e37bfc2f04",
+      "image": "http://www.nass.gov.ng/images/mps/652.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/652.jpg"
+        }
+      ],
+      "name": "SUNDAY OGBUOJI"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08033142203"
+        }
+      ],
+      "id": "49be506a-b95a-41a3-b08d-da58d97b3f28",
+      "image": "http://www.nass.gov.ng/images/mps/819.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/819.jpg"
+        }
+      ],
+      "name": "DURO FASEYI"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08129349999"
+        }
+      ],
+      "id": "4a3fd28e-a162-46d8-8c98-ea19ff7f855c",
+      "image": "http://www.nass.gov.ng/images/mps/844.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/844.jpg"
+        }
+      ],
+      "name": "GERSHOM BASSEY"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "07063212133"
+        }
+      ],
+      "id": "4c8ec63d-76c5-4452-934e-4c67e672b9d5",
+      "image": "http://www.nass.gov.ng/images/mps/876.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/876.jpg"
+        }
+      ],
+      "name": "GEORGE SEKIBO"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08020608822"
+        }
+      ],
+      "id": "5073f714-44a4-4039-923d-708a209af1e3",
+      "image": "http://www.nass.gov.ng/images/mps/821.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/821.jpg"
+        }
+      ],
+      "name": "TIJJANI KAURA"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08033145224"
+        }
+      ],
+      "id": "534c2744-868a-4d83-9507-eab68b41c05a",
+      "image": "http://www.nass.gov.ng/images/mps/604.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/604.jpg"
+        }
+      ],
+      "name": "OLANREWAJU TEJUOSO"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "07059437189"
+        }
+      ],
+      "id": "54220803-37fc-4970-8f9e-693df8c5f721",
+      "image": "http://www.nass.gov.ng/images/mps/715.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/715.jpg"
+        }
+      ],
+      "name": "MOHAMMED GOJE"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08033343555"
+        }
+      ],
+      "id": "54a8e92e-5a77-40f8-bc12-3d22a6d61913",
+      "image": "http://www.nass.gov.ng/images/mps/514.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/514.jpg"
+        }
+      ],
+      "name": "KABIR GARBA"
+    },
+    {
+      "id": "55f519b9-e1a7-4e92-8525-f9b52ed05324",
+      "image": "http://www.nass.gov.ng/images/mps/944.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/944.jpg"
+        }
+      ],
+      "name": "Abdullahi Gumel"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08095300251"
+        }
+      ],
+      "id": "5744450e-41b7-4d7d-b81a-83f42f34437d",
+      "image": "http://www.nass.gov.ng/images/mps/718.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/718.jpg"
+        }
+      ],
+      "name": "OLUREMI TINUBU"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08033589871"
+        }
+      ],
+      "id": "5b2c1b00-d954-44ee-a16b-36f159d12982",
+      "image": "http://www.nass.gov.ng/images/mps/740.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/740.jpg"
+        }
+      ],
+      "name": "BINTA GARBA"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08176406557"
+        }
+      ],
+      "id": "62948032-2e2f-4962-b37e-7f082e722b47",
+      "image": "http://www.nass.gov.ng/images/mps/818.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/818.jpg"
+        }
+      ],
+      "name": "ROBERT BOROFFICE"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08033975465"
+        }
+      ],
+      "id": "65c0c388-28d1-4a85-b715-4d2d630e3da6",
+      "image": "http://www.nass.gov.ng/images/mps/780.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/780.jpg"
+        }
+      ],
+      "name": "DAVID UMARU"
+    },
+    {
+      "id": "696fb5d3-0171-4a21-bd5c-dc6a14cf6296",
+      "image": "http://www.nass.gov.ng/images/mps/224.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/224.jpg"
+        }
+      ],
+      "name": "AHMAD SANI"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08033347737"
+        }
+      ],
+      "id": "6a84079e-32fd-44f8-8e4e-c6f1678a7430",
+      "image": "http://www.nass.gov.ng/images/mps/885.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/885.jpg"
+        }
+      ],
+      "name": "MUSTAPHA BUKAR"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08033129452"
+        }
+      ],
+      "id": "6b0cdd74-7960-478f-ac93-d230f486a5b9",
+      "image": "http://www.nass.gov.ng/images/mps/808.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/808.jpg"
+        }
+      ],
+      "name": "ABARIBE ENYNNAYA"
+    },
+    {
+      "id": "70286a75-669d-4137-bab8-33d7350e3aaf",
+      "image": "http://www.nass.gov.ng/images/mps/948.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/948.jpg"
+        }
+      ],
+      "name": "Aliyu Wamakko"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "07082800000"
+        }
+      ],
+      "id": "73f394c3-b0ae-4154-b86c-8e5b7b637df8",
+      "image": "http://www.nass.gov.ng/images/mps/600.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/600.jpg"
+        }
+      ],
+      "name": "THEODORE ORJI"
+    },
+    {
+      "id": "7babc3b9-ede9-44f7-a2cc-af49aba7f70c",
+      "image": "http://www.nass.gov.ng/images/mps/894.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/894.jpg"
+        }
+      ],
+      "name": "SULEIMAN NAZIF"
+    },
+    {
+      "id": "7c177f56-169a-4779-8b3f-a78776877c37",
+      "image": "http://www.nass.gov.ng/images/mps/17.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/17.jpg"
+        }
+      ],
+      "name": "DAVID MARK"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "07066847000"
+        }
+      ],
+      "id": "7d3a587c-194a-43b6-ba2e-04581d9aa783",
+      "image": "http://www.nass.gov.ng/images/mps/742.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/742.jpg"
+        }
+      ],
+      "name": "MUHAMMAD ADAMU"
+    },
+    {
+      "id": "830b56fc-139a-4122-a60d-fd64fcaa8796",
+      "image": "http://www.nass.gov.ng/images/mps/759.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/759.jpg"
+        }
+      ],
+      "name": "IBRAHIM GOBIR"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08037226187"
+        }
+      ],
+      "id": "840101fc-9040-4bf4-b96d-7d362bcd5f47",
+      "image": "http://www.nass.gov.ng/images/mps/943.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/943.jpg"
+        }
+      ],
+      "name": "Utazi Chukwuka"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08033008542"
+        }
+      ],
+      "id": "87aefbf0-64e2-49d1-9566-139f43b117a2",
+      "image": "http://www.nass.gov.ng/images/mps/823.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/823.jpg"
+        }
+      ],
+      "name": "RAFIU IBRAHIM"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08039777007"
+        }
+      ],
+      "id": "886bcfa9-3dd1-47e8-8971-632aff46999b",
+      "image": "http://www.nass.gov.ng/images/mps/832.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/832.jpg"
+        }
+      ],
+      "name": "MOHAMMED HASSAN"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08035369899"
+        }
+      ],
+      "id": "8c865390-1804-47fc-9c91-dafde701bf94",
+      "image": "http://www.nass.gov.ng/images/mps/940.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/940.jpg"
+        }
+      ],
+      "name": "Samuel Anyanwu"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08057822433"
+        }
+      ],
+      "id": "8dee998b-1de5-420a-ad56-ba0dc6d33454",
+      "image": "http://www.nass.gov.ng/images/mps/947.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/947.jpg"
+        }
+      ],
+      "name": "ARUWA GYUNKA"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "hunkuyis@gmail.com"
+        }
+      ],
+      "id": "8e3b9a97-90af-4561-85ea-dab57d7af528",
+      "image": "http://www.nass.gov.ng/images/mps/517.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/517.jpg"
+        }
+      ],
+      "name": "SULEIMAN HUNKUYI"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08033855557"
+        }
+      ],
+      "id": "945c1a0c-c1a1-4a67-8be1-8c9e756cdf8f",
+      "image": "http://www.nass.gov.ng/images/mps/827.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/827.jpg"
+        }
+      ],
+      "name": "AISAGBONRIODION URHOGHIDE"
+    },
+    {
+      "id": "947e69dd-eefa-4548-9280-0c0377eccc59",
+      "image": "http://www.nass.gov.ng/images/mps/128.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/128.jpg"
+        }
+      ],
+      "name": "KABIRU GAYA"
+    },
+    {
+      "id": "9612c093-eb94-41b7-a713-3ca82b7f1e98",
+      "image": "http://www.nass.gov.ng/images/mps/avatar.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/avatar.jpg"
+        }
+      ],
+      "name": "Baba Garba"
+    },
+    {
+      "id": "96885e3b-9207-4db4-ab27-ceda4dff7d2e",
+      "image": "http://www.nass.gov.ng/images/mps/157.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/157.jpg"
+        }
+      ],
+      "name": "SULEIMAN ADOKWE"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08065186557"
+        }
+      ],
+      "id": "9de46243-685e-4902-81d4-b3e01faa93d5",
+      "image": "http://www.nass.gov.ng/images/mps/852.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/852.jpg"
+        }
+      ],
+      "name": "ABDULLAHI ADAMU"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "07031811094"
+        }
+      ],
+      "id": "a1f70b6d-9b33-4780-a7fc-33565da69e97",
+      "image": "http://nass.gov.ng/images/mps/891.jpg",
+      "images": [
+        {
+          "url": "http://nass.gov.ng/images/mps/891.jpg"
+        }
+      ],
+      "name": "Ahmed Ogembe"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08034737778"
+        }
+      ],
+      "id": "a360b7b8-c900-43d3-817b-00212ebfd8af",
+      "image": "http://www.nass.gov.ng/images/mps/767.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/767.jpg"
+        }
+      ],
+      "name": "OMOWORARE BABAJIDE"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08038885656"
+        }
+      ],
+      "id": "a393d852-9ca7-49de-ad3e-6a190f4da47b",
+      "image": "http://www.nass.gov.ng/images/mps/866.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/866.jpg"
+        }
+      ],
+      "name": "GEORGE AKUME"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "07087161529"
+        }
+      ],
+      "id": "a4f78be5-607a-4663-9b3a-533464a962c1",
+      "image": "http://www.nass.gov.ng/images/mps/890.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/890.jpg"
+        }
+      ],
+      "name": "NELSON EFFIONG"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08033218842"
+        }
+      ],
+      "id": "a60f0c25-50b8-423a-beb7-237472c2acbd",
+      "image": "http://www.nass.gov.ng/images/mps/873.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/873.jpg"
+        }
+      ],
+      "name": "GILBERT NNAJI"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "07098767434, 0806049"
+        }
+      ],
+      "id": "a68bab0e-9f57-4612-9f5f-1e6fc0080bf3",
+      "image": "http://www.nass.gov.ng/images/mps/526.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/526.jpg"
+        }
+      ],
+      "name": "BAREEHU ASHAFA"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08055245532"
+        }
+      ],
+      "id": "a72c2d51-88c1-4700-8eac-749b792cd7ac",
+      "image": "http://www.nass.gov.ng/images/mps/512.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/512.jpg"
+        }
+      ],
+      "name": "KURFI UMARU"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "-"
+        }
+      ],
+      "id": "af00a81c-21e0-49f9-b61b-e90b36fc8ba1",
+      "image": "http://www.nass.gov.ng/images/mps/887.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/887.jpg"
+        }
+      ],
+      "name": "Ovie Omo-Agege"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08022902648"
+        }
+      ],
+      "id": "afd2a18f-d1c2-4d38-b598-2cca75ead770",
+      "image": "http://www.nass.gov.ng/images/mps/502.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/502.jpg"
+        }
+      ],
+      "name": "Mohammed Sabo"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08033153500"
+        }
+      ],
+      "id": "b2bc284e-eb6a-474f-a7e6-629ba07b5d44",
+      "image": "http://www.nass.gov.ng/images/mps/531.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/531.jpg"
+        }
+      ],
+      "name": "YAHAYA ABDULLAHI"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08055024340"
+        }
+      ],
+      "id": "b3c68cc0-3a3e-4d47-8feb-bb6d75c4f343",
+      "image": "http://www.nass.gov.ng/images/mps/712.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/712.jpg"
+        }
+      ],
+      "name": "ODUAH STELLA"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08036591699"
+        }
+      ],
+      "id": "b41379ca-bae9-4ae5-bc63-57d6114b8662",
+      "image": "http://www.nass.gov.ng/images/mps/655.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/655.jpg"
+        }
+      ],
+      "name": "BUKAR IBRAHIM"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08036591683"
+        }
+      ],
+      "id": "bbf841d2-a7b3-4ac5-a319-d8bdcdf7440f",
+      "image": "http://www.nass.gov.ng/images/mps/783.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/783.jpg"
+        }
+      ],
+      "name": "MOHAMMED LAFIAGI"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08034509106"
+        }
+      ],
+      "id": "bd2e8ef2-956f-4ab0-8655-d8074b90a8ae",
+      "image": "http://www.nass.gov.ng/images/mps/716.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/716.jpg"
+        }
+      ],
+      "name": "PHILIP TANIMU"
+    },
+    {
+      "id": "c082f248-ee8f-466f-ba0b-86d7114f9ecb",
+      "image": "http://www.nass.gov.ng/images/mps/781.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/781.jpg"
+        }
+      ],
+      "name": "Rabiu Kwankwaso"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08039131718"
+        }
+      ],
+      "id": "c38d145a-203d-4063-a78d-31ec46311554",
+      "image": "http://www.nass.gov.ng/images/mps/776.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/776.jpg"
+        }
+      ],
+      "name": "BIODUN OLUJIMI"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08032948715"
+        }
+      ],
+      "id": "c3f67ec9-ce83-4b9f-b56e-6f5ed727cea0",
+      "image": "http://www.nass.gov.ng/images/mps/814.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/814.jpg"
+        }
+      ],
+      "name": "MONSURAT SUNMONU"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08038251491"
+        }
+      ],
+      "id": "c5118c49-5a12-46d7-979a-530c0612b717",
+      "image": "http://www.nass.gov.ng/images/mps/589.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/589.jpg"
+        }
+      ],
+      "name": "YELE OMOGUNWA"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08037871219"
+        }
+      ],
+      "id": "c5294fd9-3acc-460a-b6ab-e548fc20e3d8",
+      "image": "http://www.nass.gov.ng/images/mps/879.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/879.jpg"
+        }
+      ],
+      "name": "ABU IBRAHIM"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08078424132"
+        }
+      ],
+      "id": "c5e2f0e7-e8c7-43b0-a126-2c15d4d17fe6",
+      "image": "http://www.nass.gov.ng/images/mps/877.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/877.jpg"
+        }
+      ],
+      "name": "OLUSOLA ADEYEYE"
+    },
+    {
+      "id": "c6a83242-d777-4805-9dc9-c0150bdf7e38",
+      "image": "http://www.nass.gov.ng/images/mps/946.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/946.jpg"
+        }
+      ],
+      "name": "Jibrin Barau"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08033012087"
+        }
+      ],
+      "id": "c6e6ef58-58c8-4969-860f-07b85ba83e51",
+      "image": "http://www.nass.gov.ng/images/mps/530.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/530.jpg"
+        }
+      ],
+      "name": "JOSEPH DADA"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08070705050"
+        }
+      ],
+      "id": "c780556b-6602-4089-a6c3-05e03c001a52",
+      "image": "http://www.nass.gov.ng/images/mps/avatar.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/avatar.jpg"
+        }
+      ],
+      "name": "EMMANUEL UBA"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08065299939"
+        }
+      ],
+      "id": "c8b75a0e-6d35-4e9a-bec1-8b401660be9e",
+      "image": "http://www.nass.gov.ng/images/mps/822.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/822.jpg"
+        }
+      ],
+      "name": "MALAM WAKILI"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08033328026"
+        }
+      ],
+      "id": "cb162d89-ba46-49cc-84f3-a7d3ee25e62e",
+      "image": "http://www.nass.gov.ng/images/mps/avatar.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/avatar.jpg"
+        }
+      ],
+      "name": "OKOJI ROSE"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08033146663"
+        }
+      ],
+      "id": "cdf2f2a5-549d-4e71-91a5-07dae6e26b04",
+      "image": "http://www.nass.gov.ng/images/mps/avatar.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/avatar.jpg"
+        }
+      ],
+      "name": "NAFADA BAYERO"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08172681719"
+        }
+      ],
+      "id": "ce5acd22-7303-424c-bc5f-91be9ce91a31",
+      "image": "http://www.nass.gov.ng/images/mps/811.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/811.jpg"
+        }
+      ],
+      "name": "ABUBAKAR SANI"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "0703412222"
+        }
+      ],
+      "id": "ced31c32-8f02-4411-9cae-f0b0d27b17f2",
+      "image": "http://www.nass.gov.ng/images/mps/516.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/516.jpg"
+        }
+      ],
+      "name": "JEREMIAH USENI"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08055555188, 0802610"
+        }
+      ],
+      "id": "cf5aea30-b4fc-4eeb-b827-dd023e9ad0e6",
+      "image": "http://www.nass.gov.ng/images/mps/888.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/888.jpg"
+        }
+      ],
+      "name": "BASSEY AKPAN"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08034666890"
+        }
+      ],
+      "id": "d1ae196d-b203-4f62-8441-9d4bffa4566c",
+      "image": "http://www.nass.gov.ng/images/mps/520.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/520.jpg"
+        }
+      ],
+      "name": "ABDUL ABUBAKAR"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08033326671"
+        }
+      ],
+      "id": "d512cc2f-795e-4bab-bee4-e5938a1add2c",
+      "image": "http://www.nass.gov.ng/images/mps/avatar.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/avatar.jpg"
+        }
+      ],
+      "name": "Aliyu Abdullahi"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "07055090323"
+        }
+      ],
+      "id": "d7ffa4dc-9e10-4383-80b8-6e37e57800ca",
+      "image": "http://www.nass.gov.ng/images/mps/807.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/807.jpg"
+        }
+      ],
+      "name": "AHMAD LAWAN"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "07030003232"
+        }
+      ],
+      "id": "d9aa73bb-dea8-45c4-8eeb-0e66b5439e29",
+      "image": "http://www.nass.gov.ng/images/mps/863.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/863.jpg"
+        }
+      ],
+      "name": "GODSWILL AKPABIO"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "0809333332"
+        }
+      ],
+      "id": "dab9656f-a773-4d78-a398-c9af8c8c5fa7",
+      "image": "http://www.nass.gov.ng/images/mps/avatar.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/avatar.jpg"
+        }
+      ],
+      "name": "ABDULLAHI IBRAHIM"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "07033399992"
+        }
+      ],
+      "id": "dae37bba-7daa-4e87-be2b-97690edea1bf",
+      "image": "http://www.nass.gov.ng/images/mps/528.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/528.jpg"
+        }
+      ],
+      "name": "SHEHU SANI"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08033231894, 0817202"
+        }
+      ],
+      "id": "de504fe9-c60d-4fa5-b7cf-10f0894a29af",
+      "image": "http://www.nass.gov.ng/images/mps/744.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/744.jpg"
+        }
+      ],
+      "name": "Rilwan Akanbi"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08155555884"
+        }
+      ],
+      "id": "df13478a-638f-4cec-8c58-360fc80eb1b0",
+      "image": "http://www.nass.gov.ng/images/mps/511.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/511.jpg"
+        }
+      ],
+      "name": "ALIMIKHENA FRANCIS"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08033888608"
+        }
+      ],
+      "id": "e344f2dd-a72b-4ca7-a259-59d8b81706fc",
+      "image": "http://www.nass.gov.ng/images/mps/809.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/809.jpg"
+        }
+      ],
+      "name": "ATHANASIUS ACHONU"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08100320101"
+        }
+      ],
+      "id": "e3d5129d-3dd5-4e01-bd33-5d042bcdb70c",
+      "image": "http://www.nass.gov.ng/images/mps/592.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/592.jpg"
+        }
+      ],
+      "name": "Sani Mohammed"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08037200999"
+        }
+      ],
+      "id": "e4840a77-41c5-4818-b0e8-54676f004239",
+      "image": "http://www.nass.gov.ng/images/mps/avatar.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/avatar.jpg"
+        }
+      ],
+      "name": "PETER NWABOSHI"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08074000040"
+        }
+      ],
+      "id": "e5a6c86b-b503-4105-983b-d5c81ab41eaf",
+      "image": "http://www.nass.gov.ng/images/mps/889.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/889.jpg"
+        }
+      ],
+      "name": "Olamilekan Adeola"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08039665848"
+        }
+      ],
+      "id": "e5f73d13-00b5-4dd3-98b4-3ad8b72be43e",
+      "image": "http://www.nass.gov.ng/images/mps/584.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/584.jpg"
+        }
+      ],
+      "name": "SAMUEL EGWU"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08039639999"
+        }
+      ],
+      "id": "eaee8559-8d76-45ac-be2f-28763987e756",
+      "image": "http://www.nass.gov.ng/images/mps/815.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/815.jpg"
+        }
+      ],
+      "name": "BALA NAALLAH"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "07055090306"
+        }
+      ],
+      "id": "eb86eee9-9d7e-42f1-b99d-331e8f55a8cd",
+      "image": "http://www.nass.gov.ng/images/mps/758.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/758.jpg"
+        }
+      ],
+      "name": "Isiaka Adeleke"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08033140757"
+        }
+      ],
+      "id": "ec8587fd-11f3-48f1-a830-267b8a5ad524",
+      "image": "http://www.nass.gov.ng/images/mps/avatar.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/avatar.jpg"
+        }
+      ],
+      "name": "OLAKA NWOGU"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08034558181"
+        }
+      ],
+      "id": "f3f52e8d-703a-4959-adf4-aaafeb462254",
+      "image": "http://www.nass.gov.ng/images/mps/533.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/533.jpg"
+        }
+      ],
+      "name": "OMOTAYO DONALD"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08037053375"
+        }
+      ],
+      "id": "f63fc610-ec4b-4ba0-bf02-b543c5fd8c8f",
+      "image": "http://www.nass.gov.ng/images/mps/avatar.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/avatar.jpg"
+        }
+      ],
+      "name": "ABDULFATAI BUHARI"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08033138916"
+        }
+      ],
+      "id": "f842a937-4dd5-4011-aa52-4f025be06a74",
+      "image": "http://nass.gov.ng/images/mps/506.jpg",
+      "images": [
+        {
+          "url": "http://nass.gov.ng/images/mps/506.jpg"
+        }
+      ],
+      "name": "OHUABUNWA MAO"
+    },
+    {
+      "id": "f95eee1d-5f81-4813-8164-7e1cc908e878",
+      "image": "http://www.nass.gov.ng/images/mps/962.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/962.jpg"
+        }
+      ],
+      "name": "Yusuf Yusuf"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08022907124"
+        }
+      ],
+      "id": "fa3e73e7-98b9-45f8-befb-3ba0884a8783",
+      "image": "http://www.nass.gov.ng/images/mps/avatar.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/avatar.jpg"
+        }
+      ],
+      "name": "ABUBAKAR KYARI"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08055790100"
+        }
+      ],
+      "id": "faa4b925-8dba-42af-a672-ef6621e6cb76",
+      "image": "http://www.nass.gov.ng/images/mps/532.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/532.jpg"
+        }
+      ],
+      "name": "BARNABAS GEMADE"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08033146905"
+        }
+      ],
+      "id": "fab3dfb2-07dd-4eb3-b3f0-6196667924e4",
+      "image": "http://www.nass.gov.ng/images/mps/522.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/522.jpg"
+        }
+      ],
+      "name": "MELAYE DINO"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08038403877"
+        }
+      ],
+      "id": "fbe41710-70db-4640-b464-aa3b894031f9",
+      "image": "http://www.nass.gov.ng/images/mps/734.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/734.jpg"
+        }
+      ],
+      "name": "ORDIA CLIFFORD"
+    },
+    {
+      "contact_details": [
+        {
+          "type": "phone",
+          "value": "08060044414"
+        }
+      ],
+      "id": "fcc1e6c2-aabb-40d2-ab6c-88d0ccfa17b9",
+      "image": "http://www.nass.gov.ng/images/mps/870.jpg",
+      "images": [
+        {
+          "url": "http://www.nass.gov.ng/images/mps/870.jpg"
+        }
+      ],
+      "name": "BURUJI KASHAMU"
+    }
+  ],
+  "organizations": [
+    {
+      "classification": "party",
+      "id": "APC",
+      "identifiers": [
+        {
+          "identifier": "Q4729266",
+          "scheme": "wikidata"
+        }
+      ],
+      "links": [
+        {
+          "note": "website",
+          "url": "http://www.apc.com.ng/"
+        }
+      ],
+      "name": "All Progressives Congress",
+      "other_names": [
+        {
+          "lang": "en",
+          "name": "All Progressives Congress",
+          "note": "multilingual"
+        },
+        {
+          "lang": "ar",
+          "name": "مؤتمر الجميع التقدميين النيجيري",
+          "note": "multilingual"
+        },
+        {
+          "lang": "it",
+          "name": "Congresso di Tutti i Progressisti",
+          "note": "multilingual"
+        },
+        {
+          "lang": "de",
+          "name": "All Progressives Congress",
+          "note": "multilingual"
+        },
+        {
+          "lang": "ca",
+          "name": "Congrés de Tots els Progressistes",
+          "note": "multilingual"
+        },
+        {
+          "lang": "zh",
+          "name": "全体进步大会党",
+          "note": "multilingual"
+        },
+        {
+          "lang": "ja",
+          "name": "全体進歩議会党",
+          "note": "multilingual"
+        }
+      ]
+    },
+    {
+      "classification": "party",
+      "id": "LP",
+      "identifiers": [
+        {
+          "identifier": "Q6467449",
+          "scheme": "wikidata"
+        }
+      ],
+      "links": [
+        {
+          "note": "website",
+          "url": "http://www.labourpartyng.org"
+        }
+      ],
+      "name": "Labour Party",
+      "other_names": [
+        {
+          "lang": "en",
+          "name": "Labour Party",
+          "note": "multilingual"
+        }
+      ]
+    },
+    {
+      "classification": "party",
+      "id": "PDP",
+      "identifiers": [
+        {
+          "identifier": "Q1551163",
+          "scheme": "wikidata"
+        }
+      ],
+      "links": [
+        {
+          "note": "website",
+          "url": "http://www.peoplesdemocraticparty.net/"
+        }
+      ],
+      "name": "Peoples Democratic Party",
+      "other_names": [
+        {
+          "lang": "pt",
+          "name": "Partido Democrático Popular",
+          "note": "multilingual"
+        },
+        {
+          "lang": "de",
+          "name": "People’s Democratic Party",
+          "note": "multilingual"
+        },
+        {
+          "lang": "pl",
+          "name": "Ludowa Partia Demokratyczna",
+          "note": "multilingual"
+        },
+        {
+          "lang": "ig",
+          "name": "People's Democratic Party",
+          "note": "multilingual"
+        },
+        {
+          "lang": "fr",
+          "name": "Parti démocratique populaire",
+          "note": "multilingual"
+        },
+        {
+          "lang": "es",
+          "name": "Partido Democrático Popular",
+          "note": "multilingual"
+        },
+        {
+          "lang": "en",
+          "name": "People's Democratic Party",
+          "note": "multilingual"
+        },
+        {
+          "lang": "yo",
+          "name": "Ẹgbẹ́ Olóṣèlúaráìlú àwọn Aráàlù",
+          "note": "multilingual"
+        },
+        {
+          "lang": "ms",
+          "name": "People's Democratic Party",
+          "note": "multilingual"
+        },
+        {
+          "lang": "sv",
+          "name": "People’s Democratic Party",
+          "note": "multilingual"
+        },
+        {
+          "lang": "it",
+          "name": "Partito democratico del popolo",
+          "note": "multilingual"
+        },
+        {
+          "lang": "nb",
+          "name": "People's Democratic Party",
+          "note": "multilingual"
+        },
+        {
+          "lang": "ar",
+          "name": "حزب الشعب الديمقراطي",
+          "note": "multilingual"
+        },
+        {
+          "lang": "hu",
+          "name": "Demokratikus Néppárt",
+          "note": "multilingual"
+        },
+        {
+          "lang": "ru",
+          "name": "Народная демократическая партия (Нигерия)",
+          "note": "multilingual"
+        },
+        {
+          "lang": "eo",
+          "name": "Popola Demokratia Partio",
+          "note": "multilingual"
+        },
+        {
+          "lang": "nl",
+          "name": "Democratische Volkspartij",
+          "note": "multilingual"
+        },
+        {
+          "lang": "sr",
+          "name": "Народна демократска странка",
+          "note": "multilingual"
+        },
+        {
+          "lang": "ca",
+          "name": "Partit Democràtic dels Pobles de Nigèria",
+          "note": "multilingual"
+        },
+        {
+          "lang": "zh",
+          "name": "人民民主党",
+          "note": "multilingual"
+        },
+        {
+          "lang": "pt",
+          "name": "Partido Democrático do Povo",
+          "note": "multilingual"
+        },
+        {
+          "lang": "de",
+          "name": "People's Democratic Party",
+          "note": "multilingual"
+        },
+        {
+          "lang": "ig",
+          "name": "PDP",
+          "note": "multilingual"
+        },
+        {
+          "lang": "es",
+          "name": "Partido Democratico del Pueblo de Nigeria",
+          "note": "multilingual"
+        },
+        {
+          "lang": "es",
+          "name": "Partido Democrático del Pueblo de Nigeria",
+          "note": "multilingual"
+        },
+        {
+          "lang": "yo",
+          "name": "People's Democratic Party",
+          "note": "multilingual"
+        },
+        {
+          "lang": "yo",
+          "name": "PDP",
+          "note": "multilingual"
+        },
+        {
+          "lang": "yo",
+          "name": "Egbe Toseluarailu awon Aralu",
+          "note": "multilingual"
+        },
+        {
+          "lang": "sv",
+          "name": "People's Democratic Party",
+          "note": "multilingual"
+        }
+      ]
+    },
+    {
+      "classification": "legislature",
+      "id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "identifiers": [
+        {
+          "identifier": "Q2993611",
+          "scheme": "wikidata"
+        }
+      ],
+      "name": "Senate",
+      "seats": 109,
+      "type": "upper house"
+    }
+  ],
+  "meta": {
+    "sources": [
+      "http://www.nass.gov.ng/"
+    ]
+  },
+  "memberships": [
+    {
+      "area_id": "area/ekiti_central,_ekiti_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "0577f346-e883-4e1d-94eb-e3050d5c15f1",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/942"
+        }
+      ]
+    },
+    {
+      "area_id": "area/adamawa_south,_adamawa_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "0b536a2c-2bc9-46a0-8d40-0deb9241cb31",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/834"
+        }
+      ]
+    },
+    {
+      "area_id": "area/plateau_central,_plateau_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "0de9e40b-52bc-459f-978b-2aea514eec79",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/745"
+        }
+      ]
+    },
+    {
+      "area_id": "area/taraba_south,_taraba_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "10ab1957-94a3-4d99-b31d-6236c624921e",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/714"
+        }
+      ]
+    },
+    {
+      "area_id": "area/kaduna_south,_kaduna_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "129b69f6-8a86-4407-9525-8a2f8caa5828",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/945"
+        }
+      ]
+    },
+    {
+      "area_id": "area/bayelsa_east,_bayelsa_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "13721811-4357-419c-8ca7-8f1170b36f1a",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/941"
+        }
+      ]
+    },
+    {
+      "area_id": "area/borno_south,_borno_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "16f44adf-2bc8-469d-aef1-5d04bfc3a6b9",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/409"
+        }
+      ]
+    },
+    {
+      "area_id": "area/bayelsa_central,_bayelsa_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "18771cbf-47e1-4e0f-bbc5-a65b1e11a8c8",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/769"
+        }
+      ]
+    },
+    {
+      "area_id": "area/bayelsa_west,_bayelsa_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "1aec662e-0836-43d1-832a-0e65686766bb",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/935"
+        }
+      ]
+    },
+    {
+      "area_id": "area/north_east,_jigawa_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "1d5de848-fe51-4511-8856-1a2090a38c00",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/813"
+        }
+      ]
+    },
+    {
+      "area_id": "area/kwara_central,_kwara_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "223679e6-ac35-4ced-944b-b1109d9e4b1d",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/536"
+        }
+      ]
+    },
+    {
+      "area_id": "area/gombe_south,_gombe_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "2696e29d-79f3-4db3-b50e-31ceeaae2ae0",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/810"
+        }
+      ]
+    },
+    {
+      "area_id": "area/plateau_north,_plateau_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "281e0ba8-5b87-40e2-98e4-454d57b96b4c",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/508"
+        }
+      ]
+    },
+    {
+      "area_id": "area/bauchi_central,_bauchi_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "29a44bbd-0dc5-433a-85b1-d75ac81023ba",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/774"
+        }
+      ]
+    },
+    {
+      "area_id": "area/anambra_central,_anambra_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "2d19dc00-2a3d-48a4-9373-f05e3fec46c9",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/91"
+        }
+      ]
+    },
+    {
+      "area_id": "area/adamawa_central,_adamawa_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "304e59f1-7d74-4908-a105-f97b3d93e333",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/525"
+        }
+      ]
+    },
+    {
+      "area_id": "area/ebonyi_central,_ebonyi_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "30d9e31f-8113-423b-992b-124f97ea02aa",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/523"
+        }
+      ]
+    },
+    {
+      "area_id": "area/enugu_west,_enugu_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "31a25c6a-76fc-4b1b-8bb4-22f15a8d6612",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/817"
+        }
+      ]
+    },
+    {
+      "area_id": "area/delta_south,_delta_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "34047ee1-4c7e-4e46-a439-1372b2d7e231",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/70"
+        }
+      ]
+    },
+    {
+      "area_id": "area/imo_west,_imo_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "37ca02c4-a0d0-4dd4-bc5e-ffe082f9a1b5",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/111"
+        }
+      ]
+    },
+    {
+      "area_id": "area/cross_river_central,_cross_river_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "3d51d1a9-c023-4a8b-baae-36fb2618bae0",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/806"
+        }
+      ]
+    },
+    {
+      "area_id": "area/ebonyi_south,_ebonyi_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "4655396b-0d12-4bdb-a288-c1e37bfc2f04",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/652"
+        }
+      ]
+    },
+    {
+      "area_id": "area/ekiti_north,_ekiti_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "49be506a-b95a-41a3-b08d-da58d97b3f28",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/819"
+        }
+      ]
+    },
+    {
+      "area_id": "area/cross_river_south,_cross_river_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "4a3fd28e-a162-46d8-8c98-ea19ff7f855c",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/844"
+        }
+      ]
+    },
+    {
+      "area_id": "area/rivers_east,_rivers_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "4c8ec63d-76c5-4452-934e-4c67e672b9d5",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/876"
+        }
+      ]
+    },
+    {
+      "area_id": "area/zamfara_north,_zamfara_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "5073f714-44a4-4039-923d-708a209af1e3",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/821"
+        }
+      ]
+    },
+    {
+      "area_id": "area/ogun_central,_ogun_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "534c2744-868a-4d83-9507-eab68b41c05a",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/604"
+        }
+      ]
+    },
+    {
+      "area_id": "area/gombe_central,_gombe_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "54220803-37fc-4970-8f9e-693df8c5f721",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/715"
+        }
+      ]
+    },
+    {
+      "area_id": "area/zamfara_central,_zamfara_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "54a8e92e-5a77-40f8-bc12-3d22a6d61913",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/514"
+        }
+      ]
+    },
+    {
+      "area_id": "area/north_west,_jigawa_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "55f519b9-e1a7-4e92-8525-f9b52ed05324",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/944"
+        }
+      ]
+    },
+    {
+      "area_id": "area/lagos-central,_lagos_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "5744450e-41b7-4d7d-b81a-83f42f34437d",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/718"
+        }
+      ]
+    },
+    {
+      "area_id": "area/adamawa_north,_adamawa_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "5b2c1b00-d954-44ee-a16b-36f159d12982",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/740"
+        }
+      ]
+    },
+    {
+      "area_id": "area/ondo_north,_ondo_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "62948032-2e2f-4962-b37e-7f082e722b47",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/818"
+        }
+      ]
+    },
+    {
+      "area_id": "area/niger_east,_niger_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "65c0c388-28d1-4a85-b715-4d2d630e3da6",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/780"
+        }
+      ]
+    },
+    {
+      "area_id": "area/zamfara_west,_zamfara_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "696fb5d3-0171-4a21-bd5c-dc6a14cf6296",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/224"
+        }
+      ]
+    },
+    {
+      "area_id": "area/katsina_north,_katsina_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "6a84079e-32fd-44f8-8e4e-c6f1678a7430",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/885"
+        }
+      ]
+    },
+    {
+      "area_id": "area/abia-south,_abia_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "6b0cdd74-7960-478f-ac93-d230f486a5b9",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/808"
+        }
+      ]
+    },
+    {
+      "area_id": "area/sokoto_north,_sokoto_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "70286a75-669d-4137-bab8-33d7350e3aaf",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/948"
+        }
+      ]
+    },
+    {
+      "area_id": "area/abia-central,_abia_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "73f394c3-b0ae-4154-b86c-8e5b7b637df8",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/600"
+        }
+      ]
+    },
+    {
+      "area_id": "area/bauchi_north,_bauchi_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "7babc3b9-ede9-44f7-a2cc-af49aba7f70c",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/894"
+        }
+      ]
+    },
+    {
+      "area_id": "area/benue_south,_benue_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "7c177f56-169a-4779-8b3f-a78776877c37",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/17"
+        }
+      ]
+    },
+    {
+      "area_id": "area/kebbi_central,_kebbi_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "7d3a587c-194a-43b6-ba2e-04581d9aa783",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/742"
+        }
+      ]
+    },
+    {
+      "area_id": "area/sokoto_east,_sokoto_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "830b56fc-139a-4122-a60d-fd64fcaa8796",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/759"
+        }
+      ]
+    },
+    {
+      "area_id": "area/enugu_north,_enugu_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "840101fc-9040-4bf4-b96d-7d362bcd5f47",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/943"
+        }
+      ]
+    },
+    {
+      "area_id": "area/kwara_south,_kwara_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "87aefbf0-64e2-49d1-9566-139f43b117a2",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/823"
+        }
+      ]
+    },
+    {
+      "area_id": "area/yobe_south,_yobe_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "886bcfa9-3dd1-47e8-8971-632aff46999b",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/832"
+        }
+      ]
+    },
+    {
+      "area_id": "area/imo_east,_imo_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "8c865390-1804-47fc-9c91-dafde701bf94",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/940"
+        }
+      ]
+    },
+    {
+      "area_id": "area/nasarawa_north,_nassarawa_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "8dee998b-1de5-420a-ad56-ba0dc6d33454",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/947"
+        }
+      ]
+    },
+    {
+      "area_id": "area/kaduna_north,_kaduna_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "8e3b9a97-90af-4561-85ea-dab57d7af528",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/517"
+        }
+      ]
+    },
+    {
+      "area_id": "area/edo_south,_edo_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "945c1a0c-c1a1-4a67-8be1-8c9e756cdf8f",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/827"
+        }
+      ]
+    },
+    {
+      "area_id": "area/kano-south,_kano_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "947e69dd-eefa-4548-9280-0c0377eccc59",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/128"
+        }
+      ]
+    },
+    {
+      "area_id": "area/borno_central,_borno_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "9612c093-eb94-41b7-a713-3ca82b7f1e98",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/961"
+        }
+      ]
+    },
+    {
+      "area_id": "area/nasarawa_south,_nassarawa_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "96885e3b-9207-4db4-ab27-ceda4dff7d2e",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/157"
+        }
+      ]
+    },
+    {
+      "area_id": "area/nasarawa_west,_nassarawa_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "9de46243-685e-4902-81d4-b3e01faa93d5",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/852"
+        }
+      ]
+    },
+    {
+      "area_id": "area/kogi_central,_kogi_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "a1f70b6d-9b33-4780-a7fc-33565da69e97",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://nass.gov.ng/mp/profile/891"
+        }
+      ]
+    },
+    {
+      "area_id": "area/osun_east,_osun_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "a360b7b8-c900-43d3-817b-00212ebfd8af",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/767"
+        }
+      ]
+    },
+    {
+      "area_id": "area/benue_north_west,_benue_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "a393d852-9ca7-49de-ad3e-6a190f4da47b",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/866"
+        }
+      ]
+    },
+    {
+      "area_id": "area/akwa_ibom_south,_akwa_ibom_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "a4f78be5-607a-4663-9b3a-533464a962c1",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/890"
+        }
+      ]
+    },
+    {
+      "area_id": "area/enugu_east,_enugu_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "a60f0c25-50b8-423a-beb7-237472c2acbd",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/873"
+        }
+      ]
+    },
+    {
+      "area_id": "area/lagos-east,_lagos_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "a68bab0e-9f57-4612-9f5f-1e6fc0080bf3",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/526"
+        }
+      ]
+    },
+    {
+      "area_id": "area/katsina_central,_katsina_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "a72c2d51-88c1-4700-8eac-749b792cd7ac",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/512"
+        }
+      ]
+    },
+    {
+      "area_id": "area/delta_central,_delta_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "LP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "af00a81c-21e0-49f9-b61b-e90b36fc8ba1",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/887"
+        }
+      ]
+    },
+    {
+      "area_id": "area/south_west,_jigawa_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "afd2a18f-d1c2-4d38-b598-2cca75ead770",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/502"
+        }
+      ]
+    },
+    {
+      "area_id": "area/kebbi_north,_kebbi_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "b2bc284e-eb6a-474f-a7e6-629ba07b5d44",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/531"
+        }
+      ]
+    },
+    {
+      "area_id": "area/anambra_north,_anambra_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "b3c68cc0-3a3e-4d47-8feb-bb6d75c4f343",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/712"
+        }
+      ]
+    },
+    {
+      "area_id": "area/yobe_east,_yobe_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "b41379ca-bae9-4ae5-bc63-57d6114b8662",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/655"
+        }
+      ]
+    },
+    {
+      "area_id": "area/kwara_north,_kwara_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "bbf841d2-a7b3-4ac5-a319-d8bdcdf7440f",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/783"
+        }
+      ]
+    },
+    {
+      "area_id": "area/fct,_federal_capital_territory_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "bd2e8ef2-956f-4ab0-8655-d8074b90a8ae",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/716"
+        }
+      ]
+    },
+    {
+      "area_id": "area/kano-central,_kano_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "c082f248-ee8f-466f-ba0b-86d7114f9ecb",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/781"
+        }
+      ]
+    },
+    {
+      "area_id": "area/ekiti_south,_ekiti_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "c38d145a-203d-4063-a78d-31ec46311554",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/776"
+        }
+      ]
+    },
+    {
+      "area_id": "area/oyo_central,_oyo_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "c3f67ec9-ce83-4b9f-b56e-6f5ed727cea0",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/814"
+        }
+      ]
+    },
+    {
+      "area_id": "area/ondo_south,_ondo_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "c5118c49-5a12-46d7-979a-530c0612b717",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/589"
+        }
+      ]
+    },
+    {
+      "area_id": "area/katsina_south,_katsina_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "c5294fd9-3acc-460a-b6ab-e548fc20e3d8",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/879"
+        }
+      ]
+    },
+    {
+      "area_id": "area/osun_central,_osun_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "c5e2f0e7-e8c7-43b0-a126-2c15d4d17fe6",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/877"
+        }
+      ]
+    },
+    {
+      "area_id": "area/kano-north,_kano_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "c6a83242-d777-4805-9dc9-c0150bdf7e38",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/946"
+        }
+      ]
+    },
+    {
+      "area_id": "area/ogun_west,_ogun_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "c6e6ef58-58c8-4969-860f-07b85ba83e51",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/530"
+        }
+      ]
+    },
+    {
+      "area_id": "area/anambra_south,_anambra_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "c780556b-6602-4089-a6c3-05e03c001a52",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/869"
+        }
+      ]
+    },
+    {
+      "area_id": "area/bauchi_south,_bauchi_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "c8b75a0e-6d35-4e9a-bec1-8b401660be9e",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/822"
+        }
+      ]
+    },
+    {
+      "area_id": "area/cross_river_north,_cross_river_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "cb162d89-ba46-49cc-84f3-a7d3ee25e62e",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/858"
+        }
+      ]
+    },
+    {
+      "area_id": "area/gombe_north,_gombe_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "cdf2f2a5-549d-4e71-91a5-07dae6e26b04",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/820"
+        }
+      ]
+    },
+    {
+      "area_id": "area/taraba_north,_taraba_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "ce5acd22-7303-424c-bc5f-91be9ce91a31",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/811"
+        }
+      ]
+    },
+    {
+      "area_id": "area/plateau_south,_plateau_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "ced31c32-8f02-4411-9cae-f0b0d27b17f2",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/516"
+        }
+      ]
+    },
+    {
+      "area_id": "area/akwa_ibom_north-east,_akwa_ibom_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "cf5aea30-b4fc-4eeb-b827-dd023e9ad0e6",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/888"
+        }
+      ]
+    },
+    {
+      "area_id": "area/kogi_east,_kogi_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "d1ae196d-b203-4f62-8441-9d4bffa4566c",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/520"
+        }
+      ]
+    },
+    {
+      "area_id": "area/niger_north,_niger_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "d512cc2f-795e-4bab-bee4-e5938a1add2c",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/816"
+        }
+      ]
+    },
+    {
+      "area_id": "area/yobe_north,_yobe_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "d7ffa4dc-9e10-4383-80b8-6e37e57800ca",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/807"
+        }
+      ]
+    },
+    {
+      "area_id": "area/akwa_ibom_north-west,_akwa_ibom_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "d9aa73bb-dea8-45c4-8eeb-0e66b5439e29",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/863"
+        }
+      ]
+    },
+    {
+      "area_id": "area/sokoto_south,_sokoto_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "dab9656f-a773-4d78-a398-c9af8c8c5fa7",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/500"
+        }
+      ]
+    },
+    {
+      "area_id": "area/kaduna_central,_kaduna_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "dae37bba-7daa-4e87-be2b-97690edea1bf",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/528"
+        }
+      ]
+    },
+    {
+      "area_id": "area/oyo_south,_oyo_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "de504fe9-c60d-4fa5-b7cf-10f0894a29af",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/744"
+        }
+      ]
+    },
+    {
+      "area_id": "area/edo_north,_edo_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "df13478a-638f-4cec-8c58-360fc80eb1b0",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/511"
+        }
+      ]
+    },
+    {
+      "area_id": "area/imo_north,_imo_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "e344f2dd-a72b-4ca7-a259-59d8b81706fc",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/809"
+        }
+      ]
+    },
+    {
+      "area_id": "area/niger_south,_niger_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "e3d5129d-3dd5-4e01-bd33-5d042bcdb70c",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/592"
+        }
+      ]
+    },
+    {
+      "area_id": "area/delta_north,_delta_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "e4840a77-41c5-4818-b0e8-54676f004239",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/838"
+        }
+      ]
+    },
+    {
+      "area_id": "area/lagos-west,_lagos_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "e5a6c86b-b503-4105-983b-d5c81ab41eaf",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/889"
+        }
+      ]
+    },
+    {
+      "area_id": "area/ebonyi_north,_ebonyi_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "e5f73d13-00b5-4dd3-98b4-3ad8b72be43e",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/584"
+        }
+      ]
+    },
+    {
+      "area_id": "area/kebbi_south,_kebbi_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "eaee8559-8d76-45ac-be2f-28763987e756",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/815"
+        }
+      ]
+    },
+    {
+      "area_id": "area/osun_west,_osun_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "eb86eee9-9d7e-42f1-b99d-331e8f55a8cd",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/758"
+        }
+      ]
+    },
+    {
+      "area_id": "area/rivers_south_east,_rivers_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "ec8587fd-11f3-48f1-a830-267b8a5ad524",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/937"
+        }
+      ]
+    },
+    {
+      "area_id": "area/ondo_central,_ondo_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "f3f52e8d-703a-4959-adf4-aaafeb462254",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/533"
+        }
+      ]
+    },
+    {
+      "area_id": "area/oyo_north,_oyo_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "f63fc610-ec4b-4ba0-bf02-b543c5fd8c8f",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/771"
+        }
+      ]
+    },
+    {
+      "area_id": "area/abia-north,_abia_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "f842a937-4dd5-4011-aa52-4f025be06a74",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://nass.gov.ng/mp/profile/506"
+        }
+      ]
+    },
+    {
+      "area_id": "area/taraba_central,_taraba_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "f95eee1d-5f81-4813-8164-7e1cc908e878",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/962"
+        }
+      ]
+    },
+    {
+      "area_id": "area/borno_north,_borno_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "fa3e73e7-98b9-45f8-befb-3ba0884a8783",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/849"
+        }
+      ]
+    },
+    {
+      "area_id": "area/benue_north_east,_benue_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "faa4b925-8dba-42af-a672-ef6621e6cb76",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/532"
+        }
+      ]
+    },
+    {
+      "area_id": "area/kogi_west,_kogi_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "APC",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "fab3dfb2-07dd-4eb3-b3f0-6196667924e4",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/522"
+        }
+      ]
+    },
+    {
+      "area_id": "area/edo_central,_edo_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "fbe41710-70db-4640-b464-aa3b894031f9",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/734"
+        }
+      ]
+    },
+    {
+      "area_id": "area/ogun_east,_ogun_state",
+      "legislative_period_id": "term/2015",
+      "on_behalf_of_id": "PDP",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "person_id": "fcc1e6c2-aabb-40d2-ab6c-88d0ccfa17b9",
+      "role": "member",
+      "sources": [
+        {
+          "url": "http://www.nass.gov.ng/mp/profile/870"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "classification": "legislative period",
+      "id": "term/2015",
+      "identifiers": [
+        {
+          "identifier": "Q28555175",
+          "scheme": "wikidata"
+        }
+      ],
+      "name": "2015–",
+      "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
+      "start_date": "2015-06-09"
+    }
+  ],
+  "areas": [
+    {
+      "id": "area/abia-central,_abia_state",
+      "name": "Abia-Central, Abia State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/abia-north,_abia_state",
+      "name": "Abia-North, Abia State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/abia-south,_abia_state",
+      "name": "Abia-South, Abia State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/adamawa_central,_adamawa_state",
+      "name": "Adamawa Central, Adamawa State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/adamawa_north,_adamawa_state",
+      "name": "Adamawa North, Adamawa State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/adamawa_south,_adamawa_state",
+      "name": "Adamawa South, Adamawa State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/akwa_ibom_north-east,_akwa_ibom_state",
+      "name": "Akwa Ibom North-East, Akwa Ibom State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/akwa_ibom_north-west,_akwa_ibom_state",
+      "name": "Akwa Ibom North-West, Akwa Ibom State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/akwa_ibom_south,_akwa_ibom_state",
+      "name": "Akwa Ibom South, Akwa Ibom State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/anambra_central,_anambra_state",
+      "name": "Anambra Central, Anambra State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/anambra_north,_anambra_state",
+      "name": "Anambra North, Anambra State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/anambra_south,_anambra_state",
+      "name": "Anambra South, Anambra State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/bauchi_central,_bauchi_state",
+      "name": "Bauchi Central, Bauchi State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/bauchi_north,_bauchi_state",
+      "name": "Bauchi North, Bauchi State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/bauchi_south,_bauchi_state",
+      "name": "Bauchi South, Bauchi State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/bayelsa_central,_bayelsa_state",
+      "name": "Bayelsa Central, Bayelsa State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/bayelsa_east,_bayelsa_state",
+      "name": "Bayelsa East, Bayelsa State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/bayelsa_west,_bayelsa_state",
+      "name": "Bayelsa West, Bayelsa State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/benue_north_east,_benue_state",
+      "name": "Benue North East, Benue State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/benue_north_west,_benue_state",
+      "name": "Benue North West, Benue State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/benue_south,_benue_state",
+      "name": "Benue South, Benue State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/borno_central,_borno_state",
+      "name": "Borno Central, Borno State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/borno_north,_borno_state",
+      "name": "Borno North, Borno State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/borno_south,_borno_state",
+      "name": "Borno South, Borno State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/cross_river_central,_cross_river_state",
+      "name": "Cross River Central, Cross River State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/cross_river_north,_cross_river_state",
+      "name": "Cross River North, Cross River State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/cross_river_south,_cross_river_state",
+      "name": "Cross River South, Cross River State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/delta_central,_delta_state",
+      "name": "Delta Central, Delta State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/delta_north,_delta_state",
+      "name": "Delta North, Delta State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/delta_south,_delta_state",
+      "name": "Delta South, Delta State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/ebonyi_central,_ebonyi_state",
+      "name": "Ebonyi Central, Ebonyi State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/ebonyi_north,_ebonyi_state",
+      "name": "Ebonyi North, Ebonyi State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/ebonyi_south,_ebonyi_state",
+      "name": "Ebonyi South, Ebonyi State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/edo_central,_edo_state",
+      "name": "Edo Central, Edo State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/edo_north,_edo_state",
+      "name": "Edo North, Edo State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/edo_south,_edo_state",
+      "name": "Edo South, Edo State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/ekiti_central,_ekiti_state",
+      "name": "Ekiti Central, Ekiti State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/ekiti_north,_ekiti_state",
+      "name": "Ekiti North, Ekiti State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/ekiti_south,_ekiti_state",
+      "name": "Ekiti South, Ekiti State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/enugu_east,_enugu_state",
+      "name": "Enugu East, Enugu State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/enugu_north,_enugu_state",
+      "name": "Enugu North, Enugu State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/enugu_west,_enugu_state",
+      "name": "Enugu West, Enugu State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/fct,_federal_capital_territory_state",
+      "name": "FCT, Federal Capital Territory State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/gombe_central,_gombe_state",
+      "name": "Gombe Central, Gombe State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/gombe_north,_gombe_state",
+      "name": "Gombe North, Gombe State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/gombe_south,_gombe_state",
+      "name": "Gombe South, Gombe State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/imo_east,_imo_state",
+      "name": "Imo East, Imo State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/imo_north,_imo_state",
+      "name": "Imo North, Imo State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/imo_west,_imo_state",
+      "name": "Imo West, Imo State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/kaduna_central,_kaduna_state",
+      "name": "Kaduna Central, Kaduna State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/kaduna_north,_kaduna_state",
+      "name": "Kaduna North, Kaduna State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/kaduna_south,_kaduna_state",
+      "name": "Kaduna South, Kaduna State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/kano-central,_kano_state",
+      "name": "Kano-Central, Kano State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/kano-north,_kano_state",
+      "name": "Kano-North, Kano State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/kano-south,_kano_state",
+      "name": "Kano-South, Kano State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/katsina_central,_katsina_state",
+      "name": "Katsina Central, Katsina State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/katsina_north,_katsina_state",
+      "name": "Katsina North, Katsina State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/katsina_south,_katsina_state",
+      "name": "Katsina South, Katsina State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/kebbi_central,_kebbi_state",
+      "name": "Kebbi Central, Kebbi State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/kebbi_north,_kebbi_state",
+      "name": "Kebbi North, Kebbi State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/kebbi_south,_kebbi_state",
+      "name": "Kebbi South, Kebbi State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/kogi_central,_kogi_state",
+      "name": "Kogi Central, Kogi State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/kogi_east,_kogi_state",
+      "name": "Kogi East, Kogi State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/kogi_west,_kogi_state",
+      "name": "Kogi West, Kogi State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/kwara_central,_kwara_state",
+      "name": "Kwara Central, Kwara State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/kwara_north,_kwara_state",
+      "name": "Kwara North, Kwara State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/kwara_south,_kwara_state",
+      "name": "Kwara South, Kwara State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/lagos-central,_lagos_state",
+      "name": "Lagos-Central, Lagos State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/lagos-east,_lagos_state",
+      "name": "Lagos-East, Lagos State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/lagos-west,_lagos_state",
+      "name": "Lagos-West, Lagos State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/nasarawa_north,_nassarawa_state",
+      "name": "Nasarawa North, Nassarawa State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/nasarawa_south,_nassarawa_state",
+      "name": "Nasarawa South, Nassarawa State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/nasarawa_west,_nassarawa_state",
+      "name": "Nasarawa West, Nassarawa State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/niger_east,_niger_state",
+      "name": "Niger East, Niger State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/niger_north,_niger_state",
+      "name": "Niger North, Niger State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/niger_south,_niger_state",
+      "name": "Niger South, Niger State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/north_east,_jigawa_state",
+      "name": "North East, Jigawa State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/north_west,_jigawa_state",
+      "name": "North West, Jigawa State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/ogun_central,_ogun_state",
+      "name": "Ogun Central, Ogun State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/ogun_east,_ogun_state",
+      "name": "Ogun East, Ogun State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/ogun_west,_ogun_state",
+      "name": "Ogun West, Ogun State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/ondo_central,_ondo_state",
+      "name": "Ondo Central, Ondo State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/ondo_north,_ondo_state",
+      "name": "Ondo North, Ondo State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/ondo_south,_ondo_state",
+      "name": "Ondo South, Ondo State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/osun_central,_osun_state",
+      "name": "Osun Central, Osun State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/osun_east,_osun_state",
+      "name": "Osun East, Osun State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/osun_west,_osun_state",
+      "name": "Osun West, Osun State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/oyo_central,_oyo_state",
+      "name": "Oyo Central, Oyo State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/oyo_north,_oyo_state",
+      "name": "Oyo North, Oyo State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/oyo_south,_oyo_state",
+      "name": "Oyo South, Oyo State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/plateau_central,_plateau_state",
+      "name": "Plateau Central, Plateau State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/plateau_north,_plateau_state",
+      "name": "Plateau North, Plateau State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/plateau_south,_plateau_state",
+      "name": "Plateau South, Plateau State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/rivers_east,_rivers_state",
+      "name": "Rivers East, Rivers State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/rivers_south_east,_rivers_state",
+      "name": "Rivers South East, Rivers State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/sokoto_east,_sokoto_state",
+      "name": "Sokoto East, Sokoto State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/sokoto_north,_sokoto_state",
+      "name": "Sokoto North, Sokoto State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/sokoto_south,_sokoto_state",
+      "name": "Sokoto South, Sokoto State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/south_west,_jigawa_state",
+      "name": "South West, Jigawa State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/taraba_central,_taraba_state",
+      "name": "Taraba Central, Taraba State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/taraba_north,_taraba_state",
+      "name": "Taraba North, Taraba State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/taraba_south,_taraba_state",
+      "name": "Taraba South, Taraba State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/yobe_east,_yobe_state",
+      "name": "Yobe East, Yobe State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/yobe_north,_yobe_state",
+      "name": "Yobe North, Yobe State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/yobe_south,_yobe_state",
+      "name": "Yobe South, Yobe State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/zamfara_central,_zamfara_state",
+      "name": "Zamfara Central, Zamfara State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/zamfara_north,_zamfara_state",
+      "name": "Zamfara North, Zamfara State",
+      "type": "constituency"
+    },
+    {
+      "id": "area/zamfara_west,_zamfara_state",
+      "name": "Zamfara West, Zamfara State",
+      "type": "constituency"
+    }
+  ]
+}
