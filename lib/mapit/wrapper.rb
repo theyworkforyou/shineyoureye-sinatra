@@ -17,6 +17,11 @@ module Mapit
       @constituencies ||= add_parent_data(areas('FED')).map { |area| create_place(area) }
     end
 
+    def area_from_ep_id(id)
+      mapit_id = ep_to_mapit_ids[id].to_i
+      (states + federal_constituencies).find { |area| area.id == mapit_id }
+    end
+
     private
 
     attr_reader :mapit_url, :mapit_mappings, :baseurl
@@ -50,6 +55,10 @@ module Mapit
 
     def fed_to_sta_mapping
       mapit_mappings.fed_to_sta_mapping
+    end
+
+    def ep_to_mapit_ids
+      mapit_mappings.ep_to_mapit_ids
     end
 
     def create_place(area)

@@ -54,6 +54,13 @@ describe 'Mappit::Wrapper' do
     end
   end
 
+  describe 'when getting a single area from an EP id' do
+    it 'finds a federal_constituency' do
+      ep_id = 'area/kuje/abaji/gwagwalada/kwali,_federal_capital_territory_state'
+      mapit.area_from_ep_id(ep_id).name.must_equal('Abaji/Gwagwalada/Kwali/Kuje')
+    end
+  end
+
   class FakeMappings
     def fed_to_sta_mapping
       { '949' => '16', '1091' => '12' }
@@ -61,6 +68,12 @@ describe 'Mappit::Wrapper' do
 
     def mapit_ids_to_pombola_slugs
       { '949' => 'gwagwaladakuje', '16' => 'federal-capital-territory' }
+    end
+
+    def ep_to_mapit_ids
+      {
+        'area/kuje/abaji/gwagwalada/kwali,_federal_capital_territory_state' => '949'
+      }
     end
   end
 end
