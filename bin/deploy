@@ -9,23 +9,109 @@ PROSE_COMMITISH=$1
 # Make sure we're in the right directory:
 cd "$(dirname ${BASH_SOURCE[0]})"/..
 
-# Extract the latest prose.io-generated content:
-if [ -d "$PROSE_DIR" ]
-then
-    (cd "$PROSE_DIR" && git fetch origin && git reset --hard origin/gh-pages)
-else
-    git clone "$PROSE_REPO_URL" "$PROSE_DIR"
-fi
+BUILD_DIR="build/$(date +'%Y-%m-%dT%H-%M-%S')"
+mkdir -p "$BUILD_DIR"
+ln -snf "${BUILD_DIR##*/}" build/current
 
-# Checkout a specific prose sha for tests
-if [ -n "$PROSE_COMMITISH" ]
-then
-    (cd "$PROSE_DIR" && git checkout "$PROSE_SHA")
-fi
+SINATRA_PORT=9292
+SINATRA_BASE_URL="http://localhost:$SINATRA_PORT"
 
-# Symlink the media directories into the right place:
-for e in "${PROSE_DIR}"/media/*
-do
-    DIR="${e##*/}"
-    ln -snf "../prose/media/$DIR" "public/$DIR"
-done
+GH_PAGES_REPO='shineyoureye-static'
+GH_PAGES_USER='theyworkforyou'
+
+GH_PAGES_GIT_URL="https://github.com/$GH_PAGES_USER/$GH_PAGES_REPO.git"
+GH_PAGES_GIT_URL="git@github.com:$GH_PAGES_USER/$GH_PAGES_REPO.git"
+
+prepare_data() {
+    # Extract the latest prose.io-generated content:
+    if [ -d "$PROSE_DIR" ]
+    then
+        (cd "$PROSE_DIR" && git fetch origin && git reset --hard origin/gh-pages)
+    else
+        git clone "$PROSE_REPO_URL" "$PROSE_DIR"
+    fi
+
+    # Checkout a specific prose sha for tests
+    if [ -n "$PROSE_COMMITISH" ]
+    then
+        (cd "$PROSE_DIR" && git checkout "$PROSE_SHA")
+    fi
+
+    # Symlink the media directories into the right place:
+    for e in "${PROSE_DIR}"/media/*
+    do
+        DIR="${e##*/}"
+        ln -snf "../prose/media/$DIR" "public/$DIR"
+    done
+}
+
+start_sinatra() {
+    # Start the Sinatra server in the background:
+    bundle exec rackup > "$BUILD_DIR/sinatra.log" 2>&1 &
+    SINATRA_PID=$!
+    echo "Waiting for Sinatra to start..."
+    while ! nc -z localhost "$SINATRA_PORT"; do sleep 1; done
+    # Make sure it's not an old one server still running:
+    sleep 1
+    kill -0 "$SINATRA_PID" ||
+        { echo "Couldn't start Sinatra - is an old server running?"; exit 1; }
+    echo "done"
+}
+
+stop_sinatra() {
+    echo "Killing Sinatra (pid $SINATRA_PID)"
+    kill "$SINATRA_PID"
+    echo "done"
+}
+
+crawl_site() {
+    echo "Crawling $SINATRA_BASE_URL...."
+    (
+        WGET_EXIT_CODE=0
+        cd "$BUILD_DIR" &&
+            wget -o wget.log -r -l 5 --domains='localhost' \
+                 "$SINATRA_BASE_URL" || WGET_EXIT_CODE="$?"
+    )
+    echo done
+}
+
+deploy_site() {
+    (
+        cd "$BUILD_DIR"
+        echo "Cloning: $GH_PAGES_GIT_URL"
+        git clone --depth=1 "$GH_PAGES_GIT_URL" -b gh-pages
+        cd "$GH_PAGES_REPO"
+        cp -R ../"${SINATRA_BASE_URL##*//}"/* .
+        git add .
+        # Annoyingly, files without an extension are served as application/octet-stream
+        find . -name .git -prune -o -print | while read filename
+        do
+            if ! [ x"${filename: -5}" = x.html ]
+            then
+                if [ "$(file -b --mime-type "$filename")" = 'text/html' ]
+                then
+                    git mv -f $filename "${filename}.html"
+                fi
+            fi
+        done
+        git commit --author="Demoracy Sites Team <parliaments@mysociety.org>" -m "Automated commit"
+        git push origin HEAD
+    )
+}
+
+prepare_data
+
+start_sinatra
+
+crawl_site
+
+stop_sinatra
+
+deploy_site
+
+if [ WGET_EXIT_CODE != 0 ]
+then
+    echo "The errrors were:"
+    egrep -B 3 ' ERROR [0-9]{3}' "$BUILD_DIR/wget.log"
+    exit $WGET_EXIT_CODE
+fi
