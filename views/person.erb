@@ -1,84 +1,75 @@
-<div class="title-space">
-  <div class="title-space__name">
-    <h1><%= @page.title %></h1>
-    <p>Politician profile</p>
-  </div>
-</div>
+<div class="row">
+    <div class="col-sm-4 col-md-3">
+      <% if @page.person.image %>
+        <img class="person__image" src="<%= @page.person.image %>" alt="<%= @page.person.name %>">
+      <% else %>
+        <img class="person__image" src="/images/person-210x210.jpg" alt="<%= @page.person.name %>">
+      <% end %>
+        <%= erb :_social %>
+    </div>
+    <div class="col-sm-8 col-md-9">
+        <header class="person__key-info">
+            <h2>Representative</h2>
+            <h1 class="person__name"><%= @page.person.name %></h1>
+          <% if @page.person.area %>
+            <h2>Constituency</h2>
+            <p class="person__area"><a href="<%= @page.person.area.url %>"><%= @page.person.area.name %></a></p>
+          <% end %>
+            <h2>Party</h2>
+            <p class="person__party"><a href="<%= @page.person.party_url %>"><%= @page.person.party_name %></a></p>
+        </header>
 
-<div class="profile-pic">
-  <% if @page.person.proxy_image %>
-    <img src="<%= @page.person.proxy_image %>" srcset="<%= @page.person.proxy_image %>" alt="<%= @page.person.name %>">
-  <% else %>
-    <img src="/images/person-210x210.jpg" alt="Person logo">
-  <% end %>
-</div>
-
-<div class="profile-info">
-
-  <div class="sidebar">
-    <div class="constituency-party">
-      <% if @page.person.area %>
-      <h3>Constituency</h3>
-      <ul>
-        <li><a href="<%= @page.person.area.url %>"><%= @page.person.area.name %></a></li>
-      </ul>
+      <% if @page.summary %>
+        <section class="person__section">
+            <h2>Summary</h2>
+            <div class="person-summary">
+                <p><%= @page.summary %></p>
+            </div>
+        </section>
       <% end %>
 
-      <h3>Party</h3>
-      <ul class="party-memberships">
-        <li><a href="<%= @page.person.party_url %>" class="party-membership party-membership--political-party"><%= @page.person.party_name %></a></li>
-      </ul>
+      <% if @page.executive_positions.size > 0 %>
+        <section class="person__section">
+            <h2>Experience</h2>
+            <ul class="unstyled-list">
+              <% @page.executive_positions.each do |position| %>
+              <li>
+                <a href="<%= position.executive_positions_by_role.url %>" class="experience__item">
+                  <%= 'include person_experience_item.html item=position' %>
+                </a>
+              </li>
+              <% end %>
+            </ul>
+        </section>
+      <% end %>
+
+      <% if @page.job_history.size > 0 %>
+        <section class="person__section">
+            <h2>Job history</h2>
+            <ul class="unstyled-list">
+              <% @page.job_history.each do |job| %>
+              <li class="experience__item">
+                <%= 'include person_experience_item.html item=job' %>
+              </li>
+              <% end %>
+            </ul>
+        </section>
+      <% end %>
+
+      <% if @page.education.size > 0 %>
+        <section class="person__section">
+            <h2>Education</h2>
+            <ul class="unstyled-list">
+              <% @page.education.each do |education| %>
+              <li>
+                <%= 'include person_experience_item.html item=education' %>
+              </li>
+              <% end %>
+            </ul>
+        </section>
+      <% end %>
+
+        <%= erb :_comments %>
+
     </div>
-  </div>
-
-  <%= erb :_social %>
-
-</div>
-
-<div class="large-container profile-bulk">
-
-  <% if @page.summary %>
-  <h2>Summary</h2>
-  <div class="person-summary">
-    <p><%= @page.summary %></p>
-  </div>
-  <% end %>
-
-  <% if @page.executive_positions.size > 0 %>
-  <h2>Experience</h2>
-  <ul class="unstyled-list">
-    <% @page.executive_positions.each do |position| %>
-    <li>
-      <a href="<%= position.executive_positions_by_role.url %>" class="experience__item">
-        <%= 'include person_experience_item.html item=position' %>
-      </a>
-    </li>
-    <% end %>
-  </ul>
-  <% end %>
-
-  <% if @page.job_history.size > 0 %>
-  <h2>Job history</h2>
-  <ul class="unstyled-list">
-    <% @page.job_history.each do |job| %>
-    <li class="experience__item">
-      <%= 'include person_experience_item.html item=job' %>
-    </li>
-    <% end %>
-  </ul>
-  <% end %>
-
-  <% if @page.education.size > 0 %>
-  <h2>Education</h2>
-  <ul class="unstyled-list">
-    <% @page.education.each do |education| %>
-    <li>
-      <%= 'include person_experience_item.html item=education' %>
-    </li>
-    <% end %>
-  </ul>
-  <% end %>
-
-  <%= erb :_comments %>
-
 </div>

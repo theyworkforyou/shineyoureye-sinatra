@@ -1,5 +1,6 @@
 @import "variables";
 @import "settings";
+@import "mixins";
 
 @import "bootstrap";
 
@@ -9,5 +10,7 @@
 @import "site-header";
 @import "site-footer";
 @import "media-list";
+@import "social";
 
 @import "homepage";
+@import "person";

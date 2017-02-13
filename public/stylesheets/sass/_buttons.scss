@@ -13,3 +13,11 @@ a {
 .btn-link {
     text-decoration: underline;
 }
+
+.btn-facebook {
+    @include button-variant(#fff, $color-facebook-blue, darken($color-facebook-blue, 5%));
+}
+
+.btn-twitter {
+    @include button-variant(#fff, $color-twitter-blue, darken($color-twitter-blue, 5%));
+}

@@ -12,7 +12,7 @@
         padding-bottom: 4em;
     }
 
-    & > .container > :first-child {
-        margin-top: 0;
+    & > .container > {
+        @include remove-vertical-margin-first-and-last-child();
     }
 }

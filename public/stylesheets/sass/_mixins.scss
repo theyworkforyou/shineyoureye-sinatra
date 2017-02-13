@@ -1,0 +1,11 @@
+// Handy when you have a parent element with vertical padding,
+// and you don't want children to add their own margins inside.
+@mixin remove-vertical-margin-first-and-last-child() {
+    & > :first-child {
+        margin-top: 0;
+    }
+
+    & > :last-child {
+        margin-bottom: 0;
+    }
+}

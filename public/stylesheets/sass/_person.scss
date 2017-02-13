@@ -1,0 +1,37 @@
+.person__key-info {
+    margin-top: 1em;
+
+    @media (min-width: $screen-sm-min) {
+        margin-top: 0;
+    }
+
+    h1 {
+        margin: 0 0 0.5em 0;
+    }
+
+    h2 {
+        font-size: inherit;
+        font-weight: 700;
+        margin: 1em 0 0.3em 0;
+    }
+
+    @include remove-vertical-margin-first-and-last-child();
+}
+
+.person__section {
+    margin-top: 2em;
+    padding-top: 2em;
+    border-top: 1px solid #ddd;
+
+    @include remove-vertical-margin-first-and-last-child();
+}
+
+.person__image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+
+    @media (min-width: $screen-sm-min) {
+        margin-bottom: 2em;
+    }
+}

@@ -1,0 +1,9 @@
+.social-actions {
+    @extend .list-unstyled;
+
+    margin-bottom: 0;
+
+    li + li {
+        margin-top: $panel-body-padding;
+    }
+}
