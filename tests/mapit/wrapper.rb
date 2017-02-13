@@ -11,7 +11,7 @@ describe 'Mappit::Wrapper' do
 
   describe 'when getting the states' do
     it 'gets a list of all the states' do
-      mapit.states.count.must_equal(3)
+      mapit.states.count.must_equal(4)
     end
 
     it 'has states with an id and it is an integer' do
@@ -34,7 +34,7 @@ describe 'Mappit::Wrapper' do
 
   describe 'when getting the federal constituencies' do
     it 'gets a list of all the federal constituencies' do
-      mapit.federal_constituencies.count.must_equal(2)
+      mapit.federal_constituencies.count.must_equal(3)
     end
 
     it 'has federal constituencies with a name' do
@@ -63,7 +63,7 @@ describe 'Mappit::Wrapper' do
 
   class FakeMappings
     def fed_to_sta_mapping
-      { '949' => '16', '1091' => '12' }
+      { '949' => '16', '1091' => '12', '963' => '9' }
     end
 
     def mapit_ids_to_pombola_slugs
