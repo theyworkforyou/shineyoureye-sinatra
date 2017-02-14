@@ -69,12 +69,23 @@ end
 
 get '/position/representative/' do
   @page = Page::People.new(title: 'Federal Representative', people_by_legislature: representatives)
-  erb :representatives
+  erb :people
+end
+
+get '/position/senator/' do
+  @page = Page::People.new(title: 'Senator', people_by_legislature: senators)
+  erb :people
 end
 
 get '/person/:id/' do |id|
   pass if representatives.none?(id)
   @page = Page::Person.new(person: representatives.find_single(id))
+  erb :person
+end
+
+get '/person/:id/' do |id|
+  pass if senators.none?(id)
+  @page = Page::Person.new(person: senators.find_single(id))
   erb :person
 end
 
@@ -88,6 +99,10 @@ end
 
 def representatives
   EP::PeopleByLegislature.new(legislature: house, mapit: mapit, baseurl: '/person/')
+end
+
+def senators
+  EP::PeopleByLegislature.new(legislature: senate, mapit: mapit, baseurl: '/person/')
 end
 
 def mapit

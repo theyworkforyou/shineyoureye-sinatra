@@ -27,7 +27,6 @@ describe 'Person Page' do
 
   describe 'when subject does not have an image' do
     before { get '/person/764fce72-c12a-42ad-ba84-d899f81f7a77/' }
-    subject { Nokogiri::HTML(last_response.body) }
 
     it 'shows a picture anyway (empty avatar)' do
       # n.b. at the moment we just have a copy of the avatar image;
@@ -57,9 +56,16 @@ describe 'Person Page' do
     subject.css('.person__party a').first.text.must_equal('All Progressives Congress')
   end
 
+  describe 'when requesting a senator page' do
+    before { get '/person/6b0cdd74-7960-478f-ac93-d230f486a5b9/' }
+
+    it 'finds the senator by id' do
+      subject.css('title').text.must_include('ABARIBE ENYNNAYA')
+    end
+  end
+
   describe 'if person id does not exist in this legislature' do
     before { get '/person/i-do-not-exist/' }
-    subject { Nokogiri::HTML(last_response.body) }
 
     it 'shows a 404 page' do
       subject.css('h1').first.text.must_equal('Not Found')
@@ -76,6 +82,5 @@ describe 'Person Page' do
       subject.css('.btn-twitter/@href').text.must_include('&text=ABDUKADIR RAHIS')
       subject.css('.btn-twitter/@href').text.must_include('/person/b2a7f72a-9ecf-4263-83f1-cb0f8783053c/')
     end
-
   end
 end

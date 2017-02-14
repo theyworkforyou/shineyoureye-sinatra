@@ -4,6 +4,10 @@ module SettingsHelper
     settings.index.country('Nigeria').legislature('Representatives')
   end
 
+  def senate
+    settings.index.country('Nigeria').legislature('Senate')
+  end
+
   def mapit_url
     settings.mapit_url
   end
