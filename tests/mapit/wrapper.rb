@@ -56,7 +56,7 @@ describe 'Mappit::Wrapper' do
 
   describe 'when getting the senatorial districts' do
     it 'gets a list of all the senatorial districts' do
-      mapit.senatorial_districts.count.must_equal(4)
+      mapit.senatorial_districts.count.must_equal(5)
     end
 
     it 'has senatorial districts with a name' do
