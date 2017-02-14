@@ -10,7 +10,8 @@ describe 'Mapit::Mappings' do
     let(:mappings) { Mapit::Mappings.new(
       fed_to_sta_ids_mapping_filename: fed_to_sta,
       pombola_slugs_to_mapit_ids_filename: 'irrelevant',
-      mapit_to_ep_areas_filename: 'irrelevant'
+      mapit_to_ep_areas_fed_filename: 'irrelevant',
+      mapit_to_ep_areas_sen_filename: 'irrelevant'
     ) }
 
     it 'can map all constituencies to their state' do
@@ -35,7 +36,8 @@ ebonyi,12,STA'
     let(:mappings) { Mapit::Mappings.new(
       fed_to_sta_ids_mapping_filename: 'irrelevant',
       pombola_slugs_to_mapit_ids_filename: pombola_to_mapit,
-      mapit_to_ep_areas_filename: 'irrelevant'
+      mapit_to_ep_areas_fed_filename: 'irrelevant',
+      mapit_to_ep_areas_sen_filename: 'irrelevant'
     ) }
 
     it 'can map all mapit ids to their Pombola slug' do
@@ -52,21 +54,26 @@ ebonyi,12,STA'
   end
 
   describe 'EP to mapit area mappings' do
-    let(:mapit_to_ep) { new_tempfile('1139,"area/adavi/okehi,_kogi_state"
+    let(:mapit_to_ep_fed) { new_tempfile('1139,"area/adavi/okehi,_kogi_state"
 1203,"area/ado-odo/ota,_ogun_state"'
+    ) }
+    let(:mapit_to_ep_sen) { new_tempfile('832,"area/borno_south,_borno_state"
+836,"area/delta_central,_delta_state"'
     ) }
     let(:mappings) { Mapit::Mappings.new(
       fed_to_sta_ids_mapping_filename: 'irrelevant',
       pombola_slugs_to_mapit_ids_filename: 'irrelevant',
-      mapit_to_ep_areas_filename: mapit_to_ep
+      mapit_to_ep_areas_fed_filename: mapit_to_ep_fed,
+      mapit_to_ep_areas_sen_filename: mapit_to_ep_sen
     ) }
 
     it 'can map all ep areas to their mapit area' do
-      mappings.ep_to_mapit_ids.count.must_equal(2)
+      mappings.ep_to_mapit_ids.count.must_equal(4)
     end
 
     it 'returns EP to mapit as a hash' do
       mappings.ep_to_mapit_ids['area/adavi/okehi,_kogi_state'].must_equal('1139')
+      mappings.ep_to_mapit_ids['area/borno_south,_borno_state'].must_equal('832')
     end
 
     it 'returns nil if EP id does not exist' do

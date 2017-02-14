@@ -54,25 +54,50 @@ describe 'Mappit::Wrapper' do
     end
   end
 
+  describe 'when getting the senatorial districts' do
+    it 'gets a list of all the senatorial districts' do
+      mapit.senatorial_districts.count.must_equal(4)
+    end
+
+    it 'has senatorial districts with a name' do
+      mapit.senatorial_districts.first.name.must_equal('ABIA CENTRAL')
+    end
+
+    it 'has senatorial districts that use the baseurl' do
+      mapit.senatorial_districts.first.url.must_equal('/baseurl/abia-central/')
+    end
+
+    it 'has senatorial districts with a parent name' do
+      mapit.senatorial_districts.first.parent_name.must_equal('Abia')
+    end
+  end
+
   describe 'when getting a single area from an EP id' do
-    it 'finds a federal_constituency' do
+    it 'finds a federal constituency' do
       ep_id = 'area/kuje/abaji/gwagwalada/kwali,_federal_capital_territory_state'
       mapit.area_from_ep_id(ep_id).name.must_equal('Abaji/Gwagwalada/Kwali/Kuje')
+    end
+
+    it 'finds a senatorial district' do
+      ep_id = 'area/abia-central,_abia_state'
+      mapit.area_from_ep_id(ep_id).name.must_equal('ABIA CENTRAL')
     end
   end
 
   class FakeMappings
     def fed_to_sta_mapping
-      { '949' => '16', '1091' => '12', '963' => '9' }
+      { '949' => '16', '1091' => '12', '963' => '9', '809' => '2' }
     end
 
     def mapit_ids_to_pombola_slugs
-      { '949' => 'gwagwaladakuje', '16' => 'federal-capital-territory' }
+      { '949' => 'gwagwaladakuje', '16' => 'federal-capital-territory',
+        '809' => 'abia-central', '2' => 'abia' }
     end
 
     def ep_to_mapit_ids
       {
-        'area/kuje/abaji/gwagwalada/kwali,_federal_capital_territory_state' => '949'
+        'area/kuje/abaji/gwagwalada/kwali,_federal_capital_territory_state' => '949',
+        'area/abia-central,_abia_state' => '809'
       }
     end
   end

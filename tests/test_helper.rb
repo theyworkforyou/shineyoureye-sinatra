@@ -25,6 +25,7 @@ module Minitest
       get_from_disk(reps_json_url, reps_json)
       get_from_disk("#{mapit_url}STA", STA_JSON)
       get_from_disk("#{mapit_url}FED", FED_JSON)
+      get_from_disk("#{mapit_url}SEN", SEN_JSON)
     end
 
     def new_tempfile(contents, filename = 'sye-tests')

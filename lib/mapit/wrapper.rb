@@ -17,14 +17,22 @@ module Mapit
       @constituencies ||= add_parent_data(areas('FED')).map { |area| create_place(area) }
     end
 
+    def senatorial_districts
+      @districts ||= add_parent_data(areas('SEN')).map { |area| create_place(area) }
+    end
+
     def area_from_ep_id(id)
       mapit_id = ep_to_mapit_ids[id].to_i
-      (states + federal_constituencies).find { |area| area.id == mapit_id }
+      all_areas.find { |area| area.id == mapit_id }
     end
 
     private
 
     attr_reader :mapit_url, :mapit_mappings, :baseurl
+
+    def all_areas
+      states + federal_constituencies + senatorial_districts
+    end
 
     def areas(area_type)
       uri = URI(mapit_url + area_type)
@@ -34,19 +42,19 @@ module Mapit
     def add_parent_data(child_areas)
       child_areas.map do |area|
         parent = {
-          'parent_id' => parent_id(area['id']),
-          'parent_name' => parent_name(area['id'])
+          'parent_id' => parent_id(area),
+          'parent_name' => parent_name(area)
         }
         area.merge(parent)
       end
     end
 
-    def parent_id(area_id)
-      fed_to_sta_mapping[area_id.to_s].to_i
+    def parent_id(area)
+      area['parent_area'] || fed_to_sta_mapping[area['id'].to_s].to_i
     end
 
-    def parent_name(area_id)
-      states.find { |state| state.id == parent_id(area_id) }.name
+    def parent_name(area)
+      states.find { |state| state.id == parent_id(area) }.name
     end
 
     def mapit_ids_to_pombola_slugs
