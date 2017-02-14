@@ -1,0 +1,23 @@
+<div class="social-and-tools">
+    <ul class="tools">
+        <li>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=<%= request.url %>&amp;t=<%= @page.person.name %>"
+              target="_blank"
+              class="big-btn-text-fb">Share on Facebook
+            </a>
+        </li>
+
+        <li>
+            <a href="https://twitter.com/share?via=<%= twitter_user %>&amp;text=<%= @page.person.name %>&amp;url=<%= request.url %>"
+              target="_blank"
+              class="big-btn-text-tw">Share on Twitter
+            </a>
+        </li>
+
+        <li>
+            <a  href="<%= request.url %>#comments"
+              class="big-btn-text-green">Comments <span class="fb-comments-count"></span>
+            </a>
+        </li>
+    </ul>
+</div>

@@ -12,7 +12,7 @@ describe 'Federal Constituencies Page' do
   end
 
   it 'shows all constituencies' do
-    subject.css('.media').count.must_equal(2)
+    subject.css('.media').count.must_equal(3)
   end
 
   it 'links to each constituency page' do
@@ -21,14 +21,14 @@ describe 'Federal Constituencies Page' do
   end
 
   it 'shows each constituency name' do
-    subject.css('.media-heading').last.text.must_equal('Abakaliki/Izzi')
+    subject.css('.media-heading').last.text.must_equal('Maiduguri (Metropolitan)')
   end
 
   it 'links to each parent place' do
-    subject.css('.parent-place a/@href').last.text.must_equal('/place/ebonyi/')
+    subject.css('.parent-place a/@href').last.text.must_equal('/place/borno/')
   end
 
   it 'shows each parent place name' do
-    subject.css('.parent-place a').last.text.must_equal('Ebonyi')
+    subject.css('.parent-place a').last.text.must_equal('Borno')
   end
 end

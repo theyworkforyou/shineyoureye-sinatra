@@ -1,0 +1,32 @@
+<h1 class="page-title"><%= @page.title %></h1>
+
+<div class="content_box">
+    <h3>Current Position Holders</h3>
+
+    <ul class="media-list media-list--people">
+      <% @page.all.each do |person| %>
+        <li class="media">
+            <div class="media-left">
+                <a href="<%= person.url %>">
+                  <% if person.proxy_image %>
+                    <img class="media-object" src="<%= person.proxy_image %>" srcset="<%= person.proxy_image %>" alt="<%= person.name %>">
+                  <% end %>
+                </a>
+            </div>
+            <div class="media-body">
+                <a href="<%= person.url %>"><h3 class="media-heading"><%= person.name %></h3></a>
+                <% if person.area %>
+                <p>
+                  Constituency:
+                  <a class="listing__area" href="<%= person.area.url %>"><%= person.area.name %></a>
+                </p>
+                <% end %>
+                <p>
+                  Party:
+                  <a class="listing__party" href="<%= person.party_url %>"><%= person.party_name %></a>
+                </p>
+            </div>
+        </li>
+      <% end %>
+    </ul>
+</div>
