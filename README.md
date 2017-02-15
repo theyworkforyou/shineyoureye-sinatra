@@ -29,6 +29,24 @@ Running a static site vs a dynamic one has several advantages. Also, we benefit
 from GitHub's free hosting.
 
 
+## Data sources
+
+This project uses data from several different sources:
+
+* Mapit, for the areas data
+* Pombola, to get information from the old version of the site, like slugs for the areas and person pages
+* EveryPolitician (EP), for the data about politicians
+* Morph, because the information about governors is not available in EP, so we had to write a scraper
+
+For these we need a lot of mapping CSV files which can be found in the `mapit` folder:
+
+* A file to map federal constituency Mapit areas to their states, as Mapit is returning them with a `parent_area` of `null`. This file is needed because both the area name and the state name have to be displayed in the site
+* For symmetry, there is also a file to do the same mapping to senatorial districts, although in this case Mapit returns a valid `parent_area` for those
+* A file to map Mapit area ids to EP area ids, one for federal constituencies and another for senatorial districts. This is so that we can return the area of a politician as a Mapit area, and so that we can ask EP data for all the persons associated to a Mapit area.
+* A file to map Mapit areas to Pombola slugs, so that we use the same urls for place pages as the Pombola version of the site
+* A file to map EP persons to Pombola slugs, so that we use the same urls for person pages as the Pombola version of the site
+
+
 ## Development
 
 
@@ -68,7 +86,9 @@ rbenv rehash
 * `lib `: the codebase
 * `lib/document`: code to parse [prose.io](http://prose.io/) files (markdown
   with frontmatter)
+* `lib/ep`: code to parse EveryPolitician data
 * `lib/helpers`: mostly site-specific stuff
+* `lib/mapit`: code to parse Mapit data
 * `lib/page`: presenters to extract all logic out of the views
 * `prose`: where the `shineyoureye-prose` repository will be cloned. Contains
 user introduced content, like blog posts, events, etc.
