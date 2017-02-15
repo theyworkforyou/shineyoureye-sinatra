@@ -10,6 +10,10 @@ describe 'Person Page' do
     subject.css('title').text.must_include('ABDUKADIR RAHIS')
   end
 
+  it 'displays the position' do
+    subject.css('.person__key-info h2').first.text.must_equal('Representative')
+  end
+
   it 'shows the person name' do
     subject.css('h1.person__name').text.must_equal('ABDUKADIR RAHIS')
   end
@@ -61,6 +65,10 @@ describe 'Person Page' do
 
     it 'finds the senator by id' do
       subject.css('title').text.must_include('ABARIBE ENYNNAYA')
+    end
+
+    it 'displays the right position' do
+      subject.css('.person__key-info h2').first.text.must_equal('Senator')
     end
   end
 

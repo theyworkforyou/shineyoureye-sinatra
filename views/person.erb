@@ -5,11 +5,12 @@
       <% else %>
         <img class="person__image" src="/images/person-210x210.jpg" alt="<%= @page.person.name %>">
       <% end %>
-        <%= erb :_social %>
+      <%= erb :_social %>
     </div>
+
     <div class="col-sm-8 col-md-9">
         <header class="person__key-info">
-            <h2>Representative</h2>
+            <h2><%= @page.position %></h2>
             <h1 class="person__name"><%= @page.person.name %></h1>
           <% if @page.person.area %>
             <h2>Constituency</h2>

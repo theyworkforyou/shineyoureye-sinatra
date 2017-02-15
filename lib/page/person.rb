@@ -1,10 +1,11 @@
 # frozen_string_literal: true
 module Page
   class Person
-    attr_reader :person
+    attr_reader :person, :position
 
-    def initialize(person:)
+    def initialize(person:, position:)
       @person = person
+      @position = position
     end
 
     def title

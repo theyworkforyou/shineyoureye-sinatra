@@ -10,8 +10,13 @@ describe 'Page::Person' do
     baseurl: '/baseurl/'
   ) }
   let(:page) { Page::Person.new(
-    person: people.find_single('b2a7f72a-9ecf-4263-83f1-cb0f8783053c')
+    person: people.find_single('b2a7f72a-9ecf-4263-83f1-cb0f8783053c'),
+    position: 'Position'
   ) }
+
+  it 'knows the position' do
+    page.position.must_equal('Position')
+  end
 
   it 'has a page title' do
     page.title.must_equal('ABDUKADIR RAHIS')
