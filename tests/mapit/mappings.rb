@@ -9,6 +9,7 @@ describe 'Mapit::Mappings' do
     ) }
     let(:mappings) { Mapit::Mappings.new(
       fed_to_sta_ids_mapping_filename: fed_to_sta,
+      sen_to_sta_ids_mapping_filename: 'irrelevant',
       pombola_slugs_to_mapit_ids_filename: 'irrelevant',
       mapit_to_ep_areas_fed_filename: 'irrelevant',
       mapit_to_ep_areas_sen_filename: 'irrelevant'
@@ -27,6 +28,31 @@ describe 'Mapit::Mappings' do
     end
   end
 
+  describe 'SEN to STA mappings' do
+    let(:sen_to_sta) { new_tempfile('809,2
+812,3'
+    ) }
+    let(:mappings) { Mapit::Mappings.new(
+      fed_to_sta_ids_mapping_filename: 'irrelevant',
+      sen_to_sta_ids_mapping_filename: sen_to_sta,
+      pombola_slugs_to_mapit_ids_filename: 'irrelevant',
+      mapit_to_ep_areas_fed_filename: 'irrelevant',
+      mapit_to_ep_areas_sen_filename: 'irrelevant'
+    ) }
+
+    it 'can map all districts to their state' do
+      mappings.sen_to_sta_mapping.count.must_equal(2)
+    end
+
+    it 'returns SEN to STA mappings as a hash' do
+      mappings.sen_to_sta_mapping['809'].must_equal('2')
+    end
+
+    it 'returns nil if SEN id does not exist' do
+      assert_nil(mappings.sen_to_sta_mapping['0'])
+    end
+  end
+
   describe 'Mapit ids to Pombola slugs' do
     let(:pombola_to_mapit) { new_tempfile('gwagwaladakuje,949,FED
 federal-capital-territory,16,STA
@@ -35,6 +61,7 @@ ebonyi,12,STA'
     ) }
     let(:mappings) { Mapit::Mappings.new(
       fed_to_sta_ids_mapping_filename: 'irrelevant',
+      sen_to_sta_ids_mapping_filename: 'irrelevant',
       pombola_slugs_to_mapit_ids_filename: pombola_to_mapit,
       mapit_to_ep_areas_fed_filename: 'irrelevant',
       mapit_to_ep_areas_sen_filename: 'irrelevant'
@@ -62,6 +89,7 @@ ebonyi,12,STA'
     ) }
     let(:mappings) { Mapit::Mappings.new(
       fed_to_sta_ids_mapping_filename: 'irrelevant',
+      sen_to_sta_ids_mapping_filename: 'irrelevant',
       pombola_slugs_to_mapit_ids_filename: 'irrelevant',
       mapit_to_ep_areas_fed_filename: mapit_to_ep_fed,
       mapit_to_ep_areas_sen_filename: mapit_to_ep_sen
