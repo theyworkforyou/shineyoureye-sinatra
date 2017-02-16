@@ -10,6 +10,7 @@ require_relative 'lib/helpers/settings_helper'
 require_relative 'lib/mapit/wrapper'
 require_relative 'lib/page/homepage'
 require_relative 'lib/page/info'
+require_relative 'lib/page/jinja2'
 require_relative 'lib/page/places'
 require_relative 'lib/page/people'
 require_relative 'lib/page/person'
@@ -95,6 +96,13 @@ end
 
 get '/javascripts/bootstrap/:filename' do |filename|
   send_file(File.join(Bootstrap.javascripts_path, filename))
+end
+
+# This route just serves up an empty page that can be used as a Jinja2
+# template by services we integrate with this site.
+get '/jinja2-template.html' do
+  @page = Page::Jinja2.new(title: '{{ title }}')
+  erb :jinja2_contents
 end
 
 def representatives
