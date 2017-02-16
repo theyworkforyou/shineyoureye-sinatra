@@ -16,7 +16,7 @@ module Mapit
     end
 
     def fed_to_sta_mapping
-      @fed_to_sta_mapping ||= CSV.read(fed_to_sta_ids_mapping_filename).to_h
+      @fed_to_sta_mapping ||= read(fed_to_sta_ids_mapping_filename).to_h
     end
 
     def mapit_ids_to_pombola_slugs
@@ -33,7 +33,7 @@ module Mapit
                 :mapit_to_ep_areas_fed_filename, :mapit_to_ep_areas_sen_filename
 
     def reverse_pombola_slugs_to_mapit_ids
-      CSV.read(pombola_slugs_to_mapit_ids_filename).map { |row| [row[1], row.first] }
+      read(pombola_slugs_to_mapit_ids_filename).map { |row| [row[1], row.first] }
     end
 
     def reverse_ep_to_mapit_ids
@@ -41,7 +41,11 @@ module Mapit
     end
 
     def reverse(mapping_filename)
-      CSV.read(mapping_filename).map { |row| row.reverse }
+      read(mapping_filename).map { |row| row.reverse }
+    end
+
+    def read(filename)
+      CSV.read(filename)
     end
   end
 end
