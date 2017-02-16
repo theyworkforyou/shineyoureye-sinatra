@@ -12,9 +12,16 @@ module EP
     def_delegators :@person, :id, :name, :image, :birth_date, :phone,
                              :email, :twitter, :facebook, :memberships
 
-    def proxy_image
-      'https://mysociety.github.io/politician-image-proxy' \
-      "/#{legislature.country.slug}/#{legislature.slug}/#{id}/140x140.jpeg"
+    def thumbnail_image_url
+      proxy_image_variant('100x100')
+    end
+
+    def medium_image_url
+      proxy_image_variant('250x250')
+    end
+
+    def original_image_url
+      proxy_image_variant('original')
     end
 
     def twitter_display
@@ -71,6 +78,18 @@ module EP
 
     def legislature
       term.legislature
+    end
+
+    def proxy_image_variant(size)
+      raise_unless_image_size_available(size)
+      'https://theyworkforyou.github.io/shineyoureye-images' \
+      "/#{legislature.slug}/#{id}/#{size}.jpeg"
+    end
+
+    def raise_unless_image_size_available(size)
+      unless ['original', '100x100', '250x250'].include?(size)
+        raise RuntimeException, "Size #{size} is not known to be available"
+      end
     end
   end
 end

@@ -25,8 +25,8 @@ describe 'Page::Person' do
     page.person.image.must_include('/images/mps/546.jpg')
   end
 
-  it 'has a proxy image' do
-    page.person.proxy_image.must_include('/b2a7f72a-9ecf-4263-83f1-cb0f8783053c/140x140.jpeg')
+  it 'has a thumbnail image' do
+    page.person.thumbnail_image_url.must_include('/b2a7f72a-9ecf-4263-83f1-cb0f8783053c/100x100.jpeg')
   end
 
   it 'knows the area url' do

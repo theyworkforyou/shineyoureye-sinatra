@@ -23,8 +23,16 @@ describe 'EP::Person' do
     person.image.must_equal('http://www.nass.gov.ng/images/mps/avatar.jpg')
   end
 
-  it 'has a proxy image' do
-    person.proxy_image.must_include('140x140.jpeg')
+  it 'has a thumbnail image' do
+    person.thumbnail_image_url.must_include('100x100.jpeg')
+  end
+
+  it 'has a URL for a medium-sized image' do
+    person.medium_image_url.must_include('250x250.jpeg')
+  end
+
+  it 'has a URL for the original-sized image' do
+    person.original_image_url.must_include('original.jpeg')
   end
 
   it 'has a date of birth' do

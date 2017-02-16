@@ -17,7 +17,7 @@ describe 'Person Page' do
   describe 'when person has an image' do
     it 'points to the right path' do
       subject.css('img.person__image/@src').first.text
-        .must_equal('http://www.nass.gov.ng/images/mps/546.jpg')
+        .must_equal('https://theyworkforyou.github.io/shineyoureye-images/Representatives/b2a7f72a-9ecf-4263-83f1-cb0f8783053c/250x250.jpeg')
     end
 
     it 'displays the name as alternative text' do
@@ -30,8 +30,12 @@ describe 'Person Page' do
     subject { Nokogiri::HTML(last_response.body) }
 
     it 'shows a picture anyway (empty avatar)' do
+      # n.b. at the moment we just have a copy of the avatar image;
+      # once
+      # https://github.com/everypolitician-scrapers/nigeria-national-assembly/issues/10
+      # is dealt with we can make this test more helpful.
       subject.css('img.person__image/@src').first.text
-        .must_equal('http://www.nass.gov.ng/images/mps/avatar.jpg')
+        .must_equal('https://theyworkforyou.github.io/shineyoureye-images/Representatives/764fce72-c12a-42ad-ba84-d899f81f7a77/250x250.jpeg')
     end
   end
 
