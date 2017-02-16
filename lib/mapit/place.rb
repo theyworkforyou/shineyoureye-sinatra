@@ -1,10 +1,13 @@
 # frozen_string_literal: true
 module Mapit
   class Place
-    def initialize(place:, mapit_ids_to_pombola_slugs:, baseurl:)
+    attr_reader :parent
+
+    def initialize(place:, pombola_slug:, baseurl:)
       @place = place
-      @mapit_ids_to_pombola_slugs = mapit_ids_to_pombola_slugs
+      @pombola_slug = pombola_slug
       @baseurl = baseurl
+      @parent = nil
     end
 
     def id
@@ -15,28 +18,17 @@ module Mapit
       place['name']
     end
 
-    def parent_name
-      place['parent_name']
+    def parent=(parent_place)
+      @parent = parent_place
     end
 
     def url
-      build_url(place['id']) if place['id']
-    end
-
-    def parent_url
-      build_url(place['parent_id']) if place['parent_id']
+      "#{baseurl}#{pombola_slug}/"
     end
 
     private
 
-    attr_reader :place, :mapit_ids_to_pombola_slugs, :baseurl
+    attr_reader :place, :pombola_slug, :baseurl
 
-    def build_url(id)
-      "#{baseurl}#{pombola_slug(id)}/"
-    end
-
-    def pombola_slug(id)
-      mapit_ids_to_pombola_slugs[id.to_s]
-    end
   end
 end

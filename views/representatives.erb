@@ -19,6 +19,7 @@
                 <p>
                   Constituency:
                   <a class="listing__area" href="<%= person.area.url %>"><%= person.area.name %></a>
+                  (<a href="<%= person.area.parent.url %>"><%= person.area.parent.name %></a>)
                 </p>
                 <% end %>
                 <p>

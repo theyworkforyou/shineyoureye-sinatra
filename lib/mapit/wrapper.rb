@@ -7,14 +7,25 @@ module Mapit
       @mapit_url = mapit_url
       @mapit_mappings = mapit_mappings
       @baseurl = baseurl
+      cache_mapit_data(['FED', 'STA'])
+    end
+
+    def cache_mapit_data(mapit_area_types)
+      @type_to_places = mapit_area_types.map { |t| [t, areas(t)] }.to_h
+      @id_to_place = @type_to_places.values.flatten.map { |a| [a.id, a] }.to_h
+      # Set parent-child relationships:
+      fed_to_sta_mapping.each do |child, parent|
+        child, parent = Integer(child), Integer(parent)
+        @id_to_place[child].parent = @id_to_place[parent]
+      end
     end
 
     def states
-      @states ||= areas('STA').map { |area| create_place(area) }
+      @type_to_places['STA']
     end
 
     def federal_constituencies
-      @constituencies ||= add_parent_data(areas('FED')).map { |area| create_place(area) }
+      @type_to_places['FED']
     end
 
     def senatorial_districts
@@ -35,6 +46,10 @@ module Mapit
     end
 
     def areas(area_type)
+      areas_data(area_type).map { |a| create_place(a) }
+    end
+
+    def areas_data(area_type)
       uri = URI(mapit_url + area_type)
       JSON.parse(Net::HTTP.get(uri)).values
     end
@@ -72,7 +87,7 @@ module Mapit
     def create_place(area)
       Mapit::Place.new(
         place: area,
-        mapit_ids_to_pombola_slugs: mapit_ids_to_pombola_slugs,
+        pombola_slug: mapit_ids_to_pombola_slugs[area['id'].to_s],
         baseurl: baseurl
       )
     end
