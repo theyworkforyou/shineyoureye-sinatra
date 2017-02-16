@@ -12,7 +12,7 @@ module EP
     def_delegators :@person, :id, :name, :image, :birth_date, :phone,
                              :email, :twitter, :facebook, :memberships
 
-    def proxy_image
+    def thumbnail_image_url
       proxy_image_variant('100x100')
     end
 

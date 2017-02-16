@@ -8,8 +8,8 @@
         <li class="media">
             <div class="media-left">
                 <a href="<%= person.url %>">
-                  <% if person.proxy_image %>
-                    <img class="media-object" src="<%= person.proxy_image %>" srcset="<%= person.proxy_image %>" alt="<%= person.name %>">
+                  <% if person.thumbnail_image_url %>
+                    <img class="media-object" src="<%= person.thumbnail_image_url %>" srcset="<%= person.thumbnail_image_url %>" alt="<%= person.name %>">
                   <% end %>
                 </a>
             </div>
