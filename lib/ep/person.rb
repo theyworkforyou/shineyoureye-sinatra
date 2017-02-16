@@ -13,8 +13,8 @@ module EP
                              :email, :twitter, :facebook, :memberships
 
     def proxy_image
-      'https://mysociety.github.io/politician-image-proxy' \
-      "/#{legislature.country.slug}/#{legislature.slug}/#{id}/140x140.jpeg"
+      'https://theyworkforyou.github.io/shineyoureye-images' \
+      "/#{legislature.slug}/#{id}/100x100.jpeg"
     end
 
     def twitter_display

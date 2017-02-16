@@ -27,12 +27,12 @@ describe 'List of Representatives' do
     describe 'when person has an image' do
       it 'points to the right path' do
         person.css('a img/@src').first.text
-          .must_include('/b2a7f72a-9ecf-4263-83f1-cb0f8783053c/140x140.jpeg')
+          .must_include('/b2a7f72a-9ecf-4263-83f1-cb0f8783053c/100x100.jpeg')
       end
 
       it 'has an srcset' do
         person.css('a img/@srcset').first.text
-          .must_include('/b2a7f72a-9ecf-4263-83f1-cb0f8783053c/140x140.jpeg')
+          .must_include('/b2a7f72a-9ecf-4263-83f1-cb0f8783053c/100x100.jpeg')
       end
 
       it 'has the name as alternative text' do
@@ -45,7 +45,7 @@ describe 'List of Representatives' do
 
       it 'shows a picture anyway (empty avatar)' do
         person.css('a img/@src').first.text
-          .must_include('/764fce72-c12a-42ad-ba84-d899f81f7a77/140x140.jpeg')
+          .must_include('/764fce72-c12a-42ad-ba84-d899f81f7a77/100x100.jpeg')
       end
     end
 

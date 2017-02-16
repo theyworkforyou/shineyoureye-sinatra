@@ -24,7 +24,7 @@ describe 'EP::Person' do
   end
 
   it 'has a proxy image' do
-    person.proxy_image.must_include('140x140.jpeg')
+    person.proxy_image.must_include('100x100.jpeg')
   end
 
   it 'has a date of birth' do
