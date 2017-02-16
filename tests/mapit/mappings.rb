@@ -51,6 +51,18 @@ ebonyi,12,STA'
     it 'returns nil if mapit id does not exist' do
       assert_nil(mappings.mapit_ids_to_pombola_slugs['0'])
     end
+
+    it 'can map all Pombola slugs to their mapit ids' do
+      mappings.pombola_slugs_to_mapit_ids.count.must_equal(4)
+    end
+
+    it 'uses the Pombola slug as key and the mapit id as value' do
+      mappings.pombola_slugs_to_mapit_ids['ebonyi'].must_equal('12')
+    end
+
+    it 'returns nil if Pombola slug does not exist' do
+      assert_nil(mappings.pombola_slugs_to_mapit_ids['i-dont-exist'])
+    end
   end
 
   describe 'EP to mapit area mappings' do
