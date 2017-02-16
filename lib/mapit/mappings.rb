@@ -37,11 +37,12 @@ module Mapit
     end
 
     def reverse_ep_to_mapit_ids
-      reverse(mapit_to_ep_areas_fed_filename) + reverse(mapit_to_ep_areas_sen_filename)
+      reverse(read(mapit_to_ep_areas_fed_filename)) +
+      reverse(read(mapit_to_ep_areas_sen_filename))
     end
 
-    def reverse(mapping_filename)
-      read(mapping_filename).map { |row| row.reverse }
+    def reverse(mapping_list)
+      mapping_list.map { |row| row.reverse }
     end
 
     def read(filename)
