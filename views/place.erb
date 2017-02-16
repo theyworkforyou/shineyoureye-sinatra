@@ -43,32 +43,7 @@
 
         <section class="person__section">
           <h2>Current Politicians Representing <%= @page.place.name %></h2>
-          <ul class="media-list media-list--people">
-            <% @page.people.each do |person| %>
-              <li class="media">
-                  <div class="media-left">
-                      <a href="<%= person.url %>">
-                        <% if person.thumbnail_image_url %>
-                          <img class="media-object" src="<%= person.thumbnail_image_url %>" srcset="<%= person.thumbnail_image_url %>" alt="<%= person.name %>">
-                        <% end %>
-                      </a>
-                  </div>
-                  <div class="media-body">
-                      <a href="<%= person.url %>"><h3 class="media-heading"><%= person.name %></h3></a>
-                      <% if person.area %>
-                      <p>
-                        Constituency:
-                        <a class="listing__area" href="<%= person.area.url %>"><%= person.area.name %></a>
-                      </p>
-                      <% end %>
-                      <p>
-                        Party:
-                        <a class="listing__party" href="<%= person.party_url %>"><%= person.party_name %></a>
-                      </p>
-                  </div>
-              </li>
-            <% end %>
-          </ul>
+          <%= erb :_list_of_people %>
 
           <h2>People</h2>
           <p>To see all people associated with <%= @page.place.name %> and smaller regions, go to the
