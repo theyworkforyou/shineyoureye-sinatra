@@ -64,10 +64,6 @@ describe 'Place Page' do
       # end
     end
 
-    it 'displays the place name' do
-      subject.css('.person__section h2').text.must_include('Abakaliki/Izzi')
-    end
-
     it 'displays all people associated with the place' do
       subject.css('.media').count.must_equal(1)
     end
