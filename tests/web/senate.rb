@@ -26,11 +26,11 @@ describe 'Senate' do
 
     describe 'when person has an image' do
       it 'points to the right path' do
-        person.css('a img/@src').first.text.must_include('/6b0cdd74-7960-478f-ac93-d230f486a5b9/140x140.jpeg')
+        person.css('a img/@src').first.text.must_include('/6b0cdd74-7960-478f-ac93-d230f486a5b9/100x100.jpeg')
       end
 
       it 'has an srcset' do
-        person.css('a img/@srcset').first.text.must_include('/6b0cdd74-7960-478f-ac93-d230f486a5b9/140x140.jpeg')
+        person.css('a img/@srcset').first.text.must_include('/6b0cdd74-7960-478f-ac93-d230f486a5b9/100x100.jpeg')
       end
 
       it 'has the name as alternative text' do
@@ -42,7 +42,7 @@ describe 'Senate' do
       let(:person) { subject.css('.media')[2] }
 
       it 'shows a generic picture' do
-        person.css('a img/@src').first.text.must_include('/f63fc610-ec4b-4ba0-bf02-b543c5fd8c8f/140x140.jpeg')
+        person.css('a img/@src').first.text.must_include('/f63fc610-ec4b-4ba0-bf02-b543c5fd8c8f/100x100.jpeg')
       end
     end
 
