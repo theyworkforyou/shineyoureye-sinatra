@@ -39,6 +39,12 @@ describe 'EP::PeopleByLegislature' do
     it 'can check if id does not exist in this legislature' do
       people.none?('i-do-not-exist').must_equal(true)
     end
+
+    it 'knows the start date of the current term' do
+      people.current_term_start_date.year.must_equal(2015)
+      people.current_term_start_date.month.must_equal(6)
+      people.current_term_start_date.day.must_equal(9)
+    end
   end
 
   describe 'extra mapit functionality' do

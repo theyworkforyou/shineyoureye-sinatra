@@ -26,6 +26,10 @@ module EP
       find_all.select { |person| person.area.id == mapit_id if person.area }
     end
 
+    def current_term_start_date
+      latest_term.start_date
+    end
+
     private
 
     attr_reader :legislature, :mapit, :baseurl
