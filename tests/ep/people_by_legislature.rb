@@ -45,6 +45,10 @@ describe 'EP::PeopleByLegislature' do
       people.current_term_start_date.month.must_equal(6)
       people.current_term_start_date.day.must_equal(9)
     end
+
+    it 'knows its legislature name' do
+      people.legislature_name.must_equal('House of Representatives')
+    end
   end
 
   describe 'extra mapit functionality' do

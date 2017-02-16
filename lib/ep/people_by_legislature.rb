@@ -30,6 +30,10 @@ module EP
       latest_term.start_date
     end
 
+    def legislature_name
+      legislature.name
+    end
+
     private
 
     attr_reader :legislature, :mapit, :baseurl
