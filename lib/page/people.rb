@@ -8,7 +8,7 @@ module Page
       @people_by_legislature = people_by_legislature
     end
 
-    def all
+    def people
       @all ||= people_by_legislature.find_all
     end
 
