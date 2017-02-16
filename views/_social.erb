@@ -1,19 +1,19 @@
 <div class="panel panel-default">
     <div class="panel-heading">
-        <h3 class="panel-title"><%= @page.person.name ? @page.person.name : 'Share this' %></h3>
+        <h3 class="panel-title"><%= @page.share_name %></h3>
     </div>
     <div class="panel-body">
 
         <ul class="social-actions">
             <li>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=<%= request.url %>&amp;t=<%= @page.person.name %>"
+                <a href="https://www.facebook.com/sharer/sharer.php?u=<%= request.url %>&amp;t=<%= @page.share_name %>"
                   target="_blank"
                   class="btn btn-block btn-facebook">Share on Facebook
                 </a>
             </li>
 
             <li>
-                <a href="https://twitter.com/share?via=<%= twitter_user %>&amp;text=<%= @page.person.name %>&amp;url=<%= request.url %>"
+                <a href="https://twitter.com/share?via=<%= twitter_user %>&amp;text=<%= @page.share_name %>&amp;url=<%= request.url %>"
                   target="_blank"
                   class="btn btn-block btn-twitter">Share on Twitter
                 </a>

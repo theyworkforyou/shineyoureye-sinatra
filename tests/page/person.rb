@@ -26,6 +26,10 @@ describe 'Page::Person' do
     page.person.name.must_equal('ABDUKADIR RAHIS')
   end
 
+  it 'has a social media share name' do
+    page.share_name.must_equal('ABDUKADIR RAHIS')
+  end
+
   it 'has an image' do
     page.person.image.must_include('/images/mps/546.jpg')
   end
