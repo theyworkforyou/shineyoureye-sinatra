@@ -52,5 +52,9 @@ describe 'EP::PeopleByLegislature' do
       people.find_single('b2a7f72a-9ecf-4263-83f1-cb0f8783053c').area.id
         .must_equal(1)
     end
+
+    it 'finds all people in a mapit area' do
+      people.find_all_by_mapit_area(1).count.must_equal(362)
+    end
   end
 end
