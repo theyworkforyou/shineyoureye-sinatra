@@ -3,7 +3,7 @@ require 'test_helper'
 require_relative '../../lib/mapit/place'
 
 describe 'Place' do
-  describe 'if area has a parent' do
+  describe 'when area has a parent' do
     let(:place) { Mapit::Place.new(
       place: area_with_parent,
       mapit_ids_to_pombola_slugs: mapit_ids_to_pombola_slugs,
@@ -29,9 +29,13 @@ describe 'Place' do
     it 'builds the parent url with the baseurl' do
       place.parent_url.must_equal('/baseurl/federal-capital-territory/')
     end
+
+    it 'knows its type' do
+      place.type_name.must_equal('Federal Constituency')
+    end
   end
 
-  describe 'if area has no parent' do
+  describe 'when area has no parent' do
     let(:place) { Mapit::Place.new(
       place: area_with_no_parent,
       mapit_ids_to_pombola_slugs: mapit_ids_to_pombola_slugs,
