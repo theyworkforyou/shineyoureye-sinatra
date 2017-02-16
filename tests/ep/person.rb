@@ -7,7 +7,7 @@ describe 'EP::Person' do
   let(:person) { EP::Person.new(
     person: person_plus_missing_data,
     term: latest_term,
-    mapit: FakeMapit.new,
+    mapit: FakeMapit.new(1),
     baseurl: '/baseurl/'
   ) }
 
@@ -84,7 +84,7 @@ describe 'EP::Person' do
   end
 
   it 'knows its mapit area id' do
-    person.area.id.must_equal('Mapit Area id')
+    person.area.id.must_equal(1)
   end
 
   it 'knows its mapit area name' do

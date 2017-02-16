@@ -6,7 +6,7 @@ require_relative '../../lib/page/person'
 describe 'Page::Person' do
   let(:people) { EP::PeopleByLegislature.new(
     legislature: nigeria_at_known_revision.legislature('Representatives'),
-    mapit: FakeMapit.new,
+    mapit: FakeMapit.new(1),
     baseurl: '/baseurl/'
   ) }
   let(:page) { Page::Person.new(
