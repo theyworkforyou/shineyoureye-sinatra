@@ -105,6 +105,10 @@ get '/jinja2-template.html' do
   erb :jinja2_contents
 end
 
+get '/scraper-start-page.html' do
+  erb :scraper_start_page, :layout => false
+end
+
 def representatives
   EP::PeopleByLegislature.new(legislature: house, mapit: mapit, baseurl: '/person/')
 end
