@@ -16,6 +16,14 @@ module EP
       proxy_image_variant('100x100')
     end
 
+    def medium_image_url
+      proxy_image_variant('250x250')
+    end
+
+    def original_image_url
+      proxy_image_variant('original')
+    end
+
     def twitter_display
       "@#{twitter}"
     end

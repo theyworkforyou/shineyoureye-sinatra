@@ -27,6 +27,14 @@ describe 'EP::Person' do
     person.thumbnail_image_url.must_include('100x100.jpeg')
   end
 
+  it 'has a URL for a medium-sized image' do
+    person.medium_image_url.must_include('250x250.jpeg')
+  end
+
+  it 'has a URL for the original-sized image' do
+    person.original_image_url.must_include('original.jpeg')
+  end
+
   it 'has a date of birth' do
     person.birth_date.must_equal('1000-01-10')
   end
