@@ -13,8 +13,7 @@ module EP
                              :email, :twitter, :facebook, :memberships
 
     def proxy_image
-      'https://theyworkforyou.github.io/shineyoureye-images' \
-      "/#{legislature.slug}/#{id}/100x100.jpeg"
+      proxy_image_variant('100x100')
     end
 
     def twitter_display
@@ -71,6 +70,18 @@ module EP
 
     def legislature
       term.legislature
+    end
+
+    def proxy_image_variant(size)
+      raise_unless_image_size_available(size)
+      'https://theyworkforyou.github.io/shineyoureye-images' \
+      "/#{legislature.slug}/#{id}/#{size}.jpeg"
+    end
+
+    def raise_unless_image_size_available(size)
+      unless ['original', '100x100', '250x250'].include?(size)
+        raise RuntimeException, "Size #{size} is not known to be available"
+      end
     end
   end
 end
