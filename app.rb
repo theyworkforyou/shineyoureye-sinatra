@@ -97,6 +97,12 @@ get '/person/:id/' do |id|
   erb :person
 end
 
+Search = Struct.new(:title)
+get '/search/' do
+  @page = Search.new('Search')
+  erb :search
+end
+
 get '/fonts/bootstrap/:filename' do |filename|
   send_file(File.join(Bootstrap.fonts_path, 'bootstrap', filename))
 end
