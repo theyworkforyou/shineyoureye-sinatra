@@ -10,69 +10,68 @@ module Mapit
     end
 
     def states
-      @states ||= areas('STA').map { |area| create_place(area) }
+      sta.values
     end
 
     def federal_constituencies
-      @constituencies ||= add_parent_data(areas('FED')).map { |area| create_place(area) }
+      fed.values
     end
 
     def senatorial_districts
-      @districts ||= add_parent_data(areas('SEN')).map { |area| create_place(area) }
+      sen.values
     end
 
     def area_from_ep_id(id)
-      mapit_id = ep_to_mapit_ids[id].to_i
-      all_areas.find { |area| area.id == mapit_id }
+      sta.merge(fed).merge(sen)[ep_to_mapit_ids[id]]
     end
 
     private
 
     attr_reader :mapit_url, :mapit_mappings, :baseurl
 
-    def all_areas
-      states + federal_constituencies + senatorial_districts
+    def sta
+      @sta ||= areas('STA').map { |id, area| [id, create_place(area)] }.to_h
+    end
+
+    def fed
+      @fed ||= areas('FED').map { |id, area| [id, create_place(area, parent(area))] }.to_h
+    end
+
+    def sen
+      @sen ||= areas('SEN').map { |id, area| [id, create_place(area, parent(area))] }.to_h
     end
 
     def areas(area_type)
       uri = URI(mapit_url + area_type)
-      JSON.parse(Net::HTTP.get(uri)).values
+      JSON.parse(Net::HTTP.get(uri))
     end
 
-    def add_parent_data(child_areas)
-      child_areas.map do |area|
-        parent = {
-          'parent_id' => parent_id(area),
-          'parent_name' => parent_name(area)
-        }
-        area.merge(parent)
-      end
+    def parent(area)
+      parent_id = child_to_sta_mapping[area['id'].to_s]
+      sta[parent_id]
     end
 
-    def parent_id(area)
-      area['parent_area'] || fed_to_sta_mapping[area['id'].to_s].to_i
-    end
-
-    def parent_name(area)
-      states.find { |state| state.id == parent_id(area) }.name
+    def pombola_slug(area)
+      mapit_ids_to_pombola_slugs[area['id'].to_s]
     end
 
     def mapit_ids_to_pombola_slugs
       mapit_mappings.mapit_ids_to_pombola_slugs
     end
 
-    def fed_to_sta_mapping
-      mapit_mappings.fed_to_sta_mapping
+    def child_to_sta_mapping
+      mapit_mappings.fed_to_sta_mapping.merge(mapit_mappings.sen_to_sta_mapping)
     end
 
     def ep_to_mapit_ids
       mapit_mappings.ep_to_mapit_ids
     end
 
-    def create_place(area)
+    def create_place(area, parent_area = nil)
       Mapit::Place.new(
         place: area,
-        mapit_ids_to_pombola_slugs: mapit_ids_to_pombola_slugs,
+        parent: parent_area,
+        pombola_slug: pombola_slug(area),
         baseurl: baseurl
       )
     end
