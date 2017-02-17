@@ -15,7 +15,7 @@ The approach of this project is similar to
 [`viewer-sinatra`](https://github.com/everypolitician/viewer-sinatra):
 
 * This is a Sinatra application that uses content produced by
-<http://[prose.io](http://prose.io/)> that is saved in
+[prose.io](http://prose.io/) that is saved in
 [`shineyoureye-prose`](https://github.com/theyworkforyou/shineyoureye-prose).
 * A script pulls this content, runs the app and scrapes it.
 * Then pushes the scraped pages to the `gh-pages` branch of another repo,
@@ -80,43 +80,36 @@ user introduced content, like blog posts, events, etc.
 
 ## Running the app
 
-Run the deploy script to copy the user-editable contents of the site (the ones
-  generated using [prose.io](http://prose.io/)) into a `prose` directory:
-
-```
-bin/deploy
-```
-
-### To initialise the project
-
-Type:
+### Initialise the project
 
 ```bash
 bundle install
-bundle exec rake
 ```
 
-### To run the app
+### Prepare data for the app
 
-Type:
+```
+bin/prepare-data
+```
+
+This will copy the user-editable contents of the site (the blog posts
+and static pages generated using [prose.io](http://prose.io/)) into a
+`prose` directory.
+
+### Run the app
 
 ```bash
 bundle exec rackup
 ```
 
-and go to <http://localhost:9292/>
+And go to <http://localhost:9292/>
 
 
 ## Tests
 
-Make sure that you have the `prose` folder in place:
+(Assuming you have installed the fixtures with `bin/prepare-data`, as above.)
 
-```bash
-ls prose
->  events  info  media  posts  summaries  _prose.yml
-```
-
-### Run all tests
+### Run the tests
 
 ```bash
 bundle exec rake test
