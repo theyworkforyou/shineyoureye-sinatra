@@ -1,11 +1,53 @@
 .site-header {
+    @include clearfix();
+
     background-color: $site-header-background-color;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
-.page--homepage {
-    .site-header {
-        display: none;
+//.page--homepage {
+//    .site-header {
+//        display: none;
+//    }
+//}
+
+.site-header__search {
+    font-size: 14px;
+
+    label {
+        font-weight: inherit;
+
+        & > * {
+            display: block;
+        }
+
+        & > span {
+            font-size: 12px;
+        }
+    }
+
+    p {
+        margin-bottom: 0;
+        max-width: 14em;
+    }
+
+    .btn {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    @media (min-width: $grid-float-breakpoint) {
+        float: right;
+
+        & > * {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        label {
+            text-align: right;
+            margin: 0 1em 0 0;
+        }
     }
 }
