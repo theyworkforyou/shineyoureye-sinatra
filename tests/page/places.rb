@@ -1,9 +1,19 @@
 # frozen_string_literal: true
 require 'test_helper'
+require_relative '../../lib/ep/people_by_legislature'
 require_relative '../../lib/page/places'
 
 describe 'Page::Places' do
-  let(:page) { Page::Places.new('Constituencies', ['foo', 'bar']) }
+  let(:people) { EP::PeopleByLegislature.new(
+    legislature: nigeria_at_known_revision.legislature('Representatives'),
+    mapit: FakeMapit.new(1),
+    baseurl: '/baseurl/'
+  ) }
+  let(:page) { Page::Places.new(
+    title: 'Constituencies',
+    places: ['irrelevant', 'irrelevant'],
+    people_by_legislature: people
+  ) }
 
   it 'has a title' do
     page.title.must_equal('Constituencies')
@@ -11,5 +21,13 @@ describe 'Page::Places' do
 
   it 'has all areas' do
     page.places.count.must_equal(2)
+  end
+
+  it 'knows the legislature name' do
+    page.legislature_name.must_equal('House of Representatives')
+  end
+
+  it 'knows the current term year' do
+    page.current_term_start_year.must_equal(2015)
   end
 end
