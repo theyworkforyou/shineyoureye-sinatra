@@ -76,6 +76,10 @@ describe 'Senatorial District Place Page' do
       .must_equal('THEODORE ORJI')
     end
 
+    it 'shows right area type name' do
+      person.css('.media-body p').first.text.must_include('Senatorial District')
+    end
+
     it 'links to the person area' do
       person.css('.listing__area @href').text
       .must_equal('/place/abia-central/')

@@ -53,6 +53,10 @@ describe 'List of Representatives' do
       person.css('.media-heading').text.must_equal('ABDUKADIR RAHIS')
     end
 
+    it 'shows right area type name' do
+      person.css('.media-body p').first.text.must_include('Federal Constituency')
+    end
+
     it 'links to area page' do
       person.css('.listing__area/@href').text.must_equal('/place/maiduguri/')
     end

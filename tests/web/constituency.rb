@@ -76,6 +76,10 @@ describe 'Federal Constituency Place Page' do
       .must_equal('SYLVESTER OGBAGA')
     end
 
+    it 'shows right area type name' do
+      person.css('.media-body p').first.text.must_include('Federal Constituency')
+    end
+
     it 'links to the person area' do
       person.css('.listing__area @href').text
       .must_equal('/place/abakalikiizzi/')
