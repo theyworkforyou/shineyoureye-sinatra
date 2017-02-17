@@ -84,6 +84,23 @@ describe 'Mappit::Wrapper' do
     end
   end
 
+  describe 'when getting a single area from a pombola slug' do
+    it 'finds a state' do
+      pombola_slug = 'abia'
+      mapit.area_from_pombola_slug(pombola_slug).name.must_equal('Abia')
+    end
+
+    it 'finds a federal constituency' do
+      pombola_slug = 'gwagwaladakuje'
+      mapit.area_from_pombola_slug(pombola_slug).name.must_equal('Abaji/Gwagwalada/Kwali/Kuje')
+    end
+
+    it 'finds a senatorial district' do
+      pombola_slug = 'abia-central'
+      mapit.area_from_pombola_slug(pombola_slug).name.must_equal('ABIA CENTRAL')
+    end
+  end
+
   class FakeMappings
     def fed_to_sta_mapping
       { '949' => '16', '1091' => '12', '963' => '9', '809' => '2' }
@@ -92,6 +109,10 @@ describe 'Mappit::Wrapper' do
     def mapit_ids_to_pombola_slugs
       { '949' => 'gwagwaladakuje', '16' => 'federal-capital-territory',
         '809' => 'abia-central', '2' => 'abia' }
+    end
+
+    def pombola_slugs_to_mapit_ids
+      { 'gwagwaladakuje' => '949', 'abia-central' => '809', 'abia' => '2' }
     end
 
     def ep_to_mapit_ids

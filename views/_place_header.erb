@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-sm-4 col-md-3">
+        <!-- <div class="profile-map">
+          <div id="map_canvas" width="300" height="300"></div>
+          <script type="text/javascript" charset="utf-8">
+            kml_urls_to_add = [
+              'http://www.shineyoureye.org/mapit/area/1091.kml?simplify_tolerance=0.001'
+            ];
+          </script>
+        </div> -->
+        <img class="person__image" src="/images/place-200x200.jpg" alt="default image for places">
+
+        <!-- <div class="constituency-party">
+          <h2>Key figure</h2>
+          <p><a href="/person/sylvester-o-ogbaga/">SYLVESTER O OGBAGA
+             <span>[Federal Representative]</span>
+           </a></p>
+        </div> -->
+
+        <%= erb :_social %>
+
+        <!-- <p><a href="/feedback/?url=http://www.shineyoureye.org/place/abakalikiizzi/"
+          class="feedback_link big-btn-text-red"
+          >Correct this page
+        </a></p> -->
+    </div>
+
+    <div class="col-sm-8 col-md-9">
+        <header class="person__key-info">
+          <h1 class="person__name"><%= @page.title %></h1>
+          <h2><%= @page.place.type_name %> (<%= @page.legislature_name %>)</h2>
+          <p>Current <%= @page.place.type_name %>: from <%= @page.current_term_start_date %> onwards</p>
+          <div class="object_menu">
+            <nav>
+              <ul class="nav nav-pills">
+                <li role="presentation"><a href="<%= @page.place.url %>">Overview</a></li>
+                <li role="presentation"><a href="<%= @page.people_url %>">People</a></li>
+                <!-- <li role="presentation"><a href="<%= @page.people_url %>">Places</a></li> -->
+              </ul>
+            </nav>
+          </div>
+        </header>

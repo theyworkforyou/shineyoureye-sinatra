@@ -15,6 +15,10 @@ module Mapit
       place['name']
     end
 
+    def type_name
+      place['type_name']
+    end
+
     def parent_name
       place['parent_name']
     end

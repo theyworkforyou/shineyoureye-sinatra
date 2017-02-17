@@ -11,11 +11,12 @@ require_relative 'lib/mapit/wrapper'
 require_relative 'lib/page/homepage'
 require_relative 'lib/page/info'
 require_relative 'lib/page/jinja2'
+require_relative 'lib/page/place'
 require_relative 'lib/page/places'
 require_relative 'lib/page/people'
 require_relative 'lib/page/person'
-require_relative 'lib/page/posts'
 require_relative 'lib/page/post'
+require_relative 'lib/page/posts'
 
 set :content_dir, File.join(__dir__, 'prose')
 set :datasource, ENV.fetch('DATASOURCE', 'https://github.com/everypolitician/everypolitician-data/raw/master/countries.json')
@@ -66,6 +67,18 @@ end
 get '/place/is/federal-constituency/' do
   @page = Page::Places.new('Federal Constituencies (Current)', mapit.federal_constituencies)
   erb :federal
+end
+
+get '/place/:slug/' do |slug|
+  place = mapit.area_from_pombola_slug(slug)
+  @page = Page::Place.new(place: place, people_by_legislature: representatives, people_path: '/people/')
+  erb :place_overview
+end
+
+get '/place/:slug/people/' do |slug|
+  place = mapit.area_from_pombola_slug(slug)
+  @page = Page::Place.new(place: place, people_by_legislature: representatives, people_path: '/people/')
+  erb :place_people
 end
 
 get '/position/representative/' do

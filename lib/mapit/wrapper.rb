@@ -21,9 +21,12 @@ module Mapit
       @districts ||= add_parent_data(areas('SEN')).map { |area| create_place(area) }
     end
 
+    def area_from_pombola_slug(slug)
+      find_single(pombola_slugs_to_mapit_ids[slug].to_i)
+    end
+
     def area_from_ep_id(id)
-      mapit_id = ep_to_mapit_ids[id].to_i
-      all_areas.find { |area| area.id == mapit_id }
+      find_single(ep_to_mapit_ids[id].to_i)
     end
 
     private
@@ -55,6 +58,14 @@ module Mapit
 
     def parent_name(area)
       states.find { |state| state.id == parent_id(area) }.name
+    end
+
+    def find_single(id)
+      all_areas.find { |area| area.id == id }
+    end
+
+    def pombola_slugs_to_mapit_ids
+      mapit_mappings.pombola_slugs_to_mapit_ids
     end
 
     def mapit_ids_to_pombola_slugs

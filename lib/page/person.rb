@@ -12,6 +12,10 @@ module Page
       person.name
     end
 
+    def share_name
+      person.name
+    end
+
     def summary
       ''
     end

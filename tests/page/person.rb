@@ -6,7 +6,7 @@ require_relative '../../lib/page/person'
 describe 'Page::Person' do
   let(:people) { EP::PeopleByLegislature.new(
     legislature: nigeria_at_known_revision.legislature('Representatives'),
-    mapit: FakeMapit.new,
+    mapit: FakeMapit.new(1),
     baseurl: '/baseurl/'
   ) }
   let(:page) { Page::Person.new(
@@ -24,6 +24,10 @@ describe 'Page::Person' do
 
   it 'has a name' do
     page.person.name.must_equal('ABDUKADIR RAHIS')
+  end
+
+  it 'has a social media share name' do
+    page.share_name.must_equal('ABDUKADIR RAHIS')
   end
 
   it 'has an image' do

@@ -1,6 +1,6 @@
 FakePlace = Struct.new(:id, :name, :url)
-class FakeMapit
+FakeMapit = Struct.new(:mapit_id) do
   def area_from_ep_id(id)
-    FakePlace.new('Mapit Area id', 'Mapit Area Name', '/place/pombola-slug/')
+    FakePlace.new(mapit_id, 'Mapit Area Name', '/place/pombola-slug/')
   end
 end

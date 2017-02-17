@@ -19,6 +19,6 @@ describe 'Page::People' do
   end
 
   it 'has a list of representatives' do
-    page.all.first.name.must_equal('ABDUKADIR RAHIS')
+    page.people.first.name.must_equal('ABDUKADIR RAHIS')
   end
 end
