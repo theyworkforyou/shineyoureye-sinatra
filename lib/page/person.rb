@@ -20,6 +20,10 @@ module Page
       person.email
     end
 
+    def wikipedia_url
+      person.wikipedia_url
+    end
+
     def summary
       @summary ||= Document::MarkdownWithFrontmatter.new(
         filename: summary_markdown_filename, baseurl: nil

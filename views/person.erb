@@ -22,6 +22,10 @@
             <h2>Email</h2>
             <p><a href="mailto:<%= @page.email %>"><%= @page.email %></a></p>
           <% end %>
+
+          <% if @page.wikipedia_url %>
+            <h2>Wikipedia</h2>
+            <p><a href="<%= @page.wikipedia_url %>"><%= @page.wikipedia_url %></a></p>
           <% end %>
 
         </header>

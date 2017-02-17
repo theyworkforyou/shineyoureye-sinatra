@@ -40,6 +40,11 @@ module EP
       facebook
     end
 
+    def wikipedia_url
+      l = person.links.find { |l| l[:note] == 'Wikipedia (en)' }
+      l ? l[:url] : nil
+    end
+
     def email_url
       "mailto:#{email}"
     end
