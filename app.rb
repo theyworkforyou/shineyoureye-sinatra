@@ -75,14 +75,28 @@ get '/place/is/federal-constituency/' do
 end
 
 get '/place/is/senatorial-district/' do
-  @page = Page::Places.new(title: 'Senatorial District (Current)', places: mapit.senatorial_districts, people_by_legislature: senators)
+  @page = Page::Places.new(title: 'Senatorial Districts (Current)', places: mapit.senatorial_districts, people_by_legislature: senators)
   erb :places
 end
 
 get '/place/:slug/' do |slug|
-  place = mapit.area_from_pombola_slug(slug)
-  @page = Page::Place.new(place: place, people_by_legislature: representatives, people_path: '/people/')
-  erb :place_overview
+  constituency = mapit.area_from_pombola_slug(slug)
+  pass if representatives.none_by_mapit_area?(constituency.id)
+  @page = Page::Place.new(place: constituency, people_by_legislature: representatives, people_path: '/people/')
+  erb :place
+end
+
+get '/place/:slug/' do |slug|
+  district = mapit.area_from_pombola_slug(slug)
+  pass if senators.none_by_mapit_area?(district.id)
+  @page = Page::Place.new(place: district, people_by_legislature: senators, people_path: '/people/')
+  erb :place
+end
+
+get '/place/:slug/' do |slug|
+  state = mapit.area_from_pombola_slug(slug)
+  @page = Page::Place.new(place: state, people_by_legislature: representatives, people_path: '/people/')
+  erb :place
 end
 
 get '/position/representative/' do

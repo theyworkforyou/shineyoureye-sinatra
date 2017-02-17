@@ -50,6 +50,10 @@ describe 'Senate' do
       person.css('.media-heading').text.must_equal('ABARIBE ENYNNAYA')
     end
 
+    it 'shows right area type name' do
+      person.css('.media-body p').first.text.must_include('Senatorial District')
+    end
+
     it 'links to area page' do
       person.css('.listing__area/@href').text.must_equal('/place/abia-south/')
     end

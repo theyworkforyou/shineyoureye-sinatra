@@ -26,6 +26,10 @@ module EP
       find_all.select { |person| person.area.id == mapit_id if person.area }
     end
 
+    def none_by_mapit_area?(mapit_id)
+      find_all_by_mapit_area(mapit_id).empty?
+    end
+
     def current_term_start_date
       latest_term.start_date
     end

@@ -12,7 +12,7 @@
             <a href="<%= person.url %>"><h3 class="media-heading"><%= person.name %></h3></a>
             <% if person.area %>
             <p>
-              Constituency:
+              <%= person.area.type_name %>:
               <a class="listing__area" href="<%= person.area.url %>"><%= person.area.name %></a>
             </p>
             <% end %>

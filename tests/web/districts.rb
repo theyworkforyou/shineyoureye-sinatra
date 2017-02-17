@@ -7,7 +7,7 @@ describe 'Senatorial Districts Page' do
   subject { Nokogiri::HTML(last_response.body) }
 
   it 'shows the title' do
-    subject.css('div h2').first.text.must_equal('Senatorial District (Current)')
+    subject.css('div h2').first.text.must_equal('Senatorial Districts (Current)')
   end
 
   it 'adds an active class to its nav item' do
