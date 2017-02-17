@@ -69,6 +69,11 @@ get '/place/is/federal-constituency/' do
   erb :places
 end
 
+get '/place/is/senatorial-district/' do
+  @page = Page::Places.new(title: 'Senatorial District (Current)', places: mapit.senatorial_districts, people_by_legislature: senators)
+  erb :places
+end
+
 get '/place/:slug/' do |slug|
   place = mapit.area_from_pombola_slug(slug)
   @page = Page::Place.new(place: place, people_by_legislature: representatives, people_path: '/people/')
