@@ -39,11 +39,13 @@
         <a href="<%= place.url %>"><h3 class="media-heading"><%= place.name %></h3></a>
         <% if place.is_child_area? %>
         <p class="parent-place">Parent place: <a href="<%= place.parent_url %>"><%= place.parent_name %></a></p>
+        <% end %>
         <div class="kind">
           <p><%= place.type_name %></p>
+          <% if place.is_child_area? %>
           <p><%= @page.legislature_name %> <%= @page.current_term_start_year %>-current</p>
+          <% end %>
         </div>
-        <% end %>
       </div>
     </li>
     <% end %>
