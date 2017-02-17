@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 require 'test_helper'
 require_relative '../../app'
-require_relative '../../tests/fixtures/mapit_data'
 
 describe 'Federal Constituencies Page' do
   before { get '/place/is/federal-constituency/' }
@@ -9,6 +8,10 @@ describe 'Federal Constituencies Page' do
 
   it 'shows the title' do
     subject.css('div h2').first.text.must_equal('Federal Constituencies (Current)')
+  end
+
+  it 'adds an active class to its nav item' do
+    subject.css('.active a/@href').text.must_equal('/place/is/federal-constituency/')
   end
 
   it 'shows all constituencies' do
@@ -30,5 +33,17 @@ describe 'Federal Constituencies Page' do
 
   it 'shows each parent place name' do
     subject.css('.parent-place a').last.text.must_equal('Borno')
+  end
+
+  it 'shows the place type' do
+    subject.css('.kind p').first.text.must_equal('Federal Constituency')
+  end
+
+  it 'shows the legislature name' do
+    subject.css('.kind p').last.text.must_include('House of Representatives')
+  end
+
+  it 'shows the current term start year' do
+    subject.css('.kind p').last.text.must_include('2015')
   end
 end

@@ -9,6 +9,16 @@ describe 'Mappit::Wrapper' do
     baseurl: '/baseurl/'
   ) }
 
+  describe 'when getting all areas' do
+    it 'gets all areas' do
+      mapit.all_areas.count.must_equal(12)
+    end
+
+    it 'gets all areas as place objects' do
+      mapit.all_areas.first.name.must_equal('Federal Capital Territory')
+    end
+  end
+
   describe 'when getting the states' do
     it 'gets a list of all the states' do
       mapit.states.count.must_equal(4)

@@ -9,6 +9,10 @@ module Mapit
       @baseurl = baseurl
     end
 
+    def all_areas
+      states + federal_constituencies + senatorial_districts
+    end
+
     def states
       @states ||= areas('STA').map { |area| create_place(area) }
     end
@@ -32,10 +36,6 @@ module Mapit
     private
 
     attr_reader :mapit_url, :mapit_mappings, :baseurl
-
-    def all_areas
-      states + federal_constituencies + senatorial_districts
-    end
 
     def areas(area_type)
       uri = URI(mapit_url + area_type)

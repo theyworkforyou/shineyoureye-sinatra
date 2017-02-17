@@ -33,6 +33,10 @@ describe 'Place' do
     it 'knows its type' do
       place.type_name.must_equal('Federal Constituency')
     end
+
+    it 'knows it is a child' do
+      place.is_child_area?.must_equal(true)
+    end
   end
 
   describe 'when area has no parent' do
@@ -48,6 +52,10 @@ describe 'Place' do
 
     it 'returns nil for the parent url' do
       assert_nil(place.parent_url)
+    end
+
+    it 'knows it is not a child' do
+      place.is_child_area?.must_equal(false)
     end
   end
 

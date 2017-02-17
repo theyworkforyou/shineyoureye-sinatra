@@ -64,9 +64,19 @@ get '/info/:slug' do |slug|
   erb :info
 end
 
+get '/place/is/state/' do
+  @page = Page::Places.new(title: 'States', places: mapit.states, people_by_legislature: governors)
+  erb :places
+end
+
 get '/place/is/federal-constituency/' do
-  @page = Page::Places.new('Federal Constituencies (Current)', mapit.federal_constituencies)
-  erb :federal
+  @page = Page::Places.new(title: 'Federal Constituencies (Current)', places: mapit.federal_constituencies, people_by_legislature: representatives)
+  erb :places
+end
+
+get '/place/is/senatorial-district/' do
+  @page = Page::Places.new(title: 'Senatorial District (Current)', places: mapit.senatorial_districts, people_by_legislature: senators)
+  erb :places
 end
 
 get '/place/:slug/' do |slug|
@@ -120,6 +130,10 @@ end
 
 get '/scraper-start-page.html' do
   erb :scraper_start_page, :layout => false
+end
+
+def governors
+  nil
 end
 
 def representatives

@@ -31,6 +31,10 @@ module Mapit
       build_url(place['parent_id']) if place['parent_id']
     end
 
+    def is_child_area?
+      !place['parent_name'].nil?
+    end
+
     private
 
     attr_reader :place, :mapit_ids_to_pombola_slugs, :baseurl
