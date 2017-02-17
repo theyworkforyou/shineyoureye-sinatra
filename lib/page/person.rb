@@ -16,6 +16,10 @@ module Page
       person.name
     end
 
+    def email
+      person.email
+    end
+
     def summary
       @summary ||= Document::MarkdownWithFrontmatter.new(
         filename: summary_markdown_filename, baseurl: nil

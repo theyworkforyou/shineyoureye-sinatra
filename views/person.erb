@@ -18,6 +18,12 @@
           <% end %>
             <h2>Party</h2>
             <p class="person__party"><a href="<%= @page.person.party_url %>"><%= @page.person.party_name %></a></p>
+          <% if @page.email %>
+            <h2>Email</h2>
+            <p><a href="mailto:<%= @page.email %>"><%= @page.email %></a></p>
+          <% end %>
+          <% end %>
+
         </header>
 
       <% if @page.summary %>
