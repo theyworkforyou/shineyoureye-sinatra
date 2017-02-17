@@ -17,6 +17,10 @@ module Page
     end
 
     def summary
+      @summary ||= Document::MarkdownWithFrontmatter.new(
+        filename: summary_markdown_filename, baseurl: nil
+      ).body
+    rescue Errno::ENOENT
       ''
     end
 
@@ -30,6 +34,15 @@ module Page
 
     def education
       [] # sort by start date reverse
+    end
+
+    private
+
+    def summary_markdown_filename
+      leafname = "#{person.id}.md"
+      File.join(
+        File.dirname(__FILE__), '..', '..', 'prose', 'summaries', leafname
+      )
     end
   end
 end
