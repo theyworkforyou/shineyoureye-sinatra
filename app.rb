@@ -66,7 +66,7 @@ end
 
 get '/place/is/federal-constituency/' do
   @page = Page::Places.new(title: 'Federal Constituencies (Current)', places: mapit.federal_constituencies, people_by_legislature: representatives)
-  erb :federal
+  erb :places
 end
 
 get '/place/:slug/' do |slug|
