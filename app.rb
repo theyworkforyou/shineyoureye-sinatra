@@ -75,12 +75,6 @@ get '/place/:slug/' do |slug|
   erb :place_overview
 end
 
-get '/place/:slug/people/' do |slug|
-  place = mapit.area_from_pombola_slug(slug)
-  @page = Page::Place.new(place: place, people_by_legislature: representatives, people_path: '/people/')
-  erb :place_people
-end
-
 get '/position/representative/' do
   @page = Page::People.new(title: 'Federal Representative', people_by_legislature: representatives)
   erb :people

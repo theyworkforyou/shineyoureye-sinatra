@@ -36,8 +36,6 @@ describe 'Place Page' do
     it 'displays the place type name' do
       subject.css('.person__key-info h2').first.text
         .must_include('Federal Constituency')
-      subject.css('.person__key-info p').first.text
-        .must_include('Federal Constituency')
     end
 
     it 'displays the house name' do
@@ -45,31 +43,12 @@ describe 'Place Page' do
         .must_include('House of Representatives')
     end
 
-    it 'displays the current term start date' do
-      subject.css('.person__key-info p').first.text
-        .must_include('June 9, 2015')
-    end
-
-    describe 'navigation pills' do
-      it 'links to the current page' do
-        subject.css('.nav-pills a/@href').first.text.must_equal('/place/abakalikiizzi/')
-      end
-
-      it 'links to the people associated with that place' do
-        subject.css('.nav-pills a/@href').last.text.must_equal('/place/abakalikiizzi/people/')
-      end
-
-      # it 'links to the places associated with that place' do
-      #   subject.css('.nav-pills a/@href').last.text.must_equal('/place/abakalikiizzi/places/')
-      # end
-    end
-
     it 'displays all people associated with the place' do
-      subject.css('.media').count.must_equal(1)
+      subject.css('.media-list--people .media').count.must_equal(1)
     end
 
     describe 'person item' do
-      let(:person) { subject.css('.media').first }
+      let(:person) { subject.css('.media-list--people .media').first }
 
       it 'links to the person page' do
         person.css('.media-left a/@href').text
