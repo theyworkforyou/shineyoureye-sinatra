@@ -75,7 +75,7 @@ get '/place/is/federal-constituency/' do
 end
 
 get '/place/is/senatorial-district/' do
-  @page = Page::Places.new(title: 'Senatorial District (Current)', places: mapit.senatorial_districts, people_by_legislature: senators)
+  @page = Page::Places.new(title: 'Senatorial Districts (Current)', places: mapit.senatorial_districts, people_by_legislature: senators)
   erb :places
 end
 
