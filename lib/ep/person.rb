@@ -41,8 +41,8 @@ module EP
     end
 
     def wikipedia_url
-      l = person.links.find { |l| l[:note] == 'Wikipedia (en)' }
-      l ? l[:url] : nil
+      link = person.links.find { |l| l[:note] == 'Wikipedia (en)' }
+      link ? link[:url] : nil
     end
 
     def email_url
