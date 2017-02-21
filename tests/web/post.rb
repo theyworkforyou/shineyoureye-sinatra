@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 require 'test_helper'
-require_relative '../../app'
 
 describe 'Post Page' do
   before { get '/blog/citizens-solutions-end-terrorism' }

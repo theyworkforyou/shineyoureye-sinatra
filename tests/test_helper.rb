@@ -17,6 +17,11 @@ module Minitest
     include Rack::Test::Methods
 
     def app
+      # Some resources are requested from MapIt's API at the start of
+      # app.rb, so we only require app.rb here, after the stubbing of
+      # requests has been set up - otherwise it will try to make real
+      # requests to the API when running tests.
+      require_relative '../app'
       Sinatra::Application
     end
 

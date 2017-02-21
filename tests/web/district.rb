@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 require 'test_helper'
-require_relative '../../app'
 
 describe 'Senatorial District Place Page' do
   before { get '/place/abia-central/' }

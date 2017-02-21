@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'bootstrap-sass'
 require 'everypolitician'
 require 'sinatra'
@@ -23,6 +24,41 @@ set :datasource, ENV.fetch('DATASOURCE', 'https://github.com/everypolitician/eve
 set :index, EveryPolitician::Index.new(index_url: settings.datasource)
 set :mapit_url, 'http://nigeria.mapit.mysociety.org/areas/'
 set :twitter_user, 'NGShineyoureye'
+
+# Create a wrapper for the mappings between the various IDs we have
+# to use for areas / places.
+mapit_mappings = Mapit::Mappings.new(
+  fed_to_sta_ids_mapping_filename:
+    './mapit/fed_to_sta_area_ids_mapping.csv',
+  pombola_slugs_to_mapit_ids_filename:
+    './mapit/pombola_place_slugs_to_mapit.csv',
+  mapit_to_ep_areas_fed_filename:
+    './mapit/mapit_to_ep_area_ids_mapping_FED.csv',
+  mapit_to_ep_areas_sen_filename:
+    './mapit/mapit_to_ep_area_ids_mapping_SEN.csv'
+)
+
+# Create a wrapper that caches MapIt and EveryPolitician area data:
+mapit = Mapit::Wrapper.new(
+  mapit_url: settings.mapit_url,
+  mapit_mappings: mapit_mappings,
+  baseurl: '/place/'
+)
+
+# Assemble data on the members of the various legislatures we support:
+governors = nil
+representatives = EP::PeopleByLegislature.new(
+  legislature: settings.index.country('Nigeria').legislature('Representatives'),
+  mapit: mapit,
+  baseurl: '/person/'
+)
+senators = EP::PeopleByLegislature.new(
+  legislature: settings.index.country('Nigeria').legislature('Senate'),
+  mapit: mapit,
+  baseurl: '/person/'
+)
+
+# Now we define the routes:
 
 get '/' do
   posts_finder = Document::Finder.new(pattern: posts_pattern, baseurl: '/blog/')
@@ -144,20 +180,4 @@ end
 
 get '/scraper-start-page.html' do
   erb :scraper_start_page, :layout => false
-end
-
-def governors
-  nil
-end
-
-def representatives
-  EP::PeopleByLegislature.new(legislature: house, mapit: mapit, baseurl: '/person/')
-end
-
-def senators
-  EP::PeopleByLegislature.new(legislature: senate, mapit: mapit, baseurl: '/person/')
-end
-
-def mapit
-  Mapit::Wrapper.new(mapit_url: mapit_url, mapit_mappings: mappings, baseurl: '/place/')
 end
