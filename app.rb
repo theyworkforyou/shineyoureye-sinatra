@@ -135,6 +135,10 @@ get '/javascripts/bootstrap/:filename' do |filename|
   send_file(File.join(Bootstrap.javascripts_path, filename))
 end
 
+get '/robots.txt' do
+  "User-agent: *\nDisallow:\n"
+end
+
 # This route just serves up an empty page that can be used as a Jinja2
 # template by services we integrate with this site.
 get '/jinja2-template.html' do
