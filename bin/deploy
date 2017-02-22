@@ -5,6 +5,11 @@ set -e
 # Make sure we're in the right directory:
 cd "$(dirname ${BASH_SOURCE[0]})"/..
 
+if [ "$1" = "--only-build" ]
+then
+    ONLY_BUILD=1
+fi
+
 BUILD_DIR="build/$(date +'%Y-%m-%dT%H-%M-%S')"
 mkdir -p "$BUILD_DIR"
 ln -snf "${BUILD_DIR##*/}" build/current
@@ -91,7 +96,10 @@ crawl_site
 
 stop_sinatra
 
-deploy_site
+if [ "$ONLY_BUILD" != 1 ]
+then
+    deploy_site
+fi
 
 if [ WGET_EXIT_CODE != 0 ]
 then
