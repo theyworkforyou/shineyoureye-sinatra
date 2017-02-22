@@ -103,7 +103,7 @@ fi
 
 if [ "$WGET_EXIT_CODE" != 0 ]
 then
-    echo "The errrors were:"
+    echo "The errors were:"
     egrep -B 3 ' ERROR [0-9]{3}' "$BUILD_DIR/wget.log"
     exit $WGET_EXIT_CODE
 fi
