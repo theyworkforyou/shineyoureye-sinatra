@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 require 'test_helper'
-require_relative '../../app'
 
 describe 'Search Page' do
   before { get '/search/' }

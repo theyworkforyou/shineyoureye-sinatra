@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 require 'test_helper'
-require_relative '../../app'
 
 describe 'Person Page' do
   before { get '/person/b2a7f72a-9ecf-4263-83f1-cb0f8783053c/' }

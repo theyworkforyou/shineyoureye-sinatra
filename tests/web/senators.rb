@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 require 'test_helper'
-require_relative '../../app'
 
 describe 'Senate' do
   before { get '/position/senator/' }

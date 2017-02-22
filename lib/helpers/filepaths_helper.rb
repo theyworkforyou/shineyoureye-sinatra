@@ -2,15 +2,6 @@
 require_relative '../mapit/mappings'
 
 module FilepathsHelper
-  def mappings
-    Mapit::Mappings.new(
-      fed_to_sta_ids_mapping_filename: './mapit/fed_to_sta_area_ids_mapping.csv',
-      pombola_slugs_to_mapit_ids_filename: './mapit/pombola_place_slugs_to_mapit.csv',
-      mapit_to_ep_areas_fed_filename: './mapit/mapit_to_ep_area_ids_mapping_FED.csv',
-      mapit_to_ep_areas_sen_filename: './mapit/mapit_to_ep_area_ids_mapping_SEN.csv'
-    )
-  end
-
   def content_dir
     settings.content_dir
   end
