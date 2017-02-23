@@ -24,6 +24,10 @@ module Document
       filenames.map { |filename| create_document(filename) }
     end
 
+    def find_featured
+      find_all.select(&:featured?)
+    end
+
     def multiple?
       filenames.size > 1
     end

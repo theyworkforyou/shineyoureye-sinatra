@@ -4,7 +4,7 @@ require_relative '../../lib/document/finder'
 
 describe 'Document::Finder' do
   let(:filename) { 'file-name' }
-  let(:finder) { Document::Finder.new(pattern: 'file-name.md', baseurl: '/path/') }
+  let(:finder) { Document::Finder.new(pattern: "#{filename}.md", baseurl: '/path/') }
 
   it 'finds a single document' do
     Dir.stub :glob, [filename] do
@@ -73,6 +73,28 @@ summary'
       it 'returns a duck type' do
         Dir.stub :glob, [] do
           finder.find_or_empty.body.strip.must_equal('')
+        end
+      end
+    end
+
+    describe 'when searching featured documents' do
+      let(:contents) do
+        '---
+featured: true
+---
+# Foo'
+      end
+      let(:files) { [new_tempfile(contents, 'foo'), new_tempfile(contents, 'bar')] }
+
+      it 'gets all' do
+        Dir.stub :glob, files do
+          finder.find_featured.count.must_equal(2)
+        end
+      end
+
+      it 'gets all as documents' do
+        Dir.stub :glob, files do
+          finder.find_featured.first.body.strip.must_equal('<h1>Foo</h1>')
         end
       end
     end
