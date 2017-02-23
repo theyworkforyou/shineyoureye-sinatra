@@ -52,12 +52,14 @@ eventdate: '2000-01-01 15:00 +0000'
   end
 
   describe 'when there is no slug field' do
-    it 'builds the url from the filename' do
-      document = Document::MarkdownWithFrontmatter.new(
-        filename: new_tempfile('', '2000-20-02-file-name'),
-        baseurl: '/somepath/'
-      )
-      document.url.must_include('/somepath/file-name')
+    it 'builds the slug from the filename' do
+      document = basic_document(new_tempfile('', '2000-20-02-file-name'))
+      document.slug.must_include('file-name')
+    end
+
+    it 'builds the slug if no date in filename' do
+      document = basic_document(new_tempfile('', '1234-5678'))
+      document.slug.must_include('1234-5678')
     end
   end
 

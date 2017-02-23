@@ -39,6 +39,11 @@ module Document
       markdown.as_html
     end
 
+    def slug
+      slug = frontmatter.slug
+      slug.empty? ? rawname : slug
+    end
+
     private
 
     DATE_PATTERN = /^(?<date>\d{4}-\d{2}-\d{2})/
@@ -54,11 +59,6 @@ module Document
 
     def rawname
       basename.gsub(/#{DATE_PATTERN}-/, '').gsub(extname, '')
-    end
-
-    def slug
-      slug = frontmatter.slug
-      slug.empty? ? rawname : slug
     end
 
     def filecontents
