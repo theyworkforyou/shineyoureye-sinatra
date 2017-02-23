@@ -28,12 +28,12 @@ module Page
 
     def future_events
       events.select do |event|
-        raise_no_event_date_error(event)
+        raise_error_if_no_event_date(event)
         event.event_date >= Date.today
       end
     end
 
-    def raise_no_event_date_error(event)
+    def raise_error_if_no_event_date(event)
       raise "No event date for #{event.title}" unless event.event_date
     end
   end
