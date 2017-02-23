@@ -68,7 +68,11 @@ senators = EP::PeopleByLegislature.new(
 get '/' do
   posts_finder = Document::Finder.new(pattern: posts_pattern, baseurl: '/blog/')
   events_finder = Document::Finder.new(pattern: events_pattern, baseurl: '/info/events/')
-  @page = Page::Homepage.new(posts: posts_finder.find_all, events: events_finder.find_all)
+  @page = Page::Homepage.new(
+    posts: posts_finder.find_all,
+    events: events_finder.find_all,
+    featured_people: []
+  )
   erb :homepage
 end
 

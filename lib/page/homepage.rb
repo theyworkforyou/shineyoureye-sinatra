@@ -1,9 +1,12 @@
 # frozen_string_literal: true
 module Page
   class Homepage
-    def initialize(posts:, events:)
+    attr_reader :featured_people
+
+    def initialize(posts:, events:, featured_people:)
       @posts = posts
       @events = events
+      @featured_people = featured_people
     end
 
     def featured_posts
