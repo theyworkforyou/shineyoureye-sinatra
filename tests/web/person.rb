@@ -59,6 +59,18 @@ describe 'Person Page' do
     subject.css('.person__party a').first.text.must_equal('All Progressives Congress')
   end
 
+  describe 'when person has an email' do
+    before { get '/person/9de46243-685e-4902-81d4-b3e01faa93d5/' }
+
+    it 'links to the email' do
+      subject.css('.person__email a/@href').first.text.must_equal('mailto:adamu.abdullahi@gmail.com')
+    end
+
+    it 'displays the email' do
+      subject.css('.person__email a').first.text.must_equal('adamu.abdullahi@gmail.com')
+    end
+  end
+
   describe 'summary section' do
     before { get '/person/0baa5a03-b1e0-4e66-b3f9-daee8bacb87d/' }
 

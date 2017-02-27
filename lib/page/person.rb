@@ -17,10 +17,6 @@ module Page
       person.name
     end
 
-    def email
-      person.email
-    end
-
     def wikipedia_url
       person.wikipedia_url
     end
