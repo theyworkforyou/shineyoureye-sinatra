@@ -12,11 +12,11 @@ describe 'EP::PeopleByLegislature' do
     ) }
 
     it 'has a list of all the people' do
-      people.find_all.count.must_equal(362)
+      people.find_all.count.must_equal(364)
     end
 
     it 'has people from the current term' do
-      people.find_all.first.memberships.first.legislative_period.id.must_equal('term/2015')
+      people.find_all.first.memberships.first.legislative_period.id.must_equal('term/8')
     end
 
     it 'sorts people by name' do
@@ -64,7 +64,7 @@ describe 'EP::PeopleByLegislature' do
     end
 
     it 'finds all people in a mapit area' do
-      people.find_all_by_mapit_area(1).count.must_equal(362)
+      people.find_all_by_mapit_area(1).count.must_equal(364)
     end
 
     it 'can check if no people in this legislature for that mapit area' do

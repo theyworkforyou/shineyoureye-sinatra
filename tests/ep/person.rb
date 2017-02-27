@@ -20,7 +20,7 @@ describe 'EP::Person' do
   end
 
   it 'has an image' do
-    person.image.must_equal('http://www.nass.gov.ng/images/mps/avatar.jpg')
+    person.image.must_equal('http://www.nass.gov.ng/images/mps/616.jpg')
   end
 
   it 'has a thumbnail image' do
@@ -93,7 +93,7 @@ describe 'EP::Person' do
   end
 
   it 'has the person membership for the last term' do
-    person.current_memberships.first[:legislative_period_id].must_equal('term/2015')
+    person.current_memberships.first[:legislative_period_id].must_equal('term/8')
   end
 
   it 'knows its mapit area id' do

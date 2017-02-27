@@ -11,7 +11,7 @@ describe 'Senate' do
 
   describe 'person list' do
     it 'lists all senators' do
-      subject.css('.media').count.must_equal(108)
+      subject.css('.media').count.must_equal(112)
     end
   end
 
