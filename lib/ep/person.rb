@@ -9,7 +9,7 @@ module EP
     end
 
     extend Forwardable
-    def_delegators :@person, :id, :name, :image, :birth_date, :phone,
+    def_delegators :@person, :id, :name, :birth_date, :phone,
                              :email, :twitter, :facebook, :memberships
 
     def thumbnail_image_url

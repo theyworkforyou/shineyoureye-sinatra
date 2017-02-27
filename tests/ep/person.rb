@@ -14,10 +14,6 @@ describe 'EP::Person' do
     person.name.must_equal('ABDULLAHI ADAMU')
   end
 
-  it 'has an image' do
-    person.image.must_equal('http://www.nass.gov.ng/images/mps/852.jpg')
-  end
-
   it 'has a thumbnail image' do
     person.thumbnail_image_url.must_include('100x100.jpeg')
   end

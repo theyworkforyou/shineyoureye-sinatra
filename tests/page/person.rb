@@ -27,10 +27,6 @@ describe 'Page::Person' do
     page.share_name.must_equal('ABDUKADIR RAHIS')
   end
 
-  it 'has an image' do
-    page.person.image.must_include('/images/mps/546.jpg')
-  end
-
   it 'has a summary' do
     page.summary.must_equal('<p>foo</p>')
   end
