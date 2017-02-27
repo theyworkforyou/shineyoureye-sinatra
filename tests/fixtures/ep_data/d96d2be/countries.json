@@ -1,0 +1,54 @@
+[{
+  "name": "Nigeria",
+  "country": "Nigeria",
+  "code": "NG",
+  "slug": "Nigeria",
+  "legislatures": [
+    {
+      "name": "House of Representatives",
+      "slug": "Representatives",
+      "sources_directory": "data/Nigeria/Representatives/sources",
+      "popolo": "data/Nigeria/Representatives/ep-popolo-v1.0.json",
+      "popolo_url": "https://cdn.rawgit.com/everypolitician/everypolitician-data/1e00ca8/data/Nigeria/Representatives/ep-popolo-v1.0.json",
+      "names": "data/Nigeria/Representatives/names.csv",
+      "lastmod": "1487264818",
+      "person_count": 364,
+      "sha": "1e00ca8737d7866ddd55f54c758e50d606e66659",
+      "legislative_periods": [
+        {
+          "id": "term/8",
+          "name": "8th National Assembly",
+          "start_date": "2015-06-09",
+          "slug": "8",
+          "csv": "data/Nigeria/Representatives/term-8.csv",
+          "csv_url": "https://cdn.rawgit.com/everypolitician/everypolitician-data/1e00ca8737d7866ddd55f54c758e50d606e66659/data/Nigeria/Representatives/term-8.csv"
+        }
+      ],
+      "statement_count": 8581,
+      "type": "lower house"
+    },
+    {
+      "name": "Senate",
+      "slug": "Senate",
+      "sources_directory": "data/Nigeria/Senate/sources",
+      "popolo": "data/Nigeria/Senate/ep-popolo-v1.0.json",
+      "popolo_url": "https://cdn.rawgit.com/everypolitician/everypolitician-data/99f866a/data/Nigeria/Senate/ep-popolo-v1.0.json",
+      "names": "data/Nigeria/Senate/names.csv",
+      "lastmod": "1488052281",
+      "person_count": 112,
+      "sha": "99f866ab58d49b9731feeec41c6b38d680de73c5",
+      "legislative_periods": [
+        {
+          "id": "term/8",
+          "name": "8th National Assembly",
+          "start_date": "2015-06-09",
+          "slug": "8",
+          "csv": "data/Nigeria/Senate/term-8.csv",
+          "csv_url": "https://cdn.rawgit.com/everypolitician/everypolitician-data/99f866ab58d49b9731feeec41c6b38d680de73c5/data/Nigeria/Senate/term-8.csv"
+        }
+      ],
+      "statement_count": 3884,
+      "type": "upper house"
+    }
+  ]
+}]
