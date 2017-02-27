@@ -28,14 +28,15 @@ set :twitter_user, 'NGShineyoureye'
 # Create a wrapper for the mappings between the various IDs we have
 # to use for areas / places.
 mapit_mappings = Mapit::Mappings.new(
-  fed_to_sta_ids_mapping_filename:
-    './mapit/fed_to_sta_area_ids_mapping.csv',
+  parent_mapping_filenames: [
+    'mapit/fed_to_sta_area_ids_mapping.csv'
+  ],
   pombola_slugs_to_mapit_ids_filename:
-    './mapit/pombola_place_slugs_to_mapit.csv',
-  mapit_to_ep_areas_fed_filename:
-    './mapit/mapit_to_ep_area_ids_mapping_FED.csv',
-  mapit_to_ep_areas_sen_filename:
-    './mapit/mapit_to_ep_area_ids_mapping_SEN.csv'
+    'mapit/pombola_place_slugs_to_mapit.csv',
+  mapit_to_ep_areas_filenames: [
+    'mapit/mapit_to_ep_area_ids_mapping_FED.csv',
+    'mapit/mapit_to_ep_area_ids_mapping_SEN.csv',
+  ]
 )
 
 # Create a wrapper that caches MapIt and EveryPolitician area data:

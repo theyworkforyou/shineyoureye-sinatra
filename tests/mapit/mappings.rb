@@ -8,22 +8,21 @@ describe 'Mapit::Mappings' do
 1091,12'
     ) }
     let(:mappings) { Mapit::Mappings.new(
-      fed_to_sta_ids_mapping_filename: fed_to_sta,
+      parent_mapping_filenames: [fed_to_sta],
       pombola_slugs_to_mapit_ids_filename: 'irrelevant',
-      mapit_to_ep_areas_fed_filename: 'irrelevant',
-      mapit_to_ep_areas_sen_filename: 'irrelevant'
+      mapit_to_ep_areas_filenames: ['irrelevant', 'irrelevant']
     ) }
 
     it 'can map all constituencies to their state' do
-      mappings.fed_to_sta_mapping.count.must_equal(2)
+      mappings.child_to_parent.count.must_equal(2)
     end
 
     it 'returns FED to STA mappings as a hash' do
-      mappings.fed_to_sta_mapping['949'].must_equal('16')
+      mappings.child_to_parent['949'].must_equal('16')
     end
 
     it 'returns nil if FED id does not exist' do
-      assert_nil(mappings.fed_to_sta_mapping['0'])
+      assert_nil(mappings.child_to_parent['0'])
     end
   end
 
@@ -34,10 +33,9 @@ abakalikiizzi,1091,FED
 ebonyi,12,STA'
     ) }
     let(:mappings) { Mapit::Mappings.new(
-      fed_to_sta_ids_mapping_filename: 'irrelevant',
+      parent_mapping_filenames: ['irrelevant'],
       pombola_slugs_to_mapit_ids_filename: pombola_to_mapit,
-      mapit_to_ep_areas_fed_filename: 'irrelevant',
-      mapit_to_ep_areas_sen_filename: 'irrelevant'
+      mapit_to_ep_areas_filenames: ['irrelevant', 'irrelevant']
     ) }
 
     it 'can map all mapit ids to their Pombola slug' do
@@ -73,10 +71,9 @@ ebonyi,12,STA'
 836,"area/delta_central,_delta_state"'
     ) }
     let(:mappings) { Mapit::Mappings.new(
-      fed_to_sta_ids_mapping_filename: 'irrelevant',
+      parent_mapping_filenames: ['irrelevant'],
       pombola_slugs_to_mapit_ids_filename: 'irrelevant',
-      mapit_to_ep_areas_fed_filename: mapit_to_ep_fed,
-      mapit_to_ep_areas_sen_filename: mapit_to_ep_sen
+      mapit_to_ep_areas_filenames: [mapit_to_ep_fed, mapit_to_ep_sen]
     ) }
 
     it 'can map all ep areas to their mapit area' do

@@ -112,7 +112,7 @@ describe 'Mappit::Wrapper' do
   end
 
   class FakeMappings
-    def fed_to_sta_mapping
+    def child_to_parent
       { '949' => '16', '1091' => '12', '963' => '9', '809' => '2' }
     end
 

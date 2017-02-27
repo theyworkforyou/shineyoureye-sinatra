@@ -53,7 +53,7 @@ module Mapit
     end
 
     def parent_id(area)
-      area['parent_area'] || fed_to_sta_mapping[area['id'].to_s].to_i
+      area['parent_area'] || child_to_parent[area['id'].to_s].to_i
     end
 
     def parent_name(area)
@@ -72,8 +72,8 @@ module Mapit
       mapit_mappings.mapit_ids_to_pombola_slugs
     end
 
-    def fed_to_sta_mapping
-      mapit_mappings.fed_to_sta_mapping
+    def child_to_parent
+      mapit_mappings.child_to_parent
     end
 
     def ep_to_mapit_ids
