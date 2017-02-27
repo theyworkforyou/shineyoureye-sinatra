@@ -29,10 +29,6 @@ module Page
       people_by_legislature.legislature_name
     end
 
-    def current_term_start_date
-      people_by_legislature.current_term_start_date.strftime("%B %-d, %Y")
-    end
-
     def people_url
       (place.url + people_path).gsub('//', '/')
     end

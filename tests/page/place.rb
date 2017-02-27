@@ -57,10 +57,6 @@ describe 'Page::Place' do
     page.legislature_name.must_equal('House of Representatives')
   end
 
-  it 'formats the current period of the legislature' do
-    page.current_term_start_date.must_equal('June 9, 2015')
-  end
-
   it 'builds the url for the people associated with that place' do
     page.people_url.must_equal('/baseurl/gwagwaladakuje/people/')
   end

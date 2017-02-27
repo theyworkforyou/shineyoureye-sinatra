@@ -35,6 +35,19 @@ describe 'EP::Person' do
     person.original_image_url.must_include('original.jpeg')
   end
 
+  it 'uses the legislature slug in the proxy image url' do
+    person.thumbnail_image_url.must_include('Representatives')
+  end
+
+  it 'uses the person id in the proxy image url' do
+    person.thumbnail_image_url.must_include('003e0736-add0-4997-9444-94fac606bb95')
+  end
+
+  it 'throws an exception if the image size does not exist' do
+    error = assert_raises(RuntimeError) { person.send(:proxy_image_variant, :tiny) }
+    error.message.must_include('tiny')
+  end
+
   it 'has a date of birth' do
     person.birth_date.must_equal('1000-01-10')
   end
