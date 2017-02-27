@@ -62,9 +62,9 @@ module Minitest
     DATASOURCE = 'https://github.com/everypolitician/everypolitician-data/raw/master/countries.json'
     REPO_URL = 'https://cdn.rawgit.com/everypolitician/everypolitician-data'
     DISK_PATH = 'tests/fixtures/ep_data'
-    COUNTRIES_COMMIT = '62e6190'
-    REPS_COMMIT = 'd5a1eb7'
-    SENATE_COMMIT = '9b61497'
+    COUNTRIES_COMMIT = 'd96d2be'
+    REPS_COMMIT = '1e00ca8'
+    SENATE_COMMIT = '99f866a'
 
     def get_from_disk(url, json_file)
       stub_request(:get, url).to_return(body: json_file)
