@@ -14,10 +14,6 @@ describe 'EP::Person' do
     person.name.must_equal('ABDULLAHI ADAMU')
   end
 
-  it 'has an image' do
-    person.image.must_equal('http://www.nass.gov.ng/images/mps/852.jpg')
-  end
-
   it 'has a thumbnail image' do
     person.thumbnail_image_url.must_include('100x100.jpeg')
   end
@@ -41,6 +37,11 @@ describe 'EP::Person' do
   it 'throws an exception if the image size does not exist' do
     error = assert_raises(RuntimeError) { person.send(:proxy_image_variant, :tiny) }
     error.message.must_include('tiny')
+  end
+
+  it 'returns nil if there is no image' do
+    person = ep_person('78a5c98d-8bbb-45ec-8faa-937d77a93191')
+    assert_nil(person.send(:proxy_image_variant, 'irrelevant'))
   end
 
   it 'has a date of birth' do
@@ -195,11 +196,15 @@ describe 'EP::Person' do
 
   def ep_person(id)
     EP::Person.new(
-      person: latest_term.people.find { |person| person.id == id },
+      person: person_by_id(id),
       term: latest_term,
       mapit: FakeMapit.new(1),
       baseurl: '/baseurl/'
     )
+  end
+
+  def person_by_id(id)
+    latest_term.people.find { |person| person.id == id }
   end
 
   def latest_term

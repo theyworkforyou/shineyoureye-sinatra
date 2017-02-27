@@ -28,16 +28,12 @@ describe 'Person Page' do
     end
   end
 
-  describe 'when subject does not have an image' do
-    before { get '/person/764fce72-c12a-42ad-ba84-d899f81f7a77/' }
+  describe 'when person does not have an image' do
+    before { get '/person/78a5c98d-8bbb-45ec-8faa-937d77a93191/' }
 
     it 'shows a picture anyway (empty avatar)' do
-      # n.b. at the moment we just have a copy of the avatar image;
-      # once
-      # https://github.com/everypolitician-scrapers/nigeria-national-assembly/issues/10
-      # is dealt with we can make this test more helpful.
       subject.css('img.person__image/@src').first.text
-        .must_equal('https://theyworkforyou.github.io/shineyoureye-images/Representatives/764fce72-c12a-42ad-ba84-d899f81f7a77/250x250.jpeg')
+        .must_equal('/images/person-250x250.png')
     end
   end
 

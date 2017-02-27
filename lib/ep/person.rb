@@ -9,7 +9,7 @@ module EP
     end
 
     extend Forwardable
-    def_delegators :@person, :id, :name, :image, :birth_date, :phone,
+    def_delegators :@person, :id, :name, :birth_date, :image, :phone,
                              :email, :twitter, :facebook, :memberships
 
     def thumbnail_image_url
@@ -92,6 +92,7 @@ module EP
     end
 
     def proxy_image_variant(size)
+      return if image.nil?
       raise_unless_image_size_available(size)
       'https://theyworkforyou.github.io/shineyoureye-images' \
       "/#{legislature.slug}/#{id}/#{ALLOWED_IMAGE_SIZES[size]}.jpeg"
