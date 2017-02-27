@@ -29,18 +29,6 @@ module Page
       summary_doc.body
     end
 
-    def executive_positions
-      [] # sort by start date reverse
-    end
-
-    def job_history
-      [] # sort by start date reverse
-    end
-
-    def education
-      [] # sort by start date reverse
-    end
-
     private
 
     attr_reader :summary_doc
