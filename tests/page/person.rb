@@ -59,17 +59,5 @@ describe 'Page::Person' do
     page.summary.must_equal('<p>foo</p>')
   end
 
-  it 'knows the executive positions' do
-    page.executive_positions.must_equal([])
-  end
-
-  it 'knows the job history' do
-    page.job_history.must_equal([])
-  end
-
-  it 'knows the education' do
-    page.education.must_equal([])
-  end
-
   FakeSummary = Struct.new(:body)
 end

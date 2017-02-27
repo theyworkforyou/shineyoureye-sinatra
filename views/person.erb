@@ -39,50 +39,8 @@
             </div>
         </section>
 
-      <% if @page.executive_positions.size > 0 %>
-        <section class="person__section">
-            <h2>Experience</h2>
-            <ul class="unstyled-list">
-              <% @page.executive_positions.each do |position| %>
-              <li>
-                <a href="<%= position.executive_positions_by_role.url %>" class="experience__item">
-                  <%= 'include person_experience_item.html item=position' %>
-                </a>
-              </li>
-              <% end %>
-            </ul>
-        </section>
-      <% end %>
-
-      <% if @page.job_history.size > 0 %>
-        <section class="person__section">
-            <h2>Job history</h2>
-            <ul class="unstyled-list">
-              <% @page.job_history.each do |job| %>
-              <li class="experience__item">
-                <%= 'include person_experience_item.html item=job' %>
-              </li>
-              <% end %>
-            </ul>
-        </section>
-      <% end %>
-
-      <% if @page.education.size > 0 %>
-        <section class="person__section">
-            <h2>Education</h2>
-            <ul class="unstyled-list">
-              <% @page.education.each do |education| %>
-              <li>
-                <%= 'include person_experience_item.html item=education' %>
-              </li>
-              <% end %>
-            </ul>
-        </section>
-      <% end %>
-
         <section class="person__section">
           <%= erb :_comments %>
         </section>
-
     </div>
 </div>
