@@ -9,8 +9,6 @@ describe 'Mapit::Mappings' do
     ) }
     let(:mappings) { Mapit::Mappings.new(
       parent_mapping_filenames: [fed_to_sta],
-      pombola_slugs_to_mapit_ids_filename: 'irrelevant',
-      mapit_to_ep_areas_filenames: ['irrelevant', 'irrelevant']
     ) }
 
     it 'can map all constituencies to their state' do
@@ -24,6 +22,10 @@ describe 'Mapit::Mappings' do
     it 'returns nil if FED id does not exist' do
       assert_nil(mappings.child_to_parent['0'])
     end
+
+    it 'returns an empty map if no Pombola <-> MapIt mapping is supplied' do
+      assert_empty(mappings.pombola_slugs_to_mapit_ids)
+    end
   end
 
   describe 'Mapit ids to Pombola slugs' do
@@ -33,9 +35,7 @@ abakalikiizzi,1091,FED
 ebonyi,12,STA'
     ) }
     let(:mappings) { Mapit::Mappings.new(
-      parent_mapping_filenames: ['irrelevant'],
       pombola_slugs_to_mapit_ids_filename: pombola_to_mapit,
-      mapit_to_ep_areas_filenames: ['irrelevant', 'irrelevant']
     ) }
 
     it 'can map all mapit ids to their Pombola slug' do
@@ -71,8 +71,6 @@ ebonyi,12,STA'
 836,"area/delta_central,_delta_state"'
     ) }
     let(:mappings) { Mapit::Mappings.new(
-      parent_mapping_filenames: ['irrelevant'],
-      pombola_slugs_to_mapit_ids_filename: 'irrelevant',
       mapit_to_ep_areas_filenames: [mapit_to_ep_fed, mapit_to_ep_sen]
     ) }
 

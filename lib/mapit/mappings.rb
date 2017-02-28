@@ -4,9 +4,9 @@ require 'csv'
 module Mapit
   class Mappings
     def initialize(
-      parent_mapping_filenames:,
-      pombola_slugs_to_mapit_ids_filename:,
-      mapit_to_ep_areas_filenames:
+      parent_mapping_filenames: [],
+      pombola_slugs_to_mapit_ids_filename: nil,
+      mapit_to_ep_areas_filenames: []
     )
       @parent_mapping_filenames = parent_mapping_filenames
       @pombola_slugs_to_mapit_ids_filename = pombola_slugs_to_mapit_ids_filename
@@ -46,6 +46,7 @@ module Mapit
     end
 
     def pombola_slugs_to_mapit_ids_data
+      return [] unless pombola_slugs_to_mapit_ids_filename
       read(pombola_slugs_to_mapit_ids_filename)
     end
 
