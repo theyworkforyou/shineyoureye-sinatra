@@ -17,10 +17,6 @@ module Page
       person.name
     end
 
-    def wikipedia_url
-      person.wikipedia_url
-    end
-
     def summary
       summary_doc.body
     end
