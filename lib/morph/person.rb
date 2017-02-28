@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+require_relative '../person_proxy_images'
+
 module Morph
   class Person
     def initialize(person:, mapit:, baseurl:)
@@ -6,6 +8,8 @@ module Morph
       @mapit = mapit
       @baseurl = baseurl
     end
+
+    include PersonProxyImages
 
     def id
       person['id']
@@ -33,18 +37,6 @@ module Morph
 
     def facebook
       first(person['facebook_url']) if person['facebook_url']
-    end
-
-    def thumbnail_image_url
-      proxy_image_variant(:thumbnail)
-    end
-
-    def medium_image_url
-      proxy_image_variant(:medium)
-    end
-
-    def original_image_url
-      proxy_image_variant(:original)
     end
 
     def twitter_display
@@ -95,26 +87,13 @@ module Morph
 
     attr_reader :person, :mapit, :baseurl
 
-    ALLOWED_IMAGE_SIZES = {
-      thumbnail: '100x100',
-      medium: '250x250',
-      original: 'original'
-    }
-
-    def proxy_image_variant(size)
-      raise_unless_image_size_available(size)
-      'https://raw.githubusercontent.com/theyworkforyou/shineyoureye-images' \
-      "/gh-pages/Governors/#{id}/#{ALLOWED_IMAGE_SIZES[size]}.jpeg"
-    end
-
-    def raise_unless_image_size_available(size)
-      unless ALLOWED_IMAGE_SIZES.has_key?(size)
-        raise "Size #{size} is not known to be available"
-      end
-    end
-
     def first(values)
       values.split(';').first
+    end
+
+    def proxy_image_url
+      'https://raw.githubusercontent.com/theyworkforyou/shineyoureye-images' \
+      "/gh-pages/Governors/#{id}/"
     end
   end
 end
