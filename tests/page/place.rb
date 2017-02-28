@@ -50,7 +50,7 @@ describe 'Page::Place' do
   end
 
   it 'has all the people for that place' do
-    page.people.count.must_equal(362)
+    page.people.count.must_equal(364)
   end
 
   it 'knows the legislature name' do
