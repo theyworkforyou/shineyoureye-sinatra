@@ -1,11 +1,7 @@
 <div class="row">
     <div class="col-sm-4 col-md-3">
-      <% if @page.person.medium_image_url %>
         <img class="person__image" src="<%= @page.person.medium_image_url %>" alt="<%= @page.person.name %>">
-      <% else %>
-        <img class="person__image" src="/images/person-250x250.png" alt="<%= @page.person.name %>">
-      <% end %>
-      <%= erb :_social %>
+        <%= erb :_social %>
     </div>
 
     <div class="col-sm-8 col-md-9">

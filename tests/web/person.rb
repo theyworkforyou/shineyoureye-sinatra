@@ -28,19 +28,6 @@ describe 'Person Page' do
     end
   end
 
-  describe 'when subject does not have an image' do
-    before { get '/person/764fce72-c12a-42ad-ba84-d899f81f7a77/' }
-
-    it 'shows a picture anyway (empty avatar)' do
-      # n.b. at the moment we just have a copy of the avatar image;
-      # once
-      # https://github.com/everypolitician-scrapers/nigeria-national-assembly/issues/10
-      # is dealt with we can make this test more helpful.
-      subject.css('img.person__image/@src').first.text
-        .must_equal('https://theyworkforyou.github.io/shineyoureye-images/Representatives/764fce72-c12a-42ad-ba84-d899f81f7a77/250x250.jpeg')
-    end
-  end
-
   describe 'when person has an area' do
     it 'links to the area page' do
       subject.css('.person__area a/@href').first.text.must_equal('/place/maiduguri/')
