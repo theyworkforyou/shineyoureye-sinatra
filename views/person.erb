@@ -6,22 +6,46 @@
 
     <div class="col-sm-8 col-md-9">
         <header class="person__key-info">
+
             <h2><%= @page.position %></h2>
             <h1 class="person__name"><%= @page.person.name %></h1>
+
           <% if @page.person.area %>
             <h2>Constituency</h2>
             <p class="person__area"><a href="<%= @page.person.area.url %>"><%= @page.person.area.name %></a></p>
           <% end %>
+
             <h2>Party</h2>
             <p class="person__party"><a href="<%= @page.person.party_url %>"><%= @page.person.party_name %></a></p>
+
+          <% if @page.person.birth_date %>
+            <h2>Birth date</h2>
+            <p class="person__birthdate"><%= @page.person.birth_date %></p>
+          <% end %>
+
+          <% if @page.person.phone %>
+            <h2>Phone</h2>
+            <p class="person__phone"><%= @page.person.phone %></p>
+          <% end %>
+
+          <% if @page.person.twitter %>
+            <h2>Twitter</h2>
+            <p class="person__twitter"><a href="<%= @page.person.twitter_url %>"><%= @page.person.twitter_display %></a></p>
+          <% end %>
+
+          <% if @page.person.facebook %>
+            <h2>Facebook</h2>
+            <p class="person__facebook"><a href="<%= @page.person.facebook_url %>"><%= @page.person.facebook_display %></a></p>
+          <% end %>
+
           <% if @page.person.email %>
             <h2>Email</h2>
             <p class="person__email"><a href="<%= @page.person.email_url %>"><%= @page.person.email %></a></p>
           <% end %>
 
-          <% if @page.wikipedia_url %>
+          <% if @page.person.wikipedia_url %>
             <h2>Wikipedia</h2>
-            <p><a href="<%= @page.wikipedia_url %>"><%= @page.wikipedia_url %></a></p>
+            <p class="person__wikipedia"><a href="<%= @page.person.wikipedia_url %>"><%= @page.person.wikipedia_url %></a></p>
           <% end %>
 
         </header>

@@ -48,6 +48,38 @@ describe 'Page::Person' do
       page.person.respond_to?(:party_name).must_equal(true)
     end
 
+    it 'has a birth date' do
+      page.person.respond_to?(:birth_date).must_equal(true)
+    end
+
+    it 'has a phone' do
+      page.person.respond_to?(:phone).must_equal(true)
+    end
+
+    it 'has a Twitter' do
+      page.person.respond_to?(:twitter).must_equal(true)
+    end
+
+    it 'has a Twitter url' do
+      page.person.respond_to?(:twitter_url).must_equal(true)
+    end
+
+    it 'has a Twitter display' do
+      page.person.respond_to?(:twitter_display).must_equal(true)
+    end
+
+    it 'has a Facebook' do
+      page.person.respond_to?(:facebook).must_equal(true)
+    end
+
+    it 'has a Facebook url' do
+      page.person.respond_to?(:facebook_url).must_equal(true)
+    end
+
+    it 'has a Facebook display' do
+      page.person.respond_to?(:facebook_display).must_equal(true)
+    end
+
     it 'has an email' do
       page.person.respond_to?(:email).must_equal(true)
     end
