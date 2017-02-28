@@ -13,7 +13,7 @@ describe 'Person Page' do
     subject.css('.person__key-info h2').first.text.must_equal('Representative')
   end
 
-  it 'shows the person name' do
+  it 'displays the person name' do
     subject.css('h1.person__name').text.must_equal('ABDUKADIR RAHIS')
   end
 
@@ -55,15 +55,69 @@ describe 'Person Page' do
     subject.css('.person__party a').first.text.must_equal('All Progressives Congress')
   end
 
+  describe 'when person has a birth date' do
+    before { get '/person/007d807d-2f2d-4a2e-829f-1fd5109bb7de/' }
+
+    it 'displays it' do
+      subject.css('.person__birthdate').first.text.must_equal('1970-01-02')
+    end
+  end
+
+  describe 'when person has a phone' do
+    it 'displays it' do
+      subject.css('.person__phone').first.text.must_equal('08083999997')
+    end
+  end
+
+  describe 'when person has a Twitter' do
+    before { get '/person/13721811-4357-419c-8ca7-8f1170b36f1a/'}
+
+    it 'links to it' do
+      subject.css('.person__twitter a/@href').first.text
+        .must_equal('https://twitter.com/benmurraybruce')
+    end
+
+    it 'displays it' do
+      subject.css('.person__twitter a').first.text.must_equal('@benmurraybruce')
+    end
+  end
+
+  # describe 'when person has a Facebook' do
+  #   it 'links to it' do
+  #     subject.css('.person__facebook a/@href').first.text
+  #       .must_equal('https://facebook.com/benmurraybruce')
+  #   end
+  #
+  #   it 'displays it' do
+  #     subject.css('.person__facebook a').first.text.must_equal('@benmurraybruce')
+  #   end
+  # end
+
   describe 'when person has an email' do
     before { get '/person/9de46243-685e-4902-81d4-b3e01faa93d5/' }
 
     it 'links to the email' do
-      subject.css('.person__email a/@href').first.text.must_equal('mailto:adamu.abdullahi@gmail.com')
+      subject.css('.person__email a/@href').first.text
+        .must_equal('mailto:adamu.abdullahi@gmail.com')
     end
 
     it 'displays the email' do
-      subject.css('.person__email a').first.text.must_equal('adamu.abdullahi@gmail.com')
+      subject.css('.person__email a').first.text
+        .must_equal('adamu.abdullahi@gmail.com')
+    end
+  end
+
+  describe 'when person has wikipedia url' do
+    before { get '/person/0577f346-e883-4e1d-94eb-e3050d5c15f1/'}
+
+    it 'links to it' do
+      subject.css('.person__wikipedia a/@href').first.text
+        .must_equal('https://en.wikipedia.org/wiki/Fatimat_Olufunke_Raji-Rasaki')
+    end
+
+    it 'displays it' do
+      subject.css('.person__wikipedia a').first.text
+        .must_equal('https://en.wikipedia.org/wiki/Fatimat_Olufunke_Raji-Rasaki')
     end
   end
 
