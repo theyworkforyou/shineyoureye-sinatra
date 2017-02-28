@@ -29,7 +29,8 @@ set :twitter_user, 'NGShineyoureye'
 # to use for areas / places.
 mapit_mappings = Mapit::Mappings.new(
   parent_mapping_filenames: [
-    'mapit/fed_to_sta_area_ids_mapping.csv'
+    'mapit/fed_to_sta_area_ids_mapping.csv',
+    'mapit/sen_to_sta_area_ids_mapping.csv',
   ],
   pombola_slugs_to_mapit_ids_filename:
     'mapit/pombola_place_slugs_to_mapit.csv',
