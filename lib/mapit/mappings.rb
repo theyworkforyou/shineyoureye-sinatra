@@ -20,11 +20,11 @@ module Mapit
     end
 
     def pombola_slugs_to_mapit_ids
-      @pombola_slugs_to_mapit_ids ||= pombola_slugs_to_mapit_ids_ignore_last.to_h
+      @pombola_slugs_to_mapit_ids ||= pombola_slugs_to_mapit_ids_ignore_type.to_h
     end
 
     def mapit_ids_to_pombola_slugs
-      @mapit_ids_to_pombola_slugs ||= reverse(pombola_slugs_to_mapit_ids_ignore_last).to_h
+      @mapit_ids_to_pombola_slugs ||= reverse(pombola_slugs_to_mapit_ids_ignore_type).to_h
     end
 
     def ep_to_mapit_ids
@@ -39,7 +39,7 @@ module Mapit
     # The Pombola to Mapit CSV file contains three columns:
     # Pombola slug, Mapit id, area type (FED, SEN or STA)
     # We don't need the last column for this mapping
-    def pombola_slugs_to_mapit_ids_ignore_last
+    def pombola_slugs_to_mapit_ids_ignore_type
       @pombola_to_mapit ||= read(pombola_slugs_to_mapit_ids_filename).map { |row| row[0..-2] }
     end
 
