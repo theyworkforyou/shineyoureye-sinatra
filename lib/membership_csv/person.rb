@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 require_relative '../person_proxy_images'
+require_relative '../person_social'
 
 module MembershipCSV
   class Person
@@ -10,6 +11,7 @@ module MembershipCSV
     end
 
     include PersonProxyImages
+    include PersonSocial
 
     def id
       person['id']
@@ -43,28 +45,8 @@ module MembershipCSV
       first(person['facebook_url']) if person['facebook_url']
     end
 
-    def twitter_display
-      "@#{twitter}" if twitter
-    end
-
-    def twitter_url
-      "https://twitter.com/#{twitter}" if twitter
-    end
-
-    def facebook_display
-      facebook.split('/').last if facebook
-    end
-
-    def facebook_url
-      facebook
-    end
-
     def wikipedia_url
       nil
-    end
-
-    def email_url
-      "mailto:#{email}" if email
     end
 
     def area

@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 require_relative '../person_proxy_images'
+require_relative '../person_social'
 
 module EP
   class Person
@@ -15,30 +16,11 @@ module EP
                              :email, :twitter, :facebook, :memberships
 
     include PersonProxyImages
-
-    def twitter_display
-      "@#{twitter}" if twitter
-    end
-
-    def twitter_url
-      "https://twitter.com/#{twitter}" if twitter
-    end
-
-    def facebook_display
-      facebook.split('/').last if facebook
-    end
-
-    def facebook_url
-      facebook
-    end
+    include PersonSocial
 
     def wikipedia_url
       link = person.links.find { |l| l[:note] == 'Wikipedia (en)' }
       link[:url] if link
-    end
-
-    def email_url
-      "mailto:#{email}" if email
     end
 
     def current_memberships
