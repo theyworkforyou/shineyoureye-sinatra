@@ -25,15 +25,15 @@ module EP
     end
 
     def twitter_display
-      "@#{twitter}"
+      "@#{twitter}" if twitter
     end
 
     def twitter_url
-      "https://twitter.com/#{twitter}"
+      "https://twitter.com/#{twitter}" if twitter
     end
 
     def facebook_display
-      facebook.to_s.split('/').last
+      facebook.split('/').last if facebook
     end
 
     def facebook_url
@@ -42,11 +42,11 @@ module EP
 
     def wikipedia_url
       link = person.links.find { |l| l[:note] == 'Wikipedia (en)' }
-      link ? link[:url] : nil
+      link[:url] if link
     end
 
     def email_url
-      "mailto:#{email}"
+      "mailto:#{email}" if email
     end
 
     def current_memberships
