@@ -6,8 +6,8 @@ require_relative '../../lib/page/person'
 describe 'Page::Person' do
   let(:people) { EP::PeopleByLegislature.new(
     legislature: nigeria_at_known_revision.legislature('Representatives'),
-    mapit: FakeMapit.new(1),
-    baseurl: '/baseurl/'
+    mapit: 'irrelevant',
+    baseurl: 'irrelevant'
   ) }
   let(:page) { Page::Person.new(
     person: people.find_single('b2a7f72a-9ecf-4263-83f1-cb0f8783053c'),
@@ -23,10 +23,6 @@ describe 'Page::Person' do
     page.title.must_equal('ABDUKADIR RAHIS')
   end
 
-  it 'has a name' do
-    page.person.name.must_equal('ABDUKADIR RAHIS')
-  end
-
   it 'has a social media share name' do
     page.share_name.must_equal('ABDUKADIR RAHIS')
   end
@@ -35,28 +31,42 @@ describe 'Page::Person' do
     page.person.image.must_include('/images/mps/546.jpg')
   end
 
-  it 'has a thumbnail image' do
-    page.person.thumbnail_image_url.must_include('/b2a7f72a-9ecf-4263-83f1-cb0f8783053c/100x100.jpeg')
-  end
-
-  it 'knows the area url' do
-    page.person.area.url.must_equal('/place/pombola-slug/')
-  end
-
-  it 'knows the area name' do
-    page.person.area.name.must_equal('Mapit Area Name')
-  end
-
-  it 'knows the party url' do
-    page.person.party_url.must_equal('/organisation/apc/')
-  end
-
-  it 'knows the party name' do
-    page.person.party_name.must_equal('All Progressives Congress')
-  end
-
   it 'has a summary' do
     page.summary.must_equal('<p>foo</p>')
+  end
+
+  describe 'person' do
+    it 'has a url to a medium-sized image' do
+      page.person.respond_to?(:medium_image_url).must_equal(true)
+    end
+
+    it 'has a name' do
+      page.person.respond_to?(:name).must_equal(true)
+    end
+
+    it 'has an area' do
+      page.person.respond_to?(:area).must_equal(true)
+    end
+
+    it 'has a party name' do
+      page.person.respond_to?(:party_name).must_equal(true)
+    end
+
+    it 'has an email' do
+      page.person.respond_to?(:email).must_equal(true)
+    end
+
+    it 'has an email url' do
+      page.person.respond_to?(:email_url).must_equal(true)
+    end
+
+    it 'has a wikipedia url' do
+      page.person.respond_to?(:wikipedia_url).must_equal(true)
+    end
+
+    it 'has an id' do
+      page.person.respond_to?(:id).must_equal(true)
+    end
   end
 
   FakeSummary = Struct.new(:body)
