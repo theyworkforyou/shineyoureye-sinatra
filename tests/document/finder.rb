@@ -4,7 +4,7 @@ require_relative '../../lib/document/finder'
 
 describe 'Document::Finder' do
   let(:filename) { 'file-name' }
-  let(:finder) { Document::Finder.new(pattern: './file-name.md', baseurl: '/path/') }
+  let(:finder) { Document::Finder.new(pattern: 'file-name.md', baseurl: '/path/') }
 
   it 'finds a single document' do
     Dir.stub :glob, [filename] do
