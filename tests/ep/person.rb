@@ -14,51 +14,51 @@ describe 'EP::Person' do
     person.name.must_equal('ABDULLAHI ADAMU')
   end
 
-  it 'has a thumbnail image' do
-    person.thumbnail_image_url.must_include('100x100.jpeg')
+  describe 'images' do
+    it 'has a thumbnail image' do
+      person.thumbnail_image_url.must_include('100x100.jpeg')
+    end
+
+    it 'has a URL for a medium-sized image' do
+      person.medium_image_url.must_include('250x250.jpeg')
+    end
+
+    it 'has a URL for the original-sized image' do
+      person.original_image_url.must_include('original.jpeg')
+    end
+
+    it 'uses the legislature slug in the proxy image url' do
+      person.thumbnail_image_url.must_include('Senate')
+    end
+
+    it 'uses the person id in the proxy image url' do
+      person.thumbnail_image_url.must_include('9de46243-685e-4902-81d4-b3e01faa93d5')
+    end
+
+    it 'throws an exception if the image size does not exist' do
+      error = assert_raises(RuntimeError) { person.send(:proxy_image_variant, :tiny) }
+      error.message.must_include('tiny')
+    end
   end
 
-  it 'has a URL for a medium-sized image' do
-    person.medium_image_url.must_include('250x250.jpeg')
-  end
+  describe 'date of birth' do
+    it 'has a date of birth' do
+      person.birth_date.must_equal('1946-07-23')
+    end
 
-  it 'has a URL for the original-sized image' do
-    person.original_image_url.must_include('original.jpeg')
-  end
-
-  it 'uses the legislature slug in the proxy image url' do
-    person.thumbnail_image_url.must_include('Senate')
-  end
-
-  it 'uses the person id in the proxy image url' do
-    person.thumbnail_image_url.must_include('9de46243-685e-4902-81d4-b3e01faa93d5')
-  end
-
-  it 'throws an exception if the image size does not exist' do
-    error = assert_raises(RuntimeError) { person.send(:proxy_image_variant, :tiny) }
-    error.message.must_include('tiny')
-  end
-
-  it 'has a date of birth' do
-    person.birth_date.must_equal('1946-07-23')
-  end
-
-  describe 'when it does not have a date of birth' do
-    let(:person) { ep_person('0b536a2c-2bc9-46a0-8d40-0deb9241cb31') }
-
-    it 'returns nil' do
+    it 'returns nil when no date of birth' do
+      person = ep_person('0b536a2c-2bc9-46a0-8d40-0deb9241cb31')
       assert_nil(person.birth_date)
     end
   end
 
-  it 'has a phone' do
-    person.phone.must_equal('08065186557')
-  end
+  describe 'phone' do
+    it 'has a phone' do
+      person.phone.must_equal('08065186557')
+    end
 
-  describe 'when it does not have a phone' do
-    let(:person) { ep_person('0de9e40b-52bc-459f-978b-2aea514eec79') }
-
-    it 'returns nil' do
+    it 'returns nil when no phone' do
+      person = ep_person('0de9e40b-52bc-459f-978b-2aea514eec79')
       assert_nil(person.phone)
     end
   end
@@ -167,10 +167,6 @@ describe 'EP::Person' do
 
   it 'knows its mapit area id' do
     person.area.id.must_equal(1)
-  end
-
-  it 'knows its mapit area name' do
-    person.area.name.must_equal('Mapit Area Name')
   end
 
   it 'knows its party id' do
