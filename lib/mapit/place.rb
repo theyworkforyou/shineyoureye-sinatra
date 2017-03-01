@@ -1,43 +1,43 @@
 # frozen_string_literal: true
 module Mapit
   class Place
-    def initialize(place:, mapit_ids_to_pombola_slugs:, baseurl:)
-      @place = place
+    def initialize(mapit_area_data:, mapit_ids_to_pombola_slugs:, baseurl:)
+      @mapit_area_data = mapit_area_data
       @mapit_ids_to_pombola_slugs = mapit_ids_to_pombola_slugs
       @baseurl = baseurl
     end
 
     def id
-      place['id']
+      mapit_area_data['id']
     end
 
     def name
-      place['name']
+      mapit_area_data['name']
     end
 
     def type_name
-      place['type_name']
+      mapit_area_data['type_name']
     end
 
     def parent_name
-      place['parent_name']
+      mapit_area_data['parent_name']
     end
 
     def url
-      build_url(place['id']) if place['id']
+      build_url(mapit_area_data['id']) if mapit_area_data['id']
     end
 
     def parent_url
-      build_url(place['parent_id']) if place['parent_id']
+      build_url(mapit_area_data['parent_id']) if mapit_area_data['parent_id']
     end
 
     def is_child_area?
-      !place['parent_name'].nil?
+      !mapit_area_data['parent_name'].nil?
     end
 
     private
 
-    attr_reader :place, :mapit_ids_to_pombola_slugs, :baseurl
+    attr_reader :mapit_area_data, :mapit_ids_to_pombola_slugs, :baseurl
 
     def build_url(id)
       "#{baseurl}#{pombola_slug(id)}/"

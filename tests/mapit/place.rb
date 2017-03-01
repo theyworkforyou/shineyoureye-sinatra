@@ -5,7 +5,7 @@ require_relative '../../lib/mapit/place'
 describe 'Place' do
   describe 'when area has a parent' do
     let(:place) { Mapit::Place.new(
-      place: area_with_parent,
+      mapit_area_data: area_with_parent,
       mapit_ids_to_pombola_slugs: mapit_ids_to_pombola_slugs,
       baseurl: '/baseurl/'
     ) }
@@ -41,7 +41,7 @@ describe 'Place' do
 
   describe 'when area has no parent' do
     let(:place) { Mapit::Place.new(
-      place: area_with_no_parent,
+      mapit_area_data: area_with_no_parent,
       mapit_ids_to_pombola_slugs: mapit_ids_to_pombola_slugs,
       baseurl: '/baseurl/'
     ) }

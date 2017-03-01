@@ -6,7 +6,7 @@ require_relative '../../lib/page/place'
 
 describe 'Page::Place' do
   let(:place) { Mapit::Place.new(
-    place: area_with_parent,
+    mapit_area_data: area_with_parent,
     mapit_ids_to_pombola_slugs: mapit_ids_to_pombola_slugs,
     baseurl: '/baseurl/'
   ) }

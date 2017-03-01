@@ -82,7 +82,7 @@ module Mapit
 
     def create_place(area)
       Mapit::Place.new(
-        place: area,
+        mapit_area_data: area,
         mapit_ids_to_pombola_slugs: mapit_ids_to_pombola_slugs,
         baseurl: baseurl
       )
