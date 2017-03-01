@@ -102,6 +102,24 @@ describe 'Mappit::Wrapper' do
     end
   end
 
+  describe 'when getting an area from a Mapit state name' do
+    it 'finds a state' do
+      mapit.area_from_mapit_name('Abia').id.must_equal(2)
+    end
+
+    it 'finds a federal constituency' do
+      mapit.area_from_mapit_name('Federal Capital Territory').id.must_equal(16)
+    end
+
+    it 'finds a senatorial district' do
+      mapit.area_from_mapit_name('ABIA CENTRAL').id.must_equal(809)
+    end
+
+    it 'returns nil if no area was found' do
+      assert_nil(mapit.area_from_mapit_name('I-dont-exist'))
+    end
+  end
+
   class FakeMappings
     def child_to_parent
       { '949' => '16', '1091' => '12', '963' => '9', '809' => '2' }
