@@ -9,6 +9,7 @@ require_relative 'lib/helpers/filepaths_helper'
 require_relative 'lib/helpers/layout_helper'
 require_relative 'lib/helpers/settings_helper'
 require_relative 'lib/mapit/wrapper'
+require_relative 'lib/membership_csv/people'
 require_relative 'lib/page/homepage'
 require_relative 'lib/page/info'
 require_relative 'lib/page/jinja2'
@@ -48,7 +49,11 @@ mapit = Mapit::Wrapper.new(
 )
 
 # Assemble data on the members of the various legislatures we support:
-governors = nil
+governors = MembershipCSV::People.new(
+  csv_filename: 'morph/nigeria-state-governors.csv',
+  mapit: mapit,
+  baseurl: '/person/'
+)
 representatives = EP::PeopleByLegislature.new(
   legislature: settings.index.country('Nigeria').legislature('Representatives'),
   mapit: mapit,
@@ -59,8 +64,6 @@ senators = EP::PeopleByLegislature.new(
   mapit: mapit,
   baseurl: '/person/'
 )
-
-# Now we define the routes:
 
 get '/' do
   posts_finder = Document::Finder.new(pattern: posts_pattern, baseurl: '/blog/')
@@ -144,6 +147,11 @@ end
 
 get '/position/senator/' do
   @page = Page::People.new(title: 'Senator', people_by_legislature: senators)
+  erb :people
+end
+
+get '/position/executive-governor/' do
+  @page = Page::People.new(title: 'Executive Governor', people_by_legislature: governors)
   erb :people
 end
 
