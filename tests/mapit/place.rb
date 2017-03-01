@@ -6,8 +6,13 @@ describe 'Place' do
   describe 'when area has a parent' do
     let(:place) { Mapit::Place.new(
       mapit_area_data: area_with_parent,
-      mapit_ids_to_pombola_slugs: mapit_ids_to_pombola_slugs,
-      baseurl: '/baseurl/'
+      pombola_slug: 'gwagwaladakuje',
+      baseurl: '/baseurl/',
+      parent: Mapit::Place.new(
+        mapit_area_data: area_with_no_parent,
+        pombola_slug: 'federal-capital-territory',
+        baseurl: '/baseurl/'
+      )
     ) }
 
     it 'knows its id' do
@@ -19,7 +24,7 @@ describe 'Place' do
     end
 
     it 'knows its parent name' do
-      place.parent_name.must_equal('Federal Capital Territory')
+      place.parent.name.must_equal('Federal Capital Territory')
     end
 
     it 'builds the place url with the baseurl' do
@@ -27,7 +32,7 @@ describe 'Place' do
     end
 
     it 'builds the parent url with the baseurl' do
-      place.parent_url.must_equal('/baseurl/federal-capital-territory/')
+      place.parent.url.must_equal('/baseurl/federal-capital-territory/')
     end
 
     it 'knows its type' do
@@ -35,37 +40,20 @@ describe 'Place' do
     end
 
     it 'knows it is a child' do
-      place.is_child_area?.must_equal(true)
-    end
-  end
-
-  describe 'when area has no parent' do
-    let(:place) { Mapit::Place.new(
-      mapit_area_data: area_with_no_parent,
-      mapit_ids_to_pombola_slugs: mapit_ids_to_pombola_slugs,
-      baseurl: '/baseurl/'
-    ) }
-
-    it 'returns nil for the parent name' do
-      assert_nil(place.parent_name)
+      assert(place.is_child_area?)
     end
 
-    it 'returns nil for the parent url' do
-      assert_nil(place.parent_url)
+    it 'the parent returns nil for its parent' do
+      assert_nil(place.parent.parent)
     end
 
-    it 'knows it is not a child' do
-      place.is_child_area?.must_equal(false)
+    it 'the parent knows it is not a child' do
+      refute(place.parent.is_child_area?)
     end
-  end
-
-  def mapit_ids_to_pombola_slugs
-    { '949' => 'gwagwaladakuje', '16' => 'federal-capital-territory' }
   end
 
   def area_with_parent
-    parent = {'parent_id' => 16, 'parent_name' => 'Federal Capital Territory'}
-    JSON.parse(FED_JSON).values.first.merge(parent)
+    JSON.parse(FED_JSON).values.first
   end
 
   def area_with_no_parent

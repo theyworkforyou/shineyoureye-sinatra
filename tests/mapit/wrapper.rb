@@ -7,19 +7,8 @@ describe 'Mappit::Wrapper' do
     mapit_url: mapit_url,
     mapit_mappings: FakeMappings.new,
     baseurl: '/baseurl/',
-    parent_area_type: 'STA',
-    child_area_types: %w(FED SEN)
+    area_types: %w(FED SEN STA)
   ) }
-
-  describe 'when getting all areas' do
-    it 'gets all areas' do
-      mapit.all_areas.count.must_equal(12)
-    end
-
-    it 'gets all areas as place objects' do
-      mapit.all_areas.first.name.must_equal('Federal Capital Territory')
-    end
-  end
 
   describe 'when getting the states' do
     it 'gets a list of all the states' do
@@ -39,8 +28,7 @@ describe 'Mappit::Wrapper' do
     end
 
     it 'does not have parent data for the states' do
-      assert_nil(mapit.places_of_type('STA').first.parent_name)
-      assert_nil(mapit.places_of_type('STA').first.parent_url)
+      assert_nil(mapit.places_of_type('STA').first.parent)
     end
   end
 
@@ -58,11 +46,11 @@ describe 'Mappit::Wrapper' do
     end
 
     it 'has federal constituencies with a parent name' do
-      mapit.places_of_type('FED').first.parent_name.must_equal('Federal Capital Territory')
+      mapit.places_of_type('FED').first.parent.name.must_equal('Federal Capital Territory')
     end
 
     it 'has federal constituencies with a parent url' do
-      mapit.places_of_type('FED').first.parent_url.must_equal('/baseurl/federal-capital-territory/')
+      mapit.places_of_type('FED').first.parent.url.must_equal('/baseurl/federal-capital-territory/')
     end
   end
 
@@ -80,7 +68,7 @@ describe 'Mappit::Wrapper' do
     end
 
     it 'has senatorial districts with a parent name' do
-      mapit.places_of_type('SEN').first.parent_name.must_equal('Abia')
+      mapit.places_of_type('SEN').first.parent.name.must_equal('Abia')
     end
   end
 

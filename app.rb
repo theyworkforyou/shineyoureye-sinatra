@@ -45,8 +45,7 @@ mapit = Mapit::Wrapper.new(
   mapit_url: settings.mapit_url,
   mapit_mappings: mapit_mappings,
   baseurl: '/place/',
-  parent_area_type: 'STA',
-  child_area_types: %w(FED SEN)
+  area_types: %w(FED SEN STA)
 )
 
 # Assemble data on the members of the various legislatures we support:
