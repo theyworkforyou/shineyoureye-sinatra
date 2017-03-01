@@ -169,6 +169,13 @@ get '/person/:id/' do |id|
   erb :person
 end
 
+get '/person/:id/' do |id|
+  pass if governors.none?(id)
+  summary_finder = Document::Finder.new(pattern: summary_pattern(id), baseurl: '')
+  @page = Page::Person.new(person: governors.find_single(id), position: 'Governor', summary_doc: summary_finder.find_or_empty)
+  erb :person
+end
+
 Search = Struct.new(:title)
 get '/search/' do
   @page = Search.new('Search')

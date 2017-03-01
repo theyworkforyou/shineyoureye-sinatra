@@ -15,7 +15,7 @@
             <h1 class="person__name"><%= @page.person.name %></h1>
 
           <% if @page.person.area %>
-            <h2>Constituency</h2>
+            <h2><%= @page.person.area.type_name %></h2>
             <p class="person__area"><a href="<%= @page.person.area.url %>"><%= @page.person.area.name %></a></p>
           <% end %>
 

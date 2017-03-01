@@ -38,12 +38,19 @@ describe 'Person Page' do
   end
 
   describe 'when person has an area' do
+    it 'shows the area type name' do
+      subject.css('.person__key-info h2').text
+        .must_include('Federal Constituency')
+    end
+
     it 'links to the area page' do
-      subject.css('.person__area a/@href').first.text.must_equal('/place/maiduguri/')
+      subject.css('.person__area a/@href').first.text
+        .must_equal('/place/maiduguri/')
     end
 
     it 'displays the area name' do
-      subject.css('.person__area a').first.text.must_equal('Maiduguri (Metropolitan)')
+      subject.css('.person__area a').first.text
+        .must_equal('Maiduguri (Metropolitan)')
     end
   end
 
@@ -82,16 +89,18 @@ describe 'Person Page' do
     end
   end
 
-  # describe 'when person has a Facebook' do
-  #   it 'links to it' do
-  #     subject.css('.person__facebook a/@href').first.text
-  #       .must_equal('https://facebook.com/benmurraybruce')
-  #   end
-  #
-  #   it 'displays it' do
-  #     subject.css('.person__facebook a').first.text.must_equal('@benmurraybruce')
-  #   end
-  # end
+  describe 'when person has a Facebook' do
+    before { get '/person/gov:willie-obiano/' }
+
+    it 'links to it' do
+      subject.css('.person__facebook a/@href').first.text
+        .must_equal('https://www.facebook.com/WillieObiano')
+    end
+
+    it 'displays it' do
+      subject.css('.person__facebook a').first.text.must_equal('WillieObiano')
+    end
+  end
 
   describe 'when person has an email' do
     before { get '/person/9de46243-685e-4902-81d4-b3e01faa93d5/' }
@@ -155,6 +164,18 @@ describe 'Person Page' do
 
     it 'displays the right position' do
       subject.css('.person__key-info h2').first.text.must_equal('Senator')
+    end
+  end
+
+  describe 'when requesting a governor page' do
+    before { get '/person/gov:victor-okezie-ikpeazu/' }
+
+    it 'finds the governor by slug' do
+      subject.css('title').text.must_include('Victor Okezie Ikpeazu')
+    end
+
+    it 'displays the right position' do
+      subject.css('.person__key-info h2').first.text.must_equal('Governor')
     end
   end
 
