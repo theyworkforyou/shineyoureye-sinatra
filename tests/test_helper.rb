@@ -32,9 +32,6 @@ module Minitest
       get_from_disk(DATASOURCE, countries_json)
       get_from_disk(reps_json_url, reps_json)
       get_from_disk(senate_json_url, senate_json)
-      get_from_disk("#{mapit_url}STA", mapit_data_for_area_type('STA'))
-      get_from_disk("#{mapit_url}FED", mapit_data_for_area_type('FED'))
-      get_from_disk("#{mapit_url}SEN", mapit_data_for_area_type('SEN'))
     end
 
     def new_tempfile(contents, filename = 'sye-tests')
@@ -46,10 +43,6 @@ module Minitest
 
     def basic_document(filename)
       Document::MarkdownWithFrontmatter.new(filename: filename, baseurl: 'irrelevant')
-    end
-
-    def mapit_url
-      'http://nigeria.mapit.mysociety.org/areas/'
     end
 
     def nigeria_at_known_revision

@@ -22,7 +22,6 @@ require_relative 'lib/page/posts'
 set :content_dir, File.join(__dir__, 'prose')
 set :datasource, ENV.fetch('DATASOURCE', 'https://github.com/everypolitician/everypolitician-data/raw/master/countries.json')
 set :index, EveryPolitician::Index.new(index_url: settings.datasource)
-set :mapit_url, 'http://nigeria.mapit.mysociety.org/areas/'
 set :twitter_user, 'NGShineyoureye'
 
 # Create a wrapper for the mappings between the various IDs we have
@@ -42,10 +41,10 @@ mapit_mappings = Mapit::Mappings.new(
 
 # Create a wrapper that caches MapIt and EveryPolitician area data:
 mapit = Mapit::Wrapper.new(
-  mapit_url: settings.mapit_url,
   mapit_mappings: mapit_mappings,
   baseurl: '/place/',
-  area_types: %w(FED SEN STA)
+  area_types: %w(FED SEN STA),
+  data_directory: 'mapit'
 )
 
 # Assemble data on the members of the various legislatures we support:

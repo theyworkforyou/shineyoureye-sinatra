@@ -4,10 +4,10 @@ require_relative '../../lib/mapit/wrapper'
 
 describe 'Mappit::Wrapper' do
   let(:mapit) { Mapit::Wrapper.new(
-    mapit_url: mapit_url,
     mapit_mappings: FakeMappings.new,
     baseurl: '/baseurl/',
-    area_types: %w(FED SEN STA)
+    area_types: %w(FED SEN STA),
+    data_directory: 'mapit'
   ) }
 
   describe 'when getting the states' do

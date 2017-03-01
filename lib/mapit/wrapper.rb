@@ -1,15 +1,14 @@
 # frozen_string_literal: true
-require 'net/http'
 require_relative 'place'
 
 module Mapit
   class Wrapper
 
-    def initialize(mapit_url:, mapit_mappings:, baseurl:, area_types:)
-      @mapit_url = mapit_url
+    def initialize(mapit_mappings:, baseurl:, area_types:, data_directory:)
       @baseurl = baseurl
       @area_types = area_types
       @mapit_mappings = mapit_mappings
+      @data_directory = data_directory
       cache_mapit_data
       set_up_parent_child_relationships
     end
@@ -29,20 +28,27 @@ module Mapit
 
     private
 
-    attr_reader :mapit_url,
-                :mapit_mappings,
+    attr_reader :mapit_mappings,
                 :baseurl,
                 :id_to_place,
                 :area_types,
-                :type_to_places
+                :type_to_places,
+                :data_directory
 
     def places(area_type)
       areas_data(area_type).map { |a| create_place(a) }
     end
 
+    def mapit_area_cache_filename(area_type)
+      File.join(data_directory, "#{area_type}.json")
+    end
+
+    def parse_json_file(filename)
+      JSON.parse(open(filename, &:read))
+    end
+
     def areas_data(area_type)
-      uri = URI(mapit_url + area_type)
-      JSON.parse(Net::HTTP.get(uri)).values
+      parse_json_file(mapit_area_cache_filename(area_type)).values
     end
 
     def cache_mapit_data
