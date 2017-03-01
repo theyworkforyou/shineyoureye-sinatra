@@ -44,7 +44,9 @@ mapit_mappings = Mapit::Mappings.new(
 mapit = Mapit::Wrapper.new(
   mapit_url: settings.mapit_url,
   mapit_mappings: mapit_mappings,
-  baseurl: '/place/'
+  baseurl: '/place/',
+  parent_area_type: 'STA',
+  child_area_types: %w(FED SEN)
 )
 
 # Assemble data on the members of the various legislatures we support:
@@ -103,17 +105,17 @@ get '/info/:slug' do |slug|
 end
 
 get '/place/is/state/' do
-  @page = Page::Places.new(title: 'States', places: mapit.states, people_by_legislature: governors)
+  @page = Page::Places.new(title: 'States', places: mapit.places_of_type('STA'), people_by_legislature: governors)
   erb :places
 end
 
 get '/place/is/federal-constituency/' do
-  @page = Page::Places.new(title: 'Federal Constituencies (Current)', places: mapit.federal_constituencies, people_by_legislature: representatives)
+  @page = Page::Places.new(title: 'Federal Constituencies (Current)', places: mapit.places_of_type('FED'), people_by_legislature: representatives)
   erb :places
 end
 
 get '/place/is/senatorial-district/' do
-  @page = Page::Places.new(title: 'Senatorial Districts (Current)', places: mapit.senatorial_districts, people_by_legislature: senators)
+  @page = Page::Places.new(title: 'Senatorial Districts (Current)', places: mapit.places_of_type('SEN'), people_by_legislature: senators)
   erb :places
 end
 

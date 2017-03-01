@@ -3,26 +3,29 @@ require_relative 'place'
 
 module Mapit
   class Wrapper
-    def initialize(mapit_url:, mapit_mappings:, baseurl:)
+    def initialize(mapit_url:, mapit_mappings:, baseurl:, parent_area_type:, child_area_types:)
       @mapit_url = mapit_url
       @mapit_mappings = mapit_mappings
       @baseurl = baseurl
+      @parent_area_type = parent_area_type
+      @child_area_types = child_area_types
+      @type_to_places = {}
+    end
+
+    def area_types
+      [parent_area_type] + child_area_types
     end
 
     def all_areas
-      states + federal_constituencies + senatorial_districts
+      @all_areas ||= area_types.flat_map do |area_type|
+        places_of_type(area_type)
+      end
     end
 
-    def states
-      @states ||= areas('STA').map { |area| create_place(area) }
-    end
-
-    def federal_constituencies
-      @constituencies ||= add_parent_data(areas('FED')).map { |area| create_place(area) }
-    end
-
-    def senatorial_districts
-      @districts ||= add_parent_data(areas('SEN')).map { |area| create_place(area) }
+    def places_of_type(area_type)
+      @type_to_places[area_type] ||= add_parent_data(area_type).map do
+        |area| create_place(area)
+      end
     end
 
     def area_from_pombola_slug(slug)
@@ -35,15 +38,16 @@ module Mapit
 
     private
 
-    attr_reader :mapit_url, :mapit_mappings, :baseurl
+    attr_reader :mapit_url, :mapit_mappings, :baseurl, :parent_area_type, :child_area_types
 
     def areas(area_type)
       uri = URI(mapit_url + area_type)
       JSON.parse(Net::HTTP.get(uri)).values
     end
 
-    def add_parent_data(child_areas)
-      child_areas.map do |area|
+    def add_parent_data(area_type)
+      return areas(area_type) if area_type == parent_area_type
+      areas(area_type).map do |area|
         parent = {
           'parent_id' => parent_id(area),
           'parent_name' => parent_name(area)
@@ -57,7 +61,7 @@ module Mapit
     end
 
     def parent_name(area)
-      states.find { |state| state.id == parent_id(area) }.name
+      places_of_type(parent_area_type).find { |state| state.id == parent_id(area) }.name
     end
 
     def find_single(id)
