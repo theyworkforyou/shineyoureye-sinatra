@@ -1,3 +1,6 @@
+[![Travis Status](https://travis-ci.org/theyworkforyou/shineyoureye-sinatra.svg?branch=master)](https://travis-ci.org/theyworkforyou/shineyoureye-sinatra.svg?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/theyworkforyou/shineyoureye-sinatra/badge.svg)](https://coveralls.io/github/theyworkforyou/shineyoureye-sinatra)
+
 # Shine Your Eye (Sinatra)
 
 This project is a proof of concept that aims to make it easy to produce
