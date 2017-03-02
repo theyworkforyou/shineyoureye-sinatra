@@ -17,28 +17,8 @@ module Page
       person.name
     end
 
-    def email
-      person.email
-    end
-
-    def wikipedia_url
-      person.wikipedia_url
-    end
-
     def summary
       summary_doc.body
-    end
-
-    def executive_positions
-      [] # sort by start date reverse
-    end
-
-    def job_history
-      [] # sort by start date reverse
-    end
-
-    def education
-      [] # sort by start date reverse
     end
 
     private

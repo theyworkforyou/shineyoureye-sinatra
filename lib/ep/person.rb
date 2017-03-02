@@ -9,7 +9,7 @@ module EP
     end
 
     extend Forwardable
-    def_delegators :@person, :id, :name, :image, :birth_date, :phone,
+    def_delegators :@person, :id, :name, :birth_date, :image, :phone,
                              :email, :twitter, :facebook, :memberships
 
     def thumbnail_image_url
@@ -25,15 +25,15 @@ module EP
     end
 
     def twitter_display
-      "@#{twitter}"
+      "@#{twitter}" if twitter
     end
 
     def twitter_url
-      "https://twitter.com/#{twitter}"
+      "https://twitter.com/#{twitter}" if twitter
     end
 
     def facebook_display
-      facebook.to_s.split('/').last
+      facebook.split('/').last if facebook
     end
 
     def facebook_url
@@ -42,11 +42,11 @@ module EP
 
     def wikipedia_url
       link = person.links.find { |l| l[:note] == 'Wikipedia (en)' }
-      link ? link[:url] : nil
+      link[:url] if link
     end
 
     def email_url
-      "mailto:#{email}"
+      "mailto:#{email}" if email
     end
 
     def current_memberships
@@ -92,6 +92,7 @@ module EP
     end
 
     def proxy_image_variant(size)
+      return if image.nil?
       raise_unless_image_size_available(size)
       'https://theyworkforyou.github.io/shineyoureye-images' \
       "/#{legislature.slug}/#{id}/#{ALLOWED_IMAGE_SIZES[size]}.jpeg"
