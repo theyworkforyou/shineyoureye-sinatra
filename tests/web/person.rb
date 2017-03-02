@@ -63,7 +63,7 @@ describe 'Person Page' do
     before { get '/person/0baa5a03-b1e0-4e66-b3f9-daee8bacb87d/' }
 
     it 'edit link points to the right person id' do
-      subject.css('.person-edit-link a/@href').text
+      subject.css('.person-edit-link/@href').text
         .must_include('/summaries/0baa5a03-b1e0-4e66-b3f9-daee8bacb87d.md')
     end
 
@@ -75,7 +75,7 @@ describe 'Person Page' do
 
   describe 'when person has no summary' do
     it 'edit link points to the right person id' do
-      subject.css('.person-edit-link a/@href').text
+      subject.css('.person-edit-link/@href').text
         .must_include('/summaries/b2a7f72a-9ecf-4263-83f1-cb0f8783053c.md')
     end
 
