@@ -14,16 +14,16 @@ describe 'States Page' do
   end
 
   it 'shows all states' do
-    subject.css('.media').count.must_equal(4)
+    subject.css('.media').count.must_equal(37)
   end
 
   it 'links to each state page' do
-    subject.css('.media-left a/@href').first.text.must_equal('/place/federal-capital-territory/')
-    subject.css('.media-body a/@href').first.text.must_equal('/place/federal-capital-territory/')
+    subject.css('.media-left a/@href').first.text.must_equal('/place/abia/')
+    subject.css('.media-body a/@href').first.text.must_equal('/place/abia/')
   end
 
   it 'shows each state name' do
-    subject.css('.media-heading').last.text.must_equal('Abia')
+    subject.css('.media-heading').last.text.must_equal('Zamfara')
   end
 
   it 'does not show parent information' do

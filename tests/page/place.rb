@@ -6,7 +6,7 @@ require_relative '../../lib/page/place'
 
 describe 'Page::Place' do
   let(:place) { Mapit::Place.new(
-    mapit_area_data: area_with_parent,
+    mapit_area_data: area,
     pombola_slug: 'gwagwaladakuje',
     baseurl: '/baseurl/'
   ) }
@@ -65,8 +65,7 @@ describe 'Page::Place' do
     page.places_url.must_equal('')
   end
 
-  def area_with_parent
-    parent = {'parent_id' => 16, 'parent_name' => 'Federal Capital Territory'}
-    JSON.parse(FED_JSON).values.first.merge(parent)
+  def area
+    parsed_mapit_data_for_area_type('FED').values.first
   end
 end

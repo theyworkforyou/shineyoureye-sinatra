@@ -53,10 +53,10 @@ describe 'Place' do
   end
 
   def area_with_parent
-    JSON.parse(FED_JSON).values.first
+    parsed_mapit_data_for_area_type('FED').values.first
   end
 
   def area_with_no_parent
-    JSON.parse(STA_JSON).values.first
+    parsed_mapit_data_for_area_type('STA')['16']
   end
 end

@@ -14,7 +14,7 @@ describe 'Senatorial Districts Page' do
   end
 
   it 'shows all districts' do
-    subject.css('.media').count.must_equal(5)
+    subject.css('.media').count.must_equal(109)
   end
 
   it 'links to each district page' do
@@ -23,15 +23,15 @@ describe 'Senatorial Districts Page' do
   end
 
   it 'shows each district name' do
-    subject.css('.media-heading').last.text.must_equal('ABIA SOUTH')
+    subject.css('.media-heading').last.text.must_equal('ZAMFARA WEST')
   end
 
   it 'links to each parent place' do
-    subject.css('.parent-place a/@href').last.text.must_equal('/place/abia/')
+    subject.css('.parent-place a/@href').last.text.must_equal('/place/zamfara/')
   end
 
   it 'shows each parent place name' do
-    subject.css('.parent-place a').last.text.must_equal('Abia')
+    subject.css('.parent-place a').last.text.must_equal('Zamfara')
   end
 
   it 'shows the place type' do
