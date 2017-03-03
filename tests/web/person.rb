@@ -189,7 +189,9 @@ describe 'Person Page' do
 
   describe 'social block' do
     it 'links to facebook share' do
-      subject.css('.btn-facebook/@href').text.must_include('/person/b2a7f72a-9ecf-4263-83f1-cb0f8783053c/&t=ABDUKADIR RAHIS')
+      subject.css('.btn-facebook/@href').text.must_include(
+        '/person/b2a7f72a-9ecf-4263-83f1-cb0f8783053c/&t=ABDUKADIR RAHIS'
+      )
     end
 
     it 'links to twitter share' do

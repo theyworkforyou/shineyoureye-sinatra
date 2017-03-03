@@ -12,7 +12,10 @@ unless ENV['MORPH_API_KEY']
   exit(1)
 end
 
-CSV_URL = "https://morph.io/everypolitician-scrapers/nigeria-shineyoureye-positions/data.csv?key=#{URI.escape(ENV['MORPH_API_KEY'])}&query=select+%2A+from+%27data%27"
+CSV_URL = 'https://morph.io/everypolitician-scrapers/' \
+          'nigeria-shineyoureye-positions/data.csv' \
+          "?key=#{URI.escape(ENV['MORPH_API_KEY'])}" \
+          "&query=select+%2A+from+%27data%27"
 
 people = CSV.new(open(CSV_URL), :headers => :first_row).group_by do |row|
   raise "A person_slug was missing in the data" unless row['person_slug']
