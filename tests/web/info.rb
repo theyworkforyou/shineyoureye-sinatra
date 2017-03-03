@@ -6,7 +6,7 @@ describe 'Info Page' do
   subject { Nokogiri::HTML(last_response.body) }
 
   it 'shows the post title' do
-    subject.css('.page-title').text.must_equal("About")
+    subject.css('.page-title').text.must_equal('About')
   end
 
   it 'displays the contents of the page' do

@@ -6,7 +6,7 @@ describe 'Post Page' do
   subject { Nokogiri::HTML(last_response.body) }
 
   it 'shows the post title' do
-    subject.css('.page-title').text.must_equal("Citizens’ Solutions to End Terrorism")
+    subject.css('.page-title').text.must_equal('Citizens’ Solutions to End Terrorism')
   end
 
   it 'shows the date with the right format' do

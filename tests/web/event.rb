@@ -6,7 +6,7 @@ describe 'Event Page' do
   subject { Nokogiri::HTML(last_response.body) }
 
   it 'shows the event title' do
-    subject.css('.page-title').text.must_equal("FCT LGA Polls 2016")
+    subject.css('.page-title').text.must_equal('FCT LGA Polls 2016')
   end
 
   it 'shows the publication date with the right format' do
