@@ -22,8 +22,7 @@ describe 'Page::Place' do
   let(:page) do
     Page::Place.new(
       place: place,
-      people_by_legislature: people,
-      people_path: '/people/'
+      people_by_legislature: people
     )
   end
 
@@ -61,10 +60,6 @@ describe 'Page::Place' do
 
   it 'knows the legislature name' do
     page.legislature_name.must_equal('House of Representatives')
-  end
-
-  it 'builds the url for the people associated with that place' do
-    page.people_url.must_equal('/baseurl/gwagwaladakuje/people/')
   end
 
   it 'builds the url for the places associated with that place' do

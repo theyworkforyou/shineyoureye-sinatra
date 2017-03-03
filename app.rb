@@ -131,24 +131,20 @@ end
 get '/place/:slug/' do |slug|
   constituency = mapit.area_from_pombola_slug(slug)
   pass if representatives.none_by_mapit_area?(constituency.id)
-  @page = Page::Place.new(
-    place: constituency,
-    people_by_legislature: representatives,
-    people_path: '/people/'
-  )
+  @page = Page::Place.new(place: constituency, people_by_legislature: representatives)
   erb :place
 end
 
 get '/place/:slug/' do |slug|
   district = mapit.area_from_pombola_slug(slug)
   pass if senators.none_by_mapit_area?(district.id)
-  @page = Page::Place.new(place: district, people_by_legislature: senators, people_path: '/people/')
+  @page = Page::Place.new(place: district, people_by_legislature: senators)
   erb :place
 end
 
 get '/place/:slug/' do |slug|
   state = mapit.area_from_pombola_slug(slug)
-  @page = Page::Place.new(place: state, people_by_legislature: representatives, people_path: '/people/')
+  @page = Page::Place.new(place: state, people_by_legislature: representatives)
   erb :place
 end
 
