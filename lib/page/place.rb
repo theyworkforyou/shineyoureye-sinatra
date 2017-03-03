@@ -28,10 +28,6 @@ module Page
       people_by_legislature.legislature_name
     end
 
-    def places_url
-      ''
-    end
-
     private
 
     attr_reader :people_by_legislature

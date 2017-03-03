@@ -62,10 +62,6 @@ describe 'Page::Place' do
     page.legislature_name.must_equal('House of Representatives')
   end
 
-  it 'builds the url for the places associated with that place' do
-    page.places_url.must_equal('')
-  end
-
   def area
     parsed_mapit_data_for_area_type('FED').values.first
   end
