@@ -3,87 +3,74 @@ require_relative 'place'
 
 module Mapit
   class Wrapper
-    def initialize(mapit_url:, mapit_mappings:, baseurl:)
-      @mapit_url = mapit_url
-      @mapit_mappings = mapit_mappings
+
+    def initialize(mapit_mappings:, baseurl:, area_types:, data_directory:)
       @baseurl = baseurl
-    end
-
-    def all_areas
-      states + federal_constituencies + senatorial_districts
-    end
-
-    def states
-      @states ||= areas('STA').map { |area| create_place(area) }
-    end
-
-    def federal_constituencies
-      @constituencies ||= add_parent_data(areas('FED')).map { |area| create_place(area) }
-    end
-
-    def senatorial_districts
-      @districts ||= add_parent_data(areas('SEN')).map { |area| create_place(area) }
+      @area_types = area_types
+      @mapit_mappings = mapit_mappings
+      @data_directory = data_directory
+      cache_mapit_data
+      set_up_parent_child_relationships
     end
 
     def area_from_pombola_slug(slug)
-      find_single(pombola_slugs_to_mapit_ids[slug].to_i)
+      mapit_id = mapit_mappings.pombola_slugs_to_mapit_ids[slug]
+      id_to_place[mapit_id]
     end
 
     def area_from_ep_id(id)
-      find_single(ep_to_mapit_ids[id].to_i)
+      id_to_place[mapit_mappings.ep_to_mapit_ids[id]]
+    end
+
+    def places_of_type(area_type)
+      type_to_places[area_type]
     end
 
     private
 
-    attr_reader :mapit_url, :mapit_mappings, :baseurl
+    attr_reader :mapit_mappings,
+                :baseurl,
+                :id_to_place,
+                :area_types,
+                :type_to_places,
+                :data_directory
 
-    def areas(area_type)
-      uri = URI(mapit_url + area_type)
-      JSON.parse(Net::HTTP.get(uri)).values
+    def places(area_type)
+      areas_data(area_type).map { |a| create_place(a) }
     end
 
-    def add_parent_data(child_areas)
-      child_areas.map do |area|
-        parent = {
-          'parent_id' => parent_id(area),
-          'parent_name' => parent_name(area)
-        }
-        area.merge(parent)
+    def mapit_area_cache_filename(area_type)
+      File.join(data_directory, "#{area_type}.json")
+    end
+
+    def parse_json_file(filename)
+      JSON.parse(open(filename, &:read))
+    end
+
+    def areas_data(area_type)
+      parse_json_file(mapit_area_cache_filename(area_type)).values
+    end
+
+    def cache_mapit_data
+      @type_to_places = area_types.map { |t| [t, places(t)] }.to_h
+      @id_to_place = type_to_places.values.flatten.map { |a| [a.id.to_s, a] }.to_h
+    end
+
+    def set_up_parent_child_relationships
+      # FIXME: this should also use MapIt's parent_area, if that's set.
+      mapit_mappings.child_to_parent.each do |child, parent|
+        if id_to_place.key?(child) && id_to_place.key?(parent)
+          id_to_place[child].parent = id_to_place[parent]
+        end
       end
     end
 
-    def parent_id(area)
-      area['parent_area'] || child_to_parent[area['id'].to_s].to_i
-    end
-
-    def parent_name(area)
-      states.find { |state| state.id == parent_id(area) }.name
-    end
-
-    def find_single(id)
-      all_areas.find { |area| area.id == id }
-    end
-
-    def pombola_slugs_to_mapit_ids
-      mapit_mappings.pombola_slugs_to_mapit_ids
-    end
-
-    def mapit_ids_to_pombola_slugs
-      mapit_mappings.mapit_ids_to_pombola_slugs
-    end
-
-    def child_to_parent
-      mapit_mappings.child_to_parent
-    end
-
-    def ep_to_mapit_ids
-      mapit_mappings.ep_to_mapit_ids
-    end
-
-    def create_place(area)
+    def create_place(mapit_area_data)
+      mapit_id = mapit_area_data['id'].to_s
+      pombola_slug = mapit_mappings.mapit_ids_to_pombola_slugs[mapit_id]
       Mapit::Place.new(
-        place: area,
-        mapit_ids_to_pombola_slugs: mapit_ids_to_pombola_slugs,
+        mapit_area_data: mapit_area_data,
+        pombola_slug: pombola_slug,
         baseurl: baseurl
       )
     end

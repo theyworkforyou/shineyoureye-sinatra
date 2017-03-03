@@ -22,7 +22,6 @@ require_relative 'lib/page/posts'
 set :content_dir, File.join(__dir__, 'prose')
 set :datasource, ENV.fetch('DATASOURCE', 'https://github.com/everypolitician/everypolitician-data/raw/master/countries.json')
 set :index, EveryPolitician::Index.new(index_url: settings.datasource)
-set :mapit_url, 'http://nigeria.mapit.mysociety.org/areas/'
 set :twitter_user, 'NGShineyoureye'
 
 # Create a wrapper for the mappings between the various IDs we have
@@ -42,9 +41,10 @@ mapit_mappings = Mapit::Mappings.new(
 
 # Create a wrapper that caches MapIt and EveryPolitician area data:
 mapit = Mapit::Wrapper.new(
-  mapit_url: settings.mapit_url,
   mapit_mappings: mapit_mappings,
-  baseurl: '/place/'
+  baseurl: '/place/',
+  area_types: %w(FED SEN STA),
+  data_directory: 'mapit'
 )
 
 # Assemble data on the members of the various legislatures we support:
@@ -103,17 +103,17 @@ get '/info/:slug' do |slug|
 end
 
 get '/place/is/state/' do
-  @page = Page::Places.new(title: 'States', places: mapit.states, people_by_legislature: governors)
+  @page = Page::Places.new(title: 'States', places: mapit.places_of_type('STA'), people_by_legislature: governors)
   erb :places
 end
 
 get '/place/is/federal-constituency/' do
-  @page = Page::Places.new(title: 'Federal Constituencies (Current)', places: mapit.federal_constituencies, people_by_legislature: representatives)
+  @page = Page::Places.new(title: 'Federal Constituencies (Current)', places: mapit.places_of_type('FED'), people_by_legislature: representatives)
   erb :places
 end
 
 get '/place/is/senatorial-district/' do
-  @page = Page::Places.new(title: 'Senatorial Districts (Current)', places: mapit.senatorial_districts, people_by_legislature: senators)
+  @page = Page::Places.new(title: 'Senatorial Districts (Current)', places: mapit.places_of_type('SEN'), people_by_legislature: senators)
   erb :places
 end
 

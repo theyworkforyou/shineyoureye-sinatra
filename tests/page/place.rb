@@ -6,8 +6,8 @@ require_relative '../../lib/page/place'
 
 describe 'Page::Place' do
   let(:place) { Mapit::Place.new(
-    place: area_with_parent,
-    mapit_ids_to_pombola_slugs: mapit_ids_to_pombola_slugs,
+    mapit_area_data: area,
+    pombola_slug: 'gwagwaladakuje',
     baseurl: '/baseurl/'
   ) }
   let(:people) { EP::PeopleByLegislature.new(
@@ -65,12 +65,7 @@ describe 'Page::Place' do
     page.places_url.must_equal('')
   end
 
-  def mapit_ids_to_pombola_slugs
-    { '949' => 'gwagwaladakuje', '16' => 'federal-capital-territory' }
-  end
-
-  def area_with_parent
-    parent = {'parent_id' => 16, 'parent_name' => 'Federal Capital Territory'}
-    JSON.parse(FED_JSON).values.first.merge(parent)
+  def area
+    parsed_mapit_data_for_area_type('FED').values.first
   end
 end

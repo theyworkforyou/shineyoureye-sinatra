@@ -13,7 +13,6 @@ require 'rack/test'
 require 'webmock/minitest'
 
 require_relative '../lib/document/markdown_with_frontmatter'
-require_relative './fixtures/mapit_data'
 require_relative './test_doubles'
 
 module Minitest
@@ -33,9 +32,6 @@ module Minitest
       get_from_disk(DATASOURCE, countries_json)
       get_from_disk(reps_json_url, reps_json)
       get_from_disk(senate_json_url, senate_json)
-      get_from_disk("#{mapit_url}STA", STA_JSON)
-      get_from_disk("#{mapit_url}FED", FED_JSON)
-      get_from_disk("#{mapit_url}SEN", SEN_JSON)
     end
 
     def new_tempfile(contents, filename = 'sye-tests')
@@ -49,12 +45,19 @@ module Minitest
       Document::MarkdownWithFrontmatter.new(filename: filename, baseurl: 'irrelevant')
     end
 
-    def mapit_url
-      'http://nigeria.mapit.mysociety.org/areas/'
-    end
-
     def nigeria_at_known_revision
       @ng ||= EveryPolitician::Index.new(index_url: DATASOURCE).country('Nigeria')
+    end
+
+    def mapit_data_for_area_type(area_type)
+      json_filename = File.join(
+        File.dirname(__FILE__), '..', 'mapit', "#{area_type}.json"
+      )
+      open(json_filename, &:read)
+    end
+
+    def parsed_mapit_data_for_area_type(area_type)
+      JSON.parse(mapit_data_for_area_type(area_type))
     end
 
     private

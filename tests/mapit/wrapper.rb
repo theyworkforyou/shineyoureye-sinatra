@@ -4,81 +4,72 @@ require_relative '../../lib/mapit/wrapper'
 
 describe 'Mappit::Wrapper' do
   let(:mapit) { Mapit::Wrapper.new(
-    mapit_url: mapit_url,
     mapit_mappings: FakeMappings.new,
-    baseurl: '/baseurl/'
+    baseurl: '/baseurl/',
+    area_types: %w(FED SEN STA),
+    data_directory: 'mapit'
   ) }
-
-  describe 'when getting all areas' do
-    it 'gets all areas' do
-      mapit.all_areas.count.must_equal(12)
-    end
-
-    it 'gets all areas as place objects' do
-      mapit.all_areas.first.name.must_equal('Federal Capital Territory')
-    end
-  end
 
   describe 'when getting the states' do
     it 'gets a list of all the states' do
-      mapit.states.count.must_equal(4)
+      mapit.places_of_type('STA').count.must_equal(37)
     end
 
+    # The last state in MapIt's list is Zamfara, with ID 38:
     it 'has states with an id and it is an integer' do
-      mapit.states.last.id.must_equal(2)
+      mapit.places_of_type('STA').last.id.must_equal(38)
     end
 
     it 'has states with a name' do
-      mapit.states.last.name.must_equal('Abia')
+      mapit.places_of_type('STA').last.name.must_equal('Zamfara')
     end
 
     it 'has states that use the baseurl in their url' do
-      mapit.states.first.url.must_equal('/baseurl/federal-capital-territory/')
+      mapit.places_of_type('STA').first.url.must_equal('/baseurl/abia/')
     end
 
     it 'does not have parent data for the states' do
-      assert_nil(mapit.states.first.parent_name)
-      assert_nil(mapit.states.first.parent_url)
+      assert_nil(mapit.places_of_type('STA').first.parent)
     end
   end
 
   describe 'when getting the federal constituencies' do
     it 'gets a list of all the federal constituencies' do
-      mapit.federal_constituencies.count.must_equal(3)
+      mapit.places_of_type('FED').count.must_equal(360)
     end
 
     it 'has federal constituencies with a name' do
-      mapit.federal_constituencies.first.name.must_equal('Abaji/Gwagwalada/Kwali/Kuje')
+      mapit.places_of_type('FED').first.name.must_equal('Abaji/Gwagwalada/Kwali/Kuje')
     end
 
     it 'has federal constituencies that use the baseurl' do
-      mapit.federal_constituencies.first.url.must_equal('/baseurl/gwagwaladakuje/')
+      mapit.places_of_type('FED').first.url.must_equal('/baseurl/gwagwaladakuje/')
     end
 
     it 'has federal constituencies with a parent name' do
-      mapit.federal_constituencies.first.parent_name.must_equal('Federal Capital Territory')
+      mapit.places_of_type('FED').first.parent.name.must_equal('Federal Capital Territory')
     end
 
     it 'has federal constituencies with a parent url' do
-      mapit.federal_constituencies.first.parent_url.must_equal('/baseurl/federal-capital-territory/')
+      mapit.places_of_type('FED').first.parent.url.must_equal('/baseurl/federal-capital-territory/')
     end
   end
 
   describe 'when getting the senatorial districts' do
     it 'gets a list of all the senatorial districts' do
-      mapit.senatorial_districts.count.must_equal(5)
+      mapit.places_of_type('SEN').count.must_equal(109)
     end
 
     it 'has senatorial districts with a name' do
-      mapit.senatorial_districts.first.name.must_equal('ABIA CENTRAL')
+      mapit.places_of_type('SEN').first.name.must_equal('ABIA CENTRAL')
     end
 
     it 'has senatorial districts that use the baseurl' do
-      mapit.senatorial_districts.first.url.must_equal('/baseurl/abia-central/')
+      mapit.places_of_type('SEN').first.url.must_equal('/baseurl/abia-central/')
     end
 
     it 'has senatorial districts with a parent name' do
-      mapit.senatorial_districts.first.parent_name.must_equal('Abia')
+      mapit.places_of_type('SEN').first.parent.name.must_equal('Abia')
     end
   end
 
