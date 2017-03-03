@@ -22,7 +22,7 @@ end
 def build_slug_to_uuid
   map = {}
   ep_index = EveryPolitician::Index.new()
-  ['Representatives', 'Senate'].each do |house_name|
+  %w(Representatives Senate).each do |house_name|
     house = ep_index.country('Nigeria').legislature(house_name)
     house.latest_term.memberships.map(&:person).uniq(&:id).each do |person|
       identifier_sye = person.identifiers.find { |i| i[:scheme] == 'shineyoureye' }

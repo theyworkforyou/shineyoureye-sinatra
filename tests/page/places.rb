@@ -11,7 +11,7 @@ describe 'Page::Places' do
   ) }
   let(:page) { Page::Places.new(
     title: 'Constituencies',
-    places: ['irrelevant', 'irrelevant'],
+    places: %w(irrelevant irrelevant),
     people_by_legislature: people
   ) }
 
