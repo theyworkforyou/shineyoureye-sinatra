@@ -38,4 +38,9 @@ describe 'State Place Page' do
   it 'does not display the house name' do
     subject.css('.person__key-info h2').first.text.split('(').count.must_equal(1)
   end
+
+  it 'throws a 404 error if no area is found for a slug' do
+    get '/place/i-dont-exist/'
+    subject.css('h1').first.text.must_equal('Not Found')
+  end
 end
