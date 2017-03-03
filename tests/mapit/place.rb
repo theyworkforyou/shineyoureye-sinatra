@@ -40,7 +40,7 @@ describe 'Place' do
     end
 
     it 'knows it is a child' do
-      assert(place.is_child_area?)
+      assert(place.child_area?)
     end
 
     it 'the parent returns nil for its parent' do
@@ -48,7 +48,7 @@ describe 'Place' do
     end
 
     it 'the parent knows it is not a child' do
-      refute(place.parent.is_child_area?)
+      refute(place.parent.child_area?)
     end
   end
 
