@@ -18,7 +18,7 @@ module PersonProxyImages
     thumbnail: '100x100',
     medium: '250x250',
     original: 'original'
-  }
+  }.freeze
 
   def proxy_image_variant(size)
     return if image.nil?
