@@ -20,7 +20,7 @@ describe 'Person Page' do
   describe 'when person has an image' do
     it 'points to the right path' do
       subject.css('img.person__image/@src').first.text
-        .must_equal('https://theyworkforyou.github.io/shineyoureye-images/Representatives/b2a7f72a-9ecf-4263-83f1-cb0f8783053c/250x250.jpeg')
+             .must_equal('https://theyworkforyou.github.io/shineyoureye-images/Representatives/b2a7f72a-9ecf-4263-83f1-cb0f8783053c/250x250.jpeg')
     end
 
     it 'displays the name as alternative text' do
@@ -33,24 +33,24 @@ describe 'Person Page' do
 
     it 'shows a picture anyway (empty avatar)' do
       subject.css('img.person__image/@src').first.text
-        .must_equal('/images/person-250x250.png')
+             .must_equal('/images/person-250x250.png')
     end
   end
 
   describe 'when person has an area' do
     it 'shows the area type name' do
       subject.css('.person__key-info h2').text
-        .must_include('Federal Constituency')
+             .must_include('Federal Constituency')
     end
 
     it 'links to the area page' do
       subject.css('.person__area a/@href').first.text
-        .must_equal('/place/maiduguri/')
+             .must_equal('/place/maiduguri/')
     end
 
     it 'displays the area name' do
       subject.css('.person__area a').first.text
-        .must_equal('Maiduguri (Metropolitan)')
+             .must_equal('Maiduguri (Metropolitan)')
     end
   end
 
@@ -81,7 +81,7 @@ describe 'Person Page' do
 
     it 'links to it' do
       subject.css('.person__twitter a/@href').first.text
-        .must_equal('https://twitter.com/benmurraybruce')
+             .must_equal('https://twitter.com/benmurraybruce')
     end
 
     it 'displays it' do
@@ -94,7 +94,7 @@ describe 'Person Page' do
 
     it 'links to it' do
       subject.css('.person__facebook a/@href').first.text
-        .must_equal('https://www.facebook.com/WillieObiano')
+             .must_equal('https://www.facebook.com/WillieObiano')
     end
 
     it 'displays it' do
@@ -107,12 +107,12 @@ describe 'Person Page' do
 
     it 'links to the email' do
       subject.css('.person__email a/@href').first.text
-        .must_equal('mailto:adamu.abdullahi@gmail.com')
+             .must_equal('mailto:adamu.abdullahi@gmail.com')
     end
 
     it 'displays the email' do
       subject.css('.person__email a').first.text
-        .must_equal('adamu.abdullahi@gmail.com')
+             .must_equal('adamu.abdullahi@gmail.com')
     end
   end
 
@@ -121,12 +121,12 @@ describe 'Person Page' do
 
     it 'links to it' do
       subject.css('.person__wikipedia a/@href').first.text
-        .must_equal('https://en.wikipedia.org/wiki/Fatimat_Olufunke_Raji-Rasaki')
+             .must_equal('https://en.wikipedia.org/wiki/Fatimat_Olufunke_Raji-Rasaki')
     end
 
     it 'displays it' do
       subject.css('.person__wikipedia a').first.text
-        .must_equal('https://en.wikipedia.org/wiki/Fatimat_Olufunke_Raji-Rasaki')
+             .must_equal('https://en.wikipedia.org/wiki/Fatimat_Olufunke_Raji-Rasaki')
     end
   end
 
@@ -135,19 +135,19 @@ describe 'Person Page' do
 
     it 'edit link points to the right person id' do
       subject.css('.person-edit-link/@href').text
-        .must_include('/summaries/0baa5a03-b1e0-4e66-b3f9-daee8bacb87d.md')
+             .must_include('/summaries/0baa5a03-b1e0-4e66-b3f9-daee8bacb87d.md')
     end
 
     it 'shows summary contents if person has summary' do
       subject.css('.person-summary li').last.text
-        .must_include('Student at LEA PRI.SCH. from 1969 to 1974')
+             .must_include('Student at LEA PRI.SCH. from 1969 to 1974')
     end
   end
 
   describe 'when person has no summary' do
     it 'edit link points to the right person id' do
       subject.css('.person-edit-link/@href').text
-        .must_include('/summaries/b2a7f72a-9ecf-4263-83f1-cb0f8783053c.md')
+             .must_include('/summaries/b2a7f72a-9ecf-4263-83f1-cb0f8783053c.md')
     end
 
     it 'shows nothing in the summary' do

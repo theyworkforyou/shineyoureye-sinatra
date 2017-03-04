@@ -11,7 +11,7 @@ describe 'Info Page' do
 
   it 'displays the contents of the page' do
     subject.css('.markdown.infopage').text
-      .must_include('Shine your Eye is an initiative of Enough is Enough Nigeria')
+           .must_include('Shine your Eye is an initiative of Enough is Enough Nigeria')
   end
 
   it 'throws a 404 error if no file is found' do

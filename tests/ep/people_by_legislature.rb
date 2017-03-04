@@ -33,7 +33,7 @@ describe 'EP::PeopleByLegislature' do
 
     it 'finds a single person by id' do
       people.find_single('b2a7f72a-9ecf-4263-83f1-cb0f8783053c').name
-        .must_equal('ABDUKADIR RAHIS')
+            .must_equal('ABDUKADIR RAHIS')
     end
 
     it 'can check if id does not exist in this legislature' do
@@ -60,7 +60,7 @@ describe 'EP::PeopleByLegislature' do
 
     it 'assigns a mapit area to the person' do
       people.find_single('b2a7f72a-9ecf-4263-83f1-cb0f8783053c').area.id
-        .must_equal(1)
+            .must_equal(1)
     end
 
     it 'finds all people in a mapit area' do

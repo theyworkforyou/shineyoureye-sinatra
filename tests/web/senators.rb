@@ -42,7 +42,7 @@ describe 'Senate' do
 
       it 'shows a picture anyway (empty avatar)' do
         person.css('.media-object/@src').first.text
-          .must_include('/images/person-250x250.png')
+              .must_include('/images/person-250x250.png')
       end
     end
 
