@@ -10,7 +10,7 @@ module LayoutHelper
   end
 
   def homepage?
-    request.env['PATH_INFO'].match(/^\/?$/)
+    request.env['PATH_INFO'].match(%r{^\/?$})
   end
 
   def add_active_class(path)
