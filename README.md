@@ -119,8 +119,10 @@ rbenv rehash
 * `lib/ep`: code to parse EveryPolitician data
 * `lib/helpers`: mostly site-specific stuff
 * `lib/mapit`: code to parse Mapit data
+* `lib/morph`: code to parse Morph data
 * `lib/page`: presenters to extract all logic out of the views
 * `mapit`: CSV files that map MapIt Area IDs to other IDs
+* `morph`: CSV files produced by a scraper on morph.io
 * `prose`: where the `shineyoureye-prose` repository will be cloned. Contains
 user introduced content, like blog posts, events, etc.
 * `public`: static assets
