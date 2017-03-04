@@ -77,7 +77,7 @@ describe 'Person Page' do
   end
 
   describe 'when person has a Twitter' do
-    before { get '/person/13721811-4357-419c-8ca7-8f1170b36f1a/'}
+    before { get '/person/13721811-4357-419c-8ca7-8f1170b36f1a/' }
 
     it 'links to it' do
       subject.css('.person__twitter a/@href').first.text
@@ -117,7 +117,7 @@ describe 'Person Page' do
   end
 
   describe 'when person has wikipedia url' do
-    before { get '/person/0577f346-e883-4e1d-94eb-e3050d5c15f1/'}
+    before { get '/person/0577f346-e883-4e1d-94eb-e3050d5c15f1/' }
 
     it 'links to it' do
       subject.css('.person__wikipedia a/@href').first.text
