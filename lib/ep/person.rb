@@ -12,8 +12,9 @@ module EP
     end
 
     extend Forwardable
-    def_delegators :@person, :id, :name, :birth_date, :image, :phone,
-                             :email, :twitter, :facebook, :memberships
+    def_delegators :@person,
+                   :id, :name, :birth_date, :image, :phone,
+                   :email, :twitter, :facebook, :memberships
 
     include PersonProxyImages
     include PersonSocial
