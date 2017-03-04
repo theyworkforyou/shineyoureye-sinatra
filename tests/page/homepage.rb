@@ -5,11 +5,11 @@ require_relative '../../lib/page/homepage'
 describe 'Page::Homepage' do
   let(:documents) do
     [
-      FakeDocument.new('1000-01-11-foo', "#{yesterday}"),
-      FakeDocument.new('1000-01-12-bar', "#{today}"),
-      FakeDocument.new('1000-01-13-qux', "#{tomorrow}"),
-      FakeDocument.new('1000-01-14-qux', "#{in_two_weeks}"),
-      FakeDocument.new('1000-01-15-qux', "#{in_two_weeks}")
+      FakeDocument.new('1000-01-11-foo', yesterday.to_s),
+      FakeDocument.new('1000-01-12-bar', today.to_s),
+      FakeDocument.new('1000-01-13-qux', tomorrow.to_s),
+      FakeDocument.new('1000-01-14-qux', in_two_weeks.to_s),
+      FakeDocument.new('1000-01-15-qux', in_two_weeks.to_s)
     ]
   end
   let(:page) { Page::Homepage.new(posts: documents, events: documents) }
