@@ -32,7 +32,7 @@ module Document
     attr_reader :filecontents
 
     def parse
-      YAML::load(filecontents) || {}
+      YAML.safe_load(filecontents) || {}
     end
 
     def fetch(key, default_value = '')
