@@ -5,11 +5,13 @@ require_relative '../../lib/ep/people_by_legislature'
 describe 'EP::PeopleByLegislature' do
   let(:legislature) { nigeria_at_known_revision.legislature('Representatives') }
   describe 'class methods' do
-    let(:people) { EP::PeopleByLegislature.new(
-      legislature: legislature,
-      mapit: 'irrelevant',
-      baseurl: '/baseurl/'
-    ) }
+    let(:people) do
+      EP::PeopleByLegislature.new(
+        legislature: legislature,
+        mapit: 'irrelevant',
+        baseurl: '/baseurl/'
+      )
+    end
 
     it 'has a list of all the people' do
       people.find_all.count.must_equal(364)
@@ -52,11 +54,13 @@ describe 'EP::PeopleByLegislature' do
   end
 
   describe 'extra mapit functionality' do
-    let(:people) { EP::PeopleByLegislature.new(
-      legislature: legislature,
-      mapit: FakeMapit.new(1),
-      baseurl: '/baseurl/'
-    ) }
+    let(:people) do
+      EP::PeopleByLegislature.new(
+        legislature: legislature,
+        mapit: FakeMapit.new(1),
+        baseurl: '/baseurl/'
+      )
+    end
 
     it 'assigns a mapit area to the person' do
       people.find_single('b2a7f72a-9ecf-4263-83f1-cb0f8783053c').area.id

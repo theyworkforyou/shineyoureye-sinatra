@@ -4,12 +4,15 @@ require_relative '../../lib/mapit/mappings'
 
 describe 'Mapit::Mappings' do
   describe 'FED to STA mappings' do
-    let(:fed_to_sta) { new_tempfile('949,16
+    let(:fed_to_sta) do
+      new_tempfile(
+        '949,16
 1091,12'
-    ) }
-    let(:mappings) { Mapit::Mappings.new(
-      parent_mapping_filenames: [fed_to_sta],
-    ) }
+      )
+    end
+    let(:mappings) do
+      Mapit::Mappings.new(parent_mapping_filenames: [fed_to_sta])
+    end
 
     it 'can map all constituencies to their state' do
       mappings.child_to_parent.count.must_equal(2)
@@ -29,14 +32,17 @@ describe 'Mapit::Mappings' do
   end
 
   describe 'Mapit ids to Pombola slugs' do
-    let(:pombola_to_mapit) { new_tempfile('gwagwaladakuje,949,FED
+    let(:pombola_to_mapit) do
+      new_tempfile(
+        'gwagwaladakuje,949,FED
 federal-capital-territory,16,STA
 abakalikiizzi,1091,FED
 ebonyi,12,STA'
-    ) }
-    let(:mappings) { Mapit::Mappings.new(
-      pombola_slugs_to_mapit_ids_filename: pombola_to_mapit,
-    ) }
+      )
+    end
+    let(:mappings) do
+      Mapit::Mappings.new(pombola_slugs_to_mapit_ids_filename: pombola_to_mapit)
+    end
 
     it 'can map all mapit ids to their Pombola slug' do
       mappings.mapit_ids_to_pombola_slugs.count.must_equal(4)
@@ -64,15 +70,23 @@ ebonyi,12,STA'
   end
 
   describe 'EP to mapit area mappings' do
-    let(:mapit_to_ep_fed) { new_tempfile('1139,"area/adavi/okehi,_kogi_state"
+    let(:mapit_to_ep_fed) do
+      new_tempfile(
+        '1139,"area/adavi/okehi,_kogi_state"
 1203,"area/ado-odo/ota,_ogun_state"'
-    ) }
-    let(:mapit_to_ep_sen) { new_tempfile('832,"area/borno_south,_borno_state"
+      )
+    end
+    let(:mapit_to_ep_sen) do
+      new_tempfile(
+        '832,"area/borno_south,_borno_state"
 836,"area/delta_central,_delta_state"'
-    ) }
-    let(:mappings) { Mapit::Mappings.new(
-      mapit_to_ep_areas_filenames: [mapit_to_ep_fed, mapit_to_ep_sen]
-    ) }
+      )
+    end
+    let(:mappings) do
+      Mapit::Mappings.new(
+        mapit_to_ep_areas_filenames: [mapit_to_ep_fed, mapit_to_ep_sen]
+      )
+    end
 
     it 'can map all ep areas to their mapit area' do
       mappings.ep_to_mapit_ids.count.must_equal(4)

@@ -9,7 +9,7 @@ module Page
     end
 
     def sorted_posts
-      posts.sort_by { |d| d.date }.reverse
+      posts.sort_by(&:date).reverse
     end
 
     def format_date(date)

@@ -3,10 +3,12 @@ require 'test_helper'
 require_relative '../../lib/page/posts'
 
 describe 'Page::Posts' do
-  let(:posts) { [
-    FakeDoc.new('2016-01-01-foo', '/blog/'),
-    FakeDoc.new('2012-01-01-bar', '/blog/')
-  ] }
+  let(:posts) do
+    [
+      FakeDoc.new('2016-01-01-foo', '/blog/'),
+      FakeDoc.new('2012-01-01-bar', '/blog/')
+    ]
+  end
   let(:page) { Page::Posts.new(posts: posts, title: 'Blog') }
 
   it 'has a title' do
