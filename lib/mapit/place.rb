@@ -22,7 +22,7 @@ module Mapit
       mapit_area_data['type_name']
     end
 
-    alias_method :child_area?, :parent
+    alias child_area? parent
 
     def url
       "#{baseurl}#{pombola_slug}/"
