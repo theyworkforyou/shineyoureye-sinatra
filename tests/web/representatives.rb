@@ -40,11 +40,11 @@ describe 'List of Representatives' do
     end
 
     describe 'when person does not have an image' do
-      let(:person) { subject.css('.media')[2] }
+      let(:person) { subject.xpath('//li[@class="media"][.//h3[text()="ADAMU KAMALE"]]') }
 
       it 'shows a picture anyway (empty avatar)' do
-        person.css('a img/@src').first.text
-          .must_include('/764fce72-c12a-42ad-ba84-d899f81f7a77/100x100.jpeg')
+        person.css('.media-object/@src').first.text
+          .must_include('/images/person-250x250.png')
       end
     end
 

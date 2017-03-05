@@ -38,10 +38,11 @@ describe 'Senate' do
     end
 
     describe 'when person does not have an image' do
-      let(:person) { subject.css('.media')[2] }
+      let(:person) { subject.xpath('//li[@class="media"][.//h3[text()="ATAI USMAN"]]') }
 
-      it 'shows a generic picture' do
-        person.css('a img/@src').first.text.must_include('/f63fc610-ec4b-4ba0-bf02-b543c5fd8c8f/100x100.jpeg')
+      it 'shows a picture anyway (empty avatar)' do
+        person.css('.media-object/@src').first.text
+          .must_include('/images/person-250x250.png')
       end
     end
 
