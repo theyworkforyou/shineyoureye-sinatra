@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 require 'test_helper'
 require_relative '../../lib/ep/people_by_legislature'
+require_relative '../../lib/membership_csv/people'
 require_relative '../../lib/page/person'
+require_relative 'person_interface_test'
 
 describe 'Page::Person' do
   let(:people) { EP::PeopleByLegislature.new(
@@ -31,70 +33,27 @@ describe 'Page::Person' do
     page.summary.must_equal('<p>foo</p>')
   end
 
-  describe 'person' do
-    it 'has a url to a medium-sized image' do
-      page.person.respond_to?(:medium_image_url).must_equal(true)
-    end
+  describe 'when page is an EP person' do
+    include PersonInterfaceTest
+    let(:person) { page.person }
+  end
 
-    it 'has a name' do
-      page.person.respond_to?(:name).must_equal(true)
-    end
-
-    it 'has an area' do
-      page.person.respond_to?(:area).must_equal(true)
-    end
-
-    it 'has a party name' do
-      page.person.respond_to?(:party_name).must_equal(true)
-    end
-
-    it 'has a birth date' do
-      page.person.respond_to?(:birth_date).must_equal(true)
-    end
-
-    it 'has a phone' do
-      page.person.respond_to?(:phone).must_equal(true)
-    end
-
-    it 'has a Twitter' do
-      page.person.respond_to?(:twitter).must_equal(true)
-    end
-
-    it 'has a Twitter url' do
-      page.person.respond_to?(:twitter_url).must_equal(true)
-    end
-
-    it 'has a Twitter display' do
-      page.person.respond_to?(:twitter_display).must_equal(true)
-    end
-
-    it 'has a Facebook' do
-      page.person.respond_to?(:facebook).must_equal(true)
-    end
-
-    it 'has a Facebook url' do
-      page.person.respond_to?(:facebook_url).must_equal(true)
-    end
-
-    it 'has a Facebook display' do
-      page.person.respond_to?(:facebook_display).must_equal(true)
-    end
-
-    it 'has an email' do
-      page.person.respond_to?(:email).must_equal(true)
-    end
-
-    it 'has an email url' do
-      page.person.respond_to?(:email_url).must_equal(true)
-    end
-
-    it 'has a wikipedia url' do
-      page.person.respond_to?(:wikipedia_url).must_equal(true)
-    end
-
-    it 'has an id' do
-      page.person.respond_to?(:id).must_equal(true)
-    end
+  describe 'when page is a Morph person' do
+    include PersonInterfaceTest
+    let(:contents) { 'id
+1'
+    }
+    let(:people) { MembershipCSV::People.new(
+      csv_filename: new_tempfile(contents),
+      mapit: 'irrelevant',
+      baseurl: 'irrelevant'
+    ) }
+    let(:page) { Page::Person.new(
+      person: people.find_single('1'),
+      position: 'irrelevant',
+      summary_doc: 'irrelevant'
+    ) }
+    let(:person) { page.person }
   end
 
   FakeSummary = Struct.new(:body)
