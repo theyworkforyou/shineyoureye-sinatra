@@ -21,7 +21,7 @@ id3,name3,name-3,'
     people.find_all.count.must_equal(3)
   end
 
-  it 'finds all people as morph persons' do
+  it 'finds all people as persons' do
     people.find_all.first.id.must_equal('id1')
   end
 
@@ -57,6 +57,10 @@ id3,name3,name-3,'
 
     it 'assigns a mapit area to the person' do
       people.find_single('id3').area.id.must_equal(1)
+    end
+
+    it 'finds all people in a mapit area' do
+      people.find_all_by_mapit_area(1).count.must_equal(3)
     end
   end
 end
