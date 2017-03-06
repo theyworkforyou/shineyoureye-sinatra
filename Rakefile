@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 require 'rake/testtask'
+require 'rubocop/rake_task'
 
 Rake::TestTask.new do |t|
   t.name = 'test'
@@ -9,4 +10,6 @@ Rake::TestTask.new do |t|
   t.libs << 'tests'
 end
 
-task default: ['test']
+RuboCop::RakeTask.new
+
+task default: ['test', 'rubocop']

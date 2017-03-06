@@ -158,17 +158,29 @@ bundle exec rackup
 And go to <http://localhost:9292/>
 
 
-## Tests
+## Tests and RubCop
 
-(Assuming you have installed the fixtures with `bin/prepare-data`, as above.)
+(This assumes you have installed the fixtures with `bin/prepare-data`, as above.)
 
-### Run the tests
+### Run both the tests and RuboCop checks
 
 ```bash
-bundle exec rake test
+bundle exec rake
 ```
 
-### Run one test file
+### Running just the RuboCop checks
+
+```bash
+bundle exec rake rubocop
+```
+
+### Running just the tests
+
+```base
+bundle  exec rake test
+```
+
+### Run the tests from just one file
 
 ```bash
 bundle exec rake test TEST='path/to/test/file'
