@@ -22,6 +22,10 @@ module Mapit
       id_to_place[mapit_mappings.ep_to_mapit_ids[id]]
     end
 
+    def area_from_mapit_name(name)
+      name_to_place[name]
+    end
+
     def places_of_type(area_type)
       type_to_places[area_type]
     end
@@ -54,6 +58,10 @@ module Mapit
     def cache_mapit_data
       @type_to_places = area_types.map { |t| [t, places(t)] }.to_h
       @id_to_place = type_to_places.values.flatten.map { |a| [a.id.to_s, a] }.to_h
+    end
+
+    def name_to_place
+      @name_to_place ||= id_to_place.values.map { |place| [place.name, place] }.to_h
     end
 
     def set_up_parent_child_relationships

@@ -186,10 +186,10 @@ describe 'MembershipCSV::Person' do
 
   describe 'url' do
     it 'has a url' do
-      person.url.must_equal('/baseurl/okezie-ikpeazu/')
+      person.url.must_equal('/baseurl/gov:victor-okezie-ikpeazu/')
     end
 
-    it 'returns nil if no site identifier' do
+    it 'returns nil if no id' do
       person = morph_person(person_empty)
       assert_nil(person.url)
     end

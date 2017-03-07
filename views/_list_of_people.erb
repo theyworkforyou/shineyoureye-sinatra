@@ -5,6 +5,8 @@
             <a href="<%= person.url %>">
               <% if person.thumbnail_image_url %>
                 <img class="media-object" src="<%= person.thumbnail_image_url %>" srcset="<%= person.thumbnail_image_url %>" alt="<%= person.name %>">
+              <% else %>
+                <img class="media-object" src="/images/person-250x250.png" srcset="/images/person-250x250.png" alt="<%= person.name %>">
               <% end %>
             </a>
         </div>

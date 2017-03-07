@@ -119,7 +119,7 @@ rbenv rehash
 * `lib/ep`: code to parse EveryPolitician data
 * `lib/helpers`: mostly site-specific stuff
 * `lib/mapit`: code to parse Mapit data
-* `lib/morph`: code to parse Morph data
+* `lib/membership_csv`: code to parse membership data coming from a CSV file, for example a scraper running in Morph
 * `lib/page`: presenters to extract all logic out of the views
 * `mapit`: CSV files that map MapIt Area IDs to other IDs
 * `morph`: CSV files produced by a scraper on morph.io
