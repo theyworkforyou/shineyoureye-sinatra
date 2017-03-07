@@ -67,7 +67,7 @@ deploy_site() {
         echo "Cloning: $GH_PAGES_GIT_URL_REDACTED"
         git clone --depth=1 "$GH_PAGES_GIT_URL" -b gh-pages
         cd "$GH_PAGES_REPO"
-        git rm -r .
+        git rm -rq .
         # But keep the CNAME file!
         git checkout HEAD -- CNAME
         cp -R ../"${SINATRA_BASE_URL##*//}"/* .
