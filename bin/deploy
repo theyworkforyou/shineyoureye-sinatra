@@ -86,7 +86,7 @@ deploy_site() {
                 fi
             fi
         done
-        GIT_AUTHOR_NAME="Democracy Sites Team" GIT_AUTHOR_EMAIL="parliaments@mysociety.org" git commit -m "Automated commit of generated static site data
+        git -c "user.name=Democracy Sites Team" -c "user.email=parliaments@mysociety.org" commit -m "Automated commit of generated static site data
 
 The shineyoureye-sinatra version was: $PROSE_VERSION
 The shineyoureye-prose version was: $SYE_SINATRA_VERSION"
