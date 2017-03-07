@@ -147,7 +147,7 @@ end
 get '/place/:slug/' do |slug|
   state = mapit.area_from_pombola_slug(slug)
   pass unless state
-  @page = Page::Place.new(place: state, people_by_legislature: representatives)
+  @page = Page::Place.new(place: state, people_by_legislature: governors)
   erb :place
 end
 

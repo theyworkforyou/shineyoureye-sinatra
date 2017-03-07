@@ -43,4 +43,59 @@ describe 'State Place Page' do
     get '/place/i-dont-exist/'
     subject.css('h1').first.text.must_equal('Not Found')
   end
+
+  describe 'person item' do
+    let(:person) { subject.css('.media-list--people .media').first }
+
+    it 'links to the person page' do
+      person.css('.media-left a/@href').text
+            .must_equal('/person/gov:victor-okezie-ikpeazu/')
+      person.css('.media-body a/@href').first.text
+            .must_equal('/person/gov:victor-okezie-ikpeazu/')
+    end
+
+    it 'has an image that points to the thumbnail proxy image' do
+      person.css('.media-left img/@src').text
+            .must_include('/gov:victor-okezie-ikpeazu/100x100.jpeg')
+    end
+
+    it 'has an image whose srcset that points to the thumbnail proxy image' do
+      person.css('.media-left img/@srcset').text
+            .must_include('/gov:victor-okezie-ikpeazu/100x100.jpeg')
+    end
+
+    it 'has an image whose alternative text is the person name' do
+      person.css('.media-left img/@alt').text
+            .must_equal('Victor Okezie Ikpeazu')
+    end
+
+    it 'displays the person name' do
+      person.css('.media-body a').first.text
+            .must_equal('Victor Okezie Ikpeazu')
+    end
+
+    it 'shows right area type name' do
+      person.css('.media-body p').first.text.must_include('State')
+    end
+
+    it 'links to the person area' do
+      person.css('.listing__area @href').text
+            .must_equal('/place/abia/')
+    end
+
+    it 'displays the person area name' do
+      person.css('.listing__area').text
+            .must_equal('Abia')
+    end
+
+    it 'links to the person party' do
+      person.css('.listing__party @href').text
+            .must_equal('/organisation/pdp/')
+    end
+
+    it 'displays the person party name' do
+      person.css('.listing__party').text
+            .must_equal('PDP')
+    end
+  end
 end
