@@ -26,6 +26,14 @@ module MembershipCSV
       mapit_id_to_person[mapit_id.to_s]
     end
 
+    def current_term_start_date
+      nil
+    end
+
+    def legislature_name
+      nil
+    end
+
     private
 
     attr_reader :csv_filename, :mapit, :baseurl

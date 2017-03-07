@@ -46,6 +46,14 @@ id3,name3,name-3,'
     people.none?('i-do-not-exist').must_equal(true)
   end
 
+  it 'does not know the start date of the current term' do
+    assert_nil(people.current_term_start_date)
+  end
+
+  it 'does not know its legislature name' do
+    assert_nil(people.legislature_name)
+  end
+
   describe 'extra mapit functionality' do
     let(:people) do
       MembershipCSV::People.new(
