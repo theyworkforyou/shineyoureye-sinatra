@@ -70,7 +70,7 @@ module MembershipCSV
     end
 
     def url
-      baseurl + slug + '/' if slug
+      baseurl + id + '/' if id
     end
 
     private
