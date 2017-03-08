@@ -29,26 +29,23 @@
         </p>
         <a class="btn btn-default" href="/position/executive-governor/"><b>Governors</b></a>
       </div>
-      <div class="col-sm-4 homepage__reps__rep">
-        <a href="http://sinatra.staging.shineyoureye.org/person/5b2c1b00-d954-44ee-a16b-36f159d12982/">
-          <img src="https://theyworkforyou.github.io/shineyoureye-images/Senate/5b2c1b00-d954-44ee-a16b-36f159d12982/250x250.jpeg">
-        </a>
-        <p>
-            <strong>Binta Garba,</strong>
-            APC, Adamawa North
-        </p>
-        <a class="btn btn-default" href="/position/senator/"><b>Senators</b></a>
-      </div>
-      <div class="col-sm-4 homepage__reps__rep">
-        <a href="/person/ed60d392-ebe6-49f6-8174-10eb29dbb216/">
-          <img src="https://theyworkforyou.github.io/shineyoureye-images/Representatives/ed60d392-ebe6-49f6-8174-10eb29dbb216/250x250.jpeg">
-        </a>
-        <p>
-            <strong>Lawali Hassan,</strong>
-            APC, Zamfara
-        </p>
-        <a class="btn btn-default" href="/position/representative/"><b>Representatives</b></a>
-      </div>
+      <% @page.featured_people.each do |page_fragment| %>
+        <% if page_fragment.featured_person %>
+        <div class="col-sm-4 homepage__reps__rep">
+            <a href="<%= page_fragment.featured_person.url %>">
+                <img src="<%= page_fragment.featured_person.medium_image_url %>">
+            </a>
+            <p>
+                <strong><%= page_fragment.featured_person.name %></strong>,
+                <%= page_fragment.featured_person.party_name %>,
+                <%= page_fragment.featured_person.area.name if page_fragment.featured_person.area %>
+            </p>
+            <a class="btn btn-default" href="<%= page_fragment.people_type_url %>">
+                <strong><%= page_fragment.people_type_display_text %></strong>
+            </a>
+        </div>
+        <% end %>
+      <% end %>
     </div>
   </div>
 </div>

@@ -3,6 +3,7 @@ require 'bootstrap-sass'
 require 'everypolitician'
 require 'sinatra'
 
+require_relative 'lib/featured_person'
 require_relative 'lib/document/finder'
 require_relative 'lib/ep/people_by_legislature'
 require_relative 'lib/helpers/filepaths_helper'
@@ -68,11 +69,26 @@ senators = EP::PeopleByLegislature.new(
 get '/' do
   posts_finder = Document::Finder.new(pattern: posts_pattern, baseurl: '/blog/')
   events_finder = Document::Finder.new(pattern: events_pattern, baseurl: '/info/events/')
-  @page = Page::Homepage.new(
-    posts: posts_finder.find_all,
-    events: events_finder.find_all,
-    featured_people: []
-  )
+  summaries_finder = Document::Finder.new(pattern: summaries_pattern, baseurl: '')
+  featured_summaries = summaries_finder.find_featured
+  people = [
+    PageFragment::FeaturedPerson.new(
+      governors.featured_person(featured_summaries),
+      'Governors',
+      '/position/executive-governor/'
+    ),
+    PageFragment::FeaturedPerson.new(
+      senators.featured_person(featured_summaries),
+      'Senators',
+      '/position/senator/'
+    ),
+    PageFragment::FeaturedPerson.new(
+      representatives.featured_person(featured_summaries),
+      'Representatives',
+      '/position/representative/'
+    )
+  ]
+  @page = Page::Homepage.new(posts: posts_finder.find_all, events: events_finder.find_all, featured_people: people)
   erb :homepage
 end
 
