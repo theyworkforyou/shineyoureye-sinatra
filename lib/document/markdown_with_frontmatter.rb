@@ -53,7 +53,7 @@ module Document
     end
 
     def rawname
-      basename.gsub(DATE_PATTERN, '').gsub(extname, '')[1..-1]
+      basename.gsub(/#{DATE_PATTERN}-/, '').gsub(extname, '')
     end
 
     def slug
