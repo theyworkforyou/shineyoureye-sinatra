@@ -10,7 +10,7 @@ module Page
     end
 
     def date
-      post.date.strftime("%B %-d, %Y")
+      post.date.strftime('%B %-d, %Y')
     end
 
     def body

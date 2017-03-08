@@ -3,7 +3,7 @@ require 'test_helper'
 require_relative '../../lib/membership_csv/person'
 
 describe 'MembershipCSV::Person' do
-  let(:person) { morph_person(person_filled) }
+  let(:person) { morph_person(PERSON_FILLED) }
 
   describe 'person proxy images' do
     it 'has a thumbnail image' do
@@ -203,27 +203,25 @@ describe 'MembershipCSV::Person' do
     )
   end
 
-  def person_filled
-    {
-      'honorific_prefix' => 'Dr',
-      'name' => 'Victor Okezie Ikpeazu',
-      'id' => 'gov:victor-okezie-ikpeazu',
-      'state' => 'Abia',
-      'party' => 'PDP',
-      'email' => 'info@abiastate.gov.ng;person@example.com',
-      'phone' => '7030152466;08063496033;08035879790',
-      'twitter' => 'GovDickson;DicksonSeriake',
-      'facebook_url' => 'https://www.facebook.com/OyoStateGovernment;http://www.facebook.com/AbiolaAjimobi',
-      'birth_date' => '1964-10-18',
-      'gender' => 'Male',
-      'identifier__shineyoureye' => 'okezie-ikpeazu',
-      'image_url' => 'http://www.shineyoureye.org/media_root/images/Abia_-_Okezie_Ikpeazu.jpg',
-      'website_url' => 'http://ekitistate.gov.ng/',
-      'other_names' => 'Okezie Ikpeazu'
-    }
-  end
+  PERSON_FILLED = {
+    'honorific_prefix' => 'Dr',
+    'name' => 'Victor Okezie Ikpeazu',
+    'id' => 'gov:victor-okezie-ikpeazu',
+    'state' => 'Abia',
+    'party' => 'PDP',
+    'email' => 'info@abiastate.gov.ng;person@example.com',
+    'phone' => '7030152466;08063496033;08035879790',
+    'twitter' => 'GovDickson;DicksonSeriake',
+    'facebook_url' => 'https://www.facebook.com/OyoStateGovernment;http://www.facebook.com/AbiolaAjimobi',
+    'birth_date' => '1964-10-18',
+    'gender' => 'Male',
+    'identifier__shineyoureye' => 'okezie-ikpeazu',
+    'image_url' => 'http://www.shineyoureye.org/media_root/images/Abia_-_Okezie_Ikpeazu.jpg',
+    'website_url' => 'http://ekitistate.gov.ng/',
+    'other_names' => 'Okezie Ikpeazu'
+  }.freeze
 
   def person_empty
-    person_filled.each_with_object({}) { |(key, _), memo| memo[key] = nil }
+    PERSON_FILLED.each_with_object({}) { |(key, _), memo| memo[key] = nil }
   end
 end

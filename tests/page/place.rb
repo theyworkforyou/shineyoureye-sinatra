@@ -5,21 +5,27 @@ require_relative '../../lib/mapit/place'
 require_relative '../../lib/page/place'
 
 describe 'Page::Place' do
-  let(:place) { Mapit::Place.new(
-    mapit_area_data: area,
-    pombola_slug: 'gwagwaladakuje',
-    baseurl: '/baseurl/'
-  ) }
-  let(:people) { EP::PeopleByLegislature.new(
-    legislature: nigeria_at_known_revision.legislature('Representatives'),
-    mapit: FakeMapit.new(949),
-    baseurl: '/baseurl/'
-  ) }
-  let(:page) { Page::Place.new(
-    place: place,
-    people_by_legislature: people,
-    people_path: '/people/'
-  ) }
+  let(:place) do
+    Mapit::Place.new(
+      mapit_area_data: area,
+      pombola_slug: 'gwagwaladakuje',
+      baseurl: '/baseurl/'
+    )
+  end
+  let(:people) do
+    EP::PeopleByLegislature.new(
+      legislature: nigeria_at_known_revision.legislature('Representatives'),
+      mapit: FakeMapit.new(949),
+      baseurl: '/baseurl/'
+    )
+  end
+  let(:page) do
+    Page::Place.new(
+      place: place,
+      people_by_legislature: people,
+      people_path: '/people/'
+    )
+  end
 
   it 'has a title' do
     page.title.must_equal('Abaji/Gwagwalada/Kwali/Kuje')

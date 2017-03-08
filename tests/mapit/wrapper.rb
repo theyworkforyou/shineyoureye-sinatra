@@ -3,12 +3,14 @@ require 'test_helper'
 require_relative '../../lib/mapit/wrapper'
 
 describe 'Mappit::Wrapper' do
-  let(:mapit) { Mapit::Wrapper.new(
-    mapit_mappings: FakeMappings.new,
-    baseurl: '/baseurl/',
-    area_types: %w(FED SEN STA),
-    data_directory: 'mapit'
-  ) }
+  let(:mapit) do
+    Mapit::Wrapper.new(
+      mapit_mappings: FakeMappings.new,
+      baseurl: '/baseurl/',
+      area_types: %w(FED SEN STA),
+      data_directory: 'mapit'
+    )
+  end
 
   describe 'when getting the states' do
     it 'gets a list of all the states' do

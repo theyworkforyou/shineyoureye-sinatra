@@ -30,13 +30,13 @@ set :twitter_user, 'NGShineyoureye'
 mapit_mappings = Mapit::Mappings.new(
   parent_mapping_filenames: [
     'mapit/fed_to_sta_area_ids_mapping.csv',
-    'mapit/sen_to_sta_area_ids_mapping.csv',
+    'mapit/sen_to_sta_area_ids_mapping.csv'
   ],
   pombola_slugs_to_mapit_ids_filename:
     'mapit/pombola_place_slugs_to_mapit.csv',
   mapit_to_ep_areas_filenames: [
     'mapit/mapit_to_ep_area_ids_mapping_FED.csv',
-    'mapit/mapit_to_ep_area_ids_mapping_SEN.csv',
+    'mapit/mapit_to_ep_area_ids_mapping_SEN.csv'
   ]
 )
 
@@ -111,19 +111,31 @@ get '/place/is/state/' do
 end
 
 get '/place/is/federal-constituency/' do
-  @page = Page::Places.new(title: 'Federal Constituencies (Current)', places: mapit.places_of_type('FED'), people_by_legislature: representatives)
+  @page = Page::Places.new(
+    title: 'Federal Constituencies (Current)',
+    places: mapit.places_of_type('FED'),
+    people_by_legislature: representatives
+  )
   erb :places
 end
 
 get '/place/is/senatorial-district/' do
-  @page = Page::Places.new(title: 'Senatorial Districts (Current)', places: mapit.places_of_type('SEN'), people_by_legislature: senators)
+  @page = Page::Places.new(
+    title: 'Senatorial Districts (Current)',
+    places: mapit.places_of_type('SEN'),
+    people_by_legislature: senators
+  )
   erb :places
 end
 
 get '/place/:slug/' do |slug|
   constituency = mapit.area_from_pombola_slug(slug)
   pass if representatives.none_by_mapit_area?(constituency.id)
-  @page = Page::Place.new(place: constituency, people_by_legislature: representatives, people_path: '/people/')
+  @page = Page::Place.new(
+    place: constituency,
+    people_by_legislature: representatives,
+    people_path: '/people/'
+  )
   erb :place
 end
 
@@ -158,21 +170,33 @@ end
 get '/person/:id/' do |id|
   pass if representatives.none?(id)
   summary_finder = Document::Finder.new(pattern: summary_pattern(id), baseurl: '')
-  @page = Page::Person.new(person: representatives.find_single(id), position: 'Representative', summary_doc: summary_finder.find_or_empty)
+  @page = Page::Person.new(
+    person: representatives.find_single(id),
+    position: 'Representative',
+    summary_doc: summary_finder.find_or_empty
+  )
   erb :person
 end
 
 get '/person/:id/' do |id|
   pass if senators.none?(id)
   summary_finder = Document::Finder.new(pattern: summary_pattern(id), baseurl: '')
-  @page = Page::Person.new(person: senators.find_single(id), position: 'Senator', summary_doc: summary_finder.find_or_empty)
+  @page = Page::Person.new(
+    person: senators.find_single(id),
+    position: 'Senator',
+    summary_doc: summary_finder.find_or_empty
+  )
   erb :person
 end
 
 get '/person/:id/' do |id|
   pass if governors.none?(id)
   summary_finder = Document::Finder.new(pattern: summary_pattern(id), baseurl: '')
-  @page = Page::Person.new(person: governors.find_single(id), position: 'Governor', summary_doc: summary_finder.find_or_empty)
+  @page = Page::Person.new(
+    person: governors.find_single(id),
+    position: 'Governor',
+    summary_doc: summary_finder.find_or_empty
+  )
   erb :person
 end
 
@@ -202,5 +226,5 @@ get '/jinja2-template.html' do
 end
 
 get '/scraper-start-page.html' do
-  erb :scraper_start_page, :layout => false
+  erb :scraper_start_page, layout: false
 end

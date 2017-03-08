@@ -30,7 +30,7 @@
           <h1 class="person__name"><%= @page.title %></h1>
           <h2>
             <%= @page.place.type_name %>
-            <%= " #{(@page.legislature_name)}" if @page.place.is_child_area? %>
+            <%= " #{(@page.legislature_name)}" if @page.place.child_area? %>
           </h2>
         </header>
 

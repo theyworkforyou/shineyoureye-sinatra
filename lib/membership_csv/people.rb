@@ -31,7 +31,7 @@ module MembershipCSV
     end
 
     def remove_empty_cells(row)
-      row.reject { |header, value| value.nil? || value.empty? }.to_h
+      row.reject { |_header, value| value.nil? || value.empty? }.to_h
     end
 
     def read_with_headers

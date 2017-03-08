@@ -18,7 +18,7 @@ module PersonProxyImages
     thumbnail: '100x100',
     medium: '250x250',
     original: 'original'
-  }
+  }.freeze
 
   def proxy_image_variant(size)
     return if image.nil?
@@ -27,8 +27,7 @@ module PersonProxyImages
   end
 
   def raise_unless_image_size_available(size)
-    unless ALLOWED_IMAGE_SIZES.has_key?(size)
-      raise "Size #{size} is not known to be available"
-    end
+    error_message = "Size #{size} is not known to be available"
+    raise error_message unless ALLOWED_IMAGE_SIZES.key?(size)
   end
 end

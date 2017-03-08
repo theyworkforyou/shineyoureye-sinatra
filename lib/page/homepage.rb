@@ -7,11 +7,11 @@ module Page
     end
 
     def featured_posts
-      posts.sort_by { |d| d.date }.reverse.first(3)
+      posts.sort_by(&:date).reverse.first(3)
     end
 
     def featured_events
-      future_events.sort_by { |d| d.event_date }.first(3)
+      future_events.sort_by(&:event_date).first(3)
     end
 
     def no_events?
@@ -19,7 +19,7 @@ module Page
     end
 
     def format_date(date)
-      date.strftime("%B %-d, %Y")
+      date.strftime('%B %-d, %Y')
     end
 
     private

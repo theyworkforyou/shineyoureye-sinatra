@@ -19,6 +19,11 @@ describe 'The Jinja2 Template' do
   subject { Nokogiri::HTML(last_response.body) }
 
   it 'must have the right <div>s around a Jinja2 include of \'content\'' do
-    refute_empty(subject.xpath('//div[@id="page"]/div[@class="page-section"]/div[@class="container" and contains(text(), "{% include content %}")]'))
+    refute_empty(
+      subject.xpath(
+        '//div[@id="page"]/div[@class="page-section"] ' \
+        '/div[@class="container" and contains(text(), "{% include content %}")]'
+      )
+    )
   end
 end

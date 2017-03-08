@@ -5,7 +5,6 @@ require_relative '../../lib/page/info'
 describe 'Page::Info' do
   let(:page) { Page::Info.new(static_page: FakeInfo.new) }
 
-
   it 'has a title' do
     page.title.must_equal('A Title')
   end

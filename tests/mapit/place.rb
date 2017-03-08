@@ -4,16 +4,18 @@ require_relative '../../lib/mapit/place'
 
 describe 'Place' do
   describe 'when area has a parent' do
-    let(:place) { Mapit::Place.new(
-      mapit_area_data: area_with_parent,
-      pombola_slug: 'gwagwaladakuje',
-      baseurl: '/baseurl/',
-      parent: Mapit::Place.new(
-        mapit_area_data: area_with_no_parent,
-        pombola_slug: 'federal-capital-territory',
-        baseurl: '/baseurl/'
+    let(:place) do
+      Mapit::Place.new(
+        mapit_area_data: area_with_parent,
+        pombola_slug: 'gwagwaladakuje',
+        baseurl: '/baseurl/',
+        parent: Mapit::Place.new(
+          mapit_area_data: area_with_no_parent,
+          pombola_slug: 'federal-capital-territory',
+          baseurl: '/baseurl/'
+        )
       )
-    ) }
+    end
 
     it 'knows its id' do
       place.id.must_equal(949)
@@ -40,7 +42,7 @@ describe 'Place' do
     end
 
     it 'knows it is a child' do
-      assert(place.is_child_area?)
+      assert(place.child_area?)
     end
 
     it 'the parent returns nil for its parent' do
@@ -48,7 +50,7 @@ describe 'Place' do
     end
 
     it 'the parent knows it is not a child' do
-      refute(place.parent.is_child_area?)
+      refute(place.parent.child_area?)
     end
   end
 

@@ -2,7 +2,7 @@
 require 'test_helper'
 
 describe 'Layout' do
-  before  { get '/info/about' }
+  before { get '/info/about' }
   subject { Nokogiri::HTML(last_response.body) }
 
   it 'includes the head' do
@@ -22,7 +22,7 @@ describe 'Layout' do
   end
 
   describe 'fonts' do
-    before  { get '/fonts/bootstrap/glyphicons-halflings-regular.woff2' }
+    before { get '/fonts/bootstrap/glyphicons-halflings-regular.woff2' }
 
     it 'loads fonts' do
       last_response.content_type.must_equal('application/font-woff2')
@@ -30,7 +30,7 @@ describe 'Layout' do
   end
 
   describe 'javascript' do
-    before  { get '/javascripts/bootstrap/bootstrap.min.js' }
+    before { get '/javascripts/bootstrap/bootstrap.min.js' }
 
     it 'loads javascript' do
       last_response.content_type.must_equal('application/javascript;charset=utf-8')
@@ -38,7 +38,7 @@ describe 'Layout' do
   end
 
   describe 'robots' do
-    before  { get '/robots.txt' }
+    before { get '/robots.txt' }
 
     it 'disallows robots' do
       last_response.body.must_equal("User-agent: *\nDisallow:\n")

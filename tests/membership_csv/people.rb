@@ -3,16 +3,19 @@ require 'test_helper'
 require_relative '../../lib/membership_csv/people'
 
 describe 'MembershipCSV::People' do
-  let(:contents) { 'id,name,identifier__shineyoureye,phone
+  let(:contents) do
+    'id,name,identifier__shineyoureye,phone
 id1,name1,name-1,1234
 id2,name2,name-2,5678
 id3,name3,name-3,'
-  }
-  let(:people) { MembershipCSV::People.new(
-    csv_filename: new_tempfile(contents),
-    mapit: 'irrelevant',
-    baseurl: '/baseurl/'
-  ) }
+  end
+  let(:people) do
+    MembershipCSV::People.new(
+      csv_filename: new_tempfile(contents),
+      mapit: 'irrelevant',
+      baseurl: '/baseurl/'
+    )
+  end
 
   it 'finds all people' do
     people.find_all.count.must_equal(3)
@@ -44,11 +47,13 @@ id3,name3,name-3,'
   end
 
   describe 'extra mapit functionality' do
-    let(:people) { MembershipCSV::People.new(
-      csv_filename: new_tempfile(contents),
-      mapit: FakeMapit.new(1),
-      baseurl: '/baseurl/'
-    ) }
+    let(:people) do
+      MembershipCSV::People.new(
+        csv_filename: new_tempfile(contents),
+        mapit: FakeMapit.new(1),
+        baseurl: '/baseurl/'
+      )
+    end
 
     it 'assigns a mapit area to the person' do
       people.find_single('id3').area.id.must_equal(1)

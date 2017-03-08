@@ -3,17 +3,21 @@ require 'test_helper'
 require_relative '../../lib/document/markdown_with_frontmatter'
 
 describe 'Document::MarkdownWithFrontmatter' do
-  let(:contents) { "---
+  let(:contents) do
+    "---
 title: A Title
 slug: a-slug
 published: true
 eventdate: '2000-01-01 15:00 +0000'
 ---
-# Hello World" }
-  let(:document) { Document::MarkdownWithFrontmatter.new(
-    filename: new_tempfile(contents, '1000-10-01-file-name'),
-    baseurl: '/events/')
-  }
+# Hello World"
+  end
+  let(:document) do
+    Document::MarkdownWithFrontmatter.new(
+      filename: new_tempfile(contents, '1000-10-01-file-name'),
+      baseurl: '/events/'
+    )
+  end
 
   it 'has a title' do
     document.title.must_equal('A Title')

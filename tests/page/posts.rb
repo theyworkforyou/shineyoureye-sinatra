@@ -3,10 +3,12 @@ require 'test_helper'
 require_relative '../../lib/page/posts'
 
 describe 'Page::Posts' do
-  let(:posts) { [
-    FakeDoc.new('2016-01-01-foo', '/blog/'),
-    FakeDoc.new('2012-01-01-bar', '/blog/')
-  ] }
+  let(:posts) do
+    [
+      FakeDoc.new('2016-01-01-foo', '/blog/'),
+      FakeDoc.new('2012-01-01-bar', '/blog/')
+    ]
+  end
   let(:page) { Page::Posts.new(posts: posts, title: 'Blog') }
 
   it 'has a title' do
@@ -18,8 +20,8 @@ describe 'Page::Posts' do
   end
 
   it 'links posts to a url under the blog path' do
-    first.url.must_equal("/blog/foo")
-    last.url.must_equal("/blog/bar")
+    first.url.must_equal('/blog/foo')
+    last.url.must_equal('/blog/bar')
   end
 
   it 'sorts the posts from newer to older' do

@@ -6,16 +6,20 @@ require_relative '../../lib/page/person'
 require_relative 'person_interface_test'
 
 describe 'Page::Person' do
-  let(:people) { EP::PeopleByLegislature.new(
-    legislature: nigeria_at_known_revision.legislature('Representatives'),
-    mapit: 'irrelevant',
-    baseurl: 'irrelevant'
-  ) }
-  let(:page) { Page::Person.new(
-    person: people.find_single('b2a7f72a-9ecf-4263-83f1-cb0f8783053c'),
-    position: 'Position',
-    summary_doc: FakeSummary.new('<p>foo</p>')
-  ) }
+  let(:people) do
+    EP::PeopleByLegislature.new(
+      legislature: nigeria_at_known_revision.legislature('Representatives'),
+      mapit: 'irrelevant',
+      baseurl: 'irrelevant'
+    )
+  end
+  let(:page) do
+    Page::Person.new(
+      person: people.find_single('b2a7f72a-9ecf-4263-83f1-cb0f8783053c'),
+      position: 'Position',
+      summary_doc: FakeSummary.new('<p>foo</p>')
+    )
+  end
 
   it 'knows the position' do
     page.position.must_equal('Position')
@@ -40,20 +44,27 @@ describe 'Page::Person' do
 
   describe 'when page is a Morph person' do
     include PersonInterfaceTest
-    let(:contents) { 'id
+    let(:contents) do
+      'id
 1'
-    }
-    let(:people) { MembershipCSV::People.new(
-      csv_filename: new_tempfile(contents),
-      mapit: 'irrelevant',
-      baseurl: 'irrelevant'
-    ) }
-    let(:page) { Page::Person.new(
-      person: people.find_single('1'),
-      position: 'irrelevant',
-      summary_doc: 'irrelevant'
-    ) }
-    let(:person) { page.person }
+    end
+    let(:people) do
+      MembershipCSV::People.new(
+        csv_filename: new_tempfile(contents),
+        mapit: 'irrelevant',
+        baseurl: 'irrelevant'
+      )
+    end
+    let(:page) do
+      Page::Person.new(
+        person: people.find_single('1'),
+        position: 'irrelevant',
+        summary_doc: 'irrelevant'
+      )
+    end
+    let(:person) do
+      page.person
+    end
   end
 
   FakeSummary = Struct.new(:body)

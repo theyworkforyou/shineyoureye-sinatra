@@ -20,20 +20,20 @@ describe 'List of Governors' do
 
     it 'links to the person page' do
       person.css('.media-left a/@href').first.text
-        .must_equal('/person/gov:abdulaziz-abubakar-yari/')
+            .must_equal('/person/gov:abdulaziz-abubakar-yari/')
       person.css('.media-body a/@href').first.text
-        .must_equal('/person/gov:abdulaziz-abubakar-yari/')
+            .must_equal('/person/gov:abdulaziz-abubakar-yari/')
     end
 
     describe 'when person has an image' do
       it 'points to the right path' do
         person.css('a img/@src').first.text
-          .must_include('/gov:abdulaziz-abubakar-yari/100x100.jpeg')
+              .must_include('/gov:abdulaziz-abubakar-yari/100x100.jpeg')
       end
 
       it 'has an srcset' do
         person.css('a img/@srcset').first.text
-          .must_include('/gov:abdulaziz-abubakar-yari/100x100.jpeg')
+              .must_include('/gov:abdulaziz-abubakar-yari/100x100.jpeg')
       end
 
       it 'has the name as alternative text' do
@@ -46,7 +46,7 @@ describe 'List of Governors' do
 
       it 'shows a picture anyway (empty avatar)' do
         person.css('.media-object/@src').first.text
-          .must_include('/images/person-250x250.png')
+              .must_include('/images/person-250x250.png')
       end
     end
 

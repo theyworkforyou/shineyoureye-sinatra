@@ -10,7 +10,8 @@ module Document
     end
 
     def date
-      Date.iso8601($1) if DATE_PATTERN =~ basename
+      match_data = DATE_PATTERN.match(basename)
+      Date.iso8601(match_data[:date]) if match_data
     end
 
     def title
@@ -40,7 +41,7 @@ module Document
 
     private
 
-    DATE_PATTERN = /^(\d{4}-\d{2}-\d{2})/
+    DATE_PATTERN = /^(?<date>\d{4}-\d{2}-\d{2})/
     attr_reader :filename, :baseurl
 
     def basename
@@ -61,7 +62,7 @@ module Document
     end
 
     def filecontents
-      @contents ||= File.open(filename, 'r') { |f| f.read }
+      @contents ||= File.open(filename, 'r', &:read)
     end
 
     def frontmatter

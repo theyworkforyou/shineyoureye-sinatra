@@ -3,7 +3,7 @@
 
   <%= erb :_head %>
 
-  <body class="<% if is_homepage? %>page--homepage<% end %>">
+  <body class="<% if homepage? %>page--homepage<% end %>">
     <!-- {% if jekyll.environment == 'production' %}
       {% google_analytics %}
     {% endif %}
@@ -16,7 +16,7 @@
 
     <div id="page">
 
-      <% if is_homepage? %>
+      <% if homepage? %>
         <%= yield %>
 
       <% else %>
