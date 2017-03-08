@@ -6,7 +6,7 @@ FakeMapit = Struct.new(:mapit_id) do
     FakePlace.new(mapit_id, 'Mapit Area Name', '/place/pombola-slug/')
   end
 
-  def area_from_mapit_name(name)
+  def area_from_mapit_name(_name)
     FakePlace.new(mapit_id)
   end
 end
