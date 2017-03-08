@@ -51,6 +51,19 @@ describe 'EP::PeopleByLegislature' do
     it 'knows its legislature name' do
       people.legislature_name.must_equal('House of Representatives')
     end
+
+    it 'finds a featured person' do
+      featured_summaries = [
+        FakeSummary.new('b2a7f72a-9ecf-4263-83f1-cb0f8783053c'),
+        FakeSummary.new('foo')
+      ]
+      people.featured_person(featured_summaries).name.must_equal('ABDUKADIR RAHIS')
+    end
+
+    it 'returns nil if no featured person' do
+      featured_summaries = [FakeSummary.new('foo'), FakeSummary.new('bar')]
+      assert_nil(people.featured_person(featured_summaries))
+    end
   end
 
   describe 'extra mapit functionality' do

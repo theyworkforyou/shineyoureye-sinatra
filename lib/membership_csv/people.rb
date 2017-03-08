@@ -34,6 +34,10 @@ module MembershipCSV
       nil
     end
 
+    def featured_person(featured_summaries)
+      featured_summaries.map { |summary| find_single(summary.slug) }.compact.first
+    end
+
     private
 
     attr_reader :csv_filename, :mapit, :baseurl
