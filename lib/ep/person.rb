@@ -40,10 +40,6 @@ module EP
       current_memberships.first.party.name
     end
 
-    def party_url
-      "/organisation/#{party_id.downcase}/"
-    end
-
     def url
       baseurl + id + '/'
     end

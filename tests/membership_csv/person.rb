@@ -176,10 +176,6 @@ describe 'MembershipCSV::Person' do
     person.party_name.must_equal('PDP')
   end
 
-  it 'knows its party url' do
-    person.party_url.must_equal('/organisation/pdp/')
-  end
-
   it 'has a slug' do
     person.slug.must_equal('okezie-ikpeazu')
   end

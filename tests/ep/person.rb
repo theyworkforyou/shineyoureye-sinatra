@@ -192,10 +192,6 @@ describe 'EP::Person' do
     person.party_name.must_equal('All Progressives Congress')
   end
 
-  it 'knows its party url' do
-    person.party_url.must_equal('/organisation/apc/')
-  end
-
   it 'has a url' do
     person.url.must_equal('/baseurl/9de46243-685e-4902-81d4-b3e01faa93d5/')
   end

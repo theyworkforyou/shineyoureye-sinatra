@@ -61,10 +61,6 @@ module MembershipCSV
       person['party']
     end
 
-    def party_url
-      "/organisation/#{person['party'].downcase}/"
-    end
-
     def slug
       person['identifier__shineyoureye']
     end
