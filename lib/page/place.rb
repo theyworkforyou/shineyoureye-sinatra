@@ -3,10 +3,9 @@ module Page
   class Place
     attr_reader :place
 
-    def initialize(place:, people_by_legislature:, people_path:)
+    def initialize(place:, people_by_legislature:)
       @place = place
       @people_by_legislature = people_by_legislature
-      @people_path = people_path
     end
 
     def title
@@ -29,16 +28,8 @@ module Page
       people_by_legislature.legislature_name
     end
 
-    def people_url
-      (place.url + people_path).gsub('//', '/')
-    end
-
-    def places_url
-      ''
-    end
-
     private
 
-    attr_reader :people_by_legislature, :people_path
+    attr_reader :people_by_legislature
   end
 end

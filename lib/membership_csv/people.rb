@@ -22,6 +22,18 @@ module MembershipCSV
       find_single(id).nil?
     end
 
+    def find_all_by_mapit_area(mapit_id)
+      mapit_id_to_person[mapit_id.to_s]
+    end
+
+    def current_term_start_date
+      nil
+    end
+
+    def legislature_name
+      nil
+    end
+
     private
 
     attr_reader :csv_filename, :mapit, :baseurl
@@ -40,6 +52,15 @@ module MembershipCSV
 
     def id_to_person
       @id_to_person ||= all_people.map { |person| [person.id, person] }.to_h
+    end
+
+    def mapit_id_to_person
+      @mapit_id_to_person ||= all_people.each_with_object({}) { |person, memo| update_people_for_area(person, memo) }
+    end
+
+    def update_people_for_area(person, memo)
+      return unless person.area
+      (memo[person.area.id.to_s] ||= []) << person
     end
 
     def create_person(row)

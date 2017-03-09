@@ -151,6 +151,7 @@ describe 'Person Page' do
     end
 
     it 'shows nothing in the summary' do
+      get '/person/gov:abdulaziz-abubakar-yari/'
       subject.css('.person-summary').text.strip.must_equal('')
     end
   end
