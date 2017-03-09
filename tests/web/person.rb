@@ -54,12 +54,8 @@ describe 'Person Page' do
     end
   end
 
-  it 'links to the party page' do
-    subject.css('.person__party a/@href').first.text.must_equal('/organisation/apc/')
-  end
-
   it 'displays the party name' do
-    subject.css('.person__party a').first.text.must_equal('All Progressives Congress')
+    subject.css('.person__party').first.text.must_equal('All Progressives Congress')
   end
 
   describe 'when person has a birth date' do
