@@ -160,7 +160,21 @@ And go to <http://localhost:9292/>
 
 ## Tests and RubCop
 
-(This assumes you have installed the fixtures with `bin/prepare-data`, as above.)
+For the tests, some of the user-editable contents of the site are used
+as fixtures. So we have to use this data in a particular point of its
+history. We can do that by positioning the repo at a particular commit,
+using the same script we used before. For example, to use the contents
+as they looked like at commit `ffc1fe0`:
+
+```
+bin/prepare-data ffc1fe0
+```
+
+The right commit to use will be whichever the `.travis.yml` file is
+using.
+
+After doing this, we can run the tests.
+
 
 ### Run both the tests and RuboCop checks
 
