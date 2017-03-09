@@ -66,10 +66,6 @@ describe 'List of Governors' do
       person.css('.listing__area').text.must_equal('Zamfara')
     end
 
-    it 'links to party page' do
-      person.css('.listing__party/@href').text.must_equal('/organisation/apc/')
-    end
-
     it 'displays party name' do
       person.css('.listing__party').text.must_equal('APC')
     end

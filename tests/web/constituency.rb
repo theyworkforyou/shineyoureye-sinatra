@@ -89,11 +89,6 @@ describe 'Federal Constituency Place Page' do
             .must_equal('Abakaliki/Izzi')
     end
 
-    it 'links to the person party' do
-      person.css('.listing__party @href').text
-            .must_equal('/organisation/pdp/')
-    end
-
     it 'displays the person party name' do
       person.css('.listing__party').text
             .must_equal('Peoples Democratic Party')

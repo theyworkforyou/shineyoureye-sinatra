@@ -62,10 +62,6 @@ describe 'Senate' do
       person.css('.listing__area').text.must_equal('ABIA SOUTH')
     end
 
-    it 'links to party page' do
-      person.css('.listing__party/@href').text.must_equal('/organisation/pdp/')
-    end
-
     it 'displays party name' do
       person.css('.listing__party').text.must_equal('Peoples Democratic Party')
     end

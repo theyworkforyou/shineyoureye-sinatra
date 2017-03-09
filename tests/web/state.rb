@@ -88,11 +88,6 @@ describe 'State Place Page' do
             .must_equal('Abia')
     end
 
-    it 'links to the person party' do
-      person.css('.listing__party @href').text
-            .must_equal('/organisation/pdp/')
-    end
-
     it 'displays the person party name' do
       person.css('.listing__party').text
             .must_equal('PDP')

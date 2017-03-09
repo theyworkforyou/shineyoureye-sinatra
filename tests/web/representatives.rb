@@ -64,10 +64,6 @@ describe 'List of Representatives' do
       person.css('.listing__area').text.must_equal('Maiduguri (Metropolitan)')
     end
 
-    it 'links to party page' do
-      person.css('.listing__party/@href').text.must_equal('/organisation/apc/')
-    end
-
     it 'displays party name' do
       person.css('.listing__party').text.must_equal('All Progressives Congress')
     end
