@@ -129,8 +129,12 @@ describe 'Person Page' do
   describe 'summary section' do
     before { get '/person/sunday-steve-karim/' }
 
-    it 'edit link points to the right person id' do
-      subject.css('.person-edit-link/@href').text
+    it 'displays links to edit summary and person data' do
+      subject.css('.person-edit-link/@href').count.must_equal(2)
+    end
+
+    it 'sumary edit link points to the right person id' do
+      subject.css('.person-edit-link/@href').first.text
              .must_include('/summaries/0baa5a03-b1e0-4e66-b3f9-daee8bacb87d.md')
     end
 
