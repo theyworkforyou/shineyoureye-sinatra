@@ -20,7 +20,7 @@ fi
 # Checkout a specific prose sha for tests
 if [ -n "$PROSE_COMMITISH" ]
 then
-    (cd "$PROSE_DIR" && git checkout "$PROSE_SHA")
+    (cd "$PROSE_DIR" && git checkout "$PROSE_COMMITISH")
 fi
 
 # Symlink the media directories into the right place:
