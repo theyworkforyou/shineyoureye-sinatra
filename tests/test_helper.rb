@@ -34,6 +34,14 @@ module Minitest
       get_from_disk(senate_json_url, senate_json)
     end
 
+    def geojson_json_url(id)
+      "#{MAPIT_URL}/area/#{id}.geojson"
+    end
+
+    def geometry_json_url(id)
+      "#{MAPIT_URL}/area/#{id}/geometry"
+    end
+
     def new_tempfile(contents, filename = 'sye-tests')
       Tempfile.open([filename, '.md']) do |f|
         f.write(contents)
@@ -64,7 +72,11 @@ module Minitest
 
     DATASOURCE = 'https://github.com/everypolitician/everypolitician-data/raw/master/countries.json'
     REPO_URL = 'https://cdn.rawgit.com/everypolitician/everypolitician-data'
-    DISK_PATH = 'tests/fixtures/ep_data'
+    MAPIT_URL = 'http://nigeria.mapit.mysociety.org'
+
+    EP_DISK_PATH = 'tests/fixtures/ep_data'
+    MAPIT_DISK_PATH = 'tests/fixtures/mapit_data'
+
     COUNTRIES_COMMIT = 'd96d2be'
     REPS_COMMIT = '1e00ca8'
     SENATE_COMMIT = '99f866a'
@@ -82,15 +94,23 @@ module Minitest
     end
 
     def countries_json
-      @countries_json ||= File.read("#{DISK_PATH}/#{COUNTRIES_COMMIT}/countries.json")
+      @countries_json ||= File.read("#{EP_DISK_PATH}/#{COUNTRIES_COMMIT}/countries.json")
     end
 
     def reps_json
-      @reps_json ||= File.read("#{DISK_PATH}/#{REPS_COMMIT}/ep-popolo-v1.0.json")
+      @reps_json ||= File.read("#{EP_DISK_PATH}/#{REPS_COMMIT}/ep-popolo-v1.0.json")
     end
 
     def senate_json
-      @senate_json ||= File.read("#{DISK_PATH}/#{SENATE_COMMIT}/ep-popolo-v1.0.json")
+      @senate_json ||= File.read("#{EP_DISK_PATH}/#{SENATE_COMMIT}/ep-popolo-v1.0.json")
+    end
+
+    def geojson_json
+      @geojson_json ||= File.read("#{MAPIT_DISK_PATH}/949.geojson.json")
+    end
+
+    def geometry_json
+      @geometry_json ||= File.read("#{MAPIT_DISK_PATH}/geometry.json")
     end
   end
 end
