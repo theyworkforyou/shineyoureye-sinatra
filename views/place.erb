@@ -1,14 +1,8 @@
 <div class="row">
     <div class="col-sm-4 col-md-3">
-        <!-- <div class="profile-map">
-          <div id="map_canvas" width="300" height="300"></div>
-          <script type="text/javascript" charset="utf-8">
-            kml_urls_to_add = [
-              'http://www.shineyoureye.org/mapit/area/1091.kml?simplify_tolerance=0.001'
-            ];
-          </script>
-        </div> -->
-        <img class="person__image" src="/images/place-250x250.png" alt="default image for places">
+        <div class="person__image">
+            <div id="map-canvas"></div>
+        </div>
 
         <!-- <div class="constituency-party">
           <h2>Key figure</h2>
@@ -45,3 +39,7 @@
         </section>
     </div>
 </div>
+
+<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+<script src="/javascripts/show-map.js"></script>
+<script>LeafletMap.showMap(<%= @page.center %>, <%= @page.geojson %>);</script>

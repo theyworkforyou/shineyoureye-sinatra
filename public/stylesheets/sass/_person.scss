@@ -39,3 +39,8 @@
 .person-edit-link {
   font-size: 0.5em;
 }
+
+// Leaflet maps need to have a specified height
+#map-canvas {
+   height: 18em;
+}
