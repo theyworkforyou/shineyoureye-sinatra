@@ -1,12 +1,14 @@
 # frozen_string_literal: true
 require 'test_helper'
 require_relative '../../lib/page/place'
+require_relative '../../lib/mapit/coordinate'
 
 describe 'Page::Place' do
   let(:page) do
     Page::Place.new(
       place: FakePlace.new(1, 'Abaji/Gwagwalada/Kwali/Kuje'),
-      people_by_legislature: FakePeople.new('House of Representatives')
+      people_by_legislature: FakePeople.new('House of Representatives'),
+      geometry: FakeGeometry.new('geoJSON', Mapit::Coordinate.new(1, 2))
     )
   end
 
@@ -34,6 +36,15 @@ describe 'Page::Place' do
     page.legislature_name.must_equal('House of Representatives')
   end
 
+  it 'has the geoJSON feature for that place' do
+    page.geojson.must_equal('geoJSON')
+  end
+
+  it 'has the center coordinates of the place' do
+    page.center.must_equal([1, 2])
+  end
+
+  FakeGeometry = Struct.new(:geojson, :center)
   FakePeople = Struct.new(:legislature_name) do
     def find_all_by_mapit_area(_)
       %w(irrelevant irrelevant)

@@ -3,9 +3,10 @@ module Page
   class Place
     attr_reader :place
 
-    def initialize(place:, people_by_legislature:)
+    def initialize(place:, people_by_legislature:, geometry:)
       @place = place
       @people_by_legislature = people_by_legislature
+      @geometry = geometry
     end
 
     def title
@@ -28,8 +29,16 @@ module Page
       people_by_legislature.legislature_name
     end
 
+    def geojson
+      geometry.geojson
+    end
+
+    def center
+      [geometry.center.latitude, geometry.center.longitude]
+    end
+
     private
 
-    attr_reader :people_by_legislature
+    attr_reader :people_by_legislature, :geometry
   end
 end
