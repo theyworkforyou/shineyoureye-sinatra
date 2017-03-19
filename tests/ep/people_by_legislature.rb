@@ -6,8 +6,9 @@ require_relative '../shared_examples/people_interface_test'
 describe 'EP::PeopleByLegislature' do
   let(:legislature) { nigeria_at_known_revision.legislature('Representatives') }
 
-  describe 'class methods' do
+  describe 'non-mapit methods' do
     include PeopleInterfaceTest
+
     let(:people) do
       EP::PeopleByLegislature.new(
         legislature: legislature,
