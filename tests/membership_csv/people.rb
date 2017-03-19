@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 require 'test_helper'
 require_relative '../../lib/membership_csv/people'
+require_relative '../shared_examples/people_interface_test'
 
 describe 'MembershipCSV::People' do
+  include PeopleInterfaceTest
+
   let(:contents) do
     'id,name,identifier__shineyoureye,phone
 id1,name1,name-1,1234

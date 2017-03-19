@@ -1,10 +1,13 @@
 # frozen_string_literal: true
 require 'test_helper'
 require_relative '../../lib/ep/people_by_legislature'
+require_relative '../shared_examples/people_interface_test'
 
 describe 'EP::PeopleByLegislature' do
   let(:legislature) { nigeria_at_known_revision.legislature('Representatives') }
+
   describe 'class methods' do
+    include PeopleInterfaceTest
     let(:people) do
       EP::PeopleByLegislature.new(
         legislature: legislature,
