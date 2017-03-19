@@ -83,5 +83,9 @@ id3,name3,name-3,'
     it 'finds all people in a mapit area' do
       people.find_all_by_mapit_area(1).count.must_equal(3)
     end
+
+    it 'can check if no people in this legislature for that mapit area' do
+      people.none_by_mapit_area?(0).must_equal(true)
+    end
   end
 end
