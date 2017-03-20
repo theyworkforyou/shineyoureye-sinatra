@@ -2,11 +2,19 @@
 require 'test_helper'
 
 describe 'Federal Constituency Place Page' do
-  before { get '/place/abakalikiizzi/' }
+  before do
+    get_from_disk(geojson_json_url(1091), geojson_json)
+    get_from_disk(geometry_json_url(1091), geometry_json)
+    get '/place/abakalikiizzi/'
+  end
+
   subject { Nokogiri::HTML(last_response.body) }
 
-  # describe 'map' do
-  # end
+  describe 'map' do
+    it 'shows the map' do
+      refute_empty(subject.css('#map-canvas'))
+    end
+  end
 
   # describe 'key figure' do
   # end

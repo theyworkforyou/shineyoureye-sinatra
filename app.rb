@@ -9,6 +9,7 @@ require_relative 'lib/ep/people_by_legislature'
 require_relative 'lib/helpers/filepaths_helper'
 require_relative 'lib/helpers/layout_helper'
 require_relative 'lib/helpers/settings_helper'
+require_relative 'lib/mapit/geometry'
 require_relative 'lib/mapit/wrapper'
 require_relative 'lib/membership_csv/people'
 require_relative 'lib/page/homepage'
@@ -24,6 +25,7 @@ require_relative 'lib/page/posts'
 set :content_dir, File.join(__dir__, 'prose')
 set :datasource, ENV.fetch('DATASOURCE', 'https://github.com/everypolitician/everypolitician-data/raw/master/countries.json')
 set :index, EveryPolitician::Index.new(index_url: settings.datasource)
+set :mapit_url, 'http://nigeria.mapit.mysociety.org'
 set :twitter_user, 'NGShineyoureye'
 
 # Create a wrapper for the mappings between the various IDs we have
@@ -152,7 +154,11 @@ get '/place/:slug/' do |slug|
   constituency = mapit.area_from_pombola_slug(slug)
   pass unless constituency
   pass if representatives.none_by_mapit_area?(constituency.id)
-  @page = Page::Place.new(place: constituency, people_by_legislature: representatives)
+  geometry = Mapit::Geometry.new(
+    geojson_url: "#{settings.mapit_url}/area/#{constituency.id}.geojson",
+    geometry_url: "#{settings.mapit_url}/area/#{constituency.id}/geometry"
+  )
+  @page = Page::Place.new(place: constituency, people_by_legislature: representatives, geometry: geometry)
   erb :place
 end
 
@@ -160,14 +166,22 @@ get '/place/:slug/' do |slug|
   district = mapit.area_from_pombola_slug(slug)
   pass unless district
   pass if senators.none_by_mapit_area?(district.id)
-  @page = Page::Place.new(place: district, people_by_legislature: senators)
+  geometry = Mapit::Geometry.new(
+    geojson_url: "#{settings.mapit_url}/area/#{district.id}.geojson",
+    geometry_url: "#{settings.mapit_url}/area/#{district.id}/geometry"
+  )
+  @page = Page::Place.new(place: district, people_by_legislature: senators, geometry: geometry)
   erb :place
 end
 
 get '/place/:slug/' do |slug|
   state = mapit.area_from_pombola_slug(slug)
   pass unless state
-  @page = Page::Place.new(place: state, people_by_legislature: governors)
+  geometry = Mapit::Geometry.new(
+    geojson_url: "#{settings.mapit_url}/area/#{state.id}.geojson",
+    geometry_url: "#{settings.mapit_url}/area/#{state.id}/geometry"
+  )
+  @page = Page::Place.new(place: state, people_by_legislature: governors, geometry: geometry)
   erb :place
 end
 
