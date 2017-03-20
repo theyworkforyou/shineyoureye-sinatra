@@ -17,7 +17,7 @@ describe 'Page::Person' do
     Page::Person.new(
       person: people.find_single('b2a7f72a-9ecf-4263-83f1-cb0f8783053c'),
       position: 'Position',
-      summary_doc: FakeSummary.new('<p>foo</p>')
+      summary_doc: FakeSummary.new('irrelevant', '<p>foo</p>')
     )
   end
 
@@ -62,10 +62,6 @@ describe 'Page::Person' do
         summary_doc: 'irrelevant'
       )
     end
-    let(:person) do
-      page.person
-    end
+    let(:person) { page.person }
   end
-
-  FakeSummary = Struct.new(:body)
 end

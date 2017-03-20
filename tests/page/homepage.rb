@@ -5,11 +5,11 @@ require_relative '../../lib/page/homepage'
 describe 'Page::Homepage' do
   let(:documents) do
     [
-      FakeDocument.new('1000-01-11-foo', yesterday.to_s),
-      FakeDocument.new('1000-01-12-bar', today.to_s),
-      FakeDocument.new('1000-01-13-qux', tomorrow.to_s),
-      FakeDocument.new('1000-01-14-qux', in_two_weeks.to_s),
-      FakeDocument.new('1000-01-15-qux', in_two_weeks.to_s)
+      document_with_event_date('1000-01-11-foo', yesterday.to_s),
+      document_with_event_date('1000-01-12-bar', today.to_s),
+      document_with_event_date('1000-01-13-qux', tomorrow.to_s),
+      document_with_event_date('1000-01-14-qux', in_two_weeks.to_s),
+      document_with_event_date('1000-01-15-qux', in_two_weeks.to_s)
     ]
   end
   let(:page) { Page::Homepage.new(posts: documents, events: documents) }
@@ -76,13 +76,10 @@ title: A Title
     today + 14
   end
 
-  FakeDocument = Struct.new(:filename, :raw_event_date) do
-    def date
-      Date.iso8601(filename[0..9])
-    end
-
-    def event_date
-      Date.iso8601(raw_event_date)
-    end
+  def document_with_event_date(filename, event_date)
+    contents = "---
+eventdate: '#{event_date}'
+---"
+    basic_document(new_tempfile(contents, filename))
   end
 end

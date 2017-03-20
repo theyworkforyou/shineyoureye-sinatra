@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+FakeSummary = Struct.new(:slug, :body)
+
 FakePlace = Struct.new(:id, :name, :url)
 FakeMapit = Struct.new(:mapit_id) do
   def area_from_ep_id(_id)
