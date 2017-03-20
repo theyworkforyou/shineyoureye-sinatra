@@ -38,6 +38,10 @@ module EP
       legislature.name
     end
 
+    def featured_person(featured_summaries)
+      featured_summaries.map { |summary| find_single(summary.slug) }.compact.first
+    end
+
     private
 
     attr_reader :legislature, :mapit, :baseurl

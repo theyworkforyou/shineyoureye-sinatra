@@ -54,6 +54,19 @@ id3,name3,name-3,'
     assert_nil(people.legislature_name)
   end
 
+  it 'finds a featured person' do
+    featured_summaries = [
+      FakeSummary.new('id1'),
+      FakeSummary.new('foo')
+    ]
+    people.featured_person(featured_summaries).name.must_equal('name1')
+  end
+
+  it 'returns nil if no featured person' do
+    featured_summaries = [FakeSummary.new('foo'), FakeSummary.new('bar')]
+    assert_nil(people.featured_person(featured_summaries))
+  end
+
   describe 'extra mapit functionality' do
     let(:people) do
       MembershipCSV::People.new(

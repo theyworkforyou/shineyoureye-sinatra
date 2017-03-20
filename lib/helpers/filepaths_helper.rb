@@ -46,6 +46,10 @@ module FilepathsHelper
     "#{summaries_dir}/#{id}.md"
   end
 
+  def summaries_pattern
+    "#{summaries_dir}/*.md"
+  end
+
   private
 
   def date_glob
