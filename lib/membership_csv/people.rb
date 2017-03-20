@@ -23,7 +23,11 @@ module MembershipCSV
     end
 
     def find_all_by_mapit_area(mapit_id)
-      mapit_id_to_person[mapit_id.to_s]
+      mapit_id_to_person[mapit_id.to_s] || []
+    end
+
+    def none_by_mapit_area?(mapit_id)
+      find_all_by_mapit_area(mapit_id).empty?
     end
 
     def current_term_start_date

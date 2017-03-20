@@ -3,7 +3,7 @@ require 'test_helper'
 require_relative '../../lib/ep/people_by_legislature'
 require_relative '../../lib/membership_csv/people'
 require_relative '../../lib/page/person'
-require_relative 'person_interface_test'
+require_relative '../shared_examples/person_interface_test'
 
 describe 'Page::Person' do
   let(:people) do
