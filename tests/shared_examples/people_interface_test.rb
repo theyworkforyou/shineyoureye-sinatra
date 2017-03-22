@@ -21,10 +21,6 @@ module PeopleInterfaceTest
     assert_respond_to(people, :find_all_by_mapit_area)
   end
 
-  it 'can check if there is no person in a mapit area' do
-    assert_respond_to(people, :none_by_mapit_area?)
-  end
-
   it 'knows the current term start date' do
     assert_respond_to(people, :current_term_start_date)
   end
