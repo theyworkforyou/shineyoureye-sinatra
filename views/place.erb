@@ -22,10 +22,7 @@
     <div class="col-sm-8 col-md-9">
         <header class="person__key-info">
           <h1 class="person__name"><%= @page.title %></h1>
-          <h2>
-            <%= @page.place.type_name %>
-            <%= " (#{@page.legislature_name})" if @page.place.child_area? %>
-          </h2>
+          <h2><%= @page.place.type_name %> <%= @page.legislature_name %></h2>
         </header>
 
         <section class="person__section">
