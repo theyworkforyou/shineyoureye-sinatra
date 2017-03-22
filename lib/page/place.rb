@@ -26,7 +26,8 @@ module Page
     end
 
     def legislature_name
-      people_by_legislature.legislature_name
+      name = people_by_legislature.legislature_name
+      name ? "(#{name})" : ''
     end
 
     def geojson
