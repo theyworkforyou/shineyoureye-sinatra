@@ -151,37 +151,18 @@ get '/place/is/senatorial-district/' do
 end
 
 get '/place/:slug/' do |slug|
-  constituency = mapit.area_from_pombola_slug(slug)
-  pass unless constituency
-  pass if representatives.none_by_mapit_area?(constituency.id)
+  area = mapit.area_from_pombola_slug(slug)
+  pass unless area
+  people = {
+    'Federal Constituency' => representatives,
+    'Senatorial District' => senators,
+    'State' => governors
+  }
   geometry = Mapit::Geometry.new(
-    geojson_url: "#{settings.mapit_url}/area/#{constituency.id}.geojson",
-    geometry_url: "#{settings.mapit_url}/area/#{constituency.id}/geometry"
+    geojson_url: "#{settings.mapit_url}/area/#{area.id}.geojson",
+    geometry_url: "#{settings.mapit_url}/area/#{area.id}/geometry"
   )
-  @page = Page::Place.new(place: constituency, people_by_legislature: representatives, geometry: geometry)
-  erb :place
-end
-
-get '/place/:slug/' do |slug|
-  district = mapit.area_from_pombola_slug(slug)
-  pass unless district
-  pass if senators.none_by_mapit_area?(district.id)
-  geometry = Mapit::Geometry.new(
-    geojson_url: "#{settings.mapit_url}/area/#{district.id}.geojson",
-    geometry_url: "#{settings.mapit_url}/area/#{district.id}/geometry"
-  )
-  @page = Page::Place.new(place: district, people_by_legislature: senators, geometry: geometry)
-  erb :place
-end
-
-get '/place/:slug/' do |slug|
-  state = mapit.area_from_pombola_slug(slug)
-  pass unless state
-  geometry = Mapit::Geometry.new(
-    geojson_url: "#{settings.mapit_url}/area/#{state.id}.geojson",
-    geometry_url: "#{settings.mapit_url}/area/#{state.id}/geometry"
-  )
-  @page = Page::Place.new(place: state, people_by_legislature: governors, geometry: geometry)
+  @page = Page::Place.new(place: area, people_by_legislature: people[area.type_name], geometry: geometry)
   erb :place
 end
 
