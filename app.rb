@@ -27,6 +27,7 @@ set :datasource, ENV.fetch('DATASOURCE', 'https://github.com/everypolitician/eve
 set :index, EveryPolitician::Index.new(index_url: settings.datasource)
 set :mapit_url, 'http://nigeria.mapit.mysociety.org'
 set :twitter_user, 'NGShineyoureye'
+set :mapit_user_agent, ENV.fetch('MAPIT_USER_AGENT', nil)
 
 # Create a wrapper for the mappings between the various IDs we have
 # to use for areas / places.
@@ -160,7 +161,8 @@ get '/place/:slug/' do |slug|
   }
   geometry = Mapit::Geometry.new(
     geojson_url: "#{settings.mapit_url}/area/#{area.id}.geojson",
-    geometry_url: "#{settings.mapit_url}/area/#{area.id}/geometry"
+    geometry_url: "#{settings.mapit_url}/area/#{area.id}/geometry",
+    user_agent: settings.mapit_user_agent
   )
   @page = Page::Place.new(place: area, people_by_legislature: people[area.type_name], geometry: geometry)
   erb :place

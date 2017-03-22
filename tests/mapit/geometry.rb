@@ -6,7 +6,8 @@ describe 'Mapit::Geometry' do
   let(:geometry) do
     Mapit::Geometry.new(
       geojson_url: geojson_json_url(949),
-      geometry_url: geometry_json_url(949)
+      geometry_url: geometry_json_url(949),
+      user_agent: 'Test'
     )
   end
 
@@ -31,11 +32,25 @@ describe 'Mapit::Geometry' do
   end
 
   it 'raises an error if response status is not OK' do
-    fake_url = 'http://example.com'
-    stub_request(:get, fake_url).to_return(status: 404)
-    geometry = Mapit::Geometry.new(geojson_url: fake_url, geometry_url: 'irrelevant')
+    bad_url = 'http://notfound.com'
+    stub_request(:get, bad_url).to_return(status: 404)
+    geometry = Mapit::Geometry.new(geojson_url: bad_url, geometry_url: 'irrelevant', user_agent: 'irrelevant')
 
     error = assert_raises(RuntimeError) { geometry.geojson }
-    error.message.must_include(fake_url)
+    error.message.must_include(bad_url)
+  end
+
+  describe 'custom user agent header' do
+    it 'uses it if specified' do
+      geometry.center
+      assert_requested(:get, geometry_json_url(949), headers: { 'User-Agent' => 'Test' })
+    end
+
+    it 'does not set it, if it is not specified' do
+      url = geojson_json_url(949)
+      geometry = Mapit::Geometry.new(geojson_url: url, geometry_url: 'irrelevant', user_agent: nil)
+      geometry.geojson
+      assert_requested(:get, url, headers: { 'User-Agent' => 'Ruby' })
+    end
   end
 end

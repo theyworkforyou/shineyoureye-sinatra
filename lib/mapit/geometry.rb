@@ -3,9 +3,10 @@ require_relative 'coordinate'
 
 module Mapit
   class Geometry
-    def initialize(geojson_url:, geometry_url:)
+    def initialize(geojson_url:, geometry_url:, user_agent:)
       @geojson_url = geojson_url
       @geometry_url = geometry_url
+      @user_agent = user_agent
     end
 
     def geojson
@@ -19,12 +20,21 @@ module Mapit
 
     private
 
-    attr_reader :geojson_url, :geometry_url
+    attr_reader :geojson_url, :geometry_url, :user_agent
 
     def get(url)
-      response = Net::HTTP.get_response(URI(url))
+      response = http(URI(url)).request(request(URI(url)))
       raise_if_response_not_ok(url, response.code)
       response.body
+    end
+
+    def http(uri)
+      Net::HTTP.new(uri.host, uri.port)
+    end
+
+    def request(uri)
+      headers = { 'User-Agent' => user_agent } if user_agent
+      Net::HTTP::Get.new(uri.request_uri, headers)
     end
 
     def raise_if_response_not_ok(url, status_code)
