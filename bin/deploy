@@ -107,13 +107,13 @@ crawl_site
 
 stop_sinatra
 
-if [ "$ONLY_BUILD" != 1 ]
+if [ "$WGET_EXIT_CODE" = 0 ]
 then
-    deploy_site
-fi
-
-if [ "$WGET_EXIT_CODE" != 0 ]
-then
+    if [ "$ONLY_BUILD" != 1 ]
+    then
+        deploy_site
+    fi
+else
     echo "The errors were:"
     egrep -B 3 ' ERROR [0-9]{3}' "$BUILD_DIR/wget.log"
     exit $WGET_EXIT_CODE
