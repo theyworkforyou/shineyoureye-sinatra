@@ -52,12 +52,12 @@ stop_sinatra() {
 
 crawl_site() {
     echo "Crawling $SINATRA_BASE_URL...."
+    WGET_EXIT_CODE=0
     (
-        WGET_EXIT_CODE=0
         cd "$BUILD_DIR" &&
             wget -o wget.log -r -l 5 --domains='localhost' \
-                 "$SINATRA_BASE_URL"/scraper-start-page.html || WGET_EXIT_CODE="$?"
-    )
+                 "$SINATRA_BASE_URL"/scraper-start-page.html
+    ) || WGET_EXIT_CODE="$?"
     echo done
 }
 
