@@ -62,6 +62,7 @@ module EP
     def update_people_for_area(person, memo)
       return unless person.area
       (memo[person.area.id.to_s] ||= []) << person
+      (memo[person.area.parent.id.to_s] ||= []) << person if person.area.parent
     end
 
     def create_person(person)

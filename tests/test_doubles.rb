@@ -2,10 +2,11 @@
 
 FakeSummary = Struct.new(:slug, :body)
 
-FakePlace = Struct.new(:id, :name, :url)
-FakeMapit = Struct.new(:mapit_id) do
+FakePlace = Struct.new(:id, :name, :url, :parent)
+FakeMapit = Struct.new(:mapit_id, :parent_id) do
   def area_from_ep_id(_id)
-    FakePlace.new(mapit_id, 'Mapit Area Name', '/place/pombola-slug/')
+    parent = FakePlace.new(parent_id)
+    FakePlace.new(mapit_id, 'Mapit Area Name', '/place/pombola-slug/', parent)
   end
 
   def area_from_mapit_name(_name)

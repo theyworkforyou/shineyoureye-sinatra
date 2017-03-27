@@ -64,4 +64,17 @@ describe 'EP::PeopleByLegislature' do
   it 'returns nothing if it can not find people in a mapit area' do
     assert_empty(people.find_all_by_mapit_area(0))
   end
+
+  describe 'people in parent area' do
+    let(:people) do
+      EP::PeopleByLegislature.new(
+        legislature: legislature,
+        person_factory: FakePersonFactory.new(FakeMapit.new(1, 2))
+      )
+    end
+
+    it 'finds all people in a parent area' do
+      people.find_all_by_mapit_area(2).count.must_equal(364)
+    end
+  end
 end
