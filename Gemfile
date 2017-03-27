@@ -8,7 +8,6 @@ ruby '2.3.1'
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}.git" }
 
 gem 'bootstrap-sass'
-gem 'compass'
 gem 'coveralls', require: false
 gem 'everypolitician', '~> 0.20.0', github: 'everypolitician/everypolitician-ruby'
 gem 'nokogiri', '>= 1.6.7'
