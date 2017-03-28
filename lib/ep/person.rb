@@ -43,7 +43,7 @@ module EP
     end
 
     def url
-      baseurl + id + '/'
+      baseurl + slug + '/'
     end
 
     def slug

@@ -10,7 +10,7 @@ describe 'Homepage' do
 
     it 'links to the person page' do
       person.css('a/@href').first.text
-            .must_equal('/person/ed60d392-ebe6-49f6-8174-10eb29dbb216/')
+            .must_equal('/person/lawali-anka-hassan/')
     end
 
     it 'displays the person medium size image' do

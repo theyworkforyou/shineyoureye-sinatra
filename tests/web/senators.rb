@@ -19,8 +19,8 @@ describe 'Senate' do
     let(:person) { subject.css('.media').first }
 
     it 'links to the person page' do
-      person.css('.media-left a/@href').first.text.must_equal('/person/6b0cdd74-7960-478f-ac93-d230f486a5b9/')
-      person.css('.media-body a/@href').first.text.must_equal('/person/6b0cdd74-7960-478f-ac93-d230f486a5b9/')
+      person.css('.media-left a/@href').first.text.must_equal('/person/abaribe-enynnaya/')
+      person.css('.media-body a/@href').first.text.must_equal('/person/abaribe-enynnaya/')
     end
 
     describe 'when person has an image' do

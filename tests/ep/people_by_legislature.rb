@@ -35,7 +35,7 @@ describe 'EP::PeopleByLegislature' do
     end
 
     it 'uses the baseurl in the person url' do
-      people.find_all.first.url.must_equal('/baseurl/b2a7f72a-9ecf-4263-83f1-cb0f8783053c/')
+      people.find_all.first.url.must_equal('/baseurl/abdukadir-rahis/')
     end
 
     it 'finds a single person by slug' do

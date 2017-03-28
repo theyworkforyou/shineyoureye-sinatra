@@ -192,8 +192,10 @@ describe 'EP::Person' do
     person.party_name.must_equal('All Progressives Congress')
   end
 
-  it 'has a url' do
-    person.url.must_equal('/baseurl/9de46243-685e-4902-81d4-b3e01faa93d5/')
+  describe 'url' do
+    it 'has a url' do
+      person.url.must_equal('/baseurl/adamu-abdullahi/')
+    end
   end
 
   describe 'slug' do
