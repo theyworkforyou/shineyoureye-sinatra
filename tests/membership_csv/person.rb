@@ -195,7 +195,8 @@ describe 'MembershipCSV::Person' do
     MembershipCSV::Person.new(
       person: person_info,
       mapit: FakeMapit.new(1),
-      baseurl: '/baseurl/'
+      baseurl: '/baseurl/',
+      identifier_scheme: 'shineyoureye'
     )
   end
 

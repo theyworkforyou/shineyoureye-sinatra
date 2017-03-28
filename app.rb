@@ -56,8 +56,10 @@ mapit = Mapit::Wrapper.new(
 governors = MembershipCSV::People.new(
   csv_filename: 'morph/nigeria-state-governors.csv',
   mapit: mapit,
-  baseurl: '/person/'
+  baseurl: '/person/',
+  identifier_scheme: 'shineyoureye'
 )
+
 representatives = EP::PeopleByLegislature.new(
   legislature: settings.index.country('Nigeria').legislature('Representatives'),
   mapit: mapit,

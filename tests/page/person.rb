@@ -53,7 +53,8 @@ describe 'Page::Person' do
       MembershipCSV::People.new(
         csv_filename: new_tempfile(contents),
         mapit: 'irrelevant',
-        baseurl: 'irrelevant'
+        baseurl: 'irrelevant',
+        identifier_scheme: 'shineyoureye'
       )
     end
     let(:page) do

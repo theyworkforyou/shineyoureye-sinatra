@@ -4,10 +4,11 @@ require_relative '../person_social'
 
 module MembershipCSV
   class Person
-    def initialize(person:, mapit:, baseurl:)
+    def initialize(person:, mapit:, baseurl:, identifier_scheme:)
       @person = person
       @mapit = mapit
       @baseurl = baseurl
+      @identifier_scheme = identifier_scheme
     end
 
     include PersonProxyImages
@@ -62,7 +63,7 @@ module MembershipCSV
     end
 
     def slug
-      person['identifier__shineyoureye']
+      person["identifier__#{identifier_scheme}"]
     end
 
     def url
@@ -71,7 +72,7 @@ module MembershipCSV
 
     private
 
-    attr_reader :person, :mapit, :baseurl
+    attr_reader :person, :mapit, :baseurl, :identifier_scheme
 
     def first(values)
       values.split(';').first
