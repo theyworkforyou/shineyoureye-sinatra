@@ -15,8 +15,8 @@ module EP
       @find_all ||= people_sorted_by_name.map { |person| create_person(person) }
     end
 
-    def find_single(id)
-      id_to_person[id]
+    def find_single(slug)
+      slug_to_person[slug]
     end
 
     def find_all_by_mapit_area(mapit_id)
@@ -32,7 +32,7 @@ module EP
     end
 
     def featured_person(featured_summaries)
-      featured_summaries.map { |summary| find_single(summary.slug) }.compact.first
+      featured_summaries.map { |summary| id_to_person[summary.slug] }.compact.first
     end
 
     private
@@ -49,6 +49,10 @@ module EP
 
     def id_to_person
       @id_to_person ||= find_all.map { |person| [person.id, person] }.to_h
+    end
+
+    def slug_to_person
+      @slug_to_person ||= find_all.map { |person| [person.slug, person] }.to_h
     end
 
     def create_person(person)

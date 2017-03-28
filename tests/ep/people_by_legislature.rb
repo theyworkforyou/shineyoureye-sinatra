@@ -38,8 +38,8 @@ describe 'EP::PeopleByLegislature' do
       people.find_all.first.url.must_equal('/baseurl/b2a7f72a-9ecf-4263-83f1-cb0f8783053c/')
     end
 
-    it 'finds a single person by id' do
-      people.find_single('b2a7f72a-9ecf-4263-83f1-cb0f8783053c').name
+    it 'finds a single person by slug' do
+      people.find_single('abdukadir-rahis').name
             .must_equal('ABDUKADIR RAHIS')
     end
 
@@ -78,7 +78,7 @@ describe 'EP::PeopleByLegislature' do
     end
 
     it 'assigns a mapit area to the person' do
-      people.find_single('b2a7f72a-9ecf-4263-83f1-cb0f8783053c').area.id
+      people.find_single('abdukadir-rahis').area.id
             .must_equal(1)
     end
 

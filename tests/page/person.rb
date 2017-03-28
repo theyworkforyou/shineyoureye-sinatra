@@ -16,7 +16,7 @@ describe 'Page::Person' do
   end
   let(:page) do
     Page::Person.new(
-      person: people.find_single('b2a7f72a-9ecf-4263-83f1-cb0f8783053c'),
+      person: people.find_single('abdukadir-rahis'),
       position: 'Position',
       summary_doc: FakeSummary.new('irrelevant', '<p>foo</p>')
     )

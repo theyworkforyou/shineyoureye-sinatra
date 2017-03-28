@@ -2,7 +2,7 @@
 require 'test_helper'
 
 describe 'Person Page' do
-  before { get '/person/b2a7f72a-9ecf-4263-83f1-cb0f8783053c/' }
+  before { get '/person/abdukadir-rahis/' }
   subject { Nokogiri::HTML(last_response.body) }
 
   it 'displays a title' do
@@ -29,7 +29,7 @@ describe 'Person Page' do
   end
 
   describe 'when person does not have an image' do
-    before { get '/person/78a5c98d-8bbb-45ec-8faa-937d77a93191/' }
+    before { get '/person/atai-usman/' }
 
     it 'shows a picture anyway (empty avatar)' do
       subject.css('img.person__image/@src').first.text
@@ -59,7 +59,7 @@ describe 'Person Page' do
   end
 
   describe 'when person has a birth date' do
-    before { get '/person/007d807d-2f2d-4a2e-829f-1fd5109bb7de/' }
+    before { get '/person/tijjani-jobe-abdulkadir/' }
 
     it 'displays it' do
       subject.css('.person__birthdate').first.text.must_equal('1970-01-02')
@@ -73,7 +73,7 @@ describe 'Person Page' do
   end
 
   describe 'when person has a Twitter' do
-    before { get '/person/13721811-4357-419c-8ca7-8f1170b36f1a/' }
+    before { get '/person/ben-murray-bruce/' }
 
     it 'links to it' do
       subject.css('.person__twitter a/@href').first.text
@@ -99,7 +99,7 @@ describe 'Person Page' do
   end
 
   describe 'when person has an email' do
-    before { get '/person/9de46243-685e-4902-81d4-b3e01faa93d5/' }
+    before { get '/person/adamu-abdullahi/' }
 
     it 'links to the email' do
       subject.css('.person__email a/@href').first.text
@@ -113,7 +113,7 @@ describe 'Person Page' do
   end
 
   describe 'when person has wikipedia url' do
-    before { get '/person/0577f346-e883-4e1d-94eb-e3050d5c15f1/' }
+    before { get '/person/fatimat-raji-rasaki/' }
 
     it 'links to it' do
       subject.css('.person__wikipedia a/@href').first.text
@@ -127,7 +127,7 @@ describe 'Person Page' do
   end
 
   describe 'summary section' do
-    before { get '/person/0baa5a03-b1e0-4e66-b3f9-daee8bacb87d/' }
+    before { get '/person/sunday-steve-karim/' }
 
     it 'edit link points to the right person id' do
       subject.css('.person-edit-link/@href').text
@@ -153,7 +153,7 @@ describe 'Person Page' do
   end
 
   describe 'when requesting a senator page' do
-    before { get '/person/6b0cdd74-7960-478f-ac93-d230f486a5b9/' }
+    before { get '/person/abaribe-enynnaya/' }
 
     it 'finds the senator by id' do
       subject.css('title').text.must_include('ABARIBE ENYNNAYA')
@@ -187,14 +187,14 @@ describe 'Person Page' do
   describe 'social block' do
     it 'links to facebook share' do
       subject.css('.btn-facebook/@href').text.must_include(
-        '/person/b2a7f72a-9ecf-4263-83f1-cb0f8783053c/&t=ABDUKADIR RAHIS'
+        '/person/abdukadir-rahis/&t=ABDUKADIR RAHIS'
       )
     end
 
     it 'links to twitter share' do
       subject.css('.btn-twitter/@href').text.must_include('NGShineyoureye')
       subject.css('.btn-twitter/@href').text.must_include('&text=ABDUKADIR RAHIS')
-      subject.css('.btn-twitter/@href').text.must_include('/person/b2a7f72a-9ecf-4263-83f1-cb0f8783053c/')
+      subject.css('.btn-twitter/@href').text.must_include('/person/abdukadir-rahis/')
     end
   end
 end
