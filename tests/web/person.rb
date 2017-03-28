@@ -86,7 +86,7 @@ describe 'Person Page' do
   end
 
   describe 'when person has a Facebook' do
-    before { get '/person/gov:willie-obiano/' }
+    before { get '/person/willie-maduabuchukwu-obiano/' }
 
     it 'links to it' do
       subject.css('.person__facebook a/@href').first.text
@@ -147,7 +147,7 @@ describe 'Person Page' do
     end
 
     it 'shows nothing in the summary' do
-      get '/person/gov:abdulaziz-abubakar-yari/'
+      get '/person/abdul-aziz-yari-abubakar/'
       subject.css('.person-summary').text.strip.must_equal('')
     end
   end
@@ -165,7 +165,7 @@ describe 'Person Page' do
   end
 
   describe 'when requesting a governor page' do
-    before { get '/person/gov:victor-okezie-ikpeazu/' }
+    before { get '/person/okezie-ikpeazu/' }
 
     it 'finds the governor by slug' do
       subject.css('title').text.must_include('Victor Okezie Ikpeazu')

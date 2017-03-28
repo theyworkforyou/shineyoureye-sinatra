@@ -46,8 +46,8 @@ describe 'Page::Person' do
   describe 'when page is a Morph person' do
     include PersonInterfaceTest
     let(:contents) do
-      'id
-1'
+      'identifier__shineyoureye
+foo'
     end
     let(:people) do
       MembershipCSV::People.new(
@@ -59,7 +59,7 @@ describe 'Page::Person' do
     end
     let(:page) do
       Page::Person.new(
-        person: people.find_single('1'),
+        person: people.find_single('foo'),
         position: 'irrelevant',
         summary_doc: 'irrelevant'
       )
