@@ -19,10 +19,6 @@ module MembershipCSV
       id_to_person[id]
     end
 
-    def none?(id)
-      find_single(id).nil?
-    end
-
     def find_all_by_mapit_area(mapit_id)
       mapit_id_to_person[mapit_id.to_s] || []
     end

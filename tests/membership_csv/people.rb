@@ -48,10 +48,6 @@ id3,name3,name-3,'
       people.find_single('id2').name.must_equal('name2')
     end
 
-    it 'can check if id does not exist' do
-      people.none?('i-do-not-exist').must_equal(true)
-    end
-
     it 'does not know the start date of the current term' do
       assert_nil(people.current_term_start_date)
     end

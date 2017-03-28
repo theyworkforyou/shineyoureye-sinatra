@@ -188,10 +188,11 @@ get '/position/executive-governor/' do
 end
 
 get '/person/:id/' do |id|
-  pass if representatives.none?(id)
+  person = representatives.find_single(id)
+  pass unless person
   summary_finder = Document::Finder.new(pattern: summary_pattern(id), baseurl: '')
   @page = Page::Person.new(
-    person: representatives.find_single(id),
+    person: person,
     position: 'Representative',
     summary_doc: summary_finder.find_or_empty
   )
@@ -199,10 +200,11 @@ get '/person/:id/' do |id|
 end
 
 get '/person/:id/' do |id|
-  pass if senators.none?(id)
+  person = senators.find_single(id)
+  pass unless person
   summary_finder = Document::Finder.new(pattern: summary_pattern(id), baseurl: '')
   @page = Page::Person.new(
-    person: senators.find_single(id),
+    person: person,
     position: 'Senator',
     summary_doc: summary_finder.find_or_empty
   )
@@ -210,10 +212,11 @@ get '/person/:id/' do |id|
 end
 
 get '/person/:id/' do |id|
-  pass if governors.none?(id)
+  person = governors.find_single(id)
+  pass unless person
   summary_finder = Document::Finder.new(pattern: summary_pattern(id), baseurl: '')
   @page = Page::Person.new(
-    person: governors.find_single(id),
+    person: person,
     position: 'Governor',
     summary_doc: summary_finder.find_or_empty
   )

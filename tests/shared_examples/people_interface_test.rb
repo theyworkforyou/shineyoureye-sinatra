@@ -13,10 +13,6 @@ module PeopleInterfaceTest
     assert_respond_to(people, :find_single)
   end
 
-  it 'can check if there is no person with an id' do
-    assert_respond_to(people, :none?)
-  end
-
   it 'can find all people by mapit area' do
     assert_respond_to(people, :find_all_by_mapit_area)
   end

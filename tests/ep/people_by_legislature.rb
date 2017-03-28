@@ -43,10 +43,6 @@ describe 'EP::PeopleByLegislature' do
             .must_equal('ABDUKADIR RAHIS')
     end
 
-    it 'can check if id does not exist in this legislature' do
-      people.none?('i-do-not-exist').must_equal(true)
-    end
-
     it 'knows the start date of the current term' do
       people.current_term_start_date.year.must_equal(2015)
       people.current_term_start_date.month.must_equal(6)

@@ -19,10 +19,6 @@ module EP
       id_to_person[id]
     end
 
-    def none?(id)
-      find_single(id).nil?
-    end
-
     def find_all_by_mapit_area(mapit_id)
       find_all.select { |person| person.area.id == mapit_id if person.area }
     end
