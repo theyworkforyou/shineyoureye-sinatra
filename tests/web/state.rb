@@ -57,9 +57,9 @@ describe 'State Place Page' do
 
     it 'links to the person page' do
       person.css('.media-left a/@href').text
-            .must_equal('/person/gov:victor-okezie-ikpeazu/')
+            .must_equal('/person/okezie-ikpeazu/')
       person.css('.media-body a/@href').first.text
-            .must_equal('/person/gov:victor-okezie-ikpeazu/')
+            .must_equal('/person/okezie-ikpeazu/')
     end
 
     it 'has an image that points to the thumbnail proxy image' do

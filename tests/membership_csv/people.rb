@@ -32,7 +32,7 @@ id3,name3,name-3,'
     end
 
     it 'uses the baseurl in the person url' do
-      people.find_all.first.url.must_equal('/baseurl/id1/')
+      people.find_all.first.url.must_equal('/baseurl/name-1/')
     end
 
     it 'returns nil for empty fields' do

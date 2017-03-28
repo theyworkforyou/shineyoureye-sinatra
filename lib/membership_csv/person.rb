@@ -68,7 +68,7 @@ module MembershipCSV
     end
 
     def url
-      baseurl + id + '/' if id
+      baseurl + slug + '/' if slug
     end
 
     private
