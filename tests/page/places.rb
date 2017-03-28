@@ -8,7 +8,8 @@ describe 'Page::Places' do
     EP::PeopleByLegislature.new(
       legislature: nigeria_at_known_revision.legislature('Representatives'),
       mapit: FakeMapit.new(1),
-      baseurl: '/baseurl/'
+      baseurl: '/baseurl/',
+      identifier_scheme: 'shineyoureye'
     )
   end
   let(:page) do

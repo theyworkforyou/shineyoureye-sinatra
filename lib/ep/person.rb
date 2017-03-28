@@ -4,11 +4,12 @@ require_relative '../person_social'
 
 module EP
   class Person
-    def initialize(person:, term:, mapit:, baseurl:)
+    def initialize(person:, term:, mapit:, baseurl:, identifier_scheme:)
       @person = person
       @term = term
       @mapit = mapit
       @baseurl = baseurl
+      @identifier_scheme = identifier_scheme
     end
 
     extend Forwardable
@@ -46,7 +47,7 @@ module EP
 
     private
 
-    attr_reader :person, :term, :mapit, :baseurl
+    attr_reader :person, :term, :mapit, :baseurl, :identifier_scheme
 
     def ep_area
       current_memberships.first.area

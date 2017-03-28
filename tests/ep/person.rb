@@ -201,7 +201,8 @@ describe 'EP::Person' do
       person: person_by_id(id),
       term: latest_term,
       mapit: FakeMapit.new(1),
-      baseurl: '/baseurl/'
+      baseurl: '/baseurl/',
+      identifier_scheme: 'shineyoureye'
     )
   end
 

@@ -13,7 +13,8 @@ describe 'EP::PeopleByLegislature' do
       EP::PeopleByLegislature.new(
         legislature: legislature,
         mapit: 'irrelevant',
-        baseurl: '/baseurl/'
+        baseurl: '/baseurl/',
+        identifier_scheme: 'shineyoureye'
       )
     end
 
@@ -75,7 +76,8 @@ describe 'EP::PeopleByLegislature' do
       EP::PeopleByLegislature.new(
         legislature: legislature,
         mapit: FakeMapit.new(1),
-        baseurl: '/baseurl/'
+        baseurl: '/baseurl/',
+        identifier_scheme: 'shineyoureye'
       )
     end
 

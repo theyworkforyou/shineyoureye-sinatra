@@ -61,12 +61,14 @@ governors = MembershipCSV::People.new(
 representatives = EP::PeopleByLegislature.new(
   legislature: settings.index.country('Nigeria').legislature('Representatives'),
   mapit: mapit,
-  baseurl: '/person/'
+  baseurl: '/person/',
+  identifier_scheme: 'shineyoureye'
 )
 senators = EP::PeopleByLegislature.new(
   legislature: settings.index.country('Nigeria').legislature('Senate'),
   mapit: mapit,
-  baseurl: '/person/'
+  baseurl: '/person/',
+  identifier_scheme: 'shineyoureye'
 )
 
 get '/' do
