@@ -187,10 +187,10 @@ get '/position/executive-governor/' do
   erb :people
 end
 
-get '/person/:id/' do |id|
-  person = representatives.find_single(id)
+get '/person/:slug/' do |slug|
+  person = representatives.find_single(slug)
   pass unless person
-  summary_finder = Document::Finder.new(pattern: summary_pattern(id), baseurl: '')
+  summary_finder = Document::Finder.new(pattern: summary_pattern(person.id), baseurl: '')
   @page = Page::Person.new(
     person: person,
     position: 'Representative',
@@ -199,10 +199,10 @@ get '/person/:id/' do |id|
   erb :person
 end
 
-get '/person/:id/' do |id|
-  person = senators.find_single(id)
+get '/person/:slug/' do |slug|
+  person = senators.find_single(slug)
   pass unless person
-  summary_finder = Document::Finder.new(pattern: summary_pattern(id), baseurl: '')
+  summary_finder = Document::Finder.new(pattern: summary_pattern(person.id), baseurl: '')
   @page = Page::Person.new(
     person: person,
     position: 'Senator',
@@ -211,10 +211,10 @@ get '/person/:id/' do |id|
   erb :person
 end
 
-get '/person/:id/' do |id|
-  person = governors.find_single(id)
+get '/person/:slug/' do |slug|
+  person = governors.find_single(slug)
   pass unless person
-  summary_finder = Document::Finder.new(pattern: summary_pattern(id), baseurl: '')
+  summary_finder = Document::Finder.new(pattern: summary_pattern(person.id), baseurl: '')
   @page = Page::Person.new(
     person: person,
     position: 'Governor',
