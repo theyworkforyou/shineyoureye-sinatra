@@ -200,6 +200,11 @@ describe 'EP::Person' do
     it 'has a slug' do
       person.slug.must_equal('adamu-abdullahi')
     end
+
+    it 'dashifies the name if no slug' do
+      person = ep_person('0b536a2c-2bc9-46a0-8d40-0deb9241cb31')
+      person.slug.must_equal('ahmad-abubakar')
+    end
   end
 
   def ep_person(id)

@@ -176,8 +176,18 @@ describe 'MembershipCSV::Person' do
     person.party_name.must_equal('PDP')
   end
 
-  it 'has a slug' do
-    person.slug.must_equal('okezie-ikpeazu')
+  describe 'slug' do
+    it 'has a slug' do
+      person.slug.must_equal('okezie-ikpeazu')
+    end
+
+    it 'dashifies name if no slug' do
+      person = morph_person(
+        'name' => '$%^a&* /\b:;',
+        'identifier__shineyoureye' => nil
+      )
+      person.slug.must_equal('a-b')
+    end
   end
 
   describe 'url' do

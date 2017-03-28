@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 require_relative '../person_proxy_images'
 require_relative '../person_social'
+require 'babosa'
 
 module EP
   class Person
@@ -46,7 +47,7 @@ module EP
     end
 
     def slug
-      site_identifier[:identifier]
+      site_identifier[:identifier] || slugify_name
     end
 
     private
@@ -67,7 +68,11 @@ module EP
     end
 
     def site_identifier
-      person.identifiers.find { |identifier| identifier[:scheme] == identifier_scheme }
+      person.identifiers.find { |identifier| identifier[:scheme] == identifier_scheme } || {}
+    end
+
+    def slugify_name
+      name.to_slug.normalize.to_s if name
     end
   end
 end

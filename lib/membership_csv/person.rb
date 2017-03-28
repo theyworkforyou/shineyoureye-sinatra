@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 require_relative '../person_proxy_images'
 require_relative '../person_social'
+require 'babosa'
 
 module MembershipCSV
   class Person
@@ -63,7 +64,7 @@ module MembershipCSV
     end
 
     def slug
-      person["identifier__#{identifier_scheme}"]
+      person["identifier__#{identifier_scheme}"] || slugify_name
     end
 
     def url
@@ -81,6 +82,10 @@ module MembershipCSV
     def proxy_image_base_url
       'https://raw.githubusercontent.com/theyworkforyou/shineyoureye-images' \
       "/gh-pages/Governors/#{id}/"
+    end
+
+    def slugify_name
+      name.to_slug.normalize.to_s if name
     end
   end
 end
