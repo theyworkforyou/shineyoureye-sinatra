@@ -15,7 +15,7 @@ module EP
     end
 
     def find_single(id)
-      find_all.find { |person| person.id == id }
+      id_to_person[id]
     end
 
     def none?(id)
@@ -48,6 +48,10 @@ module EP
 
     def latest_term
       legislature.legislative_periods.sort_by(&:start_date).last
+    end
+
+    def id_to_person
+      @id_to_person ||= find_all.map { |person| [person.id, person] }.to_h
     end
 
     def create_person(person)
