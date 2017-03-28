@@ -45,6 +45,10 @@ module EP
       baseurl + id + '/'
     end
 
+    def slug
+      site_identifier[:identifier]
+    end
+
     private
 
     attr_reader :person, :term, :mapit, :baseurl, :identifier_scheme
@@ -60,6 +64,10 @@ module EP
     def proxy_image_base_url
       'https://theyworkforyou.github.io/shineyoureye-images' \
       "/#{legislature.slug}/#{id}/"
+    end
+
+    def site_identifier
+      person.identifiers.find { |identifier| identifier[:scheme] == identifier_scheme }
     end
   end
 end

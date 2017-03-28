@@ -196,6 +196,12 @@ describe 'EP::Person' do
     person.url.must_equal('/baseurl/9de46243-685e-4902-81d4-b3e01faa93d5/')
   end
 
+  describe 'slug' do
+    it 'has a slug' do
+      person.slug.must_equal('adamu-abdullahi')
+    end
+  end
+
   def ep_person(id)
     EP::Person.new(
       person: person_by_id(id),
