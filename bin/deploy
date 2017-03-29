@@ -36,10 +36,12 @@ start_sinatra() {
     bundle exec rackup > "$BUILD_DIR/sinatra.log" 2>&1 &
     SINATRA_PID=$!
     echo "Waiting for Sinatra to start..."
-    while ! nc -z localhost "$SINATRA_PORT"; do sleep 1; done
+    while kill -0 "$SINATRA_PID" 2> /dev/null && ! nc -z localhost "$SINATRA_PORT"
+    do
+        sleep 1
+    done
     # Make sure it's not an old one server still running:
-    sleep 1
-    kill -0 "$SINATRA_PID" ||
+    kill -0 "$SINATRA_PID" 2> /dev/null ||
         { echo "Couldn't start Sinatra - is an old server running?"; exit 1; }
     echo "done"
 }
