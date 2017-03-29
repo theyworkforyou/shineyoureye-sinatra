@@ -112,6 +112,11 @@ get '/blog/:slug' do |slug|
   erb :post
 end
 
+get '/info/events' do
+  @redirect_to = '/events/'
+  erb :redirect, layout: false
+end
+
 get '/events/' do
   finder = Document::Finder.new(pattern: events_pattern, baseurl: '/events/')
   @page = Page::Posts.new(posts: finder.find_all, title: 'Events')

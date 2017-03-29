@@ -33,4 +33,13 @@ describe 'Events Page' do
       refute_empty(single_event.css('div'))
     end
   end
+
+  describe 'redirection from old route' do
+    before { get '/info/events' }
+
+    it 'loads the redirect view' do
+      subject.css('meta @content').first.text.must_equal('0; url=/events/')
+      subject.css('a @href').first.text.must_equal('/events/')
+    end
+  end
 end
