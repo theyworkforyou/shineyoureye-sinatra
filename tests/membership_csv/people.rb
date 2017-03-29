@@ -18,7 +18,8 @@ id3,name3,name-3,'
       MembershipCSV::People.new(
         csv_filename: new_tempfile(contents),
         mapit: 'irrelevant',
-        baseurl: '/baseurl/'
+        baseurl: '/baseurl/',
+        identifier_scheme: 'shineyoureye'
       )
     end
 
@@ -78,7 +79,8 @@ id3,name3,name-3,'
       MembershipCSV::People.new(
         csv_filename: new_tempfile(contents),
         mapit: FakeMapit.new(1),
-        baseurl: '/baseurl/'
+        baseurl: '/baseurl/',
+        identifier_scheme: 'shineyoureye'
       )
     end
 

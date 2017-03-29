@@ -4,10 +4,11 @@ require_relative 'person'
 
 module EP
   class PeopleByLegislature
-    def initialize(legislature:, mapit:, baseurl:)
+    def initialize(legislature:, mapit:, baseurl:, identifier_scheme:)
       @legislature = legislature
       @mapit = mapit
       @baseurl = baseurl
+      @identifier_scheme = identifier_scheme
     end
 
     def find_all
@@ -15,7 +16,7 @@ module EP
     end
 
     def find_single(id)
-      find_all.find { |person| person.id == id }
+      id_to_person[id]
     end
 
     def none?(id)
@@ -40,7 +41,7 @@ module EP
 
     private
 
-    attr_reader :legislature, :mapit, :baseurl
+    attr_reader :legislature, :mapit, :baseurl, :identifier_scheme
 
     def people_sorted_by_name
       latest_term.people.sort_by { |person| [person.sort_name, person.name] }
@@ -50,8 +51,18 @@ module EP
       legislature.legislative_periods.sort_by(&:start_date).last
     end
 
+    def id_to_person
+      @id_to_person ||= find_all.map { |person| [person.id, person] }.to_h
+    end
+
     def create_person(person)
-      Person.new(person: person, term: latest_term, mapit: mapit, baseurl: baseurl)
+      Person.new(
+        person: person,
+        term: latest_term,
+        mapit: mapit,
+        baseurl: baseurl,
+        identifier_scheme: identifier_scheme
+      )
     end
   end
 end

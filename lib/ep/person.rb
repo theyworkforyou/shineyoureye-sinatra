@@ -1,14 +1,16 @@
 # frozen_string_literal: true
 require_relative '../person_proxy_images'
 require_relative '../person_social'
+require 'babosa'
 
 module EP
   class Person
-    def initialize(person:, term:, mapit:, baseurl:)
+    def initialize(person:, term:, mapit:, baseurl:, identifier_scheme:)
       @person = person
       @term = term
       @mapit = mapit
       @baseurl = baseurl
+      @identifier_scheme = identifier_scheme
     end
 
     extend Forwardable
@@ -44,9 +46,13 @@ module EP
       baseurl + id + '/'
     end
 
+    def slug
+      site_identifier[:identifier] || slugify_name
+    end
+
     private
 
-    attr_reader :person, :term, :mapit, :baseurl
+    attr_reader :person, :term, :mapit, :baseurl, :identifier_scheme
 
     def ep_area
       current_memberships.first.area
@@ -59,6 +65,14 @@ module EP
     def proxy_image_base_url
       'https://theyworkforyou.github.io/shineyoureye-images' \
       "/#{legislature.slug}/#{id}/"
+    end
+
+    def site_identifier
+      person.identifiers.find { |identifier| identifier[:scheme] == identifier_scheme } || {}
+    end
+
+    def slugify_name
+      name.to_slug.normalize.to_s if name
     end
   end
 end

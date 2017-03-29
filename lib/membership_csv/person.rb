@@ -1,13 +1,15 @@
 # frozen_string_literal: true
 require_relative '../person_proxy_images'
 require_relative '../person_social'
+require 'babosa'
 
 module MembershipCSV
   class Person
-    def initialize(person:, mapit:, baseurl:)
+    def initialize(person:, mapit:, baseurl:, identifier_scheme:)
       @person = person
       @mapit = mapit
       @baseurl = baseurl
+      @identifier_scheme = identifier_scheme
     end
 
     include PersonProxyImages
@@ -62,7 +64,7 @@ module MembershipCSV
     end
 
     def slug
-      person['identifier__shineyoureye']
+      person["identifier__#{identifier_scheme}"] || slugify_name
     end
 
     def url
@@ -71,7 +73,7 @@ module MembershipCSV
 
     private
 
-    attr_reader :person, :mapit, :baseurl
+    attr_reader :person, :mapit, :baseurl, :identifier_scheme
 
     def first(values)
       values.split(';').first
@@ -80,6 +82,10 @@ module MembershipCSV
     def proxy_image_base_url
       'https://raw.githubusercontent.com/theyworkforyou/shineyoureye-images' \
       "/gh-pages/Governors/#{id}/"
+    end
+
+    def slugify_name
+      name.to_slug.normalize.to_s if name
     end
   end
 end

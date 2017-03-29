@@ -68,4 +68,8 @@ module PersonInterfaceTest
   it 'has an id' do
     assert_respond_to(person, :id)
   end
+
+  it 'has a slug' do
+    assert_respond_to(person, :slug)
+  end
 end

@@ -196,12 +196,24 @@ describe 'EP::Person' do
     person.url.must_equal('/baseurl/9de46243-685e-4902-81d4-b3e01faa93d5/')
   end
 
+  describe 'slug' do
+    it 'has a slug' do
+      person.slug.must_equal('adamu-abdullahi')
+    end
+
+    it 'dashifies the name if no slug' do
+      person = ep_person('0b536a2c-2bc9-46a0-8d40-0deb9241cb31')
+      person.slug.must_equal('ahmad-abubakar')
+    end
+  end
+
   def ep_person(id)
     EP::Person.new(
       person: person_by_id(id),
       term: latest_term,
       mapit: FakeMapit.new(1),
-      baseurl: '/baseurl/'
+      baseurl: '/baseurl/',
+      identifier_scheme: 'shineyoureye'
     )
   end
 

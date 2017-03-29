@@ -4,10 +4,11 @@ require_relative 'person'
 
 module MembershipCSV
   class People
-    def initialize(csv_filename:, mapit:, baseurl:)
+    def initialize(csv_filename:, mapit:, baseurl:, identifier_scheme:)
       @csv_filename = csv_filename
       @mapit = mapit
       @baseurl = baseurl
+      @identifier_scheme = identifier_scheme
     end
 
     def find_all
@@ -40,7 +41,7 @@ module MembershipCSV
 
     private
 
-    attr_reader :csv_filename, :mapit, :baseurl
+    attr_reader :csv_filename, :mapit, :baseurl, :identifier_scheme
 
     def all_people
       @all_people ||= read_with_headers.map { |row| create_person(remove_empty_cells(row)) }
@@ -68,7 +69,12 @@ module MembershipCSV
     end
 
     def create_person(row)
-      Person.new(person: row, mapit: mapit, baseurl: baseurl)
+      Person.new(
+        person: row,
+        mapit: mapit,
+        baseurl: baseurl,
+        identifier_scheme: identifier_scheme
+      )
     end
   end
 end
