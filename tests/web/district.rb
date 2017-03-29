@@ -58,9 +58,9 @@ describe 'Senatorial District Place Page' do
 
     it 'links to the person page' do
       person.css('.media-left a/@href').text
-            .must_equal('/person/73f394c3-b0ae-4154-b86c-8e5b7b637df8/')
+            .must_equal('/person/theodore-ahamefule-orji/')
       person.css('.media-body a/@href').first.text
-            .must_equal('/person/73f394c3-b0ae-4154-b86c-8e5b7b637df8/')
+            .must_equal('/person/theodore-ahamefule-orji/')
     end
 
     it 'has an image that points to the thumbnail proxy image' do

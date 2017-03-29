@@ -20,9 +20,9 @@ describe 'List of Governors' do
 
     it 'links to the person page' do
       person.css('.media-left a/@href').first.text
-            .must_equal('/person/gov:abdulaziz-abubakar-yari/')
+            .must_equal('/person/abdul-aziz-yari-abubakar/')
       person.css('.media-body a/@href').first.text
-            .must_equal('/person/gov:abdulaziz-abubakar-yari/')
+            .must_equal('/person/abdul-aziz-yari-abubakar/')
     end
 
     describe 'when person has an image' do

@@ -15,12 +15,8 @@ module MembershipCSV
       all_people.sort_by(&:name)
     end
 
-    def find_single(id)
-      id_to_person[id]
-    end
-
-    def none?(id)
-      find_single(id).nil?
+    def find_single(slug)
+      slug_to_person[slug]
     end
 
     def find_all_by_mapit_area(mapit_id)
@@ -36,7 +32,7 @@ module MembershipCSV
     end
 
     def featured_person(featured_summaries)
-      featured_summaries.map { |summary| find_single(summary.slug) }.compact.first
+      featured_summaries.map { |summary| id_to_person[summary.slug] }.compact.first
     end
 
     private
@@ -57,6 +53,10 @@ module MembershipCSV
 
     def id_to_person
       @id_to_person ||= all_people.map { |person| [person.id, person] }.to_h
+    end
+
+    def slug_to_person
+      @slug_to_person ||= all_people.map { |person| [person.slug, person] }.to_h
     end
 
     def mapit_id_to_person

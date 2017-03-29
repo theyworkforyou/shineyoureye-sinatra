@@ -32,7 +32,7 @@ id3,name3,name-3,'
     end
 
     it 'uses the baseurl in the person url' do
-      people.find_all.first.url.must_equal('/baseurl/id1/')
+      people.find_all.first.url.must_equal('/baseurl/name-1/')
     end
 
     it 'returns nil for empty fields' do
@@ -44,12 +44,8 @@ id3,name3,name-3,'
       sorted_alphabetically.must_equal(true)
     end
 
-    it 'finds by id' do
-      people.find_single('id2').name.must_equal('name2')
-    end
-
-    it 'can check if id does not exist' do
-      people.none?('i-do-not-exist').must_equal(true)
+    it 'finds by slug' do
+      people.find_single('name-2').name.must_equal('name2')
     end
 
     it 'does not know the start date of the current term' do
@@ -85,7 +81,7 @@ id3,name3,name-3,'
     end
 
     it 'assigns a mapit area to the person' do
-      people.find_single('id3').area.id.must_equal(1)
+      people.find_single('name-3').area.id.must_equal(1)
     end
 
     it 'finds all people in a mapit area' do

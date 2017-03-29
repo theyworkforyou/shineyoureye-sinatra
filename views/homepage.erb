@@ -19,16 +19,6 @@
   <div class="container">
     <h2>Find more information about your government representatives</h2>
     <div class="row">
-      <div class="col-sm-4 homepage__reps__rep">
-        <a href="/person/gov:mallam-nasir-el-rufai/">
-          <img src="https://theyworkforyou.github.io/shineyoureye-images/Governors/gov:mallam-nasir-el-rufai/250x250.jpeg">
-        </a>
-        <p>
-            <strong>Nasir El-Rufai,</strong>
-            APC, Kaduna
-        </p>
-        <a class="btn btn-default" href="/position/executive-governor/"><b>Governors</b></a>
-      </div>
       <% @page.featured_people.each do |page_fragment| %>
         <% if page_fragment.featured_person %>
         <div class="col-sm-4 homepage__reps__rep">

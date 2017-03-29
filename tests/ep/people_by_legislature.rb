@@ -35,16 +35,12 @@ describe 'EP::PeopleByLegislature' do
     end
 
     it 'uses the baseurl in the person url' do
-      people.find_all.first.url.must_equal('/baseurl/b2a7f72a-9ecf-4263-83f1-cb0f8783053c/')
+      people.find_all.first.url.must_equal('/baseurl/abdukadir-rahis/')
     end
 
-    it 'finds a single person by id' do
-      people.find_single('b2a7f72a-9ecf-4263-83f1-cb0f8783053c').name
+    it 'finds a single person by slug' do
+      people.find_single('abdukadir-rahis').name
             .must_equal('ABDUKADIR RAHIS')
-    end
-
-    it 'can check if id does not exist in this legislature' do
-      people.none?('i-do-not-exist').must_equal(true)
     end
 
     it 'knows the start date of the current term' do
@@ -82,7 +78,7 @@ describe 'EP::PeopleByLegislature' do
     end
 
     it 'assigns a mapit area to the person' do
-      people.find_single('b2a7f72a-9ecf-4263-83f1-cb0f8783053c').area.id
+      people.find_single('abdukadir-rahis').area.id
             .must_equal(1)
     end
 

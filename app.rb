@@ -187,33 +187,36 @@ get '/position/executive-governor/' do
   erb :people
 end
 
-get '/person/:id/' do |id|
-  pass if representatives.none?(id)
-  summary_finder = Document::Finder.new(pattern: summary_pattern(id), baseurl: '')
+get '/person/:slug/' do |slug|
+  person = representatives.find_single(slug)
+  pass unless person
+  summary_finder = Document::Finder.new(pattern: summary_pattern(person.id), baseurl: '')
   @page = Page::Person.new(
-    person: representatives.find_single(id),
+    person: person,
     position: 'Representative',
     summary_doc: summary_finder.find_or_empty
   )
   erb :person
 end
 
-get '/person/:id/' do |id|
-  pass if senators.none?(id)
-  summary_finder = Document::Finder.new(pattern: summary_pattern(id), baseurl: '')
+get '/person/:slug/' do |slug|
+  person = senators.find_single(slug)
+  pass unless person
+  summary_finder = Document::Finder.new(pattern: summary_pattern(person.id), baseurl: '')
   @page = Page::Person.new(
-    person: senators.find_single(id),
+    person: person,
     position: 'Senator',
     summary_doc: summary_finder.find_or_empty
   )
   erb :person
 end
 
-get '/person/:id/' do |id|
-  pass if governors.none?(id)
-  summary_finder = Document::Finder.new(pattern: summary_pattern(id), baseurl: '')
+get '/person/:slug/' do |slug|
+  person = governors.find_single(slug)
+  pass unless person
+  summary_finder = Document::Finder.new(pattern: summary_pattern(person.id), baseurl: '')
   @page = Page::Person.new(
-    person: governors.find_single(id),
+    person: person,
     position: 'Governor',
     summary_doc: summary_finder.find_or_empty
   )

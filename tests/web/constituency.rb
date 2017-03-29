@@ -58,9 +58,9 @@ describe 'Federal Constituency Place Page' do
 
     it 'links to the person page' do
       person.css('.media-left a/@href').text
-            .must_equal('/person/ea083b8f-f370-484e-bb84-63541cd0cc1c/')
+            .must_equal('/person/sylvester-o-ogbaga/')
       person.css('.media-body a/@href').first.text
-            .must_equal('/person/ea083b8f-f370-484e-bb84-63541cd0cc1c/')
+            .must_equal('/person/sylvester-o-ogbaga/')
     end
 
     it 'has an image that points to the thumbnail proxy image' do
