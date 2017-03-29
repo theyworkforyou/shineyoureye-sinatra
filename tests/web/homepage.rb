@@ -10,16 +10,16 @@ describe 'Homepage' do
 
     it 'links to the person page' do
       person.css('a/@href').first.text
-            .must_equal('/person/lawali-anka-hassan/')
+            .must_equal('/person/abdukadir-rahis/')
     end
 
     it 'displays the person medium size image' do
       person.css('img/@src').text
-            .must_include('/ed60d392-ebe6-49f6-8174-10eb29dbb216/250x250.jpeg')
+            .must_include('/b2a7f72a-9ecf-4263-83f1-cb0f8783053c/250x250.jpeg')
     end
 
     it 'displays the person name' do
-      person.css('p strong').text.must_equal('LAWALI HASSAN')
+      person.css('p strong').text.must_equal('ABDUKADIR RAHIS')
     end
 
     it 'displays the person party name' do
@@ -27,7 +27,7 @@ describe 'Homepage' do
     end
 
     it 'displays the person area name' do
-      person.css('p').text.must_include('ANKA//TALATA-MAFARA')
+      person.css('p').text.must_include('Maiduguri (Metropolitan)')
     end
 
     it 'displays all types of people' do
