@@ -5,10 +5,55 @@ set -e
 # Make sure we're in the right directory:
 cd "$(dirname ${BASH_SOURCE[0]})"/..
 
+usage_and_exit() {
+    echo "Usage: $0 --only-build | (staging|production)"
+    exit 1
+}
+
 if [ "$1" = "--only-build" ]
 then
     ONLY_BUILD=1
+    shift
+    if [ "$#" != 0 ]
+    then
+        usage_and_exit
+    fi
 fi
+
+# Check parameters and set up environment variables that relate to
+# actually pushing a new version of the site:
+if [ "$ONLY_BUILD" != 1 ]
+then
+
+   if [ "$1" = 'production' ] || [ "$1" = 'staging' ]
+   then
+       DEPLOY_TYPE="$1"
+   else
+       usage_and_exit
+   fi
+
+   if [ "$DEPLOY_TYPE" = 'production' ]
+   then
+       GH_PAGES_REPO='shineyoureye-static'
+   else
+       GH_PAGES_REPO='shineyoureye-static-staging'
+   fi
+   GH_PAGES_USER='theyworkforyou'
+
+   if [ x = x"$GITHUB_ACCESS_TOKEN" ]
+   then
+       GH_PAGES_GIT_URL="git@github.com:$GH_PAGES_USER/$GH_PAGES_REPO.git"
+       GH_PAGES_GIT_URL_REDACTED="$GH_PAGES_GIT_URL"
+       echo "GITHUB_ACCESS_TOKEN is not set, so using an scp-style Git SSH URL instead: $GH_PAGES_GIT_URL"
+   else
+       GH_PAGES_GIT_URL="https://${GITHUB_ACCESS_TOKEN}@github.com/$GH_PAGES_USER/$GH_PAGES_REPO.git"
+       GH_PAGES_GIT_URL_REDACTED="https://XXXXXXXXXXXXX@github.com/$GH_PAGES_USER/$GH_PAGES_REPO.git"
+       echo "GITHUB_ACCESS_TOKEN was set, so using an https URL containing that: $GH_PAGES_GIT_URL_REDACTED"
+   fi
+
+fi
+
+exit
 
 BUILD_DIR="build/$(date +'%Y-%m-%dT%H-%M-%S')"
 mkdir -p "$BUILD_DIR"
@@ -16,20 +61,6 @@ ln -snf "${BUILD_DIR##*/}" build/current
 
 SINATRA_PORT=9292
 SINATRA_BASE_URL="http://localhost:$SINATRA_PORT"
-
-GH_PAGES_REPO='shineyoureye-static'
-GH_PAGES_USER='theyworkforyou'
-
-if [ x = x"$GITHUB_ACCESS_TOKEN" ]
-then
-    GH_PAGES_GIT_URL="git@github.com:$GH_PAGES_USER/$GH_PAGES_REPO.git"
-    GH_PAGES_GIT_URL_REDACTED="$GH_PAGES_GIT_URL"
-    echo "GITHUB_ACCESS_TOKEN is not set, so using an scp-style Git SSH URL instead: $GH_PAGES_GIT_URL"
-else
-    GH_PAGES_GIT_URL="https://${GITHUB_ACCESS_TOKEN}@github.com/$GH_PAGES_USER/$GH_PAGES_REPO.git"
-    GH_PAGES_GIT_URL_REDACTED="https://XXXXXXXXXXXXX@github.com/$GH_PAGES_USER/$GH_PAGES_REPO.git"
-    echo "GITHUB_ACCESS_TOKEN was set, so using an https URL containing that: $GH_PAGES_GIT_URL_REDACTED"
-fi
 
 start_sinatra() {
     # Start the Sinatra server in the background:
