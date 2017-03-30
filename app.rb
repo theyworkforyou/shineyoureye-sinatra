@@ -228,9 +228,8 @@ get '/person/:slug/' do |slug|
   erb :person
 end
 
-Search = Struct.new(:title)
 get '/search/' do
-  @page = Search.new('Search')
+  @page = Page::Basic.new(title: 'Search')
   erb :search
 end
 
