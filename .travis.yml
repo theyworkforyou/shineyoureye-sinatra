@@ -1,7 +1,7 @@
 language: ruby
 cache: bundler
 script:
-  - bin/prepare-data 53c5f09
+  - bin/prepare-data dab18a0
   - bundle exec rake
 sudo: false
 rvm:
