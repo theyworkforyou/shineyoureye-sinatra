@@ -2,7 +2,7 @@
 require 'test_helper'
 
 describe 'Events Page' do
-  before { get '/info/events' }
+  before { get '/events/' }
   subject { Nokogiri::HTML(last_response.body) }
 
   it 'shows the title' do
@@ -18,7 +18,7 @@ describe 'Events Page' do
     let(:single_event) { subject.css('.blog-in-a-list').last }
 
     it 'links to event url' do
-      single_event.css('h2 a/@href').text.must_equal('/info/events/fct-lga-polls-2016')
+      single_event.css('h2 a/@href').text.must_equal('/events/fct-lga-polls-2016')
     end
 
     it 'displays event title' do
@@ -31,6 +31,15 @@ describe 'Events Page' do
 
     it 'displays event excerpt' do
       refute_empty(single_event.css('div'))
+    end
+  end
+
+  describe 'redirection from old route' do
+    before { get '/info/events' }
+
+    it 'loads the redirect view' do
+      subject.css('meta @content').first.text.must_equal('0; url=/events/')
+      subject.css('a @href').first.text.must_equal('/events/')
     end
   end
 end

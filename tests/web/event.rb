@@ -2,7 +2,7 @@
 require 'test_helper'
 
 describe 'Event Page' do
-  before { get '/info/events/fct-lga-polls-2016' }
+  before { get '/events/fct-lga-polls-2016' }
   subject { Nokogiri::HTML(last_response.body) }
 
   it 'shows the event title' do
@@ -18,7 +18,7 @@ describe 'Event Page' do
   end
 
   it 'throws a 404 error if no file is found' do
-    get '/info/events/i-dont-exist'
+    get '/events/i-dont-exist'
     subject = Nokogiri::HTML(last_response.body)
     subject.css('h1').first.text.must_equal('Not Found')
   end
