@@ -1,0 +1,23 @@
+<form class="search-form" action="https://formspree.io/<%= settings.contact_email %>" method="post">
+  <h1><%= @page.title %></h1>
+
+  <p>You can send your feedback to <a href="mailto:<%= settings.contact_email %>"><%= settings.contact_email %></a> or use the form below.</p>
+
+  <p class="form-group">
+    <label for="name">Your name</label>
+    <input id="name" type="text" name="name" required placeholder="Eg. Jon Doe" class="form-control">
+  </p>
+
+  <p class="form-group">
+    <label for="email">Your email</label>
+    <span class="small">(optional - but lets us get back to you...)</span>
+    <input id="email" type="email" name="email" placeholder="Eg. jon@example.com" class="form-control">
+  </p>
+
+  <p class="form-group">
+    <label for="message">Your feedback</label>
+    <textarea id="message" name="message" rows="10" cols="50" autocomplete spellcheck class="form-control"></textarea>
+  </p>
+
+  <button type="submit" required class="btn btn-primary">Send feedback</button>
+</form>

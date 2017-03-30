@@ -22,12 +22,13 @@ require_relative 'lib/page/person'
 require_relative 'lib/page/post'
 require_relative 'lib/page/posts'
 
+set :contact_email, 'user@example.com'
 set :content_dir, File.join(__dir__, 'prose')
 set :datasource, ENV.fetch('DATASOURCE', 'https://github.com/everypolitician/everypolitician-data/raw/master/countries.json')
 set :index, EveryPolitician::Index.new(index_url: settings.datasource)
 set :mapit_url, 'http://nigeria.mapit.mysociety.org'
-set :twitter_user, 'NGShineYourEye'
 set :mapit_user_agent, ENV.fetch('MAPIT_USER_AGENT', nil)
+set :twitter_user, 'NGShineYourEye'
 
 # Create a wrapper for the mappings between the various IDs we have
 # to use for areas / places.
@@ -231,6 +232,11 @@ end
 get '/search/' do
   @page = Page::Basic.new(title: 'Search')
   erb :search
+end
+
+get '/contact/' do
+  @page = Page::Basic.new(title: 'Contact')
+  erb :contact
 end
 
 get '/fonts/bootstrap/:filename' do |filename|
