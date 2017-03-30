@@ -52,4 +52,15 @@ describe 'Homepage' do
       person.css('.btn-default').text.strip.must_equal('Representatives')
     end
   end
+
+  describe 'twitter widget' do
+    it 'links to the site twitter account' do
+      subject.css('.btn-default/@href').text.must_include('NGShineYourEye')
+      subject.css('.twitter-timeline/@href').text.must_include('NGShineYourEye')
+    end
+
+    it 'displays the right twitter handle' do
+      subject.css('.twitter-timeline').text.must_include('NGShineYourEye')
+    end
+  end
 end
