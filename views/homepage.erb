@@ -96,9 +96,9 @@
       </div>
       <div class="col-sm-6">
         <div style="text-align: center; margin-bottom: 1em;">
-            <a class="btn btn-default" href="https://twitter.com/NGShineYourEye">Shine Your Eye on Twitter</a>
+            <a class="btn btn-default" href="https://twitter.com/<%= settings.twitter_user %>">Shine Your Eye on Twitter</a>
         </div>
-        <a style="color: white !important;" class="twitter-timeline"  href="https://twitter.com/NGShineYourEye" data-widget-id="661503293731000320" width="600px" data-chrome="nofooter noborders noheader noscrollbar transparent"  data-tweet-limit="3">Tweets by @NGShineYourEye</a>
+        <a style="color: white !important;" class="twitter-timeline"  href="https://twitter.com/<%= settings.twitter_user %>" data-widget-id="661503293731000320" width="600px" data-chrome="nofooter noborders noheader noscrollbar transparent"  data-tweet-limit="1">Tweets by @<%= settings.twitter_user %></a>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
       </div>
     </div>
