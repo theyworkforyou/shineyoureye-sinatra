@@ -29,7 +29,7 @@ describe 'State Place Page' do
     end
 
     it 'links to twitter share' do
-      subject.css('.btn-twitter/@href').text.must_include('NGShineyoureye')
+      subject.css('.btn-twitter/@href').text.must_include('NGShineYourEye')
       subject.css('.btn-twitter/@href').text.must_include('&text=Abia')
       subject.css('.btn-twitter/@href').text.must_include('/place/abia/')
     end
