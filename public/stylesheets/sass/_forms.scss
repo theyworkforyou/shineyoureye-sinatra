@@ -1,0 +1,26 @@
+.big-form {
+    max-width: 30em;
+    margin: 0 auto;
+
+    label {
+        margin: 1em 0;
+    }
+
+    .btn {
+        .glyphicon {
+            margin-right: 0.3em;
+        }
+    }
+}
+
+// When the form is really short, extra margin above and below
+// can help to give it some prominence on the page.
+.big-form--short {
+    margin-top: 3em;
+    margin-bottom: 3em;
+
+    @media (min-height: 700px) {
+        margin-top: 5em;
+        margin-bottom: 5em;
+    }
+}
