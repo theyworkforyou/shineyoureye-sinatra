@@ -12,9 +12,9 @@ require_relative 'lib/helpers/settings_helper'
 require_relative 'lib/mapit/geometry'
 require_relative 'lib/mapit/wrapper'
 require_relative 'lib/membership_csv/people'
+require_relative 'lib/page/basic'
 require_relative 'lib/page/homepage'
 require_relative 'lib/page/info'
-require_relative 'lib/page/jinja2'
 require_relative 'lib/page/place'
 require_relative 'lib/page/places'
 require_relative 'lib/page/people'
@@ -228,9 +228,8 @@ get '/person/:slug/' do |slug|
   erb :person
 end
 
-Search = Struct.new(:title)
 get '/search/' do
-  @page = Search.new('Search')
+  @page = Page::Basic.new(title: 'Search')
   erb :search
 end
 
@@ -249,7 +248,7 @@ end
 # This route just serves up an empty page that can be used as a Jinja2
 # template by services we integrate with this site.
 get '/jinja2-template.html' do
-  @page = Page::Jinja2.new(title: '{{ title }}')
+  @page = Page::Basic.new(title: '{{ title }}')
   erb :jinja2_contents
 end
 
