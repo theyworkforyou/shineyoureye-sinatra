@@ -35,8 +35,10 @@ then
    if [ "$DEPLOY_TYPE" = 'production' ]
    then
        GH_PAGES_REPO='shineyoureye-static'
+       export RACK_ENV=production
    else
        GH_PAGES_REPO='shineyoureye-static-staging'
+       export RACK_ENV=development
    fi
    GH_PAGES_USER='theyworkforyou'
 
