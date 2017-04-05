@@ -17,10 +17,6 @@ module Page
       place.name
     end
 
-    def key_figure
-      nil
-    end
-
     def people
       people_by_legislature.find_all_by_mapit_area(place.id)
     end
