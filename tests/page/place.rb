@@ -24,10 +24,6 @@ describe 'Page::Place' do
     page.place.id.must_equal(1)
   end
 
-  it 'has a key figure associated with the place' do
-    assert_nil(page.key_figure)
-  end
-
   it 'has a list of people for that place' do
     page.people.count.must_equal(2)
   end

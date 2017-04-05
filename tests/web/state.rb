@@ -16,9 +16,6 @@ describe 'State Place Page' do
     end
   end
 
-  # describe 'key figure' do
-  # end
-
   describe 'social block' do
     it 'displays the place name' do
       subject.css('.panel-title').text.must_equal('Abia')
