@@ -79,6 +79,7 @@ This project uses data from several different sources:
 
 ## Development
 
+If you want to contribute to this project, please read our [contributing guidelines](https://github.com/theyworkforyou/shineyoureye-sinatra/blob/master/.github/CONTRIBUTING.md).
 
 ### How to use this project
 
