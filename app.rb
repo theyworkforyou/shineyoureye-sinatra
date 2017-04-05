@@ -234,6 +234,11 @@ get '/search/' do
   erb :search
 end
 
+get '/feedback' do
+  @redirect_to = '/contact/'
+  erb :redirect, layout: false
+end
+
 get '/contact/' do
   @page = Page::Basic.new(title: 'Contact')
   erb :contact

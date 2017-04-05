@@ -16,4 +16,13 @@ describe 'Contact Page' do
   it 'includes the site email in the contact form' do
     subject.css('.big-form/@action').text.must_include('user@example.com')
   end
+
+  describe 'redirection from old route' do
+    before { get '/feedback' }
+
+    it 'loads the redirect view' do
+      subject.css('meta @content').first.text.must_equal('0; url=/contact/')
+      subject.css('a @href').first.text.must_equal('/contact/')
+    end
+  end
 end
