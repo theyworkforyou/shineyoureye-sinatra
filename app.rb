@@ -160,6 +160,16 @@ get '/place/is/senatorial-district/' do
   erb :places
 end
 
+get '/place/:slug/people/' do |slug|
+  @redirect_to = "/place/#{slug}/"
+  erb :redirect, layout: false
+end
+
+get '/place/:slug/places/' do |slug|
+  @redirect_to = "/place/#{slug}/"
+  erb :redirect, layout: false
+end
+
 get '/place/:slug/' do |slug|
   area = mapit.area_from_pombola_slug(slug)
   pass unless area
@@ -274,5 +284,6 @@ end
 
 get '/scraper-start-page.html' do
   @people = representatives.find_all + senators.find_all + governors.find_all
+  @places = mapit.places_of_type('FED') + mapit.places_of_type('SEN') + mapit.places_of_type('STA')
   erb :scraper_start_page, layout: false
 end

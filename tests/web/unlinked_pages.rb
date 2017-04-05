@@ -35,6 +35,22 @@ describe 'The Scraper Start Page' do
     subject.xpath('//a[contains(@href, "/contact_details/")]').count.must_equal(ep + governors)
     subject.xpath('//a[contains(@href, "/experience/")]').count.must_equal(ep + governors)
   end
+
+  it 'must have links to the old place/people route' do
+    refute_empty(subject.xpath('//a[@href="/place/abia-central/people/"]'))
+  end
+
+  it 'must have links to the old place/places route' do
+    refute_empty(subject.xpath('//a[@href="/place/abia-central/places/"]'))
+  end
+
+  it 'lists all available places' do
+    fed = 360
+    sen = 109
+    sta = 37
+    subject.xpath('//a[contains(@href, "/people/")]').count.must_equal(fed + sen + sta)
+    subject.xpath('//a[contains(@href, "/places/")]').count.must_equal(fed + sen + sta)
+  end
 end
 
 describe 'The Jinja2 Template' do

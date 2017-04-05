@@ -7,3 +7,8 @@
 <a href="<%= person.url %>contact_details/">Old contact details page route, must trigger redirect to <%= person.url %></a>
 <a href="<%= person.url %>experience/">Old experience page route, must trigger redirect to <%= person.url %></a>
 <% end %>
+
+<% @places.each do |place| %>
+<a href="<%= place.url %>people/">Old people page route, must trigger redirect to <%= place.url %></a>
+<a href="<%= place.url %>places/">Old places page route, must trigger redirect to <%= place.url %></a>
+<% end %>
