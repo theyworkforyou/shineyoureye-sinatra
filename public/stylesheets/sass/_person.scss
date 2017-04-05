@@ -29,7 +29,8 @@
 .person__image {
     max-width: 100%;
     height: auto;
-    margin-bottom: 1em;
+    display: block;
+    margin: 0 auto 1em;
 
     @media (min-width: $screen-sm-min) {
         margin-bottom: 2em;
