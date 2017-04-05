@@ -53,8 +53,6 @@ then
 
 fi
 
-exit
-
 BUILD_DIR="build/$(date +'%Y-%m-%dT%H-%M-%S')"
 mkdir -p "$BUILD_DIR"
 ln -snf "${BUILD_DIR##*/}" build/current
