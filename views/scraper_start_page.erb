@@ -2,3 +2,8 @@
 <a href="/jinja2-template.html">Jinja2 template</a>
 <a href="/info/events">Old events page route, must trigger redirect to new route</a>
 <a href="/feedback">Old contact page route, must trigger redirect to new route</a>
+
+<% @people.each do |person| %>
+<a href="<%= person.url %>contact_details/">Old contact details page route, must trigger redirect to <%= person.url %></a>
+<a href="<%= person.url %>experience/">Old experience page route, must trigger redirect to <%= person.url %></a>
+<% end %>

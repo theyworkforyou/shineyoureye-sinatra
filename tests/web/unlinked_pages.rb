@@ -20,6 +20,21 @@ describe 'The Scraper Start Page' do
   it 'must have a link to the old contact route' do
     refute_empty(subject.xpath('//a[@href="/feedback"]'))
   end
+
+  it 'must have links to the old person/contact details route' do
+    refute_empty(subject.xpath('//a[@href="/person/abdukadir-rahis/contact_details/"]'))
+  end
+
+  it 'must have links to the old person/experience route' do
+    refute_empty(subject.xpath('//a[@href="/person/abdukadir-rahis/experience/"]'))
+  end
+
+  it 'lists all available people' do
+    ep = 476
+    governors = 36
+    subject.xpath('//a[contains(@href, "/contact_details/")]').count.must_equal(ep + governors)
+    subject.xpath('//a[contains(@href, "/experience/")]').count.must_equal(ep + governors)
+  end
 end
 
 describe 'The Jinja2 Template' do

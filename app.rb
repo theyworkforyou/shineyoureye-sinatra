@@ -60,7 +60,6 @@ governors = MembershipCSV::People.new(
   baseurl: '/person/',
   identifier_scheme: 'shineyoureye'
 )
-
 representatives = EP::PeopleByLegislature.new(
   legislature: settings.index.country('Nigeria').legislature('Representatives'),
   mapit: mapit,
@@ -193,6 +192,16 @@ get '/position/executive-governor/' do
   erb :people
 end
 
+get '/person/:slug/contact_details/' do |slug|
+  @redirect_to = "/person/#{slug}/"
+  erb :redirect, layout: false
+end
+
+get '/person/:slug/experience/' do |slug|
+  @redirect_to = "/person/#{slug}/"
+  erb :redirect, layout: false
+end
+
 get '/person/:slug/' do |slug|
   person = representatives.find_single(slug)
   pass unless person
@@ -264,5 +273,6 @@ get '/jinja2-template.html' do
 end
 
 get '/scraper-start-page.html' do
+  @people = representatives.find_all + senators.find_all + governors.find_all
   erb :scraper_start_page, layout: false
 end
