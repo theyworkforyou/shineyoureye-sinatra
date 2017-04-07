@@ -17,7 +17,7 @@ module Document
     end
 
     def as_html
-      parser.to_html
+      parser.to_html.gsub(/{{site.baseurl}}/, '')
     end
 
     private
