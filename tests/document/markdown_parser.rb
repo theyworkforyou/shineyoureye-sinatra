@@ -38,6 +38,16 @@ foo: bar
 # A markdown header'
       parser(contents).as_html.strip.must_equal('<h1>A markdown header</h1>')
     end
+
+    it 'strips out any Jekyll {{site.baseurl}} markup' do
+      contents = '---
+---
+![infographic.png]({{site.baseurl}}/media/prose-images/infographic.png)'
+      expected = '<p><img src="/media/prose-images/infographic.png" ' \
+                 'alt="infographic.png" /></p>'
+      parser(contents).as_html.strip.must_equal(expected)
+    end
+
   end
 
   def parser(contents)
