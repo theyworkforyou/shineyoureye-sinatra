@@ -50,7 +50,7 @@ module Document
     end
 
     def filenames
-      @filenames ||= Dir.glob(pattern)
+      @filenames ||= Dir.glob(pattern).sort
     end
 
     def create_document(filename)

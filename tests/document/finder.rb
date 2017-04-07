@@ -27,6 +27,12 @@ slug: a-slug
     end
   end
 
+  it 'sorts the found filenames alphabetically' do
+    Dir.stub :glob, %w(zed be) do
+      finder.find_all.first.send(:basename).must_equal('be')
+    end
+  end
+
   describe 'when it fails to find a document' do
     describe 'when multiple documents with same name and different dates' do
       it 'raises an exception if method is called directly' do
