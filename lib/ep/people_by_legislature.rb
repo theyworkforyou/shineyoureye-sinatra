@@ -4,11 +4,9 @@ require_relative 'person'
 
 module EP
   class PeopleByLegislature
-    def initialize(legislature:, mapit:, baseurl:, identifier_scheme:)
+    def initialize(legislature:, person_factory:)
       @legislature = legislature
-      @mapit = mapit
-      @baseurl = baseurl
-      @identifier_scheme = identifier_scheme
+      @person_factory = person_factory
     end
 
     def find_all
@@ -37,7 +35,7 @@ module EP
 
     private
 
-    attr_reader :legislature, :mapit, :baseurl, :identifier_scheme
+    attr_reader :legislature, :person_factory
 
     def people_sorted_by_name
       latest_term.people.sort_by { |person| [person.sort_name, person.name] }
@@ -56,13 +54,7 @@ module EP
     end
 
     def create_person(person)
-      Person.new(
-        person: person,
-        term: latest_term,
-        mapit: mapit,
-        baseurl: baseurl,
-        identifier_scheme: identifier_scheme
-      )
+      person_factory.build_ep_person(person, latest_term)
     end
   end
 end
