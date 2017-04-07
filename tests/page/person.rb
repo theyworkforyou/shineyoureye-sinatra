@@ -2,7 +2,6 @@
 require 'test_helper'
 require_relative '../../lib/ep/people_by_legislature'
 require_relative '../../lib/page/person'
-require_relative '../shared_examples/person_interface_test'
 
 describe 'Page::Person' do
   let(:page) do
@@ -27,10 +26,5 @@ describe 'Page::Person' do
 
   it 'has a summary' do
     page.summary.must_equal('<p>foo</p>')
-  end
-
-  describe 'when page is an EP person' do
-    include PersonInterfaceTest
-    let(:person) { page.person }
   end
 end
