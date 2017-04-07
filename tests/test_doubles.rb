@@ -12,3 +12,5 @@ FakeMapit = Struct.new(:mapit_id) do
     FakePlace.new(mapit_id)
   end
 end
+
+FakePerson = Struct.new(:id, :name, :slug, :phone, :mapit)

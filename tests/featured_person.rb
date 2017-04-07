@@ -4,7 +4,11 @@ require_relative '../lib/featured_person'
 
 describe 'FeaturedPerson' do
   let(:page_fragment) do
-    PageFragment::FeaturedPerson.new(FakePerson.new('Name'), 'Senators', '/url/to/list/of/senators/')
+    PageFragment::FeaturedPerson.new(
+      FakePerson.new(nil, 'Name'),
+      'Senators',
+      '/url/to/list/of/senators/'
+    )
   end
 
   it 'has a featured person' do
@@ -18,6 +22,4 @@ describe 'FeaturedPerson' do
   it 'has a url to the list of people of that type' do
     page_fragment.people_type_url.must_equal('/url/to/list/of/senators/')
   end
-
-  FakePerson = Struct.new(:name)
 end
