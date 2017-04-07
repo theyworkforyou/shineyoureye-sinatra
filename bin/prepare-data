@@ -23,9 +23,21 @@ then
     (cd "$PROSE_DIR" && git checkout "$PROSE_COMMITISH")
 fi
 
+# Remove old symlinks from the public directory:
+find public -type l -delete
+
+# Ensure that the media directory exists, since we need to symlink the
+# prose-images directory into media.
+mkdir -p public/media
+
 # Symlink the media directories into the right place:
-for e in "${PROSE_DIR}"/media/*
+for RELATIVE in "${PROSE_DIR}"/media/*
 do
-    DIR="${e##*/}"
-    ln -snf "../prose/media/$DIR" "public/$DIR"
+    DIR="${RELATIVE##*/}"
+    if [ "$DIR" = prose-images ]
+    then
+        ln -snf "../../prose/media/$DIR" "public/media/$DIR"
+    else
+        ln -snf "../prose/media/$DIR" "public/$DIR"
+    fi
 done
