@@ -60,7 +60,6 @@ governors = MembershipCSV::People.new(
   baseurl: '/person/',
   identifier_scheme: 'shineyoureye'
 )
-
 representatives = EP::PeopleByLegislature.new(
   legislature: settings.index.country('Nigeria').legislature('Representatives'),
   mapit: mapit,
@@ -161,6 +160,16 @@ get '/place/is/senatorial-district/' do
   erb :places
 end
 
+get '/place/:slug/people/' do |slug|
+  @redirect_to = "/place/#{slug}/"
+  erb :redirect, layout: false
+end
+
+get '/place/:slug/places/' do |slug|
+  @redirect_to = "/place/#{slug}/"
+  erb :redirect, layout: false
+end
+
 get '/place/:slug/' do |slug|
   area = mapit.area_from_pombola_slug(slug)
   pass unless area
@@ -191,6 +200,16 @@ end
 get '/position/executive-governor/' do
   @page = Page::People.new(title: 'Executive Governor', people_by_legislature: governors)
   erb :people
+end
+
+get '/person/:slug/contact_details/' do |slug|
+  @redirect_to = "/person/#{slug}/"
+  erb :redirect, layout: false
+end
+
+get '/person/:slug/experience/' do |slug|
+  @redirect_to = "/person/#{slug}/"
+  erb :redirect, layout: false
 end
 
 get '/person/:slug/' do |slug|
@@ -234,6 +253,11 @@ get '/search/' do
   erb :search
 end
 
+get '/feedback' do
+  @redirect_to = '/contact/'
+  erb :redirect, layout: false
+end
+
 get '/contact/' do
   @page = Page::Basic.new(title: 'Contact')
   erb :contact
@@ -259,5 +283,7 @@ get '/jinja2-template.html' do
 end
 
 get '/scraper-start-page.html' do
+  @people = representatives.find_all + senators.find_all + governors.find_all
+  @places = mapit.places_of_type('FED') + mapit.places_of_type('SEN') + mapit.places_of_type('STA')
   erb :scraper_start_page, layout: false
 end

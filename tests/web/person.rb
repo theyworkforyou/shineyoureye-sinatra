@@ -197,4 +197,18 @@ describe 'Person Page' do
       subject.css('.btn-twitter/@href').text.must_include('/person/abdukadir-rahis/')
     end
   end
+
+  describe 'redirection from old route' do
+    it 'loads the redirect view for contact details' do
+      get '/person/abdukadir-rahis/contact_details/'
+      subject.css('meta @content').first.text.must_equal('0; url=/person/abdukadir-rahis/')
+      subject.css('a @href').first.text.must_equal('/person/abdukadir-rahis/')
+    end
+
+    it 'loads the redirect view for experience' do
+      get '/person/abdukadir-rahis/experience/'
+      subject.css('meta @content').first.text.must_equal('0; url=/person/abdukadir-rahis/')
+      subject.css('a @href').first.text.must_equal('/person/abdukadir-rahis/')
+    end
+  end
 end
