@@ -22,7 +22,7 @@ require_relative 'lib/page/person'
 require_relative 'lib/page/post'
 require_relative 'lib/page/posts'
 
-set :contact_email, 'user@example.com'
+set :contact_email, 'syeinfo@eienigeria.org'
 set :content_dir, File.join(__dir__, 'prose')
 set :datasource, ENV.fetch('DATASOURCE', 'https://github.com/everypolitician/everypolitician-data/raw/master/countries.json')
 set :index, EveryPolitician::Index.new(index_url: settings.datasource)

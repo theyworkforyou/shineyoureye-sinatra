@@ -14,7 +14,7 @@ describe 'Contact Page' do
   end
 
   it 'includes the site email in the contact form' do
-    subject.css('.big-form/@action').text.must_include('user@example.com')
+    subject.css('.big-form/@action').text.must_include('syeinfo@eienigeria.org')
   end
 
   describe 'redirection from old route' do
