@@ -20,10 +20,6 @@ describe 'EP::PeopleByLegislature' do
     people.find_all.count.must_equal(364)
   end
 
-  it 'has people from the current term' do
-    people.find_all.first.memberships.first.legislative_period.id.must_equal('term/8')
-  end
-
   it 'finds all people sorted by name' do
     (people.find_all.first.name < people.find_all.last.name).must_equal(true)
   end
