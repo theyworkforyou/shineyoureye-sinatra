@@ -25,7 +25,11 @@ id3,name3,name-3,'
     people.find_all.count.must_equal(3)
   end
 
-  it 'finds all people as persons' do
+  it 'finds all people sorted by name' do
+    (people.find_all.first.name < people.find_all.last.name).must_equal(true)
+  end
+
+  it 'finds all people as person objects' do
     people.find_all.first.id.must_equal('id1')
   end
 
@@ -37,12 +41,7 @@ id3,name3,name-3,'
     assert_nil(people.find_all.last.phone)
   end
 
-  it 'finds all people sorted by name' do
-    sorted_alphabetically = people.find_all.first.name < people.find_all.last.name
-    sorted_alphabetically.must_equal(true)
-  end
-
-  it 'finds by slug' do
+  it 'finds a single person by slug' do
     people.find_single('name-2').name.must_equal('name2')
   end
 

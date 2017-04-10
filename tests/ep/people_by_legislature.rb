@@ -16,7 +16,7 @@ describe 'EP::PeopleByLegislature' do
     )
   end
 
-  it 'has a list of all the people' do
+  it 'finds all people' do
     people.find_all.count.must_equal(364)
   end
 
@@ -24,11 +24,11 @@ describe 'EP::PeopleByLegislature' do
     people.find_all.first.memberships.first.legislative_period.id.must_equal('term/8')
   end
 
-  it 'sorts people by name' do
+  it 'finds all people sorted by name' do
     (people.find_all.first.name < people.find_all.last.name).must_equal(true)
   end
 
-  it 'people are person objects' do
+  it 'finds all people as person objects' do
     people.find_all.first.id.must_equal('b2a7f72a-9ecf-4263-83f1-cb0f8783053c')
   end
 
