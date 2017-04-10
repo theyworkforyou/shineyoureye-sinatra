@@ -6,17 +6,9 @@ require_relative '../../lib/page/person'
 require_relative '../shared_examples/person_interface_test'
 
 describe 'Page::Person' do
-  let(:people) do
-    EP::PeopleByLegislature.new(
-      legislature: nigeria_at_known_revision.legislature('Representatives'),
-      mapit: 'irrelevant',
-      baseurl: 'irrelevant',
-      identifier_scheme: 'shineyoureye'
-    )
-  end
   let(:page) do
     Page::Person.new(
-      person: people.find_single('abdukadir-rahis'),
+      person: FakePerson.new(nil, 'ABDUKADIR RAHIS'),
       position: 'Position',
       summary_doc: FakeSummary.new('irrelevant', '<p>foo</p>')
     )
