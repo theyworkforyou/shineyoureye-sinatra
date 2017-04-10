@@ -47,7 +47,6 @@ foo: bar
                  'alt="infographic.png" /></p>'
       parser(contents).as_html.strip.must_equal(expected)
     end
-
   end
 
   def parser(contents)
