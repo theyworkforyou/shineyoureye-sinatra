@@ -22,3 +22,6 @@
 <p><a href="<%= event.url %>">Unlinked event - <%= event.title %></a></p>
 <% end %>
 
+<% @infopages.each do |infopage| %>
+<p><a href="<%= infopage.url %>">Unlinked infopage - <%= infopage.title %></a></p>
+<% end %>

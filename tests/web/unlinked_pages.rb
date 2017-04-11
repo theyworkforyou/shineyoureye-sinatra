@@ -66,6 +66,10 @@ published: false
       refute_empty(subject.xpath('//a[contains(text(), "Unlinked event")]'))
     end
   end
+
+  it 'scrapes all info pages, including those unlinked' do
+    refute_empty(subject.xpath('//a[contains(text(), "Unlinked infopage")]'))
+  end
 end
 
 describe 'The Jinja2 Template' do

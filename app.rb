@@ -299,5 +299,7 @@ get '/scraper-start-page.html' do
   @posts = finder.find_unpublished
   finder = Document::Finder.new(pattern: events_pattern, baseurl: '/events/')
   @events = finder.find_unpublished
+  finder = Document::Finder.new(pattern: "#{info_dir}/*.md", baseurl: '/info/')
+  @infopages = finder.find_all
   erb :scraper_start_page, layout: false
 end
