@@ -297,5 +297,7 @@ get '/scraper-start-page.html' do
   @places = mapit.places_of_type('FED') + mapit.places_of_type('SEN') + mapit.places_of_type('STA')
   finder = Document::Finder.new(pattern: posts_pattern, baseurl: '/blog/')
   @posts = finder.find_unpublished
+  finder = Document::Finder.new(pattern: events_pattern, baseurl: '/events/')
+  @events = finder.find_unpublished
   erb :scraper_start_page, layout: false
 end

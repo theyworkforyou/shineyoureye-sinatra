@@ -17,3 +17,8 @@
 <% @posts.each do |post| %>
 <p><a href="<%= post.url %>">Unlinked post - <%= post.title %></a></p>
 <% end %>
+
+<% @events.each do |event| %>
+<p><a href="<%= event.url %>">Unlinked event - <%= event.title %></a></p>
+<% end %>
+

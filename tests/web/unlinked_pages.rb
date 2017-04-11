@@ -56,13 +56,14 @@ describe 'The Scraper Start Page' do
     subject.xpath('//a[contains(@href, "/places/")]').count.must_equal(fed + sen + sta)
   end
 
-  it 'scrapes unpublished post pages since they are unlinked' do
+  it 'scrapes unpublished post and event pages since they are unlinked' do
     unpublished = '---
 published: false
 ---'
     Dir.stub :glob, [new_tempfile(unpublished)] do
       get '/scraper-start-page.html'
       refute_empty(subject.xpath('//a[contains(text(), "Unlinked post")]'))
+      refute_empty(subject.xpath('//a[contains(text(), "Unlinked event")]'))
     end
   end
 end
