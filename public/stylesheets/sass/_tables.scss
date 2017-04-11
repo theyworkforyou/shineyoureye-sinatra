@@ -1,0 +1,12 @@
+// The @extends here are going to cause some serious selector bloat
+// (mostly because .table contains lots of nested selectors), but
+// it’s simpler than getting the Markdown parser to add Bootstrap
+// classes to its output.
+
+.markdown {
+    table {
+        @extend .table;
+        @extend .table-striped;
+        @extend .table-responsive;
+    }
+}
