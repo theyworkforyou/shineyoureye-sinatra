@@ -21,7 +21,7 @@ module Document
     end
 
     def find_all
-      filenames.map { |filename| create_document(filename) }
+      filenames.map { |filename| create_document(filename) }.select(&:published?)
     end
 
     def find_featured

@@ -7,8 +7,29 @@ describe 'Document::Finder' do
   let(:finder) { Document::Finder.new(pattern: "#{filename}.md", baseurl: '/path/') }
 
   it 'finds a single document' do
-    Dir.stub :glob, [filename] do
+    Dir.stub :glob, [new_tempfile('')] do
       finder.find_single.class.must_equal(Document::MarkdownWithFrontmatter)
+    end
+  end
+
+  it 'finds several documents' do
+    Dir.stub :glob, [new_tempfile(''), new_tempfile('')] do
+      finder.find_all.count.must_equal(2)
+    end
+  end
+
+  it 'returns only published documents' do
+    published = '---
+published: true
+---'
+    nofield = '---
+---'
+    unpublished = '---
+published: false
+---'
+    filenames = [new_tempfile(published), new_tempfile(nofield), new_tempfile(unpublished)]
+    Dir.stub :glob, filenames do
+      finder.find_all.count.must_equal(2)
     end
   end
 
@@ -22,15 +43,9 @@ slug: a-slug
     end
   end
 
-  it 'finds several documents' do
-    Dir.stub :glob, [filename, 'another-file'] do
-      finder.find_all.count.must_equal(2)
-    end
-  end
-
   it 'sorts the found filenames alphabetically' do
-    Dir.stub :glob, %w(zed be) do
-      finder.find_all.first.send(:basename).must_equal('be')
+    Dir.stub :glob, [new_tempfile('', 'zed'), new_tempfile('', 'be')] do
+      finder.find_all.first.send(:basename).start_with?('be').must_equal(true)
     end
   end
 
