@@ -33,6 +33,18 @@ published: false
     end
   end
 
+  it 'can find unpublished documents' do
+    published = '---
+published: true
+---'
+    unpublished = '---
+published: false
+---'
+    Dir.stub :glob, [new_tempfile(published), new_tempfile(unpublished), new_tempfile(unpublished)] do
+      finder.find_unpublished.count.must_equal(2)
+    end
+  end
+
   it 'creates a document with the right url' do
     contents = '---
 slug: a-slug
