@@ -22,8 +22,7 @@ module EP
     include PersonSocial
 
     def wikipedia_url
-      link = person.links.find { |l| l[:note] == 'Wikipedia (en)' }
-      link[:url] if link
+      person.link('Wikipedia (en)')
     end
 
     def current_memberships
@@ -47,7 +46,7 @@ module EP
     end
 
     def slug
-      site_identifier[:identifier] || slugify_name
+      person.identifier(identifier_scheme) || slugify_name
     end
 
     private
@@ -65,10 +64,6 @@ module EP
     def proxy_image_base_url
       'https://theyworkforyou.github.io/shineyoureye-images' \
       "/#{legislature.slug}/#{id}/"
-    end
-
-    def site_identifier
-      person.identifiers.find { |identifier| identifier[:scheme] == identifier_scheme } || {}
     end
 
     def slugify_name

@@ -1,9 +1,11 @@
 # frozen_string_literal: true
 require 'test_helper'
+require_relative '../shared_examples/person_interface_test'
 require_relative '../../lib/ep/everypolitician_extensions'
 require_relative '../../lib/ep/person'
 
 describe 'EP::Person' do
+  include PersonInterfaceTest
   let(:person) { ep_person('9de46243-685e-4902-81d4-b3e01faa93d5') }
 
   describe 'person proxy images' do
@@ -91,7 +93,7 @@ describe 'EP::Person' do
     person.id.must_equal('9de46243-685e-4902-81d4-b3e01faa93d5')
   end
 
-  it 'has a name' do
+  it 'has a full name' do
     person.name.must_equal('ABDULLAHI ADAMU')
   end
 

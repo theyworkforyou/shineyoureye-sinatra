@@ -23,13 +23,9 @@ module MembershipCSV
       mapit_id_to_person[mapit_id.to_s] || []
     end
 
-    def current_term_start_date
-      nil
-    end
+    def current_term_start_date; end
 
-    def legislature_name
-      nil
-    end
+    def legislature_name; end
 
     def featured_person(featured_summaries)
       featured_summaries.map { |summary| id_to_person[summary.slug] }.compact.first

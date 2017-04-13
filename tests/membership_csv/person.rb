@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 require 'test_helper'
+require_relative '../shared_examples/person_interface_test'
 require_relative '../../lib/membership_csv/person'
 
 describe 'MembershipCSV::Person' do
+  include PersonInterfaceTest
   let(:person) { morph_person(PERSON_FILLED) }
 
   describe 'person proxy images' do
@@ -90,7 +92,7 @@ describe 'MembershipCSV::Person' do
     person.id.must_equal('gov:victor-okezie-ikpeazu')
   end
 
-  it 'has a name' do
+  it 'has a full name' do
     person.name.must_equal('Victor Okezie Ikpeazu')
   end
 
