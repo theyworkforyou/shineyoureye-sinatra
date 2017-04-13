@@ -79,6 +79,7 @@ This project uses data from several different sources:
 
 ## Development
 
+If you want to contribute to this project, please read our [contributing guidelines](https://github.com/theyworkforyou/shineyoureye-sinatra/blob/master/.github/CONTRIBUTING.md).
 
 ### How to use this project
 
@@ -158,7 +159,7 @@ bundle exec rackup
 And go to <http://localhost:9292/>
 
 
-## Tests and RubCop
+## Tests and RuboCop
 
 For the tests, some of the user-editable contents of the site are used
 as fixtures. So we have to use this data in a particular point of its
