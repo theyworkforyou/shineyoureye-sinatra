@@ -6,6 +6,7 @@ require 'sinatra'
 require_relative 'lib/featured_person'
 require_relative 'lib/document/finder'
 require_relative 'lib/ep/people_by_legislature'
+require_relative 'lib/factory/person'
 require_relative 'lib/helpers/filepaths_helper'
 require_relative 'lib/helpers/layout_helper'
 require_relative 'lib/helpers/settings_helper'
@@ -53,24 +54,20 @@ mapit = Mapit::Wrapper.new(
   data_directory: 'mapit'
 )
 
+person_factory = Factory::Person.new(mapit: mapit, baseurl: '/person/', identifier_scheme: 'shineyoureye')
+
 # Assemble data on the members of the various legislatures we support:
 governors = MembershipCSV::People.new(
   csv_filename: 'morph/nigeria-state-governors.csv',
-  mapit: mapit,
-  baseurl: '/person/',
-  identifier_scheme: 'shineyoureye'
+  person_factory: person_factory
 )
 representatives = EP::PeopleByLegislature.new(
   legislature: settings.index.country('Nigeria').legislature('Representatives'),
-  mapit: mapit,
-  baseurl: '/person/',
-  identifier_scheme: 'shineyoureye'
+  person_factory: person_factory
 )
 senators = EP::PeopleByLegislature.new(
   legislature: settings.index.country('Nigeria').legislature('Senate'),
-  mapit: mapit,
-  baseurl: '/person/',
-  identifier_scheme: 'shineyoureye'
+  person_factory: person_factory
 )
 
 get '/' do

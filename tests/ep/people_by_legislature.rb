@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 require 'test_helper'
-require_relative '../../lib/ep/people_by_legislature'
 require_relative '../shared_examples/people_interface_test'
+require_relative '../../lib/ep/people_by_legislature'
 
 describe 'EP::PeopleByLegislature' do
   include PeopleInterfaceTest
@@ -10,9 +10,7 @@ describe 'EP::PeopleByLegislature' do
   let(:people) do
     EP::PeopleByLegislature.new(
       legislature: legislature,
-      mapit: FakeMapit.new(1),
-      baseurl: '/baseurl/',
-      identifier_scheme: 'shineyoureye'
+      person_factory: FakePersonFactory.new(FakeMapit.new(1))
     )
   end
 
@@ -28,12 +26,8 @@ describe 'EP::PeopleByLegislature' do
     people.find_all.first.id.must_equal('b2a7f72a-9ecf-4263-83f1-cb0f8783053c')
   end
 
-  it 'uses the baseurl in the person url' do
-    people.find_all.first.url.must_equal('/baseurl/abdukadir-rahis/')
-  end
-
   it 'finds a single person by slug' do
-    people.find_single('abdukadir-rahis').name.must_equal('ABDUKADIR RAHIS')
+    people.find_single('abdullahi-muhammed-wamakko').name.must_equal('ABDULLAHI MOHAMMED')
   end
 
   it 'knows the start date of the current term' do
@@ -57,10 +51,6 @@ describe 'EP::PeopleByLegislature' do
   it 'returns nil if no featured person' do
     featured_summaries = [FakeSummary.new('foo'), FakeSummary.new('bar')]
     assert_nil(people.featured_person(featured_summaries))
-  end
-
-  it 'assigns a mapit area to the person' do
-    people.find_single('abdukadir-rahis').area.id.must_equal(1)
   end
 
   it 'finds all people in a mapit area' do

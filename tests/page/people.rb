@@ -7,9 +7,7 @@ describe 'Page::People' do
   let(:people) do
     EP::PeopleByLegislature.new(
       legislature: nigeria_at_known_revision.legislature('Representatives'),
-      mapit: 'irrelevant',
-      baseurl: '/baseurl/',
-      identifier_scheme: 'shineyoureye'
+      person_factory: FakePersonFactory.new(FakeMapit.new(1))
     )
   end
   let(:page) do

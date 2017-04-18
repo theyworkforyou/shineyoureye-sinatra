@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 require 'test_helper'
-require_relative '../../lib/membership_csv/people'
 require_relative '../shared_examples/people_interface_test'
+require_relative '../../lib/membership_csv/people'
 
 describe 'MembershipCSV::People' do
   include PeopleInterfaceTest
@@ -15,9 +15,7 @@ id3,name3,name-3,'
   let(:people) do
     MembershipCSV::People.new(
       csv_filename: new_tempfile(contents),
-      mapit: FakeMapit.new(1),
-      baseurl: '/baseurl/',
-      identifier_scheme: 'shineyoureye'
+      person_factory: FakePersonFactory.new(FakeMapit.new(1))
     )
   end
 
@@ -31,10 +29,6 @@ id3,name3,name-3,'
 
   it 'finds all people as person objects' do
     people.find_all.first.id.must_equal('id1')
-  end
-
-  it 'uses the baseurl in the person url' do
-    people.find_all.first.url.must_equal('/baseurl/name-1/')
   end
 
   it 'returns nil for empty fields' do
@@ -64,10 +58,6 @@ id3,name3,name-3,'
   it 'returns nil if no featured person' do
     featured_summaries = [FakeSummary.new('foo'), FakeSummary.new('bar')]
     assert_nil(people.featured_person(featured_summaries))
-  end
-
-  it 'assigns a mapit area to the person' do
-    people.find_single('name-3').area.id.must_equal(1)
   end
 
   it 'finds all people in a mapit area' do
