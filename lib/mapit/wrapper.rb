@@ -3,11 +3,11 @@ require_relative 'place'
 
 module Mapit
   class Wrapper
-    def initialize(mapit_mappings:, baseurl:, area_types:, data_directory:)
-      @baseurl = baseurl
-      @area_types = area_types
+    def initialize(mapit_mappings:, mapit_settings:)
+      @baseurl = mapit_settings.baseurl
+      @area_types = mapit_settings.area_types
       @mapit_mappings = mapit_mappings
-      @data_directory = data_directory
+      @data_directory = mapit_settings.data_directory
       cache_mapit_data
       set_up_parent_child_relationships
     end

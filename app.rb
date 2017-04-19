@@ -52,9 +52,7 @@ mapit_mappings = Mapit::Mappings.new(
 # Create a wrapper that caches MapIt and EveryPolitician area data:
 mapit = Mapit::Wrapper.new(
   mapit_mappings: mapit_mappings,
-  baseurl: '/place/',
-  area_types: %w(FED SEN STA),
-  data_directory: 'mapit'
+  mapit_settings: site_settings.mapit_settings
 )
 
 person_factory = Factory::Person.new(mapit: mapit, baseurl: '/person/', identifier_scheme: 'shineyoureye')
