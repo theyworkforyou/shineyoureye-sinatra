@@ -6,11 +6,14 @@ Coveralls.wear!
 ENV['RACK_ENV'] = 'test'
 
 require 'everypolitician'
+require 'json'
 require 'minitest/autorun'
 require 'nokogiri'
+require 'ostruct'
 require 'pry'
 require 'rack/test'
 require 'webmock/minitest'
+require 'yaml'
 
 require_relative '../lib/document/markdown_with_frontmatter'
 require_relative './test_doubles'
@@ -68,6 +71,11 @@ module Minitest
       JSON.parse(mapit_data_for_area_type(area_type))
     end
 
+    def settings
+      site_specific_settings = YAML.safe_load(SETTINGS_PATH) || {}
+      JSON.parse(site_specific_settings.to_json, object_class: OpenStruct)
+    end
+
     private
 
     DATASOURCE = 'https://github.com/everypolitician/everypolitician-data/raw/master/countries.json'
@@ -76,6 +84,7 @@ module Minitest
 
     EP_DISK_PATH = 'tests/fixtures/ep_data'
     MAPIT_DISK_PATH = 'tests/fixtures/mapit_data'
+    SETTINGS_PATH = 'config/general.yml'
 
     COUNTRIES_COMMIT = 'd96d2be'
     REPS_COMMIT = '1e00ca8'
