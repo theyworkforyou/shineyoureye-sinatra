@@ -14,7 +14,7 @@ describe 'Document::Finder' do
 
   it 'finds several documents' do
     Dir.stub :glob, [new_tempfile(''), new_tempfile('')] do
-      finder.find_all.count.must_equal(2)
+      finder.find_published.count.must_equal(2)
     end
   end
 
@@ -29,7 +29,7 @@ published: false
 ---'
     filenames = [new_tempfile(published), new_tempfile(nofield), new_tempfile(unpublished)]
     Dir.stub :glob, filenames do
-      finder.find_all.count.must_equal(2)
+      finder.find_published.count.must_equal(2)
     end
   end
 
@@ -57,7 +57,7 @@ slug: a-slug
 
   it 'sorts the found filenames alphabetically' do
     Dir.stub :glob, [new_tempfile('', 'zed'), new_tempfile('', 'be')] do
-      finder.find_all.first.send(:basename).start_with?('be').must_equal(true)
+      finder.find_published.first.send(:basename).start_with?('be').must_equal(true)
     end
   end
 

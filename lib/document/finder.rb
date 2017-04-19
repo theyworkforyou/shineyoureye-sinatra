@@ -13,14 +13,14 @@ module Document
     def find_single
       raise_error_if_multiple_files_found
       raise_error_if_no_files_found
-      find_all.first
+      find_published.first
     end
 
     def find_or_empty
-      none? ? create_empty_document : find_all.first
+      none? ? create_empty_document : find_published.first
     end
 
-    def find_all
+    def find_published
       create_documents.select(&:published?)
     end
 
