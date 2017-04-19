@@ -55,6 +55,12 @@ this app:
   is obscure, that is a code smell and it is better to refactor
   the code and make it more readable (and hence maintainable).
 
+* The site specific settings are separated from the site using
+  a hash whose keys are converted to methods for ease of use. this
+  hash is passed to the classes in their constructor so that we
+  don't keep adding arguments to it, but instead the class takes
+  care of what it needs from the hash.
+
 
 ## Code structure
 
