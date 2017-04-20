@@ -16,6 +16,7 @@ gem 'rake'
 gem 'rdiscount'
 gem 'sass'
 gem 'sinatra'
+gem 'sinatra-contrib'
 
 group :test do
   gem 'minitest'
