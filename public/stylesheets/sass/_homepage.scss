@@ -60,6 +60,6 @@
 }
 
 .polldaddy {
-  width: 20%;
-  margin: auto;
+    width: 300px; // This is the width defined by PollDaddy-generated `.pds-box` element
+    margin: auto;
 }
