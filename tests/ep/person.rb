@@ -205,9 +205,9 @@ describe 'EP::Person' do
       person.slug.must_equal('adamu-abdullahi')
     end
 
-    it 'dashifies the name if no slug' do
+    it 'returns nil if no slug' do
       person = ep_person('0b536a2c-2bc9-46a0-8d40-0deb9241cb31')
-      person.slug.must_equal('ahmad-abubakar')
+      assert_nil(person.slug)
     end
   end
 

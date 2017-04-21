@@ -183,12 +183,12 @@ describe 'MembershipCSV::Person' do
       person.slug.must_equal('okezie-ikpeazu')
     end
 
-    it 'dashifies name if no slug' do
+    it 'returns nil if no slug' do
       person = morph_person(
         'name' => '$%^a&* /\b:;',
         'identifier__shineyoureye' => nil
       )
-      person.slug.must_equal('a-b')
+      assert_nil(person.slug)
     end
   end
 

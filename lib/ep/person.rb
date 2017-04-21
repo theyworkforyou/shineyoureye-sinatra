@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 require_relative '../person_proxy_images'
 require_relative '../person_social'
-require 'babosa'
 
 module EP
   class Person
@@ -46,7 +45,7 @@ module EP
     end
 
     def slug
-      person.identifier(identifier_scheme) || slugify_name
+      person.identifier(identifier_scheme)
     end
 
     private
@@ -64,10 +63,6 @@ module EP
     def proxy_image_base_url
       'https://theyworkforyou.github.io/shineyoureye-images' \
       "/#{legislature.slug}/#{id}/"
-    end
-
-    def slugify_name
-      name.to_slug.normalize.to_s if name
     end
   end
 end
