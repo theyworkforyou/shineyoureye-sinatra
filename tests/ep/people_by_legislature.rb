@@ -26,8 +26,13 @@ describe 'EP::PeopleByLegislature' do
     people.find_all.first.id.must_equal('b2a7f72a-9ecf-4263-83f1-cb0f8783053c')
   end
 
-  it 'finds a single person by slug' do
-    people.find_single('abdullahi-muhammed-wamakko').name.must_equal('ABDULLAHI MOHAMMED')
+  # it 'finds a single person by slug' do
+  #   people.find_single('abdullahi-muhammed-wamakko').name.must_equal('ABDULLAHI MOHAMMED')
+  # end
+
+  it 'throws an exception if a slug is missing' do
+    error = assert_raises(RuntimeError) { people.find_single('trigger') }
+    error.message.must_include('ABDUKADIR RAHIS')
   end
 
   it 'knows the start date of the current term' do
