@@ -165,6 +165,10 @@ keep adding things here, for the newcomers.
   adding a new fake is worth checking that it doesn't exist
   there :smiley:
 
+* Persons should always have a slug. If they don't, or if the
+  slug is not unique, that should be fixed upstream. The code
+  will throw an error.
+
 
 ## Questions
 
