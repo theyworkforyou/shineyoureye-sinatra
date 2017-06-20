@@ -119,11 +119,16 @@ deploy_site() {
                 fi
             fi
         done
-        git -c "user.name=Democracy Sites Team" -c "user.email=parliaments@mysociety.org" commit -m "Automated commit of generated static site data
+        if [ -n "$(git status --porcelain)" ]
+        then
+            git -c "user.name=Democracy Sites Team" -c "user.email=parliaments@mysociety.org" commit -m "Automated commit of generated static site data
 
 The shineyoureye-sinatra version was: $PROSE_VERSION
 The shineyoureye-prose version was: $SYE_SINATRA_VERSION"
-        git push origin HEAD
+            git push origin HEAD
+        else
+            echo "There were no changes to deploy!"
+        fi
     )
 }
 
