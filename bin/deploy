@@ -73,7 +73,12 @@ start_sinatra() {
     done
     # Make sure it's not an old one server still running:
     kill -0 "$SINATRA_PID" 2> /dev/null ||
-        { echo "Couldn't start Sinatra - is an old server running?"; exit 1; }
+        {
+            echo "Couldn't start Sinatra - is an old server running?"
+            echo "Server output was:"
+            cat "$BUILD_DIR/sinatra.log"
+            exit 1
+        }
     echo "done"
 }
 
