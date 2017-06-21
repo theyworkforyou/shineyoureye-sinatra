@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 require_relative '../person_proxy_images'
 require_relative '../person_social'
+require_relative '../person_slug'
 
 module EP
   class Person
@@ -19,6 +20,7 @@ module EP
 
     include PersonProxyImages
     include PersonSocial
+    include PersonSlug
 
     def wikipedia_url
       person.link('Wikipedia (en)')
@@ -44,7 +46,7 @@ module EP
       baseurl + slug + '/'
     end
 
-    def slug
+    def source_slug
       person.identifier(identifier_scheme)
     end
 

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 require_relative '../person_proxy_images'
 require_relative '../person_social'
+require_relative '../person_slug'
 
 module MembershipCSV
   class Person
@@ -13,6 +14,7 @@ module MembershipCSV
 
     include PersonProxyImages
     include PersonSocial
+    include PersonSlug
 
     def id
       person['id']
@@ -62,7 +64,7 @@ module MembershipCSV
       person['party']
     end
 
-    def slug
+    def source_slug
       person["identifier__#{identifier_scheme}"]
     end
 

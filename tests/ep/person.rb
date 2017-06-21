@@ -207,6 +207,9 @@ describe 'EP::Person' do
 
     it 'returns nil if no slug' do
       person = ep_person('0b536a2c-2bc9-46a0-8d40-0deb9241cb31')
+      def person.extra_slug
+        nil
+      end
       assert_nil(person.slug)
     end
   end
