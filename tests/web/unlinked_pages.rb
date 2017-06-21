@@ -29,6 +29,10 @@ describe 'The Scraper Start Page' do
     refute_empty(subject.xpath('//a[@href="/person/abdukadir-rahis/experience/"]'))
   end
 
+  it 'must have links to the IDs <-> slugs CSV file' do
+    refute_empty(subject.xpath('//a[@href="/ids-and-slugs.csv"]'))
+  end
+
   it 'lists all available people' do
     ep = 476
     governors = 36

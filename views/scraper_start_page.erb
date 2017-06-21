@@ -2,6 +2,7 @@
 <p><a href="/jinja2-template.html">Jinja2 template</a></p>
 <p><a href="/info/events">Old events page route, must trigger redirect to new route</a></p>
 <p><a href="/feedback">Old contact page route, must trigger redirect to new route</a></p>
+<p><a href="/ids-and-slugs.csv">The IDs <-> slugs CSV file</a></p>
 
 <% @people.each do |person| %>
 <p><a href="<%= person.url %>contact_details/">Old contact details page route, must trigger redirect to <%= person.url %></a></p>
