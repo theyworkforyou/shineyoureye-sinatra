@@ -3,6 +3,7 @@ require 'bootstrap-sass'
 require 'everypolitician'
 require 'sinatra'
 
+require_relative 'lib/checks'
 require_relative 'lib/featured_person'
 require_relative 'lib/document/finder'
 require_relative 'lib/ep/people_by_legislature'
@@ -69,6 +70,8 @@ senators = EP::PeopleByLegislature.new(
   legislature: settings.index.country('Nigeria').legislature('Senate'),
   person_factory: person_factory
 )
+
+raise_if_missing_slugs(governors, representatives, senators)
 
 get '/' do
   posts_finder = Document::Finder.new(pattern: posts_pattern, baseurl: '/blog/')
