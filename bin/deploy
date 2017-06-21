@@ -62,12 +62,16 @@ ln -snf "${BUILD_DIR##*/}" build/current
 SINATRA_PORT=9292
 SINATRA_BASE_URL="http://localhost:$SINATRA_PORT"
 
+server_pid_listening() {
+    lsof -n -iTCP:"$SINATRA_PORT" | egrep "\b${1}\b.*LISTEN" > /dev/null
+}
+
 start_sinatra() {
     # Start the Sinatra server in the background:
     bundle exec rackup > "$BUILD_DIR/sinatra.log" 2>&1 &
     SINATRA_PID=$!
     echo "Waiting for Sinatra to start..."
-    while kill -0 "$SINATRA_PID" 2> /dev/null && ! nc -z localhost "$SINATRA_PORT"
+    while kill -0 "$SINATRA_PID" 2> /dev/null && ! server_pid_listening "$SINATRA_PID"
     do
         sleep 1
     done
