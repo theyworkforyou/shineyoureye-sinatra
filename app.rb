@@ -73,6 +73,8 @@ senators = EP::PeopleByLegislature.new(
 
 raise_if_missing_slugs(governors, representatives, senators)
 
+all_people = representatives.find_all + senators.find_all + governors.find_all
+
 get '/' do
   posts_finder = Document::Finder.new(pattern: posts_pattern, baseurl: '/blog/')
   events_finder = Document::Finder.new(pattern: events_pattern, baseurl: '/events/')
@@ -263,6 +265,16 @@ get '/contact/' do
   erb :contact
 end
 
+get '/ids-and-slugs.csv' do
+  content_type 'application/csv'
+  CSV.generate do |csv|
+    csv << %w(id slug)
+    all_people.each do |person|
+      csv << [person.id, person.slug]
+    end
+  end
+end
+
 get '/fonts/bootstrap/:filename' do |filename|
   send_file(File.join(Bootstrap.fonts_path, 'bootstrap', filename))
 end
@@ -283,7 +295,7 @@ get '/jinja2-template.html' do
 end
 
 get '/scraper-start-page.html' do
-  @people = representatives.find_all + senators.find_all + governors.find_all
+  @people = all_people
   @places = mapit.places_of_type('FED') + mapit.places_of_type('SEN') + mapit.places_of_type('STA')
   erb :scraper_start_page, layout: false
 end
