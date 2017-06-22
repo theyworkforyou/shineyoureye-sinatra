@@ -1,12 +1,13 @@
 # frozen_string_literal: true
 module Page
   class Homepage
-    attr_reader :featured_people
+    attr_reader :featured_people, :quote
 
-    def initialize(posts:, events:, featured_people:)
+    def initialize(posts:, events:, featured_people:, quote:)
       @posts = posts
       @events = events
       @featured_people = featured_people
+      @quote = quote
     end
 
     def featured_posts

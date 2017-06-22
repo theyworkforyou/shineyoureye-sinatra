@@ -12,7 +12,7 @@ describe 'Page::Homepage' do
       document_with_event_date('1000-01-15-qux', in_two_weeks.to_s)
     ]
   end
-  let(:page) { Page::Homepage.new(posts: documents, events: documents, featured_people: %w(foo bar)) }
+  let(:page) { Page::Homepage.new(posts: documents, events: documents, featured_people: %w(foo bar), quote: nil) }
 
   describe 'featured posts' do
     it 'sorts featured posts from newer to older' do
@@ -42,7 +42,7 @@ describe 'Page::Homepage' do
     end
 
     it 'detects that there are no featured events' do
-      page = Page::Homepage.new(posts: documents, events: [], featured_people: [])
+      page = Page::Homepage.new(posts: documents, events: [], featured_people: [], quote: nil)
       page.no_events?.must_equal(true)
     end
 
@@ -50,7 +50,7 @@ describe 'Page::Homepage' do
       document = basic_document(new_tempfile("---
 title: A Title
 ---", '2000-20-02-file-name'))
-      page = Page::Homepage.new(posts: [], events: [document], featured_people: [])
+      page = Page::Homepage.new(posts: [], events: [document], featured_people: [], quote: nil)
       error = assert_raises(RuntimeError) { page.featured_events }
       error.message.must_include('A Title')
     end
