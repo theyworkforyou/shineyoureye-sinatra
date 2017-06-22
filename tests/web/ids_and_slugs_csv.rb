@@ -2,10 +2,9 @@
 require 'test_helper'
 
 describe 'The ID <-> slugs CSV file' do
-  
   before { get '/ids-and-slugs.csv' }
   subject { CSV.parse(last_response.body) }
-  
+
   it 'must have a header row' do
     subject.first.must_equal(%w(id slug))
   end
@@ -21,5 +20,4 @@ describe 'The ID <-> slugs CSV file' do
   it 'must have a slug specified in extra-slugs.csv' do
     assert(subject.include?(['0b536a2c-2bc9-46a0-8d40-0deb9241cb31', 'ahmad-abubakar']))
   end
-
 end
