@@ -2,15 +2,15 @@
 require 'test_helper'
 
 describe 'Event Page' do
-  before { get '/events/fct-lga-polls-2016' }
+  before { get '/events/local-government-elections' }
   subject { Nokogiri::HTML(last_response.body) }
 
   it 'shows the event title' do
-    subject.css('.page-title').text.must_equal('FCT LGA Polls 2016')
+    subject.css('.page-title').text.must_equal('Local Government Elections')
   end
 
   it 'shows the publication date with the right format' do
-    subject.css('.meta').first.text.must_equal('February 22, 2017')
+    subject.css('.meta').first.text.must_equal('June 21, 2017')
   end
 
   it 'displays the contents of the event' do
