@@ -81,27 +81,19 @@ get '/' do
   summaries_finder = Document::Finder.new(pattern: summaries_pattern, baseurl: '')
   quote_finder = Document::Finder.new(pattern: info_pattern('quote-of-the-week'), baseurl: '')
   featured_summaries = summaries_finder.find_featured
-  people = [
+  featured_people = [
+    [governors, 'Governors', '/position/executive-governor/'],
+    [senators, 'Senators', '/position/senator/'],
+    [representatives, 'Representatives', '/position/representative/']
+  ].map do |collection, display_text, url|
     PageFragment::FeaturedPerson.new(
-      governors.featured_person(featured_summaries),
-      'Governors',
-      '/position/executive-governor/'
-    ),
-    PageFragment::FeaturedPerson.new(
-      senators.featured_person(featured_summaries),
-      'Senators',
-      '/position/senator/'
-    ),
-    PageFragment::FeaturedPerson.new(
-      representatives.featured_person(featured_summaries),
-      'Representatives',
-      '/position/representative/'
+      collection.featured_person(featured_summaries), display_text, url
     )
-  ]
+  end
   @page = Page::Homepage.new(
     posts: posts_finder.find_all,
     events: events_finder.find_all,
-    featured_people: people,
+    featured_people: featured_people,
     quote: quote_finder.find_single
   )
   erb :homepage
