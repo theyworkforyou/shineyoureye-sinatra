@@ -17,7 +17,8 @@ describe 'Document::Finder' do
 slug: a-slug
 ---'
     Dir.stub :glob, [new_tempfile(contents, filename)] do
-      finder.find_single.url.must_equal('/path/a-slug')
+      expected_slug = File.basename(Dir.glob[0], '.*')
+      finder.find_single.url.must_equal("/path/#{expected_slug}")
     end
   end
 

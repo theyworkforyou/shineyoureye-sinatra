@@ -24,7 +24,8 @@ eventdate: '2000-01-01 15:00 +0000'
   end
 
   it 'has a url' do
-    document.url.must_equal('/events/a-slug')
+    expected_slug = File.basename(document.send(:filename), '.*').gsub(/^1000-10-01-/, '')
+    document.url.must_equal("/events/#{expected_slug}")
   end
 
   it 'has a published field' do

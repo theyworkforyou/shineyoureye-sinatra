@@ -40,8 +40,7 @@ module Document
     end
 
     def slug
-      slug = frontmatter.slug
-      slug.empty? ? rawname : slug
+      rawname
     end
 
     private
