@@ -102,7 +102,7 @@ get '/' do
     posts: posts_finder.find_all,
     events: events_finder.find_all,
     featured_people: people,
-    quote: quote_finder.find_single,
+    quote: quote_finder.find_single
   )
   erb :homepage
 end
