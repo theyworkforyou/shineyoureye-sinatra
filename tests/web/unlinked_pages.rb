@@ -55,6 +55,21 @@ describe 'The Scraper Start Page' do
     subject.xpath('//a[contains(@href, "/people/")]').count.must_equal(fed + sen + sta)
     subject.xpath('//a[contains(@href, "/places/")]').count.must_equal(fed + sen + sta)
   end
+
+  it 'scrapes unpublished post and event pages since they are unlinked' do
+    unpublished = '---
+published: false
+---'
+    Dir.stub :glob, [new_tempfile(unpublished)] do
+      get '/scraper-start-page.html'
+      refute_empty(subject.xpath('//a[contains(text(), "Unlinked post")]'))
+      refute_empty(subject.xpath('//a[contains(text(), "Unlinked event")]'))
+    end
+  end
+
+  it 'scrapes all info pages, including those unlinked' do
+    refute_empty(subject.xpath('//a[contains(text(), "Unlinked infopage")]'))
+  end
 end
 
 describe 'The Jinja2 Template' do

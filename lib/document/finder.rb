@@ -13,19 +13,23 @@ module Document
     def find_single
       raise_error_if_multiple_files_found
       raise_error_if_no_files_found
-      find_all.first
+      find_published.first
     end
 
     def find_or_empty
-      none? ? create_empty_document : find_all.first
+      none? ? create_empty_document : find_published.first
     end
 
-    def find_all
-      filenames.map { |filename| create_document(filename) }
+    def find_published
+      create_documents.select(&:published?)
+    end
+
+    def find_unpublished
+      create_documents.reject(&:published?)
     end
 
     def find_featured
-      find_all.select(&:featured?)
+      create_documents.select(&:featured?)
     end
 
     def multiple?
@@ -47,6 +51,10 @@ module Document
     def raise_error_if_no_files_found
       message = "No documents matched '#{pattern}'"
       raise Document::NoFilesFoundError, message if none?
+    end
+
+    def create_documents
+      @create_documents ||= filenames.map { |filename| create_document(filename) }
     end
 
     def filenames

@@ -112,6 +112,18 @@ keep adding things here, for the newcomers.
   different behavior, **we use the same classes for both posts
   and events**.
 
+* All content pages from prose are published, but not all are
+  linked. This is a small nuance from the way we build the site.
+  Events and posts can be published or unpublished, and their
+  markdown files in prose have a `published` field in the
+  frontmatter. They are linked automatically if they have a
+  `published: true`. Summaries and info pages are always
+  published, so their markdown files in prose don't have a
+  `published` field in the frontmatter. They have to be linked
+  manually, for example, in the main menu. All content is
+  published because we add the unpublished posts/events and
+  unlinked info pages to the page used for scraping.
+
 * Summaries are a particular case of
   `DocumentWithFrontmatter`. For example, they are always
   published so

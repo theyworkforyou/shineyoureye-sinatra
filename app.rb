@@ -91,8 +91,8 @@ get '/' do
     )
   end
   @page = Page::Homepage.new(
-    posts: posts_finder.find_all,
-    events: events_finder.find_all,
+    posts: posts_finder.find_published,
+    events: events_finder.find_published,
     featured_people: featured_people,
     quote: quote_finder.find_single
   )
@@ -101,7 +101,7 @@ end
 
 get '/blog/' do
   finder = Document::Finder.new(pattern: posts_pattern, baseurl: '/blog/')
-  @page = Page::Posts.new(posts: finder.find_all, title: 'Blog')
+  @page = Page::Posts.new(posts: finder.find_published, title: 'Blog')
   erb :posts
 end
 
@@ -119,7 +119,7 @@ end
 
 get '/events/' do
   finder = Document::Finder.new(pattern: events_pattern, baseurl: '/events/')
-  @page = Page::Posts.new(posts: finder.find_all, title: 'Events')
+  @page = Page::Posts.new(posts: finder.find_published, title: 'Events')
   erb :posts
 end
 
@@ -295,5 +295,11 @@ end
 get '/scraper-start-page.html' do
   @people = all_people
   @places = mapit.places_of_type('FED') + mapit.places_of_type('SEN') + mapit.places_of_type('STA')
+  finder = Document::Finder.new(pattern: posts_pattern, baseurl: '/blog/')
+  @posts = finder.find_unpublished
+  finder = Document::Finder.new(pattern: events_pattern, baseurl: '/events/')
+  @events = finder.find_unpublished
+  finder = Document::Finder.new(pattern: "#{info_dir}/*.md", baseurl: '/info/')
+  @infopages = finder.find_published
   erb :scraper_start_page, layout: false
 end

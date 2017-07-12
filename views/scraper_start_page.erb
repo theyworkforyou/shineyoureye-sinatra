@@ -13,3 +13,15 @@
 <p><a href="<%= place.url %>people/">Old people page route, must trigger redirect to <%= place.url %></a></p>
 <p><a href="<%= place.url %>places/">Old places page route, must trigger redirect to <%= place.url %></a></p>
 <% end %>
+
+<% @posts.each do |post| %>
+<p><a href="<%= post.url %>">Unlinked post - <%= post.title %></a></p>
+<% end %>
+
+<% @events.each do |event| %>
+<p><a href="<%= event.url %>">Unlinked event - <%= event.title %></a></p>
+<% end %>
+
+<% @infopages.each do |infopage| %>
+<p><a href="<%= infopage.url %>">Unlinked infopage - <%= infopage.title %></a></p>
+<% end %>
