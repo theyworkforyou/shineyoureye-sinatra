@@ -20,7 +20,7 @@ module EP
     end
 
     def find_all_by_mapit_area(mapit_id)
-      find_all.select { |person| person.area.id == mapit_id if person.area }
+      mapit_id_to_person[mapit_id.to_s] || []
     end
 
     def current_term_start_date
@@ -49,6 +49,20 @@ module EP
 
     def id_to_person
       @id_to_person ||= find_all.map { |person| [person.id, person] }.to_h
+    end
+
+    def slug_to_person
+      @slug_to_person ||= find_all.map { |person| [person.slug, person] }.to_h
+    end
+
+    def mapit_id_to_person
+      @mapit_id_to_person ||= find_all.each_with_object({}) { |person, memo| update_people_for_area(person, memo) }
+    end
+
+    def update_people_for_area(person, memo)
+      return unless person.area
+      (memo[person.area.id.to_s] ||= []) << person
+      (memo[person.area.parent.id.to_s] ||= []) << person if person.area.parent
     end
 
     def create_person(person)

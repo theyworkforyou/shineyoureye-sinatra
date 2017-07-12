@@ -14,7 +14,7 @@ module Page
     end
 
     def current_term_start_year
-      people_by_legislature.current_term_start_date.year
+      people_by_legislature.current_term_start_date&.year
     end
 
     private
