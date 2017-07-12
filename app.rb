@@ -214,37 +214,19 @@ end
 
 get '/person/:slug/' do |slug|
   person = representatives.find_single(slug)
-  pass unless person
-  summary_finder = Document::Finder.new(pattern: summary_pattern(person.id), baseurl: '')
-  @page = Page::Person.new(
-    person: person,
-    position: 'Representative',
-    summary_doc: summary_finder.find_or_empty
-  )
+  set_up_person_page(person, 'Representative')
   erb :person
 end
 
 get '/person/:slug/' do |slug|
   person = senators.find_single(slug)
-  pass unless person
-  summary_finder = Document::Finder.new(pattern: summary_pattern(person.id), baseurl: '')
-  @page = Page::Person.new(
-    person: person,
-    position: 'Senator',
-    summary_doc: summary_finder.find_or_empty
-  )
+  set_up_person_page(person, 'Senator')
   erb :person
 end
 
 get '/person/:slug/' do |slug|
   person = governors.find_single(slug)
-  pass unless person
-  summary_finder = Document::Finder.new(pattern: summary_pattern(person.id), baseurl: '')
-  @page = Page::Person.new(
-    person: person,
-    position: 'Governor',
-    summary_doc: summary_finder.find_or_empty
-  )
+  set_up_person_page(person, 'Governor')
   erb :person
 end
 
@@ -296,4 +278,14 @@ get '/scraper-start-page.html' do
   @people = all_people
   @places = mapit.places_of_type('FED') + mapit.places_of_type('SEN') + mapit.places_of_type('STA')
   erb :scraper_start_page, layout: false
+end
+
+def set_up_person_page(person, position)
+  pass unless person
+  summary_finder = Document::Finder.new(pattern: summary_pattern(person.id), baseurl: '')
+  @page = Page::Person.new(
+    person: person,
+    position: position,
+    summary_doc: summary_finder.find_or_empty
+  )
 end
