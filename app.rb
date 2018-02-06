@@ -23,14 +23,17 @@ require_relative 'lib/page/people'
 require_relative 'lib/page/person'
 require_relative 'lib/page/post'
 require_relative 'lib/page/posts'
+require_relative 'site_specific_settings'
 
-set :contact_email, 'syeinfo@eienigeria.org'
-set :content_dir, File.join(__dir__, 'prose')
+site_settings = SiteSpecificSettings.settings
+
+set :contact_email, site_settings.contact_email
+set :content_dir, site_settings.content_dir
 set :datasource, ENV.fetch('DATASOURCE', 'https://github.com/everypolitician/everypolitician-data/raw/master/countries.json')
 set :index, EveryPolitician::Index.new(index_url: settings.datasource)
-set :mapit_url, 'http://nigeria.mapit.mysociety.org'
-set :mapit_user_agent, ENV.fetch('MAPIT_USER_AGENT', nil)
-set :twitter_user, 'NGShineYourEye'
+set :mapit_url, site_settings.mapit_url
+set :mapit_user_agent, site_settings.mapit_user_agent
+set :twitter_user, site_settings.twitter_user
 
 # Create a wrapper for the mappings between the various IDs we have
 # to use for areas / places.
@@ -50,9 +53,7 @@ mapit_mappings = Mapit::Mappings.new(
 # Create a wrapper that caches MapIt and EveryPolitician area data:
 mapit = Mapit::Wrapper.new(
   mapit_mappings: mapit_mappings,
-  baseurl: '/place/',
-  area_types: %w(FED SEN STA),
-  data_directory: 'mapit'
+  mapit_settings: site_settings.mapit_settings
 )
 
 person_factory = Factory::Person.new(mapit: mapit, baseurl: '/person/', identifier_scheme: 'shineyoureye')
