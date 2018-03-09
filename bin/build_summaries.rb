@@ -17,7 +17,7 @@ CSV_URL = 'https://morph.io/everypolitician-scrapers/' \
           "?key=#{URI.escape(ENV['MORPH_API_KEY'])}" \
           '&query=select+%2A+from+%27data%27'
 
-people = CSV.new(open(CSV_URL), headers: :first_row).group_by do |row|
+people = CSV.new(File.open(CSV_URL), headers: :first_row).group_by do |row|
   raise 'A person_slug was missing in the data' unless row['person_slug']
   row['person_slug']
 end
@@ -107,7 +107,7 @@ people.each do |slug, positions|
   filename = File.join(
     File.dirname(__FILE__), '..', 'prose', 'summaries', "#{uuid}.md"
   )
-  open(filename, 'w') do |f|
+  File.open(filename, 'w') do |f|
     f.write("---\n")
     f.write("featured: false\n")
     f.write("published: true\n")

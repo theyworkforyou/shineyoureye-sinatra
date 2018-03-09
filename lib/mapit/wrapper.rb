@@ -48,7 +48,7 @@ module Mapit
     end
 
     def parse_json_file(filename)
-      JSON.parse(open(filename, &:read))
+      JSON.parse(File.open(filename, &:read))
     end
 
     def areas_data(area_type)

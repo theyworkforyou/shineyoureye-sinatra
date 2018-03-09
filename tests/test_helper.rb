@@ -61,7 +61,7 @@ module Minitest
       json_filename = File.join(
         File.dirname(__FILE__), '..', 'mapit', "#{area_type}.json"
       )
-      open(json_filename, &:read)
+      File.open(json_filename, &:read)
     end
 
     def parsed_mapit_data_for_area_type(area_type)
