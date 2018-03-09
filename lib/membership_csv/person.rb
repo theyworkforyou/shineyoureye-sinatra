@@ -34,7 +34,7 @@ module MembershipCSV
     end
 
     def phone
-      person['phone'].split(';').join(', ') if person['phone']
+      person['phone']&.split(';')&.join(', ')
     end
 
     def email

@@ -10,7 +10,7 @@ module PersonSocial
   end
 
   def facebook_display
-    facebook.split('/').last if facebook
+    facebook&.split('/')&.last
   end
 
   def facebook_url
