@@ -30,7 +30,7 @@ slug: a-slug
   end
 
   it 'sorts the found filenames alphabetically' do
-    Dir.stub :glob, %w(zed be) do
+    Dir.stub :glob, %w[zed be] do
       finder.find_all.first.send(:basename).must_equal('be')
     end
   end

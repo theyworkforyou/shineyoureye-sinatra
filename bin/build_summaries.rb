@@ -34,7 +34,7 @@ end
 def build_slug_to_uuid
   map = {}
   ep_index = EveryPolitician::Index.new
-  %w(Representatives Senate).each do |house_name|
+  %w[Representatives Senate].each do |house_name|
     house = ep_index.country('Nigeria').legislature(house_name)
     map.merge(slug_to_uuid_for_house(house))
   end

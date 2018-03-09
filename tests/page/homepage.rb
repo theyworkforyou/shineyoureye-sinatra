@@ -13,7 +13,7 @@ describe 'Page::Homepage' do
       document_with_event_date('1000-01-15-qux', in_two_weeks.to_s)
     ]
   end
-  let(:page) { Page::Homepage.new(posts: documents, events: documents, featured_people: %w(foo bar), quote: nil) }
+  let(:page) { Page::Homepage.new(posts: documents, events: documents, featured_people: %w[foo bar], quote: nil) }
 
   describe 'featured posts' do
     it 'sorts featured posts from newer to older' do

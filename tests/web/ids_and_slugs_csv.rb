@@ -7,7 +7,7 @@ describe 'The ID <-> slugs CSV file' do
   subject { CSV.parse(last_response.body) }
 
   it 'must have a header row' do
-    subject.first.must_equal(%w(id slug))
+    subject.first.must_equal(%w[id slug])
   end
 
   it 'must have a slug for a Representative from EP data' do

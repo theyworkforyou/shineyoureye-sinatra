@@ -52,7 +52,7 @@ mapit_mappings = Mapit::Mappings.new(
 mapit = Mapit::Wrapper.new(
   mapit_mappings: mapit_mappings,
   baseurl: '/place/',
-  area_types: %w(FED SEN STA),
+  area_types: %w[FED SEN STA],
   data_directory: 'mapit'
 )
 
@@ -267,7 +267,7 @@ end
 get '/ids-and-slugs.csv' do
   content_type 'application/csv'
   CSV.generate do |csv|
-    csv << %w(id slug)
+    csv << %w[id slug]
     all_people.each do |person|
       csv << [person.id, person.slug]
     end

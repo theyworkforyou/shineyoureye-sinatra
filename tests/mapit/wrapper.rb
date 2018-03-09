@@ -8,7 +8,7 @@ describe 'Mappit::Wrapper' do
     Mapit::Wrapper.new(
       mapit_mappings: FakeMappings.new,
       baseurl: '/baseurl/',
-      area_types: %w(FED SEN STA),
+      area_types: %w[FED SEN STA],
       data_directory: 'mapit'
     )
   end
