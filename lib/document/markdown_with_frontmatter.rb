@@ -62,7 +62,7 @@ module Document
     end
 
     def filecontents
-      @contents ||= File.open(filename, 'r', &:read)
+      @filecontents ||= File.open(filename, 'r', &:read)
     end
 
     def frontmatter

@@ -10,7 +10,7 @@ module Page
     end
 
     def people
-      @all ||= people_by_legislature.find_all
+      @people ||= people_by_legislature.find_all
     end
 
     private

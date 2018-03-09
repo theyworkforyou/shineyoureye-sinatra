@@ -21,7 +21,7 @@ module Mapit
     end
 
     def pombola_slugs_to_mapit_ids
-      @pombola_to_mapit ||= pombola_slugs_to_mapit_ids_without_type.to_h
+      @pombola_slugs_to_mapit_ids ||= pombola_slugs_to_mapit_ids_without_type.to_h
     end
 
     def mapit_ids_to_pombola_slugs

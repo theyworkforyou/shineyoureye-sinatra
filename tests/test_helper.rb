@@ -54,7 +54,7 @@ module Minitest
     end
 
     def nigeria_at_known_revision
-      @ng ||= EveryPolitician::Index.new(index_url: DATASOURCE).country('Nigeria')
+      @nigeria_at_known_revision ||= EveryPolitician::Index.new(index_url: DATASOURCE).country('Nigeria')
     end
 
     def mapit_data_for_area_type(area_type)
