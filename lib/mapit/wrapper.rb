@@ -67,9 +67,8 @@ module Mapit
     def set_up_parent_child_relationships
       # FIXME: this should also use MapIt's parent_area, if that's set.
       mapit_mappings.child_to_parent.each do |child, parent|
-        if id_to_place.key?(child) && id_to_place.key?(parent)
-          id_to_place[child].parent = id_to_place[parent]
-        end
+        has_child_and_parent = id_to_place.key?(child) && id_to_place.key?(parent)
+        id_to_place[child].parent = id_to_place[parent] if has_child_and_parent
       end
     end
 
