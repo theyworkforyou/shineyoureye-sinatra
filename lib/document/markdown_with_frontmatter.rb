@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require_relative 'frontmatter_parser'
 require_relative 'markdown_parser'
 

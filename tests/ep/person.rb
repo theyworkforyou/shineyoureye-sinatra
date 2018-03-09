@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'test_helper'
 require_relative '../shared_examples/person_interface_test'
 require_relative '../../lib/ep/everypolitician_extensions'

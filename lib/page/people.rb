@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Page
   class People
     attr_reader :title

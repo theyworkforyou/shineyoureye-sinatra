@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module PersonProxyImages
   def thumbnail_image_url
     proxy_image_variant(:thumbnail)

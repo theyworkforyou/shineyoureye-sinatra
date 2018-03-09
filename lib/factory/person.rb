@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require_relative '../ep/person'
 require_relative '../membership_csv/person'
 

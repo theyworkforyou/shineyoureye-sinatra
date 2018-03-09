@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'test_helper'
 require_relative '../shared_examples/people_interface_test'
 require_relative '../../lib/ep/people_by_legislature'

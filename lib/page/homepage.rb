@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Page
   class Homepage
     attr_reader :featured_people, :quote

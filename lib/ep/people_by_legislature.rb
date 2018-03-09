@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require_relative 'everypolitician_extensions'
 require_relative '../people_slug_to_person'
 

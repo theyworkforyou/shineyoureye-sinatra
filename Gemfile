@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 source 'https://rubygems.org'
 
 # Warning: update the README and TargetRubyVersion in .rubocop.yml if

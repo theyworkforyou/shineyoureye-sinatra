@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require_relative 'exceptions'
 require_relative 'markdown_with_frontmatter'
 require_relative 'empty_document'

@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Page
   class Places
     attr_reader :title, :places
