@@ -1,11 +1,11 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+require 'cgi'
 require 'csv'
 require 'date'
 require 'everypolitician'
 require 'open-uri'
-require 'uri'
 
 unless ENV['MORPH_API_KEY']
   puts "You must set MORPH_API_KEY in order to download the scraper's output."
@@ -14,7 +14,7 @@ end
 
 CSV_URL = 'https://morph.io/everypolitician-scrapers/' \
           'nigeria-shineyoureye-positions/data.csv' \
-          "?key=#{URI.escape(ENV['MORPH_API_KEY'])}" \
+          "?key=#{CGI.escape(ENV['MORPH_API_KEY'])}" \
           '&query=select+%2A+from+%27data%27'
 
 people = CSV.new(File.open(CSV_URL), headers: :first_row).group_by do |row|
