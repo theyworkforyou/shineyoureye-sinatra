@@ -54,7 +54,7 @@ describe 'Page::Place' do
 
   FakeGeometry = Struct.new(:geojson, :center)
   FakePeople = Struct.new(:legislature_name) do
-    def find_all_by_mapit_area(_)
+    def find_all_by_mapit_area(_mapit_id)
       %w[irrelevant irrelevant]
     end
   end
