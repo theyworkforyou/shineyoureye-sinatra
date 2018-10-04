@@ -64,10 +64,4 @@ describe 'Homepage' do
       subject.css('.twitter-timeline').text.must_include('NGShineYourEye')
     end
   end
-
-  describe 'the quote of the week' do
-    it 'contains some non-empty text' do
-      refute_empty(subject.css('.homepage__quote_text').text.strip)
-    end
-  end
 end

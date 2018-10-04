@@ -81,7 +81,6 @@ get '/' do
   posts_finder = Document::Finder.new(pattern: posts_pattern, baseurl: '/blog/')
   events_finder = Document::Finder.new(pattern: events_pattern, baseurl: '/events/')
   summaries_finder = Document::Finder.new(pattern: summaries_pattern, baseurl: '')
-  quote_finder = Document::Finder.new(pattern: info_pattern('quote-of-the-week'), baseurl: '')
   featured_summaries = summaries_finder.find_featured
   featured_people = [
     [governors, 'Governors', '/position/executive-governor/'],
@@ -95,8 +94,7 @@ get '/' do
   @page = Page::Homepage.new(
     posts: posts_finder.find_all,
     events: events_finder.find_all,
-    featured_people: featured_people,
-    quote: quote_finder.find_single
+    featured_people: featured_people
   )
   erb :homepage
 end

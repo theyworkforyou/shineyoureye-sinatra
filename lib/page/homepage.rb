@@ -2,13 +2,12 @@
 
 module Page
   class Homepage
-    attr_reader :featured_people, :quote
+    attr_reader :featured_people
 
-    def initialize(posts:, events:, featured_people:, quote:)
+    def initialize(posts:, events:, featured_people:)
       @posts = posts
       @events = events
       @featured_people = featured_people
-      @quote = quote
     end
 
     def featured_posts
