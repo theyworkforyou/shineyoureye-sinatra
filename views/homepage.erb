@@ -40,38 +40,24 @@
   </div>
 </div>
 
-<% if @page.featured_events.empty? %>
-  <% @colwidth = 6 %>
-<% else %>
-  <% @colwidth = 4 %>
-<% end %>
-
 <div class="page-section">
   <div class="container">
     <div class="row">
-
-      <div class="col-sm-<%= @colwidth %>">
-        <h2><a href="/blog/">News</a></h2>
+      <div class="col-sm-<% if @page.featured_events.empty? %>12<% else %>8<% end %>">
         <% unless @page.featured_posts.empty? %>
-          <% @page.featured_posts.each do |post| %>
-            <a href="<%= post.url %>"><h3><%= post.title %></h3></a>
-            <p><%= @page.format_date(post.date) %></p>
-          <% end %>
-        <% else %>
-          <p>There are no blog posts.</p>
+          <h2><a href="/blog/">News</a></h2>
+          <div class="row">
+            <% @page.featured_posts.each do |post| %>
+              <div class="col-sm-6">
+                <a href="<%= post.url %>"><h3><%= post.title %></h3></a>
+                <p><%= @page.format_date(post.date) %></p>
+              </div>
+            <% end %>
+          </div>
         <% end %>
       </div>
-
-      <div class="col-sm-<%= @colwidth %>">
-        <div id="polldaddy" class="polldaddy">
-          <h2>Latest Poll</h2>
-          <script type="text/javascript" charset="utf-8" src="https://static.polldaddy.com/w/57906.js"></script>
-          <noscript><a href="https://polldaddy.com/w.php?p=57906">Take Our Poll</a></noscript>
-        </div>
-      </div>
-
       <% unless @page.featured_events.empty? %>
-        <div class="col-sm-<%= @colwidth %>">
+        <div class="col-sm-4">
           <h2><a href="/events/">Events</a></h2>
           <% @page.featured_events.each do |event| %>
             <a href="<%= event.url %>"><h3><%= event.title %></h3></a>
@@ -79,7 +65,6 @@
           <% end %>
         </div>
       <% end %>
-
     </div>
   </div>
 </div>

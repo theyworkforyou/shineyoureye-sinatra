@@ -21,8 +21,8 @@ describe 'Page::Homepage' do
       first_is_newer.must_equal(true)
     end
 
-    it 'has a maximum of three featured posts' do
-      page.featured_posts.count(3)
+    it 'has a maximum of two featured posts' do
+      page.featured_posts.count(2)
     end
   end
 

@@ -12,7 +12,7 @@ module Page
     end
 
     def featured_posts
-      posts.sort_by(&:date).reverse.first(3)
+      posts.sort_by(&:date).reverse.first(2)
     end
 
     def featured_events
