@@ -16,7 +16,7 @@ describe 'EP::PeopleByLegislature' do
   end
 
   it 'finds all people' do
-    people.find_all.count.must_equal(364)
+    people.find_all.count.must_equal(370)
   end
 
   it 'finds all people sorted by name' do
@@ -60,6 +60,6 @@ describe 'EP::PeopleByLegislature' do
   end
 
   it 'finds all people in a mapit area' do
-    people.find_all_by_mapit_area(1).count.must_equal(364)
+    people.find_all_by_mapit_area(1).count.must_equal(370)
   end
 end
