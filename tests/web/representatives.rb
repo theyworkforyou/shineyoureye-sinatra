@@ -12,7 +12,7 @@ describe 'List of Representatives' do
 
   describe 'person list' do
     it 'lists all representatives' do
-      subject.css('.media').count.must_equal(364)
+      subject.css('.media').count.must_equal(370)
     end
   end
 

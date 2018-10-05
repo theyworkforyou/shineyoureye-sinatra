@@ -100,7 +100,7 @@ describe 'EP::Person' do
 
   describe 'image' do
     it 'has an image' do
-      person.image.must_equal('http://www.nass.gov.ng/images/mps/852.jpg')
+      person.image.must_equal('https://www.nass.gov.ng/images/mps/852.jpg')
     end
 
     it 'returns nil if no image' do
@@ -155,7 +155,7 @@ describe 'EP::Person' do
 
   describe 'wikipedia url' do
     it 'has a Wikipedia url' do
-      person.wikipedia_url.must_equal('https://en.wikipedia.org/wiki/Abdulahi_Bala_Adamu')
+      person.wikipedia_url.must_equal('https://en.wikipedia.org/wiki/Abdullahi_Adamu')
     end
 
     it 'returns nil if no wikipedia url' do
