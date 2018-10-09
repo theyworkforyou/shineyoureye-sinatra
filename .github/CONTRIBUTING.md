@@ -27,7 +27,7 @@ future. Follow good practices, SOLID principles and design
 patterns.
 
 Reading through the
-[document explaining our design decisions](https://github.com/theyworkforyou/shineyoureye-sinatra/blob/master/.github/PULL_REQUEST_TEMPLATE.md)
+[document explaining our design decisions](https://github.com/theyworkforyou/shineyoureye-sinatra/blob/master/.github/design-decisions.md)
 for this project should also be helpful.
 
 
