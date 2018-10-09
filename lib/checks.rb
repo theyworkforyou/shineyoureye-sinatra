@@ -2,6 +2,7 @@
 
 def missing_slug_row(person, collection)
   return nil if person.slug
+
   {
     uuid: person.id,
     name: person.name,
@@ -20,6 +21,7 @@ end
 def raise_if_missing_slugs(*collections)
   rows = missing_slugs_rows(*collections)
   return if rows.empty?
+
   CSV.open('missing-slugs.csv', 'wb') do |csv|
     csv << rows.first.keys
     rows.each do |row|

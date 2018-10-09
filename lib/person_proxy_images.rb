@@ -23,6 +23,7 @@ module PersonProxyImages
 
   def proxy_image_variant(size)
     return if image.nil?
+
     raise_unless_image_size_available(size)
     proxy_image_base_url + ALLOWED_IMAGE_SIZES[size] + '.jpeg'
   end

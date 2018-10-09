@@ -33,6 +33,7 @@ module Document
 
     def event_date
       return nil if frontmatter.event_date.empty?
+
       Date.parse(frontmatter.event_date)
     end
 
