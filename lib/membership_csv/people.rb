@@ -58,6 +58,7 @@ module MembershipCSV
 
     def update_people_for_area(person, memo)
       return unless person.area
+
       (memo[person.area.id.to_s] ||= []) << person
     end
 

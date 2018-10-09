@@ -45,7 +45,7 @@ module EP
     end
 
     def latest_term
-      legislature.legislative_periods.sort_by(&:start_date).last
+      legislature.legislative_periods.max_by(&:start_date)
     end
 
     def id_to_person

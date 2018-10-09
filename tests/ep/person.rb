@@ -231,7 +231,7 @@ describe 'EP::Person' do
 
   def latest_term
     legislature = nigeria_at_known_revision.legislature('Senate')
-    legislature.legislative_periods.sort_by(&:start_date).last
+    legislature.legislative_periods.max_by(&:start_date)
   end
 
   module Facebook

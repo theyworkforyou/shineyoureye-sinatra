@@ -48,6 +48,7 @@ module Mapit
 
     def pombola_slugs_to_mapit_ids_data
       return [] unless pombola_slugs_to_mapit_ids_filename
+
       read(pombola_slugs_to_mapit_ids_filename)
     end
 

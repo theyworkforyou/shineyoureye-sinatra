@@ -19,6 +19,7 @@ CSV_URL = 'https://morph.io/everypolitician-scrapers/' \
 
 people = CSV.new(File.open(CSV_URL), headers: :first_row).group_by do |row|
   raise 'A person_slug was missing in the data' unless row['person_slug']
+
   row['person_slug']
 end
 
@@ -43,6 +44,7 @@ end
 
 def format_date(partial_iso8601)
   return partial_iso8601 if partial_iso8601 =~ /^\d{4}$/
+
   if /^\d{4}-\d{2}/ =~ partial_iso8601
     d = Date.parse(partial_iso8601 + '-01')
     return d.strftime('%B %Y')
@@ -83,6 +85,7 @@ def get_markdown_for_position(position)
   return if position['organization_classification'].include? 'Party'
   return if organization.empty?
   return if role.empty?
+
   bullet_item = "* #{role} at #{organization}"
   bullet_item += formatted_date_range(start_date, end_date)
   bullet_item + "\n"
@@ -90,6 +93,7 @@ end
 
 def get_markdown_from_rows(positions)
   return nil if positions.empty?
+
   result = positions[0]['person_summary'].strip
   result += "\n\n" unless result.empty?
   positions.each do |position|
@@ -104,6 +108,7 @@ slug_to_uuid = build_slug_to_uuid
 people.each do |slug, positions|
   uuid = slug_to_uuid[slug]
   next unless uuid
+
   filename = File.join(
     File.dirname(__FILE__), '..', 'prose', 'summaries', "#{uuid}.md"
   )
