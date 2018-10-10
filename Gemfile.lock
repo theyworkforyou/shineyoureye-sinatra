@@ -9,8 +9,8 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.5.0)
-      public_suffix (~> 2.0, >= 2.0.2)
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
     ast (2.4.0)
     autoprefixer-rails (6.7.0)
       execjs
@@ -30,7 +30,7 @@ GEM
     everypolitician-popolo (0.8.0)
       require_all
     execjs (2.7.0)
-    hashdiff (0.3.0)
+    hashdiff (0.3.7)
     jaro_winkler (1.5.1)
     json (2.0.3)
     method_source (0.9.0)
@@ -46,7 +46,7 @@ GEM
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
-    public_suffix (2.0.4)
+    public_suffix (3.0.3)
     rack (2.0.5)
     rack-protection (2.0.4)
       rack
@@ -83,7 +83,7 @@ GEM
     tilt (2.0.8)
     tins (1.13.2)
     unicode-display_width (1.4.0)
-    webmock (2.1.0)
+    webmock (3.4.2)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
