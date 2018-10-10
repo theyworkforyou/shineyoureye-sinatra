@@ -53,6 +53,30 @@ describe 'Place' do
     it 'the parent knows it is not a child' do
       refute(place.parent.child_area?)
     end
+
+    describe '#state' do
+      it 'returns the parent object if that is a state' do
+        place.parent.type_name.must_equal('State')
+        place.state.must_equal(place.parent)
+      end
+    end
+  end
+
+  describe 'state with no parent' do
+    let(:place) do
+      Mapit::Place.new(
+        mapit_area_data: area_with_no_parent,
+        pombola_slug: 'gwagwaladakuje',
+        baseurl: '/baseurl/'
+      )
+    end
+
+    describe '#state' do
+      it 'returns the current object' do
+        place.type_name.must_equal('State')
+        place.state.must_equal(place)
+      end
+    end
   end
 
   def area_with_parent
