@@ -25,6 +25,14 @@ module Mapit
 
     alias child_area? parent
 
+    def state
+      if type_name == 'State'
+        self
+      elsif parent && parent.type_name == 'State'
+        parent
+      end
+    end
+
     def url
       "#{baseurl}#{pombola_slug}/"
     end
