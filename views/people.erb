@@ -1,11 +1,16 @@
 <h1 class="page-title"><%= @page.title %></h1>
 
 <div class="content_box">
-    <h3>Current Position Holders</h3>
 
-    <% @page.people_by_state.each do |state_name, people_in_state| %>
+    <div class="accordion people-accordion">
+      <% @page.people_by_state.each do |state_name, people_in_state| %>
         <h2><%= state_name %></h2>
         <%= erb :_list_of_people, :locals => { :people => people_in_state } %>
-    <% end %>
+      <% end %>
+    </div>
 
 </div>
+
+<% content_for :footer_extra_js do %>
+    <script src="/javascripts/accordion.js"></script>
+<% end %>
