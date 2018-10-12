@@ -3,5 +3,9 @@
 <div class="content_box">
     <h3>Current Position Holders</h3>
 
-    <%= erb :_list_of_people %>
+    <% @page.people_by_state.each do |state_name, people_in_state| %>
+        <h2><%= state_name %></h2>
+        <%= erb :_list_of_people, :locals => { :people => people_in_state } %>
+    <% end %>
+
 </div>

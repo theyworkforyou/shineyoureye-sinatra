@@ -1,5 +1,5 @@
 <ul class="media-list media-list--people">
-  <% @page.people.each do |person| %>
+  <% people.each do |person| %>
     <li class="media">
         <div class="media-left">
             <a href="<%= person.url %>">
@@ -14,7 +14,7 @@
             <a href="<%= person.url %>"><h3 class="media-heading"><%= person.name %></h3></a>
             <% if person.area %>
             <p>
-              <%= person.area.type_name %>:
+              <%= person.area.type_name %> :
               <a class="listing__area" href="<%= person.area.url %>"><%= person.area.name %></a>
             </p>
             <% end %>
