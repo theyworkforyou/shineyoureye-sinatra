@@ -1,0 +1,43 @@
+.contact-list {
+    @include list-unstyled();
+    text-align: center;
+
+    @include display-flex();
+    @include flex-wrap(wrap);
+    @include justify-content(center);
+}
+
+.contact-list__item {
+    margin: 1em;
+
+    @include flex(1 0 auto);
+    max-width: 12em;
+
+    h3 {
+        margin: 0.5em 0 0 0;
+        font-size: px-to-em(18);
+        font-weight: bold;
+    }
+
+    p {
+        margin: 0.5em 0 0 0;
+        font-size: px-to-em(12);
+    }
+
+    // A few tweaks for very small screens
+    @media (min-width: $screen-sm-min) {
+        h3 {
+            font-size: px-to-em(24);
+        }
+
+        p {
+            font-size: px-to-em(14);
+        }
+    }
+}
+
+.contact-list__item__photo {
+    border-radius: $border-radius-large;
+    max-width: 100px;
+    height: auto;
+}

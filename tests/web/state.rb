@@ -51,51 +51,47 @@ describe 'State Place Page' do
   end
 
   describe 'person item' do
-    let(:person) { subject.css('.media-list--people .media').first }
+    let(:person) { subject.css('.contact-list__item').first }
 
     it 'links to the person page' do
-      person.css('.media-left a/@href').text
+      person.css('.contact-list__item__photo').first.parent.attr('href')
             .must_equal('/person/okezie-ikpeazu/')
-      person.css('.media-body a/@href').first.text
+      person.css('.contact-list__item__name').first.parent.attr('href')
             .must_equal('/person/okezie-ikpeazu/')
     end
 
     it 'has an image that points to the thumbnail proxy image' do
-      person.css('.media-left img/@src').text
+      person.css('.contact-list__item__photo/@src').text
             .must_include('/gov:victor-okezie-ikpeazu/100x100.jpeg')
     end
 
     it 'has an image whose srcset that points to the thumbnail proxy image' do
-      person.css('.media-left img/@srcset').text
+      person.css('.contact-list__item__photo/@srcset').text
             .must_include('/gov:victor-okezie-ikpeazu/100x100.jpeg')
     end
 
     it 'has an image whose alternative text is the person name' do
-      person.css('.media-left img/@alt').text
+      person.css('.contact-list__item__photo/@alt').text
             .must_equal('Victor Okezie Ikpeazu')
     end
 
     it 'displays the person name' do
-      person.css('.media-body a').first.text
+      person.css('.contact-list__item__name').first.text
             .must_equal('Victor Okezie Ikpeazu')
     end
 
-    it 'shows right area type name' do
-      person.css('.media-body p').first.text.must_include('State')
-    end
-
     it 'links to the person area' do
-      person.css('.listing__area @href').text
+      person.css('.test-area @href').text
             .must_equal('/place/abia/')
     end
 
     it 'displays the person area name' do
-      person.css('.listing__area').text
+      person.css('.test-area').text
             .must_equal('Abia')
     end
 
     it 'displays the person party name' do
-      person.css('.listing__party').text
+      person.css('.test-party').text
             .must_equal('PDP')
     end
   end

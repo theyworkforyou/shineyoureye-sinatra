@@ -48,55 +48,51 @@ describe 'Senatorial District Place Page' do
   end
 
   it 'displays all people associated with the place' do
-    subject.css('.media-list--people .media').count.must_equal(1)
+    subject.css('.contact-list__item').count.must_equal(1)
   end
 
   describe 'person item' do
-    let(:person) { subject.css('.media-list--people .media').first }
+    let(:person) { subject.css('.contact-list__item').first }
 
     it 'links to the person page' do
-      person.css('.media-left a/@href').text
+      person.css('.contact-list__item__photo').first.parent.attr('href')
             .must_equal('/person/theodore-ahamefule-orji/')
-      person.css('.media-body a/@href').first.text
+      person.css('.contact-list__item__name').first.parent.attr('href')
             .must_equal('/person/theodore-ahamefule-orji/')
     end
 
     it 'has an image that points to the thumbnail proxy image' do
-      person.css('.media-left img/@src').text
+      person.css('.contact-list__item__photo/@src').text
             .must_include('/73f394c3-b0ae-4154-b86c-8e5b7b637df8/100x100.jpeg')
     end
 
     it 'has an image whose srcset that points to the thumbnail proxy image' do
-      person.css('.media-left img/@srcset').text
+      person.css('.contact-list__item__photo/@srcset').text
             .must_include('/73f394c3-b0ae-4154-b86c-8e5b7b637df8/100x100.jpeg')
     end
 
     it 'has an image whose alternative text is the person name' do
-      person.css('.media-left img/@alt').text
+      person.css('.contact-list__item__photo/@alt').text
             .must_equal('THEODORE ORJI')
     end
 
     it 'displays the person name' do
-      person.css('.media-body a').first.text
+      person.css('.contact-list__item__name').first.text
             .must_equal('THEODORE ORJI')
     end
 
-    it 'shows right area type name' do
-      person.css('.media-body p').first.text.must_include('Senatorial District')
-    end
-
     it 'links to the person area' do
-      person.css('.listing__area @href').text
+      person.css('.test-area @href').text
             .must_equal('/place/abia-central/')
     end
 
     it 'displays the person area name' do
-      person.css('.listing__area').text
+      person.css('.test-area').text
             .must_equal('ABIA CENTRAL')
     end
 
     it 'displays the person party name' do
-      person.css('.listing__party').text
+      person.css('.test-party').text
             .must_equal('Peoples Democratic Party')
     end
   end

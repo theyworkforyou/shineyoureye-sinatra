@@ -1,8 +1,7 @@
 // Some custom styles that work nicely with the Bootstrap media component
 // we use on, eg, the Places page.
 
-.media-list--places,
-.media-list--people {
+.media-list {
     .media {
         margin-top: 0; // margin doesn't play nicely with borders
         padding: 2em 0; // so use padding instead

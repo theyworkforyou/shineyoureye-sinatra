@@ -10,7 +10,10 @@
     }
 
     .ui-accordion-content {
-        padding-top: 0;
-        padding-bottom: 0;
+        padding: 0 1em;
+
+        @media (min-width: $screen-md-min) {
+            padding: 1em;
+        }
     }
 }
