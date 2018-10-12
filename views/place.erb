@@ -25,6 +25,8 @@
     </div>
 </div>
 
-<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
-<script src="/javascripts/show-map.js"></script>
-<script>LeafletMap.showMap(<%= @page.center %>, <%= @page.geojson %>);</script>
+<% content_for :footer_extra_js do %>
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    <script src="/javascripts/show-map.js"></script>
+    <script>LeafletMap.showMap(<%= @page.center %>, <%= @page.geojson %>);</script>
+<% end %>

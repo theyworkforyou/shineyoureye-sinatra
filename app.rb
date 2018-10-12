@@ -3,6 +3,7 @@
 require 'bootstrap-sass'
 require 'everypolitician'
 require 'sinatra'
+require 'sinatra/content_for'
 
 require_relative 'lib/checks'
 require_relative 'lib/featured_person'
