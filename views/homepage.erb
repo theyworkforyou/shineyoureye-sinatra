@@ -43,44 +43,29 @@
 <div class="page-section">
   <div class="container">
     <div class="row">
-      <div class="col-sm-<% if @page.featured_events.empty? %>12<% else %>8<% end %>">
+      <div class="col-sm-6">
         <% unless @page.featured_posts.empty? %>
           <h2><a href="/blog/">News</a></h2>
-          <div class="row">
-            <% @page.featured_posts.each do |post| %>
-              <div class="col-sm-6">
-                <a href="<%= post.url %>"><h3><%= post.title %></h3></a>
-                <p><%= @page.format_date(post.date) %></p>
-              </div>
-            <% end %>
-          </div>
+          <% @page.featured_posts.each do |post| %>
+            <a href="<%= post.url %>"><h3><%= post.title %></h3></a>
+            <p><%= @page.format_date(post.date) %></p>
+          <% end %>
         <% end %>
-      </div>
-      <% unless @page.featured_events.empty? %>
-        <div class="col-sm-4">
+        <% unless @page.featured_events.empty? %>
           <h2><a href="/events/">Events</a></h2>
           <% @page.featured_events.each do |event| %>
             <a href="<%= event.url %>"><h3><%= event.title %></h3></a>
             <p><%= @page.format_date(event.date) %></p>
           <% end %>
+        <% end %>
+        <h2 style="margin-top: 1.2em"><a href="https://www.youtube.com/watch?v=NDSIJfYWgko">How it works</a></h2>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe src="https://www.youtube.com/embed/NDSIJfYWgko" frameborder="0" allowfullscreen></iframe>
         </div>
-      <% end %>
-    </div>
-  </div>
-</div>
-
-
-<div class="page-section homepage__social">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-6">
-        <iframe style="width: 100%; height: 315px; margin-bottom: 1em;" src="https://www.youtube.com/embed/NDSIJfYWgko" frameborder="0" allowfullscreen></iframe>
       </div>
       <div class="col-sm-6">
-        <div style="text-align: center; margin-bottom: 1em;">
-            <a class="btn btn-default" href="https://twitter.com/<%= settings.twitter_user %>">Shine Your Eye on Twitter</a>
-        </div>
-        <a style="color: white !important;" class="twitter-timeline"  href="https://twitter.com/<%= settings.twitter_user %>" data-widget-id="661503293731000320" data-width="600" data-height="400" data-chrome="nofooter noborders noheader transparent">Tweets by @<%= settings.twitter_user %></a>
+        <h2><a href="https://twitter.com/<%= settings.twitter_user %>">Twitter</a></h2>
+        <a class="twitter-timeline"  href="https://twitter.com/<%= settings.twitter_user %>" data-widget-id="661503293731000320" data-width="600" data-height="600" data-chrome="nofooter noborders noheader transparent">Tweets by @<%= settings.twitter_user %></a>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
       </div>
     </div>

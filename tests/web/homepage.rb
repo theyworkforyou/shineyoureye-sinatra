@@ -56,7 +56,6 @@ describe 'Homepage' do
 
   describe 'twitter widget' do
     it 'links to the site twitter account' do
-      subject.css('.btn-default/@href').text.must_include('NGShineYourEye')
       subject.css('.twitter-timeline/@href').text.must_include('NGShineYourEye')
     end
 
