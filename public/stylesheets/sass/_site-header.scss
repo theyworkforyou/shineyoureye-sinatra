@@ -4,13 +4,11 @@
     background-color: $site-header-background-color;
     padding-top: 1em;
     padding-bottom: 1em;
-}
 
-//.page--homepage {
-//    .site-header {
-//        display: none;
-//    }
-//}
+    .page--homepage & {
+        display: none; // homepage has its own search box in the .homepage__hero
+    }
+}
 
 .site-header__search {
     font-size: 14px;

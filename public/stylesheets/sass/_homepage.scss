@@ -17,6 +17,41 @@
 
 .homepage__hero__secondary {
     text-align: center;
+
+    img {
+        @media (min-width: $screen-sm-min) {
+            margin-top: 2em; // roughly vertically centred in parent
+        }
+    }
+}
+
+.homepage__hero__search {
+    margin-bottom: 24px; // match .homepage__hero margin-top
+
+    label {
+        strong {
+            display: block;
+            font-size: 1.2em;
+            margin: 0.5em 0 0 0;
+        }
+
+        span {
+            display: block;
+            margin: 0 0 0.2em 0;
+            font-weight: normal;
+        }
+    }
+
+    .input-group {
+        max-width: 28em;
+    }
+
+    @media (min-width: $screen-lg-min) {
+        .input-group-btn .btn {
+            padding-left: 1.5em;
+            padding-right: 1.5em;
+        }
+    }
 }
 
 .homepage__reps {
