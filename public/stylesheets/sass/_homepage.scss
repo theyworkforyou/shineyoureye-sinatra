@@ -3,7 +3,7 @@
         font-size: 24px;
         line-height: 1.4;
         font-weight: 300;
-        margin-bottom: 0.5em;
+        margin: 0.5em 0;
 
         @media (min-width: $screen-lg-min) {
             font-size: 28px;
@@ -59,7 +59,7 @@
     text-align: center;
 
     h2 {
-        margin-bottom: 0;
+        margin: 0.5em 0 0 0;
         font-size: $font-size-h3;
     }
 }

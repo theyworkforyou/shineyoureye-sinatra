@@ -12,10 +12,6 @@ body {
     background-color: $site-footer-background-color;
     color: $site-footer-text-color;
 
-    h3 {
-        margin-top: 0;
-    }
-
     .btn-default {
         color: inherit;
         border-color: mix($site-footer-background-color, $site-footer-text-color, 70%);
