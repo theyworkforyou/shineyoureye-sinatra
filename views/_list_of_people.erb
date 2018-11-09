@@ -14,7 +14,7 @@
         <p>
           <% if person.area %>
             <span class="test-party"><%= person.party_name %></span>,
-            <a class="test-area" href="<%= person.area.url %>"><%= person.area.name %></a>
+            <a class="contact-list__item__area test-area" href="<%= person.area.url %>"><%= person.area.name %></a>
           <% else %>
             <span class="test-party"><%= person.party_name %></span>
           <% end %>
