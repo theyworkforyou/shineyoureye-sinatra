@@ -30,23 +30,42 @@ body {
             border-color: mix($site-footer-background-color, $site-footer-text-color, 50%);
         }
     }
+
+    a {
+        text-decoration: none;
+    }
+
+    a[href*="twitter.com"],
+    a[href^="mailto:"] {
+        &:before {
+            display: inline-block;
+            content: "";
+            margin-right: 0.5em;
+            vertical-align: -0.2em;
+            width: 20px;
+            height: 16px;
+            background-color: transparent;
+            background-size: 20px 16px;
+        }
+    }
+
+    a[href*="twitter.com"] {
+        &:before {
+            @include high-dpi-background-image('../images/twitter-icon');
+            margin-right: 0.3em;
+        }
+    }
+
+    a[href^="mailto:"] {
+        &:before {
+            @include high-dpi-background-image('../images/email-icon');
+        }
+    }
 }
 
 .site-footer__secondary {
     ul {
         margin-top: 1.5em;
-
-        // Replicate .list-inline because bootstrap-sass doesn't expose it
-        // as a mixin, and we don't want to @extend it and get selector bloat.
-        @media (min-width: $screen-sm-min) {
-            margin-left: -5px;
-
-            & > li {
-                display: inline-block;
-                padding-left: 5px;
-                padding-right: 5px;
-            }
-        }
     }
 
     li {

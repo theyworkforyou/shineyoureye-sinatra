@@ -3,9 +3,13 @@
     <div class="site-footer__primary">
       <h3>Shine Your Eye</h3>
       <p>Shine your Eye is an initiative of <a href="http://eie.ng" target="_blank" title="EiE Nigeria">Enough is Enough Nigeria (EiENigeria)</a>  with support from <a href="http://www.placng.org/" target="_blank" title="PLAC NG">Policy and Legal Advocacy Center</a>. <a href="/info/about">Read more.</a></p>
+      <ul class="list-inline">
+        <li><a href="mailto:<%= settings.contact_email %>"><%= settings.contact_email %></a></li>
+        <li><a href="https://twitter.com/<%= settings.twitter_user %>">@<%= settings.twitter_user %></a></li>
+      </ul>
     </div>
     <div class="site-footer__secondary">
-      <ul class="list-unstyled">
+      <ul class="list-inline">
         <li><a class="btn btn-primary" href="/search/">Find your Representative</a></li>
         <li><a class="btn btn-default" href="/blog/">Latest News</a></li>
         <li><a class="btn btn-default" href="/info/democracy-resources">Democractic Resources</a></li>
