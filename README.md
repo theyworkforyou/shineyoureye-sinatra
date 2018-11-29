@@ -91,14 +91,14 @@ For example, if you are using
 [rbenv](https://cbednarski.com/articles/installing-ruby/):
 
 1. Install the right Ruby version. That would be the version specified at the
-beginning of the Gemfile. For example, if it was `ruby '2.3.1'`, you would type:
+beginning of the Gemfile. For example, if it was `ruby '2.5.3'`, you would type:
 ```bash
-rbenv install 2.3.1
+rbenv install 2.5.3
 rbenv rehash
 ```
 2. Then you would move to the root directory of this project and type:
 ```bash
-rbenv local 2.3.1
+rbenv local 2.5.3
 ruby -v
 ```
 

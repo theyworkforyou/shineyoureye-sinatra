@@ -45,7 +45,7 @@ end
 def format_date(partial_iso8601)
   return partial_iso8601 if partial_iso8601 =~ /^\d{4}$/
 
-  if /^\d{4}-\d{2}/ =~ partial_iso8601
+  if /^\d{4}-\d{2}/.match?(partial_iso8601)
     d = Date.parse(partial_iso8601 + '-01')
     return d.strftime('%B %Y')
   end

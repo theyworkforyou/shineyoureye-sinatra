@@ -2,9 +2,9 @@
 
 source 'https://rubygems.org'
 
-# Warning: update the README and TargetRubyVersion in .rubocop.yml if
-# this version is changed:
-ruby '2.3.1'
+# Warning: update the README, .travis.yml and TargetRubyVersion in .rubocop.yml
+# if this version is changed:
+ruby '2.5.3'
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}.git" }
 
@@ -23,5 +23,5 @@ group :test do
   gem 'pry'
   gem 'rack-test'
   gem 'rubocop'
-  gem 'webmock'
+  gem 'webmock', '~> 3.4.2'
 end
