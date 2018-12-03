@@ -2,8 +2,8 @@
 
 source 'https://rubygems.org'
 
-# Warning: update the README, .travis.yml and TargetRubyVersion in .rubocop.yml
-# if this version is changed:
+# Warning: update the README, .travis.yml, TargetRubyVersion in .rubocop.yml
+# and .travis.yml in shineyoureye-prose if this version is changed:
 ruby '2.5.3'
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}.git" }
