@@ -28,22 +28,24 @@
   <div class="container">
     <h2>Find more information about your government representatives</h2>
     <div class="row">
-      <% @page.featured_people.each do |page_fragment| %>
-        <% if page_fragment.featured_person %>
-        <div class="col-sm-4 homepage__reps__rep">
-            <a href="<%= page_fragment.featured_person.url %>">
-                <img src="<%= page_fragment.featured_person.medium_image_url %>">
-            </a>
-            <p>
-                <strong><%= page_fragment.featured_person.name %></strong>,
-                <%= page_fragment.featured_person.party_name %>,
-                <%= page_fragment.featured_person.area.name if page_fragment.featured_person.area %>
-            </p>
-            <a class="btn btn-default" href="<%= page_fragment.people_type_url %>">
-                <strong><%= page_fragment.people_type_display_text %></strong>
-            </a>
+      <% @page.government_representative_types.each do |type| %>
+        <div>
+          <% type.people.each do |person| %>
+            <div class="col-sm-4 homepage__reps__rep">
+              <a href="<%= person.url %>">
+                  <img src="<%= person.medium_image_url %>">
+              </a>
+              <p>
+                  <strong><%= person.name %></strong>,
+                  <%= person.party_name %>,
+                  <%= person.area.name if person.area %>
+              </p>
+              <a class="btn btn-default" href="<%= type.link_url %>">
+                  <strong><%= type.link_text %></strong>
+              </a>
+            </div>
+          <% end %>
         </div>
-        <% end %>
       <% end %>
     </div>
   </div>

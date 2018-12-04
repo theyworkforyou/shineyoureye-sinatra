@@ -80,21 +80,12 @@ all_people = representatives.find_all + senators.find_all + governors.find_all
 get '/' do
   posts_finder = Document::Finder.new(pattern: posts_pattern, baseurl: '/blog/')
   events_finder = Document::Finder.new(pattern: events_pattern, baseurl: '/events/')
-  summaries_finder = Document::Finder.new(pattern: summaries_pattern, baseurl: '')
-  featured_summaries = summaries_finder.find_featured
-  featured_people = [
-    [governors, 'Governors', '/position/executive-governor/'],
-    [senators, 'Senators', '/position/senator/'],
-    [representatives, 'Representatives', '/position/representative/']
-  ].map do |collection, display_text, url|
-    PageFragment::FeaturedPerson.new(
-      collection.featured_person(featured_summaries), display_text, url
-    )
-  end
   @page = Page::Homepage.new(
     posts: posts_finder.find_all,
     events: events_finder.find_all,
-    featured_people: featured_people
+    governors: governors,
+    senators: senators,
+    representatives: representatives
   )
   erb :homepage
 end

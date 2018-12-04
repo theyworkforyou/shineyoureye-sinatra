@@ -9,39 +9,23 @@ describe 'Homepage' do
   describe 'featured people' do
     let(:person) { subject.css('.homepage__reps__rep').last }
 
-    it 'links to the person page' do
-      person.css('a/@href').first.text
-            .must_equal('/person/abdukadir-rahis/')
-    end
-
     it 'displays the person medium size image' do
       person.css('img/@src').text
-            .must_include('/b2a7f72a-9ecf-4263-83f1-cb0f8783053c/250x250.jpeg')
-    end
-
-    it 'displays the person name' do
-      person.css('p strong').text.must_equal('ABDUKADIR RAHIS')
-    end
-
-    it 'displays the person party name' do
-      person.css('p').text.must_include('All Progressives Congress')
-    end
-
-    it 'displays the person area name' do
-      person.css('p').text.must_include('Maiduguri (Metropolitan)')
+            .must_include('250x250.jpeg')
     end
 
     it 'displays all types of people' do
-      subject.css('.homepage__reps__rep .btn-default').count.must_equal(3)
+      subject.css('.homepage__reps__rep .btn-default').map(&:text).map(&:strip).uniq.sort
+             .must_equal(%w[Governors Representatives Senators])
     end
 
     it 'displays link to Senators' do
-      subject.css('.homepage__reps__rep .btn-default/@href')[1].text
+      subject.css('.homepage__reps__rep .btn-default/@href')[10].text
              .must_equal('/position/senator/')
     end
 
     it 'displays the Senators label' do
-      subject.css('.homepage__reps__rep .btn-default')[1].text.strip
+      subject.css('.homepage__reps__rep .btn-default')[10].text.strip
              .must_equal('Senators')
     end
 
