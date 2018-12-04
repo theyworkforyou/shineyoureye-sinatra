@@ -102,13 +102,8 @@ describe 'Person Page' do
   describe 'when person has an email' do
     before { get '/person/adamu-abdullahi/' }
 
-    it 'links to the email' do
-      subject.css('.person__email a/@href').first.text
-             .must_equal('mailto:adamu.abdullahi@gmail.com')
-    end
-
     it 'displays the email' do
-      subject.css('.person__email a').first.text
+      subject.css('.person__email').first.text
              .must_equal('adamu.abdullahi@gmail.com')
     end
   end

@@ -44,7 +44,7 @@
 
           <% if @page.person.email %>
             <h2>Email</h2>
-            <p class="person__email"><a href="<%= @page.person.email_url %>"><%= @page.person.email %></a></p>
+            <p class="person__email"><%= @page.person.email %></p>
           <% end %>
 
           <% if @page.person.wikipedia_url %>
