@@ -29,7 +29,8 @@
     <h2>Find more information about your government representatives</h2>
     <div class="row">
       <% @page.government_representative_types.each do |type| %>
-        <div class="col-sm-4 js-show-random-child">
+        <div class="col-sm-4">
+          <div class="js-show-random-child">
           <% type.people.each_with_index do |person, i| %>
             <div class="homepage__reps__rep <%= 'hidden' unless i == 0 %>">
               <a href="<%= person.url %>">
@@ -40,11 +41,12 @@
                   <%= person.party_name %>,
                   <%= person.area.name if person.area %>
               </p>
-              <a class="btn btn-default" href="<%= type.link_url %>">
-                  <strong><%= type.link_text %></strong>
-              </a>
             </div>
           <% end %>
+          </div>
+          <a class="btn btn-default" href="<%= type.link_url %>">
+              <strong><%= type.link_text %></strong>
+          </a>
         </div>
       <% end %>
     </div>
