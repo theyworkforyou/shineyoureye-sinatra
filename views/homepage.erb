@@ -29,11 +29,11 @@
     <h2>Find more information about your government representatives</h2>
     <div class="row">
       <% @page.government_representative_types.each do |type| %>
-        <div>
-          <% type.people.each do |person| %>
-            <div class="col-sm-4 homepage__reps__rep">
+        <div class="col-sm-4 js-show-random-child">
+          <% type.people.each_with_index do |person, i| %>
+            <div class="homepage__reps__rep <%= 'hidden' unless i == 0 %>">
               <a href="<%= person.url %>">
-                  <img src="<%= person.medium_image_url %>">
+                  <img <% if i == 0 %>src<% else %>data-src<% end %>="<%= person.medium_image_url %>">
               </a>
               <p>
                   <strong><%= person.name %></strong>,
@@ -82,3 +82,7 @@
     </div>
   </div>
 </div>
+
+<% content_for :footer_extra_js do %>
+  <script src="/javascripts/show-random-child.js"></script>
+<% end %>

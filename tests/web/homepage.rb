@@ -7,7 +7,7 @@ describe 'Homepage' do
   subject { Nokogiri::HTML(last_response.body) }
 
   describe 'featured people' do
-    let(:person) { subject.css('.homepage__reps__rep').last }
+    let(:person) { subject.css('.homepage__reps__rep').first }
 
     it 'displays the person medium size image' do
       person.css('img/@src').text
@@ -17,6 +17,14 @@ describe 'Homepage' do
     it 'displays all types of people' do
       subject.css('.homepage__reps__rep .btn-default').map(&:text).map(&:strip).uniq.sort
              .must_equal(%w[Governors Representatives Senators])
+    end
+
+    it 'displays link to Governors' do
+      person.css('.btn-default/@href').text.must_equal('/position/executive-governor/')
+    end
+
+    it 'displays the Governors label' do
+      person.css('.btn-default').text.strip.must_equal('Governors')
     end
 
     it 'displays link to Senators' do
@@ -30,11 +38,13 @@ describe 'Homepage' do
     end
 
     it 'displays link to Representatives' do
-      person.css('.btn-default/@href').text.must_equal('/position/representative/')
+      subject.css('.homepage__reps__rep .btn-default/@href')[20].text
+             .must_equal('/position/representative/')
     end
 
     it 'displays the Representatives label' do
-      person.css('.btn-default').text.strip.must_equal('Representatives')
+      subject.css('.homepage__reps__rep .btn-default')[20].text.strip
+             .must_equal('Representatives')
     end
   end
 
