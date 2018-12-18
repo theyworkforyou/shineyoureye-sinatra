@@ -33,6 +33,14 @@ module Mapit
       end
     end
 
+    def thumbnail_url
+      if File.exist?("public/images/thumbnails/#{pombola_slug}.jpg")
+        "/images/thumbnails/#{pombola_slug}.jpg"
+      else
+        '/images/place-250x250.png'
+      end
+    end
+
     def url
       "#{baseurl}#{pombola_slug}/"
     end

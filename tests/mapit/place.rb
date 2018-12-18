@@ -79,6 +79,34 @@ describe 'Place' do
     end
   end
 
+  describe 'area with no thumbnail image' do
+    let(:place) do
+      Mapit::Place.new(
+        mapit_area_data: area_with_no_parent,
+        pombola_slug: 'gwagwaladakuje',
+        baseurl: '/baseurl/'
+      )
+    end
+
+    it 'has default "pin" thumbnail_url' do
+      place.thumbnail_url.must_equal('/images/place-250x250.png')
+    end
+  end
+
+  describe 'area with thumbnail image' do
+    let(:place) do
+      Mapit::Place.new(
+        mapit_area_data: area_with_no_parent,
+        pombola_slug: 'federal-capital-territory',
+        baseurl: '/baseurl/'
+      )
+    end
+
+    it 'has custom image thumbnail_url' do
+      place.thumbnail_url.must_equal('/images/thumbnails/federal-capital-territory.jpg')
+    end
+  end
+
   def area_with_parent
     parsed_mapit_data_for_area_type('FED').values.first
   end
