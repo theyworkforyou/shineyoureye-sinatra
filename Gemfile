@@ -23,5 +23,5 @@ group :test do
   gem 'pry'
   gem 'rack-test'
   gem 'rubocop'
-  gem 'webmock', '~> 3.4.2'
+  gem 'webmock', '~> 3.5.1'
 end
