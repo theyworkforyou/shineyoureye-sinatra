@@ -3,14 +3,9 @@
 
 # Shine Your Eye (Sinatra)
 
-This project is a proof of concept that aims to make it easy to produce
-lightweight parliamentary monitoring sites. It uses EveryPolitician data,
-user-editable data (through [prose.io](http://prose.io/)), and CSV data.
-It doesn't use a database.
-
-It is meant to be an exemplar. A generic core could be extracted from it,
-leaving ShineYourEye specifics out, so that a parliament-monitoring site can be
-implemented for other countries as well, using this approach.
+This project is a lightweight parliamentary monitoring site for Nigeria. It
+uses EveryPolitician data, user-editable data (through
+[prose.io](http://prose.io/)), and CSV data. It doesn't use a database.
 
 ## Approach
 
