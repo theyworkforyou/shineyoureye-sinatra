@@ -168,9 +168,3 @@ keep adding things here, for the newcomers.
 * Persons should always have a slug. If they don't, or if the
   slug is not unique, that should be fixed upstream. The code
   will throw an error.
-
-
-## Questions
-
-Please write to us at
-[parliaments@mysociety.org](mailto:parliaments@mysociety.org).
