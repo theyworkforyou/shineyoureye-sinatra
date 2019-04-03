@@ -15,9 +15,10 @@ The approach of this project is similar to
 * This is a Sinatra application that uses content produced by
 [prose.io](http://prose.io/) that is saved in
 [`shineyoureye-prose`](https://github.com/theyworkforyou/shineyoureye-prose).
-* A script pulls this content, runs the app and scrapes it.
-* Then pushes the scraped pages to the `gh-pages` branch of another repo,
-[`shineyoureye-static`](https://github.com/theyworkforyou/shineyoureye-static).
+* The [`bin/deploy`](bin/deploy) script pulls this content, runs the app and scrapes it.
+* The scraped pages are then pushed to the `gh-pages` branch of another repo,
+[`shineyoureye-static`](https://github.com/theyworkforyou/shineyoureye-static),
+  which is configured to serve it's content via [GitHub Pages](https://pages.github.com/).
 
 Non-technical users can use [prose.io](http://prose.io/) to add content to the
 prose repo. Then, whenever there is a change in that repo, the script runs,

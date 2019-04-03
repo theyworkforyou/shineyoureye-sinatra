@@ -3,14 +3,11 @@
 These are some of the design decisions we took when building
 this app:
 
-* Since this app is an exemplar, the most important thing we
-  keep in mind is to separate site-specific code from generic
+* We have tried to separate site-specific code from generic
   code (for example, the posts and post pages are generic, but
   the route to the posts page or the post page is
   site-specific). Anything that is site-specific is passed as an
-  argument. That way, we keep a separation of concerns. This
-  will also help do a cleaner extract of a generic core for
-  future code re-use.
+  argument. That way, we keep a separation of concerns.
 
 * We avoid having logic in the routes or in the views, the only
   code there should be to create objects and wire up
@@ -57,15 +54,6 @@ this app:
 
 
 ## Code structure
-
-It is unlikely that any of our Pombola-lite sites in the future
-will have the level of complexity of this particular site. We
-have a lot of different sources of data and also this is a port
-from an existing Pombola site, so we need to keep some things
-from there as well.
-
-However the principles we used to separate the different
-concerns are generic and could suit simpler sites.
 
 * We use namespacing to distinguish all the different parts of
   the application.
