@@ -54,7 +54,11 @@ module MembershipCSV
     end
 
     def area
-      mapit.area_from_mapit_name(person['state'])
+      if person['mapit_id']
+        mapit.area_from_mapit_id(person['mapit_id'])
+      elsif person['state']
+        mapit.area_from_mapit_name(person['state'])
+      end
     end
 
     def party_id
