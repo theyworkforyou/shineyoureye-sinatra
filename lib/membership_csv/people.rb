@@ -5,8 +5,9 @@ require_relative '../people_slug_to_person'
 
 module MembershipCSV
   class People
-    def initialize(csv_filename:, person_factory:)
+    def initialize(csv_filename:, legislature:, person_factory:)
       @csv_filename = csv_filename
+      @legislature = legislature
       @person_factory = person_factory
     end
 
@@ -24,9 +25,13 @@ module MembershipCSV
       mapit_id_to_person[mapit_id.to_s] || []
     end
 
-    def current_term_start_date; end
+    def current_term_start_date
+      legislature.latest_term_start_date
+    end
 
-    def legislature_name; end
+    def legislature_name
+      legislature.name
+    end
 
     def featured_person(featured_summaries)
       featured_summaries.map { |summary| id_to_person[summary.slug] }.compact.first
@@ -34,7 +39,7 @@ module MembershipCSV
 
     private
 
-    attr_reader :csv_filename, :person_factory
+    attr_reader :csv_filename, :legislature, :person_factory
 
     def all_people
       @all_people ||= read_with_headers.map { |row| create_person(remove_empty_cells(row)) }
@@ -63,7 +68,7 @@ module MembershipCSV
     end
 
     def create_person(row)
-      person_factory.build_csv_person(row)
+      person_factory.build_csv_person(row, legislature)
     end
   end
 end

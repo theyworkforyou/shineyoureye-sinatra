@@ -6,8 +6,9 @@ require_relative '../person_slug'
 
 module MembershipCSV
   class Person
-    def initialize(person:, mapit:, baseurl:, identifier_scheme:)
+    def initialize(person:, legislature:, mapit:, baseurl:, identifier_scheme:)
       @person = person
+      @legislature = legislature
       @mapit = mapit
       @baseurl = baseurl
       @identifier_scheme = identifier_scheme
@@ -79,7 +80,7 @@ module MembershipCSV
 
     private
 
-    attr_reader :person, :mapit, :baseurl, :identifier_scheme
+    attr_reader :person, :legislature, :mapit, :baseurl, :identifier_scheme
 
     def first(values)
       values.split(';').first
@@ -87,7 +88,7 @@ module MembershipCSV
 
     def proxy_image_base_url
       'https://raw.githubusercontent.com/theyworkforyou/shineyoureye-images' \
-      "/gh-pages/Governors/#{id}/"
+      "/gh-pages/#{legislature.slug}/#{id}/"
     end
   end
 end
