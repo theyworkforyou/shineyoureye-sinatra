@@ -75,8 +75,9 @@ representatives = MembershipCSV::People.new(
   legislature: representatives_legislature,
   person_factory: person_factory
 )
-senators = EP::PeopleByLegislature.new(
-  legislature: settings.index.country('Nigeria').legislature('Senate'),
+senators = MembershipCSV::People.new(
+  csv_filename: 'data/senate.csv',
+  legislature: senate_legislature,
   person_factory: person_factory
 )
 
