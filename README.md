@@ -33,10 +33,11 @@ from GitHub's free hosting.
 This project uses data from several different sources:
 
 * The basic details of current Senators and members of the House
-  of Representatives are from EveryPolitician. This
-  EveryPolitician data is acceessed using the
-  [everypolitician gem](https://github.com/everypolitician/everypolitician-ruby). The
-  data on Nigeria is sourced from:
+  of Representatives was generated from EveryPolitician. This
+  EveryPolitician data is accessed using the
+  [everypolitician gem](https://github.com/everypolitician/everypolitician-ruby).
+  The `bin/everypolitician-to-csv` script is used to convert the EveryPolitician
+  data to CSV format. The data on Nigeria is sourced from:
     * The National Assembly website http://www.nass.gov.ng/
     * The old Pombola-based ShineYourEye website's Popolo
       JSON dumps, via
