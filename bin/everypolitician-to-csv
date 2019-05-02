@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 require 'bundler/setup'
 require 'everypolitician'
@@ -26,6 +27,56 @@ end
 EveryPolitician::LegislativePeriod.include EveryPolitician::LegislativePeriodExtension
 
 class EveryPoliticianToCSV
+  class PersonRow
+    def initialize(person, mapit, latest_term)
+      @person = person
+      @mapit = mapit
+      @latest_term = latest_term
+    end
+
+    # rubocop:disable Metrics/AbcSize, Metrics/MethodLength
+    def row_as_hash
+      {
+        id: person.id,
+        name: person.name,
+        mapit_id: mapit_area&.id,
+        party: party.name,
+        email: person.email,
+        phone: person.phone,
+        twitter: person.twitter,
+        facebook_url: person.facebook,
+        wikipedia_url: person.link('Wikipedia (en)'),
+        birth_date: person.birth_date,
+        gender: person.gender,
+        identifier__shineyoureye: person.identifier('shineyoureye'),
+        image_url: person.image,
+        website_url: person.link('website'),
+        other_names: person.other_names.map { |on| on[:name] }.join(';')
+      }
+    end
+    # rubocop:enable Metrics/AbcSize, Metrics/MethodLength
+
+    private
+
+    attr_reader :person, :mapit, :latest_term
+
+    def current_memberships
+      @current_memberships ||= person.memberships.where(legislative_period_id: latest_term.id)
+    end
+
+    def ep_area
+      @ep_area ||= current_memberships.first.area
+    end
+
+    def party
+      @party ||= current_memberships.first.party
+    end
+
+    def mapit_area
+      @mapit_area ||= mapit.area_from_ep_id(ep_area.id)
+    end
+  end
+
   DATASOURCE = ENV.fetch('DATASOURCE', 'https://github.com/everypolitician/everypolitician-data/raw/master/countries.json')
 
   def initialize(country, legislature, output)
@@ -64,30 +115,11 @@ class EveryPoliticianToCSV
 
   def person_rows
     @person_rows ||= people.map do |person|
-      current_memberships = person.memberships.where(legislative_period_id: latest_term.id)
-      ep_area = current_memberships.first.area
-      party = current_memberships.first.party
-      mapit_area = mapit.area_from_ep_id(ep_area.id)
-      {
-        id: person.id,
-        name: person.name,
-        mapit_id: mapit_area&.id,
-        party: party.name,
-        email: person.email,
-        phone: person.phone,
-        twitter: person.twitter,
-        facebook_url: person.facebook,
-        wikipedia_url: person.link('Wikipedia (en)'),
-        birth_date: person.birth_date,
-        gender: person.gender,
-        identifier__shineyoureye: person.identifier('shineyoureye'),
-        image_url: person.image,
-        website_url: person.link('website'),
-        other_names: person.other_names.map { |on| on[:name] }.join(';')
-      }
+      PersonRow.new(person, mapit, latest_term).row_as_hash
     end
   end
 
+  # rubocop:disable Metrics/MethodLength
   def mapit_mappings
     # Create a wrapper for the mappings between the various IDs we have
     # to use for areas / places.
@@ -104,15 +136,16 @@ class EveryPoliticianToCSV
       ]
     )
   end
+  # rubocop:enable Metrics/MethodLength
 
   def mapit
-  # Create a wrapper that caches MapIt and EveryPolitician area data:
-  @mapit ||= Mapit::Wrapper.new(
-    mapit_mappings: mapit_mappings,
-    baseurl: '/place/',
-    area_types: %w[FED SEN STA],
-    data_directory: 'mapit'
-  )
+    # Create a wrapper that caches MapIt and EveryPolitician area data:
+    @mapit ||= Mapit::Wrapper.new(
+      mapit_mappings: mapit_mappings,
+      baseurl: '/place/',
+      area_types: %w[FED SEN STA],
+      data_directory: 'mapit'
+    )
   end
 end
 
