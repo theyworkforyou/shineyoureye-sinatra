@@ -87,8 +87,7 @@ module MembershipCSV
     end
 
     def proxy_image_base_url
-      'https://raw.githubusercontent.com/theyworkforyou/shineyoureye-images' \
-      "/gh-pages/#{legislature.slug}/#{id}/"
+      "https://theyworkforyou.github.io/shineyoureye-images/#{legislature.slug}/#{id}/"
     end
   end
 end
