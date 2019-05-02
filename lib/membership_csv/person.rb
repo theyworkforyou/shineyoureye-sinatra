@@ -51,7 +51,7 @@ module MembershipCSV
     end
 
     def wikipedia_url
-      nil
+      person['wikipedia_url']
     end
 
     def area
