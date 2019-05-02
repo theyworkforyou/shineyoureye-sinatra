@@ -12,7 +12,7 @@ describe 'Senate' do
 
   describe 'person list' do
     it 'lists all senators' do
-      subject.css('.contact-list__item').count.must_equal(115)
+      subject.css('.contact-list__item').count.must_equal(109)
     end
 
     it 'groups senators by state' do
@@ -65,7 +65,7 @@ describe 'Senate' do
     end
 
     describe 'when person does not have an image' do
-      let(:person) { subject.xpath('//li[@class="contact-list__item"][.//h3[text()="ATAI USMAN"]]') }
+      let(:person) { subject.xpath('//li[@class="contact-list__item"][.//h3[text()="Isaac Alfa"]]') }
 
       it 'shows a picture anyway (empty avatar)' do
         person.css('.contact-list__item__photo/@src').first.text
