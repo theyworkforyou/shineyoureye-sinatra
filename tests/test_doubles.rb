@@ -20,7 +20,7 @@ FakePerson = Struct.new(:id, :name, :slug, :phone, :mapit) do
 end
 
 FakePersonFactory = Struct.new(:mapit) do
-  def build_csv_person(row)
+  def build_csv_person(row, _legislature)
     FakePerson.new(row['id'], row['name'], row['identifier__shineyoureye'], row['phone'], mapit)
   end
 
