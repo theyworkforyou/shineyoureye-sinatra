@@ -16,7 +16,6 @@ id,name,mapit_id,party,email,phone,twitter,facebook_url,wikipedia_url,birth_date
 0cfa657a-9ba3-4889-a30a-9c9c1040b9cb,Angulu Zakari,949,All Progressives Congress,,,,,,,,,https://www.nass.gov.ng/images/mps/960.jpg,,""
 0d39a31a-e14e-4141-af64-446f3db43247,Nnenna Elendu,1025,Peoples Democratic Party,,08023145608,,,,1969-10-24,female,nnenna-ijeoma-elendu-ukeje,https://www.nass.gov.ng/images/mps/847.jpg,,NNENNA IJEOMA ELENDU-UKEJE;Nnenna Ukeje Elendu
 0e6c09f3-3b92-4bf4-9163-3175f142bbd8,Johnson Oghuma,1148,All Progressives Congress,,,,,,,,,,,""
-10414161-787c-4423-a6f3-bf0547665d19,UMAR JIBRIL,1104,Peoples Democratic Party,umarjibril57@gmail.com,08036009559,,,,1960-11-22,,umar-buba-jibril,https://www.nass.gov.ng/images/mps/874.jpg,,UMAR BUBA JIBRIL;UMAR BUBA JIBRIL
 1134b7bc-a663-415b-8340-0d688aa77e2f,Sani Mohammed,935,All Progressives Congress,,,,,,,,,https://www.nass.gov.ng/images/mps/895.jpg,,Sani Zoro Mohammed
 11b0606e-4b96-4228-9ee4-c78b653283c0,JIMOH ABDUL,10092,All Progressives Congress,,08033019132,,,,,,,https://www.nass.gov.ng/images/mps/648.jpg,,JIMOH OLAJIDE ABDUL
 13690167-45a0-48c1-97f2-724e65341972,Rabiu Garba,1123,All Progressives Congress,,"08036783931, 0809395",,,,,,,https://www.nass.gov.ng/images/mps/572.jpg,,Rabiu Kaugama Garba
@@ -38,7 +37,6 @@ id,name,mapit_id,party,email,phone,twitter,facebook_url,wikipedia_url,birth_date
 21ff1ae5-be2c-4c4c-93e9-d629a478a402,KHAMISU AHM AHMED,970,All Progressives Congress,,"08035924224, 0809500",,,,1975-06-19,,khamisu-mailantarki-ahmed,https://www.nass.gov.ng/images/mps/729.jpg,,KHAMISU AHM MAILANTARKI AHMED;KHAMISU MAILANTARKI AHMED
 22c21b1b-5e7b-4d81-b849-7a82aebfda26,Kehinde Agboola,1143,Peoples Democratic Party,,,,,,,,,https://www.nass.gov.ng/images/mps/501.jpg,,Kehinde Emmanuel Agboola
 24548ea1-20ce-44bb-8995-5ea4d27a21c5,TAJUDEEN OBASA,1087,Peoples Democratic Party,,08089671960,,,https://en.wikipedia.org/wiki/Tajudeen_Obasa,1970-08-29,male,,https://www.nass.gov.ng/images/mps/619.jpg,,TAJUDEEN ADEKUNLE OBASA
-24a57e06-1019-4ed5-a6a9-99af12871b17,BELLO SANI,1073,All Progressives Congress,,08033423837,,,,,,,https://www.nass.gov.ng/images/mps/853.jpg,,BELLO MASHI SANI
 25e4ad12-dcda-4fcc-ab3e-00c24dd3a711,BELLO ABDULLAHI,1165,All Progressives Congress,,08036210534,,,,,,,https://www.nass.gov.ng/images/mps/664.jpg,,""
 260593f3-76a9-4df0-999a-25cc14cd066b,OHIOZOJEH AKPATASON,1053,All Progressives Congress,,08033555957,,,,1964-11-28,,peter-ohiozoje-akpatason,https://www.nass.gov.ng/images/mps/765.jpg,,OHIOZOJEH PETER AKPATASON;PETER OHIOZOJEH AKPATASON
 26b2faba-5957-49a2-a6d2-3645b0a0812e,Jerome Eke,1032,Peoples Democratic Party,,0803869003,,,,,male,,https://www.nass.gov.ng/images/mps/831.jpg,,""
@@ -369,3 +367,5 @@ fd172c3e-4a15-498f-96e6-71a6573759cc,Istifanus Gyang,1081,Peoples Democratic Par
 fe1cd7cb-8c45-4886-a6ab-b93d9659979b,Peter Madubueze,1228,All Progressives Congress,,08039596918,,,,,male,,https://www.nass.gov.ng/images/mps/721.jpg,,Peter Obiano Madubueze
 ff16e23f-3be0-4a89-a263-4d974d9c3f24,IOREMBER WAYO,1214,All Progressives Congress,,07067663382,,,,,,,https://www.nass.gov.ng/images/mps/909.jpg,,IOREMBER BENJAMIN WAYO
 ff5b5a16-9243-4cc0-83fc-b4c97f44ce63,Eke Bede,1234,Peoples Democratic Party,,08033086271,,,,,male,,https://www.nass.gov.ng/images/mps/901.jpg,,Eke Uchenna Bede
+088dc3b4-e041-4ba2-a8be-ac9fe557e4c2,Haruna Isah,1104,All Progressives Congress,,,,,,,,haruna-isah,,,
+8da56b4d-0f29-4640-aee0-03eab6880c5c,Mansur Mashi,1073,All Progressives Congress,,,,,,,,mansur-mashi,,,

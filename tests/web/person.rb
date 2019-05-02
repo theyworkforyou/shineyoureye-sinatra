@@ -30,7 +30,7 @@ describe 'Person Page' do
   end
 
   describe 'when person does not have an image' do
-    before { get '/person/atai-usman/' }
+    before { get '/person/isaac-alfa/' }
 
     it 'shows a picture anyway (empty avatar)' do
       subject.css('img.person__image/@src').first.text
