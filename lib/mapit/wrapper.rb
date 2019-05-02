@@ -26,6 +26,10 @@ module Mapit
       name_to_place[name]
     end
 
+    def area_from_mapit_id(id)
+      id_to_place[id]
+    end
+
     def places_of_type(area_type)
       type_to_places[area_type]
     end

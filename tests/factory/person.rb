@@ -47,7 +47,8 @@ describe 'Factory::Person' do
   end
 
   describe 'MembershipCSV' do
-    let(:person) { factory.build_csv_person(csv_person) }
+    let(:legislature) { Legislature.new('Governors') }
+    let(:person) { factory.build_csv_person(csv_person, legislature) }
 
     it 'creates a CSV Person' do
       person.class.must_equal(MembershipCSV::Person)

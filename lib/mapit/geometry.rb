@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'coordinate'
+require 'net/http'
 
 module Mapit
   class Geometry

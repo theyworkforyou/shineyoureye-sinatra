@@ -59,17 +59,21 @@ mapit = Mapit::Wrapper.new(
 
 person_factory = Factory::Person.new(mapit: mapit, baseurl: '/person/', identifier_scheme: 'shineyoureye')
 
+Legislature = Struct.new(:slug, :name, :latest_term_start_date)
 # Assemble data on the members of the various legislatures we support:
 governors = MembershipCSV::People.new(
   csv_filename: 'morph/nigeria-state-governors.csv',
+  legislature: Legislature.new('Governors'),
   person_factory: person_factory
 )
-representatives = EP::PeopleByLegislature.new(
-  legislature: settings.index.country('Nigeria').legislature('Representatives'),
+representatives = MembershipCSV::People.new(
+  csv_filename: 'data/representatives.csv',
+  legislature: Legislature.new('Representatives', 'House of Representatives', Date.parse('2015-06-09')),
   person_factory: person_factory
 )
-senators = EP::PeopleByLegislature.new(
-  legislature: settings.index.country('Nigeria').legislature('Senate'),
+senators = MembershipCSV::People.new(
+  csv_filename: 'data/senate.csv',
+  legislature: Legislature.new('Senate', 'Senate', Date.parse('2015-06-09')),
   person_factory: person_factory
 )
 
