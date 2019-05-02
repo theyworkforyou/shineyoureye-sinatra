@@ -77,6 +77,7 @@ class EveryPoliticianToCSV
         phone: person.phone,
         twitter: person.twitter,
         facebook_url: person.facebook,
+        wikipedia_url: person.link('Wikipedia (en)'),
         birth_date: person.birth_date,
         gender: person.gender,
         identifier__shineyoureye: person.identifier('shineyoureye'),
