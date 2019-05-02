@@ -6,8 +6,9 @@ require_relative '../person_slug'
 
 module MembershipCSV
   class Person
-    def initialize(person:, mapit:, baseurl:, identifier_scheme:)
+    def initialize(person:, legislature_slug:, mapit:, baseurl:, identifier_scheme:)
       @person = person
+      @legislature_slug = legislature_slug
       @mapit = mapit
       @baseurl = baseurl
       @identifier_scheme = identifier_scheme
@@ -50,11 +51,15 @@ module MembershipCSV
     end
 
     def wikipedia_url
-      nil
+      person['wikipedia_url']
     end
 
     def area
-      mapit.area_from_mapit_name(person['state'])
+      if person['mapit_id']
+        mapit.area_from_mapit_id(person['mapit_id'])
+      elsif person['state']
+        mapit.area_from_mapit_name(person['state'])
+      end
     end
 
     def party_id
@@ -75,15 +80,14 @@ module MembershipCSV
 
     private
 
-    attr_reader :person, :mapit, :baseurl, :identifier_scheme
+    attr_reader :person, :legislature_slug, :mapit, :baseurl, :identifier_scheme
 
     def first(values)
       values.split(';').first
     end
 
     def proxy_image_base_url
-      'https://raw.githubusercontent.com/theyworkforyou/shineyoureye-images' \
-      "/gh-pages/Governors/#{id}/"
+      "https://theyworkforyou.github.io/shineyoureye-images/#{legislature_slug}/#{id}/"
     end
   end
 end

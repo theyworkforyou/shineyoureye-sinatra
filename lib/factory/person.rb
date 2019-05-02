@@ -21,9 +21,10 @@ module Factory
       )
     end
 
-    def build_csv_person(person)
+    def build_csv_person(person, legislature_slug)
       MembershipCSV::Person.new(
         person: person,
+        legislature_slug: legislature_slug,
         mapit: mapit,
         baseurl: baseurl,
         identifier_scheme: identifier_scheme
