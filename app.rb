@@ -66,12 +66,14 @@ governors = MembershipCSV::People.new(
   legislature: Legislature.new('Governors'),
   person_factory: person_factory
 )
-representatives = EP::PeopleByLegislature.new(
-  legislature: settings.index.country('Nigeria').legislature('Representatives'),
+representatives = MembershipCSV::People.new(
+  csv_filename: 'data/representatives.csv',
+  legislature: Legislature.new('Representatives', 'House of Representatives', Date.parse('2015-06-09')),
   person_factory: person_factory
 )
-senators = EP::PeopleByLegislature.new(
-  legislature: settings.index.country('Nigeria').legislature('Senate'),
+senators = MembershipCSV::People.new(
+  csv_filename: 'data/senate.csv',
+  legislature: Legislature.new('Senate', 'Senate', Date.parse('2015-06-09')),
   person_factory: person_factory
 )
 
