@@ -207,6 +207,7 @@ describe 'MembershipCSV::Person' do
   def morph_person(person_info)
     MembershipCSV::Person.new(
       person: person_info,
+      legislature: Legislature.new('Governors'),
       mapit: FakeMapit.new(1),
       baseurl: '/baseurl/',
       identifier_scheme: 'shineyoureye'

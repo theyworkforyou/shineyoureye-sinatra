@@ -16,6 +16,7 @@ id3,name3,name-3,'
   let(:people) do
     MembershipCSV::People.new(
       csv_filename: new_tempfile(contents),
+      legislature: Legislature.new('Governors'),
       person_factory: FakePersonFactory.new(FakeMapit.new(1))
     )
   end
@@ -45,6 +46,7 @@ id3,name3,name-3,'
 id1,name1,,1234'
     people = MembershipCSV::People.new(
       csv_filename: new_tempfile(contents),
+      legislature: Legislature.new('Governors'),
       person_factory: FakePersonFactory.new(FakeMapit.new(1))
     )
     error = assert_raises(RuntimeError) { people.find_single('trigger') }
@@ -57,6 +59,7 @@ id1,name1,name-1,1234
 id2,name2,name-1,5678'
     people = MembershipCSV::People.new(
       csv_filename: new_tempfile(contents),
+      legislature: Legislature.new('Governors'),
       person_factory: FakePersonFactory.new(FakeMapit.new(1))
     )
     error = assert_raises(RuntimeError) { people.find_single('name-1') }
