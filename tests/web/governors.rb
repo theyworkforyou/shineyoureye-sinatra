@@ -55,7 +55,11 @@ describe 'List of Governors' do
     end
 
     describe 'when person does not have an image' do
-      let(:person) { subject.xpath('//li[@class="contact-list__item"][.//h3[text()="Godwin Obaseki"]]') }
+      let(:person) { subject.xpath('//li[@class="contact-list__item"][.//h3[text()="ADAMU KAMALE"]]') }
+
+      before do
+        get '/position/representative/'
+      end
 
       it 'shows a picture anyway (empty avatar)' do
         person.css('.contact-list__item__photo/@src').first.text
