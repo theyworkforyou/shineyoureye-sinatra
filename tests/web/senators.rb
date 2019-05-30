@@ -12,7 +12,7 @@ describe 'Senate' do
 
   describe 'person list' do
     it 'lists all senators' do
-      subject.css('.contact-list__item').count.must_equal(109)
+      subject.css('.contact-list__item').count.must_equal(107)
     end
 
     it 'groups senators by state' do
@@ -60,12 +60,12 @@ describe 'Senate' do
 
       it 'has the name as alternative text' do
         person.css('.contact-list__item__photo/@alt').first.text
-              .must_equal('ABARIBE ENYNNAYA')
+              .must_equal('ABARIBE ENYINNAYA HARCOURT')
       end
     end
 
     describe 'when person does not have an image' do
-      let(:person) { subject.xpath('//li[@class="contact-list__item"][.//h3[text()="Isaac Alfa"]]') }
+      let(:person) { subject.xpath('//li[@class="contact-list__item"][.//h3[text()="BINOS YERO"]]') }
 
       it 'shows a picture anyway (empty avatar)' do
         person.css('.contact-list__item__photo/@src').first.text
@@ -74,7 +74,7 @@ describe 'Senate' do
     end
 
     it 'displays the representative name' do
-      person.css('.contact-list__item__name').text.must_equal('ABARIBE ENYNNAYA')
+      person.css('.contact-list__item__name').text.must_equal('ABARIBE ENYINNAYA HARCOURT')
     end
 
     it 'links to area page' do

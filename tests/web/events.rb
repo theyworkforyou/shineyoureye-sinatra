@@ -19,11 +19,11 @@ describe 'Events Page' do
     let(:single_event) { subject.css('.blog-in-a-list').last }
 
     it 'links to event url' do
-      single_event.css('h2 a/@href').text.must_equal('/events/local-government-elections')
+      single_event.css('h2 a/@href').text.must_equal('/events/party-politics-101-the-good-bad-ugly')
     end
 
     it 'displays event title' do
-      single_event.css('h2').text.must_equal('Local Government Elections')
+      single_event.css('h2').text.must_equal('Party Politics 101: The Good, Bad & Ugly')
     end
 
     it 'displays event publication date' do

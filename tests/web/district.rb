@@ -73,12 +73,12 @@ describe 'Senatorial District Place Page' do
 
     it 'has an image whose alternative text is the person name' do
       person.css('.contact-list__item__photo/@alt').text
-            .must_equal('THEODORE ORJI')
+            .must_equal('THEODORE AHAMEFULE ORJI')
     end
 
     it 'displays the person name' do
       person.css('.contact-list__item__name').first.text
-            .must_equal('THEODORE ORJI')
+            .must_equal('THEODORE AHAMEFULE ORJI')
     end
 
     it 'links to the person area' do

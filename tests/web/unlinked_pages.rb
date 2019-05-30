@@ -35,7 +35,8 @@ describe 'The Scraper Start Page' do
   end
 
   it 'lists all available people' do
-    ep = 479
+    # senators list is 107, instead of 109
+    ep = 479 - 2
     governors = 36
     subject.xpath('//a[contains(@href, "/contact_details/")]').count.must_equal(ep + governors)
     subject.xpath('//a[contains(@href, "/experience/")]').count.must_equal(ep + governors)

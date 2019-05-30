@@ -68,12 +68,12 @@ governors = MembershipCSV::People.new(
 )
 representatives = MembershipCSV::People.new(
   csv_filename: 'data/representatives.csv',
-  legislature: Legislature.new('Representatives', 'House of Representatives', Date.parse('2015-06-09')),
+  legislature: Legislature.new('Representatives', 'House of Representatives', Date.parse('2019-05-30')),
   person_factory: person_factory
 )
 senators = MembershipCSV::People.new(
   csv_filename: 'data/senate.csv',
-  legislature: Legislature.new('Senate', 'Senate', Date.parse('2015-06-09')),
+  legislature: Legislature.new('Senate', 'Senate', Date.parse('2019-05-30')),
   person_factory: person_factory
 )
 
