@@ -16,18 +16,22 @@ describe 'Posts Page' do
   end
 
   describe 'when displaying a post' do
-    let(:single_post) { subject.css('.blog-in-a-list').first }
+    let(:single_post) { subject.css('.blog-in-a-list').last }
 
     it 'links to post url' do
-      single_post.css('h2 a/@href').text.must_equal('/blog/sye-week-in-review-may-24-2019')
+      single_post.css('h2 a/@href').text.must_equal('/blog/citizens-solutions-end-terrorism')
     end
 
     it 'displays post title' do
-      single_post.css('h2').text.must_equal('SYE Week in Review, May 24, 2019')
+      single_post.css('h2').text.must_equal('Citizens’ Solutions to End Terrorism')
     end
 
     it 'displays post date' do
-      single_post.css('.meta').text.must_equal('May 27, 2019')
+      single_post.css('.meta').text.must_equal('April 18, 2014')
+    end
+
+    it 'displays post excerpt' do
+      single_post.css('div').text.must_include('Nigerians woke up to news')
     end
   end
 end
