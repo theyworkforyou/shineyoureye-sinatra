@@ -11,14 +11,14 @@ describe 'The ID <-> slugs CSV file' do
   end
 
   it 'must have a slug for a Representative from EP data' do
-    assert(subject.include?(['007d807d-2f2d-4a2e-829f-1fd5109bb7de', 'tijjani-jobe-abdulkadir']))
+    assert(subject.include?(['b32bbfd7-7e44-45e3-b1e1-fb5cff750021', 'francis-uduyok']))
   end
 
   it 'must have a slug for a Senator from EP data' do
-    assert(subject.include?(['0577f346-e883-4e1d-94eb-e3050d5c15f1', 'fatimat-raji-rasaki']))
+    assert(subject.include?(['5744450e-41b7-4d7d-b81a-83f42f34437d', 'tinubu-oluremi']))
   end
 
   it 'must have a slug specified in extra-slugs.csv' do
-    assert(subject.include?(['0b536a2c-2bc9-46a0-8d40-0deb9241cb31', 'ahmad-abubakar']))
+    assert(subject.include?(['e5a6c86b-b503-4105-983b-d5c81ab41eaf', 'solomon-olamilekan-adeola']))
   end
 end

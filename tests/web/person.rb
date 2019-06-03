@@ -30,7 +30,7 @@ describe 'Person Page' do
   end
 
   describe 'when person does not have an image' do
-    before { get '/person/isaac-alfa/' }
+    before { get '/person/duoye-diri/' }
 
     it 'shows a picture anyway (empty avatar)' do
       subject.css('img.person__image/@src').first.text
@@ -74,15 +74,15 @@ describe 'Person Page' do
   end
 
   describe 'when person has a Twitter' do
-    before { get '/person/ben-murray-bruce/' }
+    before { get 'person/ibikunle-amosun/' }
 
     it 'links to it' do
       subject.css('.person__twitter a/@href').first.text
-             .must_equal('https://twitter.com/benmurraybruce')
+             .must_equal('https://twitter.com/GovSIA')
     end
 
     it 'displays it' do
-      subject.css('.person__twitter a').first.text.must_equal('@benmurraybruce')
+      subject.css('.person__twitter a').first.text.must_equal('@GovSIA')
     end
   end
 
@@ -109,16 +109,16 @@ describe 'Person Page' do
   end
 
   describe 'when person has wikipedia url' do
-    before { get '/person/fatimat-raji-rasaki/' }
+    before { get '/person/abaribe-enynnaya/' }
 
     it 'links to it' do
       subject.css('.person__wikipedia a/@href').first.text
-             .must_equal('https://en.wikipedia.org/wiki/Fatimat_Olufunke_Raji-Rasaki')
+             .must_equal('https://en.wikipedia.org/wiki/Enyinnaya_Abaribe')
     end
 
     it 'displays it' do
       subject.css('.person__wikipedia a').first.text
-             .must_equal('https://en.wikipedia.org/wiki/Fatimat_Olufunke_Raji-Rasaki')
+             .must_equal('https://en.wikipedia.org/wiki/Enyinnaya_Abaribe')
     end
   end
 
@@ -152,7 +152,7 @@ describe 'Person Page' do
     before { get '/person/abaribe-enynnaya/' }
 
     it 'finds the senator by id' do
-      subject.css('title').text.must_include('ABARIBE ENYNNAYA')
+      subject.css('title').text.must_include('ABARIBE ENYINNAYA HARCOURT')
     end
 
     it 'displays the right position' do

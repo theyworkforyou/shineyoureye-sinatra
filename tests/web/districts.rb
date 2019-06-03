@@ -44,6 +44,6 @@ describe 'Senatorial Districts Page' do
   end
 
   it 'shows the current term start year' do
-    subject.css('.kind p').last.text.must_include('2015')
+    subject.css('.kind p').last.text.must_include('2019')
   end
 end
