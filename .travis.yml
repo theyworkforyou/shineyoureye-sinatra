@@ -2,7 +2,7 @@ language: ruby
 cache: bundler
 script:
   - bin/prepare-data 0a53f20e46b784fac3093a7dfae907c1a98ca0d9
-  - bundle exec rake
+  - bundle exec rake && travis_wait bin/deploy staging
 sudo: false
 rvm:
   - 2.5.3
