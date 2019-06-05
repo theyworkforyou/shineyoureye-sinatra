@@ -2,9 +2,9 @@
 
 require 'bootstrap-sass'
 require 'everypolitician'
+require 'html_truncator'
 require 'sinatra'
 require 'sinatra/content_for'
-require "html_truncator"
 
 require_relative 'lib/checks'
 require_relative 'lib/featured_person'
