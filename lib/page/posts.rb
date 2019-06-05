@@ -25,4 +25,4 @@ module Page
 
     attr_reader :posts
   end
-end 
+end
