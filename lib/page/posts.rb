@@ -17,8 +17,12 @@ module Page
       date.strftime('%B %-d, %Y')
     end
 
+    def post_excerpt(body)
+      HTML_Truncator.truncate(body, 80)
+    end
+
     private
 
     attr_reader :posts
   end
-end
+end 

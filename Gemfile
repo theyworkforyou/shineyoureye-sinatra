@@ -17,6 +17,7 @@ gem 'rdiscount'
 gem 'sass'
 gem 'sinatra'
 gem 'sinatra-contrib', require: 'sinatra/content_for'
+gem "html_truncator", "~>0.2"
 
 group :test do
   gem 'minitest'

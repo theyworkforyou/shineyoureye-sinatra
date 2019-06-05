@@ -39,6 +39,8 @@ GEM
     execjs (2.7.0)
     ffi (1.9.25)
     hashdiff (0.3.8)
+    html_truncator (0.4.2)
+      nokogiri (~> 1.5)
     i18n (1.1.0)
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.2)
@@ -124,6 +126,7 @@ DEPENDENCIES
   bootstrap-sass
   coveralls
   everypolitician (~> 0.20.0)!
+  html_truncator (~> 0.2)
   minitest
   nokogiri (>= 1.6.7)
   pry
@@ -140,4 +143,4 @@ RUBY VERSION
    ruby 2.5.3p105
 
 BUNDLED WITH
-   1.17.1
+   1.17.3
