@@ -8,7 +8,7 @@ describe 'Place' do
     let(:place) do
       Mapit::Place.new(
         mapit_area_data: area_with_parent,
-        pombola_slug: 'gwagwaladakuje',
+        pombola_slug: 'kuje-abaji-gwagwalada-kwali',
         baseurl: '/baseurl/',
         parent: Mapit::Place.new(
           mapit_area_data: area_with_no_parent,
@@ -19,11 +19,11 @@ describe 'Place' do
     end
 
     it 'knows its id' do
-      place.id.must_equal(949)
+      place.id.must_equal(918)
     end
 
     it 'knows its name' do
-      place.name.must_equal('Abaji/Gwagwalada/Kwali/Kuje')
+      place.name.must_equal('BATAGARAWA/RIMI/CHARANCHI')
     end
 
     it 'knows its parent name' do
@@ -31,7 +31,7 @@ describe 'Place' do
     end
 
     it 'builds the place url with the baseurl' do
-      place.url.must_equal('/baseurl/gwagwaladakuje/')
+      place.url.must_equal('/baseurl/kuje-abaji-gwagwalada-kwali/')
     end
 
     it 'builds the parent url with the baseurl' do
@@ -66,7 +66,7 @@ describe 'Place' do
     let(:place) do
       Mapit::Place.new(
         mapit_area_data: area_with_no_parent,
-        pombola_slug: 'gwagwaladakuje',
+        pombola_slug: 'kuje-abaji-gwagwalada-kwali',
         baseurl: '/baseurl/'
       )
     end
@@ -83,7 +83,7 @@ describe 'Place' do
     let(:place) do
       Mapit::Place.new(
         mapit_area_data: area_with_no_parent,
-        pombola_slug: 'gwagwaladakuje',
+        pombola_slug: 'kuje-abaji-gwagwalada-kwali',
         baseurl: '/baseurl/'
       )
     end

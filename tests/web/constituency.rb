@@ -6,7 +6,7 @@ describe 'Federal Constituency Place Page' do
   before do
     get_from_disk(geojson_json_url(1091), geojson_json)
     get_from_disk(geometry_json_url(1091), geometry_json)
-    get '/place/abakalikiizzi/'
+    get '/place/abakaliki-izzi/'
   end
 
   subject { Nokogiri::HTML(last_response.body) }
@@ -23,13 +23,13 @@ describe 'Federal Constituency Place Page' do
     end
 
     it 'links to facebook share' do
-      subject.css('.btn-facebook/@href').text.must_include('/place/abakalikiizzi/&t=Abakaliki/Izzi')
+      subject.css('.btn-facebook/@href').text.must_include('/place/abakaliki-izzi/&t=Abakaliki/Izzi')
     end
 
     it 'links to twitter share' do
       subject.css('.btn-twitter/@href').text.must_include('NGShineYourEye')
       subject.css('.btn-twitter/@href').text.must_include('&text=Abakaliki/Izzi')
-      subject.css('.btn-twitter/@href').text.must_include('/place/abakalikiizzi/')
+      subject.css('.btn-twitter/@href').text.must_include('/place/abakaliki-izzi/')
     end
   end
 
@@ -83,7 +83,7 @@ describe 'Federal Constituency Place Page' do
 
     it 'links to the person area' do
       person.css('.test-area @href').text
-            .must_equal('/place/abakalikiizzi/')
+            .must_equal('/place/abakaliki-izzi/')
     end
 
     it 'displays the person area name' do

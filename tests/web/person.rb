@@ -3,11 +3,11 @@
 require 'test_helper'
 
 describe 'Person Page' do
-  before { get '/person/abdukadir-rahis/' }
+  before { get '/person/mayowa-akinfolarin/' }
   subject { Nokogiri::HTML(last_response.body) }
 
   it 'displays a title' do
-    subject.css('title').text.must_include('ABDUKADIR RAHIS')
+    subject.css('title').text.must_include('AKINFOLARIN MAYOWA')
   end
 
   it 'displays the position' do
@@ -15,22 +15,22 @@ describe 'Person Page' do
   end
 
   it 'displays the person name' do
-    subject.css('h1.person__name').text.must_equal('ABDUKADIR RAHIS')
+    subject.css('h1.person__name').text.must_equal('AKINFOLARIN MAYOWA')
   end
 
   describe 'when person has an image' do
     it 'points to the right path' do
       subject.css('img.person__image/@src').first.text
-             .must_equal('https://theyworkforyou.github.io/shineyoureye-images/Representatives/b2a7f72a-9ecf-4263-83f1-cb0f8783053c/250x250.jpeg')
+             .must_equal('https://theyworkforyou.github.io/shineyoureye-images/Representatives/8e65e183-9e14-4029-b68b-4fa8a35d6179/250x250.jpeg')
     end
 
     it 'displays the name as alternative text' do
-      subject.css('img.person__image/@alt').first.text.must_equal('ABDUKADIR RAHIS')
+      subject.css('img.person__image/@alt').first.text.must_equal('AKINFOLARIN MAYOWA')
     end
   end
 
   describe 'when person does not have an image' do
-    before { get '/person/duoye-diri/' }
+    before { get '/person/hafiz-kawu/' }
 
     it 'shows a picture anyway (empty avatar)' do
       subject.css('img.person__image/@src').first.text
@@ -46,12 +46,12 @@ describe 'Person Page' do
 
     it 'links to the area page' do
       subject.css('.person__area a/@href').first.text
-             .must_equal('/place/maiduguri/')
+             .must_equal('/place/ileoluji-okeigbo-odigbo/')
     end
 
     it 'displays the area name' do
       subject.css('.person__area a').first.text
-             .must_equal('Maiduguri (Metropolitan)')
+             .must_equal('ILEOLUJI-OKEIGBO/ODIGBO')
     end
   end
 
@@ -60,16 +60,16 @@ describe 'Person Page' do
   end
 
   describe 'when person has a birth date' do
-    before { get '/person/tijjani-jobe-abdulkadir/' }
+    before { get '/person/nkiruka-onyejeocha/' }
 
     it 'displays it' do
-      subject.css('.person__birthdate').first.text.must_equal('1970-01-02')
+      subject.css('.person__birthdate').first.text.must_equal('1969-11-23')
     end
   end
 
   describe 'when person has a phone' do
     it 'displays it' do
-      subject.css('.person__phone').first.text.must_equal('08083999997')
+      subject.css('.person__phone').first.text.must_equal('08030559857')
     end
   end
 
@@ -123,24 +123,25 @@ describe 'Person Page' do
   end
 
   describe 'summary section' do
-    before { get '/person/sunday-steve-karim/' }
+    before { get '/person/olusegun-dokun-odebunmi/' }
 
     it 'edit link points to the right person id' do
       subject.css('.person-edit-link/@href').text
-             .must_include('/summaries/0baa5a03-b1e0-4e66-b3f9-daee8bacb87d.md')
+             .must_include('/summaries/b4c80409-374c-4429-8f08-a2a60bfa3c17.md')
     end
 
     it 'shows summary contents if person has summary' do
       subject.css('.person-summary li').last.text
-             .must_include('Student at LEA PRI.SCH. from 1969 to 1974')
+             .must_include('Committee Member at FCT Area Councils')
     end
   end
 
   describe 'when person has no summary' do
-    it 'edit link points to the right person id' do
-      subject.css('.person-edit-link/@href').text
-             .must_include('/summaries/b2a7f72a-9ecf-4263-83f1-cb0f8783053c.md')
-    end
+    # before {get '/person/abdul-aziz-yari-abubakar/'}
+    # it 'edit link points to the right person id' do
+    #   subject.css('.person-edit-link/@href').text
+    #          .must_include('/summaries/b2a7f72a-9ecf-4263-83f1-cb0f8783053c.md')
+    # end
 
     it 'shows nothing in the summary' do
       get '/person/abdul-aziz-yari-abubakar/'
@@ -183,14 +184,14 @@ describe 'Person Page' do
   describe 'social block' do
     it 'links to facebook share' do
       subject.css('.btn-facebook/@href').text.must_include(
-        '/person/abdukadir-rahis/&t=ABDUKADIR RAHIS'
+        '/person/mayowa-akinfolarin/&t=AKINFOLARIN MAYOWA'
       )
     end
 
     it 'links to twitter share' do
       subject.css('.btn-twitter/@href').text.must_include('NGShineYourEye')
-      subject.css('.btn-twitter/@href').text.must_include('&text=ABDUKADIR RAHIS')
-      subject.css('.btn-twitter/@href').text.must_include('/person/abdukadir-rahis/')
+      subject.css('.btn-twitter/@href').text.must_include('&text=AKINFOLARIN MAYOWA')
+      subject.css('.btn-twitter/@href').text.must_include('/person/mayowa-akinfolarin/')
     end
   end
 

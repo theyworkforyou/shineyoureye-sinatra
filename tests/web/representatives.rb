@@ -12,7 +12,7 @@ describe 'List of Representatives' do
 
   describe 'person list' do
     it 'lists all representatives' do
-      subject.css('.contact-list__item').count.must_equal(369)
+      subject.css('.contact-list__item').count.must_equal(360)
     end
 
     it 'groups representatives by state' do
@@ -31,7 +31,7 @@ describe 'List of Representatives' do
     it 'displays representatives alphabetically inside each state' do
       state.css('.contact-list__item').count.must_equal(8)
       state.css('.contact-list__item').first.attr('id')
-           .must_equal('darlington-nwokocha')
+           .must_equal('benjamin-kalu')
       state.css('.contact-list__item').last.attr('id')
            .must_equal('uko-nkole')
     end
@@ -65,7 +65,7 @@ describe 'List of Representatives' do
     end
 
     describe 'when person does not have an image' do
-      let(:person) { subject.xpath('//li[@class="contact-list__item"][.//h3[text()="ADAMU KAMALE"]]') }
+      let(:person) { subject.xpath('//li[@class="contact-list__item"][.//h3[text()="BENJAMIN KALU"]]') }
 
       it 'shows a picture anyway (empty avatar)' do
         person.css('.contact-list__item__photo/@src').first.text
@@ -78,7 +78,7 @@ describe 'List of Representatives' do
     end
 
     it 'links to area page' do
-      person.css('.test-area/@href').text.must_equal('/place/maiduguri/')
+      person.css('.test-area/@href').text.must_equal('/place/maiduguri-metropolitan/')
     end
 
     it 'displays area name' do
