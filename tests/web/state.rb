@@ -72,12 +72,12 @@ describe 'State Place Page' do
 
     it 'has an image whose alternative text is the person name' do
       person.css('.contact-list__item__photo/@alt').text
-            .must_equal('Victor Okezie Ikpeazu')
+            .must_equal('Okezie Ikpeazu')
     end
 
     it 'displays the person name' do
       person.css('.contact-list__item__name').first.text
-            .must_equal('Victor Okezie Ikpeazu')
+            .must_equal('Okezie Ikpeazu')
     end
 
     it 'links to the person area' do
@@ -92,7 +92,7 @@ describe 'State Place Page' do
 
     it 'displays the person party name' do
       person.css('.test-party').text
-            .must_equal('PDP')
+            .must_equal('Peoples Democratic Party')
     end
   end
 end

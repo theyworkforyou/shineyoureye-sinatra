@@ -16477,7 +16477,7 @@
       ]
     },
     {
-      "area_id": "lafia/obi,_nassarawa_state",
+      "area_id": "lafia/obi,_nasarawa_state",
       "legislative_period_id": "term/8",
       "on_behalf_of_id": "APC",
       "organization_id": "7cbd22c6-4df6-42f8-b7c0-44b715b88153",
@@ -17803,7 +17803,7 @@
       ]
     },
     {
-      "area_id": "nasarawa/toto,_nassarawa_state",
+      "area_id": "nasarawa/toto,_nasarawa_state",
       "legislative_period_id": "term/8",
       "on_behalf_of_id": "APC",
       "organization_id": "7cbd22c6-4df6-42f8-b7c0-44b715b88153",
@@ -18674,7 +18674,7 @@
       ]
     },
     {
-      "area_id": "awe/doma/keana,_nassarawa_state",
+      "area_id": "awe/doma/keana,_nasarawa_state",
       "legislative_period_id": "term/8",
       "on_behalf_of_id": "PDP",
       "organization_id": "7cbd22c6-4df6-42f8-b7c0-44b715b88153",
@@ -19246,7 +19246,7 @@
       ]
     },
     {
-      "area_id": "akwanga/nasarawa_eggon/wamba,_nassarawa_state",
+      "area_id": "akwanga/nasarawa_eggon/wamba,_nasarawa_state",
       "legislative_period_id": "term/8",
       "on_behalf_of_id": "PDP",
       "organization_id": "7cbd22c6-4df6-42f8-b7c0-44b715b88153",
@@ -19272,7 +19272,7 @@
       ]
     },
     {
-      "area_id": "karu/keffi/kokona,_nassarawa_state",
+      "area_id": "karu/keffi/kokona,_nasarawa_state",
       "legislative_period_id": "term/8",
       "on_behalf_of_id": "PDP",
       "organization_id": "7cbd22c6-4df6-42f8-b7c0-44b715b88153",
@@ -20232,8 +20232,8 @@
       "type": "constituency"
     },
     {
-      "id": "akwanga/nasarawa_eggon/wamba,_nassarawa_state",
-      "name": "Akwanga/Nasarawa Eggon/Wamba, Nassarawa State",
+      "id": "akwanga/nasarawa_eggon/wamba,_nasarawa_state",
+      "name": "Akwanga/Nasarawa Eggon/Wamba, Nasarawa State",
       "type": "constituency"
     },
     {
@@ -20342,8 +20342,8 @@
       "type": "constituency"
     },
     {
-      "id": "awe/doma/keana,_nassarawa_state",
-      "name": "Awe/Doma/Keana, Nassarawa State",
+      "id": "awe/doma/keana,_nasarawa_state",
+      "name": "Awe/Doma/Keana, Nasarawa State",
       "type": "constituency"
     },
     {
@@ -21192,8 +21192,8 @@
       "type": "constituency"
     },
     {
-      "id": "karu/keffi/kokona,_nassarawa_state",
-      "name": "KARU/KEFFI/KOKONA, Nassarawa State",
+      "id": "karu/keffi/kokona,_nasarawa_state",
+      "name": "KARU/KEFFI/KOKONA, Nasarawa State",
       "type": "constituency"
     },
     {
@@ -21277,8 +21277,8 @@
       "type": "constituency"
     },
     {
-      "id": "lafia/obi,_nassarawa_state",
-      "name": "Lafia/Obi, Nassarawa State",
+      "id": "lafia/obi,_nasarawa_state",
+      "name": "Lafia/Obi, Nasarawa State",
       "type": "constituency"
     },
     {
@@ -21432,8 +21432,8 @@
       "type": "constituency"
     },
     {
-      "id": "nasarawa/toto,_nassarawa_state",
-      "name": "Nasarawa/Toto, Nassarawa State",
+      "id": "nasarawa/toto,_nasarawa_state",
+      "name": "Nasarawa/Toto, Nasarawa State",
       "type": "constituency"
     },
     {

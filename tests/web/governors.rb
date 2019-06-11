@@ -12,11 +12,11 @@ describe 'List of Governors' do
 
   describe 'person list' do
     it 'lists all governors' do
-      subject.css('.contact-list__item').count.must_equal(35)
+      subject.css('.contact-list__item').count.must_equal(36)
     end
 
     it 'groups governors by state' do
-      subject.css('.contact-list').count.must_equal(35)
+      subject.css('.contact-list').count.must_equal(36)
     end
 
     it 'displays states alphabetically, from A to Z' do
@@ -28,34 +28,34 @@ describe 'List of Governors' do
   end
 
   describe 'person item' do
-    let(:person) { subject.css('#abdul-aziz-yari-abubakar').first }
+    let(:person) { subject.css('#bello-mattawalle').first }
 
     it 'links to the person page' do
       person.css('.contact-list__item__photo').first.parent.attr('href')
-            .must_equal('/person/abdul-aziz-yari-abubakar/')
+            .must_equal('/person/bello-mattawalle/')
       person.css('.contact-list__item__name').first.parent.attr('href')
-            .must_equal('/person/abdul-aziz-yari-abubakar/')
+            .must_equal('/person/bello-mattawalle/')
     end
 
     describe 'when person has an image' do
       it 'points to the right path' do
         person.css('.contact-list__item__photo/@src').first.text
-              .must_include('/gov:abdulaziz-abubakar-yari/100x100.jpeg')
+              .must_include('/gov-bello-mattawalle/100x100.jpeg')
       end
 
       it 'has an srcset' do
         person.css('.contact-list__item__photo/@srcset').first.text
-              .must_include('/gov:abdulaziz-abubakar-yari/100x100.jpeg')
+              .must_include('/gov-bello-mattawalle/100x100.jpeg')
       end
 
       it 'has the name as alternative text' do
         person.css('.contact-list__item__photo/@alt').first.text
-              .must_equal('Abdulaziz Abubakar Yari')
+              .must_equal('Bello Mattawalle')
       end
     end
 
     describe 'when person does not have an image' do
-      let(:person) { subject.xpath('//li[@class="contact-list__item"][.//h3[text()="BENJAMIN KALU"]]') }
+      let(:person) { subject.xpath('//li[@class="contact-list__item"][.//h3[text()="Nnaji John"]]') }
 
       before do
         get '/position/representative/'
@@ -68,7 +68,7 @@ describe 'List of Governors' do
     end
 
     it 'displays the representative name' do
-      person.css('.contact-list__item__name').text.must_equal('Abdulaziz Abubakar Yari')
+      person.css('.contact-list__item__name').text.must_equal('Bello Mattawalle')
     end
 
     it 'links to area page' do
@@ -80,7 +80,7 @@ describe 'List of Governors' do
     end
 
     it 'displays party name' do
-      person.css('.test-party').text.must_equal('APC')
+      person.css('.test-party').text.must_equal('Peoples Democratic Party')
     end
   end
 end

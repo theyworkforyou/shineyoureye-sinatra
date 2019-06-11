@@ -6062,7 +6062,7 @@
       ]
     },
     {
-      "area_id": "nasarawa_south,_nassarawa_state",
+      "area_id": "nasarawa_south,_nasarawa_state",
       "legislative_period_id": "term/8",
       "on_behalf_of_id": "APC",
       "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
@@ -6582,7 +6582,7 @@
       ]
     },
     {
-      "area_id": "nasarawa_north,_nassarawa_state",
+      "area_id": "nasarawa_north,_nasarawa_state",
       "legislative_period_id": "term/8",
       "on_behalf_of_id": "PDP",
       "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
@@ -6647,7 +6647,7 @@
       ]
     },
     {
-      "area_id": "nasarawa_south,_nassarawa_state",
+      "area_id": "nasarawa_south,_nasarawa_state",
       "legislative_period_id": "term/8",
       "on_behalf_of_id": "PDP",
       "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
@@ -6673,7 +6673,7 @@
       ]
     },
     {
-      "area_id": "nasarawa_west,_nassarawa_state",
+      "area_id": "nasarawa_west,_nasarawa_state",
       "legislative_period_id": "term/8",
       "on_behalf_of_id": "APC",
       "organization_id": "10da9af5-426a-4857-9ae5-54c594e5f877",
@@ -7781,18 +7781,18 @@
       "type": "constituency"
     },
     {
-      "id": "nasarawa_north,_nassarawa_state",
-      "name": "Nasarawa North, Nassarawa State",
+      "id": "nasarawa_north,_nasarawa_state",
+      "name": "Nasarawa North, Nasarawa State",
       "type": "constituency"
     },
     {
-      "id": "nasarawa_south,_nassarawa_state",
-      "name": "Nasarawa South, Nassarawa State",
+      "id": "nasarawa_south,_nasarawa_state",
+      "name": "Nasarawa South, Nasarawa State",
       "type": "constituency"
     },
     {
-      "id": "nasarawa_west,_nassarawa_state",
-      "name": "Nasarawa West, Nassarawa State",
+      "id": "nasarawa_west,_nasarawa_state",
+      "name": "Nasarawa West, Nasarawa State",
       "type": "constituency"
     },
     {

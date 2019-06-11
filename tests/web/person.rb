@@ -7,7 +7,7 @@ describe 'Person Page' do
   subject { Nokogiri::HTML(last_response.body) }
 
   it 'displays a title' do
-    subject.css('title').text.must_include('AKINFOLARIN MAYOWA')
+    subject.css('title').text.must_include('Akinfolarin Mayowa')
   end
 
   it 'displays the position' do
@@ -15,7 +15,7 @@ describe 'Person Page' do
   end
 
   it 'displays the person name' do
-    subject.css('h1.person__name').text.must_equal('AKINFOLARIN MAYOWA')
+    subject.css('h1.person__name').text.must_equal('Akinfolarin Mayowa')
   end
 
   describe 'when person has an image' do
@@ -25,7 +25,7 @@ describe 'Person Page' do
     end
 
     it 'displays the name as alternative text' do
-      subject.css('img.person__image/@alt').first.text.must_equal('AKINFOLARIN MAYOWA')
+      subject.css('img.person__image/@alt').first.text.must_equal('Akinfolarin Mayowa')
     end
   end
 
@@ -51,7 +51,7 @@ describe 'Person Page' do
 
     it 'displays the area name' do
       subject.css('.person__area a').first.text
-             .must_equal('ILEOLUJI-OKEIGBO/ODIGBO')
+             .must_equal('Ileoluji Okeigbo/Odigbo')
     end
   end
 
@@ -153,7 +153,7 @@ describe 'Person Page' do
     before { get '/person/abaribe-enynnaya/' }
 
     it 'finds the senator by id' do
-      subject.css('title').text.must_include('ABARIBE ENYINNAYA HARCOURT')
+      subject.css('title').text.must_include('Abaribe Enyinnaya Harcourt')
     end
 
     it 'displays the right position' do
@@ -165,7 +165,7 @@ describe 'Person Page' do
     before { get '/person/okezie-ikpeazu/' }
 
     it 'finds the governor by slug' do
-      subject.css('title').text.must_include('Victor Okezie Ikpeazu')
+      subject.css('title').text.must_include('Okezie Ikpeazu')
     end
 
     it 'displays the right position' do
@@ -184,13 +184,13 @@ describe 'Person Page' do
   describe 'social block' do
     it 'links to facebook share' do
       subject.css('.btn-facebook/@href').text.must_include(
-        '/person/mayowa-akinfolarin/&t=AKINFOLARIN MAYOWA'
+        '/person/mayowa-akinfolarin/&t=Akinfolarin Mayowa'
       )
     end
 
     it 'links to twitter share' do
       subject.css('.btn-twitter/@href').text.must_include('NGShineYourEye')
-      subject.css('.btn-twitter/@href').text.must_include('&text=AKINFOLARIN MAYOWA')
+      subject.css('.btn-twitter/@href').text.must_include('&text=Akinfolarin Mayowa')
       subject.css('.btn-twitter/@href').text.must_include('/person/mayowa-akinfolarin/')
     end
   end
