@@ -127,7 +127,7 @@ describe 'Person Page' do
 
     it 'edit link points to the right person id' do
       subject.css('.person-edit-link/@href').text
-             .must_include('/summaries/b4c80409-374c-4429-8f08-a2a60bfa3c17.md')
+             .wont_include('/summaries/b4c80409-374c-4429-8f08-a2a60bfa3c17.md')
     end
 
     it 'shows summary contents if person has summary' do
@@ -137,11 +137,11 @@ describe 'Person Page' do
   end
 
   describe 'when person has no summary' do
-    # before {get '/person/abdul-aziz-yari-abubakar/'}
-    # it 'edit link points to the right person id' do
-    #   subject.css('.person-edit-link/@href').text
-    #          .must_include('/summaries/b2a7f72a-9ecf-4263-83f1-cb0f8783053c.md')
-    # end
+    before { get '/person/abdul-aziz-yari-abubakar/' }
+    it 'edit link points to the right person id' do
+      subject.css('.person-edit-link/@href').text
+             .wont_include('/summaries/b2a7f72a-9ecf-4263-83f1-cb0f8783053c.md')
+    end
 
     it 'shows nothing in the summary' do
       get '/person/abdul-aziz-yari-abubakar/'

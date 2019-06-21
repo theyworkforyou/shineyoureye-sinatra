@@ -27,13 +27,13 @@ describe 'Mappit::Wrapper' do
       mapit.places_of_type('STA').last.name.must_equal('Zamfara')
     end
 
-    # it 'has states that use the baseurl in their url' do
-    #   mapit.places_of_type('STA').first.url.must_equal('/baseurl/abia/')
-    # end
+    it 'has states that use the baseurl in their url' do
+      mapit.places_of_type('STA').first.url.wont_equal('/baseurl/abia/')
+    end
 
-    # it 'does not have parent data for the states' do
-    #   assert_nil(mapit.places_of_type('STA').first.parent)
-    # end
+    it 'does not have parent data for the states' do
+      assert_nil(mapit.places_of_type('STA').first.parent)
+    end
   end
 
   describe 'when getting the federal constituencies' do
@@ -42,7 +42,7 @@ describe 'Mappit::Wrapper' do
     end
 
     it 'has federal constituencies with a name' do
-      mapit.places_of_type('FED').last.name.must_equal('LAGOS MAINLAND')
+      mapit.places_of_type('FED').last.name.must_equal('Lagos Mainland')
     end
 
     # it 'has federal constituencies that use the baseurl' do
@@ -64,7 +64,7 @@ describe 'Mappit::Wrapper' do
     end
 
     it 'has senatorial districts with a name' do
-      mapit.places_of_type('SEN').first.name.must_equal('ABIA CENTRAL')
+      mapit.places_of_type('SEN').first.name.must_equal('Abia Central')
     end
 
     # it 'has senatorial districts that use the baseurl' do
@@ -78,13 +78,13 @@ describe 'Mappit::Wrapper' do
 
   describe 'when getting a single area from an EP id' do
     it 'finds a federal constituency' do
-      ep_id = 'area/kuje/abaji/gwagwalada/kwali,_federal_capital_territory_state'
-      mapit.area_from_ep_id(ep_id).name.must_equal('KUJE/ABAJI/GWAGWALADA/KWALI')
+      ep_id = 'area/Kuje/Abaji/Gwagwalada/Kwali,_federal_capital_territory_state'
+      mapit.area_from_ep_id(ep_id).name.must_equal('Kuje/Abaji/Gwagwalada/Kwali')
     end
 
     it 'finds a senatorial district' do
       ep_id = 'area/abia-central,_abia_state'
-      mapit.area_from_ep_id(ep_id).name.must_equal('ABIA CENTRAL')
+      mapit.area_from_ep_id(ep_id).name.must_equal('Abia Central')
     end
   end
 
@@ -96,12 +96,12 @@ describe 'Mappit::Wrapper' do
 
     it 'finds a federal constituency' do
       pombola_slug = 'kuje-abaji-gwagwalada-kwali'
-      mapit.area_from_pombola_slug(pombola_slug).name.must_equal('KUJE/ABAJI/GWAGWALADA/KWALI')
+      mapit.area_from_pombola_slug(pombola_slug).name.must_equal('Kuje/Abaji/Gwagwalada/Kwali')
     end
 
     it 'finds a senatorial district' do
       pombola_slug = 'abia-central'
-      mapit.area_from_pombola_slug(pombola_slug).name.must_equal('ABIA CENTRAL')
+      mapit.area_from_pombola_slug(pombola_slug).name.must_equal('Abia Central')
     end
   end
 
@@ -115,7 +115,7 @@ describe 'Mappit::Wrapper' do
     end
 
     it 'finds a senatorial district' do
-      mapit.area_from_mapit_name('ABIA CENTRAL').id.must_equal(809)
+      mapit.area_from_mapit_name('Abia Central').id.must_equal(809)
     end
 
     it 'returns nil if no area was found' do
@@ -139,7 +139,7 @@ describe 'Mappit::Wrapper' do
 
     def ep_to_mapit_ids
       {
-        'area/kuje/abaji/gwagwalada/kwali,_federal_capital_territory_state' => '949',
+        'area/Kuje/Abaji/Gwagwalada/Kwali,_federal_capital_territory_state' => '949',
         'area/abia-central,_abia_state' => '809'
       }
     end
