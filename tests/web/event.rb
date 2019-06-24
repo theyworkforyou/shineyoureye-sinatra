@@ -3,15 +3,15 @@
 require 'test_helper'
 
 describe 'Event Page' do
-  before { get '/events/party-politics-101-the-good-bad-ugly' }
+  before { get '/events/ordinary-citizens-doing-extraordinary-things' }
   subject { Nokogiri::HTML(last_response.body) }
 
   it 'shows the event title' do
-    subject.css('.page-title').text.must_equal('Party Politics 101: The Good, Bad & Ugly')
+    subject.css('.page-title').text.must_equal('Ordinary Citizens Doing Extraordinary Things')
   end
 
   it 'shows the publication date with the right format' do
-    subject.css('.meta').first.text.must_equal('June 21, 2017')
+    subject.css('.meta').first.text.must_equal('June 24, 2019')
   end
 
   it 'displays the contents of the event' do

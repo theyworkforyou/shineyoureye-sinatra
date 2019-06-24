@@ -19,15 +19,15 @@ describe 'Events Page' do
     let(:single_event) { subject.css('.blog-in-a-list').last }
 
     it 'links to event url' do
-      single_event.css('h2 a/@href').text.must_equal('/events/local-government-elections')
+      single_event.css('h2 a/@href').text.must_equal('/events/ordinary-citizens-doing-extraordinary-things')
     end
 
     it 'displays event title' do
-      single_event.css('h2').text.must_equal('Local Government Elections')
+      single_event.css('h2').text.must_equal('Ordinary Citizens Doing Extraordinary Things')
     end
 
     it 'displays event publication date' do
-      single_event.css('.meta').text.must_equal('June 21, 2017')
+      single_event.css('.meta').text.must_equal('June 24, 2019')
     end
 
     it 'displays event excerpt' do
