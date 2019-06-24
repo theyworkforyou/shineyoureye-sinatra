@@ -11,7 +11,7 @@ describe 'The ID <-> slugs CSV file' do
   end
 
   it 'must have a slug for a Representative from EP data' do
-    assert(subject.include?(['b32bbfd7-7e44-45e3-b1e1-fb5cff750021', 'francis-uduyok']))
+    assert(subject.include?(['765d47ff-a659-4faa-9fc7-d641fee30ac5', 'femi-gbajabiamila']))
   end
 
   it 'must have a slug for a Senator from EP data' do

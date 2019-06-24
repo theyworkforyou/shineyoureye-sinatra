@@ -3,7 +3,7 @@
 require 'test_helper'
 
 describe 'Person Page' do
-  before { get '/person/mayowa-akinfolarin/' }
+  before { get '/person/akinfolarin-mayowa/' }
   subject { Nokogiri::HTML(last_response.body) }
 
   it 'displays a title' do
@@ -109,7 +109,7 @@ describe 'Person Page' do
   end
 
   describe 'when person has wikipedia url' do
-    before { get '/person/abaribe-enynnaya/' }
+    before { get '/person/abaribe-enyinnaya-harcourt/' }
 
     it 'links to it' do
       subject.css('.person__wikipedia a/@href').first.text
@@ -150,7 +150,7 @@ describe 'Person Page' do
   end
 
   describe 'when requesting a senator page' do
-    before { get '/person/abaribe-enynnaya/' }
+    before { get '/person/abaribe-enyinnaya-harcourt/' }
 
     it 'finds the senator by id' do
       subject.css('title').text.must_include('Abaribe Enyinnaya Harcourt')
@@ -184,14 +184,14 @@ describe 'Person Page' do
   describe 'social block' do
     it 'links to facebook share' do
       subject.css('.btn-facebook/@href').text.must_include(
-        '/person/mayowa-akinfolarin/&t=Akinfolarin Mayowa'
+        '/person/akinfolarin-mayowa/&t=Akinfolarin Mayowa'
       )
     end
 
     it 'links to twitter share' do
       subject.css('.btn-twitter/@href').text.must_include('NGShineYourEye')
       subject.css('.btn-twitter/@href').text.must_include('&text=Akinfolarin Mayowa')
-      subject.css('.btn-twitter/@href').text.must_include('/person/mayowa-akinfolarin/')
+      subject.css('.btn-twitter/@href').text.must_include('/person/akinfolarin-mayowa/')
     end
   end
 

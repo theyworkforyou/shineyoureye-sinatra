@@ -33,7 +33,7 @@ describe 'List of Representatives' do
       state.css('.contact-list__item').first.attr('id')
            .must_equal('benjamin-kalu')
       state.css('.contact-list__item').last.attr('id')
-           .must_equal('uko-nkole')
+           .must_equal('uko-ndokwe-nkole')
     end
   end
 
@@ -60,12 +60,12 @@ describe 'List of Representatives' do
 
       it 'has the name as alternative text' do
         person.css('.contact-list__item__photo/@alt').first.text
-              .must_equal('ABDUKADIR RAHIS')
+              .must_equal('Abdukadir Rahis')
       end
     end
 
     describe 'when person does not have an image' do
-      let(:person) { subject.xpath('//li[@class="contact-list__item"][.//h3[text()="BENJAMIN KALU"]]') }
+      let(:person) { subject.xpath('//li[@class="contact-list__item"][.//h3[text()="Benjamin Kalu"]]') }
 
       it 'shows a picture anyway (empty avatar)' do
         person.css('.contact-list__item__photo/@src').first.text
@@ -74,7 +74,7 @@ describe 'List of Representatives' do
     end
 
     it 'displays the representative name' do
-      person.css('.contact-list__item__name').text.must_equal('ABDUKADIR RAHIS')
+      person.css('.contact-list__item__name').text.must_equal('Abdukadir Rahis')
     end
 
     it 'links to area page' do

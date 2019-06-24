@@ -31,20 +31,20 @@ describe 'Senate' do
     it 'displays governors alphabetically inside each state' do
       state.css('.contact-list__item').count.must_equal(3)
       state.css('.contact-list__item').first.attr('id')
-           .must_equal('abaribe-enynnaya')
+           .must_equal('abaribe-enyinnaya-harcourt')
       state.css('.contact-list__item').last.attr('id')
            .must_equal('theodore-ahamefule-orji')
     end
   end
 
   describe 'person item' do
-    let(:person) { subject.css('#abaribe-enynnaya').first }
+    let(:person) { subject.css('#abaribe-enyinnaya-harcourt').first }
 
     it 'links to the person page' do
       person.css('.contact-list__item__photo').first.parent.attr('href')
-            .must_equal('/person/abaribe-enynnaya/')
+            .must_equal('/person/abaribe-enyinnaya-harcourt/')
       person.css('.contact-list__item__name').first.parent.attr('href')
-            .must_equal('/person/abaribe-enynnaya/')
+            .must_equal('/person/abaribe-enyinnaya-harcourt/')
     end
 
     describe 'when person has an image' do
@@ -60,12 +60,12 @@ describe 'Senate' do
 
       it 'has the name as alternative text' do
         person.css('.contact-list__item__photo/@alt').first.text
-              .must_equal('ABARIBE ENYINNAYA HARCOURT')
+              .must_equal('Abaribe Enyinnaya Harcourt')
       end
     end
 
     describe 'when person does not have an image' do
-      let(:person) { subject.xpath('//li[@class="contact-list__item"][.//h3[text()="BINOS YERO"]]') }
+      let(:person) { subject.xpath('//li[@class="contact-list__item"][.//h3[text()="Binos Yero"]]') }
 
       it 'shows a picture anyway (empty avatar)' do
         person.css('.contact-list__item__photo/@src').first.text
@@ -74,7 +74,7 @@ describe 'Senate' do
     end
 
     it 'displays the representative name' do
-      person.css('.contact-list__item__name').text.must_equal('ABARIBE ENYINNAYA HARCOURT')
+      person.css('.contact-list__item__name').text.must_equal('Abaribe Enyinnaya Harcourt')
     end
 
     it 'links to area page' do
@@ -82,7 +82,7 @@ describe 'Senate' do
     end
 
     it 'displays area name' do
-      person.css('.test-area').text.must_equal('ABIA SOUTH')
+      person.css('.test-area').text.must_equal('Abia South')
     end
 
     it 'displays party name' do
