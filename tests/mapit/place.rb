@@ -23,7 +23,7 @@ describe 'Place' do
     end
 
     it 'knows its name' do
-      place.name.must_equal('BATAGARAWA/RIMI/CHARANCHI')
+      place.name.must_equal('Batagarawa/Rimi/Charanchi')
     end
 
     it 'knows its parent name' do

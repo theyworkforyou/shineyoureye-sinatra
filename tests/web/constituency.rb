@@ -73,12 +73,12 @@ describe 'Federal Constituency Place Page' do
 
     it 'has an image whose alternative text is the person name' do
       person.css('.contact-list__item__photo/@alt').text
-            .must_equal('SYLVESTER OGBAGA')
+            .must_equal('Sylvester Ogbaga')
     end
 
     it 'displays the person name' do
       person.css('.contact-list__item__name').first.text
-            .must_equal('SYLVESTER OGBAGA')
+            .must_equal('Sylvester Ogbaga')
     end
 
     it 'links to the person area' do

@@ -24,7 +24,7 @@ describe 'Federal Constituencies Page' do
   end
 
   it 'shows each constituency name' do
-    subject.css('.media-heading').last.text.must_equal('LAGOS MAINLAND')
+    subject.css('.media-heading').last.text.must_equal('Lagos Mainland')
   end
 
   it 'links to each parent place' do

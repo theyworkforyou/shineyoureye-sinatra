@@ -24,7 +24,7 @@ describe 'Senatorial Districts Page' do
   end
 
   it 'shows each district name' do
-    subject.css('.media-heading').last.text.must_equal('ZAMFARA WEST')
+    subject.css('.media-heading').last.text.must_equal('Zamfara West')
   end
 
   it 'links to each parent place' do

@@ -19,22 +19,22 @@ describe 'Senatorial District Place Page' do
 
   describe 'social block' do
     it 'displays the place name' do
-      subject.css('.panel-title').text.must_equal('ABIA CENTRAL')
+      subject.css('.panel-title').text.must_equal('Abia Central')
     end
 
     it 'links to facebook share' do
-      subject.css('.btn-facebook/@href').text.must_include('/place/abia-central/&t=ABIA CENTRAL')
+      subject.css('.btn-facebook/@href').text.must_include('/place/abia-central/&t=Abia Central')
     end
 
     it 'links to twitter share' do
       subject.css('.btn-twitter/@href').text.must_include('NGShineYourEye')
-      subject.css('.btn-twitter/@href').text.must_include('&text=ABIA CENTRAL')
+      subject.css('.btn-twitter/@href').text.must_include('&text=Abia Central')
       subject.css('.btn-twitter/@href').text.must_include('/place/abia-central/')
     end
   end
 
   it 'displays the title' do
-    subject.css('.person__name').first.text.must_equal('ABIA CENTRAL')
+    subject.css('.person__name').first.text.must_equal('Abia Central')
   end
 
   it 'displays the place type name' do
@@ -73,12 +73,12 @@ describe 'Senatorial District Place Page' do
 
     it 'has an image whose alternative text is the person name' do
       person.css('.contact-list__item__photo/@alt').text
-            .must_equal('THEODORE AHAMEFULE ORJI')
+            .must_equal('Theodore Ahamefule Orji')
     end
 
     it 'displays the person name' do
       person.css('.contact-list__item__name').first.text
-            .must_equal('THEODORE AHAMEFULE ORJI')
+            .must_equal('Theodore Ahamefule Orji')
     end
 
     it 'links to the person area' do
@@ -88,7 +88,7 @@ describe 'Senatorial District Place Page' do
 
     it 'displays the person area name' do
       person.css('.test-area').text
-            .must_equal('ABIA CENTRAL')
+            .must_equal('Abia Central')
     end
 
     it 'displays the person party name' do
