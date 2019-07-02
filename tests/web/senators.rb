@@ -12,7 +12,7 @@ describe 'Senate' do
 
   describe 'person list' do
     it 'lists all senators' do
-      subject.css('.contact-list__item').count.must_equal(107)
+      subject.css('.contact-list__item').count.must_equal(108)
     end
 
     it 'groups senators by state' do
