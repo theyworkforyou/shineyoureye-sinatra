@@ -5,28 +5,54 @@
     @include display-flex();
     @include flex-wrap(wrap);
     @include justify-content(center);
+
+    li {
+        margin-bottom: 15px;
+    }
 }
 
 .contact-list__item {
-    margin: 1em;
+    background: $color-white;
+    box-shadow: 1px 1px 1px 1px $box-shadow-bg;
+    border-radius: 6px;
 
     @include flex(1 0 30%);
 
     h3 {
         margin: 0.5em 0 0 0;
-        font-size: px-to-em(18);
+        line-height: 1.3em;
+        font-size: px-to-em(22);
         font-weight: bold;
+        word-wrap: break-word;
+        word-break: normal;
     }
-
     p {
         margin: 0.5em 0 0 0;
-        font-size: px-to-em(12);
+        font-size: px-to-em(14);
+        line-height: 1.4em;
+        word-wrap: break-word;
+        word-break: normal; 
+    }
+
+    .media {
+        padding: 10px 5px 10px 10px;
+
+        .media-body {
+            line-height: px-to-em(12);
+            text-align: left;
+        }
+
+        .media-left {
+            img {
+                min-height: 100px;
+            }
+        }
     }
 
     // A few tweaks for very small screens
     @media (min-width: $screen-sm-min) {
         h3 {
-            font-size: px-to-em(24);
+            font-size: px-to-em(22);
         }
 
         p {

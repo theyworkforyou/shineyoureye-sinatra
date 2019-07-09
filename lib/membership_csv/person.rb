@@ -26,6 +26,12 @@ module MembershipCSV
       person['name']
     end
 
+    def official_name
+      first_name = name.split(" ").first
+      last_name = name.split(" ").last
+      first_name << " " << last_name
+    end
+
     def image
       person['image_url']
     end
