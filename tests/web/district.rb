@@ -78,7 +78,7 @@ describe 'Senatorial District Place Page' do
 
     it 'displays the person name' do
       person.css('.contact-list__item__name').first.text
-            .must_equal('Theodore Ahamefule Orji')
+            .must_equal('Theodore Orji')
     end
 
     it 'links to the person area' do

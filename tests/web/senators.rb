@@ -28,11 +28,11 @@ describe 'Senate' do
 
     let(:state) { subject.css('.contact-list').first }
 
-    it 'displays governors alphabetically inside each state' do
+    it 'displays senators alphabetically inside each state' do
       state.css('.contact-list__item').count.must_equal(3)
-      state.css('.contact-list__item').first.attr('id')
+      state.css('.col-md-4').first.attr('id')
            .must_equal('abaribe-enyinnaya-harcourt')
-      state.css('.contact-list__item').last.attr('id')
+      state.css('.col-md-4').last.attr('id')
            .must_equal('theodore-ahamefule-orji')
     end
   end
@@ -65,7 +65,7 @@ describe 'Senate' do
     end
 
     describe 'when person does not have an image' do
-      let(:person) { subject.xpath('//li[@class="contact-list__item"][.//h3[text()="Abu Makau Damri"]]') }
+      let(:person) { subject.xpath('//li[.//div[@class="contact-list__item"][.//h3[text()="Abu Damri"]]]') }
 
       it 'shows a picture anyway (empty avatar)' do
         person.css('.contact-list__item__photo/@src').first.text
@@ -74,7 +74,7 @@ describe 'Senate' do
     end
 
     it 'displays the representative name' do
-      person.css('.contact-list__item__name').text.must_equal('Abaribe Enyinnaya Harcourt')
+      person.css('.contact-list__item__name').text.must_equal('Abaribe Harcourt')
     end
 
     it 'links to area page' do

@@ -55,7 +55,7 @@ describe 'List of Governors' do
     end
 
     describe 'when person does not have an image' do
-      let(:person) { subject.xpath('//li[@class="contact-list__item"][.//h3[text()="Nnaji John"]]') }
+      let(:person) { subject.xpath('//li[.//div[@class="contact-list__item"][.//h3[text()="Nnaji John"]]]') }
 
       before do
         get '/position/representative/'

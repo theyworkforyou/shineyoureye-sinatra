@@ -30,9 +30,9 @@ describe 'List of Representatives' do
 
     it 'displays representatives alphabetically inside each state' do
       state.css('.contact-list__item').count.must_equal(8)
-      state.css('.contact-list__item').first.attr('id')
+      state.css('.col-md-4').first.attr('id')
            .must_equal('benjamin-kalu')
-      state.css('.contact-list__item').last.attr('id')
+      state.css('.col-md-4').last.attr('id')
            .must_equal('uko-ndokwe-nkole')
     end
   end
@@ -65,7 +65,7 @@ describe 'List of Representatives' do
     end
 
     describe 'when person does not have an image' do
-      let(:person) { subject.xpath('//li[@class="contact-list__item"][.//h3[text()="Sam Onwuaso"]]') }
+      let(:person) { subject.xpath('//li[.//div[@class="contact-list__item"][.//h3[text()="Sam Onwuaso"]]]') }
 
       it 'shows a picture anyway (empty avatar)' do
         person.css('.contact-list__item__photo/@src').first.text
