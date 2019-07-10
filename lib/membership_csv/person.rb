@@ -27,9 +27,7 @@ module MembershipCSV
     end
 
     def official_name
-      first_name = name.split(" ").first
-      last_name = name.split(" ").last
-      first_name << " " << last_name
+      name.split(' ').first << ' ' << name.split(' ').last
     end
 
     def image
