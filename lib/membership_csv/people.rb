@@ -29,8 +29,16 @@ module MembershipCSV
       legislature.latest_term_start_date
     end
 
+    def current_term_end_date
+      legislature.latest_term_end_date
+    end
+
     def legislature_name
       legislature.name
+    end
+
+    def legislature_term
+      legislature.assembly_term
     end
 
     def featured_person(featured_summaries)

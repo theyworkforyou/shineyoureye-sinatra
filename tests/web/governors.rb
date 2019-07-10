@@ -7,7 +7,7 @@ describe 'List of Governors' do
   subject { Nokogiri::HTML(last_response.body) }
 
   it 'shows the title' do
-    subject.css('.page-title').text.must_include('Executive Governor')
+    subject.css('.page-title').text.must_include('Executive Governors')
   end
 
   describe 'person list' do

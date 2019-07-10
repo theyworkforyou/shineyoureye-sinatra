@@ -1,14 +1,41 @@
-<h1 class="page-title"><%= @page.title %></h1>
+<h1 class="page-title text-center"><%= @page.title %></h1>
+
+<% if @page.people_legislature_term %>
+  <div class="page-section" id="term">
+    <div class="container text-center">
+        <h3><span class="avatar"><i class="glyphicon glyphicon-home"></i></span> <%= @page.people_legislature_term %> </h3>
+        <p><%= @page.people_current_term_start_date %> <%= @page.people_current_term_end_date %></p>
+    </div>
+  </div>
+<% end %>
+
+<div class="page-section page-section--grey" id="seat-count">
+  <div class="container">
+      <div class="party-groupings__title text-center">
+          <h3>Party Groupings</h3>
+      </div>
+      <ul class="grid-list grid-list--vertically-center">
+        <% @page.sort_desc_party_of_people_and_size.each do |party, seats| %>
+            <li id="party-type"><div class="avatar-unit">
+                <span class="avatar"><i class="glyphicon glyphicon-user"></i></span>
+                <h4><%= party %></h4>
+                <p><span class="seatcount"><%= seats %></span> seats</p>
+            </div></li>
+        <% end %>  
+      </ul>
+  </div>
+</div>
 
 <div class="content_box">
-
-    <div class="accordion people-accordion">
-      <% @page.people_by_state.each do |state_name, people_in_state| %>
-        <h2><%= state_name %></h2>
-        <%= erb :_list_of_people, :locals => { :people => people_in_state } %>
-      <% end %>
-    </div>
-
+  <div class="party-groupings__title text-center">
+    <h3>Members</h3>
+  </div>
+  <div class="accordion people-accordion">
+    <% @page.people_by_state.each do |state_name, people_in_state| %>
+      <h2><%= state_name %></h2>
+      <%= erb :_list_of_people, :locals => { :people => people_in_state } %> 
+    <% end %>
+  </div>
 </div>
 
 <% content_for :footer_extra_js do %>

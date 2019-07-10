@@ -7,7 +7,7 @@ describe 'List of Representatives' do
   subject { Nokogiri::HTML(last_response.body) }
 
   it 'shows the title' do
-    subject.css('.page-title').text.must_include('Representative')
+    subject.css('.page-title').text.must_include('House of Representatives')
   end
 
   describe 'person list' do

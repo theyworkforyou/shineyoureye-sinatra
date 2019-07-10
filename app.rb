@@ -60,7 +60,8 @@ mapit = Mapit::Wrapper.new(
 
 person_factory = Factory::Person.new(mapit: mapit, baseurl: '/person/', identifier_scheme: 'shineyoureye')
 
-Legislature = Struct.new(:slug, :name, :latest_term_start_date)
+TENURE_TERM = '9th National Assembly of Nigeria'
+Legislature = Struct.new(:slug, :name, :latest_term_start_date, :latest_term_end_date, :assembly_term)
 # Assemble data on the members of the various legislatures we support:
 governors = MembershipCSV::People.new(
   csv_filename: 'morph/nigeria-state-governors.csv',
@@ -69,12 +70,12 @@ governors = MembershipCSV::People.new(
 )
 representatives = MembershipCSV::People.new(
   csv_filename: 'data/representatives.csv',
-  legislature: Legislature.new('Representatives', 'House of Representatives', Date.parse('2019-05-30')),
+  legislature: Legislature.new('Representatives', 'House of Representatives', Date.parse('2019-05-30'), '- current', TENURE_TERM),
   person_factory: person_factory
 )
 senators = MembershipCSV::People.new(
   csv_filename: 'data/senate.csv',
-  legislature: Legislature.new('Senate', 'Senate', Date.parse('2019-05-30')),
+  legislature: Legislature.new('Senate', 'Senate', Date.parse('2019-05-30'), '- current', TENURE_TERM),
   person_factory: person_factory
 )
 
@@ -184,17 +185,17 @@ get '/place/:slug/' do |slug|
 end
 
 get '/position/representative/' do
-  @page = Page::People.new(title: 'Federal Representative', people_by_legislature: representatives)
+  @page = Page::People.new(title: 'House of Representatives', people_by_legislature: representatives)
   erb :people
 end
 
 get '/position/senator/' do
-  @page = Page::People.new(title: 'Senator', people_by_legislature: senators)
+  @page = Page::People.new(title: 'Senators', people_by_legislature: senators)
   erb :people
 end
 
 get '/position/executive-governor/' do
-  @page = Page::People.new(title: 'Executive Governor', people_by_legislature: governors)
+  @page = Page::People.new(title: 'Executive Governors', people_by_legislature: governors)
   erb :people
 end
 
