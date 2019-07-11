@@ -108,6 +108,15 @@ describe 'Person Page' do
     end
   end
 
+  describe 'when person has a home address' do
+    before { get '/person/theodore-ahamefule-orji/' }
+
+    it 'displays the home address' do
+      subject.css('.person__home_address').first.text
+             .must_equal('32, Ojike Street, Umuahia, Abia State')
+    end
+  end
+
   describe 'when person has wikipedia url' do
     before { get '/person/abaribe-enyinnaya-harcourt/' }
 

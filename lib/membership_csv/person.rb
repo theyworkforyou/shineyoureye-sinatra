@@ -58,6 +58,10 @@ module MembershipCSV
       person['wikipedia_url']
     end
 
+    def home_address
+      person['postal_address']
+    end
+
     def area
       if person['mapit_id']
         mapit.area_from_mapit_id(person['mapit_id'])

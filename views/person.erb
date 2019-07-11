@@ -47,6 +47,11 @@
             <p class="person__email"><%= @page.person.email %></p>
           <% end %>
 
+          <% if @page.person.home_address %>
+            <h2>Address</h2>
+            <p class="person__home_address"><%= @page.person.home_address %></p>
+          <% end %>
+
           <% if @page.person.wikipedia_url %>
             <h2>Wikipedia</h2>
             <p class="person__wikipedia"><a href="<%= @page.person.wikipedia_url %>"><%= @page.person.wikipedia_url %></a></p>
