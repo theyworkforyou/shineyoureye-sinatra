@@ -19,7 +19,7 @@
             <li id="party-type"><div class="avatar-unit">
                 <span class="avatar"><i class="glyphicon glyphicon-user"></i></span>
                 <h4><%= party %></h4>
-                <p><span class="seatcount"><%= seats %></span> seats</p>
+                <p><span class="seatcount"><%= seats %></span> <%= seats > 1 ? "seats" : "seat"  %></p>
             </div></li>
         <% end %>  
       </ul>
