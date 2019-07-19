@@ -11,11 +11,13 @@
     }
 }
 
-.contact-list__item {
+.contact-list__item--people {
     background: $color-white;
     box-shadow: 1px 1px 1px 1px $box-shadow-bg;
     border-radius: 6px;
+}
 
+.contact-list__item {
     @include flex(1 0 30%);
 
     h3 {

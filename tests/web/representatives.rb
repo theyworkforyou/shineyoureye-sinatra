@@ -65,7 +65,7 @@ describe 'List of Representatives' do
     end
 
     describe 'when person does not have an image' do
-      let(:person) { subject.xpath('//li[.//div[@class="contact-list__item"][.//h3[text()="Sam Onwuaso"]]]') }
+      let(:person) { subject.xpath('//li[.//div[@class="contact-list__item contact-list__item--people"][.//h3[text()="Sam Onwuaso"]]]') }
 
       it 'shows a picture anyway (empty avatar)' do
         person.css('.contact-list__item__photo/@src').first.text
