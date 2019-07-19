@@ -1,0 +1,24 @@
+<ul class="contact-list">
+  <% people.each do |person| %>
+    <li class="contact-list__item" id="<%= person.slug %>">
+        <a href="<%= person.url %>">
+          <% if person.thumbnail_image_url %>
+            <img class="contact-list__item__photo" src="<%= person.thumbnail_image_url %>" srcset="<%= person.thumbnail_image_url %>" alt="<%= person.name %>">
+          <% else %>
+            <img class="contact-list__item__photo" src="/images/person-250x250.png" srcset="/images/person-250x250.png" alt="<%= person.name %>">
+          <% end %>
+        </a>
+        <a href="<%= person.url %>">
+            <h3 class="contact-list__item__name"><%= person.name %></h3>
+        </a>
+        <p>
+          <% if person.area %>
+            <span class="test-party"><%= person.party_name %></span>,
+            <a class="contact-list__item__area test-area" href="<%= person.area.url %>"><%= person.area.name %></a>
+          <% else %>
+            <span class="test-party"><%= person.party_name %></span>
+          <% end %>
+        </p>
+    </li>
+  <% end %>
+</ul>
