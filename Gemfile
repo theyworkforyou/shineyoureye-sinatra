@@ -8,7 +8,7 @@ ruby '2.5.3'
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}.git" }
 
-gem 'bootstrap-sass'
+gem "bootstrap-sass", "~> 3.4.1"
 gem 'coveralls', require: false
 gem 'everypolitician', '~> 0.20.0', github: 'everypolitician/everypolitician-ruby'
 gem 'html_truncator', '~>0.2'
