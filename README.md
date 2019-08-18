@@ -52,10 +52,12 @@ This project uses data from several different sources:
        `parent_area` set to the appropriate state):
          * `mapit/sen_to_sta_area_ids_mapping.csv`
          * `mapit/fed_to_sta_area_ids_mapping.csv`
+         * `mapit/lga_to_sta_area_ids_mapping.csv`
      * Mappings between EveryPolitician area IDs and MapIt area
        IDs are stored in the repository:
          * `mapit/mapit_to_ep_area_ids_mapping_FED.csv`
          * `mapit/mapit_to_ep_area_ids_mapping_SEN.csv`
+         * `mapit/mapit_to_ep_area_ids_mapping_LGA.csv`
      * Mappings between the slugs used for places in the old
        Pombola-based ShineYourEye website and MapIt IDs are
        stored in the repository:

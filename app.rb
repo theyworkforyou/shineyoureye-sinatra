@@ -40,13 +40,15 @@ set :twitter_user, 'NGShineYourEye'
 mapit_mappings = Mapit::Mappings.new(
   parent_mapping_filenames: [
     'mapit/fed_to_sta_area_ids_mapping.csv',
-    'mapit/sen_to_sta_area_ids_mapping.csv'
+    'mapit/sen_to_sta_area_ids_mapping.csv',
+    'mapit/lga_to_sta_area_ids_mapping.csv'
   ],
   pombola_slugs_to_mapit_ids_filename:
     'mapit/pombola_place_slugs_to_mapit.csv',
   mapit_to_ep_areas_filenames: [
     'mapit/mapit_to_ep_area_ids_mapping_FED.csv',
-    'mapit/mapit_to_ep_area_ids_mapping_SEN.csv'
+    'mapit/mapit_to_ep_area_ids_mapping_SEN.csv',
+    'mapit/mapit_to_ep_area_ids_mapping_LGA.csv'
   ]
 )
 
@@ -54,7 +56,7 @@ mapit_mappings = Mapit::Mappings.new(
 mapit = Mapit::Wrapper.new(
   mapit_mappings: mapit_mappings,
   baseurl: '/place/',
-  area_types: %w[FED SEN STA],
+  area_types: %w[LGA FED SEN STA],
   data_directory: 'mapit'
 )
 
@@ -78,10 +80,15 @@ senators = MembershipCSV::People.new(
   legislature: Legislature.new('Senate', 'Senate', Date.parse('2019-06-11'), '- current', TENURE_TERM),
   person_factory: person_factory
 )
+honorables = MembershipCSV::People.new(
+  csv_filename: 'data/honorables.csv',
+  legislature: Legislature.new('Honorables', 'House of Assembly', Date.parse('2019-06-11'), '- current'),
+  person_factory: person_factory
+)
 
-raise_if_missing_slugs(governors, representatives, senators)
+raise_if_missing_slugs(governors, representatives, senators, honorables)
 
-all_people = representatives.find_all + senators.find_all + governors.find_all
+all_people = representatives.find_all + senators.find_all + governors.find_all + honorables.find_all
 
 get '/' do
   posts_finder = Document::Finder.new(pattern: posts_pattern, baseurl: '/blog/')
@@ -171,6 +178,7 @@ get '/place/:slug/' do |slug|
   area = mapit.area_from_pombola_slug(slug)
   pass unless area
   people = {
+    'Local Government Area' => honorables,
     'Federal Constituency' => representatives,
     'Senatorial District' => senators,
     'State' => governors
@@ -182,6 +190,11 @@ get '/place/:slug/' do |slug|
   )
   @page = Page::Place.new(place: area, people_by_legislature: people[area.type_name], geometry: geometry)
   erb :place
+end
+
+get '/position/state-legislator/' do
+  @page = Page::People.new(title: 'State House of Assembly', people_by_legislature: honorables)
+  erb :people
 end
 
 get '/position/representative/' do
@@ -207,6 +220,18 @@ end
 get '/person/:slug/experience/' do |slug|
   @redirect_to = "/person/#{slug}/"
   erb :redirect, layout: false
+end
+
+get '/person/:slug/' do |slug|
+  person = honorables.find_single(slug)
+  pass unless person
+  summary_finder = Document::Finder.new(pattern: summary_pattern(person.id), baseurl: '')
+  @page = Page::Person.new(
+    person: person,
+    position: 'Honorable',
+    summary_doc: summary_finder.find_or_empty
+  )
+  erb :person
 end
 
 get '/person/:slug/' do |slug|

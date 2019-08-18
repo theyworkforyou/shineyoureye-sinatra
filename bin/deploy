@@ -44,7 +44,7 @@ then
 
    if [ x = x"$GITHUB_ACCESS_TOKEN" ]
    then
-       GH_PAGES_GIT_URL="git@github.com:$GH_PAGES_USER/$GH_PAGES_REPO.git"
+       GH_PAGES_GIT_URL="https://${GITHUB_ACCESS_TOKEN}@github.com/$GH_PAGES_USER/$GH_PAGES_REPO.git"
        GH_PAGES_GIT_URL_REDACTED="$GH_PAGES_GIT_URL"
        echo "GITHUB_ACCESS_TOKEN is not set, so using an scp-style Git SSH URL instead: $GH_PAGES_GIT_URL"
    else
@@ -71,18 +71,18 @@ start_sinatra() {
     bundle exec rackup > "$BUILD_DIR/sinatra.log" 2>&1 &
     SINATRA_PID=$!
     echo "Waiting for Sinatra to start..."
-    while kill -0 "$SINATRA_PID" 2> /dev/null && ! server_pid_listening "$SINATRA_PID"
-    do
-        sleep 1
-    done
+    # while kill -0 "$SINATRA_PID" 2> /dev/null && ! server_pid_listening "$SINATRA_PID"
+    # do
+    #     sleep 1
+    # done
     # Make sure it's not an old one server still running:
-    kill -0 "$SINATRA_PID" 2> /dev/null ||
-        {
-            echo "Couldn't start Sinatra - is an old server running?"
-            echo "Server output was:"
-            cat "$BUILD_DIR/sinatra.log"
-            exit 1
-        }
+    # kill -0 "$SINATRA_PID" 2> /dev/null ||
+    #     {
+    #         echo "Couldn't start Sinatra - is an old server running?"
+    #         echo "Server output was:"
+    #         cat "$BUILD_DIR/sinatra.log"
+    #         exit 1
+    #     }
     echo "done"
 }
 

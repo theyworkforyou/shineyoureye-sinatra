@@ -126,13 +126,15 @@ class EveryPoliticianToCSV
     @mapit_mappings ||= Mapit::Mappings.new(
       parent_mapping_filenames: [
         'mapit/fed_to_sta_area_ids_mapping.csv',
-        'mapit/sen_to_sta_area_ids_mapping.csv'
+        'mapit/sen_to_sta_area_ids_mapping.csv',
+        'mapit/lga_to_sta_area_ids_mapping.csv'
       ],
       pombola_slugs_to_mapit_ids_filename:
         'mapit/pombola_place_slugs_to_mapit.csv',
       mapit_to_ep_areas_filenames: [
         'mapit/mapit_to_ep_area_ids_mapping_FED.csv',
-        'mapit/mapit_to_ep_area_ids_mapping_SEN.csv'
+        'mapit/mapit_to_ep_area_ids_mapping_SEN.csv',
+        'mapit/mapit_to_ep_area_ids_mapping_LGA.csv'
       ]
     )
   end
@@ -151,3 +153,4 @@ end
 
 EveryPoliticianToCSV.new('Nigeria', 'Representatives', 'data/representatives.csv').generate_csv
 EveryPoliticianToCSV.new('Nigeria', 'Senate', 'data/senate.csv').generate_csv
+EveryPoliticianToCSV.new('Nigeria', 'Honorables', 'data/honorables.csv').generate_csv
