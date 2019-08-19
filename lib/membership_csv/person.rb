@@ -62,6 +62,10 @@ module MembershipCSV
       person['postal_address']
     end
 
+    def constituency
+      person['district']
+    end
+
     def area
       if person['mapit_id']
         mapit.area_from_mapit_id(person['mapit_id'])

@@ -4,12 +4,13 @@ module Page
   class Homepage
     RANDOM_PERSON_COUNT_PER_TYPE = 10
 
-    def initialize(posts:, events:, governors:, senators:, representatives:)
+    def initialize(posts:, events:, governors:, senators:, representatives:, honorables:)
       @posts = posts
       @events = events
       @governors = governors
       @senators = senators
       @representatives = representatives
+      @honorables = honorables
     end
 
     def featured_posts
@@ -32,13 +33,14 @@ module Page
       [
         build_representative_type(governors, 'Governors', '/position/executive-governor/'),
         build_representative_type(senators, 'Senators', '/position/senator/'),
-        build_representative_type(representatives, 'Representatives', '/position/representative/')
+        build_representative_type(representatives, 'Representatives', '/position/representative/'),
+        build_representative_type(honorables, 'Honorables', '/position/state-legislators/')
       ]
     end
 
     private
 
-    attr_reader :posts, :events, :governors, :senators, :representatives
+    attr_reader :posts, :events, :governors, :senators, :representatives, :honorables
 
     def future_events
       events.select do |event|

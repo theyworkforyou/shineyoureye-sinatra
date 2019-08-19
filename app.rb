@@ -98,7 +98,8 @@ get '/' do
     events: events_finder.find_all,
     governors: governors,
     senators: senators,
-    representatives: representatives
+    representatives: representatives,
+    honorables: honorables
   )
   erb :homepage
 end
@@ -192,8 +193,8 @@ get '/place/:slug/' do |slug|
   erb :place
 end
 
-get '/position/state-legislator/' do
-  @page = Page::People.new(title: 'State House of Assembly', people_by_legislature: honorables)
+get '/position/state-legislators/' do
+  @page = Page::People.new(title: 'State Houses of Assembly', people_by_legislature: honorables)
   erb :people
 end
 

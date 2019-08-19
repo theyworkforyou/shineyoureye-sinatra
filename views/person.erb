@@ -14,6 +14,11 @@
             <h2><%= @page.position %></h2>
             <h1 class="person__name"><%= @page.person.name %></h1>
 
+          <% if @page.person.constituency %>
+            <h2>Constituency</h2>
+            <p class="person__party"><%= @page.person.constituency %></p>
+          <% end %> 
+
           <% if @page.person.area %>
             <h2><%= @page.person.area.type_name %></h2>
             <p class="person__area"><a href="<%= @page.person.area.url %>"><%= @page.person.area.name %></a></p>
@@ -22,7 +27,7 @@
           <% if @page.person.party_name %>
             <h2>Party</h2>
             <p class="person__party"><%= @page.person.party_name %></p>
-          <% end %>
+          <% end %>         
 
           <% if @page.person.birth_date %>
             <h2>Birth date</h2>

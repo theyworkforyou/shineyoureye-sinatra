@@ -14,7 +14,7 @@ describe 'Page::Homepage' do
     ]
   end
   let(:page) do
-    Page::Homepage.new(posts: documents, events: documents, governors: [], senators: [], representatives: [])
+    Page::Homepage.new(posts: documents, events: documents, governors: [], senators: [], representatives: [], honorables: [])
   end
 
   describe 'featured posts' do
@@ -45,7 +45,7 @@ describe 'Page::Homepage' do
     end
 
     it 'detects that there are no featured events' do
-      page = Page::Homepage.new(posts: documents, events: [], governors: [], senators: [], representatives: [])
+      page = Page::Homepage.new(posts: documents, events: [], governors: [], senators: [], representatives: [], honorables: [])
       page.no_events?.must_equal(true)
     end
 
@@ -53,14 +53,14 @@ describe 'Page::Homepage' do
       document = basic_document(new_tempfile("---
 title: A Title
 ---", '2000-20-02-file-name'))
-      page = Page::Homepage.new(posts: [], events: [document], governors: [], senators: [], representatives: [])
+      page = Page::Homepage.new(posts: [], events: [document], governors: [], senators: [], representatives: [], honorables: [])
       error = assert_raises(RuntimeError) { page.featured_events }
       error.message.must_include('A Title')
     end
   end
 
   it 'has the government representative types' do
-    page.government_representative_types.count.must_equal(3)
+    page.government_representative_types.count.must_equal(4)
   end
 
   it 'formats the date' do

@@ -1117,7 +1117,7 @@
         "codes": {
             "poll_unit": "AN:2"
         },
-        "name": "AwkaNort",
+        "name": "Awka North",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -1132,7 +1132,7 @@
         "codes": {
             "poll_unit": "AN:3"
         },
-        "name": "AwkaSout",
+        "name": "Awka South",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -8060,7 +8060,7 @@
         "codes": {
             "poll_unit": "AN:14"
         },
-        "name": "NnewiNort",
+        "name": "Nnewi North",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -8075,7 +8075,7 @@
         "codes": {
             "poll_unit": "AN:15"
         },
-        "name": "NnewiSou",
+        "name": "Nnewi South",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,

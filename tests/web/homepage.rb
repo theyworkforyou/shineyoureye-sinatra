@@ -7,9 +7,10 @@ describe 'Homepage' do
   subject { Nokogiri::HTML(last_response.body) }
 
   describe 'featured people' do
-    let(:governors) { subject.css('.homepage__reps .col-sm-4')[0] }
-    let(:senators) { subject.css('.homepage__reps .col-sm-4')[1] }
-    let(:representatives) { subject.css('.homepage__reps .col-sm-4')[2] }
+    let(:governors) { subject.css('.homepage__reps .col-sm-12')[0] }
+    let(:senators) { subject.css('.homepage__reps .col-sm-12')[1] }
+    let(:representatives) { subject.css('.homepage__reps .col-sm-12')[2] }
+    let(:honorables) { subject.css('.homepage__reps .col-sm-12')[3] }
 
     it 'displays a medium size image for the first person of each type' do
       governors.css('.homepage__reps__rep').first.css('img/@src').text
@@ -18,6 +19,8 @@ describe 'Homepage' do
               .must_include('250x250.jpeg')
       representatives.css('.homepage__reps__rep').first.css('img/@src').text
                      .must_include('250x250.jpeg')
+      honorables.css('.homepage__reps__rep').first.css('img/@src').text
+                .must_include('250x250.jpeg')
     end
 
     it 'hides all but the first person of each type' do
@@ -33,11 +36,15 @@ describe 'Homepage' do
                      .wont_include('hidden')
       representatives.css('.homepage__reps__rep img/@src')[0]
                      .wont_be_nil
+      honorables.css('.homepage__reps__rep/@class')[4].text
+                .must_include('hidden')
+      honorables.css('.homepage__reps__rep img/@src')[4]
+                .must_be_nil
     end
 
     it 'displays all types of people' do
       subject.css('.homepage__reps .btn-default').map(&:text).map(&:strip).uniq.sort
-             .must_equal(%w[Governors Representatives Senators])
+             .must_equal(%w[Governors Honorables Representatives Senators])
     end
 
     it 'displays a link to Governors' do
@@ -59,6 +66,12 @@ describe 'Homepage' do
                      .must_equal('/position/representative/')
       representatives.css('.btn-default')[0].text.strip
                      .must_equal('Representatives')
+    end
+    it 'displays link to Honorables' do
+      honorables.css('.btn-default/@href')[0].text
+                .must_equal('/position/state-legislators/')
+      honorables.css('.btn-default')[0].text.strip
+                .must_equal('Honorables')
     end
   end
 
