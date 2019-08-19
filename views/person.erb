@@ -18,9 +18,11 @@
             <h2><%= @page.person.area.type_name %></h2>
             <p class="person__area"><a href="<%= @page.person.area.url %>"><%= @page.person.area.name %></a></p>
           <% end %>
-
+          
+          <% if @page.person.party_name %>
             <h2>Party</h2>
             <p class="person__party"><%= @page.person.party_name %></p>
+          <% end %>
 
           <% if @page.person.birth_date %>
             <h2>Birth date</h2>
