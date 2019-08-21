@@ -31,6 +31,11 @@ module Page
       people_by_party.map { |party, p| [party, p.size] }
     end
 
+    def people_by_position
+      people_by_position = people.reject { |p| p.position.nil? }
+                                 .sort_by { |p| p.position_order.to_i }
+    end
+
     def sort_desc_party_of_people_and_size
       party_of_people_and_size.sort_by { |_p, value| value }.reverse.to_h
     end

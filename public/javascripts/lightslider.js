@@ -15,7 +15,7 @@
         easing: 'linear', //'for jquery animation',//
         speed: 400, //ms'
         auto: false,
-        pauseOnHover: false,
+        pauseOnHover: true,
         loop: false,
         slideEndAnimation: true,
         pause: 2000,
@@ -38,7 +38,25 @@
         enableDrag: true,
         freeMove: true,
         swipeThreshold: 40,
-        responsive: [],
+        responsive: [
+            {
+                "breakpoint": 800,
+                "settings": {
+                    "item": 2,
+                    "thumbItem": 3,
+                    "slideMove": 1,
+                    "slideMargin": 6
+                }
+            },
+            {
+                "breakpoint": 480,
+                "settings": {
+                    "item": 1,
+                    "thumbItem": 2,
+                    "slideMove": 1,                   
+                }
+            }
+        ],
         /* jshint ignore:start */
         onBeforeStart: function ($el) {},
         onSliderLoad: function ($el) {},

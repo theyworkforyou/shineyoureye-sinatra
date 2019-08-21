@@ -58,7 +58,7 @@ describe 'List of Governors' do
       let(:person) { subject.xpath('//li[.//div[@class="contact-list__item contact-list__item--people"][.//h3[text()="Nnaji John"]]]') }
 
       before do
-        get '/position/representative/'
+        get '/position/federal-representatives/'
       end
 
       it 'shows a picture anyway (empty avatar)' do

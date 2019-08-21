@@ -33,8 +33,8 @@ module Page
       [
         build_representative_type(governors, 'Governors', '/position/executive-governor/'),
         build_representative_type(senators, 'Senators', '/position/senator/'),
-        build_representative_type(representatives, 'Representatives', '/position/representative/'),
-        build_representative_type(honorables, 'Honorables', '/position/state-legislators/')
+        build_representative_type(representatives, 'Federal Representatives', '/position/federal-representatives/'),
+        build_representative_type(honorables, 'State Representatives', '/position/state-representatives/')
       ]
     end
 

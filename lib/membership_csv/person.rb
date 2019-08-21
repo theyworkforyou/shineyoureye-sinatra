@@ -66,6 +66,14 @@ module MembershipCSV
       person['district']
     end
 
+    def position
+      person['official_position']
+    end
+
+    def position_order
+      person['official_position_order']
+    end
+
     def area
       if person['mapit_id']
         mapit.area_from_mapit_id(person['mapit_id'])

@@ -3,7 +3,7 @@
 require 'test_helper'
 
 describe 'List of Representatives' do
-  before { get '/position/representative/' }
+  before { get '/position/federal-representatives/' }
   subject { Nokogiri::HTML(last_response.body) }
 
   it 'shows the title' do

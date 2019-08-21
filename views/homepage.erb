@@ -39,15 +39,10 @@
                       <img <% if i == 0 %>src<% else %>data-src<% end %>="<%= person.medium_image_url %>">
                   </a>
                   <p>
-                      <strong><%= person.name %></strong>,
-                      <% if type.link_text == 'Honorables' %>
-                        <%= person.constituency %>,
-                        <br>
-                        <%= person.area.name if person.area %> LGA
-                      <% else %>
-                        <%= person.party_name %>,
-                        <%= person.area.name if person.area %>
-                      <% end %>
+                    <strong><%= person.name.strip %></strong>,
+                    <%= person.constituency || person.party_name %>,
+                    <%= person.area.name if person.area %>
+                    <%= 'LGA' if person.constituency %>
                   </p>
                 </div>
               <% end %>

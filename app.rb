@@ -193,12 +193,12 @@ get '/place/:slug/' do |slug|
   erb :place
 end
 
-get '/position/state-legislators/' do
+get '/position/state-representatives/' do
   @page = Page::People.new(title: 'State Houses of Assembly', people_by_legislature: honorables)
   erb :people
 end
 
-get '/position/representative/' do
+get '/position/federal-representatives/' do
   @page = Page::People.new(title: 'House of Representatives', people_by_legislature: representatives)
   erb :people
 end
@@ -229,7 +229,7 @@ get '/person/:slug/' do |slug|
   summary_finder = Document::Finder.new(pattern: summary_pattern(person.id), baseurl: '')
   @page = Page::Person.new(
     person: person,
-    position: 'Honorable',
+    position: 'State Representative',
     summary_doc: summary_finder.find_or_empty
   )
   erb :person
@@ -241,7 +241,7 @@ get '/person/:slug/' do |slug|
   summary_finder = Document::Finder.new(pattern: summary_pattern(person.id), baseurl: '')
   @page = Page::Person.new(
     person: person,
-    position: 'Representative',
+    position: 'Federal Representative',
     summary_doc: summary_finder.find_or_empty
   )
   erb :person

@@ -9,23 +9,34 @@
   </div>
 <% end %>
 
-<% if @page.sort_desc_party_of_people_and_size.length > 0 %>
-<div class="page-section page-section--grey" id="seat-count">
-  <div class="container">
-      <div class="party-groupings__title text-center">
-          <h3>Party Groupings</h3>
-      </div>
-      <ul class="grid-list grid-list--vertically-center">
-        <% @page.sort_desc_party_of_people_and_size.each do |party, seats| %>
-            <li id="party-type"><div class="avatar-unit">
-                <span class="avatar"><i class="glyphicon glyphicon-user"></i></span>
-                <h4><%= party %></h4>
-                <p><span class="seatcount"><%= seats %></span> <%= seats > 1 ? "seats" : "seat"  %></p>
-            </div></li>
-        <% end %>  
-      </ul>
+<% if @page.people_by_position.length > 0 %>
+  <div class="content_box">
+    <div class="party-groupings__title text-center">
+      <h3><span class="avatar"><i class="glyphicon glyphicon-user"></i></span> Principal Officers</h3>
+    </div>
+    <div class="principal-people-accordion people-accordion ui-widget-content ui-accordion ui-widget ui-helper-reset">
+      <%= erb :_list_of_principal_people, :locals => { :people => @page.people_by_position } %> 
+    </div>
   </div>
-</div>
+<% end %>
+
+<% if @page.sort_desc_party_of_people_and_size.length > 0 %>
+  <div class="page-section page-section--grey" id="seat-count">
+    <div class="container">
+        <div class="party-groupings__title text-center">
+            <h3>Party Groupings</h3>
+        </div>
+        <ul class="grid-list grid-list--vertically-center">
+          <% @page.sort_desc_party_of_people_and_size.each do |party, seats| %>
+              <li id="party-type"><div class="avatar-unit">
+                  <span class="avatar"><i class="glyphicon glyphicon-user"></i></span>
+                  <h4><%= party %></h4>
+                  <p><span class="seatcount"><%= seats %></span> <%= seats > 1 ? "seats" : "seat"  %></p>
+              </div></li>
+          <% end %>  
+        </ul>
+    </div>
+  </div>
 <% end %>
 
 <div class="content_box">
@@ -41,5 +52,5 @@
 </div>
 
 <% content_for :footer_extra_js do %>
-    <script src="/javascripts/accordion.js"></script>
+  <script src="/javascripts/accordion.js"></script>
 <% end %>
