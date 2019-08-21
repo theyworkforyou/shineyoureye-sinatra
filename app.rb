@@ -213,6 +213,11 @@ get '/position/executive-governor/' do
   erb :people
 end
 
+get '/position/representative/' do
+  @redirect_to = '/position/federal-representatives/'
+  erb :redirect, layout: false
+end
+
 get '/person/:slug/contact_details/' do |slug|
   @redirect_to = "/person/#{slug}/"
   erb :redirect, layout: false
