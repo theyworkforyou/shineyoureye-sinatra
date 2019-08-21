@@ -32,8 +32,8 @@ module Page
     end
 
     def people_by_position
-      people_by_position = people.reject { |p| p.position.nil? }
-                                 .sort_by { |p| p.position_order.to_i }
+      @people_by_position = people.reject { |p| p.position.nil? }
+                                  .sort_by { |p| p.position_order.to_i }
     end
 
     def sort_desc_party_of_people_and_size

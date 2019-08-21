@@ -16,8 +16,13 @@
 
           <% if @page.person.constituency %>
             <h2>Constituency</h2>
-            <p class="person__party"><%= @page.person.constituency %></p>
-          <% end %> 
+            <p class="person__constituency"><%= @page.person.constituency %></p>
+          <% end %>
+
+          <% if @page.person.position %>
+            <h2>Leadership Position</h2>
+            <p class="person__position"><%= @page.person.position %></p>
+          <% end %>          
 
           <% if @page.person.area %>
             <h2><%= @page.person.area.type_name %></h2>

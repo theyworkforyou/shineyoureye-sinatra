@@ -11,7 +11,7 @@ describe 'Person Page' do
   end
 
   it 'displays the position' do
-    subject.css('.person__key-info h2').first.text.must_equal('Representative')
+    subject.css('.person__key-info h2').first.text.must_equal('Federal Representative')
   end
 
   it 'displays the person name' do
@@ -35,6 +35,14 @@ describe 'Person Page' do
     it 'shows a picture anyway (empty avatar)' do
       subject.css('img.person__image/@src').first.text
              .must_equal('/images/person-250x250.png')
+    end
+  end
+
+  describe 'when person have a leadership position' do
+    before { get '/person/orji-uzor-kalu/' }
+
+    it 'shows a valid leadership position' do
+      subject.css('.person__position').first.text.must_equal('Chief Whip')
     end
   end
 
