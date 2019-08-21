@@ -44,7 +44,7 @@ describe 'Homepage' do
 
     it 'displays all types of people' do
       subject.css('.homepage__reps .btn-default').map(&:text).map(&:strip).uniq.sort
-             .must_equal(%w[Governors Honorables Representatives Senators])
+             .must_equal(%w[Federal\ Representatives Governors Senators State\ Representatives])
     end
 
     it 'displays a link to Governors' do
@@ -63,15 +63,15 @@ describe 'Homepage' do
 
     it 'displays link to Representatives' do
       representatives.css('.btn-default/@href')[0].text
-                     .must_equal('/position/representative/')
+                     .must_equal('/position/federal-representatives/')
       representatives.css('.btn-default')[0].text.strip
-                     .must_equal('Representatives')
+                     .must_equal('Federal Representatives')
     end
     it 'displays link to Honorables' do
       honorables.css('.btn-default/@href')[0].text
-                .must_equal('/position/state-legislators/')
+                .must_equal('/position/state-representatives/')
       honorables.css('.btn-default')[0].text.strip
-                .must_equal('Honorables')
+                .must_equal('State Representatives')
     end
   end
 

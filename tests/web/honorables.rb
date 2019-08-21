@@ -2,8 +2,8 @@
 
 require 'test_helper'
 
-describe 'Honorable' do
-  before { get '/position/state-legislators/' }
+describe 'Honorables Page' do
+  before { get '/position/state-representatives/' }
   subject { Nokogiri::HTML(last_response.body) }
 
   it 'shows the title' do

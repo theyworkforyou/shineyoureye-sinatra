@@ -3,7 +3,7 @@
 require 'test_helper'
 
 describe 'List of Representatives' do
-  before { get '/position/representative/' }
+  before { get '/position/federal-representatives/' }
   subject { Nokogiri::HTML(last_response.body) }
 
   it 'shows the title' do
@@ -87,6 +87,66 @@ describe 'List of Representatives' do
 
     it 'displays party name' do
       person.css('.test-party').text.must_equal('All Progressives Congress')
+    end
+  end
+
+  describe 'principal person list' do
+    it 'lists all representative leaders' do
+      subject.css('.people-list__item').count.must_equal(9)
+    end
+
+    let(:people) { subject.css('.people-list').first }
+
+    it 'displays representatives by their leadership ranks' do
+      people.css('.people-list__item').count.must_equal(9)
+      people.css('.col-md-4').first.attr('id')
+            .must_equal('femi-gbajabiamila')
+      people.css('.col-md-4').last.attr('id')
+            .must_equal('adekoya-adesegun')
+    end
+  end
+
+  describe 'principal person item' do
+    let(:person) { subject.css('#peter-ohiozoje-akpatason').first }
+
+    it 'links to the person page' do
+      person.css('.people-list__item__photo').first.parent.attr('href')
+            .must_equal('/person/peter-ohiozoje-akpatason/')
+      person.css('.people-list__item__name').first.parent.attr('href')
+            .must_equal('/person/peter-ohiozoje-akpatason/')
+    end
+
+    describe 'when person has an image' do
+      it 'points to the right path' do
+        person.css('.people-list__item__photo/@src').first.text
+              .must_include('/260593f3-76a9-4df0-999a-25cc14cd066b/100x100.jpeg')
+      end
+
+      it 'has an srcset' do
+        person.css('.people-list__item__photo/@srcset').first.text
+              .must_include('/260593f3-76a9-4df0-999a-25cc14cd066b/100x100.jpeg')
+      end
+
+      it 'has the name as alternative text' do
+        person.css('.people-list__item__photo/@alt').first.text
+              .must_equal('Ohiozojeh Akpatason')
+      end
+    end
+
+    it 'displays the representative name' do
+      person.css('.people-list__item__name').text.must_equal('Ohiozojeh Akpatason')
+    end
+
+    it 'links to area page' do
+      person.css('.test-area/@href').text.must_equal('/place/akoko-edo/')
+    end
+
+    it 'displays area name' do
+      person.css('.test-area').text.must_equal('Akoko Edo')
+    end
+
+    it 'displays leadership position' do
+      person.css('.test-position').text.must_equal('Deputy House Leader')
     end
   end
 end
