@@ -45,6 +45,10 @@ module Mapit
       "#{baseurl}#{pombola_slug}/"
     end
 
+    def place_url
+      "#{pombola_slug}/"
+    end
+
     private
 
     attr_reader :mapit_area_data, :pombola_slug, :baseurl

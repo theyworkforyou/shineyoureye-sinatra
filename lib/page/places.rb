@@ -10,8 +10,16 @@ module Page
       @people_by_legislature = people_by_legislature
     end
 
+    def place_and_people_grouped_by_state
+      people_by_legislature.find_people_grouped_by_state
+    end
+
     def legislature_name
       people_by_legislature.legislature_name
+    end
+
+    def filter_places_with_all_legislature
+      places.find_all { |p| place_and_people_grouped_by_state.include? p.name }
     end
 
     def current_term_start_year

@@ -25,6 +25,15 @@ module MembershipCSV
       mapit_id_to_person[mapit_id.to_s] || []
     end
 
+    def find_people_grouped_by_state
+      people_per_legislature.group_by { |person| person.area.state.name }
+                            .sort.to_h
+    end
+
+    def find_all_by_place(place)
+      find_people_grouped_by_state.find_all { |p, _people| p == place }
+    end
+
     def current_term_start_date
       legislature.latest_term_start_date
     end
@@ -51,6 +60,10 @@ module MembershipCSV
 
     def all_people
       @all_people ||= read_with_headers.map { |row| create_person(remove_empty_cells(row)) }
+    end
+
+    def people_per_legislature
+      @people_per_legislature ||= all_people.reject { |p| p.area.nil? }
     end
 
     def remove_empty_cells(row)

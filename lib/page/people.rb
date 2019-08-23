@@ -27,6 +27,10 @@ module Page
                                .sort
     end
 
+    def people_by_identified_state(state)
+      people_by_legislature.find_all_by_place(state)
+    end
+
     def party_of_people_and_size
       people_by_party.map { |party, p| [party, p.size] }
     end

@@ -194,8 +194,25 @@ get '/place/:slug/' do |slug|
 end
 
 get '/position/state-representatives/' do
-  @page = Page::People.new(title: 'State Houses of Assembly', people_by_legislature: honorables)
-  erb :people
+  @page = Page::Places.new(
+    title: 'State Houses of Assembly',
+    places: mapit.places_of_type('STA'),
+    people_by_legislature: honorables
+  )
+
+  erb :states
+end
+
+get '/position/state-representative/' do
+  @redirect_to = '/position/state-representatives/'
+  erb :redirect, layout: false
+end
+
+get '/position/state-representatives/:state/' do |slug|
+  @area = mapit.area_from_pombola_slug(slug)
+  pass unless @area
+  @page = Page::People.new(title: 'State House of Assembly', people_by_legislature: honorables)
+  erb :list_of_state_people
 end
 
 get '/position/federal-representatives/' do
