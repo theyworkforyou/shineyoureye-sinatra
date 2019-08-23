@@ -6,7 +6,7 @@ AllCops:
     - vendor/**/*
 
 Metrics/LineLength:
-  Max: 140
+  Max: 180
 
 Metrics/ParameterLists:
   Max: 10
