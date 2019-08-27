@@ -39,7 +39,7 @@
                       <img <% if i == 0 %>src<% else %>data-src<% end %>="<%= person.medium_image_url %>">
                   </a>
                   <p>
-                    <strong><%= person.name.strip %></strong>,
+                    <strong><%= person.name.strip %></strong><br>
                     <%= person.constituency || person.party_name %>,
                     <%= person.area.name if person.area %>
                     <%= 'LGA' if person.constituency %>

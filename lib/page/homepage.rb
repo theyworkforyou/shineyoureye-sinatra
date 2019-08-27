@@ -29,6 +29,10 @@ module Page
       date.strftime('%B %-d, %Y')
     end
 
+    def truncate_text(body, count, length_in_chars = false)
+      HTML_Truncator.truncate(body, count, length_in_chars: length_in_chars)
+    end
+
     def government_representative_types
       [
         build_representative_type(governors, 'Governors', '/position/executive-governor/'),
@@ -54,7 +58,12 @@ module Page
     end
 
     def sample_collection(collection, count = 1)
-      collection.find_all.reject { |item| item.image.nil? }.sample(count)
+      collection.find_all.reject do |item|
+        item.image.nil? ||
+          truncate_text(item.area.name, 15, true).html_truncated? ||
+          truncate_text(item.area.name, 3).html_truncated?
+      end
+                .sample(count)
     end
 
     def build_representative_type(collection, link_text, link_url)
