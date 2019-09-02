@@ -73,7 +73,9 @@
         margin-bottom: 1em;
     }
 
-    p {
-        min-height: 50px;
-    }
+    @media (min-width: $screen-md-min) {
+        p {
+            min-height: 70px;
+        }
+    }    
 }

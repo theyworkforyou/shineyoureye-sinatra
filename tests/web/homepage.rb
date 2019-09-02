@@ -7,10 +7,10 @@ describe 'Homepage' do
   subject { Nokogiri::HTML(last_response.body) }
 
   describe 'featured people' do
-    let(:governors) { subject.css('.homepage__reps .col-sm-12')[0] }
-    let(:senators) { subject.css('.homepage__reps .col-sm-12')[1] }
-    let(:representatives) { subject.css('.homepage__reps .col-sm-12')[2] }
-    let(:honorables) { subject.css('.homepage__reps .col-sm-12')[3] }
+    let(:governors) { subject.css('.homepage__reps .col-lg-3')[0] }
+    let(:senators) { subject.css('.homepage__reps .col-lg-3')[1] }
+    let(:representatives) { subject.css('.homepage__reps .col-lg-3')[2] }
+    let(:honorables) { subject.css('.homepage__reps .col-lg-3')[3] }
 
     it 'displays a medium size image for the first person of each type' do
       governors.css('.homepage__reps__rep').first.css('img/@src').text

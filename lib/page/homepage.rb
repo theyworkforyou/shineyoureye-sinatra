@@ -61,7 +61,7 @@ module Page
       collection.find_all.reject do |item|
         item.image.nil? ||
           truncate_text(item.area.name, 15, true).html_truncated? ||
-          truncate_text(item.area.name, 3).html_truncated?
+          truncate_text(item.party_name, 3).html_truncated?
       end
                 .sample(count)
     end

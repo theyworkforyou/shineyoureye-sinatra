@@ -28,32 +28,28 @@
   <div class="container">
     <h2>Find more information about your government representatives</h2>
     <div class="row">
-      <div id="lightSlider">
-        <% @page.government_representative_types.each do |type| %>
-          <div>
-            <div class="col-sm-12">
-              <div class="js-show-random-child">
-              <% type.people.each_with_index do |person, i| %>
-                <div class="homepage__reps__rep <%= 'hidden' unless i == 0 %>">
-                  <a href="<%= person.url %>">
-                      <img <% if i == 0 %>src<% else %>data-src<% end %>="<%= person.medium_image_url %>">
-                  </a>
-                  <p>
-                    <strong><%= person.name.strip %></strong><br>
-                    <%= person.constituency || person.party_name %>,
-                    <%= person.area.name if person.area %>
-                    <%= 'LGA' if person.constituency %>
-                  </p>
-                </div>
-              <% end %>
-              </div>
-              <a class="btn btn-default" href="<%= type.link_url %>">
-                  <strong><%= type.link_text %></strong>
+      <% @page.government_representative_types.each do |type| %>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+          <div class="js-show-random-child">
+          <% type.people.each_with_index do |person, i| %>
+            <div class="homepage__reps__rep <%= 'hidden' unless i == 0 %>">
+              <a href="<%= person.url %>">
+                  <img <% if i == 0 %>src<% else %>data-src<% end %>="<%= person.medium_image_url %>">
               </a>
+              <p>
+                <strong><%= person.name.strip %></strong><br>
+                <%= person.constituency || person.party_name %>,
+                <%= person.area.name if person.area %>
+                <%= 'LGA' if person.constituency %>
+              </p>
             </div>
+          <% end %>
           </div>
-        <% end %>
-      </div>
+          <a class="btn btn-default" href="<%= type.link_url %>">
+              <strong><%= type.link_text %></strong>
+          </a>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
@@ -92,10 +88,4 @@
 
 <% content_for :footer_extra_js do %>
   <script src="/javascripts/show-random-child.js"></script>
-  <script type="text/javascript">
-  $(function() {
-      const slider = $("#lightSlider").lightSlider();
-      slider;
-    });
-  </script>  
 <% end %>

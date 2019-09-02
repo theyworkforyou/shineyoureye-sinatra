@@ -151,6 +151,9 @@ describe 'Person Page' do
       subject.css('.person-summary li').last.text
              .must_include('Committee Member at FCT Area Councils')
     end
+    it 'edit link to be removed' do
+      subject.css('.person-edit-link').text.wont_include('Edit')
+    end
   end
 
   describe 'when person has no summary' do
