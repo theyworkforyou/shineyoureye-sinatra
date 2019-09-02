@@ -30,9 +30,9 @@ describe 'List of Representatives' do
 
     it 'displays representatives alphabetically inside each state' do
       state.css('.contact-list__item').count.must_equal(8)
-      state.css('.col-md-4').first.attr('id')
+      state.css('.col-lg-4').first.attr('id')
            .must_equal('benjamin-kalu')
-      state.css('.col-md-4').last.attr('id')
+      state.css('.col-lg-4').last.attr('id')
            .must_equal('uko-ndokwe-nkole')
     end
   end
@@ -99,9 +99,9 @@ describe 'List of Representatives' do
 
     it 'displays representatives by their leadership ranks' do
       people.css('.people-list__item').count.must_equal(9)
-      people.css('.col-md-4').first.attr('id')
+      people.css('.col-lg-4').first.attr('id')
             .must_equal('femi-gbajabiamila')
-      people.css('.col-md-4').last.attr('id')
+      people.css('.col-lg-4').last.attr('id')
             .must_equal('adekoya-adesegun')
     end
   end

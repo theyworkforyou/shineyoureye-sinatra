@@ -30,9 +30,9 @@ describe 'Senate' do
 
     it 'displays senators alphabetically inside each state' do
       state.css('.contact-list__item').count.must_equal(3)
-      state.css('.col-md-4').first.attr('id')
+      state.css('.col-lg-4').first.attr('id')
            .must_equal('abaribe-enyinnaya-harcourt')
-      state.css('.col-md-4').last.attr('id')
+      state.css('.col-lg-4').last.attr('id')
            .must_equal('theodore-ahamefule-orji')
     end
   end
@@ -99,9 +99,9 @@ describe 'Senate' do
 
     it 'displays senators by their leadership ranks' do
       people.css('.people-list__item').count.must_equal(10)
-      people.css('.col-md-4').first.attr('id')
+      people.css('.col-lg-4').first.attr('id')
             .must_equal('lawan-ahmad-ibrahim')
-      people.css('.col-md-4').last.attr('id')
+      people.css('.col-lg-4').last.attr('id')
             .must_equal('sahabi-yau')
     end
   end

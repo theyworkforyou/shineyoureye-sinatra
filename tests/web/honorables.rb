@@ -35,9 +35,9 @@ describe 'Honorables Page' do
 
       it 'displays honorables alphabetically inside each state' do
         state.css('.contact-list__item').count.must_equal(40)
-        state.css('.col-md-4').first.attr('id')
+        state.css('.col-lg-4').first.attr('id')
              .must_equal('mudashiru-ajayi-obasa')
-        state.css('.col-md-4').last.attr('id')
+        state.css('.col-lg-4').last.attr('id')
              .must_equal('sangodara-rotimi')
       end
 
