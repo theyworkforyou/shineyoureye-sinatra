@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'test_helper'
 
 describe 'The Scraper Start Page' do
@@ -29,11 +30,18 @@ describe 'The Scraper Start Page' do
     refute_empty(subject.xpath('//a[@href="/person/abdukadir-rahis/experience/"]'))
   end
 
+  it 'must have links to the IDs <-> slugs CSV file' do
+    refute_empty(subject.xpath('//a[@href="/ids-and-slugs.csv"]'))
+  end
+
   it 'lists all available people' do
-    ep = 476
+    # senators list is 109
+    # representatives list is 360
+    ep = 469
     governors = 36
-    subject.xpath('//a[contains(@href, "/contact_details/")]').count.must_equal(ep + governors)
-    subject.xpath('//a[contains(@href, "/experience/")]').count.must_equal(ep + governors)
+    honorables = 40 + 26 + 30
+    subject.xpath('//a[contains(@href, "/contact_details/")]').count.must_equal(ep + governors + honorables)
+    subject.xpath('//a[contains(@href, "/experience/")]').count.must_equal(ep + governors + honorables)
   end
 
   it 'must have links to the old place/people route' do

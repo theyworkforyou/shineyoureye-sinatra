@@ -2,6 +2,15 @@ body {
     background-color: $site-footer-background-color;
 }
 
+.panel {
+    .panel-heading {
+        h3,
+        .panel-title {
+            word-wrap: break-word;
+        }
+    }
+}
+
 #page {
     background-color: #fff;
 }
@@ -11,14 +20,6 @@ body {
 
     background-color: $site-footer-background-color;
     color: $site-footer-text-color;
-
-    h3 {
-        margin-bottom: 1em;
-
-        @media (min-width: $screen-sm-min) {
-            margin-top: 0;
-        }
-    }
 
     .btn-default {
         color: inherit;
@@ -34,27 +35,45 @@ body {
             border-color: mix($site-footer-background-color, $site-footer-text-color, 50%);
         }
     }
-}
 
-.site-footer__primary {
-    @extend .col-sm-7;
+    a {
+        text-decoration: none;
+    }
 
-    h3 {
-        margin-top: 0;
+    a[href*="twitter.com"],
+    a[href^="mailto:"] {
+        &:before {
+            display: inline-block;
+            content: "";
+            margin-right: 0.5em;
+            vertical-align: -0.2em;
+            width: 20px;
+            height: 16px;
+            background-color: transparent;
+            background-size: 20px 16px;
+        }
+    }
+
+    a[href*="twitter.com"] {
+        &:before {
+            @include high-dpi-background-image('../images/twitter-icon');
+            margin-right: 0.3em;
+        }
+    }
+
+    a[href^="mailto:"] {
+        &:before {
+            @include high-dpi-background-image('../images/email-icon');
+        }
     }
 }
 
 .site-footer__secondary {
-    @extend .col-sm-4;
-    @extend .col-sm-push-1;
-    @extend .col-md-3;
-    @extend .col-md-push-2;
-
     ul {
-        @extend .list-unstyled;
+        margin-top: 1.5em;
+    }
 
-        li + li {
-            margin-top: 0.5em;
-        }
+    li {
+        margin-bottom: 0.5em;
     }
 }

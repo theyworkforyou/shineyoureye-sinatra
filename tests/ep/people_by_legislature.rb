@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'test_helper'
 require_relative '../shared_examples/people_interface_test'
 require_relative '../../lib/ep/people_by_legislature'
@@ -15,7 +16,7 @@ describe 'EP::PeopleByLegislature' do
   end
 
   it 'finds all people' do
-    people.find_all.count.must_equal(364)
+    people.find_all.count.must_equal(370)
   end
 
   it 'finds all people sorted by name' do
@@ -26,8 +27,13 @@ describe 'EP::PeopleByLegislature' do
     people.find_all.first.id.must_equal('b2a7f72a-9ecf-4263-83f1-cb0f8783053c')
   end
 
-  it 'finds a single person by slug' do
-    people.find_single('abdullahi-muhammed-wamakko').name.must_equal('ABDULLAHI MOHAMMED')
+  # it 'finds a single person by slug' do
+  #   people.find_single('abdullahi-muhammed-wamakko').name.must_equal('ABDULLAHI MOHAMMED')
+  # end
+
+  it 'throws an exception if a slug is missing' do
+    error = assert_raises(RuntimeError) { people.find_single('trigger') }
+    error.message.must_include('ABDUKADIR RAHIS')
   end
 
   it 'knows the start date of the current term' do
@@ -54,6 +60,6 @@ describe 'EP::PeopleByLegislature' do
   end
 
   it 'finds all people in a mapit area' do
-    people.find_all_by_mapit_area(1).count.must_equal(364)
+    people.find_all_by_mapit_area(1).count.must_equal(370)
   end
 end

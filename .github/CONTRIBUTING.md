@@ -27,7 +27,7 @@ future. Follow good practices, SOLID principles and design
 patterns.
 
 Reading through the
-[document explaining our design decisions](https://github.com/theyworkforyou/shineyoureye-sinatra/blob/master/.github/PULL_REQUEST_TEMPLATE.md)
+[document explaining our design decisions](https://github.com/theyworkforyou/shineyoureye-sinatra/blob/master/.github/design-decisions.md)
 for this project should also be helpful.
 
 
@@ -165,8 +165,6 @@ keep adding things here, for the newcomers.
   adding a new fake is worth checking that it doesn't exist
   there :smiley:
 
-
-## Questions
-
-Please write to us at
-[parliaments@mysociety.org](mailto:parliaments@mysociety.org).
+* Persons should always have a slug. If they don't, or if the
+  slug is not unique, that should be fixed upstream. The code
+  will throw an error.

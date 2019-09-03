@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Page
   class Info
     def initialize(static_page:)

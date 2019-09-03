@@ -1,15 +1,15 @@
 .page-section {
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
 
     @media (min-height: 700px) {
-        padding-top: 3em;
-        padding-bottom: 3em;
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
     }
 
     @media (min-height: 800px) {
-        padding-top: 4em;
-        padding-bottom: 4em;
+        padding-top: 2em;
+        padding-bottom: 2em;
     }
 
     & > .container > {

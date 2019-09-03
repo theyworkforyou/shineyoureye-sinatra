@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'test_helper'
 require_relative '../../lib/ep/people_by_legislature'
 require_relative '../../lib/page/person'
@@ -6,7 +7,7 @@ require_relative '../../lib/page/person'
 describe 'Page::Person' do
   let(:page) do
     Page::Person.new(
-      person: FakePerson.new(nil, 'ABDUKADIR RAHIS'),
+      person: FakePerson.new(nil, 'Ahmed Idris'),
       position: 'Position',
       summary_doc: FakeSummary.new('irrelevant', '<p>foo</p>')
     )
@@ -17,11 +18,11 @@ describe 'Page::Person' do
   end
 
   it 'has a page title' do
-    page.title.must_equal('ABDUKADIR RAHIS')
+    page.title.must_equal('Ahmed Idris')
   end
 
   it 'has a social media share name' do
-    page.share_name.must_equal('ABDUKADIR RAHIS')
+    page.share_name.must_equal('Ahmed Idris')
   end
 
   it 'has a summary' do

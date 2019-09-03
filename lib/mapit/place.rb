@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Mapit
   class Place
     attr_accessor :parent
@@ -24,8 +25,28 @@ module Mapit
 
     alias child_area? parent
 
+    def state
+      if type_name == 'State'
+        self
+      elsif parent && parent.type_name == 'State'
+        parent
+      end
+    end
+
+    def thumbnail_url
+      if File.exist?("public/images/thumbnails/#{pombola_slug}.jpg")
+        "/images/thumbnails/#{pombola_slug}.jpg"
+      else
+        '/images/place-250x250.png'
+      end
+    end
+
     def url
       "#{baseurl}#{pombola_slug}/"
+    end
+
+    def place_url
+      "#{pombola_slug}/"
     end
 
     private

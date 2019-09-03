@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Page
   class Person
     attr_reader :person, :position

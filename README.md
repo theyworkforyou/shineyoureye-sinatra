@@ -3,14 +3,9 @@
 
 # Shine Your Eye (Sinatra)
 
-This project is a proof of concept that aims to make it easy to produce
-lightweight parliamentary monitoring sites. It uses EveryPolitician data,
-user-editable data (through [prose.io](http://prose.io/)), and CSV data.
-It doesn't use a database.
-
-It is meant to be an exemplar. A generic core could be extracted from it,
-leaving ShineYourEye specifics out, so that a parliament-monitoring site can be
-implemented for other countries as well, using this approach.
+This project is a lightweight parliamentary monitoring site for Nigeria. It
+uses EveryPolitician data, user-editable data (through
+[prose.io](http://prose.io/)), and CSV data. It doesn't use a database.
 
 ## Approach
 
@@ -20,9 +15,10 @@ The approach of this project is similar to
 * This is a Sinatra application that uses content produced by
 [prose.io](http://prose.io/) that is saved in
 [`shineyoureye-prose`](https://github.com/theyworkforyou/shineyoureye-prose).
-* A script pulls this content, runs the app and scrapes it.
-* Then pushes the scraped pages to the `gh-pages` branch of another repo,
-[`shineyoureye-static`](https://github.com/theyworkforyou/shineyoureye-static).
+* The [`bin/deploy`](bin/deploy) script pulls this content, runs the app and scrapes it.
+* The scraped pages are then pushed to the `gh-pages` branch of another repo,
+[`shineyoureye-static`](https://github.com/theyworkforyou/shineyoureye-static),
+  which is configured to serve it's content via [GitHub Pages](https://pages.github.com/).
 
 Non-technical users can use [prose.io](http://prose.io/) to add content to the
 prose repo. Then, whenever there is a change in that repo, the script runs,
@@ -37,10 +33,11 @@ from GitHub's free hosting.
 This project uses data from several different sources:
 
 * The basic details of current Senators and members of the House
-  of Representatives are from EveryPolitician. This
-  EveryPolitician data is acceessed using the
-  [everypolitician gem](https://github.com/everypolitician/everypolitician-ruby). The
-  data on Nigeria is sourced from:
+  of Representatives was generated from EveryPolitician. This
+  EveryPolitician data is accessed using the
+  [everypolitician gem](https://github.com/everypolitician/everypolitician-ruby).
+  The `bin/everypolitician-to-csv` script is used to convert the EveryPolitician
+  data to CSV format. The data on Nigeria is sourced from:
     * The National Assembly website http://www.nass.gov.ng/
     * The old Pombola-based ShineYourEye website's Popolo
       JSON dumps, via
@@ -55,10 +52,12 @@ This project uses data from several different sources:
        `parent_area` set to the appropriate state):
          * `mapit/sen_to_sta_area_ids_mapping.csv`
          * `mapit/fed_to_sta_area_ids_mapping.csv`
+         * `mapit/lga_to_sta_area_ids_mapping.csv`
      * Mappings between EveryPolitician area IDs and MapIt area
        IDs are stored in the repository:
          * `mapit/mapit_to_ep_area_ids_mapping_FED.csv`
          * `mapit/mapit_to_ep_area_ids_mapping_SEN.csv`
+         * `mapit/mapit_to_ep_area_ids_mapping_LGA.csv`
      * Mappings between the slugs used for places in the old
        Pombola-based ShineYourEye website and MapIt IDs are
        stored in the repository:
@@ -91,14 +90,14 @@ For example, if you are using
 [rbenv](https://cbednarski.com/articles/installing-ruby/):
 
 1. Install the right Ruby version. That would be the version specified at the
-beginning of the Gemfile. For example, if it was `ruby '2.3.1'`, you would type:
+beginning of the Gemfile. For example, if it was `ruby '2.5.3'`, you would type:
 ```bash
-rbenv install 2.3.1
+rbenv install 2.5.3
 rbenv rehash
 ```
 2. Then you would move to the root directory of this project and type:
 ```bash
-rbenv local 2.3.1
+rbenv local 2.5.3
 ruby -v
 ```
 

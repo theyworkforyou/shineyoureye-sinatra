@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Page
   class Posts
     attr_reader :title
@@ -14,6 +15,10 @@ module Page
 
     def format_date(date)
       date.strftime('%B %-d, %Y')
+    end
+
+    def post_excerpt(body)
+      HTML_Truncator.truncate(body, 80)
     end
 
     private

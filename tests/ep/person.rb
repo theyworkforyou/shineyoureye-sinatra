@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'test_helper'
 require_relative '../shared_examples/person_interface_test'
 require_relative '../../lib/ep/everypolitician_extensions'
@@ -99,7 +100,7 @@ describe 'EP::Person' do
 
   describe 'image' do
     it 'has an image' do
-      person.image.must_equal('http://www.nass.gov.ng/images/mps/852.jpg')
+      person.image.must_equal('https://www.nass.gov.ng/images/mps/852.jpg')
     end
 
     it 'returns nil if no image' do
@@ -154,7 +155,7 @@ describe 'EP::Person' do
 
   describe 'wikipedia url' do
     it 'has a Wikipedia url' do
-      person.wikipedia_url.must_equal('https://en.wikipedia.org/wiki/Abdulahi_Bala_Adamu')
+      person.wikipedia_url.must_equal('https://en.wikipedia.org/wiki/Abdullahi_Adamu')
     end
 
     it 'returns nil if no wikipedia url' do
@@ -205,9 +206,12 @@ describe 'EP::Person' do
       person.slug.must_equal('adamu-abdullahi')
     end
 
-    it 'dashifies the name if no slug' do
+    it 'returns nil if no slug' do
       person = ep_person('0b536a2c-2bc9-46a0-8d40-0deb9241cb31')
-      person.slug.must_equal('ahmad-abubakar')
+      def person.extra_slug
+        nil
+      end
+      assert_nil(person.slug)
     end
   end
 
@@ -227,7 +231,7 @@ describe 'EP::Person' do
 
   def latest_term
     legislature = nigeria_at_known_revision.legislature('Senate')
-    legislature.legislative_periods.sort_by(&:start_date).last
+    legislature.legislative_periods.max_by(&:start_date)
   end
 
   module Facebook

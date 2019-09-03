@@ -62,18 +62,27 @@ ln -snf "${BUILD_DIR##*/}" build/current
 SINATRA_PORT=9292
 SINATRA_BASE_URL="http://localhost:$SINATRA_PORT"
 
+server_pid_listening() {
+    lsof -n -iTCP:"$SINATRA_PORT" | egrep "\b${1}\b.*LISTEN" > /dev/null
+}
+
 start_sinatra() {
     # Start the Sinatra server in the background:
     bundle exec rackup > "$BUILD_DIR/sinatra.log" 2>&1 &
     SINATRA_PID=$!
     echo "Waiting for Sinatra to start..."
-    while kill -0 "$SINATRA_PID" 2> /dev/null && ! nc -z localhost "$SINATRA_PORT"
+    while kill -0 "$SINATRA_PID" 2> /dev/null && ! server_pid_listening "$SINATRA_PID"
     do
         sleep 1
     done
     # Make sure it's not an old one server still running:
     kill -0 "$SINATRA_PID" 2> /dev/null ||
-        { echo "Couldn't start Sinatra - is an old server running?"; exit 1; }
+        {
+            echo "Couldn't start Sinatra - is an old server running?"
+            echo "Server output was:"
+            cat "$BUILD_DIR/sinatra.log"
+            exit 1
+        }
     echo "done"
 }
 
@@ -119,11 +128,16 @@ deploy_site() {
                 fi
             fi
         done
-        git -c "user.name=Democracy Sites Team" -c "user.email=parliaments@mysociety.org" commit -m "Automated commit of generated static site data
+        if [ -n "$(git status --porcelain)" ]
+        then
+            git -c "user.name=Democracy Sites Team" -c "user.email=parliaments@mysociety.org" commit -m "Automated commit of generated static site data
 
-The shineyoureye-sinatra version was: $PROSE_VERSION
-The shineyoureye-prose version was: $SYE_SINATRA_VERSION"
-        git push origin HEAD
+The shineyoureye-sinatra version was: $SYE_SINATRA_VERSION
+The shineyoureye-prose version was: $PROSE_VERSION"
+            git push origin HEAD
+        else
+            echo "There were no changes to deploy!"
+        fi
     )
 }
 

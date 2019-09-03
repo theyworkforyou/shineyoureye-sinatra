@@ -1,12 +1,14 @@
 # frozen_string_literal: true
+
 require_relative '../person_proxy_images'
 require_relative '../person_social'
-require 'babosa'
+require_relative '../person_slug'
 
 module MembershipCSV
   class Person
-    def initialize(person:, mapit:, baseurl:, identifier_scheme:)
+    def initialize(person:, legislature_slug:, mapit:, baseurl:, identifier_scheme:)
       @person = person
+      @legislature_slug = legislature_slug
       @mapit = mapit
       @baseurl = baseurl
       @identifier_scheme = identifier_scheme
@@ -14,6 +16,7 @@ module MembershipCSV
 
     include PersonProxyImages
     include PersonSocial
+    include PersonSlug
 
     def id
       person['id']
@@ -21,6 +24,10 @@ module MembershipCSV
 
     def name
       person['name']
+    end
+
+    def official_name
+      name.split(' ').first << ' ' << name.split(' ').last
     end
 
     def image
@@ -32,7 +39,7 @@ module MembershipCSV
     end
 
     def phone
-      person['phone'].split(';').join(', ') if person['phone']
+      person['phone']&.split(';')&.join(', ')
     end
 
     def email
@@ -48,11 +55,31 @@ module MembershipCSV
     end
 
     def wikipedia_url
-      nil
+      person['wikipedia_url']
+    end
+
+    def home_address
+      person['postal_address']
+    end
+
+    def constituency
+      person['district']
+    end
+
+    def position
+      person['official_position']
+    end
+
+    def position_order
+      person['official_position_order']
     end
 
     def area
-      mapit.area_from_mapit_name(person['state'])
+      if person['mapit_id']
+        mapit.area_from_mapit_id(person['mapit_id'])
+      elsif person['state']
+        mapit.area_from_mapit_name(person['state'])
+      end
     end
 
     def party_id
@@ -63,8 +90,8 @@ module MembershipCSV
       person['party']
     end
 
-    def slug
-      person["identifier__#{identifier_scheme}"] || slugify_name
+    def source_slug
+      person["identifier__#{identifier_scheme}"]
     end
 
     def url
@@ -73,19 +100,14 @@ module MembershipCSV
 
     private
 
-    attr_reader :person, :mapit, :baseurl, :identifier_scheme
+    attr_reader :person, :legislature_slug, :mapit, :baseurl, :identifier_scheme
 
     def first(values)
       values.split(';').first
     end
 
     def proxy_image_base_url
-      'https://raw.githubusercontent.com/theyworkforyou/shineyoureye-images' \
-      "/gh-pages/Governors/#{id}/"
-    end
-
-    def slugify_name
-      name.to_slug.normalize.to_s if name
+      "https://theyworkforyou.github.io/shineyoureye-images/#{legislature_slug}/#{id}/"
     end
   end
 end

@@ -1,13 +1,13 @@
 var LeafletMap = {
   mapId: 'map-canvas',
-  tileURL: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+  tileURL: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
   initialZoom: 8
 };
 
 LeafletMap.options = {
   minZoom: 0,
   maxZoom: 18,
-  attribution: 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+  attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
   errorTileUrl: '/images/place-250x250.png'
 };
 

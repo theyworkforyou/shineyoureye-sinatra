@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'test_helper'
 require_relative '../shared_examples/person_interface_test'
 require_relative '../../lib/membership_csv/person'
@@ -183,12 +184,12 @@ describe 'MembershipCSV::Person' do
       person.slug.must_equal('okezie-ikpeazu')
     end
 
-    it 'dashifies name if no slug' do
+    it 'returns nil if no slug' do
       person = morph_person(
         'name' => '$%^a&* /\b:;',
         'identifier__shineyoureye' => nil
       )
-      person.slug.must_equal('a-b')
+      assert_nil(person.slug)
     end
   end
 
@@ -206,6 +207,7 @@ describe 'MembershipCSV::Person' do
   def morph_person(person_info)
     MembershipCSV::Person.new(
       person: person_info,
+      legislature_slug: 'Governors',
       mapit: FakeMapit.new(1),
       baseurl: '/baseurl/',
       identifier_scheme: 'shineyoureye'

@@ -1,13 +1,17 @@
 # frozen_string_literal: true
+
 require 'csv'
-require_relative 'person'
+require_relative '../people_slug_to_person'
 
 module MembershipCSV
   class People
-    def initialize(csv_filename:, person_factory:)
+    def initialize(csv_filename:, legislature:, person_factory:)
       @csv_filename = csv_filename
+      @legislature = legislature
       @person_factory = person_factory
     end
+
+    include PeopleSlugToPerson
 
     def find_all
       all_people.sort_by(&:name)
@@ -21,9 +25,30 @@ module MembershipCSV
       mapit_id_to_person[mapit_id.to_s] || []
     end
 
-    def current_term_start_date; end
+    def find_people_grouped_by_state
+      people_per_legislature.group_by { |person| person.area.state.name }
+                            .sort.to_h
+    end
 
-    def legislature_name; end
+    def find_all_by_place(place)
+      find_people_grouped_by_state.find_all { |p, _people| p == place }
+    end
+
+    def current_term_start_date
+      legislature.latest_term_start_date
+    end
+
+    def current_term_end_date
+      legislature.latest_term_end_date
+    end
+
+    def legislature_name
+      legislature.name
+    end
+
+    def legislature_term
+      legislature.assembly_term
+    end
 
     def featured_person(featured_summaries)
       featured_summaries.map { |summary| id_to_person[summary.slug] }.compact.first
@@ -31,10 +56,14 @@ module MembershipCSV
 
     private
 
-    attr_reader :csv_filename, :person_factory
+    attr_reader :csv_filename, :legislature, :person_factory
 
     def all_people
       @all_people ||= read_with_headers.map { |row| create_person(remove_empty_cells(row)) }
+    end
+
+    def people_per_legislature
+      @people_per_legislature ||= all_people.reject { |p| p.area.nil? }
     end
 
     def remove_empty_cells(row)
@@ -49,21 +78,18 @@ module MembershipCSV
       @id_to_person ||= all_people.map { |person| [person.id, person] }.to_h
     end
 
-    def slug_to_person
-      @slug_to_person ||= all_people.map { |person| [person.slug, person] }.to_h
-    end
-
     def mapit_id_to_person
       @mapit_id_to_person ||= all_people.each_with_object({}) { |person, memo| update_people_for_area(person, memo) }
     end
 
     def update_people_for_area(person, memo)
       return unless person.area
+
       (memo[person.area.id.to_s] ||= []) << person
     end
 
     def create_person(row)
-      person_factory.build_csv_person(row)
+      person_factory.build_csv_person(row, legislature.slug)
     end
   end
 end

@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'test_helper'
 
 describe 'Senatorial Districts Page' do
@@ -23,7 +24,7 @@ describe 'Senatorial Districts Page' do
   end
 
   it 'shows each district name' do
-    subject.css('.media-heading').last.text.must_equal('ZAMFARA WEST')
+    subject.css('.media-heading').last.text.must_equal('Zamfara West')
   end
 
   it 'links to each parent place' do
@@ -43,6 +44,6 @@ describe 'Senatorial Districts Page' do
   end
 
   it 'shows the current term start year' do
-    subject.css('.kind p').last.text.must_include('2015')
+    subject.css('.kind p').last.text.must_include('2019')
   end
 end

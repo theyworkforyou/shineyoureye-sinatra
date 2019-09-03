@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'test_helper'
 require_relative '../shared_examples/people_interface_test'
 require_relative '../../lib/membership_csv/people'
@@ -15,6 +16,7 @@ id3,name3,name-3,'
   let(:people) do
     MembershipCSV::People.new(
       csv_filename: new_tempfile(contents),
+      legislature: Legislature.new('Governors'),
       person_factory: FakePersonFactory.new(FakeMapit.new(1))
     )
   end
@@ -37,6 +39,33 @@ id3,name3,name-3,'
 
   it 'finds a single person by slug' do
     people.find_single('name-2').name.must_equal('name2')
+  end
+
+  it 'throws an exception if a slug is missing' do
+    contents = 'id,name,identifier__shineyoureye,phone
+id1,name1,,1234'
+    people = MembershipCSV::People.new(
+      csv_filename: new_tempfile(contents),
+      legislature: Legislature.new('Governors'),
+      person_factory: FakePersonFactory.new(FakeMapit.new(1))
+    )
+    error = assert_raises(RuntimeError) { people.find_single('trigger') }
+    error.message.must_include('name1')
+  end
+
+  it 'throws an exception if a slug is repeated' do
+    contents = 'id,name,identifier__shineyoureye,phone
+id1,name1,name-1,1234
+id2,name2,name-1,5678'
+    people = MembershipCSV::People.new(
+      csv_filename: new_tempfile(contents),
+      legislature: Legislature.new('Governors'),
+      person_factory: FakePersonFactory.new(FakeMapit.new(1))
+    )
+    error = assert_raises(RuntimeError) { people.find_single('name-1') }
+    error.message.must_include('name-1')
+    error.message.must_include('name1')
+    error.message.must_include('name2')
   end
 
   it 'does not know the start date of the current term' do

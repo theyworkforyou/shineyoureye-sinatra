@@ -1,8 +1,12 @@
 # frozen_string_literal: true
+
 require 'bootstrap-sass'
 require 'everypolitician'
+require 'html_truncator'
 require 'sinatra'
+require 'sinatra/content_for'
 
+require_relative 'lib/checks'
 require_relative 'lib/featured_person'
 require_relative 'lib/document/finder'
 require_relative 'lib/ep/people_by_legislature'
@@ -36,13 +40,15 @@ set :twitter_user, 'NGShineYourEye'
 mapit_mappings = Mapit::Mappings.new(
   parent_mapping_filenames: [
     'mapit/fed_to_sta_area_ids_mapping.csv',
-    'mapit/sen_to_sta_area_ids_mapping.csv'
+    'mapit/sen_to_sta_area_ids_mapping.csv',
+    'mapit/lga_to_sta_area_ids_mapping.csv'
   ],
   pombola_slugs_to_mapit_ids_filename:
     'mapit/pombola_place_slugs_to_mapit.csv',
   mapit_to_ep_areas_filenames: [
     'mapit/mapit_to_ep_area_ids_mapping_FED.csv',
-    'mapit/mapit_to_ep_area_ids_mapping_SEN.csv'
+    'mapit/mapit_to_ep_area_ids_mapping_SEN.csv',
+    'mapit/mapit_to_ep_area_ids_mapping_LGA.csv'
   ]
 )
 
@@ -50,49 +56,51 @@ mapit_mappings = Mapit::Mappings.new(
 mapit = Mapit::Wrapper.new(
   mapit_mappings: mapit_mappings,
   baseurl: '/place/',
-  area_types: %w(FED SEN STA),
+  area_types: %w[LGA FED SEN STA],
   data_directory: 'mapit'
 )
 
 person_factory = Factory::Person.new(mapit: mapit, baseurl: '/person/', identifier_scheme: 'shineyoureye')
 
+TENURE_TERM = '9th National Assembly of Nigeria'
+Legislature = Struct.new(:slug, :name, :latest_term_start_date, :latest_term_end_date, :assembly_term)
 # Assemble data on the members of the various legislatures we support:
 governors = MembershipCSV::People.new(
   csv_filename: 'morph/nigeria-state-governors.csv',
+  legislature: Legislature.new('Governors'),
   person_factory: person_factory
 )
-representatives = EP::PeopleByLegislature.new(
-  legislature: settings.index.country('Nigeria').legislature('Representatives'),
+representatives = MembershipCSV::People.new(
+  csv_filename: 'data/representatives.csv',
+  legislature: Legislature.new('Representatives', 'House of Representatives', Date.parse('2019-06-11'), '- current', TENURE_TERM),
   person_factory: person_factory
 )
-senators = EP::PeopleByLegislature.new(
-  legislature: settings.index.country('Nigeria').legislature('Senate'),
+senators = MembershipCSV::People.new(
+  csv_filename: 'data/senate.csv',
+  legislature: Legislature.new('Senate', 'Senate', Date.parse('2019-06-11'), '- current', TENURE_TERM),
   person_factory: person_factory
 )
+honorables = MembershipCSV::People.new(
+  csv_filename: 'data/honorables.csv',
+  legislature: Legislature.new('Honorables', 'House of Assembly', Date.parse('2019-06-11'), '- current'),
+  person_factory: person_factory
+)
+
+raise_if_missing_slugs(governors, representatives, senators, honorables)
+
+all_people = representatives.find_all + senators.find_all + governors.find_all + honorables.find_all
 
 get '/' do
   posts_finder = Document::Finder.new(pattern: posts_pattern, baseurl: '/blog/')
   events_finder = Document::Finder.new(pattern: events_pattern, baseurl: '/events/')
-  summaries_finder = Document::Finder.new(pattern: summaries_pattern, baseurl: '')
-  featured_summaries = summaries_finder.find_featured
-  people = [
-    PageFragment::FeaturedPerson.new(
-      governors.featured_person(featured_summaries),
-      'Governors',
-      '/position/executive-governor/'
-    ),
-    PageFragment::FeaturedPerson.new(
-      senators.featured_person(featured_summaries),
-      'Senators',
-      '/position/senator/'
-    ),
-    PageFragment::FeaturedPerson.new(
-      representatives.featured_person(featured_summaries),
-      'Representatives',
-      '/position/representative/'
-    )
-  ]
-  @page = Page::Homepage.new(posts: posts_finder.find_all, events: events_finder.find_all, featured_people: people)
+  @page = Page::Homepage.new(
+    posts: posts_finder.find_all,
+    events: events_finder.find_all,
+    governors: governors,
+    senators: senators,
+    representatives: representatives,
+    honorables: honorables
+  )
   erb :homepage
 end
 
@@ -171,6 +179,7 @@ get '/place/:slug/' do |slug|
   area = mapit.area_from_pombola_slug(slug)
   pass unless area
   people = {
+    'Local Government Area' => honorables,
     'Federal Constituency' => representatives,
     'Senatorial District' => senators,
     'State' => governors
@@ -184,19 +193,46 @@ get '/place/:slug/' do |slug|
   erb :place
 end
 
-get '/position/representative/' do
-  @page = Page::People.new(title: 'Federal Representative', people_by_legislature: representatives)
+get '/position/state-representatives/' do
+  @page = Page::Places.new(
+    title: 'State Houses of Assembly',
+    places: mapit.places_of_type('STA'),
+    people_by_legislature: honorables
+  )
+
+  erb :states
+end
+
+get '/position/state-representative/' do
+  @redirect_to = '/position/state-representatives/'
+  erb :redirect, layout: false
+end
+
+get '/position/state-representatives/:state/' do |slug|
+  @area = mapit.area_from_pombola_slug(slug)
+  pass unless @area
+  @page = Page::People.new(title: 'State House of Assembly', people_by_legislature: honorables)
+  erb :list_of_state_people
+end
+
+get '/position/federal-representatives/' do
+  @page = Page::People.new(title: 'House of Representatives', people_by_legislature: representatives)
   erb :people
 end
 
 get '/position/senator/' do
-  @page = Page::People.new(title: 'Senator', people_by_legislature: senators)
+  @page = Page::People.new(title: 'Senators', people_by_legislature: senators)
   erb :people
 end
 
 get '/position/executive-governor/' do
-  @page = Page::People.new(title: 'Executive Governor', people_by_legislature: governors)
+  @page = Page::People.new(title: 'Executive Governors', people_by_legislature: governors)
   erb :people
+end
+
+get '/position/representative/' do
+  @redirect_to = '/position/federal-representatives/'
+  erb :redirect, layout: false
 end
 
 get '/person/:slug/contact_details/' do |slug|
@@ -210,12 +246,24 @@ get '/person/:slug/experience/' do |slug|
 end
 
 get '/person/:slug/' do |slug|
+  person = honorables.find_single(slug)
+  pass unless person
+  summary_finder = Document::Finder.new(pattern: summary_pattern(person.id), baseurl: '')
+  @page = Page::Person.new(
+    person: person,
+    position: 'State Representative',
+    summary_doc: summary_finder.find_or_empty
+  )
+  erb :person
+end
+
+get '/person/:slug/' do |slug|
   person = representatives.find_single(slug)
   pass unless person
   summary_finder = Document::Finder.new(pattern: summary_pattern(person.id), baseurl: '')
   @page = Page::Person.new(
     person: person,
-    position: 'Representative',
+    position: 'Federal Representative',
     summary_doc: summary_finder.find_or_empty
   )
   erb :person
@@ -260,6 +308,16 @@ get '/contact/' do
   erb :contact
 end
 
+get '/ids-and-slugs.csv' do
+  content_type 'application/csv'
+  CSV.generate do |csv|
+    csv << %w[id slug]
+    all_people.each do |person|
+      csv << [person.id, person.slug]
+    end
+  end
+end
+
 get '/fonts/bootstrap/:filename' do |filename|
   send_file(File.join(Bootstrap.fonts_path, 'bootstrap', filename))
 end
@@ -280,7 +338,7 @@ get '/jinja2-template.html' do
 end
 
 get '/scraper-start-page.html' do
-  @people = representatives.find_all + senators.find_all + governors.find_all
+  @people = all_people
   @places = mapit.places_of_type('FED') + mapit.places_of_type('SEN') + mapit.places_of_type('STA')
   erb :scraper_start_page, layout: false
 end

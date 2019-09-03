@@ -54,14 +54,14 @@ module Minitest
     end
 
     def nigeria_at_known_revision
-      @ng ||= EveryPolitician::Index.new(index_url: DATASOURCE).country('Nigeria')
+      @nigeria_at_known_revision ||= EveryPolitician::Index.new(index_url: DATASOURCE).country('Nigeria')
     end
 
     def mapit_data_for_area_type(area_type)
       json_filename = File.join(
         File.dirname(__FILE__), '..', 'mapit', "#{area_type}.json"
       )
-      open(json_filename, &:read)
+      File.open(json_filename, &:read)
     end
 
     def parsed_mapit_data_for_area_type(area_type)

@@ -11,7 +11,7 @@
     <p class="meta"><%= @page.format_date(post.date) %></p>
 
     <div>
-      <%= post.body %>
+      <%= @page.post_excerpt(post.body) %>
     </div>
 
     <p><a href="<%= post.url %>">Read more …</a></p>

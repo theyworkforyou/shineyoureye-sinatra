@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require_relative 'frontmatter_parser'
 require_relative 'markdown_parser'
 
@@ -32,6 +33,7 @@ module Document
 
     def event_date
       return nil if frontmatter.event_date.empty?
+
       Date.parse(frontmatter.event_date)
     end
 
@@ -40,13 +42,12 @@ module Document
     end
 
     def slug
-      slug = frontmatter.slug
-      slug.empty? ? rawname : slug
+      rawname
     end
 
     private
 
-    DATE_PATTERN = /^(?<date>\d{4}-\d{2}-\d{2})/
+    DATE_PATTERN = /^(?<date>\d{4}-\d{2}-\d{2})/.freeze
     attr_reader :filename, :baseurl
 
     def basename
@@ -62,7 +63,7 @@ module Document
     end
 
     def filecontents
-      @contents ||= File.open(filename, 'r', &:read)
+      @filecontents ||= File.open(filename, 'r', &:read)
     end
 
     def frontmatter

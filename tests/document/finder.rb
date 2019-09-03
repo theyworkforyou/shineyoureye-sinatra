@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'test_helper'
 require_relative '../../lib/document/finder'
 
@@ -17,7 +18,8 @@ describe 'Document::Finder' do
 slug: a-slug
 ---'
     Dir.stub :glob, [new_tempfile(contents, filename)] do
-      finder.find_single.url.must_equal('/path/a-slug')
+      expected_slug = File.basename(Dir.glob[0], '.*')
+      finder.find_single.url.must_equal("/path/#{expected_slug}")
     end
   end
 
@@ -28,7 +30,7 @@ slug: a-slug
   end
 
   it 'sorts the found filenames alphabetically' do
-    Dir.stub :glob, %w(zed be) do
+    Dir.stub :glob, %w[zed be] do
       finder.find_all.first.send(:basename).must_equal('be')
     end
   end

@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'test_helper'
 require_relative '../../lib/ep/people_by_legislature'
 require_relative '../../lib/page/places'
@@ -13,7 +14,7 @@ describe 'Page::Places' do
   let(:page) do
     Page::Places.new(
       title: 'Constituencies',
-      places: %w(irrelevant irrelevant),
+      places: %w[irrelevant irrelevant],
       people_by_legislature: people
     )
   end

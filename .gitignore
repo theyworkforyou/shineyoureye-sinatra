@@ -1,6 +1,10 @@
 .sass-cache
+/build
 /prose
+/public/media
 /public/media_root
 /public/stylesheets/*.css
 /public/stylesheets/*.css.map
+/missing-slugs.csv
+.ruby-version
 coverage

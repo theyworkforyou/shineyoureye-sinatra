@@ -1,6 +1,7 @@
 # frozen_string_literal: true
+
 require_relative 'everypolitician_extensions'
-require_relative 'person'
+require_relative '../people_slug_to_person'
 
 module EP
   class PeopleByLegislature
@@ -8,6 +9,8 @@ module EP
       @legislature = legislature
       @person_factory = person_factory
     end
+
+    include PeopleSlugToPerson
 
     def find_all
       @find_all ||= people_sorted_by_name.map { |person| create_person(person) }
@@ -42,15 +45,11 @@ module EP
     end
 
     def latest_term
-      legislature.legislative_periods.sort_by(&:start_date).last
+      legislature.legislative_periods.max_by(&:start_date)
     end
 
     def id_to_person
       @id_to_person ||= find_all.map { |person| [person.id, person] }.to_h
-    end
-
-    def slug_to_person
-      @slug_to_person ||= find_all.map { |person| [person.slug, person] }.to_h
     end
 
     def create_person(person)

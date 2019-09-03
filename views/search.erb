@@ -1,10 +1,16 @@
-<form class="big-form big-form--short" action="http://sye-pu-lookup-frontend.herokuapp.com/lookup" method="post">
+<form class="big-form js-multipurpose-search" action="https://sye-pu-lookup-frontend.herokuapp.com/lookup" method="post">
     <h1>Find your representative</h1>
-    <label for="search-input">Enter your Polling Unit (PU) number</label>
+    <label for="search-input" class="js-multipurpose-search-label">Enter your Polling Unit (PU) number</label>
     <p class="input-group">
         <input name="pu-number" id="search-input" type="search" class="form-control input-lg" placeholder="e.g. 1:1:1">
         <span class="input-group-btn">
-            <button class="btn btn-primary btn-lg" type="button"><i class="glyphicon glyphicon-search"></i> Search</button>
+            <button class="btn btn-primary btn-lg" type="submit"><i class="glyphicon glyphicon-search"></i> Search</button>
         </span>
     </p>
 </form>
+
+<div class="row search-results">
+    <div class="col-md-10 col-md-push-1">
+        <gcse:searchresults-only></gcse:searchresults-only>
+    </div>
+</div>

@@ -1,16 +1,17 @@
 # frozen_string_literal: true
+
 require 'test_helper'
 
 describe 'Event Page' do
-  before { get '/events/fct-lga-polls-2016' }
+  before { get '/events/ordinary-citizens-doing-extraordinary-things' }
   subject { Nokogiri::HTML(last_response.body) }
 
   it 'shows the event title' do
-    subject.css('.page-title').text.must_equal('FCT LGA Polls 2016')
+    subject.css('.page-title').text.must_equal('Ordinary Citizens Doing Extraordinary Things')
   end
 
   it 'shows the publication date with the right format' do
-    subject.css('.meta').first.text.must_equal('February 22, 2017')
+    subject.css('.meta').first.text.must_equal('June 24, 2019')
   end
 
   it 'displays the contents of the event' do

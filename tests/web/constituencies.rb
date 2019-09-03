@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'test_helper'
 
 describe 'Federal Constituencies Page' do
@@ -18,20 +19,20 @@ describe 'Federal Constituencies Page' do
   end
 
   it 'links to each constituency page' do
-    subject.css('.media-left a/@href').first.text.must_equal('/place/gwagwaladakuje/')
-    subject.css('.media-body a/@href').first.text.must_equal('/place/gwagwaladakuje/')
+    subject.css('.media-left a/@href').first.text.must_equal('/place/batagarawa-rimi-charanchi/')
+    subject.css('.media-body a/@href').first.text.must_equal('/place/batagarawa-rimi-charanchi/')
   end
 
   it 'shows each constituency name' do
-    subject.css('.media-heading').last.text.must_equal('ZURU/FAKAI/DANKO/SAKABA/WASAGU')
+    subject.css('.media-heading').last.text.must_equal('Lagos Mainland')
   end
 
   it 'links to each parent place' do
-    subject.css('.parent-place a/@href').last.text.must_equal('/place/kebbi/')
+    subject.css('.parent-place a/@href').last.text.must_equal('/place/lagos/')
   end
 
   it 'shows each parent place name' do
-    subject.css('.parent-place a').last.text.must_equal('Kebbi')
+    subject.css('.parent-place a').last.text.must_equal('Lagos')
   end
 
   it 'shows the place type' do
@@ -43,6 +44,6 @@ describe 'Federal Constituencies Page' do
   end
 
   it 'shows the current term start year' do
-    subject.css('.kind p').last.text.must_include('2015')
+    subject.css('.kind p').last.text.must_include('2019')
   end
 end

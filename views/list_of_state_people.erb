@@ -1,0 +1,21 @@
+<h1 class="page-title text-center"><%= @page.title %></h1>
+
+<% if  @area.name %>
+  <div class="page-section" id="term">
+    <div class="container text-center">
+        <h3><span class="avatar"><i class="glyphicon glyphicon-home"></i></span> <%= @area.name %> State</h3>
+        <p><%= @page.people_current_term_start_date %> <%= @page.people_current_term_end_date %></p>
+    </div>
+  </div>
+<% end %>
+
+<div class="content_box">
+  <div class="party-groupings__title text-center">
+    <h3>Members</h3>
+  </div>
+  <div class="principal-people-accordion people-accordion ui-widget-content ui-accordion ui-widget ui-helper-reset">
+    <% @page.people_by_identified_state(@area.name).each do |state_name, people_in_state| %>
+      <%= erb :_list_of_people, :locals => { :people => people_in_state } %> 
+    <% end %>
+  </div>
+</div>

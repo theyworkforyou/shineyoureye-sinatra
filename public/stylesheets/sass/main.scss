@@ -3,6 +3,7 @@
 @import "mixins";
 
 @import "bootstrap";
+@import "jquery-ui";
 
 @import "buttons";
 @import "page-section";
@@ -10,9 +11,11 @@
 @import "site-header";
 @import "site-footer";
 @import "media-list";
+@import "contact-list";
 @import "social";
 @import "forms";
 @import "tables";
 
 @import "homepage";
 @import "person";
+@import "people";

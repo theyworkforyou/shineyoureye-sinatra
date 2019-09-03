@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module PersonProxyImages
   def thumbnail_image_url
     proxy_image_variant(:thumbnail)
@@ -22,6 +23,7 @@ module PersonProxyImages
 
   def proxy_image_variant(size)
     return if image.nil?
+
     raise_unless_image_size_available(size)
     proxy_image_base_url + ALLOWED_IMAGE_SIZES[size] + '.jpeg'
   end

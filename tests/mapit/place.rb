@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'test_helper'
 require_relative '../../lib/mapit/place'
 
@@ -7,7 +8,7 @@ describe 'Place' do
     let(:place) do
       Mapit::Place.new(
         mapit_area_data: area_with_parent,
-        pombola_slug: 'gwagwaladakuje',
+        pombola_slug: 'kuje-abaji-gwagwalada-kwali',
         baseurl: '/baseurl/',
         parent: Mapit::Place.new(
           mapit_area_data: area_with_no_parent,
@@ -18,11 +19,11 @@ describe 'Place' do
     end
 
     it 'knows its id' do
-      place.id.must_equal(949)
+      place.id.must_equal(918)
     end
 
     it 'knows its name' do
-      place.name.must_equal('Abaji/Gwagwalada/Kwali/Kuje')
+      place.name.must_equal('Batagarawa/Rimi/Charanchi')
     end
 
     it 'knows its parent name' do
@@ -30,7 +31,7 @@ describe 'Place' do
     end
 
     it 'builds the place url with the baseurl' do
-      place.url.must_equal('/baseurl/gwagwaladakuje/')
+      place.url.must_equal('/baseurl/kuje-abaji-gwagwalada-kwali/')
     end
 
     it 'builds the parent url with the baseurl' do
@@ -51,6 +52,58 @@ describe 'Place' do
 
     it 'the parent knows it is not a child' do
       refute(place.parent.child_area?)
+    end
+
+    describe '#state' do
+      it 'returns the parent object if that is a state' do
+        place.parent.type_name.must_equal('State')
+        place.state.must_equal(place.parent)
+      end
+    end
+  end
+
+  describe 'state with no parent' do
+    let(:place) do
+      Mapit::Place.new(
+        mapit_area_data: area_with_no_parent,
+        pombola_slug: 'kuje-abaji-gwagwalada-kwali',
+        baseurl: '/baseurl/'
+      )
+    end
+
+    describe '#state' do
+      it 'returns the current object' do
+        place.type_name.must_equal('State')
+        place.state.must_equal(place)
+      end
+    end
+  end
+
+  describe 'area with no thumbnail image' do
+    let(:place) do
+      Mapit::Place.new(
+        mapit_area_data: area_with_no_parent,
+        pombola_slug: 'kuje-abaji-gwagwalada-kwali',
+        baseurl: '/baseurl/'
+      )
+    end
+
+    it 'has default "pin" thumbnail_url' do
+      place.thumbnail_url.must_equal('/images/place-250x250.png')
+    end
+  end
+
+  describe 'area with thumbnail image' do
+    let(:place) do
+      Mapit::Place.new(
+        mapit_area_data: area_with_no_parent,
+        pombola_slug: 'federal-capital-territory',
+        baseurl: '/baseurl/'
+      )
+    end
+
+    it 'has custom image thumbnail_url' do
+      place.thumbnail_url.must_equal('/images/thumbnails/federal-capital-territory.jpg')
     end
   end
 

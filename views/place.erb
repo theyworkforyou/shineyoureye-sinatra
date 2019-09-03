@@ -15,7 +15,7 @@
 
         <section class="person__section">
             <h2>People</h2>
-            <%= erb :_list_of_people %>
+            <%= erb :_list_of_people_place, :locals => {:people => @page.people} %>
         </section>
 
         <section class="person__section">
@@ -25,6 +25,8 @@
     </div>
 </div>
 
-<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
-<script src="/javascripts/show-map.js"></script>
-<script>LeafletMap.showMap(<%= @page.center %>, <%= @page.geojson %>);</script>
+<% content_for :footer_extra_js do %>
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    <script src="/javascripts/show-map.js"></script>
+    <script>LeafletMap.showMap(<%= @page.center %>, <%= @page.geojson %>);</script>
+<% end %>

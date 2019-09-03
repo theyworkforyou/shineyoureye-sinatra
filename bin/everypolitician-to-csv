@@ -1,0 +1,156 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'bundler/setup'
+require 'everypolitician'
+require 'pry'
+require 'csv'
+
+require_relative '../lib/mapit/geometry'
+require_relative '../lib/mapit/wrapper'
+require_relative '../lib/mapit/mappings'
+
+module EveryPolitician
+  module LegislativePeriodExtension
+    def people
+      @people ||= memberships.map(&:person).uniq(&:id)
+    end
+
+    def memberships
+      @memberships ||= legislature.popolo.memberships.select do |mem|
+        mem.legislative_period_id == id
+      end
+    end
+  end
+end
+
+EveryPolitician::LegislativePeriod.include EveryPolitician::LegislativePeriodExtension
+
+class EveryPoliticianToCSV
+  class PersonRow
+    def initialize(person, mapit, latest_term)
+      @person = person
+      @mapit = mapit
+      @latest_term = latest_term
+    end
+
+    # rubocop:disable Metrics/AbcSize, Metrics/MethodLength
+    def row_as_hash
+      {
+        id: person.id,
+        name: person.name,
+        mapit_id: mapit_area&.id,
+        party: party.name,
+        email: person.email,
+        phone: person.phone,
+        twitter: person.twitter,
+        facebook_url: person.facebook,
+        wikipedia_url: person.link('Wikipedia (en)'),
+        birth_date: person.birth_date,
+        gender: person.gender,
+        identifier__shineyoureye: person.identifier('shineyoureye'),
+        image_url: person.image,
+        website_url: person.link('website'),
+        other_names: person.other_names.map { |on| on[:name] }.join(';')
+      }
+    end
+    # rubocop:enable Metrics/AbcSize, Metrics/MethodLength
+
+    private
+
+    attr_reader :person, :mapit, :latest_term
+
+    def current_memberships
+      @current_memberships ||= person.memberships.where(legislative_period_id: latest_term.id)
+    end
+
+    def ep_area
+      @ep_area ||= current_memberships.first.area
+    end
+
+    def party
+      @party ||= current_memberships.first.party
+    end
+
+    def mapit_area
+      @mapit_area ||= mapit.area_from_ep_id(ep_area.id)
+    end
+  end
+
+  DATASOURCE = ENV.fetch('DATASOURCE', 'https://github.com/everypolitician/everypolitician-data/raw/master/countries.json')
+
+  def initialize(country, legislature, output)
+    @country = country
+    @legislature = legislature
+    @output = output
+  end
+
+  def generate_csv
+    CSV.open(output, 'wb') do |csv|
+      headers = person_rows.first.keys
+      csv << headers
+      person_rows.each { |row| csv << row.values_at(*headers) }
+    end
+  end
+
+  private
+
+  attr_reader :country, :legislature, :output
+
+  def index
+    @index ||= EveryPolitician::Index.new(index_url: DATASOURCE)
+  end
+
+  def house
+    @house ||= index.country(country).legislature(legislature)
+  end
+
+  def latest_term
+    @latest_term ||= house.legislative_periods.max_by(&:start_date)
+  end
+
+  def people
+    @people ||= latest_term.people
+  end
+
+  def person_rows
+    @person_rows ||= people.map do |person|
+      PersonRow.new(person, mapit, latest_term).row_as_hash
+    end
+  end
+
+  # rubocop:disable Metrics/MethodLength
+  def mapit_mappings
+    # Create a wrapper for the mappings between the various IDs we have
+    # to use for areas / places.
+    @mapit_mappings ||= Mapit::Mappings.new(
+      parent_mapping_filenames: [
+        'mapit/fed_to_sta_area_ids_mapping.csv',
+        'mapit/sen_to_sta_area_ids_mapping.csv',
+        'mapit/lga_to_sta_area_ids_mapping.csv'
+      ],
+      pombola_slugs_to_mapit_ids_filename:
+        'mapit/pombola_place_slugs_to_mapit.csv',
+      mapit_to_ep_areas_filenames: [
+        'mapit/mapit_to_ep_area_ids_mapping_FED.csv',
+        'mapit/mapit_to_ep_area_ids_mapping_SEN.csv',
+        'mapit/mapit_to_ep_area_ids_mapping_LGA.csv'
+      ]
+    )
+  end
+  # rubocop:enable Metrics/MethodLength
+
+  def mapit
+    # Create a wrapper that caches MapIt and EveryPolitician area data:
+    @mapit ||= Mapit::Wrapper.new(
+      mapit_mappings: mapit_mappings,
+      baseurl: '/place/',
+      area_types: %w[FED SEN STA],
+      data_directory: 'mapit'
+    )
+  end
+end
+
+EveryPoliticianToCSV.new('Nigeria', 'Representatives', 'data/representatives.csv').generate_csv
+EveryPoliticianToCSV.new('Nigeria', 'Senate', 'data/senate.csv').generate_csv
+EveryPoliticianToCSV.new('Nigeria', 'Honorables', 'data/honorables.csv').generate_csv

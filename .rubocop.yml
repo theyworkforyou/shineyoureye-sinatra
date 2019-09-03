@@ -1,9 +1,15 @@
 AllCops:
   DisplayCopNames: true
-  TargetRubyVersion: 2.3
+  TargetRubyVersion: 2.5
+  Exclude:
+    - build/**/*
+    - vendor/**/*
 
 Metrics/LineLength:
-  Max: 120
+  Max: 180
+
+Metrics/ParameterLists:
+  Max: 10
 
 Documentation:
   Enabled: false

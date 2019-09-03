@@ -1,0 +1,22 @@
+.ui-widget,
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+    font-family: inherit;
+}
+.ui-widget-content a {
+    color: $link-color;
+
+    &:hover,
+    &:focus {
+        color: $link-hover-color;
+    }
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active {
+    border-color: darken($color-sky-blue, 10%);
+    background: $color-sky-blue;
+}

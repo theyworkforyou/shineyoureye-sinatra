@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'test_helper'
 require_relative '../../lib/page/place'
 require_relative '../../lib/mapit/coordinate'
@@ -53,8 +54,8 @@ describe 'Page::Place' do
 
   FakeGeometry = Struct.new(:geojson, :center)
   FakePeople = Struct.new(:legislature_name) do
-    def find_all_by_mapit_area(_)
-      %w(irrelevant irrelevant)
+    def find_all_by_mapit_area(_mapit_id)
+      %w[irrelevant irrelevant]
     end
   end
 end
