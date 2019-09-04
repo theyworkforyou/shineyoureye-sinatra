@@ -1,22 +1,24 @@
 <h1 class="page-title text-center"><%= @page.title %></h1>
 
-<ul class="media-list media-list--places">
+<ul class="media-list media-list--places row">
     <% @page.filter_places_with_all_legislature.each do |place| %>
-        <li class="media col-md-4 states_and_legislature">
-        <div class="media-left">
-            <a href="<%= place.place_url %>">
-            <img class="media-object" src="<%= place.thumbnail_url %>" alt="">
-            </a>
-        </div>
-        <div class="media-body">
-            <a href="<%= place.place_url %>"><h3 class="media-heading"><%= place.name %></h3></a>
-            <div class="kind">
-            <p><%= @page.legislature_name %></p>
-            <% if place.child_area? %>
-            <p><%= @page.legislature_name %> <%= @page.current_term_start_year %>-current</p>
-            <% end %>
-            </div>
-        </div>
+        <li class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="media states_and_legislature">
+                <div class="media-left">
+                    <a href="<%= place.place_url %>">
+                    <img class="media-object" src="<%= place.thumbnail_url %>" alt="place.name">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <a href="<%= place.place_url %>"><h3 class="media-heading"><%= place.name %></h3></a>
+                    <div class="kind">
+                    <p><%= @page.legislature_name %></p>
+                    <% if place.child_area? %>
+                    <p><%= @page.legislature_name %> <%= @page.current_term_start_year %>-current</p>
+                    <% end %>
+                    </div>
+                </div>
+            <div>
         </li>
     <% end %>
 </ul>

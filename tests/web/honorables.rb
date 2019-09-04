@@ -18,10 +18,10 @@ describe 'Honorables Page' do
   end
 
   it 'groups representatives by state' do
-    subject.css('.states_and_legislature').count.must_equal(3)
+    subject.css('.states_and_legislature').count.must_equal(4)
   end
 
-  describe 'List of a state\'s representative' do
+  describe 'List of a state\'s representatives' do
     before { get '/position/state-representatives/lagos/' }
     subject { Nokogiri::HTML(last_response.body) }
 

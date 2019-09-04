@@ -17,7 +17,10 @@
                   <h3 class="contact-list__item__name"><%= person.official_name %></h3>
               </a>
               <p>
-                <% if person.area %>
+                <% if person.constituency %>
+                  <span class="test-constituency"><%= person.constituency %></span>
+                  <a class="contact-list__item__area test-area" href="<%= person.area.url %>"><%= person.area.name %></a>
+                <% elsif person.area %>
                   <span class="test-party"><%= person.party_name %></span>
                   <a class="contact-list__item__area test-area" href="<%= person.area.url %>"><%= person.area.name %></a>
                 <% else %>
