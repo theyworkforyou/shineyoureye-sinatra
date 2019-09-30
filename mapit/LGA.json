@@ -532,7 +532,7 @@
         "codes": {
             "poll_unit": "ON:2"
         },
-        "name": "AkokoNorthWest",
+        "name": "Akoko North-West",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -5107,7 +5107,7 @@
         "codes": {
             "poll_unit": "ON:11"
         },
-        "name": "IlajeEseodo",
+        "name": "Ilaje Ese-odo",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
