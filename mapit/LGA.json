@@ -2782,7 +2782,7 @@
         "codes": {
             "poll_unit": "EK:4"
         },
-        "name": "EkitiEas",
+        "name": "Ekiti East",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -2797,7 +2797,7 @@
         "codes": {
             "poll_unit": "EK:5"
         },
-        "name": "EkitiSouth-West",
+        "name": "Ekiti South-West",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -2812,7 +2812,7 @@
         "codes": {
             "poll_unit": "EK:6"
         },
-        "name": "EkitiWest",
+        "name": "Ekiti West",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -3607,7 +3607,7 @@
         "codes": {
             "poll_unit": "EK:2"
         },
-        "name": "Gboyin",
+        "name": "Gbonyin",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
