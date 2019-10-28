@@ -1,1 +1,557 @@
-{"2": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 2, "codes": {"poll_unit": "AB"}, "name": "Abia", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "3": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 3, "codes": {"poll_unit": "AD"}, "name": "Adamawa", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "4": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 4, "codes": {"poll_unit": "AK"}, "name": "Akwa Ibom", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "5": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 5, "codes": {"poll_unit": "AN"}, "name": "Anambra", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "6": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 6, "codes": {"poll_unit": "BA"}, "name": "Bauchi", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "7": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 7, "codes": {"poll_unit": "BY"}, "name": "Bayelsa", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "8": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 8, "codes": {"poll_unit": "BE"}, "name": "Benue", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "9": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 9, "codes": {"poll_unit": "BO"}, "name": "Borno", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "10": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 10, "codes": {"poll_unit": "CR"}, "name": "Cross River", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "11": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 11, "codes": {"poll_unit": "DE"}, "name": "Delta", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "12": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 12, "codes": {"poll_unit": "EB"}, "name": "Ebonyi", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "13": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 13, "codes": {"poll_unit": "ED"}, "name": "Edo", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "14": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 14, "codes": {"poll_unit": "EK"}, "name": "Ekiti", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "15": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 15, "codes": {"poll_unit": "EN"}, "name": "Enugu", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "16": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 16, "codes": {"poll_unit": "FC"}, "name": "Federal Capital Territory", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "17": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 17, "codes": {"poll_unit": "GO"}, "name": "Gombe", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "18": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 18, "codes": {"poll_unit": "IM"}, "name": "Imo", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "19": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 19, "codes": {"poll_unit": "JI"}, "name": "Jigawa", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "20": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 20, "codes": {"poll_unit": "KD"}, "name": "Kaduna", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "21": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 21, "codes": {"poll_unit": "KN"}, "name": "Kano", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "22": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 22, "codes": {"poll_unit": "KT"}, "name": "Katsina", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "23": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 23, "codes": {"poll_unit": "KE"}, "name": "Kebbi", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "24": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 24, "codes": {"poll_unit": "KO"}, "name": "Kogi", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "25": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 25, "codes": {"poll_unit": "KW"}, "name": "Kwara", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "26": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 26, "codes": {"poll_unit": "LA"}, "name": "Lagos", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "27": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 27, "codes": {"poll_unit": "NA"}, "name": "Nasarawa", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "28": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 28, "codes": {"poll_unit": "NI"}, "name": "Niger", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "29": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 29, "codes": {"poll_unit": "OG"}, "name": "Ogun", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "30": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 30, "codes": {"poll_unit": "ON"}, "name": "Ondo", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "31": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 31, "codes": {"poll_unit": "OS"}, "name": "Osun", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "32": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 32, "codes": {"poll_unit": "OY"}, "name": "Oyo", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "33": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 33, "codes": {"poll_unit": "PL"}, "name": "Plateau", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "34": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 34, "codes": {"poll_unit": "RI"}, "name": "Rivers", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "35": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 35, "codes": {"poll_unit": "SO"}, "name": "Sokoto", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "36": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 36, "codes": {"poll_unit": "TA"}, "name": "Taraba", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "37": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 37, "codes": {"poll_unit": "YO"}, "name": "Yobe", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}, "38": {"parent_area": null, "generation_high": 1, "all_names": {}, "id": 38, "codes": {"poll_unit": "ZA"}, "name": "Zamfara", "country": "N", "type_name": "State", "generation_low": 1, "country_name": "Nigeria", "type": "STA"}}
+{
+    "2": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 2,
+        "codes": {
+            "poll_unit": "AB"
+        },
+        "name": "Abia",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "3": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 3,
+        "codes": {
+            "poll_unit": "AD"
+        },
+        "name": "Adamawa",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "4": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 4,
+        "codes": {
+            "poll_unit": "AK"
+        },
+        "name": "Akwa Ibom",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "5": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 5,
+        "codes": {
+            "poll_unit": "AN"
+        },
+        "name": "Anambra",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "6": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 6,
+        "codes": {
+            "poll_unit": "BA"
+        },
+        "name": "Bauchi",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "7": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 7,
+        "codes": {
+            "poll_unit": "BY"
+        },
+        "name": "Bayelsa",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "8": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 8,
+        "codes": {
+            "poll_unit": "BE"
+        },
+        "name": "Benue",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "9": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 9,
+        "codes": {
+            "poll_unit": "BO"
+        },
+        "name": "Borno",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "10": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 10,
+        "codes": {
+            "poll_unit": "CR"
+        },
+        "name": "Cross River",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "11": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 11,
+        "codes": {
+            "poll_unit": "DE"
+        },
+        "name": "Delta",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "12": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 12,
+        "codes": {
+            "poll_unit": "EB"
+        },
+        "name": "Ebonyi",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "13": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 13,
+        "codes": {
+            "poll_unit": "ED"
+        },
+        "name": "Edo",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "14": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 14,
+        "codes": {
+            "poll_unit": "EK"
+        },
+        "name": "Ekiti",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "15": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 15,
+        "codes": {
+            "poll_unit": "EN"
+        },
+        "name": "Enugu",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "16": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 16,
+        "codes": {
+            "poll_unit": "FC"
+        },
+        "name": "Federal Capital Territory",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "17": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 17,
+        "codes": {
+            "poll_unit": "GO"
+        },
+        "name": "Gombe",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "18": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 18,
+        "codes": {
+            "poll_unit": "IM"
+        },
+        "name": "Imo",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "19": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 19,
+        "codes": {
+            "poll_unit": "JI"
+        },
+        "name": "Jigawa",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "20": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 20,
+        "codes": {
+            "poll_unit": "KD"
+        },
+        "name": "Kaduna",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "21": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 21,
+        "codes": {
+            "poll_unit": "KN"
+        },
+        "name": "Kano",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "22": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 22,
+        "codes": {
+            "poll_unit": "KT"
+        },
+        "name": "Katsina",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "23": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 23,
+        "codes": {
+            "poll_unit": "KE"
+        },
+        "name": "Kebbi",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "24": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 24,
+        "codes": {
+            "poll_unit": "KO"
+        },
+        "name": "Kogi",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "25": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 25,
+        "codes": {
+            "poll_unit": "KW"
+        },
+        "name": "Kwara",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "26": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 26,
+        "codes": {
+            "poll_unit": "LA"
+        },
+        "name": "Lagos",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "27": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 27,
+        "codes": {
+            "poll_unit": "NA"
+        },
+        "name": "Nasarawa",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "28": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 28,
+        "codes": {
+            "poll_unit": "NI"
+        },
+        "name": "Niger",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "29": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 29,
+        "codes": {
+            "poll_unit": "OG"
+        },
+        "name": "Ogun",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "30": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 30,
+        "codes": {
+            "poll_unit": "ON"
+        },
+        "name": "Ondo",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "31": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 31,
+        "codes": {
+            "poll_unit": "OS"
+        },
+        "name": "Osun",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "32": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 32,
+        "codes": {
+            "poll_unit": "OY"
+        },
+        "name": "Oyo",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "33": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 33,
+        "codes": {
+            "poll_unit": "PL"
+        },
+        "name": "Plateau",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "34": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 34,
+        "codes": {
+            "poll_unit": "RI"
+        },
+        "name": "Rivers",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "35": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 35,
+        "codes": {
+            "poll_unit": "SO"
+        },
+        "name": "Sokoto",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "36": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 36,
+        "codes": {
+            "poll_unit": "TA"
+        },
+        "name": "Taraba",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "37": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 37,
+        "codes": {
+            "poll_unit": "YO"
+        },
+        "name": "Yobe",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    },
+    "38": {
+        "parent_area": null,
+        "generation_high": 1,
+        "all_names": {},
+        "id": 38,
+        "codes": {
+            "poll_unit": "ZA"
+        },
+        "name": "Zamfara",
+        "country": "N",
+        "type_name": "State",
+        "generation_low": 1,
+        "country_name": "Nigeria",
+        "type": "STA"
+    }
+}
