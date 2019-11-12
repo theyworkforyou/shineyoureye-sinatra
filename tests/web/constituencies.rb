@@ -19,20 +19,20 @@ describe 'Federal Constituencies Page' do
   end
 
   it 'links to each constituency page' do
-    subject.css('.media-left a/@href').first.text.must_equal('/place/batagarawa-rimi-charanchi/')
-    subject.css('.media-body a/@href').first.text.must_equal('/place/batagarawa-rimi-charanchi/')
+    subject.css('.media-left a/@href').first.text.must_equal('/place/aba-north-south/')
+    subject.css('.media-body a/@href').first.text.must_equal('/place/aba-north-south/')
   end
 
   it 'shows each constituency name' do
-    subject.css('.media-heading').last.text.must_equal('Lagos Mainland')
+    subject.css('.media-heading').last.text.must_equal('Tsafe/Gusau')
   end
 
   it 'links to each parent place' do
-    subject.css('.parent-place a/@href').last.text.must_equal('/place/lagos/')
+    subject.css('.parent-place a/@href').last.text.must_equal('/place/zamfara/')
   end
 
   it 'shows each parent place name' do
-    subject.css('.parent-place a').last.text.must_equal('Lagos')
+    subject.css('.parent-place a').last.text.must_equal('Zamfara')
   end
 
   it 'shows the place type' do

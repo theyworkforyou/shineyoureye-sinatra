@@ -10,6 +10,12 @@ module Page
       @people_by_legislature = people_by_legislature
     end
 
+    def place_sort_by_parent_place
+      places.find_all
+            .sort_by(&:name)
+            .sort_by { |p| p.parent.nil? ? '' : p.parent.name }
+    end
+
     def place_and_people_grouped_by_state
       people_by_legislature.find_people_grouped_by_state
     end

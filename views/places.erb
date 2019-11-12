@@ -28,7 +28,7 @@
   <!-- <h3>Entries 1 to 10 of 360.</h3> -->
 
   <ul class="media-list media-list--places">
-    <% @page.places.each do |place| %>
+    <% @page.place_sort_by_parent_place.each do |place| %>
     <li class="media">
       <div class="media-left">
         <a href="<%= place.url %>">
