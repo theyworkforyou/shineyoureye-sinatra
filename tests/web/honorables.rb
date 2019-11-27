@@ -18,7 +18,7 @@ describe 'Honorables Page' do
   end
 
   it 'groups representatives by state' do
-    subject.css('.states_and_legislature').count.must_equal(9)
+    subject.css('.states_and_legislature').count.must_equal(10)
   end
 
   describe 'List of a state\'s representatives' do
