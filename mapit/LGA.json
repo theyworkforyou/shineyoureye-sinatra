@@ -3037,7 +3037,7 @@
         "codes": {
             "poll_unit": "AK:5"
         },
-        "name": "Essien-U",
+        "name": "Essien-Udim",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -3097,7 +3097,7 @@
         "codes": {
             "poll_unit": "AK:6"
         },
-        "name": "EtimEkpo",
+        "name": "Etim Ekpo",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -5002,7 +5002,7 @@
         "codes": {
             "poll_unit": "AK:13"
         },
-        "name": "Ikot-Aba",
+        "name": "Ikot-Abasi",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -5017,7 +5017,7 @@
         "codes": {
             "poll_unit": "AK:14"
         },
-        "name": "Ikot-Ekp",
+        "name": "Ikot-Ekpene",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -5587,7 +5587,7 @@
         "codes": {
             "poll_unit": "AB:8"
         },
-        "name": "Isuikwua",
+        "name": "Isuikwuato",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -5602,7 +5602,7 @@
         "codes": {
             "poll_unit": "BA:10"
         },
-        "name": "Itas/Gad",
+        "name": "Itas/Gadau",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -9260,7 +9260,7 @@
         "codes": {
             "poll_unit": "AK:26"
         },
-        "name": "Oruk-Ana",
+        "name": "Oruk-Anam",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -10460,7 +10460,7 @@
         "codes": {
             "poll_unit": "BA:17"
         },
-        "name": "Tafawa-B",
+        "name": "Tafawa-Balewa",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -10625,7 +10625,7 @@
         "codes": {
             "poll_unit": "AD:19"
         },
-        "name": "Teungo",
+        "name": "Toungo",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -11030,7 +11030,7 @@
         "codes": {
             "poll_unit": "AK:30"
         },
-        "name": "UrueOffo",
+        "name": "Urue Offong",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,

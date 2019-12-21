@@ -46,12 +46,12 @@
 
           <% if @page.person.twitter %>
             <h2>Twitter</h2>
-            <p class="person__twitter"><a href="<%= @page.person.twitter_url %>"><%= @page.person.twitter_display %></a></p>
+            <p class="person__twitter"><a href="<%= @page.person.twitter_url %>" target="_blank"><%= @page.person.twitter_display %></a></p>
           <% end %>
 
           <% if @page.person.facebook %>
             <h2>Facebook</h2>
-            <p class="person__facebook"><a href="<%= @page.person.facebook_url %>"><%= @page.person.facebook_display %></a></p>
+            <p class="person__facebook"><a href="<%= @page.person.facebook_url %>" target="_blank"><%= @page.person.facebook_display %></a></p>
           <% end %>
 
           <% if @page.person.email %>
