@@ -12,13 +12,13 @@ describe 'Honorables Page' do
 
   it 'displays states alphabetically, from A to Z' do
     subject.css('.states_and_legislature .media-heading').first.text
-           .must_equal('Anambra')
+           .must_equal('Abia')
     subject.css('.states_and_legislature .media-heading').last.text
            .must_equal('Ondo')
   end
 
   it 'groups representatives by state' do
-    subject.css('.states_and_legislature').count.must_equal(10)
+    subject.css('.states_and_legislature').count.must_equal(14)
   end
 
   describe 'List of a state\'s representatives' do
