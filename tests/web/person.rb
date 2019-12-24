@@ -86,11 +86,11 @@ describe 'Person Page' do
 
     it 'links to it' do
       subject.css('.person__twitter a/@href').first.text
-             .must_equal('https://twitter.com/GovSIA')
+             .must_equal('https://twitter.com/SIAmosun')
     end
 
     it 'displays it' do
-      subject.css('.person__twitter a').first.text.must_equal('@GovSIA')
+      subject.css('.person__twitter a').first.text.must_equal('@SIAmosun')
     end
   end
 
