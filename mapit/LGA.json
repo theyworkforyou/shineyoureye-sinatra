@@ -307,7 +307,7 @@
         "codes": {
             "poll_unit": "BE:2"
         },
-        "name": "Agatu",
+        "name": "Agbatu",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -4042,7 +4042,7 @@
         "codes": {
             "poll_unit": "BE:8"
         },
-        "name": "GwerWest",
+        "name": "Gwer West",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -7190,7 +7190,7 @@
         "codes": {
             "poll_unit": "BO:21"
         },
-        "name": "Maidugur",
+        "name": "Maiduguri",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -11120,7 +11120,7 @@
         "codes": {
             "poll_unit": "BE:23"
         },
-        "name": "Vandeiky",
+        "name": "Vandeikya",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
