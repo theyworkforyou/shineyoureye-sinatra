@@ -142,7 +142,7 @@
         "codes": {
             "poll_unit": "IM:1"
         },
-        "name": "Aboh-Mba",
+        "name": "Aboh-Mbaise",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -367,7 +367,7 @@
         "codes": {
             "poll_unit": "IM:2"
         },
-        "name": "Ahizu-Mb",
+        "name": "Ahizu-Mbaise",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -502,7 +502,7 @@
         "codes": {
             "poll_unit": "ED:1"
         },
-        "name": "Akoko-Ed",
+        "name": "Akoko-Edo",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -802,7 +802,7 @@
         "codes": {
             "poll_unit": "DE:1"
         },
-        "name": "AniochaN",
+        "name": "Aniocha North",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -817,7 +817,7 @@
         "codes": {
             "poll_unit": "DE:2"
         },
-        "name": "AniochaS",
+        "name": "Aniocha South",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -1657,7 +1657,7 @@
         "codes": {
             "poll_unit": "KE:6"
         },
-        "name": "BirninKe",
+        "name": "Birnin Kebbi",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -1672,7 +1672,7 @@
         "codes": {
             "poll_unit": "JI:3"
         },
-        "name": "BirninKu",
+        "name": "Birnin Kudu",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -2047,7 +2047,7 @@
         "codes": {
             "poll_unit": "NI:6"
         },
-        "name": "Chanchaga",
+        "name": "Chanchanga",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -2557,7 +2557,7 @@
         "codes": {
             "poll_unit": "NI:7"
         },
-        "name": "Edati",
+        "name": "Edatti",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -2707,7 +2707,7 @@
         "codes": {
             "poll_unit": "IM:3"
         },
-        "name": "Ehime-Mb",
+        "name": "Ehime-Mbano",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -2947,7 +2947,7 @@
         "codes": {
             "poll_unit": "ED:3"
         },
-        "name": "EsanCent",
+        "name": "Esan Central",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -2962,7 +2962,7 @@
         "codes": {
             "poll_unit": "ED:4"
         },
-        "name": "EsanNort",
+        "name": "Esan North",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -2977,7 +2977,7 @@
         "codes": {
             "poll_unit": "ED:5"
         },
-        "name": "EsanSout",
+        "name": "Esan South",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -2992,7 +2992,7 @@
         "codes": {
             "poll_unit": "ED:6"
         },
-        "name": "EsanWest",
+        "name": "Esan West",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -3067,7 +3067,7 @@
         "codes": {
             "poll_unit": "DE:5"
         },
-        "name": "EthiopeE",
+        "name": "Ethiope East",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -3157,7 +3157,7 @@
         "codes": {
             "poll_unit": "ED:8"
         },
-        "name": "EtsakoEa",
+        "name": "Etsako East",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -3172,7 +3172,7 @@
         "codes": {
             "poll_unit": "ED:9"
         },
-        "name": "EtsakoWe",
+        "name": "Etsako West",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -3232,7 +3232,7 @@
         "codes": {
             "poll_unit": "IM:4"
         },
-        "name": "Ezinihit",
+        "name": "Ezinihitte",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -4372,7 +4372,7 @@
         "codes": {
             "poll_unit": "IM:5"
         },
-        "name": "IdeatoNo",
+        "name": "Ideato North",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -4717,7 +4717,7 @@
         "codes": {
             "poll_unit": "IM:7"
         },
-        "name": "Ihitte/U",
+        "name": "Ihitte/Uboma",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -4837,7 +4837,7 @@
         "codes": {
             "poll_unit": "DE:7"
         },
-        "name": "IkaNorth",
+        "name": "Ika North",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -4867,7 +4867,7 @@
         "codes": {
             "poll_unit": "DE:8"
         },
-        "name": "IkaSouth",
+        "name": "Ika South",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -5452,7 +5452,7 @@
         "codes": {
             "poll_unit": "IM:9"
         },
-        "name": "IsialaMb",
+        "name": "Isiala Mbano",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -5542,7 +5542,7 @@
         "codes": {
             "poll_unit": "DE:9"
         },
-        "name": "IsokoNor",
+        "name": "Isoko North",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -5557,7 +5557,7 @@
         "codes": {
             "poll_unit": "DE:10"
         },
-        "name": "IsokoSou",
+        "name": "Isoko South",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -5977,7 +5977,7 @@
         "codes": {
             "poll_unit": "JI:15"
         },
-        "name": "KafinHau",
+        "name": "Kafin Hausa",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -6502,7 +6502,7 @@
         "codes": {
             "poll_unit": "JI:18"
         },
-        "name": "KiriKasa",
+        "name": "Kiri Kasamma",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -6547,7 +6547,7 @@
         "codes": {
             "poll_unit": "KE:13"
         },
-        "name": "Koko/Bes",
+        "name": "Koko/Besse",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -6622,7 +6622,7 @@
         "codes": {
             "poll_unit": "NI:11"
         },
-        "name": "Kontogur",
+        "name": "Kontagora",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -7310,7 +7310,7 @@
         "codes": {
             "poll_unit": "JI:21"
         },
-        "name": "MalamMad",
+        "name": "Malam Madori",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -7760,7 +7760,7 @@
         "codes": {
             "poll_unit": "NI:18"
         },
-        "name": "Muya",
+        "name": "Munya",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -7940,7 +7940,7 @@
         "codes": {
             "poll_unit": "IM:12"
         },
-        "name": "Ngor-Okp",
+        "name": "Ngor-Okpala",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -8645,7 +8645,7 @@
         "codes": {
             "poll_unit": "IM:18"
         },
-        "name": "Ohaji/Eg",
+        "name": "Ohaji/Egbema",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -9140,7 +9140,7 @@
         "codes": {
             "poll_unit": "ED:13"
         },
-        "name": "Orhionmw",
+        "name": "Orhionmwon",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -9425,7 +9425,7 @@
         "codes": {
             "poll_unit": "ED:15"
         },
-        "name": "OviaNort",
+        "name": "Ovia North",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -9440,7 +9440,7 @@
         "codes": {
             "poll_unit": "ED:14"
         },
-        "name": "OviaSouth-West",
+        "name": "Ovia South-West",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -9470,7 +9470,7 @@
         "codes": {
             "poll_unit": "ED:17"
         },
-        "name": "OwanWest",
+        "name": "Owan West",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -10370,7 +10370,7 @@
         "codes": {
             "poll_unit": "JI:25"
         },
-        "name": "Sule-Tan",
+        "name": "Sule-Tankarkar",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -11000,7 +11000,7 @@
         "codes": {
             "poll_unit": "IM:20"
         },
-        "name": "Unuimo",
+        "name": "Onuimo",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
