@@ -1852,7 +1852,7 @@
         "codes": {
             "poll_unit": "YO:2"
         },
-        "name": "Borsari",
+        "name": "Bursari",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -2437,7 +2437,7 @@
         "codes": {
             "poll_unit": "TA:3"
         },
-        "name": "Donga",
+        "name": "Donda",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -3937,7 +3937,7 @@
         "codes": {
             "poll_unit": "SO:7"
         },
-        "name": "Gwadabaw",
+        "name": "Gwadabawa",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -4132,7 +4132,7 @@
         "codes": {
             "poll_unit": "OY:6"
         },
-        "name": "IbadanNorth",
+        "name": "Ibadan North",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -4147,7 +4147,7 @@
         "codes": {
             "poll_unit": "OY:7"
         },
-        "name": "IbadanNorth-East",
+        "name": "Ibadan North-East",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -4162,7 +4162,7 @@
         "codes": {
             "poll_unit": "OY:8"
         },
-        "name": "IbadanNorth-West",
+        "name": "Ibadan North-West",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -4177,7 +4177,7 @@
         "codes": {
             "poll_unit": "OY:9"
         },
-        "name": "IbadanSouth-East",
+        "name": "Ibadan South-East",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -4192,7 +4192,7 @@
         "codes": {
             "poll_unit": "OY:10"
         },
-        "name": "IbadanSouth-West",
+        "name": "Ibadan South-West",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -4477,7 +4477,7 @@
         "codes": {
             "poll_unit": "OS:11"
         },
-        "name": "IfeCentral",
+        "name": "Ife Central",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -6247,7 +6247,7 @@
         "codes": {
             "poll_unit": "TA:8"
         },
-        "name": "Karim-La",
+        "name": "Karim-Lamido",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -6367,7 +6367,7 @@
         "codes": {
             "poll_unit": "ZA:8"
         },
-        "name": "Kaura-Na",
+        "name": "Kaura-Namoda",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -8375,7 +8375,7 @@
         "codes": {
             "poll_unit": "OS:25"
         },
-        "name": "Odo0tin",
+        "name": "Odo-Otin",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -8555,7 +8555,7 @@
         "codes": {
             "poll_unit": "OY:23"
         },
-        "name": "Ogo-Oluw",
+        "name": "Ogo-Oluwa",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -9725,7 +9725,7 @@
         "codes": {
             "poll_unit": "PL:14"
         },
-        "name": "Qua'anpa",
+        "name": "Qua'an pan",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -10550,7 +10550,7 @@
         "codes": {
             "poll_unit": "SO:19"
         },
-        "name": "Tangazar",
+        "name": "Tangaza",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,

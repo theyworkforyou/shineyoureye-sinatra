@@ -14,11 +14,11 @@ describe 'Honorables Page' do
     subject.css('.states_and_legislature .media-heading').first.text
            .must_equal('Abia')
     subject.css('.states_and_legislature .media-heading').last.text
-           .must_equal('Ondo')
+           .must_equal('Zamfara')
   end
 
   it 'groups representatives by state' do
-    subject.css('.states_and_legislature').count.must_equal(18)
+    subject.css('.states_and_legislature').count.must_equal(32)
   end
 
   describe 'List of a state\'s representatives' do
