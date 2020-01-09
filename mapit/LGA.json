@@ -157,7 +157,7 @@
         "codes": {
             "poll_unit": "RI:1"
         },
-        "name": "Abua/Odu",
+        "name": "Abua/Odual",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -592,7 +592,7 @@
         "codes": {
             "poll_unit": "RI:4"
         },
-        "name": "Akukutor",
+        "name": "Akuku toru",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -772,7 +772,7 @@
         "codes": {
             "poll_unit": "RI:5"
         },
-        "name": "Andoni/O",
+        "name": "Andoni",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -967,7 +967,7 @@
         "codes": {
             "poll_unit": "RI:6"
         },
-        "name": "Asari-To",
+        "name": "Asari-Toru",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -1642,7 +1642,7 @@
         "codes": {
             "poll_unit": "KD:1"
         },
-        "name": "Birnin-G",
+        "name": "Birnin-Gwari",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -2512,7 +2512,7 @@
         "codes": {
             "poll_unit": "KT:12"
         },
-        "name": "Dutsin-M",
+        "name": "Dutsin-Ma",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -6187,7 +6187,7 @@
         "codes": {
             "poll_unit": "KT:20"
         },
-        "name": "Kankiya",
+        "name": "Kankia",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -6322,7 +6322,7 @@
         "codes": {
             "poll_unit": "KT:21"
         },
-        "name": "Katsina (K)",
+        "name": "Katsina",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -8240,7 +8240,7 @@
         "codes": {
             "poll_unit": "RI:15"
         },
-        "name": "Obio/Akp",
+        "name": "Obio/Akpor",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -8465,7 +8465,7 @@
         "codes": {
             "poll_unit": "RI:16"
         },
-        "name": "Ogba/Egbe",
+        "name": "Ogba/Egbema/Ndoni",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -8975,7 +8975,7 @@
         "codes": {
             "poll_unit": "RI:19"
         },
-        "name": "Omumma",
+        "name": "Omuma",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -9920,7 +9920,7 @@
         "codes": {
             "poll_unit": "KD:19"
         },
-        "name": "Sabon-Ga",
+        "name": "Sabon-Gari",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,
@@ -11555,7 +11555,7 @@
         "codes": {
             "poll_unit": "KD:22"
         },
-        "name": "ZangonKa",
+        "name": "Zangon Kataf",
         "country": "N",
         "type_name": "Local Government Area",
         "generation_low": 1,

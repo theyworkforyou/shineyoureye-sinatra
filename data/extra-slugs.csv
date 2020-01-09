@@ -1,6 +1,7 @@
 uuid,name,legislature_name,slug
 gov-abdullahi-sule,Abdullahi Sule,,abdullahi-sule
 gov-abdulrahman-abdulrazaq,Abdulrahman Abdulrazaq,,abdulrahman-abdulrazaq
+gov-ahmadu-umaru-finitiri,Ahmadu Umaru Finitiri,,ahmadu-umaru-finitiri
 gov-babagana-zulum,Babagana Zulum,,babagana-zulum
 gov-babajide-sanwo-olu,Babajide Sanwo Olu,,babajide-sanwo-olu
 gov-bala-mohammed,Bala Mohammed,,bala-mohammed
@@ -11,7 +12,6 @@ gov-david-lyon,David Lyon,,david-lyon
 gov:godwin-obaseki,Godwin Obaseki,,godwin-obaseki
 gov-inuwa-yahaya,Inuwa Yahaya,,inuwa-yahaya
 gov-isiaka-adegboyega-oyetola,Isiaka Adegboyega Oyetola,,isiaka-adegboyega-oyetola
-gov-ahmadu-umaru-finitiri,Ahmadu Umaru Finitiri,,ahmadu-umaru-finitiri
 gov-mai-mala-buni,Mai Mala Buni,,mai-mala-buni
 gov-muhammad-badru,Muhammad Badru,,muhammad-badru
 gov:oluwarontimi-akeredolu,Oluwarotimi Akeredolu,,oluwarotimi-akeredolu
@@ -413,19 +413,84 @@ cc161325-cd0f-4aba-a17a-da2a0e931211,Uche Lilian Ekwunife,Senate,uche-lilian-ekw
 3b1e65ac-196e-4773-9d1d-5782e376bf59,Yahaya Abdullahi,Senate,yahaya-abdullahi
 2c4518b4-1c4b-43f9-b938-48c87c266d07,Yakubu Oseni,Senate,yakubu-oseni
 f95eee1d-5f81-4813-8164-7e1cc908e878,Yusuf Abubakar Yusuf,Senate,yusuf-abubakar-yusuf
+5922e125-3eec-408e-b7af-3653c3b51215,Aabdullahi Yahaya,House of Assembly,aabdullahi-yahaya
+2c91d038-f287-4dfb-bd7c-b930aca308d4,Abass Iorwuese Akoso,House of Assembly,abass-iorwuese-akoso
 3ba12bcf-db42-4d49-b649-dd2dfff92436,Abayomi Akinruntan,House of Assembly,abayomi-akinruntan
 0e3ff4e5-a08d-4e63-b50d-7cbae57cfc20,Abba Ibrahim Garko,House of Assembly,abba-ibrahim-garko
+0fd51f42-f262-4a13-91fd-224eb9de1e2b,Abbas Aminu Iya,House of Assembly,abbas-aminu-iya
+407bc546-6eef-45be-a64a-367e584b13b1,Abbullahi Yapak,House of Assembly,abbullahi-yapak
+f84f861a-0a69-4572-ac36-10747107646d,Abdul Adamu Yanga,House of Assembly,abdul-adamu-yanga
 4201a422-b796-4ea3-a2ad-268539267f0f,Abdul Bashir Oladunjoye,House of Assembly,abdul-bashir-oladunjoye
+42e98c01-13c7-4ec9-9f20-f9cffac82012,Abdul Nasir,House of Assembly,abdul-nasir
 3dd050e8-68fe-4473-8cba-b81b5505dfff,Abdulazeez Garba Gafasa,House of Assembly,abdulazeez-garba-gafasa
 4208994f-f713-4207-8917-9d922bdc228a,Abdulgafar O. Ayilara,House of Assembly,abdulgafar-o-ayilara
+6cd0ec26-19c7-4573-92fd-fc1c99b9fe4f,Abdulganiyu Audu,House of Assembly,abdulganiyu-audu
+9a819ca6-00d8-45c6-b0cb-f78c9ab7d841,Abduljalal Haruna Runka,House of Assembly,abduljalal-haruna-runka
+f554fa56-aa94-4574-a43a-6c56e018e5d4,Abdulkarim Lawan,House of Assembly,abdulkarim-lawan
+d15e8e33-73c0-4974-a7d9-af474c572682,Abdulkarim Mohammed,House of Assembly,abdulkarim-mohammed
+d956a99b-2408-424b-9120-8f9e66f499aa,Abdullahi Abubakar,House of Assembly,abdullahi-abubakar
+2ff4671a-c0a5-4675-a2a0-6be9a2b51ce9,Abdullahi Adamu Bazuwa,House of Assembly,abdullahi-adamu-bazuwa
+4dca6263-ab3d-4376-a1c8-99003a5c0411,Abdullahi Ademola Rasak,House of Assembly,abdullahi-ademola-rasak
+44d6e08d-850c-4d70-82ab-96b56a3d3461,Abdullahi Ahmadu,House of Assembly,abdullahi-ahmadu
+972963d9-3971-4032-b9cb-b8f52ee65f0e,Abdullahi Ahmed Bawa,House of Assembly,abdullahi-ahmed-bawa
+bc809212-bae4-4f18-9d52-6a255756a213,Abdullahi Alhaji Zakari,House of Assembly,abdullahi-alhaji-zakari
+a268bde1-1382-4cdc-8b78-707bf1bc1f77,Abdullahi Bawa,House of Assembly,abdullahi-bawa
+987a514e-76df-44f4-89d1-b11396dd239d,Abdullahi Buba Abatcha,House of Assembly,abdullahi-buba-abatcha
+94397813-6faa-4851-8307-7d39cf7dff90,Abdullahi Dahiru Angibi,House of Assembly,abdullahi-dahiru-angibi
 9b77f170-b456-48d0-8167-f647c1814e5f,Abdullahi Danbaba,House of Assembly,abdullahi-danbaba
+57c374e7-2e11-4801-b7af-336004b5429c,Abdullahi Danjuma,House of Assembly,abdullahi-danjuma
+b0a3f5f7-f8e0-4449-a16a-430902a63e50,Abdullahi Garba,House of Assembly,abdullahi-garba
+3c56d1af-b11a-46c1-bc46-1a5dd9af2744,Abdullahi Hamman Adama Borkono,House of Assembly,abdullahi-hamman-adama-borkono
 ce6ea879-64a5-40da-9565-0420879b3280,Abdullahi Iliyasu Yaryase,House of Assembly,abdullahi-iliyasu-yaryase
+886d5818-15d6-4ecd-a28a-b69b5e6d5cc1,Abdullahi Mahmud,House of Assembly,abdullahi-mahmud
+fa5f5668-6de7-49ab-b05d-d2ca4f8c6245,Abdullahi Musa Askira,House of Assembly,abdullahi-musa-askira
+94ceea91-8fcd-45c9-a4e8-4f4371a67d8e,Abdullahi Umar,House of Assembly,abdullahi-umar
+7c97b8c7-9eb7-4ae8-99c1-6604c2f8b804,Abdulrahaman Alkasim Karkarna,House of Assembly,abdulrahaman-alkasim-karkarna
+b361209b-3e01-4002-9544-cac6cb48d656,Abdulrazak Ismaila Tsiga,House of Assembly,abdulrazak-ismaila-tsiga
 c597d99f-ef17-4f82-8e50-c8cece8a0376,Abdulsobur O. Olawale,House of Assembly,abdulsobur-o-olawale
+2f423ea0-30ba-4e4f-98eb-3f292fcfd24e,Abdulwahab Idris,House of Assembly,abdulwahab-idris
+95d1b2bc-ab9e-43f5-ad8b-1896db6f3917,Abel Yakubu Bala,House of Assembly,abel-yakubu-bala
+ac95a720-ef9e-4d56-ac0b-e53518d7b3b0,Abinye Blessing Pepple,House of Assembly,abinye-blessing-pepple
+81bb5a23-de6f-4eea-8836-3a3cdd0f954d,Abiodun Fadeyi,House of Assembly,abiodun-fadeyi
 9899dec3-2a44-4dcd-a826-528db3353d21,Abiodun Sylvester Niyi,House of Assembly,abiodun-sylvester-niyi
+eef4dae2-4515-42f2-a1b6-b8d2c47786cc,Abioye Adenike Elizabeth,House of Assembly,abioye-adenike-elizabeth
+92b64e9f-f9fd-4e93-b607-3fbd989f76fd,Abok Nuhu Ayuba,House of Assembly,abok-nuhu-ayuba
 a7efd3f8-dfab-4f22-9bda-84470b0623f1,Abolarin Jiji,House of Assembly,abolarin-jiji
+6c31e0ed-fbd9-4b2a-9b7e-1a3e5979ae4d,Abraham Oba Ukefi,House of Assembly,abraham-oba-ukefi
+683a61ba-1133-499a-b8c0-2a5153a64392,Abu Umaru James,House of Assembly,abu-umaru-james
+89004cb1-7167-41de-bda1-fbe5f48ee77a,Abubakar Altine Kyadawa,House of Assembly,abubakar-altine-kyadawa
+45388f11-dfd3-4b0c-9ab4-77f10bf7d3a1,Abubakar Danladi Isah,House of Assembly,abubakar-danladi-isah
+299bf2d0-c2e0-4489-b990-85d357644f3a,Abubakar Ibrahim Babale,House of Assembly,abubakar-ibrahim-babale
+3b09fa3e-ee89-4891-81af-6d125fcdb5c1,Abubakar Imam Besse,House of Assembly,abubakar-imam-besse
+a68ac66d-a9f4-4945-80aa-ec8988819742,Abubakar Isa,House of Assembly,abubakar-isa
+17d626f5-747f-482b-8ec5-5500c81311cb,Abubakar Mohammad Sa'Idu,House of Assembly,abubakar-mohammad-saidu
+af5c2c7d-de59-4b9d-a5ae-98f288cb87c4,Abubakar Mohammed,House of Assembly,abubakar-mohammed
+b8b9210b-225e-4d1d-ad42-728c88ff530a,Abubakar Mohammed Total,House of Assembly,abubakar-mohammed-total
+ee2e5b0e-ba1f-47af-9d6c-8f2ca7c493f1,Abubakar Sadiq Ibrahim,House of Assembly,abubakar-sadiq-ibrahim
+331ef121-ea83-416d-8c3a-26a9e0e4d893,Abubakar Sadiq Muhammad,House of Assembly,abubakar-sadiq-muhammad
+1fb9b57f-e02c-4663-9aa4-45b7196770ed,Abubakar Suleiman,House of Assembly,abubakar-suleiman
+bb08b758-f58a-4639-bed6-80f1f72f40b0,Abubakar Suleiman Abukur,House of Assembly,abubakar-suleiman-abukur
+6e63783c-359a-4ab4-adbb-c6358e9ff487,Abubakar Suleiman Y.,House of Assembly,abubakar-suleiman-y
 72cb23c7-c52f-4de2-a0c1-4799f017a86f,Abubakar Uba Galadima,House of Assembly,abubakar-uba-galadima
+e15c0830-d57e-4a63-946b-8dfede5573b9,Abubakar Umar,House of Assembly,abubakar-umar
+f94d385f-107a-4415-9f0c-f4c86b8a6f08,Abubakar Yahuza Maidalailu,House of Assembly,abubakar-yahuza-maidalailu
+832e1389-a845-4014-8008-f8a2608e02b7,Abukabar Mohammed N.,House of Assembly,abukabar-mohammed-n
+36c96d52-989f-4a10-bb5d-e612d1ec93f3,Adamu Bari B.,House of Assembly,adamu-bari-b
+cdcbe647-c883-4146-891c-097dd46456f4,Adamu Hamza,House of Assembly,adamu-hamza
+5932eac9-3901-435a-8fca-359cb8d1ab0c,Adamu Mohammed,House of Assembly,adamu-mohammed
+bcc43f34-ee65-4631-a7d6-db24c2112ec8,Adamu Muhammed Birnin Yauri,House of Assembly,adamu-muhammed-birnin-yauri
+1f4444d6-b2a6-49bc-b4d7-aa39433cbb9d,Adamu Musa A.,House of Assembly,adamu-musa-a
+9d081176-9551-4392-bd76-c25eeaa3c7b9,Adamu Suleiman Ibrahim,House of Assembly,adamu-suleiman-ibrahim
+5020ce37-d08e-45cd-a7ae-ae0ae78e0c43,Adamu Umar A.,House of Assembly,adamu-umar-a
+a305eb85-26a6-47ae-a002-a51689c58d8d,Adebayo Babajide G.,House of Assembly,adebayo-babajide-g
+57936647-f860-4367-92ae-80a406abd250,Adebisi Lateef Adelani,House of Assembly,adebisi-lateef-adelani
 4c07921e-7944-4455-a084-413f2c523bb1,Adebisi Yusuff,House of Assembly,adebisi-yusuff
 e4f0d925-76f1-47ae-9fde-f57dc1fd9f70,Adeboroye Samuel Ademoye,House of Assembly,adeboroye-samuel-ademoye
+c4f39382-c8fb-4af9-b50b-ba8918812bfd,Adebunmi Lateef Olayiwola,House of Assembly,adebunmi-lateef-olayiwola
+003d50b0-446e-44e7-99b3-ce7a483a59e0,Adebusola Taiwo Hezekiah,House of Assembly,adebusola-taiwo-hezekiah
+41f3e29e-a9fe-443f-b43b-8262e7adcc5c,Adedibu Hakeem A.,House of Assembly,adedibu-hakeem-a
+19a18f5e-79e1-4512-b8d4-4a92d5906cc4,Adedoyin Onaolapo Sanjo,House of Assembly,adedoyin-onaolapo-sanjo
+bfbe6ff7-e5a9-4edb-a34a-85b3ad255eab,Adegbile Adirulahi Abefe,House of Assembly,adegbile-adirulahi-abefe
 54eec819-a696-46a0-89fe-da4affc7f7f6,Adegbuyi Oluwajuwa,House of Assembly,adegbuyi-oluwajuwa
 f29628c8-55db-461b-b968-7f77ee5e1d82,Adegoke Olajide,House of Assembly,adegoke-olajide
 39f3f7c8-7e93-4818-b76e-2c0eec60a4b6,Adegoke Olusesi Adeyanju,House of Assembly,adegoke-olusesi-adeyanju
@@ -436,189 +501,654 @@ e6cda095-893b-4b6a-b418-6c8f133845da,Adejuwa Adegbuyi,House of Assembly,adejuwa-
 5bb5a902-2f8c-4349-a7c5-3367575e8a27,Ademola Samuel Edamisan,House of Assembly,ademola-samuel-edamisan
 a9776245-16e3-4a00-b7ea-17a0a8378c69,Ademuyiwa Adeyemi,House of Assembly,ademuyiwa-adeyemi
 165be754-8192-4a14-b665-690802ed7363,Adeniran A. Adeyinka,House of Assembly,adeniran-a-adeyinka
+43625332-6ee8-45d5-b8c4-6abb99061e5e,Adeola Bamidele,House of Assembly,adeola-bamidele
 652da07e-40b1-419a-9fb7-cbaacc0c10ee,Adeoye Aribasoye,House of Assembly,adeoye-aribasoye
 a9878fd2-0950-423d-8702-971761d10fc4,Adeoye Oyebola,House of Assembly,adeoye-oyebola
 fdb3a93e-8695-4e2e-ae19-4a52b1866a92,Aderonke Aro,House of Assembly,aderonke-aro
+3de86d45-1f4d-4feb-b1e6-7543dc22f05e,Adetoyi Yinka Michael,House of Assembly,adetoyi-yinka-michael
+623b145e-c474-4902-b86f-540784b3bae3,Adewale Richards Adedoyin,House of Assembly,adewale-richards-adedoyin
 647984d4-571f-4a8c-8cff-98f125abcb8a,Adewale Temitope,House of Assembly,adewale-temitope
+337f98f6-4218-47c1-9404-2678523b1dfe,Adeyemi Adewumi,House of Assembly,adeyemi-adewumi
 629b75a5-3c0c-45d5-9f82-9d45287a781c,Adeyemi Olayemi Adesina,House of Assembly,adeyemi-olayemi-adesina
 f089b074-4973-4519-9ba7-7f3e4db022f4,Adeyemi Raphael,House of Assembly,adeyemi-raphael
+3c036671-c4ea-4da1-a7eb-5eb8801d58c6,Adeyeye Olajide Martins,House of Assembly,adeyeye-olajide-martins
+5d535f1c-2466-4476-a2f7-b0affdb7b664,Adikumo Salo,House of Assembly,adikumo-salo
+9acc9d1c-6264-4945-823f-1de094953a27,Ado Wakili,House of Assembly,ado-wakili
+ce34b027-9701-43f5-856c-745083ed1b45,Adonye Kelly Diri,House of Assembly,adonye-kelly-diri
 d1e75f7b-5beb-4ce8-8961-91796bf09ed7,Afuye Funminiyi,House of Assembly,afuye-funminiyi
+7eb962d0-c00b-4ed6-a95a-ba101a18c2f7,Agaibe N.,House of Assembly,agaibe-n
+5669b22e-8b04-46c3-be39-d3bdbf423529,Agbatse Geoffry,House of Assembly,agbatse-geoffry
+478003b5-b050-46d4-99f2-2ddb5a9fee1c,Agbidyeh Jonathan Akute,House of Assembly,agbidyeh-jonathan-akute
 be9d2146-7a6e-4719-b81c-9a15680ea241,Agbodike Paschal,House of Assembly,agbodike-paschal
+d729f5c4-1c3e-4dd2-889c-96f3e1f7b054,Agnes Uloko,House of Assembly,agnes-uloko
+91ccea85-098e-4fc9-a720-2452d49fb2d4,Ahiakwo Christian,House of Assembly,ahiakwo-christian
+3b835eaf-0e75-4af4-ab60-98459442ae30,Ahmad Jedua Dawud,House of Assembly,ahmad-jedua-dawud
+72e917a3-c6cf-4bef-9d27-c5432dd25a6d,Ahmadu Alhaji A.,House of Assembly,ahmadu-alhaji-a
+b8258d7b-5a92-4791-b954-a2705dceb2b6,Ahmed Abdullahi,House of Assembly,ahmed-abdullahi
+0bd6d15e-ecd5-4fd7-bc64-663f6b1f3833,Ahmed Bawa Kuka,House of Assembly,ahmed-bawa-kuka
 88eb6c6d-bd18-431a-bcdc-35a924253948,Ahmed Lawi,House of Assembly,ahmed-lawi
 bd67a514-2540-4b1a-b300-7c0a2b26e0f7,Ahmed Mohammed,House of Assembly,ahmed-mohammed
+c79c6d02-7afa-4f0f-8100-5e4b69e12e45,Ahmed Muhammed,House of Assembly,ahmed-muhammed
+6197ef69-a84b-4c83-9b24-891542f9b348,Ahmed Musa Dambol,House of Assembly,ahmed-musa-dambol
 baa79e2e-033e-4141-9dc6-8544e5a17346,Ahmed S. Baba,House of Assembly,ahmed-s-baba
 5dc3ab95-1015-4eca-b112-34285dbb45e1,Ahmed Saidu Rufai,House of Assembly,ahmed-saidu-rufai
+6b2f6464-d1e2-486c-a7ce-1c417c289581,Aimu Foni,House of Assembly,aimu-foni
 3c1a4b2f-4ed7-40c3-aca1-e0cda00dcf30,Ajayi Bolanle Lateefat,House of Assembly,ajayi-bolanle-lateefat
 cff7ef1c-af34-4146-80d0-06672afa9c3a,Ajayi Oyedeji,House of Assembly,ajayi-oyedeji
+af78352c-f5fe-4696-9da9-134fb1343b64,Aji Josiah John,House of Assembly,aji-josiah-john
+ca49bfa4-33a3-48aa-bbd6-180dbffd578e,Ajikolo Ibrahim Khadi,House of Assembly,ajikolo-ibrahim-khadi
 2c477066-7043-4e8d-9a0b-6d8904d567e2,Akaegbobi Johnbosco,House of Assembly,akaegbobi-johnbosco
 36078f88-4793-4a7d-adae-b643c6166c74,Akande Moses,House of Assembly,akande-moses
+f6de4e80-1810-4e4f-8894-5508b34ec373,Akande Moshood Kunle,House of Assembly,akande-moshood-kunle
+6d520b63-19e4-4aa9-942e-5fd4ff8b4053,Akeem Mustapha,House of Assembly,akeem-mustapha
+ff921f0d-d35c-4127-9e38-91d8abd968af,Akeem Obadara,House of Assembly,akeem-obadara
 dfa0f09b-6fb2-44a7-be11-cff5fab43fe2,Akindele Olanrewaju,House of Assembly,akindele-olanrewaju
 4c9c0717-b4cb-4ab0-ac2e-451d609a9273,Akingbade Jemili Adigun,House of Assembly,akingbade-jemili-adigun
 bc0bfb89-0d4e-482c-b961-351edafbe257,Akingbaso Festus O,House of Assembly,akingbaso-festus-o
 e4eeac5a-d23f-43a2-9ca6-0d2e9a7f2428,Akinoso Emmanuel,House of Assembly,akinoso-emmanuel
 41d1b9db-4d7c-487b-bf1d-449d4a26ec06,Akinsanya Nureni,House of Assembly,akinsanya-nureni
 ffa4c8a7-8741-4b5d-a0bc-280ccbe326c6,Akintomide Akinrogunde I,House of Assembly,akintomide-akinrogunde-i
+0d71503e-9b24-4a2e-93d8-0df32aeb1920,Akintunde Olajide Emmamuel,House of Assembly,akintunde-olajide-emmamuel
+51572680-be0d-4941-94a1-8e6535e1cd6c,Akwaji E. Godwin,House of Assembly,akwaji-e-godwin
+dfdfa7a2-b47b-45ff-bd91-4c56e1423496,Alarape Asimiyu Niran,House of Assembly,alarape-asimiyu-niran
 2a9c1ff3-60ed-47f2-8177-4227e4d4cfb5,Alfa Momoh Rabiu,House of Assembly,alfa-momoh-rabiu
+6142b332-9272-4309-b5e4-bff8d099cd14,Alfred O. Martins,House of Assembly,alfred-o-martins
+f7c755aa-822a-4a68-a82e-26b4fb7c4e24,Alhaji Idris Garba,House of Assembly,alhaji-idris-garba
+128823de-ecce-405f-a6eb-065d36debeb2,Alhaji Maidawa,House of Assembly,alhaji-maidawa
+34495061-f6bd-4df3-bdd3-73bce960c2c5,Alhassan Hamman Joda,House of Assembly,alhassan-hamman-joda
+18f0d015-a0df-4532-9a86-0c96a2e27cf4,Ali Bulama Yajiwa,House of Assembly,ali-bulama-yajiwa
+74ad45a0-3087-4ee6-948b-b59f3639870f,Ali Dan'Iya,House of Assembly,ali-daniya
+9ca3e878-f987-4236-9a29-49a5bf7b8868,Ali Dogara Mohammed,House of Assembly,ali-dogara-mohammed
 1188e0aa-6ae3-45d2-8761-3be2d89ef3d6,Ali Ibrahim Isa S,House of Assembly,ali-ibrahim-isa-s
+f4507915-d0e9-454f-a980-3249688ac41f,Ali Kalat,House of Assembly,ali-kalat
+ccbc1665-7553-4bf0-8bc5-6f31abc7af85,Ali Kotoko,House of Assembly,ali-kotoko
 b2fa25e1-04d3-4f97-a2e8-207c853e4191,Ali Okechukwu K.,House of Assembly,ali-okechukwu-k
+6a1a2992-7f45-45aa-b437-2bdc3c4c1b5b,Aliyu Abubakar Albaba,House of Assembly,aliyu-abubakar-albaba
+8a574a96-b650-4bbb-9f8c-5ffcccd3f99c,Aliyu Ahmed Aliyu,House of Assembly,aliyu-ahmed-aliyu
+3808ff9a-206d-410e-a3e2-1c9613e7fec5,Aliyu Ibrahim Nana,House of Assembly,aliyu-ibrahim-nana
+b4ac7658-5a99-4b6d-af1f-ae945a31aa05,Aliyu Sabiu Ibrahim,House of Assembly,aliyu-sabiu-ibrahim
 fd06fa3d-d029-4016-84a2-df74cbe18f97,Aliyu Wahab Opakunle,House of Assembly,aliyu-wahab-opakunle
+1ad21183-a53b-48d7-b625-5fdcd2400a1a,Almustapha Aminu,House of Assembly,almustapha-aminu
+8d36c6ca-2cf3-4e18-a8c5-dd16c41aa3cb,Aluebhosele Ephraim Otaigbe Sele,House of Assembly,aluebhosele-ephraim-otaigbe-sele
 3e9e3b97-fde6-41dd-b0d2-ae3c46910964,Ambali Olatunji Ibrahim,House of Assembly,ambali-olatunji-ibrahim
-5c17990f-056d-482b-8ada-798a8d2eef2b,Aminu Sa'adu,House of Assembly,aminu-saadu
+996b37d4-daa8-4f1f-aac3-690e4e48b5fe,Aminu A. Garba,House of Assembly,aminu-a-garba
+a587bb6b-0ecb-4c58-9c71-9515ddbeeb84,Aminu Abdullahi Shagali,House of Assembly,aminu-abdullahi-shagali
+0b1b6470-427e-4dff-9594-4edab09db552,Aminu Ahmad,House of Assembly,aminu-ahmad
+6babf776-cc99-4c10-a854-17407a33a8c5,Aminu Ibrahim,House of Assembly,aminu-ibrahim
+3d49e48d-3ecf-443b-8785-919b7cb725dc,Aminu Magaji,House of Assembly,aminu-magaji
+ab16f114-f9b5-4c79-a6af-21c4e919993e,Aminu Muhammed Bunza,House of Assembly,aminu-muhammed-bunza
+5c17990f-056d-482b-8ada-798a8d2eef2b,Aminu Sa’ad,House of Assembly,aminu-saad
+7a51142d-1049-445b-997c-f11338399351,Aminu Sule Sankara,House of Assembly,aminu-sule-sankara
+a0b9a9c5-eec6-4ebf-932c-8eae22e928f3,Aminu Yusuf Jangebe,House of Assembly,aminu-yusuf-jangebe
+46cb0b53-84b5-4b7d-88cc-f3af4e32fed2,Aminu Zakari,House of Assembly,aminu-zakari
 680004a0-4035-4606-b513-7dfe094f5780,"Amosun, Yusuf Olawale",House of Assembly,amosun-yusuf-olawale
+df3ebb99-471b-429c-9c5c-e0e36dd59d0b,Amurudu Aten Usaini,House of Assembly,amurudu-aten-usaini
+5e2f6093-d280-475a-b383-e2f971852f2a,Amwe Comfort,House of Assembly,amwe-comfort
+72532598-3c88-4cb8-bdbf-c3d89ef9184d,Anas Sarkin Fada,House of Assembly,anas-sarkin-fada
+9085279b-33fa-491c-bffe-6f511841c652,Anderifun Timothy Habila,House of Assembly,anderifun-timothy-habila
+21c0a6f1-808a-4ee7-bdce-f8c41aead818,Aniefiok Dennis A,House of Assembly,aniefiok-dennis-a
+f2c708c0-920d-4897-9616-8f5730cc759c,Aniekan Etim Bassey,House of Assembly,aniekan-etim-bassey
+8ecad0f9-3b88-4803-ba41-1ba8adb652be,Aniekan Uko,House of Assembly,aniekan-uko
+49a18f43-e4d4-4419-87c8-45a70ad213cc,Anietie B. Eka,House of Assembly,anietie-b-eka
+71e4d9c8-b2cf-4677-a35c-89ac9c9bb0e0,Anslem Oguguo Ndubuisi,House of Assembly,anslem-oguguo-ndubuisi
+93ff5550-372f-4ac7-af47-882f1c447e04,Anthony Agom,House of Assembly,anthony-agom
+e076649d-106f-427e-a142-9e657b8a0684,Anthony Eleke-Okwuri,House of Assembly,anthony-eleke-okwuri
+75cb0f0d-437b-49b1-9cf3-2c7510d4e65b,Anthony Soberekon,House of Assembly,anthony-soberekon
 74fe05cc-edad-4384-ae64-5ce8df4a93f1,Anthony Ujah Alewo,House of Assembly,anthony-ujah-alewo
+f9611567-487b-430f-abe2-e7df7be16678,Anukam Solomon,House of Assembly,anukam-solomon
 eb51d712-b496-40db-96df-d76a5d39ebc7,Arinze Chukwu Lucas,House of Assembly,arinze-chukwu-lucas
 84d1f028-7697-4705-9884-a43b0ca7aa30,Arubu Kola,House of Assembly,arubu-kola
+ec5a6056-b925-4ad9-be06-4bdf6f01f6c0,Asoro Osadebamwen Roland,House of Assembly,asoro-osadebamwen-roland
+66df47aa-60e2-4452-8596-3650442b2105,Asupa Peter Forteta,House of Assembly,asupa-peter-forteta
+a0832b6b-bb08-455a-bbed-9b642149abef,Asuquo E. Archibong,House of Assembly,asuquo-e-archibong
+861471e0-5a90-4a8a-a1c0-cc5fc84eb818,Asuquo Nana Udo,House of Assembly,asuquo-nana-udo
+71072376-60d5-4548-82a3-b6c91445b2f8,Audu Mustapha,House of Assembly,audu-mustapha
+c7255b10-cb5d-4d9a-9ef2-afd3fb080964,Augustine Uroye,House of Assembly,augustine-uroye
+4206e223-99dc-44f2-b8b7-183153a11d62,Auwal Mohammed Yahaya,House of Assembly,auwal-mohammed-yahaya
 c67361f5-4412-44fc-8cf7-0569eb73aa61,Awo Ransome Chinedu,House of Assembly,awo-ransome-chinedu
 e2ac22a2-586e-418e-b8ba-303ecd172fee,Awodiji O. Felix,House of Assembly,awodiji-o-felix
 17992a6f-4ec3-4d4f-bfff-247be35b04b6,Awolola O. Ayokunle,House of Assembly,awolola-o-ayokunle
+e935a0cb-fc12-4a31-9364-0c8a42399191,Ayadike Nwosu,House of Assembly,ayadike-nwosu
+a0f3eebd-8db8-4ac7-b984-436b445b6be1,Ayah Bonny,House of Assembly,ayah-bonny
 e46ec187-0fd1-40a3-b6c1-e00345bbf5e6,Ayokunle Yemisi,House of Assembly,ayokunle-yemisi
 7d8067f4-7852-4eec-8e82-10ae770fc846,Ayuba Labaran Durum,House of Assembly,ayuba-labaran-durum
+5185f3aa-bded-4aad-989a-d7e9ae10eda5,Ayuba Stephen Wakawa,House of Assembly,ayuba-stephen-wakawa
+9710d875-8f76-43ff-824a-85b760388894,Azeru Opara,House of Assembly,azeru-opara
+686b4b8a-b3b2-4335-acbf-d75243edc1a9,Baba Ali Modu,House of Assembly,baba-ali-modu
+e8fab493-4c82-46c1-bb47-f3b6e9f031c0,Baba Mala Bukar,House of Assembly,baba-mala-bukar
+faf0139d-30c6-41bd-a50a-6cb195f29ee3,Baballe Abubakar Dambam,House of Assembly,baballe-abubakar-dambam
+a1944038-fa60-47c3-817e-aa7e0b4feccf,Babalola O. Samson,House of Assembly,babalola-o-samson
+a4166898-2669-48dc-83ed-07aeeb68fe9c,Babashehu Mallam Baba,House of Assembly,babashehu-mallam-baba
 8084327b-d2f5-48dc-88a7-c919d911cba7,Babatunde Abdukareem,House of Assembly,babatunde-abdukareem
 23520550-89f1-4206-8375-c47734956770,Babatunde Idowu,House of Assembly,babatunde-idowu
+2756f710-4c0f-406f-8b3d-f70e2c3a8e7a,Badamasi Taofeek Olatunde,House of Assembly,badamasi-taofeek-olatunde
 f3dc18cd-8de5-42cf-a3cc-c766156be14e,Bajeh Muktar,House of Assembly,bajeh-muktar
+9090ebcb-5420-4a8b-acc0-90c158660e42,Bako Kasim Alfa,House of Assembly,bako-kasim-alfa
+c1f365c0-835f-4af9-8f04-c824e5a2ff37,Bako Phalal,House of Assembly,bako-phalal
+90acb8d8-40d6-4f2b-adec-529ca734e0a0,Bala Abdu Rishi,House of Assembly,bala-abdu-rishi
+cc3eab41-bc7f-47e1-a3d1-6b2f70364ff5,Bala Fwangje N.,House of Assembly,bala-fwangje-n
+ee8a01d5-b8a1-4257-8728-29d69e604be1,Bala Hamza Gada,House of Assembly,bala-hamza-gada
+358c4d5b-cc40-4957-ac29-a8f60a13649a,Bala Rabi’U,House of Assembly,bala-rabiu
+5f50f6ec-f085-4092-a648-693ff72da216,Bala Umar,House of Assembly,bala-umar
+27493756-992b-48dd-ab38-1174eeb3f75f,Balle Faruk Mustapha,House of Assembly,balle-faruk-mustapha
 264270c3-757b-40b2-9237-92ef8779a6a5,Balogun Akeem Agbolade,House of Assembly,balogun-akeem-agbolade
+71681595-5cd2-4a63-b8bf-e696ab562312,Bamigboye Jacob Abidoye,House of Assembly,bamigboye-jacob-abidoye
+e6962208-f846-40bf-982c-7bc1c9c35074,Bappah Usman Jurara,House of Assembly,bappah-usman-jurara
+4549fcde-5bc9-4f5b-9bd7-6deb442e4754,Bariene Deeyah,House of Assembly,bariene-deeyah
+2728677a-38cd-469a-a062-ee9e0023d8af,Bashir Idris Katari,House of Assembly,bashir-idris-katari
+ad07ec34-02ff-4c1a-ab69-d4596a4215fb,Bashir Mohammed,House of Assembly,bashir-mohammed
+e440f3f3-f4d5-4774-b8d3-7aec1347777f,Bassey Asuquo Francis,House of Assembly,bassey-asuquo-francis
+cba8f9bc-6e0e-4a61-967d-633ebb7a7544,Bazam Mohammed,House of Assembly,bazam-mohammed
 9c2d547b-a07a-4b34-95a9-dc55250b322a,Bello Atinuke,House of Assembly,bello-atinuke
 98c8e840-6feb-4fdf-a621-f077327881b6,Bello Hassan,House of Assembly,bello-hassan
+37a4cea7-956e-4e20-8afc-48cc433427f9,Bello Isah Ambarura,House of Assembly,bello-isah-ambarura
 acf4a17b-e805-473d-92e4-c0b47da7d839,Bello J. Olanrewaju,House of Assembly,bello-j-olanrewaju
+3487e3f8-667b-4d05-9e3e-b69eb2fe7fc6,Bello Mu’Azu Shira,House of Assembly,bello-muazu-shira
+ff7e11e6-702e-471b-9ac8-58ce759b2900,Bello Sarki Jadori,House of Assembly,bello-sarki-jadori
 9cde96db-a902-4a37-b21e-d75bc8c16a7e,Benjamin Ezeoma,House of Assembly,benjamin-ezeoma
 f5b389db-86aa-4d43-890a-da49e0fd532e,Beverly Ikpeazu-Nkemdiche,House of Assembly,beverly-ikpeazu-nkemdiche
+8067f6fa-1a3f-42b3-b76d-785bab478d28,Binta Mamman,House of Assembly,binta-mamman
 3201e73d-6f4a-49b0-92bf-6f8f54f0aed9,Bismark Chuka Eneh,House of Assembly,bismark-chuka-eneh
+e4d6d4ea-90e0-44f0-a400-33cfed0bea16,Bizi Gafo Maizabu,House of Assembly,bizi-gafo-maizabu
+1afad2b4-6c56-45aa-b990-eca32b715f88,Bobbo Bakoji Aliyu,House of Assembly,bobbo-bakoji-aliyu
+b19b70ad-0793-4052-b9cf-ae1b0e264f74,Bonzena John Kizito,House of Assembly,bonzena-john-kizito
+25d571aa-cde5-40a2-b832-bfadb8bcd7ab,Buba Chiroma Alhaji,House of Assembly,buba-chiroma-alhaji
+8d4f2a88-dfeb-4515-8a86-0ee09974389d,Buba Musa,House of Assembly,buba-musa
+b0cb995c-89e8-4c0f-ba4d-1dbf81a6fc53,Buba Saleh Maina,House of Assembly,buba-saleh-maina
+063f84a0-8169-4210-9933-21a9b50b374a,Buba Siddi,House of Assembly,buba-siddi
+50bb7d51-5d00-4350-af9d-dbe334d8e5d5,Bukar Bulama,House of Assembly,bukar-bulama
+b8131199-6c84-401c-9690-4e53c768bf17,Bukar Mustapha Dalatu,House of Assembly,bukar-mustapha-dalatu
+5e4d3b59-7ae4-4905-b028-92f56c64aff3,Bukuni Dominic Nzinang,House of Assembly,bukuni-dominic-nzinang
+a8c05ef4-0a87-4276-b531-2406d01b21eb,Bularafa Bunu Zanna,House of Assembly,bularafa-bunu-zanna
+0bd75c78-a85b-4ef5-8610-683905f8029b,Bunde Iyongo Torkuma,House of Assembly,bunde-iyongo-torkuma
+59f7871e-9565-4615-87f1-b8e5888ed42d,Charity Friday Ido,House of Assembly,charity-friday-ido
+727de494-73ee-43b2-8990-c9f28d7bf680,Charles Daniel,House of Assembly,charles-daniel
+9ced9f7e-f8ba-49fb-b7ed-356c2569664a,Charles Ekpe,House of Assembly,charles-ekpe
+c7a7eedb-fd50-4db0-a968-7aa4ada7fa4a,Charles Emetulu,House of Assembly,charles-emetulu
+02c81b83-fd1b-416c-bba2-d7b45e9b2862,Chawaza Ayuba Ishaku,House of Assembly,chawaza-ayuba-ishaku
+6d600238-059b-4339-92cc-55b56e2273c6,Chemetyo Apine Damian,House of Assembly,chemetyo-apine-damian
 516e580a-e4a4-4519-baa2-9b318f2f1546,Chidi E. Ejem,House of Assembly,chidi-e-ejem
 2b02d249-8c2b-46df-b791-6dd3f23a45d4,Chidi Livinus Udemadu,House of Assembly,chidi-livinus-udemadu
 56f1400b-ef70-4e93-88b5-b783052dca3f,Chiekwu Arthur Ifeanyi,House of Assembly,chiekwu-arthur-ifeanyi
+e00edf63-8bb8-42f3-a252-170b0fc1b631,Chiji Chimezie Collins,House of Assembly,chiji-chimezie-collins
 91837991-b217-4641-9085-85c74b084c92,Chijioke Ugwueze,House of Assembly,chijioke-ugwueze
+1559fb5f-5c92-439f-89d0-90659f588c19,Chikezie Chika A.,House of Assembly,chikezie-chika-a
+0a273327-e738-43c2-b976-584e260007a0,Chikwendu Kalu,House of Assembly,chikwendu-kalu
+ae874d68-b1f2-421d-ae89-22ab9dfb318c,Chinda Michael O.,House of Assembly,chinda-michael-o
 4732ed45-00ec-4df8-998d-3b01cd439fa6,Chinedu Nwamba,House of Assembly,chinedu-nwamba
 11a2a185-7e31-4048-8e84-0241a92e54f9,Chinedu Okwu,House of Assembly,chinedu-okwu
+28e8eacb-6df5-4597-8bce-9f4ee6a137da,Chinedum Orji,House of Assembly,chinedum-orji
 94d5088d-a969-4894-a29d-756bf61776ce,"Chinwe Lilian Nwachukwu,",House of Assembly,chinwe-lilian-nwachukwu
+17ec5626-a8d3-4672-adb8-8cbd489b8908,Chris Njah Mbu-Ogar,House of Assembly,chris-njah-mbu-ogar
 c29d1ede-0ae0-4783-be8a-b63ce094aac9,Christian Usulor,House of Assembly,christian-usulor
+0b7c4303-cb0f-4558-9888-db88be360b3c,Christopher Adaji,House of Assembly,christopher-adaji
+cf139642-0a10-4b1c-847b-25de3f8a0796,Chukwu Chijioke,House of Assembly,chukwu-chijioke
+51088ebd-5733-45f7-aa25-03f2f490cc1f,Chukwudi Apugo,House of Assembly,chukwudi-apugo
 2dca6f39-f031-446b-86b3-d1743942a4ac,Chukwuma Igwe,House of Assembly,chukwuma-igwe
 76dd317f-1b10-498f-bbe4-806bbfb75504,Chukwuobasi Johnson,House of Assembly,chukwuobasi-johnson
 141b3fe1-4d1d-4a54-a6bf-a4d4f15d825a,Cosmas Atabor,House of Assembly,cosmas-atabor
+02b16c02-1f82-4892-ae98-362038dc04e1,Crosby Osadolor Eribo,House of Assembly,crosby-osadolor-eribo
+fb96d0f8-60d7-42f9-aacf-f135b51e2e75,Cyratus Okoro,House of Assembly,cyratus-okoro
 2d129392-930f-4d5b-8326-df13c1a05860,Dahiru Ahmed,House of Assembly,dahiru-ahmed
+612f22c0-b9d1-44ac-a010-964a4b59fbb5,Dalyop Gwottson F.,House of Assembly,dalyop-gwottson-f
+dd600858-7ece-4f14-b2f7-9b159766ff57,Dan Bala Abdullahi,House of Assembly,dan-bala-abdullahi
+bff1adf2-ee33-48db-93d9-b80c5e65c231,Dan Umma Bello,House of Assembly,dan-umma-bello
+9c2e6628-c9e2-4cde-af1e-62ef4ba44853,Daniel Nanbol Listick,House of Assembly,daniel-nanbol-listick
+92671183-e64c-4e01-99f8-1bc6040b8561,Daniel Ogah Ogazi,House of Assembly,daniel-ogah-ogazi
 545c1ef8-025e-4135-bba6-69f124947c0b,Daniya Ranyi,House of Assembly,daniya-ranyi
+e10981ba-2d7b-4e7d-a1a3-7066844dcae9,Danladi Angulu Kwasu,House of Assembly,danladi-angulu-kwasu
+56f1d8d6-9b71-4e19-a237-fc7977ed9ac9,Danladi Jatau,House of Assembly,danladi-jatau
+4cca105a-9fcd-4acd-801f-460d3acb6f79,Dasun Philip Peter,House of Assembly,dasun-philip-peter
+b2697216-4a40-47c6-a7a4-cf13e5f51376,David Lawrence Udofa,House of Assembly,david-lawrence-udofa
+c1d70066-d345-4107-97cd-6d4e1adb829d,David Maiyaki,House of Assembly,david-maiyaki
+aaba0b4a-95c5-43f0-a961-24ef84257b43,Davies Etta,House of Assembly,davies-etta
+e56dc118-4692-4a6f-be76-ff3fee377a42,Dayyabu Shehu,House of Assembly,dayyabu-shehu
 bf60b771-dc9a-43a8-87f3-be8b109f7caa,Desmond Elliot,House of Assembly,desmond-elliot
 10e3e191-2536-49cf-824b-cefa28d31951,Desmond Iloabuchi Aniagu,House of Assembly,desmond-iloabuchi-aniagu
+577559ae-bba6-4bf7-b803-c42072abdb12,Dewu Abdulkadir Umar,House of Assembly,dewu-abdulkadir-umar
+bd0bf428-113c-4f29-b1bc-03bf9e138dcb,Diah Peter Abel,House of Assembly,diah-peter-abel
+92889ef5-d228-41de-9ba9-e903cef2c501,Dige Mohammed,House of Assembly,dige-mohammed
+2ea5c73f-1da0-48b7-81cd-92ca4e33856f,Dikko Monday Samson,House of Assembly,dikko-monday-samson
+f1ff7783-213f-4bf3-99dd-6eb6d7afcebe,Dinglok Adawa,House of Assembly,dinglok-adawa
+e59df8f8-790f-4f98-813d-14eafa5bad9e,Dogo Dala Adamu,House of Assembly,dogo-dala-adamu
+c80b878b-7efa-4e79-89b4-4a3508166e88,Dominic Ezerioha,House of Assembly,dominic-ezerioha
 441e5ae2-40f4-455c-8ea7-a36d9f3b39f4,Douglas Nwachukwu,House of Assembly,douglas-nwachukwu
+f4b9735e-8b73-4a41-a96e-27300307ad6d,Douglas Samspon,House of Assembly,douglas-samspon
+6d0a4efe-8c50-4dc6-82c4-83af5b5e7551,Dumez Onaiwu Ugiagbe,House of Assembly,dumez-onaiwu-ugiagbe
+928d302f-853e-4a33-8501-a2bd768d913e,Duru Iheonukara,House of Assembly,duru-iheonukara
+db91997a-8944-4623-957f-396317455da4,Duruji Lawrence,House of Assembly,duruji-lawrence
+13f1b661-840e-40cf-8a7f-e006a5a03dd7,Dusu Esther Simi,House of Assembly,dusu-esther-simi
+874aedc3-53d5-4f57-8692-560df6493d90,Dutse Sule Musa,House of Assembly,dutse-sule-musa
+434608a5-de96-4c82-bb86-0a43e1cbb8fc,Dyako Cephas Tauershima,House of Assembly,dyako-cephas-tauershima
+34a301c5-7781-40ec-8e7f-bdf34b763549,Edoh Abu Godwin,House of Assembly,edoh-abu-godwin
+947b2117-888b-4c51-96ed-3f29b5a9b584,Edoror Victor Sabor,House of Assembly,edoror-victor-sabor
+4af660d3-277b-4699-8e8b-5e20ebd0a4d5,Edward Ajang,House of Assembly,edward-ajang
+977bbcf9-3042-48b0-a17b-b0a1bea5ff55,Edward Irigha,House of Assembly,edward-irigha
 08be26d4-c595-4e0a-8930-a7344c04200c,Edward Uchenna Ubosi,House of Assembly,edward-uchenna-ubosi
+acab665b-d908-4b3d-878b-90f3c1908559,Efa N. Esua,House of Assembly,efa-n-esua
+c7637094-7ac4-4bb6-bf13-be85eaa254e6,Effiong Okon Bassey,House of Assembly,effiong-okon-bassey
+0c9c81d7-590b-4975-882e-57f5f25388d9,Egwim Innocent Arthur,House of Assembly,egwim-innocent-arthur
+0f70fc89-67ea-4899-a8b0-31d7433e944b,Egwuronu Obasi,House of Assembly,egwuronu-obasi
+ff24cee8-eeb8-48fd-84f0-c4ff60f62b25,Ehie Ogerenye Edison,House of Assembly,ehie-ogerenye-edison
 88343155-8c5d-4934-a775-c1e6c43bcbeb,Ejiofor Ebele,House of Assembly,ejiofor-ebele
+8ede3f8d-e288-4fca-aec6-a711c50c1fd6,Ekene Fredoline Nnodumele,House of Assembly,ekene-fredoline-nnodumele
+eefd48f6-50da-422a-a968-8c8dae17455a,Ekpo Ekpo Bassey,House of Assembly,ekpo-ekpo-bassey
 755f9ba7-e078-4ac1-9178-006e28bfadbc,Elegbeleye Rasheed Olalekan,House of Assembly,elegbeleye-rasheed-olalekan
+7dd0465d-3aa1-41ea-ae29-7e96cc94b6e8,Elemefuro Teddy,House of Assembly,elemefuro-teddy
 9ce58647-1684-42a8-b9f0-a6bfe2649a72,Elemide Oludaisi,House of Assembly,elemide-oludaisi
 9a1f74ab-8140-4c69-a10d-f9c7dc9f7eee,Eli Uzoma Innocent,House of Assembly,eli-uzoma-innocent
+c9d9ccb0-5ed9-4f26-970f-1e8b624e273f,Elizabeth Edem Ironbar,House of Assembly,elizabeth-edem-ironbar
+96bde047-fcae-4edd-b038-6cb422acfcaa,Elvert Ayambem Ekom,House of Assembly,elvert-ayambem-ekom
 49fed200-04e6-455e-b076-caac49bbeafd,Emeka Aforka,House of Assembly,emeka-aforka
+c3d04107-3ca9-43c8-9063-38842be7ca15,Emeka Nwaobi,House of Assembly,emeka-nwaobi
+d2ee38fd-0498-46b5-8d9e-b188b5b12bb7,Emeka Okoroafor,House of Assembly,emeka-okoroafor
+b6748f1d-c4d6-414c-96d0-37c900d33014,Emmanuel A. Sinebe,House of Assembly,emmanuel-a-sinebe
+46324010-d46f-4149-b088-d8172c14eb30,Emmanuel C. Ndubuisi,House of Assembly,emmanuel-c-ndubuisi
+6d4d348f-f384-4fb7-ac87-d0d534f5df19,Emmanuel Ekpenyong Bassey,House of Assembly,emmanuel-ekpenyong-bassey
+f4a8c06e-b354-470c-a43a-6e1fe60afdb7,Emmanuel Omoladun Agbaje,House of Assembly,emmanuel-omoladun-agbaje
 cdaf619d-5cad-4315-8a0f-cd78b1620ae7,Emmanuel Ugwuerua,House of Assembly,emmanuel-ugwuerua
 ab38a8eb-e162-4f58-9ef9-569954d51b37,Enema Paul,House of Assembly,enema-paul
+23bac17f-62f1-422a-8849-2a06655c8d1f,Eneme Tafarki Agbadu,House of Assembly,eneme-tafarki-agbadu
+4960dee0-c12c-44cf-b894-90cdb5de8894,Enemi George A.,House of Assembly,enemi-george-a
 76034989-250e-4ab4-895f-6f55d6d13157,Engr Emmanuel O. Nwafor,House of Assembly,engr-emmanuel-o-nwafor
 be87d693-2ed3-4546-ab55-117fe2094926,Engr. Nwuruku Humphrey,House of Assembly,engr-nwuruku-humphrey
+f97663dd-f05a-44d4-89cd-81397e787e95,Eric Allison Afeikhe Okaka,House of Assembly,eric-allison-afeikhe-okaka
+ffd7f2ad-e85f-466b-8f3b-d085d92fa245,Eric Piangat Dakogol,House of Assembly,eric-piangat-dakogol
+0b0b726b-b014-4d05-961c-aef7e5f8a4e2,Eteng Jonah Williams,House of Assembly,eteng-jonah-williams
 b028fa2a-d101-44d7-b80a-e680be3f5ab8,Ethel Oyibo Ugwuanyi,House of Assembly,ethel-oyibo-ugwuanyi
+094f6e3e-cad3-4f21-9307-70a22d6ef7ca,Evance Ochuko Ivwurie,House of Assembly,evance-ochuko-ivwurie
+c467f263-1349-4be8-ad7b-c9c55085b7d4,Evans Bapakaye Bipi,House of Assembly,evans-bapakaye-bipi
 1c2329f5-dd37-4ac6-b1c5-5a4991b24024,Ezenwunne Fabian C.,House of Assembly,ezenwunne-fabian-c
 753ab2e8-ee11-448a-aed7-61d5643a23c0,Ezeudu Lawrence C.,House of Assembly,ezeudu-lawrence-c
+4a7934eb-f9cd-4406-8ca2-af45fd2a3917,Ezu Rizzy C.H.,House of Assembly,ezu-rizzy-ch
+b9cd9a05-85d9-448a-806f-5d01ee65c885,Fafi Wisdom,House of Assembly,fafi-wisdom
+c8ce5ac1-de1f-4b29-80d6-d5c24d90bfb3,Faisal Abbas,House of Assembly,faisal-abbas
+4d9b7189-8747-41c9-8828-34ae74a233e1,Faruk Musa Dosara,House of Assembly,faruk-musa-dosara
+5f8ab234-6890-4c8b-948e-b6b38cf2233e,Faruku Aliyu,House of Assembly,faruku-aliyu
+faf44815-3814-4c76-947f-be0e69464261,Faruku Amadu,House of Assembly,faruku-amadu
 81c9b5d9-0252-45c6-9281-c8c2e1410799,Fasuwa Abayomi Johnson,House of Assembly,fasuwa-abayomi-johnson
 fd4514b6-380d-4807-8c97-80845bc73024,Fatai Mojeed,House of Assembly,fatai-mojeed
 5b93fdfb-ee59-4a2a-a6e8-3b9ecfe8ac7f,Fatai O. Oluwa,House of Assembly,fatai-o-oluwa
+9f233e11-b65c-4113-96f5-dd526fba5ef0,Fatokun Ayotunde O.,House of Assembly,fatokun-ayotunde-o
 4111f0f6-2ce3-4a88-95d0-7c4ac946e2b6,Favour Semilore Tomomewo,House of Assembly,favour-semilore-tomomewo
 e52093c9-d8de-49a1-870c-9c973d99dfe7,Fawekun Babatunde,House of Assembly,fawekun-babatunde
 42d23269-089e-4121-89dd-9cf61b1af387,Felemu Gudu Bankole,House of Assembly,felemu-gudu-bankole
+27e8ab1e-c24f-4562-9149-cba0771bb87c,Felix U. Anirah,House of Assembly,felix-u-anirah
+11fbea99-0420-47d3-bc42-3665eb069c37,Ferguson Onwo,House of Assembly,ferguson-onwo
 e845448e-c68f-4573-b07a-83e155f3b94a,Festus Ayodele Adefiranye,House of Assembly,festus-ayodele-adefiranye
 4f6a1287-de5a-431a-a7ac-2b0d3692ae22,Franca Okpo,House of Assembly,franca-okpo
+e0b01060-4c42-4682-9248-fa35e0da4f5e,Francis A. Adetunji,House of Assembly,francis-a-adetunji
+34db481b-01c2-4d47-b7a1-dd828a1d680f,Francis Abumere Omoluimhen Okiye,House of Assembly,francis-abumere-omoluimhen-okiye
 3fd3a66b-dccb-4d88-a85a-d8f7aff2c3f9,Francis Ogbonnaya Nwifuru,House of Assembly,francis-ogbonnaya-nwifuru
+f2fb7c5f-120e-42d5-994a-022031f82400,Francis Sampson O.,House of Assembly,francis-sampson-o
+aa4d710f-a045-4384-b1b9-7e95d39bda76,Frank Onyebuchi Ugboma,House of Assembly,frank-onyebuchi-ugboma
+ea0c1914-bac5-49ea-9ec4-40114a5015dd,Frederick Osim,House of Assembly,frederick-osim
+4e0bc0cc-c0ad-4073-9c0c-2f1df95ee286,Friday Osanebi,House of Assembly,friday-osanebi
+aa3565de-d5ab-49c9-8287-3b5a5b402297,Gana Maina Digma,House of Assembly,gana-maina-digma
+d3d2ce32-3372-424b-b62c-aaefefd04207,Gande Atiku Liman,House of Assembly,gande-atiku-liman
+d3daaa77-4af7-4115-9cee-9bd4003b3d35,Garba Ajiya Samson,House of Assembly,garba-ajiya-samson
+51ae1b68-10cd-40dd-bf37-b559280d0f07,Garba Hussaini,House of Assembly,garba-hussaini
 4acc1d14-6654-43c2-813b-eeb42e7d46ad,Garba Shehu Fammar,House of Assembly,garba-shehu-fammar
+c5543a76-683b-41ad-b19c-cee6e21cc736,Garba Ya'U,House of Assembly,garba-yau
 3cba9fe7-ab26-4e59-aae8-b0ca79ccd76b,Garba Yau Gwarmai,House of Assembly,garba-yau-gwarmai
+b1af5d6b-2625-4db5-b060-298418ef0e0a,Gaule Yarima Ladan,House of Assembly,gaule-yarima-ladan
+53ecce37-5b12-4ae4-a6e8-749942888827,Gayam Mohammed Umar Galadima,House of Assembly,gayam-mohammed-umar-galadima
+cfd2c966-b1e3-4ec6-a3d8-0491314f0f08,Gazali Abubakar Wunti,House of Assembly,gazali-abubakar-wunti
 b8d6854f-27b9-4b28-8d4c-47abad0dce4a,Gbegudu J. Ololade,House of Assembly,gbegudu-j-ololade
 1402fe8b-3406-42f7-a8bf-8cd79152b5d3,Gbolahan O. Yishawu,House of Assembly,gbolahan-o-yishawu
 63b0b00d-5a10-46d4-b719-12bfeeca48db,Gboyega Aribisogan,House of Assembly,gboyega-aribisogan
 68d46e43-ddb6-49c7-83b0-e037aad71458,Geoffrey Anayo Mbah,House of Assembly,geoffrey-anayo-mbah
+45b3ed4c-5980-4b10-a3c3-8a5a90fcaff4,George Ipalibo,House of Assembly,george-ipalibo
+6c2d0381-7b16-4c0a-835e-1aaaac17933f,Ghali Garba,House of Assembly,ghali-garba
+dc42e2e3-1611-4fb0-974a-7daa70f4f7f8,Godwin Adiele,House of Assembly,godwin-adiele
+a1fbb237-a46a-436b-a2c5-d96c510407a6,Godwin James Ekpo,House of Assembly,godwin-james-ekpo
 e5898401-54c8-42db-9cb6-6407616e8999,Godwin Nnamdi Okafor,House of Assembly,godwin-nnamdi-okafor
+5905583d-f44c-4395-8f54-7d5780fcef28,Gubio Moruma,House of Assembly,gubio-moruma
+e6e5a273-c7a9-46bb-98ea-a710f3fd5077,Guwor Emomotimi Dennis,House of Assembly,guwor-emomotimi-dennis
+98ce0a8d-ee15-47f8-a985-b95a4ca6e1d3,Gwampo Mohammed D,House of Assembly,gwampo-mohammed-d
+7b083386-81dd-4b4d-ac46-ddb59018ca7f,Habibu Labbo,House of Assembly,habibu-labbo
 ba802fdd-9df2-44dc-a136-f3406a8724cb,Hakeem Shokunle,House of Assembly,hakeem-shokunle
+bdd39a58-a8da-4e0e-ab6d-e7926c53c009,Haliru Aliyu,House of Assembly,haliru-aliyu
+a49f4a0a-0cf9-46c3-b227-083c3f369180,Haliru Buhari,House of Assembly,haliru-buhari
 90d73ea7-a01a-407a-8010-666f0df8d81d,Hamisu Ibrahim,House of Assembly,hamisu-ibrahim
 d58a493e-54fc-40ee-b2b8-1201ac259dd9,Haruna Abiodun Wahab,House of Assembly,haruna-abiodun-wahab
+5b58eb84-7ccf-40c6-b636-6c38ed7a13ac,Haruna Aliyu D. Gyatin,House of Assembly,haruna-aliyu-d-gyatin
+b187f839-9d3a-4fbf-84ef-43b00f37a814,Haruna Aliyu Yamel,House of Assembly,haruna-aliyu-yamel
+fed56a3e-5343-45f4-9216-6b87ded19466,Haruna Goma,House of Assembly,haruna-goma
+c77d329c-3fc0-4b6f-a519-374d4e880d8f,Haruna Inuwa M.,House of Assembly,haruna-inuwa-m
+f040e050-3bac-425e-8f06-7571e330a78c,Haruna Jkan Tikiri,House of Assembly,haruna-jkan-tikiri
+4094bc71-ba71-4ccf-9940-e54b1fd15237,Haruna Kukawa,House of Assembly,haruna-kukawa
+421a341b-f58f-4382-ae1c-2509f1e220ba,Haruna Shuaibu Adamu,House of Assembly,haruna-shuaibu-adamu
+cecd5a4f-7c56-4b1e-9ad8-ab1d1af33ee3,Hassan Abdulkadir,House of Assembly,hassan-abdulkadir
 5903d7f0-d026-46b0-b17e-91d9b3ff2b82,Hassan Azeez,House of Assembly,hassan-azeez
-28bb53f2-a949-4134-8f31-9d710091a1c5,Hayatu Musa Dorawar Sallau,House of Assembly,hayatu-musa-dorawar-sallau
+cf5f8968-ed98-4e40-94d5-33056bf0cb5b,Hassan Mustapha Usman,House of Assembly,hassan-mustapha-usman
+565a9d67-1713-4596-9a59-12ad8770e04d,Hassan Umar,House of Assembly,hassan-umar
+0260f60f-2f5c-4ac3-83cc-4b9684391cba,Hassan Usman Alto,House of Assembly,hassan-usman-alto
+28bb53f2-a949-4134-8f31-9d710091a1c5,Hayatu Musa Dorawal Sallau,House of Assembly,hayatu-musa-dorawal-sallau
+2d585565-e4cf-4563-80e2-0e8db954297b,Henry Osamuede Ulame Okhuarobo,House of Assembly,henry-osamuede-ulame-okhuarobo
+c5c09c58-36c7-4527-b4aa-8da376d395f2,Henry Soembis Longs,House of Assembly,henry-soembis-longs
 a29d32b9-67d0-4d71-b95c-336fbfa4c028,Hilary Ugwu,House of Assembly,hilary-ugwu
+013afc5f-da1f-42cd-83d1-54aff6d40bea,Hillary E. Bisong,House of Assembly,hillary-e-bisong
+3768a8aa-6ad9-4165-a769-b86b864555be,Hussani Yabagi Akote,House of Assembly,hussani-yabagi-akote
+c7f2f8fd-0b55-4f44-82ec-854521dc319e,Ibirogba John Babatunde,House of Assembly,ibirogba-john-babatunde
+c139b3ec-c2a1-4e02-ab27-7d5b01fed289,Ibori Erhiatake,House of Assembly,ibori-erhiatake
+790f8a5a-c9ea-4a3d-9335-86bcfbda78ab,Ibrahim A. Ismail,House of Assembly,ibrahim-a-ismail
+b0f61d87-ed3b-4f1c-87d4-ac7b5c04da16,Ibrahim Baba Hassan,House of Assembly,ibrahim-baba-hassan
+d29eb2af-0c70-4caf-94b6-62c5515579e8,Ibrahim Balarabe Adbullahi,House of Assembly,ibrahim-balarabe-adbullahi
+7971fa5c-4c0c-4525-af83-291b1cbe79c9,Ibrahim Buba,House of Assembly,ibrahim-buba
+86eb8894-fb52-4f67-853c-6e93d8420315,Ibrahim Hussaini Kadeta,House of Assembly,ibrahim-hussaini-kadeta
+5fa4290e-5d81-41a1-b089-9232f42d6dd6,Ibrahim Iliyasu,House of Assembly,ibrahim-iliyasu
+c50333a0-1aff-4ec2-b364-ebb459de76cc,Ibrahim Isah Dandodo,House of Assembly,ibrahim-isah-dandodo
+370e9220-2807-4485-a2d3-8632a07af9a1,Ibrahim Mohammed,House of Assembly,ibrahim-mohammed
+2fc5619b-adbb-4849-9982-96a184443f33,Ibrahim Mohammed Naidda,House of Assembly,ibrahim-mohammed-naidda
+df26ef3b-137d-4841-b92d-1032882c9be7,Ibrahim Musa,House of Assembly,ibrahim-musa
+0655775e-f7f8-43a7-b2c7-4c5e0c7940d9,Ibrahim Musa Inuwa,House of Assembly,ibrahim-musa-inuwa
 bc4c6d27-70aa-453e-ac99-b6e2b6e43dc2,Ibrahim O. Layode,House of Assembly,ibrahim-o-layode
 3ee02ba6-e7b6-477d-b859-e751aa94aacc,Ibrahim Olatunbosun,House of Assembly,ibrahim-olatunbosun
+a76c9702-a6d4-4639-b817-619e69c75ce6,Ibrahim Peter Akwe,House of Assembly,ibrahim-peter-akwe
+70545a19-3788-4414-b048-e4219c1fbcb6,Ibrahim Umar Dikko,House of Assembly,ibrahim-umar-dikko
 9af13e4b-0fad-40f0-9679-cdbcfe2d679f,Ibuzor Edward,House of Assembly,ibuzor-edward
+4922a558-5dee-4087-8d5f-9998d55acf50,Idaiye Yekini Oisayemoje,House of Assembly,idaiye-yekini-oisayemoje
+2b0e73c5-622c-4d02-9994-b89d6259f6f9,Idongesit E. Ntekpere,House of Assembly,idongesit-e-ntekpere
+25ddc1ea-9c16-45d9-9d18-13b815d14ca0,Idris Abubakar Abdullahi,House of Assembly,idris-abubakar-abdullahi
+779739cd-e5ea-4b57-90ff-abc6aff74d08,Ifeanyi Uchendu,House of Assembly,ifeanyi-uchendu
+55183b43-f340-4139-8d8a-00e975165fa1,Ifiok Okon Udoh,House of Assembly,ifiok-okon-udoh
+f504591b-93a3-415e-a770-95500f0a655b,Igbadiwe Macdonald,House of Assembly,igbadiwe-macdonald
+0e7a49db-8ea3-4e0e-b12d-b280202a9e15,Ignatius Asma'U M.,House of Assembly,ignatius-asmau-m
 1cd1b3ea-162f-4c66-ba96-b9e45bf6fc4a,Igwe Noble,House of Assembly,igwe-noble
+2735689f-b5a6-4b7d-a833-911dd4d03b21,Igwe Obey Aforji,House of Assembly,igwe-obey-aforji
 30999174-1eab-4317-a2ee-ec3341aab59f,Ikechukwu Ezugwu,House of Assembly,ikechukwu-ezugwu
 c0247577-4880-42c7-b55d-ff718788cb40,Ikoro Kingsley O.,House of Assembly,ikoro-kingsley-o
+a9a17973-eeb5-4402-b43c-19f5a6585a1f,Ikuinyi-Owaji Ibani,House of Assembly,ikuinyi-owaji-ibani
+f02fe781-821a-4043-800e-4f33b9d93e99,Ingobere Abraham,House of Assembly,ingobere-abraham
 6c7ae0cd-7140-45ad-8153-6eeba1f55713,Iroju Ogundeji,House of Assembly,iroju-ogundeji
+e39c4b49-999a-4440-89c2-5a1c7f3190a3,Isa Harisu Kebbe,House of Assembly,isa-harisu-kebbe
+faf98e24-2142-4ba1-bf6f-0517b2d8410b,Isa Mohammed,House of Assembly,isa-mohammed
+a753775d-d691-4090-bf20-d41203b27e7c,Isa Simon,House of Assembly,isa-simon
 69978ea0-b5a7-4055-a75e-c35d52e62d39,Isa Umar,House of Assembly,isa-umar
+f25097ba-b1ca-4a36-877a-169e8c4d2156,Isa Yahaya,House of Assembly,isa-yahaya
+1585e6fe-ee3a-4f14-8660-a10e06f3af51,Isaac Auta Zankhai,House of Assembly,isaac-auta-zankhai
 7da24364-7738-4221-9e26-ea9b4bbeb62f,Isaac Olushola Adams,House of Assembly,isaac-olushola-adams
+8ffa5da4-87e3-48bd-94aa-64f39a319853,Isah Idris,House of Assembly,isah-idris
+d2a3c2d7-2cf6-4bdf-992e-17da2ae2f943,Isenah Tonye,House of Assembly,isenah-tonye
+60728413-48e0-4baf-85c6-1cbdd8efc452,Isiaka Kazeem Tunde,House of Assembly,isiaka-kazeem-tunde
+185eb721-121a-4b1e-9206-4d342b638a2b,Isiyaku Sani,House of Assembly,isiyaku-sani
+0b5e142c-abbf-43d4-9abc-69c2eb1cde9b,Ismaila Abdulmuminu Kamba,House of Assembly,ismaila-abdulmuminu-kamba
+bb06d768-062f-43f0-9143-b3c77f2e47f8,Ismaila Hudu Bala,House of Assembly,ismaila-hudu-bala
 9442b5a6-a71e-492f-8137-0774ee731b99,Isyaku Ali Danja,House of Assembly,isyaku-ali-danja
+54d7b3ba-2d1c-4507-9500-d31053bdcf8d,Itam V. Abang,House of Assembly,itam-v-abang
+5e8cdcbb-1f64-4e7f-a836-82fa337f133c,Iwuanyanwu Amarachi Chyna,House of Assembly,iwuanyanwu-amarachi-chyna
+54d627a7-65a9-47c2-bd02-f32678727ba1,Izeze Reuben,House of Assembly,izeze-reuben
+9a5d4d7e-1d56-4759-8289-0dc59f1b6ff5,Jabiru Yusuf Yau-Yau,House of Assembly,jabiru-yusuf-yau-yau
+9765dc07-d0bd-49b0-9205-a37bc0a94e83,Jacob S' Tsebe,House of Assembly,jacob-s-tsebe
+6d203ff2-4b24-4380-8370-aed8d12e74ac,Jagaba Danjuma Andrew,House of Assembly,jagaba-danjuma-andrew
 dbbf8080-5ae3-48ed-a263-7ded83490c32,James Akadu,House of Assembly,james-akadu
 b57b1b90-c971-486e-9421-07425afece32,Jamiu Sulaiman Maito,House of Assembly,jamiu-sulaiman-maito
+530bfcc5-d7db-452e-8893-b6809d3bacf1,Jamna Bong,House of Assembly,jamna-bong
 49e3aa1b-3b39-4ef3-ba1d-13e043032fb8,Jane Chiwendu,House of Assembly,jane-chiwendu
+5a480f3e-7372-497c-b82f-9abf4ff52acf,Jawa Mala Lawan,House of Assembly,jawa-mala-lawan
+1053d5a8-5184-4a68-99c0-3ef6debb3748,Jeremiah Ogonnaya Uzosike,House of Assembly,jeremiah-ogonnaya-uzosike
 55cd06a1-6548-45d7-a4b7-d82951f4ae10,Jibril Ismail Falgore,House of Assembly,jibril-ismail-falgore
+274d8b7e-cf83-4bb8-841c-1e9a6957b98d,Jibrin Ndagi Baba,House of Assembly,jibrin-ndagi-baba
 d7e6cd82-c27d-4c77-b83a-a741f5b2800f,Jimoh Ali Yusuf,House of Assembly,jimoh-ali-yusuf
+0464a669-23d3-4193-85fa-5fe7df0ac174,Jimoh Mulikat Abiola,House of Assembly,jimoh-mulikat-abiola
 e9e76cec-ed84-4d3f-9665-7f6c4b3a9ac4,Jimoh Musa,House of Assembly,jimoh-musa
 bb3f4a38-98f2-4fb0-a6c2-31e215d8bf80,John Abah,House of Assembly,john-abah
+85e0e7a4-09a9-4f27-ac7c-f96e7ce68e13,John Osewu,House of Assembly,john-osewu
+1f2a72a1-da20-45d0-bff3-ba2af7bfc707,Joseph Archibong Bassey,House of Assembly,joseph-archibong-bassey
 4de429bf-ddda-435e-bbf7-e220213bade8,Josephat Okika,House of Assembly,josephat-okika
 de4ae72b-25fd-4787-89f7-e24f4e33069a,Jubril F. Mohammed,House of Assembly,jubril-f-mohammed
 5445543a-9acc-4af1-b1f7-28f7b6a7cb40,Jude Emeka Idimogu,House of Assembly,jude-emeka-idimogu
+c6a6d67f-bf80-4d43-b600-f3f053683f18,Kabiru Dauda,House of Assembly,kabiru-dauda
+82cbc12c-e20b-4bf8-b9bd-4c9b99a83508,Kabiru Hashimu,House of Assembly,kabiru-hashimu
 7ec62c42-e80e-43ea-959a-2b3ca6ab25ce,Kabiru Hassan Dashi,House of Assembly,kabiru-hassan-dashi
+37229151-85e2-4588-8dba-9a67e9eaca28,Kabiru Isah,House of Assembly,kabiru-isah
+aa7dff73-5f57-4f31-8002-77356757abf3,Kabiru Magaji,House of Assembly,kabiru-magaji
+1907c7ff-603c-45b9-81b7-6f249666e0ed,Kabiru Mijinyawa,House of Assembly,kabiru-mijinyawa
 e9cb1929-87b9-4ef9-969c-4b495178ba5f,Kabiru Yusuf Ismail,House of Assembly,kabiru-yusuf-ismail
+4258d68a-7429-4b5f-83be-26c18738fc7d,Kadira Sulaiman Musa,House of Assembly,kadira-sulaiman-musa
+5d210443-9901-405c-9250-6556323efc54,Kais Abdullahi,House of Assembly,kais-abdullahi
+4b3f28df-3dd1-4b47-91a3-b5fe2476295b,Kanayo Onyemachi,House of Assembly,kanayo-onyemachi
+d940bcf4-c585-4e0b-aa92-1c7ac83ba9b0,Kantiok Emmanuel B.,House of Assembly,kantiok-emmanuel-b
+d58d87ba-1111-4362-a332-a8fa3ec09bb1,Kardi Tulfugut M.,House of Assembly,kardi-tulfugut-m
 c222b1cd-ac18-4e41-9101-8be9d4ddf2b3,Kasunmu A. R.,House of Assembly,kasunmu-a-r
+54b4ac83-cca7-454c-83fd-b63f277806f1,Kaura Abbas Umar,House of Assembly,kaura-abbas-umar
+78d612d1-7b53-427f-8173-cb68829f978c,Kawule Danlami Ahmed,House of Assembly,kawule-danlami-ahmed
+d5130cce-ffec-4e98-ada1-d92b40247f62,Kawuwa Shehu Damina,House of Assembly,kawuwa-shehu-damina
+667c1929-525a-4d0f-962b-a42ff9caea11,Kazeem Olayanju,House of Assembly,kazeem-olayanju
+1c12315b-4ff2-4710-ac62-928bf469acfe,Kefas Japhet,House of Assembly,kefas-japhet
 38b53732-a7f6-45a7-aeb9-a3aafca3d1f9,Kehinde Joseph,House of Assembly,kehinde-joseph
+a1590ae5-8e36-4e90-9735-e48640fa62e1,Kelechi Nwogu,House of Assembly,kelechi-nwogu
+b59166ad-cf74-4843-a452-2ddfc9294e79,Kelechi Onuzuruike,House of Assembly,kelechi-onuzuruike
+f4a0bf32-4cc0-43c7-8437-14300044d228,Kenebai Bernard,House of Assembly,kenebai-bernard
+88691494-1bfe-4298-820f-824584d6c2af,Kennedy C. Ibeh,House of Assembly,kennedy-c-ibeh
+4615d1cf-50b6-49db-a8f6-499e580692ab,Kennedy Njoku,House of Assembly,kennedy-njoku
+fbdcbf37-902d-4aa5-a413-d2846ac99523,Kenneth Edafe Ogba,House of Assembly,kenneth-edafe-ogba
+f7af1d2b-8897-466a-99c8-9e609b4da15f,Keriya Hassan Sherif,House of Assembly,keriya-hassan-sherif
+8c136906-a91a-47c4-985f-c57baea0c081,Kingsley Ugabi,House of Assembly,kingsley-ugabi
+c030a441-ffec-4b38-a0d8-df6d695c1761,Kofoworola Adewumi Babajide,House of Assembly,kofoworola-adewumi-babajide
+017529a3-19a7-438d-85f6-6cb85237d7ca,Koku Obiyai,House of Assembly,koku-obiyai
+5535d267-20fe-4d2b-a8fa-f98c38d7e122,Komolafe Babatunde Festus,House of Assembly,komolafe-babatunde-festus
+ffd160ab-1fc8-4b42-936f-1080b6ca914e,Kufreabasi Edidem,House of Assembly,kufreabasi-edidem
+75ce5ecd-c275-44aa-8ded-772bc3d27a67,Kunini Joseph Albasu,House of Assembly,kunini-joseph-albasu
+4815a041-5e7f-479b-8ed1-cbc909e030cd,Kwada Joseph Ayuba,House of Assembly,kwada-joseph-ayuba
+a2d24a1d-32d6-4d6a-8458-ee1eb0696e3e,Kwagh-Kudi Terfa Thomas,House of Assembly,kwagh-kudi-terfa-thomas
+3722ceca-6b6a-4679-b147-5357cff0afa2,Kwapfuan Livinus James,House of Assembly,kwapfuan-livinus-james
 b5457766-2d90-4879-9992-a37bae08e594,Labaran Abdul Madari,House of Assembly,labaran-abdul-madari
 cd920699-6835-47d5-b365-1627e6bd52a3,Lamidi Musefiu Olatunji ,House of Assembly,lamidi-musefiu-olatunji
 42b6d3b5-cb74-4e1c-874b-9ef51af47115,Lateef Abiru,House of Assembly,lateef-abiru
 82a8abb7-a0da-4b14-869d-1f033d88e932,Lateef Akanle,House of Assembly,lateef-akanle
-820a9e3b-ab58-4fb7-8970-691902c8a6a6,Lawan Hussaini,House of Assembly,lawan-hussaini
-d2919c1d-b93c-49c2-a4ea-95fd1d31de9a,Lawan Rabiu,House of Assembly,lawan-rabiu
+820a9e3b-ab58-4fb7-8970-691902c8a6a6,Lawal Husain,House of Assembly,lawal-husain
+dd2734b8-1886-4c96-950b-79b5f17a97b5,Lawal Isa Kuraya,House of Assembly,lawal-isa-kuraya
+d2919c1d-b93c-49c2-a4ea-95fd1d31de9a,Lawal Rabi’U,House of Assembly,lawal-rabiu
+1be0b153-c06f-4d1d-a38f-b143e9dce8ac,Lawal Yaro H.,House of Assembly,lawal-yaro-h
+d7d00af7-404b-4b3d-a56b-b7c1919a54f3,Lawan Haruna Gele,House of Assembly,lawan-haruna-gele
+ff9f9183-464a-4c43-9f6c-6d76c776d575,Lawan Inuwa Sani,House of Assembly,lawan-inuwa-sani
+73062f0e-f5b4-4e75-af11-23356c67553c,Lawan Saminu Musa,House of Assembly,lawan-saminu-musa
 ddde11e1-1df8-4f9c-a969-ec5887212bb6,Lawan Shehu,House of Assembly,lawan-shehu
 229ed42a-5365-4f3c-b19d-b7dd102cc7eb,Lilian Ngozi,House of Assembly,lilian-ngozi
 863a666e-3683-49d2-a13f-e59c1cbf9989,Lucas Oluwatoyin,House of Assembly,lucas-oluwatoyin
+0fae5753-40a2-493b-9229-10d1101461a1,Luka Iliya Zhekaba,House of Assembly,luka-iliya-zhekaba
+bcd15388-ed6e-4ab7-a5a9-3f0d3efd757c,Mackondo Pwamwa Keno,House of Assembly,mackondo-pwamwa-keno
+94cced25-1e96-44fe-8030-3785f6cbf5f3,Madaki Malik Bosso,House of Assembly,madaki-malik-bosso
 e0b44465-6d1f-4733-aa8a-fe99e291b109,Madu Emeka Linus,House of Assembly,madu-emeka-linus
 d721c4c4-3ae0-4904-8a1a-f2cee78500d0,Magaji A. Olawoyin,House of Assembly,magaji-a-olawoyin
+efb0119f-ee23-4ed4-9e40-2662290c4527,Magaji Abubakar,House of Assembly,magaji-abubakar
+98f984c3-3420-4351-8e4d-5eca58cbd505,Magani Abdullahi G.,House of Assembly,magani-abdullahi-g
+19af96ec-5a88-42c5-b0d8-a7eaf4261b2c,Maijankai Charles Abihuda,House of Assembly,maijankai-charles-abihuda
+fccaac45-6e76-4705-a4c3-7738929ab39f,Maikudi Gambo,House of Assembly,maikudi-gambo
+0a4b6eac-d0d7-48be-bd7e-24b85430de48,Maimata Mohammed Kabir,House of Assembly,maimata-mohammed-kabir
+2949a8c0-fe13-4244-b12b-68de39be4012,Maina Kachalla Aliyu,House of Assembly,maina-kachalla-aliyu
+35734489-fa18-4740-a1f1-098505e243ab,Maina Mustapha Garba,House of Assembly,maina-mustapha-garba
+142b6fe2-2320-4cc9-9dc9-8a55c7f39b79,Major Jack M.,House of Assembly,major-jack-m
+a6ab4866-5701-4b98-a95d-ee71720311df,Mallami Wakil,House of Assembly,mallami-wakil
+c037d60d-76a1-40ad-b577-2e6e177d411b,Mansur Mohammed,House of Assembly,mansur-mohammed
+1239f843-aa3d-4d47-8746-14abecec576c,Manu Aliyu Baba,House of Assembly,manu-aliyu-baba
+18fabc4e-fecf-42bb-abaa-95a92bec6df6,Maol Dumle,House of Assembly,maol-dumle
+0d8eb63d-565e-44b3-9cbc-484ff4c73a03,Marafa Ahmed Guni,House of Assembly,marafa-ahmed-guni
+e2f7b96a-d9db-426c-b160-41e05333f091,Marcus Iziegbeaya Onobun,House of Assembly,marcus-iziegbeaya-onobun
+6e58f6a4-8d1c-4328-8d55-5abd87b34c24,Mark Bako Useni,House of Assembly,mark-bako-useni
+056a95f0-1e1d-4663-ab49-2b71f34bce3c,Mark Udo Esset,House of Assembly,mark-udo-esset
+e813538d-8236-47b8-a109-735b3607163f,Martin Amaewhule Chike,House of Assembly,martin-amaewhule-chike
 5835572b-c005-4314-9896-e6bb08df2f4c,Mary Onyinye Ugwu,House of Assembly,mary-onyinye-ugwu
+f74a2ee6-6c09-45c3-8717-66c4758d4167,Mathew Dike,House of Assembly,mathew-dike
+95b951a1-0d26-44ce-bd71-b9da0225d91e,Mathew P. Opuoru,House of Assembly,mathew-p-opuoru
 ff476520-bd8d-4d2b-ab78-9cfc281d659c,Matthew O. Kolawole,House of Assembly,matthew-o-kolawole
+0a21d35c-1b9c-49a6-b29a-2be5bb3675e2,Matthew Olory,House of Assembly,matthew-olory
+24834a25-36a4-40b1-bfe8-758edc98f2f6,Mfon Frank Idung,House of Assembly,mfon-frank-idung
+4729a526-d314-4d0f-81e2-5ef50059274d,Michael Imorhin Ohio-Ezomo,House of Assembly,michael-imorhin-ohio-ezomo
+c04f936c-dc74-4d94-b2bc-a10f94530a27,Micheal Audu,House of Assembly,micheal-audu
+c77dbfa1-17f5-4101-8c36-2ac69846b6c8,Miko Musa,House of Assembly,miko-musa
+fa41b351-d0b8-4560-b4c9-72d9fb3b35be,Mirwa Ahmed Lawan,House of Assembly,mirwa-ahmed-lawan
+1df70529-05c1-4799-a990-69cc95a5517f,Mngutyo B. Bem,House of Assembly,mngutyo-b-bem
+6dabfa4d-4329-41cb-a896-c9748d99d75d,Mobaje Razak,House of Assembly,mobaje-razak
+597d152d-f015-4823-af7e-59aec7701b0c,Modachi Habibu Halilu,House of Assembly,modachi-habibu-halilu
+a608666d-b605-4270-8eb2-fcdf6a325ded,Mohammad Haru,House of Assembly,mohammad-haru
+06095246-e592-487d-a39a-a66d74a98da5,Mohammed Abba Bala,House of Assembly,mohammed-abba-bala
+0a65da05-2e49-481d-ba3a-f0aaaa79a8ee,Mohammed Abdulahi Adamu,House of Assembly,mohammed-abdulahi-adamu
+9254d36a-6b0d-4e4a-9cd3-e3ea643f194a,Mohammed Abubakar Lolo,House of Assembly,mohammed-abubakar-lolo
+f5697560-6cf2-4b58-a448-102417d36f90,Mohammed Adamu Omadefu,House of Assembly,mohammed-adamu-omadefu
+8636e30e-ea4a-4551-993e-6e53faa677ff,Mohammed Alhaji Haruna,House of Assembly,mohammed-alhaji-haruna
+adcd358c-60f7-413f-bd29-a48659720a99,Mohammed Ali,House of Assembly,mohammed-ali
+5661e156-f00d-475d-8593-6569f43c5020,Mohammed Aminu Achida,House of Assembly,mohammed-aminu-achida
+b6f72fa4-2a96-4dc2-bc2c-7de88ab5b888,Mohammed Bashir Abdullahi Lokogoma,House of Assembly,mohammed-bashir-abdullahi-lokogoma
+b78208e9-13d7-413b-ab7a-13efbb3a8f99,Mohammed Bello Isa,House of Assembly,mohammed-bello-isa
+b984ffee-5ad0-4da7-8492-851ab53efed4,Mohammed Gambomi Marte,House of Assembly,mohammed-gambomi-marte
+fbbfe9f3-39a9-418c-9dc7-63c3f843bc8c,Mohammed Hassan,House of Assembly,mohammed-hassan
+4868f9d6-1ba5-4254-9f12-e3c5385d49ad,Mohammed Ibrahim Aga Muluku,House of Assembly,mohammed-ibrahim-aga-muluku
+a91e1980-0399-47ab-9c35-d1a75e681897,Mohammed Ibrahim Alkali,House of Assembly,mohammed-ibrahim-alkali
+a3f2b968-6061-4fa0-9d76-b1ab6764d011,Mohammed Lawan Garba,House of Assembly,mohammed-lawan-garba
+524b6d44-3ab3-4d0c-a389-f32482cba2c2,Mohammed Malami Ahmed,House of Assembly,mohammed-malami-ahmed
+627281e0-ee85-441f-9ffd-dd83110d6725,Mohammed Mutawalli Alhaji,House of Assembly,mohammed-mutawalli-alhaji
+02b3c513-fe4d-47a0-91d4-4467deda69c9,Mohammed Saidu,House of Assembly,mohammed-saidu
+37dc06da-d36b-4a55-9a2d-4f744e26d403,Mohammed Saleh,House of Assembly,mohammed-saleh
+c4f4409f-0830-4322-8db5-c090ababe134,Mohammed Samaila,House of Assembly,mohammed-samaila
 b0672d39-371c-4cfc-8c36-5ca17bf13db9,Mohammed Taofik Oladele,House of Assembly,mohammed-taofik-oladele
+5cd32b63-2935-4897-ab27-b8c8d5c9a9d4,Mohammed Tukur,House of Assembly,mohammed-tukur
+03d2ff7a-ffd6-4182-b418-7cdc8259efda,Mohammed Usman,House of Assembly,mohammed-usman
+2f80818c-8870-450b-9b1b-85b494792fe8,Mohammed Zakariya,House of Assembly,mohammed-zakariya
 8e7b1c46-84a1-4d7e-baf6-aa38f9886cb9,Mojisola Alli-Macaulay,House of Assembly,mojisola-alli-macaulay
 7390e289-b5ee-406d-8b92-0c813170cf16,Mojisola Meranda,House of Assembly,mojisola-meranda
+a24370e7-8a98-4d05-a1a4-2ed1166868ba,Morondia Tanko,House of Assembly,morondia-tanko
 e0d3e246-75da-476b-845a-30a497153d8c,Moses Ije Odunwa,House of Assembly,moses-ije-odunwa
+a9c9c4ab-2740-4481-88c4-9e31ef961749,Moses Onowakpo Anaughe,House of Assembly,moses-onowakpo-anaughe
 27684b19-9194-4096-ac24-14b8c3c65443,Moshood Osun,House of Assembly,moshood-osun
 0b70ef8d-acfb-4beb-8005-9c13beb390e8,Mu'azzam El-Yakub,House of Assembly,muazzam-el-yakub
 953a8bd2-61d7-4b7d-befb-5aa3b6c869ff,Mudashiru Ajayi Obasa,House of Assembly,mudashiru-ajayi-obasa
 af8e0963-63a9-4e03-9710-999275cabbf7,Mudassir Ibrahim,House of Assembly,mudassir-ibrahim
 2e91c463-7f79-45c5-963b-802c48a5d1f4,Muhammad Bello Butu-Butu,House of Assembly,muhammad-bello-butu-butu
+84b916ce-e44e-45e9-a860-d3cff98a9bd7,Muhammad Bello Idris,House of Assembly,muhammad-bello-idris
+fad67912-7fef-412a-bb09-25ca42e5b188,Muhammad G. Ahmad,House of Assembly,muhammad-g-ahmad
+878d3709-fabc-48a2-ad14-a0925caf1ef0,Muhammad S. Garba Tiggi,House of Assembly,muhammad-s-garba-tiggi
+451fd60d-dc92-4825-976c-f1ec79fa1ef2,Muhammad Sirajo Kantoga,House of Assembly,muhammad-sirajo-kantoga
 a368e1ca-388a-4dd8-959e-fb86a622613d,Muhammad Uba Gurjiya,House of Assembly,muhammad-uba-gurjiya
+5321f768-6ca1-435c-8402-648650820966,Muhammadu Abubakar Hamisu,House of Assembly,muhammadu-abubakar-hamisu
 9c31f7b9-c075-49eb-9f69-e17922e15635,Muhammed Baba Saliu,House of Assembly,muhammed-baba-saliu
+c718f935-02fb-4143-a25f-5c5504f33946,Muhammed Babayo,House of Assembly,muhammed-babayo
+262c28aa-6946-4213-994b-02f27d2b84db,Muhammed Buhari Aliero,House of Assembly,muhammed-buhari-aliero
 c64ca8a1-c72d-498c-b1e7-d1e0ee43d40b,Mujota Modupe Onikepo ,House of Assembly,mujota-modupe-onikepo
+985c7a06-417f-4df8-b37d-b135b26c3853,Mukhtar Isa Hazo,House of Assembly,mukhtar-isa-hazo
+e2699efb-da84-4922-abd2-cd9c5b628551,Mukhtar Sulaiman A.,House of Assembly,mukhtar-sulaiman-a
+7b11c8c1-3dd6-4613-ab21-5ee48ffc283e,Munachim I. Alozie,House of Assembly,munachim-i-alozie
+a3a1a92f-cb7e-4600-a235-b2d6d835fd8e,Munalayefa Gibson,House of Assembly,munalayefa-gibson
+9cfaf7d5-5782-496a-b313-5c8920219d5a,Murtala Adamu Badaru,House of Assembly,murtala-adamu-badaru
+8a503ca1-e22f-4584-ac68-4b58a79f857c,Murtala Bello Maigona,House of Assembly,murtala-bello-maigona
 32337134-3edb-43e1-be08-499b84f864b5,Murtala Musa Kore,House of Assembly,murtala-musa-kore
+291a0364-69d8-4c84-8e20-e147fcbff674,Musa Agah Avia,House of Assembly,musa-agah-avia
 67f1a71c-9d82-49a3-94bb-a0bc40eaf804,Musa Ali Kachako,House of Assembly,musa-ali-kachako
+e0f698b2-93fa-4f7e-b620-9e031d839de2,Musa Aliyu Na’Maigora,House of Assembly,musa-aliyu-namaigora
 47829865-8c9a-4727-a890-acba7fce8d35,Musa Atajachi,House of Assembly,musa-atajachi
+6d31c89f-0776-4892-87ef-242e712d813b,Musa Bawa Musa,House of Assembly,musa-bawa-musa
+e78d72fd-7faf-49bc-a130-327eba78a99a,Musa Idris Vatsa,House of Assembly,musa-idris-vatsa
+677e6c36-801e-4c64-9df6-fd03ff5c85e8,Musa Mantai Baraza,House of Assembly,musa-mantai-baraza
+d15237df-3497-48e2-ab55-7040a552aae9,Musa Mohammed Lumo,House of Assembly,musa-mohammed-lumo
+6dd348ed-22c5-4534-8834-7c91fe9c165b,Musa Nuhu Abdullahi,House of Assembly,musa-nuhu-abdullahi
+b8cfc3b6-086a-4e94-8176-dbf9eb6f3502,Musa Salihu,House of Assembly,musa-salihu
+7ac241c1-d7cc-4fe2-bf41-b8398bf8f2f9,Musa Suleiman Nasko,House of Assembly,musa-suleiman-nasko
+a9675b08-2aa1-44d4-9572-fe1da4690438,Musa Umaru Bororo,House of Assembly,musa-umaru-bororo
 fd98dd49-8a82-487f-ae45-8d214a0c0bc4,Mustainu Tobun,House of Assembly,mustainu-tobun
+0916c7f6-36ab-4784-84da-f35a85a481c0,Mustapha Abdullahi,House of Assembly,mustapha-abdullahi
+7680be82-9c40-463a-92d9-c9b8ad032920,Mustapha Abdullhi,House of Assembly,mustapha-abdullhi
+14c46e4a-fc53-4124-857d-abb95756d236,Mustapha Alhaji Bukar,House of Assembly,mustapha-alhaji-bukar
+4b384902-496e-44ca-9a33-c34f8bbfd47e,Mustapha Ali Benisheik,House of Assembly,mustapha-ali-benisheik
+fb22b122-da2c-49b1-a6c1-2d0392860e94,Mustapha Rabe Musa,House of Assembly,mustapha-rabe-musa
+80ff53d9-2f1f-404b-b21c-484b5f430e55,Mustapha Sani Bello,House of Assembly,mustapha-sani-bello
+b218adee-b6b0-4b64-baec-c857ee75394a,Mustapha Yusuf,House of Assembly,mustapha-yusuf
+415c4caf-ab51-464a-99fc-0a85bb43e73f,Myandasa Bauna,House of Assembly,myandasa-bauna
+041f126e-b5c3-4638-9cce-cb4eb585ac60,Naanlong Gapyil Daniel,House of Assembly,naanlong-gapyil-daniel
+ac85d680-7400-4828-a142-cdf929c43675,Nakwada Wakilli Musa,House of Assembly,nakwada-wakilli-musa
+fcaae069-9738-4ce0-9741-3c450841872b,Nashon Umar G.,House of Assembly,nashon-umar-g
+ad7f0cf7-2218-4337-ad1e-70637101510e,Nasir Yahaya,House of Assembly,nasir-yahaya
+7dedfa1b-4547-4460-b2af-3fd7898fd18d,Nasiru Abdulkarim,House of Assembly,nasiru-abdulkarim
 29575988-e0a2-4ffe-ab9c-9fbb06cc7e15,Nasiru Abdullahi,House of Assembly,nasiru-abdullahi
+bef07aa8-7f7d-4815-b6a4-d22037634098,Nasiru Atiku,House of Assembly,nasiru-atiku
+cf00ec65-8907-4884-a79a-8091799fe5fe,Nasiru Bello Lawal,House of Assembly,nasiru-bello-lawal
+5bf94d18-fd71-40b7-8536-8f44804d0581,Nasiru Mohammed,House of Assembly,nasiru-mohammed
+220b72eb-b80e-4216-aaf1-debaceaec3dc,Nasiru Mu’Azu,House of Assembly,nasiru-muazu
+62e7fca9-48f1-484a-b00a-6c4579f7bbb3,Nathaniel Uwaji,House of Assembly,nathaniel-uwaji
 d653fe98-ca2d-4c15-a9b6-b94cbef14dd4,Nda Musa Muhammed,House of Assembly,nda-musa-muhammed
 8946fbe5-adce-475c-bac9-89d4b1295dfe,Ndako Idris,House of Assembly,ndako-idris
+5479e07b-a4ae-4044-a902-c16aefb0d8a5,Nehemiah Tsentse,House of Assembly,nehemiah-tsentse
 939dc6df-9669-4d89-828b-e69c6f552f89,Ngene Samuel Okechukwu,House of Assembly,ngene-samuel-okechukwu
+aac66499-b939-42e1-9c91-45b9e1b0cd84,Njoku Micheal Onyemaechi,House of Assembly,njoku-micheal-onyemaechi
+c32a85f3-d5f6-4298-b3ad-a3f37a94065f,Nkasi E. Cynthia,House of Assembly,nkasi-e-cynthia
+c9a079c6-3a08-4d40-bb1e-f426b7a903dd,Nnamdi Allen,House of Assembly,nnamdi-allen
 6588b001-b987-491a-9930-ffe54a87619d,Noheem Babatunde,House of Assembly,noheem-babatunde
+f47ff61b-b200-48f9-9fc9-c32768c14a9d,Nosayaba Okunbor,House of Assembly,nosayaba-okunbor
+5223437c-4760-42bb-b6db-ac11b921de59,Nse Udofot Essien,House of Assembly,nse-udofot-essien
 f577c74f-8e15-4b7d-a44c-83f7ce4265cd,Nuhu Abdullahi Achika,House of Assembly,nuhu-abdullahi-achika
+047a00c3-7612-4a55-ae7f-9f7cd002471d,Nura Daihiru,House of Assembly,nura-daihiru
 4abbdc6e-1ba3-4ccc-be6f-969d65744d32,Nuruddeen Alhassan Ahmed,House of Assembly,nuruddeen-alhassan-ahmed
 2040feef-30b4-4997-8cb5-033653c25c8a,Nurudeen Solaja-Saka,House of Assembly,nurudeen-solaja-saka
+51ba81c8-48a8-4a1e-9591-8d0ae5166a14,Nwaneri Chigozie,House of Assembly,nwaneri-chigozie
+a9961ca8-8a30-445e-b13c-b26eaf3ee863,Nwankwo Promise C.,House of Assembly,nwankwo-promise-c
 4a98d740-41f9-4e66-93b1-49adf6cd1247,Nwegede Anthony O.,House of Assembly,nwegede-anthony-o
 b8689392-a11e-4758-8217-4a21545885d9,Nwokoye John I.,House of Assembly,nwokoye-john-i
 16b35335-9c56-4128-a0a2-d97cad19d26c,Nwuhuo Linus Friday,House of Assembly,nwuhuo-linus-friday
+7915a704-872b-41da-af35-be936ddb2277,Obiefule Ngozi Sylvia,House of Assembly,obiefule-ngozi-sylvia
 9adfc3ba-bbe0-4030-a64e-956e29f65dc2,Obieze Chima Emmanuel,House of Assembly,obieze-chima-emmanuel
 139ca01f-2f79-447f-a7f4-3ec937238e60,Obimma Charles C.,House of Assembly,obimma-charles-c
 77d52271-2266-47d9-b0c3-06e68dff17a5,Obinna Chris Emeneka,House of Assembly,obinna-chris-emeneka
+bbd8e69d-2fa4-46cb-86d5-5745032a2790,Obinna Edward Iheukwumere,House of Assembly,obinna-edward-iheukwumere
+7fc36115-fce3-4065-94d3-69bb5108db9a,Obinna Ichita Martin,House of Assembly,obinna-ichita-martin
+66883f1d-fa7c-49d2-b675-3989c0b7afa6,Obinna Okwara,House of Assembly,obinna-okwara
+ff4f6c77-ed00-439e-b5e6-18ca1e692a22,Obolo Bubou,House of Assembly,obolo-bubou
+9d29f181-5d5a-4c37-a76a-48e40d19ce73,Obordor Mitema,House of Assembly,obordor-mitema
+da9c0c36-763a-4734-b852-d4173c6c4564,Ochor Christopher,House of Assembly,ochor-christopher
 95ab610f-4338-4760-bb45-649a0a2447c8,Odefa Obasi Odefa,House of Assembly,odefa-obasi-odefa
+a05f22d0-04ae-45b6-9c6b-84f57c2fab6b,Odeh Johnson Baba,House of Assembly,odeh-johnson-baba
+204fba04-7d22-4c96-85dc-3667a49b84f5,Odey Peter Agbe,House of Assembly,odey-peter-agbe
 12b224f9-0375-406e-a279-bafa3e9943ca,Ododo Edoko,House of Assembly,ododo-edoko
+57aa3877-e83d-467a-98f5-585a85b175f8,Odudoh A. Uduak,House of Assembly,odudoh-a-uduak
 0d45012f-b886-43d5-8d90-d1094bdbb210,Oduwole Kemi Olaitan,House of Assembly,oduwole-kemi-olaitan
+8fc52cfd-c5cf-4b9e-a794-209db1d83edd,Ofem E. Nelson,House of Assembly,ofem-e-nelson
 fb60c70f-9d91-42d5-8c7f-c46673e713f0,Offor Onyebuchi,House of Assembly,offor-onyebuchi
+705ea31a-01b4-4425-9b1e-da9fe936caf2,Oforji Oboku,House of Assembly,oforji-oboku
+5a17d4e5-7332-49c8-95f9-47a60bdde55c,Ogbere Michael,House of Assembly,ogbere-michael
+620b1486-f509-43f7-898b-caa250e94136,Ogbor Ogbor Udop,House of Assembly,ogbor-ogbor-udop
+420959da-8a34-42c4-ab5d-fc39d86f172c,Ogbu Steve Otumala,House of Assembly,ogbu-steve-otumala
+57e10366-9d0b-4754-9648-0c3895028068,Ogbunikpa Samuel Chidi,House of Assembly,ogbunikpa-samuel-chidi
+2b247db2-516e-49b0-84ac-1cf837b7c640,Ogoli Naomi,House of Assembly,ogoli-naomi
+3d762f66-e572-4dc3-ac17-de9128307eaa,Ogundipe Benjamin Olugbenga,House of Assembly,ogundipe-benjamin-olugbenga
+fbfc3d47-2f6f-4dbb-a2bc-8e2eaf41550a,Ogundoyin Debo Edward,House of Assembly,ogundoyin-debo-edward
+56a88f7b-7dd2-4264-b94c-249ecc88e8dc,Ogunkanmi Abidemi Gbenga,House of Assembly,ogunkanmi-abidemi-gbenga
 db81730b-6561-44f9-aac0-79a84cec6a90,Ogunkelu Sylvester,House of Assembly,ogunkelu-sylvester
 bff803ee-8d0b-4998-9f53-b14ea89d9a91,Ogunmolasuyi Oluwole E,House of Assembly,ogunmolasuyi-oluwole-e
+47c8eb8c-5f91-4929-8562-d6b1fbce6891,Ojedokun Peter,House of Assembly,ojedokun-peter
+e09b7209-a41a-47d6-a958-9d6888778caf,Ojiezele Osezua Sunday,House of Assembly,ojiezele-osezua-sunday
 6397c135-5a5d-48cb-95f0-28b12ca707b1,Ojo Ademola,House of Assembly,ojo-ademola
+c90d395e-489b-4842-be20-df59449495f0,Ojo Desmond Babatunde Olumide,House of Assembly,ojo-desmond-babatunde-olumide
 a08f0c8d-55a3-4c8e-a2d9-d577009ff799,Ojo Olayiwola Oyebode,House of Assembly,ojo-olayiwola-oyebode
 3fd0c16b-8f5e-4e63-835e-ad698306d670,Okafor Nonso Peter,House of Assembly,okafor-nonso-peter
+98c2f91e-f473-4808-95ca-11b7d923590a,Okagben Ewere Christopher,House of Assembly,okagben-ewere-christopher
+5dd448b2-00f6-4cfb-94ec-389999cc8fbf,Okanga Joseph Okponya,House of Assembly,okanga-joseph-okponya
 0de94f29-f809-4a69-9b06-3586043b1ddb,Okechukwu Ejike A.,House of Assembly,okechukwu-ejike-a
 0280470c-92c7-486b-aea8-4567b9090c0c,Okechukwu I. Okoye,House of Assembly,okechukwu-i-okoye
+9a0522b3-8281-4abe-9b79-e99e3718a114,Okedoyin Femi,House of Assembly,okedoyin-femi
+bddc005f-c2c6-4ab7-bf5d-3dfd3a0a615e,Okereke Tochi S.,House of Assembly,okereke-tochi-s
+26741fa2-1bc3-43de-b443-bda7c075360d,Okey Igwe,House of Assembly,okey-igwe
+463f0692-0331-491b-8903-0e2e4409774a,Okoduwa Emma Ewah,House of Assembly,okoduwa-emma-ewah
+8595e333-e0c3-4af5-af2d-3709cd9b4c37,Okoh Festus,House of Assembly,okoh-festus
+b08d77dc-7c83-442a-aecd-779985c9dfd0,Okon Asukwo Frank,House of Assembly,okon-asukwo-frank
+5dcf7058-ae62-436e-af2d-8a95644aba4c,Okon Edem Ephraim,House of Assembly,okon-edem-ephraim
 75accea1-6045-4ceb-812d-ab00538b9405,Okoye Pius Chukwuma,House of Assembly,okoye-pius-chukwuma
+8a68314c-5292-41a5-818f-a55de9d8528c,Okpechi Friday G.,House of Assembly,okpechi-friday-g
+9abb49b7-49cf-4636-8ce9-d4ed87928e05,Okpokiri Nwanaka Okpokiri,House of Assembly,okpokiri-nwanaka-okpokiri
+a1fdf83d-2552-427e-8055-28c88e1f7ef9,Okpoku Odege Muhammad,House of Assembly,okpoku-odege-muhammad
+f0347981-fdff-490b-818e-6ab714be515b,Oladeji Bimbo Olawunmi,House of Assembly,oladeji-bimbo-olawunmi
 402fd3ec-4034-4a5b-af4b-2e7de4f61683,Olajide David Sunday,House of Assembly,olajide-david-sunday
 2b91769f-44be-4f8e-b7ad-d310fbe4d43d,Olamide Oladiji Adesanmi,House of Assembly,olamide-oladiji-adesanmi
+1421df2b-5022-44f3-a918-becbae2dee68,Olamide Olagoke,House of Assembly,olamide-olagoke
 70bcacf5-1cb8-40bd-9b85-b17d9b00df04,Olanrewaju Afinni,House of Assembly,olanrewaju-afinni
+4d219f9d-65d5-4fac-9629-303b3ab2bcee,Olanrewaju Maruf Ajibola,House of Assembly,olanrewaju-maruf-ajibola
+44fae93d-b6d0-402c-92c6-edaa0319add4,Olateju Nasiru Babatunde,House of Assembly,olateju-nasiru-babatunde
+3f68e02c-10c9-4aab-89fe-3b7b701b10aa,Olatunde Kehinde,House of Assembly,olatunde-kehinde
+dbbe4c98-9923-4954-88af-e5845abbcefa,Olatunji Babatunde Lekan,House of Assembly,olatunji-babatunde-lekan
 ddbb85c9-b1d0-4f4d-ad00-9d9fde5341f2,Olatunji Joseph,House of Assembly,olatunji-joseph
 bb58078e-1e8a-4edb-8d87-2a2f669c8a0c,Oleyelogun Bamidele David,House of Assembly,oleyelogun-bamidele-david
 6dc78ea5-356c-4b57-8e60-ec1abaaad569,Oliver Osi,House of Assembly,oliver-osi
+2a185d46-6376-4c37-8e12-0ee47ce339c6,Olodo Taiwo Adebayo,House of Assembly,olodo-taiwo-adebayo
+3d58b920-981e-4883-bd13-2f13fa26e83d,Ololo Ebi Ben,House of Assembly,ololo-ebi-ben
 5b63dca1-2949-4daf-a4b2-e8ed22e08135,Olubunmi Adelugba,House of Assembly,olubunmi-adelugba
 48c78615-4d27-482e-860f-a0f367f9e6ce,Oludare Oluwatimileyin Kadiri,House of Assembly,oludare-oluwatimileyin-kadiri
 8e3ac50d-91d4-4037-b9b8-81acc8ef80d6,Olugbenga Akinola Omole,House of Assembly,olugbenga-akinola-omole
@@ -627,653 +1157,247 @@ df9b1fbe-6cc9-48c8-b553-a87a75f91662,Olumoh Lukman,House of Assembly,olumoh-lukm
 d5aaf00e-90e1-4100-ba96-0b895235d807,Olumuyiwa Jimoh,House of Assembly,olumuyiwa-jimoh
 878765d7-9fbb-49f1-a9bd-076aab610607,Oluomo Olakunle Taiwo ,House of Assembly,oluomo-olakunle-taiwo
 4bdc7da7-cc72-4950-9a89-603c84437dd0,Olusegun Akande,House of Assembly,olusegun-akande
+a700faf5-e7c9-4aae-ad36-c9306466734d,Oluseyi Adisa,House of Assembly,oluseyi-adisa
+7dda6577-7063-4595-84f2-ec93573a89be,Oluwafemi Fowokannu,House of Assembly,oluwafemi-fowokannu
 3523c99b-03bc-4a3d-ba90-41fff1d62bd5,Oluyede Olushola Feyide,House of Assembly,oluyede-olushola-feyide
 c45de7af-af04-43c4-a2eb-56c06f3aeec4,Oluyinka Ogundimu,House of Assembly,oluyinka-ogundimu
+0de8d734-1dd2-475c-ae4a-a02ad82e4141,Omubo Ayonatiminyo,House of Assembly,omubo-ayonatiminyo
 6120edff-9a17-414e-909c-c88c872ac690,Onah Chinedu Ogba,House of Assembly,onah-chinedu-ogba
+8e3839b5-9a5f-45f9-8103-732e5a5cbd07,Onche Peter,House of Assembly,onche-peter
+7594d66e-d8c7-495a-8428-8d1459bb7573,Oniyere Charles Whomrouho,House of Assembly,oniyere-charles-whomrouho
 064a6590-6562-4715-953c-9967ca2348b6,Onoh Ibenaku Harford,House of Assembly,onoh-ibenaku-harford
 88f8f2e3-109f-4255-8e71-1e03a53e332d,Onu Nwonye,House of Assembly,onu-nwonye
 0156868b-1643-4eef-b803-d8207b994fd7,Onuma Nkemka Okoro,House of Assembly,onuma-nkemka-okoro
+4fe4b9ec-c957-4ea4-aeec-a3f029bb3d8a,Onwudiwe Jovita,House of Assembly,onwudiwe-jovita
+c1512839-cf82-4d35-8e5e-9ee14a740321,Onwusibe Ginger,House of Assembly,onwusibe-ginger
+532a45c4-5dec-46e6-8475-4a7b381638f7,Onyekanma Okechukwu Chinedu,House of Assembly,onyekanma-okechukwu-chinedu
+c829572c-4efe-44f3-9840-3d2d50bc8457,Onyekwere. M. Ukoha,House of Assembly,onyekwere-m-ukoha
+217284de-0a15-476c-ac0d-7397785feb59,Onyinke Godbless,House of Assembly,onyinke-godbless
+10542f66-6fb4-4be6-8bf8-00fa05ea9e9e,Opuende Lolo Isaiah,House of Assembly,opuende-lolo-isaiah
+df6f472e-a055-4f6d-bf77-eb518b466f6f,Opurum Iroanya,House of Assembly,opurum-iroanya
+52e1dd37-1323-4656-b192-ac0fc1fdb81d,Orban Jacob Terungwa,House of Assembly,orban-jacob-terungwa
 d6485ed2-e50b-4cab-8a9f-6002602df27a,Osatuyi Yemi,House of Assembly,osatuyi-yemi
 7e3b492a-2b72-4c58-97c9-1fda3e7030af,Osho Solomon Oluwaseyi,House of Assembly,osho-solomon-oluwaseyi
+094614d1-4aa3-460a-875b-9667709d7046,Oshomah Ahmed,House of Assembly,oshomah-ahmed
+7fb2e1c2-fd30-49a8-a01b-acd3c224552a,Osifo Osa Washington,House of Assembly,osifo-osa-washington
+2dcbfb9e-8ed8-44f1-bbd1-3959abd6e2b8,Otobong E. Bob,House of Assembly,otobong-e-bob
+976f0efa-d8ab-4570-aaa9-95905e5d73dd,Otuibe Samuel N.,House of Assembly,otuibe-samuel-n
+f9c20099-043e-4783-84c2-6bd761cde3d8,Owolabi Olushola,House of Assembly,owolabi-olushola
 22eba788-a200-4e51-8c1e-d3cedfbf2b23,Owolabi Razak,House of Assembly,owolabi-razak
 e059018d-bfd3-4351-b291-30dcdf3c79bf,Oyedeji Ganiyu Alani,House of Assembly,oyedeji-ganiyu-alani
+b98bb2b7-9364-4372-aad8-2ede9a587a92,Oyekunle Fola S.,House of Assembly,oyekunle-fola-s
+bca2c870-97eb-472b-bbff-1e407887181b,Oyekunle Israel Adekunle,House of Assembly,oyekunle-israel-adekunle
+65c0c754-5987-4b16-bb9a-0f75d37aa152,Oyeleke Simon Adegbola,House of Assembly,oyeleke-simon-adegbola
+20e86eb4-8bab-4fba-875f-75c14d9d4cee,Party To Submit Name,House of Assembly,party-to-submit-name
+383d5049-380f-41ca-9ec6-e74e29ff1f6a,Paschal Okolie,House of Assembly,paschal-okolie
+255cddab-2e5c-4f80-a810-44c77a53e15d,Pata Adamu Sale,House of Assembly,pata-adamu-sale
+5d82bb43-56d6-4869-ac0a-83ddcc126ae7,Paul Emeziem,House of Assembly,paul-emeziem
 0dbfad55-3797-4c91-8bec-c70d1e4b9cbb,Paul Nnajiofor,House of Assembly,paul-nnajiofor
+7ac898c0-96d0-4164-b353-5e906d743599,Paul Taribo,House of Assembly,paul-taribo
+1eb0dc38-fb65-4637-accd-610a51da394f,Peter Ibrahim Gyendeng,House of Assembly,peter-ibrahim-gyendeng
+2ad24b34-4e17-4c1a-81bd-138a0800ef1a,Peter Okagbare U.,House of Assembly,peter-okagbare-u
+a582747d-380c-4d8b-83b0-4b0013cb5687,Peter Patrick Enemari,House of Assembly,peter-patrick-enemari
+7180960d-e32a-4cea-9329-f38052c7b40b,Philip Ejiogu,House of Assembly,philip-ejiogu
+ab18140f-2835-40e6-bc93-cd2c2e051059,Pirfa Jingfa Tyem,House of Assembly,pirfa-jingfa-tyem
+6eba7821-45b0-40ad-a41c-9619cab0fa49,Popoola Ademola O.,House of Assembly,popoola-ademola-o
 22e8b317-7899-487c-905d-a260142b6287,Popoola Saheed,House of Assembly,popoola-saheed
+299b1b56-1529-4789-aaca-a56f316a4c4b,Popoola Simeon Olufemi,House of Assembly,popoola-simeon-olufemi
+94994556-d7b1-4129-8823-8cd12e7113d1,Porri Tare,House of Assembly,porri-tare
+ef24bd37-62fe-4e22-ba38-e85dc38b762b,Preyor Oboro,House of Assembly,preyor-oboro
+06ccea50-a7d3-4484-b610-008b18ac6fb3,Prince Ngbor,House of Assembly,prince-ngbor
+59da68e8-ae4b-4c6a-9509-8db199c594c1,Princess Ajidua P.,House of Assembly,princess-ajidua-p
+f4c895db-cc8b-4e41-b263-125ea5b1ba35,Princess Felicia Bassey,House of Assembly,princess-felicia-bassey
+b7064516-0c95-4009-83c1-cdd78fd0ba8b,Pullah Ekpotuayekin,House of Assembly,pullah-ekpotuayekin
 95e99271-6ac9-4bc0-bd52-d9e510a8a0e8,Raheem A. Kazeem,House of Assembly,raheem-a-kazeem
+27df3e21-5278-44f8-8703-50c14039e443,Rambi Ibrahim Ayala,House of Assembly,rambi-ibrahim-ayala
+9c9c7ab5-366d-4ab2-8eaa-b56c03cc346e,Randa Abdullahi Muhammad,House of Assembly,randa-abdullahi-muhammad
 5a34c1a6-35bb-4da0-9c9e-5c473dd0004f,Raphael Olalekan,House of Assembly,raphael-olalekan
 aadeb9f3-c52f-4862-8eea-beca86f0d445,Rasheed L. Makinde,House of Assembly,rasheed-l-makinde
 f06c1e89-8f3b-4b00-a9a9-3ee019c679ef,Rauf Olawale,House of Assembly,rauf-olawale
+085883e4-ed95-4184-9798-4899c0719845,Raymond Kate M.,House of Assembly,raymond-kate-m
+c614eabe-027c-41f8-b32a-fa317bedf213,Regina Anyogo,House of Assembly,regina-anyogo
 33e05cce-2add-4b46-aedb-34ae46212e51,Reuben Awoyemi,House of Assembly,reuben-awoyemi
+823fee69-1f2a-4a07-ab36-8157359868b4,Rilwanu Aminu,House of Assembly,rilwanu-aminu
+cb4e9e6e-2f64-4aec-9867-93d0850d40b8,Romo Sule Hantsi,House of Assembly,romo-sule-hantsi
 2cdbd86b-b92d-4148-8f2b-7a6939730592,Rotimi Olowo,House of Assembly,rotimi-olowo
+21f0ea4e-bd59-4048-a40d-50a11d0fdae6,Sabo Pius,House of Assembly,sabo-pius
+8e68baf5-548a-4664-972d-6a509d805e95,Sadam Bello Sale,House of Assembly,sadam-bello-sale
+06cd1a4f-157d-45e3-8d93-238a9d7a102c,Sade Sabo Bako,House of Assembly,sade-sabo-bako
+d404088f-0cd5-4103-92f8-6b329d20c654,Sagir Zubairu,House of Assembly,sagir-zubairu
+623318f9-7d97-4a49-8e73-745a3a714c5c,Sahabi Umaru,House of Assembly,sahabi-umaru
+edece82c-0585-44d7-b8af-5bc23685e0e9,Saidu N. Ibrahim,House of Assembly,saidu-n-ibrahim
+66c3d65b-6b67-47f4-b866-a05f2b7c5910,Sajo Hamidu A.,House of Assembly,sajo-hamidu-a
 d7394f94-a955-4f46-a130-2a80c903d6a8,Salahu Afolabi Ganiu,House of Assembly,salahu-afolabi-ganiu
 974bf99e-1c70-497f-bf44-c7048c3084be,Sale Ahmed Marke,House of Assembly,sale-ahmed-marke
+28b90beb-31f5-4af9-a642-f7f88adbd48a,Sale Baba A.,House of Assembly,sale-baba-a
+30dc2abc-0715-45ee-9ff3-395fe28c0426,Sale Hodi Jibir,House of Assembly,sale-hodi-jibir
+b5a53616-5bde-42e3-9d5c-943edd159063,Sale Ibrahim A.,House of Assembly,sale-ibrahim-a
+a230ab5e-8946-4a0c-97e7-14d0275128f4,Saleh Shehu Yipmong,House of Assembly,saleh-shehu-yipmong
+b0300216-9569-4406-88b0-f6d841e9e863,Salihu Maikasuwa Dangoje,House of Assembly,salihu-maikasuwa-dangoje
+8e633bb2-4117-4000-accf-4d6f265aa184,Salihu Mohammed Tama,House of Assembly,salihu-mohammed-tama
+09f0a2bc-ea21-4b61-8879-0a1d1056cc4b,Salihu Usman Zurmi,House of Assembly,salihu-usman-zurmi
 fa7d31d7-8188-465b-83f3-325ad12715ae,Salisu Dan'azumi Mohd,House of Assembly,salisu-danazumi-mohd
+a68a9aef-4ec9-4c29-8cc2-123723a99050,Salisu Dandada Bala,House of Assembly,salisu-dandada-bala
+343b2b8f-f119-4037-82c3-977c997ffda9,Salisu Hamza Rimaya,House of Assembly,salisu-hamza-rimaya
 c8b2fb27-6b0d-4220-9ab2-0ca384fca7dc,Salisu Ibrahim Muhammad,House of Assembly,salisu-ibrahim-muhammad
+6e8dd075-01af-4b5c-b002-65acf671e3c1,Salisu Isah,House of Assembly,salisu-isah
 aed68ffa-310f-406f-a7b6-3ca4cc7971c2,Salisu Maje Ahmed,House of Assembly,salisu-maje-ahmed
 dff0d628-8241-42c2-bef2-0a6db41badc6,Saliu Yakubu,House of Assembly,saliu-yakubu
+90330566-c6ac-439a-8346-b17bf8be7c59,Samaila Salihu Bui,House of Assembly,samaila-salihu-bui
+34dbaf88-73f1-4771-8369-c3455405cb7c,Saminu Ridwan Gbadamosi,House of Assembly,saminu-ridwan-gbadamosi
+34566de3-ed83-47e6-a0dc-1001962bcc91,Samuel Markus,House of Assembly,samuel-markus
+cbc53e6e-6544-417b-a40b-ff6c5f7a389c,Samuel Ogeh,House of Assembly,samuel-ogeh
 ef9a2dc5-e30d-4285-9804-66b68da73982,Sanai O. Agunbiade,House of Assembly,sanai-o-agunbiade
 7539d434-4616-4bd2-b38f-aee0917239af,Sangodara Rotimi,House of Assembly,sangodara-rotimi
+e095347a-57a9-4012-abf0-f511bd750f0c,Sani Dahiru,House of Assembly,sani-dahiru
+7dc78330-b997-4269-b08c-e4c927cf61df,Sani Ishaku Audu,House of Assembly,sani-ishaku-audu
+64b262a0-a1ec-47aa-b883-34076f7d1726,Sani Isyaku Abubakar,House of Assembly,sani-isyaku-abubakar
+d2d2a078-9944-49d9-b917-a21a14ea1186,Sani Lawal,House of Assembly,sani-lawal
+87a835fc-8ebf-42a4-b2ba-fb712091c81e,Sani Sale Zaburan,House of Assembly,sani-sale-zaburan
+e3c2fc85-7d07-445e-81ab-07442d60ec1a,Sani Yusuf Rukubalo,House of Assembly,sani-yusuf-rukubalo
 254d3c27-127f-4b1c-9ed2-b46d59f98851,Sanni Babatunde,House of Assembly,sanni-babatunde
+0d59803a-cb83-442e-a4c4-c1012ea73da8,Sanyina Mode Ladan,House of Assembly,sanyina-mode-ladan
+a0b92d06-2cd6-442b-b7d7-6842e3e93e20,Sarki Ibrahim Arzika,House of Assembly,sarki-ibrahim-arzika
+35c65d48-6d10-4ad5-abb4-d96a20952efa,Seid Aliyu Oshiomhole,House of Assembly,seid-aliyu-oshiomhole
 231f0e65-cdb1-4432-af8b-97d31d9f6761,Setonji S. David,House of Assembly,setonji-s-david
+59e90887-8019-4978-8d50-c01c10d93270,Shafi’U Dama,House of Assembly,shafiu-dama
+00bdec57-7a79-429c-9d18-f4a60fe2d243,Shamsudeen Abubakar Dabai,House of Assembly,shamsudeen-abubakar-dabai
+ec124ee5-81d1-4e7c-8923-63f159a2829b,Shamudeen Hassan,House of Assembly,shamudeen-hassan
+534f2183-8a8f-4472-9dda-07c0ab69cbf7,Shedrack Rapu,House of Assembly,shedrack-rapu
 4d5cdefb-f103-4b4f-85ee-ec08823e2ad9,Shehu Amodu,House of Assembly,shehu-amodu
+b88e1026-60d8-4cc4-9b36-fb04b601315b,Shehu Dalhatu,House of Assembly,shehu-dalhatu
+0a3bd4f4-c8fa-4790-9c7f-54f02961fc28,Shehu Yabo Abubakar,House of Assembly,shehu-yabo-abubakar
+4ec5e050-eea9-46a5-95d4-ac899d2172b6,Shehu Yunusa,House of Assembly,shehu-yunusa
+0ec9a799-32ec-40b2-9a48-49900c164623,Sheriff Oborewori,House of Assembly,sheriff-oborewori
+e0a95ad5-3bb3-411f-896a-268304db16bc,Shua'Ibu Inuwa,House of Assembly,shuaibu-inuwa
+462d9e57-b978-4b61-b5d1-66a30fe255e6,Shuaibu Babas,House of Assembly,shuaibu-babas
+bfe4948d-b4c1-48b9-bdf7-894cbd1be9b6,Shuaibu Musa,House of Assembly,shuaibu-musa
 9aa698ba-64da-412b-88b1-61b523654fd1,Sikiratu Ajibola O.,House of Assembly,sikiratu-ajibola-o
 6cfaa90b-18cf-4348-ad9f-412bf75b3df5,Simeon Toluwani Borokini,House of Assembly,simeon-toluwani-borokini
 427a4e6f-d728-4cbe-8860-20677b9d6fcc,Sir Peter C. N. Ibida,House of Assembly,sir-peter-c-n-ibida
+d826200f-3939-48fb-8a4e-30dcf0df1a71,Smart Tonye Adoki,House of Assembly,smart-tonye-adoki
 77a5ac0d-80fa-4087-bc41-ec6e3ed8dee0,Sobukanla Olakunle,House of Assembly,sobukanla-olakunle
+a33ff4b9-c9d6-4123-94f2-b26bfed7434e,Sokolo Solomon Kirifah,House of Assembly,sokolo-solomon-kirifah
+024b2e90-a3fb-4398-8a9a-2167df6a7094,Solomon Akpulonu U.,House of Assembly,solomon-akpulonu-u
+22b7d3d6-eb7b-44ee-8c28-d3841c4e3456,Solomon Ighrakpata,House of Assembly,solomon-ighrakpata
+bc16c88c-252c-4535-a5ac-6688e1118305,Solomon Wani,House of Assembly,solomon-wani
 ef6260f3-62b0-4479-a0d8-27700450db2e,Somtochukwu Udeze,House of Assembly,somtochukwu-udeze
 e192c721-f077-4617-b8ae-641b9d841bfd,Soneye Damilola Kayode,House of Assembly,soneye-damilola-kayode
 1061a2f4-5601-4082-9952-f90ab91d28e0,Sonny F. Ozobialu,House of Assembly,sonny-f-ozobialu
+a685f531-6057-439d-8004-278cbff74c59,Stanley Nwabuisi,House of Assembly,stanley-nwabuisi
+25a98e9d-785b-45d9-a804-1734161762a8,Stephen Akanfe O.,House of Assembly,stephen-akanfe-o
+de29df72-e531-4247-9757-b8ca75afc93b,Stewart Linda S.,House of Assembly,stewart-linda-s
 973261c1-bc16-45f7-ab52-56492933b301,Success Torhukerhijo,House of Assembly,success-torhukerhijo
+f338c8ab-f1c3-4616-bc94-f76a86a6b900,Sugh Abanyi,House of Assembly,sugh-abanyi
+3cb09864-7898-4f0c-bb37-ad5a0222f706,Sulaiman Abbas,House of Assembly,sulaiman-abbas
+547dc663-4611-448d-8144-7b73871058e9,Sulaiman Abdulaziz Danladi,House of Assembly,sulaiman-abdulaziz-danladi
+a4a21bc9-eada-46cc-bec6-0bdddfaf617f,Suleiman Gambo Rabiu,House of Assembly,suleiman-gambo-rabiu
+0e2b5329-d581-4b5e-84cd-64c41e8bddfe,Suleiman Ibrahim Dabo,House of Assembly,suleiman-ibrahim-dabo
+7d013273-46ff-4098-99b9-56244e092bba,Sunday Achunekang,House of Assembly,sunday-achunekang
+11381d42-8617-470c-9639-2a2c8fbee3ac,Sunday Aghedo,House of Assembly,sunday-aghedo
 a5a40b7f-91e0-4cc1-bb97-de9474401d98,Sunusi Usman Bataiya,House of Assembly,sunusi-usman-bataiya
+6a6eacdb-9774-4013-a053-f378cfb02c14,Surajo Sani,House of Assembly,surajo-sani
+cefef645-d6aa-4287-a9d5-e964b68eff5a,Tafida Nasiru Usman,House of Assembly,tafida-nasiru-usman
 a78b0fef-7d08-4c29-a82f-2aacb8f28329,Tajudeen Akingbolu,House of Assembly,tajudeen-akingbolu
+8f365ebe-1c40-44fc-8937-0cc818d3a8df,Tanimu Musa,House of Assembly,tanimu-musa
 11cd87eb-2c52-4c63-af7d-afaaac75066d,Tanko Abubakar,House of Assembly,tanko-abubakar
+51f4809c-88ed-4658-9bae-e7cd1b1567c5,Tasi'U Musa Maigari,House of Assembly,tasiu-musa-maigari
 b9d18b2d-138c-4e5f-ad14-89c6ff71013b,Tasiu Ibrahim Zabainawa,House of Assembly,tasiu-ibrahim-zabainawa
 c1dfbda5-358b-456d-b006-0a64c6412757,Teju Okuyiga,House of Assembly,teju-okuyiga
-9320968b-305e-4ace-82c7-34c297a7a887,Tijani Suraju,House of Assembly,tijani-suraju
-cd0d5ad9-a6f2-444b-9815-38afd6bbc56a,Timothy Ifedioranma,House of Assembly,timothy-ifedioranma
-ef9b5115-3f40-4e1c-a912-5b7d1ea055b8,Tomide Leonard Akinribido,House of Assembly,tomide-leonard-akinribido
-295c7855-babd-4b33-b6ca-7e097e8682aa,Tope Ogunleye,House of Assembly,tope-ogunleye
-fb53ceb4-3bd4-4d1a-a79a-af2cc5877923,Towase Kuti,House of Assembly,towase-kuti
-22e116a9-10b2-4395-8398-aa92bb9c9ba5,Tukur Mohammed,House of Assembly,tukur-mohammed
-5a5ed118-d296-44c6-826d-7e8e0d2bb4d6,Tunde Braimoh,House of Assembly,tunde-braimoh
-0ecf717e-4e39-4439-a360-8c5c449c9de2,Uche Victor Okafor,House of Assembly,uche-victor-okafor
-32f06ea4-93db-4ee8-84e5-95d01fbeeb91,Udoba Patrick Obalum,House of Assembly,udoba-patrick-obalum
-82c985d9-2e84-43cc-b739-e6357d855452,Ugochukwu Ezenta Ezeani,House of Assembly,ugochukwu-ezenta-ezeani
-4ebd3fad-f110-47db-a07f-f881e2fc8c34,Ugwu Calistus Uche,House of Assembly,ugwu-calistus-uche
-74a65e51-5ef1-4649-9b37-ab8bdf8b09aa,Ugwu Innocent,House of Assembly,ugwu-innocent
-2eedb7d7-46bd-4868-8582-69efca6d57b1,Umar Musa Gama,House of Assembly,umar-musa-gama
-4636839d-7354-4c08-9081-62cd7245f168,Umeoduagu Nnamdi Dike,House of Assembly,umeoduagu-nnamdi-dike
-29fa6ca9-6749-4f08-870a-01bcf67c12c7,Ununu Joseph,House of Assembly,ununu-joseph
-0e0ab7e0-3ff3-422b-901a-2ee47f3b040c,Usman Ibrahim,House of Assembly,usman-ibrahim
-42f4b84f-f8be-4919-8c14-c49e342f2b70,Victor Chukwu Uzoma,House of Assembly,victor-chukwu-uzoma
-f3c7af44-b978-4d46-9cd5-73dd91e2c0f1,Victor Umoke Aleke,House of Assembly,victor-umoke-aleke
-72b07099-8616-4de5-8236-b3bac0ec551f,Wasiu Eshilokun Sanni,House of Assembly,wasiu-eshilokun-sanni
-7334cc0f-646a-4346-bfaf-4b24ce31d155,Williams Adewinle Adewale,House of Assembly,williams-adewinle-adewale
-e1dcb9d4-0c79-44d2-96f3-9d1d41938054,Yunusa Haruna Kayyu,House of Assembly,yunusa-haruna-kayyu
-7f5b48a9-6a4d-44a4-99ab-f5de6fd528c0,Yusuf Atoyebi Musa,House of Assembly,yusuf-atoyebi-musa
-ab71bfc2-f466-437a-acb5-d6b59d5c68c2,Yusuf Babangida Sulaiman,House of Assembly,yusuf-babangida-sulaiman
-6d4067b6-c45e-4e5d-9c9c-41414afe45ee,Yusuf Sherif Abiodun,House of Assembly,yusuf-sherif-abiodun
-45fa051c-d248-4c28-8dd8-c05bbee1e668,Yusuf Waheed,House of Assembly,yusuf-waheed
-eb8f9b2c-5d5a-4f37-82c1-f0e773c51888,Zubairu Hamza Massu,House of Assembly,zubairu-hamza-massu
-45388f11-dfd3-4b0c-9ab4-77f10bf7d3a1,bubakar Danladi Isa,House of Assembly,bubakar-danladi-isa
-0fd51f42-f262-4a13-91fd-224eb9de1e2b,Abbas Aminu Iya,House of Assembly,abbas-aminu-iya
-407bc546-6eef-45be-a64a-367e584b13b1,Abbullahi Yapak,House of Assembly,abbullahi-yapak
-44d6e08d-850c-4d70-82ab-96b56a3d3461,Abdullahi Ahmadu,House of Assembly,abdullahi-ahmadu
-94ceea91-8fcd-45c9-a4e8-4f4371a67d8e,Abdullahi Umar,House of Assembly,abdullahi-umar
-6c31e0ed-fbd9-4b2a-9b7e-1a3e5979ae4d,Abraham Oba Ukefi,House of Assembly,abraham-oba-ukefi
-a68ac66d-a9f4-4945-80aa-ec8988819742,Abubakar Isa,House of Assembly,abubakar-isa
-6e63783c-359a-4ab4-adbb-c6358e9ff487,Abubakar Suleiman Y.,House of Assembly,abubakar-suleiman-y
-9acc9d1c-6264-4945-823f-1de094953a27,Ado Wakili,House of Assembly,ado-wakili
-34495061-f6bd-4df3-bdd3-73bce960c2c5,Alhassan Hamman Joda,House of Assembly,alhassan-hamman-joda
-74ad45a0-3087-4ee6-948b-b59f3639870f,Ali Dan'Iya,House of Assembly,ali-daniya
-21c0a6f1-808a-4ee7-bdce-f8c41aead818,Aniefiok Dennis A,House of Assembly,aniefiok-dennis-a
-f2c708c0-920d-4897-9616-8f5730cc759c,Aniekan Etim Bassey,House of Assembly,aniekan-etim-bassey
-8ecad0f9-3b88-4803-ba41-1ba8adb652be,Aniekan Uko,House of Assembly,aniekan-uko
-49a18f43-e4d4-4419-87c8-45a70ad213cc,Anietie B. Eka,House of Assembly,anietie-b-eka
-a0832b6b-bb08-455a-bbed-9b642149abef,Asuquo E. Archibong,House of Assembly,asuquo-e-archibong
-861471e0-5a90-4a8a-a1c0-cc5fc84eb818,Asuquo Nana Udo,House of Assembly,asuquo-nana-udo
-faf0139d-30c6-41bd-a50a-6cb195f29ee3,Baballe Abubakar Dambam,House of Assembly,baballe-abubakar-dambam
-90acb8d8-40d6-4f2b-adec-529ca734e0a0,Bala Abdu Rishi,House of Assembly,bala-abdu-rishi
-358c4d5b-cc40-4957-ac29-a8f60a13649a,Bala Rabi’U,House of Assembly,bala-rabiu
-3487e3f8-667b-4d05-9e3e-b69eb2fe7fc6,Bello Mu’Azu Shira,House of Assembly,bello-muazu-shira
-ff7e11e6-702e-471b-9ac8-58ce759b2900,Bello Sarki Jadori,House of Assembly,bello-sarki-jadori
-1afad2b4-6c56-45aa-b990-eca32b715f88,Bobbo Bakoji Aliyu,House of Assembly,bobbo-bakoji-aliyu
-59f7871e-9565-4615-87f1-b8e5888ed42d,Charity Friday Ido,House of Assembly,charity-friday-ido
-0a273327-e738-43c2-b976-584e260007a0,Chikwendu Kalu,House of Assembly,chikwendu-kalu
-28e8eacb-6df5-4597-8bce-9f4ee6a137da,Chinedum Orji,House of Assembly,chinedum-orji
-cf139642-0a10-4b1c-847b-25de3f8a0796,Chukwu Chijioke,House of Assembly,chukwu-chijioke
-51088ebd-5733-45f7-aa25-03f2f490cc1f,Chukwudi Apugo,House of Assembly,chukwudi-apugo
-dd600858-7ece-4f14-b2f7-9b159766ff57,Dan Bala Abdullahi,House of Assembly,dan-bala-abdullahi
-bff1adf2-ee33-48db-93d9-b80c5e65c231,Dan Umma Bello,House of Assembly,dan-umma-bello
-b2697216-4a40-47c6-a7a4-cf13e5f51376,David Lawrence Udofa,House of Assembly,david-lawrence-udofa
-577559ae-bba6-4bf7-b803-c42072abdb12,Dewu Abdulkadir Umar,House of Assembly,dewu-abdulkadir-umar
-f1ff7783-213f-4bf3-99dd-6eb6d7afcebe,Dinglok Adawa,House of Assembly,dinglok-adawa
-c7637094-7ac4-4bb6-bf13-be85eaa254e6,Effiong Okon Bassey,House of Assembly,effiong-okon-bassey
-0f70fc89-67ea-4899-a8b0-31d7433e944b,Egwuronu Obasi,House of Assembly,egwuronu-obasi
-d2ee38fd-0498-46b5-8d9e-b188b5b12bb7,Emeka Okoroafor,House of Assembly,emeka-okoroafor
-46324010-d46f-4149-b088-d8172c14eb30,Emmanuel C. Ndubuisi,House of Assembly,emmanuel-c-ndubuisi
-6d4d348f-f384-4fb7-ac87-d0d534f5df19,Emmanuel Ekpenyong Bassey,House of Assembly,emmanuel-ekpenyong-bassey
-cfd2c966-b1e3-4ec6-a3d8-0491314f0f08,Gazali Abubakar Wunti,House of Assembly,gazali-abubakar-wunti
-dc42e2e3-1611-4fb0-974a-7daa70f4f7f8,Godwin Adiele,House of Assembly,godwin-adiele
-a1fbb237-a46a-436b-a2c5-d96c510407a6,Godwin James Ekpo,House of Assembly,godwin-james-ekpo
-f040e050-3bac-425e-8f06-7571e330a78c,Haruna Jkan Tikiri,House of Assembly,haruna-jkan-tikiri
-df26ef3b-137d-4841-b92d-1032882c9be7,Ibrahim Musa,House of Assembly,ibrahim-musa
-2b0e73c5-622c-4d02-9994-b89d6259f6f9,Idongesit E. Ntekpere,House of Assembly,idongesit-e-ntekpere
-779739cd-e5ea-4b57-90ff-abc6aff74d08,Ifeanyi Uchendu,House of Assembly,ifeanyi-uchendu
-55183b43-f340-4139-8d8a-00e975165fa1,Ifiok Okon Udoh,House of Assembly,ifiok-okon-udoh
-a753775d-d691-4090-bf20-d41203b27e7c,Isa Simon,House of Assembly,isa-simon
-f25097ba-b1ca-4a36-877a-169e8c4d2156,Isa Yahaya,House of Assembly,isa-yahaya
-1053d5a8-5184-4a68-99c0-3ef6debb3748,Jeremiah Ogonnaya Uzosike,House of Assembly,jeremiah-ogonnaya-uzosike
-1907c7ff-603c-45b9-81b7-6f249666e0ed,Kabiru Mijinyawa,House of Assembly,kabiru-mijinyawa
-78d612d1-7b53-427f-8173-cb68829f978c,Kawule Danlami Ahmed,House of Assembly,kawule-danlami-ahmed
-d5130cce-ffec-4e98-ada1-d92b40247f62,Kawuwa Shehu Damina,House of Assembly,kawuwa-shehu-damina
-1c12315b-4ff2-4710-ac62-928bf469acfe,Kefas Japhet,House of Assembly,kefas-japhet
-b59166ad-cf74-4843-a452-2ddfc9294e79,Kelechi Onuzuruike,House of Assembly,kelechi-onuzuruike
-4615d1cf-50b6-49db-a8f6-499e580692ab,Kennedy Njoku,House of Assembly,kennedy-njoku
-ffd160ab-1fc8-4b42-936f-1080b6ca914e,Kufreabasi Edidem,House of Assembly,kufreabasi-edidem
-4815a041-5e7f-479b-8ed1-cbc909e030cd,Kwada Joseph Ayuba,House of Assembly,kwada-joseph-ayuba
-bcd15388-ed6e-4ab7-a5a9-3f0d3efd757c,Mackondo Pwamwa Keno,House of Assembly,mackondo-pwamwa-keno
-056a95f0-1e1d-4663-ab49-2b71f34bce3c,Mark Udo Esset,House of Assembly,mark-udo-esset
-24834a25-36a4-40b1-bfe8-758edc98f2f6,Mfon Frank Idung,House of Assembly,mfon-frank-idung
-627281e0-ee85-441f-9ffd-dd83110d6725,Mohammed Mutawalli Alhaji,House of Assembly,mohammed-mutawalli-alhaji
-37dc06da-d36b-4a55-9a2d-4f744e26d403,Mohammed Saleh,House of Assembly,mohammed-saleh
-c718f935-02fb-4143-a25f-5c5504f33946,Muhammed Babayo,House of Assembly,muhammed-babayo
-e2699efb-da84-4922-abd2-cd9c5b628551,Mukhtar Sulaiman A.,House of Assembly,mukhtar-sulaiman-a
-7b11c8c1-3dd6-4613-ab21-5ee48ffc283e,Munachim I. Alozie,House of Assembly,munachim-i-alozie
-677e6c36-801e-4c64-9df6-fd03ff5c85e8,Musa Mantai Baraza,House of Assembly,musa-mantai-baraza
-d15237df-3497-48e2-ab55-7040a552aae9,Musa Mohammed Lumo,House of Assembly,musa-mohammed-lumo
-a9675b08-2aa1-44d4-9572-fe1da4690438,Musa Umaru Bororo,House of Assembly,musa-umaru-bororo
-415c4caf-ab51-464a-99fc-0a85bb43e73f,Myandasa Bauna,House of Assembly,myandasa-bauna
-ac85d680-7400-4828-a142-cdf929c43675,Nakwada Wakilli Musa,House of Assembly,nakwada-wakilli-musa
-fcaae069-9738-4ce0-9741-3c450841872b,Nashon Umar G.,House of Assembly,nashon-umar-g
-c9a079c6-3a08-4d40-bb1e-f426b7a903dd,Nnamdi Allen,House of Assembly,nnamdi-allen
-5223437c-4760-42bb-b6db-ac11b921de59,Nse Udofot Essien,House of Assembly,nse-udofot-essien
-7fc36115-fce3-4065-94d3-69bb5108db9a,Obinna Ichita Martin,House of Assembly,obinna-ichita-martin
-57aa3877-e83d-467a-98f5-585a85b175f8,Odudoh A. Uduak,House of Assembly,odudoh-a-uduak
-26741fa2-1bc3-43de-b443-bda7c075360d,Okey Igwe,House of Assembly,okey-igwe
-b08d77dc-7c83-442a-aecd-779985c9dfd0,Okon Asukwo Frank,House of Assembly,okon-asukwo-frank
-c1512839-cf82-4d35-8e5e-9ee14a740321,Onwusibe Ginger,House of Assembly,onwusibe-ginger
-c829572c-4efe-44f3-9840-3d2d50bc8457,Onyekwere. M. Ukoha,House of Assembly,onyekwere-m-ukoha
-2dcbfb9e-8ed8-44f1-bbd1-3959abd6e2b8,Otobong E. Bob,House of Assembly,otobong-e-bob
-7ac898c0-96d0-4164-b353-5e906d743599,Paul Taribo,House of Assembly,paul-taribo
-f4c895db-cc8b-4e41-b263-125ea5b1ba35,Princess Felicia Bassey,House of Assembly,princess-felicia-bassey
-085883e4-ed95-4184-9798-4899c0719845,Raymond Kate M.,House of Assembly,raymond-kate-m
-06cd1a4f-157d-45e3-8d93-238a9d7a102c,Sade Sabo Bako,House of Assembly,sade-sabo-bako
-66c3d65b-6b67-47f4-b866-a05f2b7c5910,Sajo Hamidu A.,House of Assembly,sajo-hamidu-a
-30dc2abc-0715-45ee-9ff3-395fe28c0426,Sale Hodi Jibir,House of Assembly,sale-hodi-jibir
-462d9e57-b978-4b61-b5d1-66a30fe255e6,Shuaibu Babas,House of Assembly,shuaibu-babas
-bfe4948d-b4c1-48b9-bdf7-894cbd1be9b6,Shuaibu Musa,House of Assembly,shuaibu-musa
-024b2e90-a3fb-4398-8a9a-2167df6a7094,Solomon Akpulonu U.,House of Assembly,solomon-akpulonu-u
-a685f531-6057-439d-8004-278cbff74c59,Stanley Nwabuisi,House of Assembly,stanley-nwabuisi
-87536938-7fee-427f-a35a-b098c23a1fe2,Thomas Nkoro A.C.,House of Assembly,thomas-nkoro-ac
-39c0e079-d330-41dc-a559-7c532886b325,Tijjani Mohammed Aliyu,House of Assembly,tijjani-mohammed-aliyu
-1ad8cd33-ce21-4101-b994-814ae1163eb0,Tukur Ibrahim,House of Assembly,tukur-ibrahim
-ca65fe0a-390e-4485-9f06-033331b0c402,Udeme J. Otong,House of Assembly,udeme-j-otong
-e2ddbebc-8fda-4d19-9b0e-0c9d1aaff366,Udo Kerian Akpan,House of Assembly,udo-kerian-akpan
-67b976bf-377c-4698-8a58-f6b00847918a,Umar Dahiru Jamilu,House of Assembly,umar-dahiru-jamilu
-5ea0d572-3391-4b37-9a6e-0cca5f07c2b1,Umar Yakubu,House of Assembly,umar-yakubu
-80adf556-2c6b-4108-a988-e1c0a4bf0c86,Usoro Samuel Akpanusoh,House of Assembly,usoro-samuel-akpanusoh
-8e5a1d47-be38-44c8-9571-e89a477d6e85,Uzodike Aaron,House of Assembly,uzodike-aaron
-33ae511c-78d5-4f87-905d-734c7dcec826,Victor Patrick Ekwere,House of Assembly,victor-patrick-ekwere
-ca39238a-bc28-4551-b484-bacb67c2c7a6,Wanzam Mohammed,House of Assembly,wanzam-mohammed
-5602cc8f-5b62-4cf2-90c2-3acafbb1e761,Wesley Barhiya,House of Assembly,wesley-barhiya
-891691f0-8e16-498c-8580-d5df4f8fc1f8,Yunusa Ahmed,House of Assembly,yunusa-ahmed
-9c88d012-1137-4708-997e-7abb7c856a5e,Yusuf Inuwa Dadiye,House of Assembly,yusuf-inuwa-dadiye
-a56f2809-9c51-4b86-9d01-5a020d07d4f7,Yusuf Mohammed Bako,House of Assembly,yusuf-mohammed-bako
-356a14fe-3805-4df7-9018-182c99424746,Yuttisuri H/Tukur,House of Assembly,yuttisuri-htukur
-2c91d038-f287-4dfb-bd7c-b930aca308d4,Abass Iorwuese Akoso,House of Assembly,abass-iorwuese-akoso
-f554fa56-aa94-4574-a43a-6c56e018e5d4,Abdulkarim Lawan,House of Assembly,abdulkarim-lawan
-987a514e-76df-44f4-89d1-b11396dd239d,Abdullahi Buba Abatcha,House of Assembly,abdullahi-buba-abatcha
-fa5f5668-6de7-49ab-b05d-d2ca4f8c6245,Abdullahi Musa Askira,House of Assembly,abdullahi-musa-askira
-683a61ba-1133-499a-b8c0-2a5153a64392,Abu Umaru James,House of Assembly,abu-umaru-james
-299bf2d0-c2e0-4489-b990-85d357644f3a,Abubakar Ibrahim Babale,House of Assembly,abubakar-ibrahim-babale
-5d535f1c-2466-4476-a2f7-b0affdb7b664,Adikumo Salo,House of Assembly,adikumo-salo
-7eb962d0-c00b-4ed6-a95a-ba101a18c2f7,Agaibe N.,House of Assembly,agaibe-n
-5669b22e-8b04-46c3-be39-d3bdbf423529,Agbatse Geoffry,House of Assembly,agbatse-geoffry
-478003b5-b050-46d4-99f2-2ddb5a9fee1c,Agbidyeh Jonathan Akute,House of Assembly,agbidyeh-jonathan-akute
-d729f5c4-1c3e-4dd2-889c-96f3e1f7b054,Agnes Uloko,House of Assembly,agnes-uloko
-6b2f6464-d1e2-486c-a7ce-1c417c289581,Aimu Foni,House of Assembly,aimu-foni
-ca49bfa4-33a3-48aa-bbd6-180dbffd578e,Ajikolo Ibrahim Khadi,House of Assembly,ajikolo-ibrahim-khadi
-51572680-be0d-4941-94a1-8e6535e1cd6c,Akwaji E. Godwin,House of Assembly,akwaji-e-godwin
-18f0d015-a0df-4532-9a86-0c96a2e27cf4,Ali Bulama Yajiwa,House of Assembly,ali-bulama-yajiwa
-ccbc1665-7553-4bf0-8bc5-6f31abc7af85,Ali Kotoko,House of Assembly,ali-kotoko
-93ff5550-372f-4ac7-af47-882f1c447e04,Anthony Agom,House of Assembly,anthony-agom
-71072376-60d5-4548-82a3-b6c91445b2f8,Audu Mustapha,House of Assembly,audu-mustapha
-a0f3eebd-8db8-4ac7-b984-436b445b6be1,Ayah Bonny,House of Assembly,ayah-bonny
-5185f3aa-bded-4aad-989a-d7e9ae10eda5,Ayuba Stephen Wakawa,House of Assembly,ayuba-stephen-wakawa
-686b4b8a-b3b2-4335-acbf-d75243edc1a9,Baba Ali Modu,House of Assembly,baba-ali-modu
-e8fab493-4c82-46c1-bb47-f3b6e9f031c0,Baba Mala Bukar,House of Assembly,baba-mala-bukar
-a4166898-2669-48dc-83ed-07aeeb68fe9c,Babashehu Mallam Baba,House of Assembly,babashehu-mallam-baba
-e440f3f3-f4d5-4774-b8d3-7aec1347777f,Bassey Asuquo Francis,House of Assembly,bassey-asuquo-francis
-b8131199-6c84-401c-9690-4e53c768bf17,Bukar Mustapha Dalatu,House of Assembly,bukar-mustapha-dalatu
-0bd75c78-a85b-4ef5-8610-683905f8029b,Bunde Iyongo Torkuma,House of Assembly,bunde-iyongo-torkuma
-727de494-73ee-43b2-8990-c9f28d7bf680,Charles Daniel,House of Assembly,charles-daniel
-9ced9f7e-f8ba-49fb-b7ed-356c2569664a,Charles Ekpe,House of Assembly,charles-ekpe
-6d600238-059b-4339-92cc-55b56e2273c6,Chemetyo Apine Damian,House of Assembly,chemetyo-apine-damian
-17ec5626-a8d3-4672-adb8-8cbd489b8908,Chris Njah Mbu-Ogar,House of Assembly,chris-njah-mbu-ogar
-0b7c4303-cb0f-4558-9888-db88be360b3c,Christopher Adaji,House of Assembly,christopher-adaji
-aaba0b4a-95c5-43f0-a961-24ef84257b43,Davies Etta,House of Assembly,davies-etta
-92889ef5-d228-41de-9ba9-e903cef2c501,Dige Mohammed,House of Assembly,dige-mohammed
-f4b9735e-8b73-4a41-a96e-27300307ad6d,Douglas Samspon,House of Assembly,douglas-samspon
-434608a5-de96-4c82-bb86-0a43e1cbb8fc,Dyako Cephas Tauershima,House of Assembly,dyako-cephas-tauershima
-34a301c5-7781-40ec-8e7f-bdf34b763549,Edoh Abu Godwin,House of Assembly,edoh-abu-godwin
-4af660d3-277b-4699-8e8b-5e20ebd0a4d5,Edward Ajang,House of Assembly,edward-ajang
-977bbcf9-3042-48b0-a17b-b0a1bea5ff55,Edward Irigha,House of Assembly,edward-irigha
-acab665b-d908-4b3d-878b-90f3c1908559,Efa N. Esua,House of Assembly,efa-n-esua
-eefd48f6-50da-422a-a968-8c8dae17455a,Ekpo Ekpo Bassey,House of Assembly,ekpo-ekpo-bassey
-7dd0465d-3aa1-41ea-ae29-7e96cc94b6e8,Elemefuro Teddy,House of Assembly,elemefuro-teddy
-c9d9ccb0-5ed9-4f26-970f-1e8b624e273f,Elizabeth Edem Ironbar,House of Assembly,elizabeth-edem-ironbar
-96bde047-fcae-4edd-b038-6cb422acfcaa,Elvert Ayambem Ekom,House of Assembly,elvert-ayambem-ekom
-0b0b726b-b014-4d05-961c-aef7e5f8a4e2,Eteng Jonah Williams,House of Assembly,eteng-jonah-williams
-b9cd9a05-85d9-448a-806f-5d01ee65c885,Fafi Wisdom,House of Assembly,fafi-wisdom
-f2fb7c5f-120e-42d5-994a-022031f82400,Francis Sampson O.,House of Assembly,francis-sampson-o
-ea0c1914-bac5-49ea-9ec4-40114a5015dd,Frederick Osim,House of Assembly,frederick-osim
-5905583d-f44c-4395-8f54-7d5780fcef28,Gubio Moruma,House of Assembly,gubio-moruma
-4094bc71-ba71-4ccf-9940-e54b1fd15237,Haruna Kukawa,House of Assembly,haruna-kukawa
-013afc5f-da1f-42cd-83d1-54aff6d40bea,Hillary E. Bisong,House of Assembly,hillary-e-bisong
-0655775e-f7f8-43a7-b2c7-4c5e0c7940d9,Ibrahim Musa Inuwa,House of Assembly,ibrahim-musa-inuwa
-f504591b-93a3-415e-a770-95500f0a655b,Igbadiwe Macdonald,House of Assembly,igbadiwe-macdonald
-f02fe781-821a-4043-800e-4f33b9d93e99,Ingobere Abraham,House of Assembly,ingobere-abraham
-d2a3c2d7-2cf6-4bdf-992e-17da2ae2f943,Isenah Tonye,House of Assembly,isenah-tonye
-54d7b3ba-2d1c-4507-9500-d31053bdcf8d,Itam V. Abang,House of Assembly,itam-v-abang
-530bfcc5-d7db-452e-8893-b6809d3bacf1,Jamna Bong,House of Assembly,jamna-bong
-1f2a72a1-da20-45d0-bff3-ba2af7bfc707,Joseph Archibong Bassey,House of Assembly,joseph-archibong-bassey
-f4a0bf32-4cc0-43c7-8437-14300044d228,Kenebai Bernard,House of Assembly,kenebai-bernard
-017529a3-19a7-438d-85f6-6cb85237d7ca,Koku Obiyai,House of Assembly,koku-obiyai
-a2d24a1d-32d6-4d6a-8458-ee1eb0696e3e,Kwagh-Kudi Terfa Thomas,House of Assembly,kwagh-kudi-terfa-thomas
-35734489-fa18-4740-a1f1-098505e243ab,Maina Mustapha Garba,House of Assembly,maina-mustapha-garba
-a6ab4866-5701-4b98-a95d-ee71720311df,Mallami Wakil,House of Assembly,mallami-wakil
-0a21d35c-1b9c-49a6-b29a-2be5bb3675e2,Matthew Olory,House of Assembly,matthew-olory
-c04f936c-dc74-4d94-b2bc-a10f94530a27,Micheal Audu,House of Assembly,micheal-audu
-1df70529-05c1-4799-a990-69cc95a5517f,Mngutyo B. Bem,House of Assembly,mngutyo-b-bem
-b984ffee-5ad0-4da7-8492-851ab53efed4,Mohammed Gambomi Marte,House of Assembly,mohammed-gambomi-marte
-2f80818c-8870-450b-9b1b-85b494792fe8,Mohammed Zakariya,House of Assembly,mohammed-zakariya
-a3a1a92f-cb7e-4600-a235-b2d6d835fd8e,Munalayefa Gibson,House of Assembly,munalayefa-gibson
-4b384902-496e-44ca-9a33-c34f8bbfd47e,Mustapha Ali Benisheik,House of Assembly,mustapha-ali-benisheik
-c32a85f3-d5f6-4298-b3ad-a3f37a94065f,Nkasi E. Cynthia,House of Assembly,nkasi-e-cynthia
-ff4f6c77-ed00-439e-b5e6-18ca1e692a22,Obolo Bubou,House of Assembly,obolo-bubou
-9d29f181-5d5a-4c37-a76a-48e40d19ce73,Obordor Mitema,House of Assembly,obordor-mitema
-a05f22d0-04ae-45b6-9c6b-84f57c2fab6b,Odeh Johnson Baba,House of Assembly,odeh-johnson-baba
-204fba04-7d22-4c96-85dc-3667a49b84f5,Odey Peter Agbe,House of Assembly,odey-peter-agbe
-8fc52cfd-c5cf-4b9e-a794-209db1d83edd,Ofem E. Nelson,House of Assembly,ofem-e-nelson
-705ea31a-01b4-4425-9b1e-da9fe936caf2,Oforji Oboku,House of Assembly,oforji-oboku
-5a17d4e5-7332-49c8-95f9-47a60bdde55c,Ogbere Michael,House of Assembly,ogbere-michael
-620b1486-f509-43f7-898b-caa250e94136,Ogbor Ogbor Udop,House of Assembly,ogbor-ogbor-udop
-420959da-8a34-42c4-ab5d-fc39d86f172c,Ogbu Steve Otumala,House of Assembly,ogbu-steve-otumala
-2b247db2-516e-49b0-84ac-1cf837b7c640,Ogoli Naomi,House of Assembly,ogoli-naomi
-5dd448b2-00f6-4cfb-94ec-389999cc8fbf,Okanga Joseph Okponya,House of Assembly,okanga-joseph-okponya
-5dcf7058-ae62-436e-af2d-8a95644aba4c,Okon Edem Ephraim,House of Assembly,okon-edem-ephraim
-8a68314c-5292-41a5-818f-a55de9d8528c,Okpechi Friday G.,House of Assembly,okpechi-friday-g
-3d58b920-981e-4883-bd13-2f13fa26e83d,Ololo Ebi Ben,House of Assembly,ololo-ebi-ben
-0de8d734-1dd2-475c-ae4a-a02ad82e4141,Omubo Ayonatiminyo,House of Assembly,omubo-ayonatiminyo
-8e3839b5-9a5f-45f9-8103-732e5a5cbd07,Onche Peter,House of Assembly,onche-peter
-217284de-0a15-476c-ac0d-7397785feb59,Onyinke Godbless,House of Assembly,onyinke-godbless
-52e1dd37-1323-4656-b192-ac0fc1fdb81d,Orban Jacob Terungwa,House of Assembly,orban-jacob-terungwa
-20e86eb4-8bab-4fba-875f-75c14d9d4cee,Party To Submit Name,House of Assembly,party-to-submit-name
-a582747d-380c-4d8b-83b0-4b0013cb5687,Peter Patrick Enemari,House of Assembly,peter-patrick-enemari
-94994556-d7b1-4129-8823-8cd12e7113d1,Porri Tare,House of Assembly,porri-tare
-c614eabe-027c-41f8-b32a-fa317bedf213,Regina Anyogo,House of Assembly,regina-anyogo
-f338c8ab-f1c3-4616-bc94-f76a86a6b900,Sugh Abanyi,House of Assembly,sugh-abanyi
-7d013273-46ff-4098-99b9-56244e092bba,Sunday Achunekang,House of Assembly,sunday-achunekang
 29d40624-6bd9-423e-bf87-5f568ae43481,Terna Achir,House of Assembly,terna-achir
 c7e84e84-3895-40cf-bcd0-b205358a5854,Tertsea Gbiseh,House of Assembly,tertsea-gbiseh
 729101d6-401b-4196-a0e5-0dfa9eec5593,Terwase Aondokaa,House of Assembly,terwase-aondokaa
 115e6079-361a-43a8-bf05-2bf84b1f93fe,Thomas Mlanga,House of Assembly,thomas-mlanga
-94e09865-c17a-4a59-a557-7355bcec757d,Uba Titus Tyoapine,House of Assembly,uba-titus-tyoapine
-4e784f59-6922-4cc9-9225-8b6920ab17ef,Ucha Terkaa D.,House of Assembly,ucha-terkaa-d
-f47c9892-6ce5-4256-a2ad-1b22f8278899,Umar Jauro Audi,House of Assembly,umar-jauro-audi
-51e3d524-881e-4694-a61c-0a415cfdda32,Usman Lawan Moruma,House of Assembly,usman-lawan-moruma
-02e0a46c-9f3d-4b1d-ab02-3716408ae2e9,Wakil Bukar Lawan,House of Assembly,wakil-bukar-lawan
-7afd8a82-8497-4f9a-8d7d-6e78376964e7,William Marange O.,House of Assembly,william-marange-o
-e2bcb421-e7bb-4613-9432-98966160c892,Wilson Ayakpo Ohuyegha,House of Assembly,wilson-ayakpo-ohuyegha
-3ca702a7-6567-49e4-b591-bf878954eda9,Yagba Victor K.,House of Assembly,yagba-victor-k
-962541a2-459a-4ce8-b6f5-5d98b28a2f34,Yakubu Gambo Kimba,House of Assembly,yakubu-gambo-kimba
-5922e125-3eec-408e-b7af-3653c3b51215,Aabdullahi Yahaya,House of Assembly,aabdullahi-yahaya
-6cd0ec26-19c7-4573-92fd-fc1c99b9fe4f,Abdulganiyu Audu,House of Assembly,abdulganiyu-audu
-d956a99b-2408-424b-9120-8f9e66f499aa,Abdullahi Abubakar,House of Assembly,abdullahi-abubakar
-972963d9-3971-4032-b9cb-b8f52ee65f0e,Abdullahi Ahmed Bawa,House of Assembly,abdullahi-ahmed-bawa
-a268bde1-1382-4cdc-8b78-707bf1bc1f77,Abdullahi Bawa,House of Assembly,abdullahi-bawa
-94397813-6faa-4851-8307-7d39cf7dff90,Abdullahi Dahiru Angibi,House of Assembly,abdullahi-dahiru-angibi
-57c374e7-2e11-4801-b7af-336004b5429c,Abdullahi Danjuma,House of Assembly,abdullahi-danjuma
-7c97b8c7-9eb7-4ae8-99c1-6604c2f8b804,Abdulrahaman Alkasim Karkarna,House of Assembly,abdulrahaman-alkasim-karkarna
-95d1b2bc-ab9e-43f5-ad8b-1896db6f3917,Abel Yakubu Bala,House of Assembly,abel-yakubu-bala
-3b09fa3e-ee89-4891-81af-6d125fcdb5c1,Abubakar Imam Besse,House of Assembly,abubakar-imam-besse
-17d626f5-747f-482b-8ec5-5500c81311cb,Abubakar Mohammad Sa'Idu,House of Assembly,abubakar-mohammad-saidu
-af5c2c7d-de59-4b9d-a5ae-98f288cb87c4,Abubakar Mohammed,House of Assembly,abubakar-mohammed
-ee2e5b0e-ba1f-47af-9d6c-8f2ca7c493f1,Abubakar Sadiq Ibrahim,House of Assembly,abubakar-sadiq-ibrahim
-331ef121-ea83-416d-8c3a-26a9e0e4d893,Abubakar Sadiq Muhammad,House of Assembly,abubakar-sadiq-muhammad
-e15c0830-d57e-4a63-946b-8dfede5573b9,Abubakar Umar,House of Assembly,abubakar-umar
-36c96d52-989f-4a10-bb5d-e612d1ec93f3,Adamu Bari B.,House of Assembly,adamu-bari-b
-cdcbe647-c883-4146-891c-097dd46456f4,Adamu Hamza,House of Assembly,adamu-hamza
-bcc43f34-ee65-4631-a7d6-db24c2112ec8,Adamu Muhammed Birnin Yauri,House of Assembly,adamu-muhammed-birnin-yauri
-1f4444d6-b2a6-49bc-b4d7-aa39433cbb9d,Adamu Musa A.,House of Assembly,adamu-musa-a
-9d081176-9551-4392-bd76-c25eeaa3c7b9,Adamu Suleiman Ibrahim,House of Assembly,adamu-suleiman-ibrahim
-5020ce37-d08e-45cd-a7ae-ae0ae78e0c43,Adamu Umar A.,House of Assembly,adamu-umar-a
-72e917a3-c6cf-4bef-9d27-c5432dd25a6d,Ahmadu Alhaji A.,House of Assembly,ahmadu-alhaji-a
-b8258d7b-5a92-4791-b954-a2705dceb2b6,Ahmed Abdullahi,House of Assembly,ahmed-abdullahi
-0bd6d15e-ecd5-4fd7-bc64-663f6b1f3833,Ahmed Bawa Kuka,House of Assembly,ahmed-bawa-kuka
-6142b332-9272-4309-b5e4-bff8d099cd14,Alfred O. Martins,House of Assembly,alfred-o-martins
-f7c755aa-822a-4a68-a82e-26b4fb7c4e24,Alhaji Idris Garba,House of Assembly,alhaji-idris-garba
-9ca3e878-f987-4236-9a29-49a5bf7b8868,Ali Dogara Mohammed,House of Assembly,ali-dogara-mohammed
-8a574a96-b650-4bbb-9f8c-5ffcccd3f99c,Aliyu Ahmed Aliyu,House of Assembly,aliyu-ahmed-aliyu
-3808ff9a-206d-410e-a3e2-1c9613e7fec5,Aliyu Ibrahim Nana,House of Assembly,aliyu-ibrahim-nana
-8d36c6ca-2cf3-4e18-a8c5-dd16c41aa3cb,Aluebhosele Ephraim Otaigbe Sele,House of Assembly,aluebhosele-ephraim-otaigbe-sele
-ab16f114-f9b5-4c79-a6af-21c4e919993e,Aminu Muhammed Bunza,House of Assembly,aminu-muhammed-bunza
-7a51142d-1049-445b-997c-f11338399351,Aminu Sule Sankara,House of Assembly,aminu-sule-sankara
-46cb0b53-84b5-4b7d-88cc-f3af4e32fed2,Aminu Zakari,House of Assembly,aminu-zakari
-e076649d-106f-427e-a142-9e657b8a0684,Anthony Eleke-Okwuri,House of Assembly,anthony-eleke-okwuri
-f9611567-487b-430f-abe2-e7df7be16678,Anukam Solomon,House of Assembly,anukam-solomon
-ec5a6056-b925-4ad9-be06-4bdf6f01f6c0,Asoro Osadebamwen Roland,House of Assembly,asoro-osadebamwen-roland
-66df47aa-60e2-4452-8596-3650442b2105,Asupa Peter Forteta,House of Assembly,asupa-peter-forteta
-c7255b10-cb5d-4d9a-9ef2-afd3fb080964,Augustine Uroye,House of Assembly,augustine-uroye
-e935a0cb-fc12-4a31-9364-0c8a42399191,Ayadike Nwosu,House of Assembly,ayadike-nwosu
-9090ebcb-5420-4a8b-acc0-90c158660e42,Bako Kasim Alfa,House of Assembly,bako-kasim-alfa
-c1f365c0-835f-4af9-8f04-c824e5a2ff37,Bako Phalal,House of Assembly,bako-phalal
-ee8a01d5-b8a1-4257-8728-29d69e604be1,Bala Hamza Gada,House of Assembly,bala-hamza-gada
-e6962208-f846-40bf-982c-7bc1c9c35074,Bappah Usman Jurara,House of Assembly,bappah-usman-jurara
-8067f6fa-1a3f-42b3-b76d-785bab478d28,Binta Mamman,House of Assembly,binta-mamman
-8d4f2a88-dfeb-4515-8a86-0ee09974389d,Buba Musa,House of Assembly,buba-musa
-063f84a0-8169-4210-9933-21a9b50b374a,Buba Siddi,House of Assembly,buba-siddi
-c7a7eedb-fd50-4db0-a968-7aa4ada7fa4a,Charles Emetulu,House of Assembly,charles-emetulu
-e00edf63-8bb8-42f3-a252-170b0fc1b631,Chiji Chimezie Collins,House of Assembly,chiji-chimezie-collins
-1559fb5f-5c92-439f-89d0-90659f588c19,Chikezie Chika A.,House of Assembly,chikezie-chika-a
-02b16c02-1f82-4892-ae98-362038dc04e1,Crosby Osadolor Eribo,House of Assembly,crosby-osadolor-eribo
-fb96d0f8-60d7-42f9-aacf-f135b51e2e75,Cyratus Okoro,House of Assembly,cyratus-okoro
-92671183-e64c-4e01-99f8-1bc6040b8561,Daniel Ogah Ogazi,House of Assembly,daniel-ogah-ogazi
-56f1d8d6-9b71-4e19-a237-fc7977ed9ac9,Danladi Jatau,House of Assembly,danladi-jatau
-c1d70066-d345-4107-97cd-6d4e1adb829d,David Maiyaki,House of Assembly,david-maiyaki
-e56dc118-4692-4a6f-be76-ff3fee377a42,Dayyabu Shehu,House of Assembly,dayyabu-shehu
-c80b878b-7efa-4e79-89b4-4a3508166e88,Dominic Ezerioha,House of Assembly,dominic-ezerioha
-6d0a4efe-8c50-4dc6-82c4-83af5b5e7551,Dumez Onaiwu Ugiagbe,House of Assembly,dumez-onaiwu-ugiagbe
-928d302f-853e-4a33-8501-a2bd768d913e,Duru Iheonukara,House of Assembly,duru-iheonukara
-db91997a-8944-4623-957f-396317455da4,Duruji Lawrence,House of Assembly,duruji-lawrence
-874aedc3-53d5-4f57-8692-560df6493d90,Dutse Sule Musa,House of Assembly,dutse-sule-musa
-947b2117-888b-4c51-96ed-3f29b5a9b584,Edoror Victor Sabor,House of Assembly,edoror-victor-sabor
-0c9c81d7-590b-4975-882e-57f5f25388d9,Egwim Innocent Arthur,House of Assembly,egwim-innocent-arthur
-8ede3f8d-e288-4fca-aec6-a711c50c1fd6,Ekene Fredoline Nnodumele,House of Assembly,ekene-fredoline-nnodumele
-c3d04107-3ca9-43c8-9063-38842be7ca15,Emeka Nwaobi,House of Assembly,emeka-nwaobi
-b6748f1d-c4d6-414c-96d0-37c900d33014,Emmanuel A. Sinebe,House of Assembly,emmanuel-a-sinebe
-f4a8c06e-b354-470c-a43a-6e1fe60afdb7,Emmanuel Omoladun Agbaje,House of Assembly,emmanuel-omoladun-agbaje
-f97663dd-f05a-44d4-89cd-81397e787e95,Eric Allison Afeikhe Okaka,House of Assembly,eric-allison-afeikhe-okaka
-094f6e3e-cad3-4f21-9307-70a22d6ef7ca,Evance Ochuko Ivwurie,House of Assembly,evance-ochuko-ivwurie
-5f8ab234-6890-4c8b-948e-b6b38cf2233e,Faruku Aliyu,House of Assembly,faruku-aliyu
-27e8ab1e-c24f-4562-9149-cba0771bb87c,Felix U. Anirah,House of Assembly,felix-u-anirah
-11fbea99-0420-47d3-bc42-3665eb069c37,Ferguson Onwo,House of Assembly,ferguson-onwo
-34db481b-01c2-4d47-b7a1-dd828a1d680f,Francis Abumere Omoluimhen Okiye,House of Assembly,francis-abumere-omoluimhen-okiye
-aa4d710f-a045-4384-b1b9-7e95d39bda76,Frank Onyebuchi Ugboma,House of Assembly,frank-onyebuchi-ugboma
-4e0bc0cc-c0ad-4073-9c0c-2f1df95ee286,Friday Osanebi,House of Assembly,friday-osanebi
-b1af5d6b-2625-4db5-b060-298418ef0e0a,Gaule Yarima Ladan,House of Assembly,gaule-yarima-ladan
-e6e5a273-c7a9-46bb-98ea-a710f3fd5077,Guwor Emomotimi Dennis,House of Assembly,guwor-emomotimi-dennis
-7b083386-81dd-4b4d-ac46-ddb59018ca7f,Habibu Labbo,House of Assembly,habibu-labbo
-bdd39a58-a8da-4e0e-ab6d-e7926c53c009,Haliru Aliyu,House of Assembly,haliru-aliyu
-5b58eb84-7ccf-40c6-b636-6c38ed7a13ac,Haruna Aliyu D. Gyatin,House of Assembly,haruna-aliyu-d-gyatin
-421a341b-f58f-4382-ae1c-2509f1e220ba,Haruna Shuaibu Adamu,House of Assembly,haruna-shuaibu-adamu
-cf5f8968-ed98-4e40-94d5-33056bf0cb5b,Hassan Mustapha Usman,House of Assembly,hassan-mustapha-usman
-565a9d67-1713-4596-9a59-12ad8770e04d,Hassan Umar,House of Assembly,hassan-umar
-0260f60f-2f5c-4ac3-83cc-4b9684391cba,Hassan Usman Alto,House of Assembly,hassan-usman-alto
-2d585565-e4cf-4563-80e2-0e8db954297b,Henry Osamuede Ulame Okhuarobo,House of Assembly,henry-osamuede-ulame-okhuarobo
-3768a8aa-6ad9-4165-a769-b86b864555be,Hussani Yabagi Akote,House of Assembly,hussani-yabagi-akote
-c139b3ec-c2a1-4e02-ab27-7d5b01fed289,Ibori Erhiatake,House of Assembly,ibori-erhiatake
-d29eb2af-0c70-4caf-94b6-62c5515579e8,Ibrahim Balarabe Adbullahi,House of Assembly,ibrahim-balarabe-adbullahi
-86eb8894-fb52-4f67-853c-6e93d8420315,Ibrahim Hussaini Kadeta,House of Assembly,ibrahim-hussaini-kadeta
-5fa4290e-5d81-41a1-b089-9232f42d6dd6,Ibrahim Iliyasu,House of Assembly,ibrahim-iliyasu
-c50333a0-1aff-4ec2-b364-ebb459de76cc,Ibrahim Isah Dandodo,House of Assembly,ibrahim-isah-dandodo
-a76c9702-a6d4-4639-b817-619e69c75ce6,Ibrahim Peter Akwe,House of Assembly,ibrahim-peter-akwe
-4922a558-5dee-4087-8d5f-9998d55acf50,Idaiye Yekini Oisayemoje,House of Assembly,idaiye-yekini-oisayemoje
-0e7a49db-8ea3-4e0e-b12d-b280202a9e15,Ignatius Asma'U M.,House of Assembly,ignatius-asmau-m
-8ffa5da4-87e3-48bd-94aa-64f39a319853,Isah Idris,House of Assembly,isah-idris
-185eb721-121a-4b1e-9206-4d342b638a2b,Isiyaku Sani,House of Assembly,isiyaku-sani
-0b5e142c-abbf-43d4-9abc-69c2eb1cde9b,Ismaila Abdulmuminu Kamba,House of Assembly,ismaila-abdulmuminu-kamba
-5e8cdcbb-1f64-4e7f-a836-82fa337f133c,Iwuanyanwu Amarachi Chyna,House of Assembly,iwuanyanwu-amarachi-chyna
-54d627a7-65a9-47c2-bd02-f32678727ba1,Izeze Reuben,House of Assembly,izeze-reuben
-9765dc07-d0bd-49b0-9205-a37bc0a94e83,Jacob S' Tsebe,House of Assembly,jacob-s-tsebe
-6d203ff2-4b24-4380-8370-aed8d12e74ac,Jagaba Danjuma Andrew,House of Assembly,jagaba-danjuma-andrew
-274d8b7e-cf83-4bb8-841c-1e9a6957b98d,Jibrin Ndagi Baba,House of Assembly,jibrin-ndagi-baba
-85e0e7a4-09a9-4f27-ac7c-f96e7ce68e13,John Osewu,House of Assembly,john-osewu
-37229151-85e2-4588-8dba-9a67e9eaca28,Kabiru Isah,House of Assembly,kabiru-isah
-4258d68a-7429-4b5f-83be-26c18738fc7d,Kadira Sulaiman Musa,House of Assembly,kadira-sulaiman-musa
-5d210443-9901-405c-9250-6556323efc54,Kais Abdullahi,House of Assembly,kais-abdullahi
-4b3f28df-3dd1-4b47-91a3-b5fe2476295b,Kanayo Onyemachi,House of Assembly,kanayo-onyemachi
-d58d87ba-1111-4362-a332-a8fa3ec09bb1,Kardi Tulfugut M.,House of Assembly,kardi-tulfugut-m
-88691494-1bfe-4298-820f-824584d6c2af,Kennedy C. Ibeh,House of Assembly,kennedy-c-ibeh
-fbdcbf37-902d-4aa5-a413-d2846ac99523,Kenneth Edafe Ogba,House of Assembly,kenneth-edafe-ogba
-f7af1d2b-8897-466a-99c8-9e609b4da15f,Keriya Hassan Sherif,House of Assembly,keriya-hassan-sherif
-8c136906-a91a-47c4-985f-c57baea0c081,Kingsley Ugabi,House of Assembly,kingsley-ugabi
-d7d00af7-404b-4b3d-a56b-b7c1919a54f3,Lawan Haruna Gele,House of Assembly,lawan-haruna-gele
-0fae5753-40a2-493b-9229-10d1101461a1,Luka Iliya Zhekaba,House of Assembly,luka-iliya-zhekaba
-94cced25-1e96-44fe-8030-3785f6cbf5f3,Madaki Malik Bosso,House of Assembly,madaki-malik-bosso
-98f984c3-3420-4351-8e4d-5eca58cbd505,Magani Abdullahi G.,House of Assembly,magani-abdullahi-g
-1239f843-aa3d-4d47-8746-14abecec576c,Manu Aliyu Baba,House of Assembly,manu-aliyu-baba
-0d8eb63d-565e-44b3-9cbc-484ff4c73a03,Marafa Ahmed Guni,House of Assembly,marafa-ahmed-guni
-e2f7b96a-d9db-426c-b160-41e05333f091,Marcus Iziegbeaya Onobun,House of Assembly,marcus-iziegbeaya-onobun
-95b951a1-0d26-44ce-bd71-b9da0225d91e,Mathew P. Opuoru,House of Assembly,mathew-p-opuoru
-4729a526-d314-4d0f-81e2-5ef50059274d,Michael Imorhin Ohio-Ezomo,House of Assembly,michael-imorhin-ohio-ezomo
-a608666d-b605-4270-8eb2-fcdf6a325ded,Mohammad Haru,House of Assembly,mohammad-haru
-06095246-e592-487d-a39a-a66d74a98da5,Mohammed Abba Bala,House of Assembly,mohammed-abba-bala
-0a65da05-2e49-481d-ba3a-f0aaaa79a8ee,Mohammed Abdulahi Adamu,House of Assembly,mohammed-abdulahi-adamu
-9254d36a-6b0d-4e4a-9cd3-e3ea643f194a,Mohammed Abubakar Lolo,House of Assembly,mohammed-abubakar-lolo
-f5697560-6cf2-4b58-a448-102417d36f90,Mohammed Adamu Omadefu,House of Assembly,mohammed-adamu-omadefu
-8636e30e-ea4a-4551-993e-6e53faa677ff,Mohammed Alhaji Haruna,House of Assembly,mohammed-alhaji-haruna
-b6f72fa4-2a96-4dc2-bc2c-7de88ab5b888,Mohammed Bashir Abdullahi Lokogoma,House of Assembly,mohammed-bashir-abdullahi-lokogoma
-b78208e9-13d7-413b-ab7a-13efbb3a8f99,Mohammed Bello Isa,House of Assembly,mohammed-bello-isa
-4868f9d6-1ba5-4254-9f12-e3c5385d49ad,Mohammed Ibrahim Aga Muluku,House of Assembly,mohammed-ibrahim-aga-muluku
-a91e1980-0399-47ab-9c35-d1a75e681897,Mohammed Ibrahim Alkali,House of Assembly,mohammed-ibrahim-alkali
-a3f2b968-6061-4fa0-9d76-b1ab6764d011,Mohammed Lawan Garba,House of Assembly,mohammed-lawan-garba
-02b3c513-fe4d-47a0-91d4-4467deda69c9,Mohammed Saidu,House of Assembly,mohammed-saidu
-c4f4409f-0830-4322-8db5-c090ababe134,Mohammed Samaila,House of Assembly,mohammed-samaila
-5cd32b63-2935-4897-ab27-b8c8d5c9a9d4,Mohammed Tukur,House of Assembly,mohammed-tukur
-03d2ff7a-ffd6-4182-b418-7cdc8259efda,Mohammed Usman,House of Assembly,mohammed-usman
-a9c9c4ab-2740-4481-88c4-9e31ef961749,Moses Onowakpo Anaughe,House of Assembly,moses-onowakpo-anaughe
-878d3709-fabc-48a2-ad14-a0925caf1ef0,Muhammad S. Garba Tiggi,House of Assembly,muhammad-s-garba-tiggi
-451fd60d-dc92-4825-976c-f1ec79fa1ef2,Muhammad Sirajo Kantoga,House of Assembly,muhammad-sirajo-kantoga
-262c28aa-6946-4213-994b-02f27d2b84db,Muhammed Buhari Aliero,House of Assembly,muhammed-buhari-aliero
-9cfaf7d5-5782-496a-b313-5c8920219d5a,Murtala Adamu Badaru,House of Assembly,murtala-adamu-badaru
-e78d72fd-7faf-49bc-a130-327eba78a99a,Musa Idris Vatsa,House of Assembly,musa-idris-vatsa
-b8cfc3b6-086a-4e94-8176-dbf9eb6f3502,Musa Salihu,House of Assembly,musa-salihu
-7ac241c1-d7cc-4fe2-bf41-b8398bf8f2f9,Musa Suleiman Nasko,House of Assembly,musa-suleiman-nasko
-7dedfa1b-4547-4460-b2af-3fd7898fd18d,Nasiru Abdulkarim,House of Assembly,nasiru-abdulkarim
-5bf94d18-fd71-40b7-8536-8f44804d0581,Nasiru Mohammed,House of Assembly,nasiru-mohammed
-5479e07b-a4ae-4044-a902-c16aefb0d8a5,Nehemiah Tsentse,House of Assembly,nehemiah-tsentse
-aac66499-b939-42e1-9c91-45b9e1b0cd84,Njoku Micheal Onyemaechi,House of Assembly,njoku-micheal-onyemaechi
-f47ff61b-b200-48f9-9fc9-c32768c14a9d,Nosayaba Okunbor,House of Assembly,nosayaba-okunbor
-51ba81c8-48a8-4a1e-9591-8d0ae5166a14,Nwaneri Chigozie,House of Assembly,nwaneri-chigozie
-7915a704-872b-41da-af35-be936ddb2277,Obiefule Ngozi Sylvia,House of Assembly,obiefule-ngozi-sylvia
-bbd8e69d-2fa4-46cb-86d5-5745032a2790,Obinna Edward Iheukwumere,House of Assembly,obinna-edward-iheukwumere
-66883f1d-fa7c-49d2-b675-3989c0b7afa6,Obinna Okwara,House of Assembly,obinna-okwara
-da9c0c36-763a-4734-b852-d4173c6c4564,Ochor Christopher,House of Assembly,ochor-christopher
-57e10366-9d0b-4754-9648-0c3895028068,Ogbunikpa Samuel Chidi,House of Assembly,ogbunikpa-samuel-chidi
-e09b7209-a41a-47d6-a958-9d6888778caf,Ojiezele Osezua Sunday,House of Assembly,ojiezele-osezua-sunday
-98c2f91e-f473-4808-95ca-11b7d923590a,Okagben Ewere Christopher,House of Assembly,okagben-ewere-christopher
-bddc005f-c2c6-4ab7-bf5d-3dfd3a0a615e,Okereke Tochi S.,House of Assembly,okereke-tochi-s
-463f0692-0331-491b-8903-0e2e4409774a,Okoduwa Emma Ewah,House of Assembly,okoduwa-emma-ewah
-8595e333-e0c3-4af5-af2d-3709cd9b4c37,Okoh Festus,House of Assembly,okoh-festus
-a1fdf83d-2552-427e-8055-28c88e1f7ef9,Okpoku Odege Muhammad,House of Assembly,okpoku-odege-muhammad
-7594d66e-d8c7-495a-8428-8d1459bb7573,Oniyere Charles Whomrouho,House of Assembly,oniyere-charles-whomrouho
-4fe4b9ec-c957-4ea4-aeec-a3f029bb3d8a,Onwudiwe Jovita,House of Assembly,onwudiwe-jovita
-532a45c4-5dec-46e6-8475-4a7b381638f7,Onyekanma Okechukwu Chinedu,House of Assembly,onyekanma-okechukwu-chinedu
-094614d1-4aa3-460a-875b-9667709d7046,Oshomah Ahmed,House of Assembly,oshomah-ahmed
-7fb2e1c2-fd30-49a8-a01b-acd3c224552a,Osifo Osa Washington,House of Assembly,osifo-osa-washington
-976f0efa-d8ab-4570-aaa9-95905e5d73dd,Otuibe Samuel N.,House of Assembly,otuibe-samuel-n
-383d5049-380f-41ca-9ec6-e74e29ff1f6a,Paschal Okolie,House of Assembly,paschal-okolie
-255cddab-2e5c-4f80-a810-44c77a53e15d,Pata Adamu Sale,House of Assembly,pata-adamu-sale
-5d82bb43-56d6-4869-ac0a-83ddcc126ae7,Paul Emeziem,House of Assembly,paul-emeziem
-2ad24b34-4e17-4c1a-81bd-138a0800ef1a,Peter Okagbare U.,House of Assembly,peter-okagbare-u
-7180960d-e32a-4cea-9329-f38052c7b40b,Philip Ejiogu,House of Assembly,philip-ejiogu
-ef24bd37-62fe-4e22-ba38-e85dc38b762b,Preyor Oboro,House of Assembly,preyor-oboro
-59da68e8-ae4b-4c6a-9509-8db199c594c1,Princess Ajidua P.,House of Assembly,princess-ajidua-p
-b7064516-0c95-4009-83c1-cdd78fd0ba8b,Pullah Ekpotuayekin,House of Assembly,pullah-ekpotuayekin
-27df3e21-5278-44f8-8703-50c14039e443,Rambi Ibrahim Ayala,House of Assembly,rambi-ibrahim-ayala
-8e68baf5-548a-4664-972d-6a509d805e95,Sadam Bello Sale,House of Assembly,sadam-bello-sale
-28b90beb-31f5-4af9-a642-f7f88adbd48a,Sale Baba A.,House of Assembly,sale-baba-a
-b5a53616-5bde-42e3-9d5c-943edd159063,Sale Ibrahim A.,House of Assembly,sale-ibrahim-a
-b0300216-9569-4406-88b0-f6d841e9e863,Salihu Maikasuwa Dangoje,House of Assembly,salihu-maikasuwa-dangoje
-8e633bb2-4117-4000-accf-4d6f265aa184,Salihu Mohammed Tama,House of Assembly,salihu-mohammed-tama
-90330566-c6ac-439a-8346-b17bf8be7c59,Samaila Salihu Bui,House of Assembly,samaila-salihu-bui
-34566de3-ed83-47e6-a0dc-1001962bcc91,Samuel Markus,House of Assembly,samuel-markus
-64b262a0-a1ec-47aa-b883-34076f7d1726,Sani Isyaku Abubakar,House of Assembly,sani-isyaku-abubakar
-87a835fc-8ebf-42a4-b2ba-fb712091c81e,Sani Sale Zaburan,House of Assembly,sani-sale-zaburan
-e3c2fc85-7d07-445e-81ab-07442d60ec1a,Sani Yusuf Rukubalo,House of Assembly,sani-yusuf-rukubalo
-35c65d48-6d10-4ad5-abb4-d96a20952efa,Seid Aliyu Oshiomhole,House of Assembly,seid-aliyu-oshiomhole
-534f2183-8a8f-4472-9dda-07c0ab69cbf7,Shedrack Rapu,House of Assembly,shedrack-rapu
-0ec9a799-32ec-40b2-9a48-49900c164623,Sheriff Oborewori,House of Assembly,sheriff-oborewori
-e0a95ad5-3bb3-411f-896a-268304db16bc,Shua'Ibu Inuwa,House of Assembly,shuaibu-inuwa
-22b7d3d6-eb7b-44ee-8c28-d3841c4e3456,Solomon Ighrakpata,House of Assembly,solomon-ighrakpata
-547dc663-4611-448d-8144-7b73871058e9,Sulaiman Abdulaziz Danladi,House of Assembly,sulaiman-abdulaziz-danladi
-a4a21bc9-eada-46cc-bec6-0bdddfaf617f,Suleiman Gambo Rabiu,House of Assembly,suleiman-gambo-rabiu
-11381d42-8617-470c-9639-2a2c8fbee3ac,Sunday Aghedo,House of Assembly,sunday-aghedo
+87536938-7fee-427f-a35a-b098c23a1fe2,Thomas Nkoro A.C.,House of Assembly,thomas-nkoro-ac
+9320968b-305e-4ace-82c7-34c297a7a887,Tijani Suraju,House of Assembly,tijani-suraju
+39c0e079-d330-41dc-a559-7c532886b325,Tijjani Mohammed Aliyu,House of Assembly,tijjani-mohammed-aliyu
 a0809956-a6da-4f52-8a07-8b2bbf13c230,Tim Owhefere,House of Assembly,tim-owhefere
+7fa5513d-2a1c-44a4-9365-f410b03608b2,Timothy Dantong,House of Assembly,timothy-dantong
+cd0d5ad9-a6f2-444b-9815-38afd6bbc56a,Timothy Ifedioranma,House of Assembly,timothy-ifedioranma
+ae17c7e1-ba7e-49a7-9965-657fb94ad3db,Timothy Owoeye,House of Assembly,timothy-owoeye
+ef9b5115-3f40-4e1c-a912-5b7d1ea055b8,Tomide Leonard Akinribido,House of Assembly,tomide-leonard-akinribido
+ed032cb8-e74f-4327-9036-30ab0b462387,Tony Ejiogu Uchechukwu,House of Assembly,tony-ejiogu-uchechukwu
+295c7855-babd-4b33-b6ca-7e097e8682aa,Tope Ogunleye,House of Assembly,tope-ogunleye
+fb53ceb4-3bd4-4d1a-a79a-af2cc5877923,Towase Kuti,House of Assembly,towase-kuti
+b1a801ca-a6ba-4ed2-9df8-e737b393bd60,Tukur Bala,House of Assembly,tukur-bala
+1ad8cd33-ce21-4101-b994-814ae1163eb0,Tukur Ibrahim,House of Assembly,tukur-ibrahim
+264be980-ccd7-4a57-a355-91aebb2a02cd,Tukur Iliyasu Shagumba,House of Assembly,tukur-iliyasu-shagumba
+7c08285e-f110-4b1a-a596-fa66da14974e,Tukur Jekada Birnin,House of Assembly,tukur-jekada-birnin
+22e116a9-10b2-4395-8398-aa92bb9c9ba5,Tukur Mohammed,House of Assembly,tukur-mohammed
+5a5ed118-d296-44c6-826d-7e8e0d2bb4d6,Tunde Braimoh,House of Assembly,tunde-braimoh
+94e09865-c17a-4a59-a557-7355bcec757d,Uba Titus Tyoapine,House of Assembly,uba-titus-tyoapine
+1ae7d920-810e-43e8-a5d9-e91adebcff80,Ubankato Tanko Samuel,House of Assembly,ubankato-tanko-samuel
+4e784f59-6922-4cc9-9225-8b6920ab17ef,Ucha Terkaa D.,House of Assembly,ucha-terkaa-d
 f5b1ef2a-d322-4690-b096-ddbf414c473d,Uche Ogbuagu S.,House of Assembly,uche-ogbuagu-s
+0ecf717e-4e39-4439-a360-8c5c449c9de2,Uche Victor Okafor,House of Assembly,uche-victor-okafor
+ca65fe0a-390e-4485-9f06-033331b0c402,Udeme J. Otong,House of Assembly,udeme-j-otong
+e2ddbebc-8fda-4d19-9b0e-0c9d1aaff366,Udo Kerian Akpan,House of Assembly,udo-kerian-akpan
+32f06ea4-93db-4ee8-84e5-95d01fbeeb91,Udoba Patrick Obalum,House of Assembly,udoba-patrick-obalum
+82c985d9-2e84-43cc-b739-e6357d855452,Ugochukwu Ezenta Ezeani,House of Assembly,ugochukwu-ezenta-ezeani
+4ebd3fad-f110-47db-a07f-f881e2fc8c34,Ugwu Calistus Uche,House of Assembly,ugwu-calistus-uche
+74a65e51-5ef1-4649-9b37-ab8bdf8b09aa,Ugwu Innocent,House of Assembly,ugwu-innocent
 31896d6d-19e0-4732-943b-71d2c8f478d0,Umar A Suru,House of Assembly,umar-a-suru
+34a7bc49-88e4-44a6-815d-80804dddbd3b,Umar Ali Bindawa,House of Assembly,umar-ali-bindawa
+67b976bf-377c-4698-8a58-f6b00847918a,Umar Dahiru Jamilu,House of Assembly,umar-dahiru-jamilu
+f47c9892-6ce5-4256-a2ad-1b22f8278899,Umar Jauro Audi,House of Assembly,umar-jauro-audi
+2eedb7d7-46bd-4868-8582-69efca6d57b1,Umar Musa Gama,House of Assembly,umar-musa-gama
 b41d343c-c350-47a6-abed-1249db8a17fe,Umar Tanko Tunga,House of Assembly,umar-tanko-tunga
+5ea0d572-3391-4b37-9a6e-0cca5f07c2b1,Umar Yakubu,House of Assembly,umar-yakubu
 9c81b71e-41d5-4e14-96c3-bfa1f8b32856,Umaru Hassan Ambursa,House of Assembly,umaru-hassan-ambursa
 ef189e0f-ff99-488c-94be-570f2d950ba3,Umaru Salah Sambawa,House of Assembly,umaru-salah-sambawa
+4636839d-7354-4c08-9081-62cd7245f168,Umeoduagu Nnamdi Dike,House of Assembly,umeoduagu-nnamdi-dike
+29fa6ca9-6749-4f08-870a-01bcf67c12c7,Ununu Joseph,House of Assembly,ununu-joseph
 734f8ec4-b1f0-45be-9f76-c5352e021684,Usman Haladu Isah Kanya,House of Assembly,usman-haladu-isah-kanya
+0e0ab7e0-3ff3-422b-901a-2ee47f3b040c,Usman Ibrahim,House of Assembly,usman-ibrahim
 ce738b25-ec87-4153-bc9f-8a9ceaae65bb,Usman Labaran Shafa,House of Assembly,usman-labaran-shafa
+51e3d524-881e-4694-a61c-0a415cfdda32,Usman Lawan Moruma,House of Assembly,usman-lawan-moruma
+80adf556-2c6b-4108-a988-e1c0a4bf0c86,Usoro Samuel Akpanusoh,House of Assembly,usoro-samuel-akpanusoh
 c321bf63-d46e-4b5a-a999-b3f59e13f849,Uyiosasere Ekhosuehi,House of Assembly,uyiosasere-ekhosuehi
+7ebc31e4-944c-4bea-b8a4-0c2737309154,Uzamot Halily Adebayo,House of Assembly,uzamot-halily-adebayo
+8e5a1d47-be38-44c8-9571-e89a477d6e85,Uzodike Aaron,House of Assembly,uzodike-aaron
+42f4b84f-f8be-4919-8c14-c49e342f2b70,Victor Chukwu Uzoma,House of Assembly,victor-chukwu-uzoma
+33ae511c-78d5-4f87-905d-734c7dcec826,Victor Patrick Ekwere,House of Assembly,victor-patrick-ekwere
+f3c7af44-b978-4d46-9cd5-73dd91e2c0f1,Victor Umoke Aleke,House of Assembly,victor-umoke-aleke
 13fbaca9-279c-44c6-8767-378fa9156c5a,Vincent Osas Uwadiae,House of Assembly,vincent-osas-uwadiae
+02e0a46c-9f3d-4b1d-ab02-3716408ae2e9,Wakil Bukar Lawan,House of Assembly,wakil-bukar-lawan
+abef69da-acb2-4c04-98e8-9462822977db,Wallok Philip Goma,House of Assembly,wallok-philip-goma
+ca39238a-bc28-4551-b484-bacb67c2c7a6,Wanzam Mohammed,House of Assembly,wanzam-mohammed
+72b07099-8616-4de5-8236-b3bac0ec551f,Wasiu Eshilokun Sanni,House of Assembly,wasiu-eshilokun-sanni
+5602cc8f-5b62-4cf2-90c2-3acafbb1e761,Wesley Barhiya,House of Assembly,wesley-barhiya
+7afd8a82-8497-4f9a-8d7d-6e78376964e7,William Marange O.,House of Assembly,william-marange-o
+7334cc0f-646a-4346-bfaf-4b24ce31d155,Williams Adewinle Adewale,House of Assembly,williams-adewinle-adewale
+e2bcb421-e7bb-4613-9432-98966160c892,Wilson Ayakpo Ohuyegha,House of Assembly,wilson-ayakpo-ohuyegha
 382be9b4-1861-4bc7-a3cc-a1530d757b8b,Yabagi Umar,House of Assembly,yabagi-umar
+3ca702a7-6567-49e4-b591-bf878954eda9,Yagba Victor K.,House of Assembly,yagba-victor-k
+a1d1c465-a88c-4324-a67b-fde7214c76eb,Yahaya Adamu,House of Assembly,yahaya-adamu
+d7b8a653-63f6-474e-bbb0-69aff8d98ce4,Yahaya Douglas Ndatse,House of Assembly,yahaya-douglas-ndatse
 43a19dcd-5068-45d8-8ed7-22fe607bae37,Yahaya Mohammed Kaka,House of Assembly,yahaya-mohammed-kaka
 4e260552-75de-47bf-a98f-24332896994e,Yahaya Muhammad,House of Assembly,yahaya-muhammad
 4a6f135c-9cf6-447a-ae10-4b6b270cfc82,Yakubu Bashir Barau,House of Assembly,yakubu-bashir-barau
-10398012-d584-4a27-8f80-0752b35419c0,Yakubu Suleiman Abdullahi,House of Assembly,yakubu-suleiman-abdullahi
-13f30749-7198-4785-bcd9-f1a8506b2a06,Yusuf Ahmed Bulangu,House of Assembly,yusuf-ahmed-bulangu
-42e98c01-13c7-4ec9-9f20-f9cffac82012,Abdul Nasir,House of Assembly,abdul-nasir
-d15e8e33-73c0-4974-a7d9-af474c572682,Abdulkarim Mohammed,House of Assembly,abdulkarim-mohammed
-2ff4671a-c0a5-4675-a2a0-6be9a2b51ce9,Abdullahi Adamu Bazuwa,House of Assembly,abdullahi-adamu-bazuwa
-4dca6263-ab3d-4376-a1c8-99003a5c0411,Abdullahi Ademola Rasak,House of Assembly,abdullahi-ademola-rasak
-bc809212-bae4-4f18-9d52-6a255756a213,Abdullahi Alhaji Zakari,House of Assembly,abdullahi-alhaji-zakari
-b0a3f5f7-f8e0-4449-a16a-430902a63e50,Abdullahi Garba,House of Assembly,abdullahi-garba
-3c56d1af-b11a-46c1-bc46-1a5dd9af2744,Abdullahi Hamman Adama Borkono,House of Assembly,abdullahi-hamman-adama-borkono
-886d5818-15d6-4ecd-a28a-b69b5e6d5cc1,Abdullahi Mahmud,House of Assembly,abdullahi-mahmud
-81bb5a23-de6f-4eea-8836-3a3cdd0f954d,Abiodun Fadeyi,House of Assembly,abiodun-fadeyi
-eef4dae2-4515-42f2-a1b6-b8d2c47786cc,Abioye Adenike Elizabeth,House of Assembly,abioye-adenike-elizabeth
-89004cb1-7167-41de-bda1-fbe5f48ee77a,Abubakar Altine Kyadawa,House of Assembly,abubakar-altine-kyadawa
-f94d385f-107a-4415-9f0c-f4c86b8a6f08,Abubakar Yahuza Maidalailu,House of Assembly,abubakar-yahuza-maidalailu
-5932eac9-3901-435a-8fca-359cb8d1ab0c,Adamu Mohammed,House of Assembly,adamu-mohammed
-a305eb85-26a6-47ae-a002-a51689c58d8d,Adebayo Babajide G.,House of Assembly,adebayo-babajide-g
-57936647-f860-4367-92ae-80a406abd250,Adebisi Lateef Adelani,House of Assembly,adebisi-lateef-adelani
-c4f39382-c8fb-4af9-b50b-ba8918812bfd,Adebunmi Lateef Olayiwola,House of Assembly,adebunmi-lateef-olayiwola
-003d50b0-446e-44e7-99b3-ce7a483a59e0,Adebusola Taiwo Hezekiah,House of Assembly,adebusola-taiwo-hezekiah
-41f3e29e-a9fe-443f-b43b-8262e7adcc5c,Adedibu Hakeem A.,House of Assembly,adedibu-hakeem-a
-19a18f5e-79e1-4512-b8d4-4a92d5906cc4,Adedoyin Onaolapo Sanjo,House of Assembly,adedoyin-onaolapo-sanjo
-bfbe6ff7-e5a9-4edb-a34a-85b3ad255eab,Adegbile Adirulahi Abefe,House of Assembly,adegbile-adirulahi-abefe
-43625332-6ee8-45d5-b8c4-6abb99061e5e,Adeola Bamidele,House of Assembly,adeola-bamidele
-3de86d45-1f4d-4feb-b1e6-7543dc22f05e,Adetoyi Yinka Michael,House of Assembly,adetoyi-yinka-michael
-623b145e-c474-4902-b86f-540784b3bae3,Adewale Richards Adedoyin,House of Assembly,adewale-richards-adedoyin
-337f98f6-4218-47c1-9404-2678523b1dfe,Adeyemi Adewumi,House of Assembly,adeyemi-adewumi
-3c036671-c4ea-4da1-a7eb-5eb8801d58c6,Adeyeye Olajide Martins,House of Assembly,adeyeye-olajide-martins
-3b835eaf-0e75-4af4-ab60-98459442ae30,Ahmad Jedua Dawud,House of Assembly,ahmad-jedua-dawud
-6197ef69-a84b-4c83-9b24-891542f9b348,Ahmed Musa Dambol,House of Assembly,ahmed-musa-dambol
-af78352c-f5fe-4696-9da9-134fb1343b64,Aji Josiah John,House of Assembly,aji-josiah-john
-f6de4e80-1810-4e4f-8894-5508b34ec373,Akande Moshood Kunle,House of Assembly,akande-moshood-kunle
-6d520b63-19e4-4aa9-942e-5fd4ff8b4053,Akeem Mustapha,House of Assembly,akeem-mustapha
-ff921f0d-d35c-4127-9e38-91d8abd968af,Akeem Obadara,House of Assembly,akeem-obadara
-0d71503e-9b24-4a2e-93d8-0df32aeb1920,Akintunde Olajide Emmamuel,House of Assembly,akintunde-olajide-emmamuel
-dfdfa7a2-b47b-45ff-bd91-4c56e1423496,Alarape Asimiyu Niran,House of Assembly,alarape-asimiyu-niran
-128823de-ecce-405f-a6eb-065d36debeb2,Alhaji Maidawa,House of Assembly,alhaji-maidawa
-1ad21183-a53b-48d7-b625-5fdcd2400a1a,Almustapha Aminu,House of Assembly,almustapha-aminu
-3d49e48d-3ecf-443b-8785-919b7cb725dc,Aminu Magaji,House of Assembly,aminu-magaji
-a0b9a9c5-eec6-4ebf-932c-8eae22e928f3,Aminu Yusuf Jangebe,House of Assembly,aminu-yusuf-jangebe
-72532598-3c88-4cb8-bdbf-c3d89ef9184d,Anas Sarkin Fada,House of Assembly,anas-sarkin-fada
-9085279b-33fa-491c-bffe-6f511841c652,Anderifun Timothy Habila,House of Assembly,anderifun-timothy-habila
-a1944038-fa60-47c3-817e-aa7e0b4feccf,Babalola O. Samson,House of Assembly,babalola-o-samson
-2756f710-4c0f-406f-8b3d-f70e2c3a8e7a,Badamasi Taofeek Olatunde,House of Assembly,badamasi-taofeek-olatunde
-27493756-992b-48dd-ab38-1174eeb3f75f,Balle Faruk Mustapha,House of Assembly,balle-faruk-mustapha
-71681595-5cd2-4a63-b8bf-e696ab562312,Bamigboye Jacob Abidoye,House of Assembly,bamigboye-jacob-abidoye
-ad07ec34-02ff-4c1a-ab69-d4596a4215fb,Bashir Mohammed,House of Assembly,bashir-mohammed
-cba8f9bc-6e0e-4a61-967d-633ebb7a7544,Bazam Mohammed,House of Assembly,bazam-mohammed
-37a4cea7-956e-4e20-8afc-48cc433427f9,Bello Isah Ambarura,House of Assembly,bello-isah-ambarura
-e4d6d4ea-90e0-44f0-a400-33cfed0bea16,Bizi Gafo Maizabu,House of Assembly,bizi-gafo-maizabu
-b19b70ad-0793-4052-b9cf-ae1b0e264f74,Bonzena John Kizito,House of Assembly,bonzena-john-kizito
-25d571aa-cde5-40a2-b832-bfadb8bcd7ab,Buba Chiroma Alhaji,House of Assembly,buba-chiroma-alhaji
-b0cb995c-89e8-4c0f-ba4d-1dbf81a6fc53,Buba Saleh Maina,House of Assembly,buba-saleh-maina
-50bb7d51-5d00-4350-af9d-dbe334d8e5d5,Bukar Bulama,House of Assembly,bukar-bulama
-5e4d3b59-7ae4-4905-b028-92f56c64aff3,Bukuni Dominic Nzinang,House of Assembly,bukuni-dominic-nzinang
-a8c05ef4-0a87-4276-b531-2406d01b21eb,Bularafa Bunu Zanna,House of Assembly,bularafa-bunu-zanna
-bd0bf428-113c-4f29-b1bc-03bf9e138dcb,Diah Peter Abel,House of Assembly,diah-peter-abel
-e59df8f8-790f-4f98-813d-14eafa5bad9e,Dogo Dala Adamu,House of Assembly,dogo-dala-adamu
-23bac17f-62f1-422a-8849-2a06655c8d1f,Eneme Tafarki Agbadu,House of Assembly,eneme-tafarki-agbadu
-4d9b7189-8747-41c9-8828-34ae74a233e1,Faruk Musa Dosara,House of Assembly,faruk-musa-dosara
-faf44815-3814-4c76-947f-be0e69464261,Faruku Amadu,House of Assembly,faruku-amadu
-9f233e11-b65c-4113-96f5-dd526fba5ef0,Fatokun Ayotunde O.,House of Assembly,fatokun-ayotunde-o
-e0b01060-4c42-4682-9248-fa35e0da4f5e,Francis A. Adetunji,House of Assembly,francis-a-adetunji
-aa3565de-d5ab-49c9-8287-3b5a5b402297,Gana Maina Digma,House of Assembly,gana-maina-digma
-d3d2ce32-3372-424b-b62c-aaefefd04207,Gande Atiku Liman,House of Assembly,gande-atiku-liman
-d3daaa77-4af7-4115-9cee-9bd4003b3d35,Garba Ajiya Samson,House of Assembly,garba-ajiya-samson
-53ecce37-5b12-4ae4-a6e8-749942888827,Gayam Mohammed Umar Galadima,House of Assembly,gayam-mohammed-umar-galadima
-98ce0a8d-ee15-47f8-a985-b95a4ca6e1d3,Gwampo Mohammed D,House of Assembly,gwampo-mohammed-d
-a49f4a0a-0cf9-46c3-b227-083c3f369180,Haliru Buhari,House of Assembly,haliru-buhari
-c7f2f8fd-0b55-4f44-82ec-854521dc319e,Ibirogba John Babatunde,House of Assembly,ibirogba-john-babatunde
-7971fa5c-4c0c-4525-af83-291b1cbe79c9,Ibrahim Buba,House of Assembly,ibrahim-buba
-370e9220-2807-4485-a2d3-8632a07af9a1,Ibrahim Mohammed,House of Assembly,ibrahim-mohammed
-2fc5619b-adbb-4849-9982-96a184443f33,Ibrahim Mohammed Naidda,House of Assembly,ibrahim-mohammed-naidda
-e39c4b49-999a-4440-89c2-5a1c7f3190a3,Isa Harisu Kebbe,House of Assembly,isa-harisu-kebbe
-faf98e24-2142-4ba1-bf6f-0517b2d8410b,Isa Mohammed,House of Assembly,isa-mohammed
-60728413-48e0-4baf-85c6-1cbdd8efc452,Isiaka Kazeem Tunde,House of Assembly,isiaka-kazeem-tunde
-5a480f3e-7372-497c-b82f-9abf4ff52acf,Jawa Mala Lawan,House of Assembly,jawa-mala-lawan
-0464a669-23d3-4193-85fa-5fe7df0ac174,Jimoh Mulikat Abiola,House of Assembly,jimoh-mulikat-abiola
-c6a6d67f-bf80-4d43-b600-f3f053683f18,Kabiru Dauda,House of Assembly,kabiru-dauda
-82cbc12c-e20b-4bf8-b9bd-4c9b99a83508,Kabiru Hashimu,House of Assembly,kabiru-hashimu
-aa7dff73-5f57-4f31-8002-77356757abf3,Kabiru Magaji,House of Assembly,kabiru-magaji
-54b4ac83-cca7-454c-83fd-b63f277806f1,Kaura Abbas Umar,House of Assembly,kaura-abbas-umar
-667c1929-525a-4d0f-962b-a42ff9caea11,Kazeem Olayanju,House of Assembly,kazeem-olayanju
-c030a441-ffec-4b38-a0d8-df6d695c1761,Kofoworola Adewumi Babajide,House of Assembly,kofoworola-adewumi-babajide
-5535d267-20fe-4d2b-a8fa-f98c38d7e122,Komolafe Babatunde Festus,House of Assembly,komolafe-babatunde-festus
-75ce5ecd-c275-44aa-8ded-772bc3d27a67,Kunini Joseph Albasu,House of Assembly,kunini-joseph-albasu
-ff9f9183-464a-4c43-9f6c-6d76c776d575,Lawan Inuwa Sani,House of Assembly,lawan-inuwa-sani
-73062f0e-f5b4-4e75-af11-23356c67553c,Lawan Saminu Musa,House of Assembly,lawan-saminu-musa
-efb0119f-ee23-4ed4-9e40-2662290c4527,Magaji Abubakar,House of Assembly,magaji-abubakar
-19af96ec-5a88-42c5-b0d8-a7eaf4261b2c,Maijankai Charles Abihuda,House of Assembly,maijankai-charles-abihuda
-fccaac45-6e76-4705-a4c3-7738929ab39f,Maikudi Gambo,House of Assembly,maikudi-gambo
-0a4b6eac-d0d7-48be-bd7e-24b85430de48,Maimata Mohammed Kabir,House of Assembly,maimata-mohammed-kabir
-2949a8c0-fe13-4244-b12b-68de39be4012,Maina Kachalla Aliyu,House of Assembly,maina-kachalla-aliyu
-c037d60d-76a1-40ad-b577-2e6e177d411b,Mansur Mohammed,House of Assembly,mansur-mohammed
-6e58f6a4-8d1c-4328-8d55-5abd87b34c24,Mark Bako Useni,House of Assembly,mark-bako-useni
-c77dbfa1-17f5-4101-8c36-2ac69846b6c8,Miko Musa,House of Assembly,miko-musa
-fa41b351-d0b8-4560-b4c9-72d9fb3b35be,Mirwa Ahmed Lawan,House of Assembly,mirwa-ahmed-lawan
-6dabfa4d-4329-41cb-a896-c9748d99d75d,Mobaje Razak,House of Assembly,mobaje-razak
-597d152d-f015-4823-af7e-59aec7701b0c,Modachi Habibu Halilu,House of Assembly,modachi-habibu-halilu
-adcd358c-60f7-413f-bd29-a48659720a99,Mohammed Ali,House of Assembly,mohammed-ali
-5661e156-f00d-475d-8593-6569f43c5020,Mohammed Aminu Achida,House of Assembly,mohammed-aminu-achida
-fbbfe9f3-39a9-418c-9dc7-63c3f843bc8c,Mohammed Hassan,House of Assembly,mohammed-hassan
-524b6d44-3ab3-4d0c-a389-f32482cba2c2,Mohammed Malami Ahmed,House of Assembly,mohammed-malami-ahmed
-84b916ce-e44e-45e9-a860-d3cff98a9bd7,Muhammad Bello Idris,House of Assembly,muhammad-bello-idris
-fad67912-7fef-412a-bb09-25ca42e5b188,Muhammad G. Ahmad,House of Assembly,muhammad-g-ahmad
-8a503ca1-e22f-4584-ac68-4b58a79f857c,Murtala Bello Maigona,House of Assembly,murtala-bello-maigona
-e0f698b2-93fa-4f7e-b620-9e031d839de2,Musa Aliyu Na’Maigora,House of Assembly,musa-aliyu-namaigora
-6d31c89f-0776-4892-87ef-242e712d813b,Musa Bawa Musa,House of Assembly,musa-bawa-musa
-7680be82-9c40-463a-92d9-c9b8ad032920,Mustapha Abdullhi,House of Assembly,mustapha-abdullhi
-14c46e4a-fc53-4124-857d-abb95756d236,Mustapha Alhaji Bukar,House of Assembly,mustapha-alhaji-bukar
-bef07aa8-7f7d-4815-b6a4-d22037634098,Nasiru Atiku,House of Assembly,nasiru-atiku
-cf00ec65-8907-4884-a79a-8091799fe5fe,Nasiru Bello Lawal,House of Assembly,nasiru-bello-lawal
-220b72eb-b80e-4216-aaf1-debaceaec3dc,Nasiru Mu’Azu,House of Assembly,nasiru-muazu
-047a00c3-7612-4a55-ae7f-9f7cd002471d,Nura Daihiru,House of Assembly,nura-daihiru
-3d762f66-e572-4dc3-ac17-de9128307eaa,Ogundipe Benjamin Olugbenga,House of Assembly,ogundipe-benjamin-olugbenga
-fbfc3d47-2f6f-4dbb-a2bc-8e2eaf41550a,Ogundoyin Debo Edward,House of Assembly,ogundoyin-debo-edward
-56a88f7b-7dd2-4264-b94c-249ecc88e8dc,Ogunkanmi Abidemi Gbenga,House of Assembly,ogunkanmi-abidemi-gbenga
-47c8eb8c-5f91-4929-8562-d6b1fbce6891,Ojedokun Peter,House of Assembly,ojedokun-peter
-c90d395e-489b-4842-be20-df59449495f0,Ojo Desmond Babatunde Olumide,House of Assembly,ojo-desmond-babatunde-olumide
-9a0522b3-8281-4abe-9b79-e99e3718a114,Okedoyin Femi,House of Assembly,okedoyin-femi
-f0347981-fdff-490b-818e-6ab714be515b,Oladeji Bimbo Olawunmi,House of Assembly,oladeji-bimbo-olawunmi
-1421df2b-5022-44f3-a918-becbae2dee68,Olamide Olagoke,House of Assembly,olamide-olagoke
-4d219f9d-65d5-4fac-9629-303b3ab2bcee,Olanrewaju Maruf Ajibola,House of Assembly,olanrewaju-maruf-ajibola
-44fae93d-b6d0-402c-92c6-edaa0319add4,Olateju Nasiru Babatunde,House of Assembly,olateju-nasiru-babatunde
-3f68e02c-10c9-4aab-89fe-3b7b701b10aa,Olatunde Kehinde,House of Assembly,olatunde-kehinde
-dbbe4c98-9923-4954-88af-e5845abbcefa,Olatunji Babatunde Lekan,House of Assembly,olatunji-babatunde-lekan
-2a185d46-6376-4c37-8e12-0ee47ce339c6,Olodo Taiwo Adebayo,House of Assembly,olodo-taiwo-adebayo
-a700faf5-e7c9-4aae-ad36-c9306466734d,Oluseyi Adisa,House of Assembly,oluseyi-adisa
-7dda6577-7063-4595-84f2-ec93573a89be,Oluwafemi Fowokannu,House of Assembly,oluwafemi-fowokannu
-f9c20099-043e-4783-84c2-6bd761cde3d8,Owolabi Olushola,House of Assembly,owolabi-olushola
-b98bb2b7-9364-4372-aad8-2ede9a587a92,Oyekunle Fola S.,House of Assembly,oyekunle-fola-s
-bca2c870-97eb-472b-bbff-1e407887181b,Oyekunle Israel Adekunle,House of Assembly,oyekunle-israel-adekunle
-65c0c754-5987-4b16-bb9a-0f75d37aa152,Oyeleke Simon Adegbola,House of Assembly,oyeleke-simon-adegbola
-6eba7821-45b0-40ad-a41c-9619cab0fa49,Popoola Ademola O.,House of Assembly,popoola-ademola-o
-299b1b56-1529-4789-aaca-a56f316a4c4b,Popoola Simeon Olufemi,House of Assembly,popoola-simeon-olufemi
-9c9c7ab5-366d-4ab2-8eaa-b56c03cc346e,Randa Abdullahi Muhammad,House of Assembly,randa-abdullahi-muhammad
-cb4e9e6e-2f64-4aec-9867-93d0850d40b8,Romo Sule Hantsi,House of Assembly,romo-sule-hantsi
-21f0ea4e-bd59-4048-a40d-50a11d0fdae6,Sabo Pius,House of Assembly,sabo-pius
-623318f9-7d97-4a49-8e73-745a3a714c5c,Sahabi Umaru,House of Assembly,sahabi-umaru
-edece82c-0585-44d7-b8af-5bc23685e0e9,Saidu N. Ibrahim,House of Assembly,saidu-n-ibrahim
-09f0a2bc-ea21-4b61-8879-0a1d1056cc4b,Salihu Usman Zurmi,House of Assembly,salihu-usman-zurmi
-34dbaf88-73f1-4771-8369-c3455405cb7c,Saminu Ridwan Gbadamosi,House of Assembly,saminu-ridwan-gbadamosi
-e095347a-57a9-4012-abf0-f511bd750f0c,Sani Dahiru,House of Assembly,sani-dahiru
-7dc78330-b997-4269-b08c-e4c927cf61df,Sani Ishaku Audu,House of Assembly,sani-ishaku-audu
-0d59803a-cb83-442e-a4c4-c1012ea73da8,Sanyina Mode Ladan,House of Assembly,sanyina-mode-ladan
-a0b92d06-2cd6-442b-b7d7-6842e3e93e20,Sarki Ibrahim Arzika,House of Assembly,sarki-ibrahim-arzika
-59e90887-8019-4978-8d50-c01c10d93270,Shafi’U Dama,House of Assembly,shafiu-dama
-ec124ee5-81d1-4e7c-8923-63f159a2829b,Shamudeen Hassan,House of Assembly,shamudeen-hassan
-0a3bd4f4-c8fa-4790-9c7f-54f02961fc28,Shehu Yabo Abubakar,House of Assembly,shehu-yabo-abubakar
-25a98e9d-785b-45d9-a804-1734161762a8,Stephen Akanfe O.,House of Assembly,stephen-akanfe-o
-3cb09864-7898-4f0c-bb37-ad5a0222f706,Sulaiman Abbas,House of Assembly,sulaiman-abbas
-cefef645-d6aa-4287-a9d5-e964b68eff5a,Tafida Nasiru Usman,House of Assembly,tafida-nasiru-usman
-ae17c7e1-ba7e-49a7-9965-657fb94ad3db,Timothy Owoeye,House of Assembly,timothy-owoeye
-b1a801ca-a6ba-4ed2-9df8-e737b393bd60,Tukur Bala,House of Assembly,tukur-bala
-7c08285e-f110-4b1a-a596-fa66da14974e,Tukur Jekada Birnin,House of Assembly,tukur-jekada-birnin
-7ebc31e4-944c-4bea-b8a4-0c2737309154,Uzamot Halily Adebayo,House of Assembly,uzamot-halily-adebayo
-d7b8a653-63f6-474e-bbb0-69aff8d98ce4,Yahaya Douglas Ndatse,House of Assembly,yahaya-douglas-ndatse
+962541a2-459a-4ce8-b6f5-5d98b28a2f34,Yakubu Gambo Kimba,House of Assembly,yakubu-gambo-kimba
+02e585c1-7e39-46c1-8f92-3b7367aff011,Yakubu Sanda,House of Assembly,yakubu-sanda
 875e6b96-3310-4973-ad6b-e9352f19ef71,Yakubu Suleiman,House of Assembly,yakubu-suleiman
+10398012-d584-4a27-8f80-0752b35419c0,Yakubu Suleiman Abdullahi,House of Assembly,yakubu-suleiman-abdullahi
 8bd2b481-23d5-4ba2-8264-2436cee3956a,Yau Usman Dachia,House of Assembly,yau-usman-dachia
+891691f0-8e16-498c-8580-d5df4f8fc1f8,Yunusa Ahmed,House of Assembly,yunusa-ahmed
+e1dcb9d4-0c79-44d2-96f3-9d1d41938054,Yunusa Haruna Kayyu,House of Assembly,yunusa-haruna-kayyu
 444ed56f-a499-4938-88e2-a0c9b6a4f245,Yusuf Adebisi,House of Assembly,yusuf-adebisi
+13f30749-7198-4785-bcd9-f1a8506b2a06,Yusuf Ahmed Bulangu,House of Assembly,yusuf-ahmed-bulangu
 570a5466-b518-4326-9f01-8814fff6d0a7,Yusuf Alhassan,House of Assembly,yusuf-alhassan
+7f5b48a9-6a4d-44a4-99ab-f5de6fd528c0,Yusuf Atoyebi Musa,House of Assembly,yusuf-atoyebi-musa
+ab71bfc2-f466-437a-acb5-d6b59d5c68c2,Yusuf Babangida Sulaiman,House of Assembly,yusuf-babangida-sulaiman
+450eae6f-2c36-4629-bfd2-824d33003eb9,Yusuf Dahiru Liman,House of Assembly,yusuf-dahiru-liman
+12a44589-100d-4c87-8100-e0422941b1ef,Yusuf Ibrahim,House of Assembly,yusuf-ibrahim
+2f17bff1-1bf1-4444-a89b-b9d77fce9ef4,Yusuf Ibrahim Zailani,House of Assembly,yusuf-ibrahim-zailani
+9c88d012-1137-4708-997e-7abb7c856a5e,Yusuf Inuwa Dadiye,House of Assembly,yusuf-inuwa-dadiye
+a56f2809-9c51-4b86-9d01-5a020d07d4f7,Yusuf Mohammed Bako,House of Assembly,yusuf-mohammed-bako
+834a8ebb-78f4-4ccd-aca2-be666d1b11b7,Yusuf Mugu,House of Assembly,yusuf-mugu
 3a15e964-9ab4-4b96-aa01-c19e091e9de3,Yusuf Muhammad,House of Assembly,yusuf-muhammad
+00aa9060-f74f-4c57-96a3-8055cf94bc76,Yusuf Salihu,House of Assembly,yusuf-salihu
+6d4067b6-c45e-4e5d-9c9c-41414afe45ee,Yusuf Sherif Abiodun,House of Assembly,yusuf-sherif-abiodun
+45fa051c-d248-4c28-8dd8-c05bbee1e668,Yusuf Waheed,House of Assembly,yusuf-waheed
+356a14fe-3805-4df7-9018-182c99424746,Yuttisuri H/Tukur,House of Assembly,yuttisuri-htukur
 55968ebd-f793-4d71-ba29-92e20fb83883,Zaharadeen M. Sada,House of Assembly,zaharadeen-m-sada
+3505c87e-9d3a-42b7-bf3c-02838ad02dcc,Zahradeen Usman Sani,House of Assembly,zahradeen-usman-sani
+0df4bf97-f2ce-492f-b135-2ac61de9f2c0,Zimtim Sochang,House of Assembly,zimtim-sochang
+eb8f9b2c-5d5a-4f37-82c1-f0e773c51888,Zubairu Hamza Massu,House of Assembly,zubairu-hamza-massu
