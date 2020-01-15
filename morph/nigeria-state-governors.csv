@@ -1,10 +1,10 @@
 honorific_prefix,name,id,state,party,email,phone,twitter,facebook_url,birth_date,gender,identifier__shineyoureye,image_url,website_url,other_names
-Dr,Okezie Ikpeazu,gov:victor-okezie-ikpeazu,Abia,Peoples Democratic Party,info@abiastate.gov.ng,2348053387018,OkezieIkpeazu,,1964-10-18,Male,okezie-ikpeazu,http://www.shineyoureye.org/media_root/images/Abia_-_Okezie_Ikpeazu.jpg,,Okezie Ikpeazu
+Dr,Okezie Ikpeazu,gov:victor-okezie-ikpeazu,Abia,Peoples Democratic Party,info@abiastate.gov.ng,2348053387018,GovernorIkpeazu,,1964-10-18,Male,okezie-ikpeazu,http://www.shineyoureye.org/media_root/images/Abia_-_Okezie_Ikpeazu.jpg,,Okezie Ikpeazu
 ,Ahmadu Umaru Finitiri,gov-ahmadu-umaru-finitiri,Adamawa,Peoples Democratic Party,,,AhmaduFinitiri,,,,,https://theyworkforyou.github.io/shineyoureye-images/Governors/gov-ahmadu-umaru-finitiri/original.jpeg,,
 ,Udom Emmanuel,gov:emmanuel-udom,Akwa Ibom,Peoples Democratic Party,udom@udomemmanuel.ng,2348022243064,MrUdomEmmanuel,,1966-07-11,Male,emmanuel-udom,http://www.shineyoureye.org/media_root/images/Akwa_Ibom_-_Emmanuel_Udom.jpg,,
 ,Willie Obiano,gov:willie-obiano,Anambra,All Progressives Grand Alliance,,2347030008855,WillieMObiano,https://www.facebook.com/WillieObiano,1957-08-08,Male,willie-maduabuchukwu-obiano,http://www.shineyoureye.org/media_root/images/obiano-2.jpg,,Willie Maduabuchukwu Obiano
 ,Bala Mohammed,gov-bala-mohammed,Bauchi,Peoples Democratic Party,,,,,,,,https://theyworkforyou.github.io/shineyoureye-images/Governors/gov-bala-mohammed/original.jpeg,,
-Hon,Seriake Dickson,gov:seriake-dickson,Bayelsa,Peoples Democratic Party,,2348033422268;2348084673265;2348132798648,GovDickson;DicksonSeriake,,1966-01-28,Male,henry-seriake-dickson,http://www.shineyoureye.org/media_root/images/dickson_1.jpg,,Henry Seriake Dickson
+Hon,Seriake Dickson,gov:seriake-dickson,Bayelsa,Peoples Democratic Party,,2348033422268;2348084673265;2348132798648,iamHSDickson,,1966-01-28,Male,henry-seriake-dickson,http://www.shineyoureye.org/media_root/images/dickson_1.jpg,,Henry Seriake Dickson
 ,Samuel Ortom,gov:samuel-ortom,Benue,Peoples Democratic Party,,2349091573337,OrtomSamuel,,1961-04-23,Male,samuel-ortom,http://www.shineyoureye.org/media_root/images/Benue_-_Samuel_Ortom.jpg,,
 ,Babagana Zulum,gov-babagana-zulum,Borno,All Progressives Congress,,,ProfZulum,,,,,https://theyworkforyou.github.io/shineyoureye-images/Governors/gov-babagana-zulum/original.jpeg,,
 Prof,Ben Ayade,gov:ben-ayade,Cross River,Peoples Democratic Party,,,ben_ayade,,1969-03-02,Male,benedict-ayade,http://www.shineyoureye.org/media_root/images/Cross_River_-_Ben_Ayade.jpg,,Benedict Ayade
@@ -22,7 +22,7 @@ Dr,Umar Ganduje,gov:umar-danguje,Kano,All Progressives Congress,,08037862149,Gov
 ,Atiku Bagudu,gov:atiku-bagudu,Kebbi,All Progressives Congress,,7030152466;08063496033;08035879790,AABagudu,,1961-12-28,Male,bagudu-abubakar-atiku,http://www.shineyoureye.org/media_root/images/Kebbi_-_Atiku_Bagudu.jpg,,Bagudu Abubakar Atiku
 ,Yahaya Adoza Bello,gov:yahaya-bello,Kogi,All Progressives Congress,info@kogistate.gov.ng,2348189679462,,,,Female,yahaya-bello,http://www.shineyoureye.org/media_root/images/Kogi_-_Yahaya_Bello_1.jpg,,
 ,Abdulrahman Abdulrazaq,gov-abdulrahman-abdulrazaq,Kwara,All Progressives Congress,,,RealAARahman,,,,,https://theyworkforyou.github.io/shineyoureye-images/Governors/gov-abdulrahman-abdulrazaq/original.jpeg,,
-,Babajide Sanwo Olu,gov-babajide-sanwo-olu,Lagos,All Progressives Congress,,,,,,,,https://theyworkforyou.github.io/shineyoureye-images/Governors/gov-babajide-sanwo-olu/original.jpeg,,
+,Babajide Sanwo Olu,gov-babajide-sanwo-olu,Lagos,All Progressives Congress,,,jidesanwoolu,,,,,https://theyworkforyou.github.io/shineyoureye-images/Governors/gov-babajide-sanwo-olu/original.jpeg,,
 ,Abdullahi Sule,gov-abdullahi-sule,Nasarawa,All Progressives Congress,,,,,,,,https://theyworkforyou.github.io/shineyoureye-images/Governors/gov-abdullahi-sule/original.jpeg,,
 ,Abubakar Bello,gov:alhaji-abubakar-sani-lulu-bello,Niger,All Progressives Congress,,2348032000008,abusbello,,1967-12-17,Male,abubakar-sani-bello,http://www.shineyoureye.org/media_root/images/Niger_-_Abubakar_Sani_Bello.jpg,,Abubakar Sani Bello
 ,Dapo Abiodun,gov-dapo-abiodun,Ogun,All Progressives Congress,,,dabiodunMFR,,,,,https://theyworkforyou.github.io/shineyoureye-images/Governors/gov-dapo-abiodun/original.jpeg,,
@@ -34,4 +34,4 @@ Rt Hon,Simon Lalong,gov:simon-lalong,Plateau,All Progressives Congress,info@plat
 Hon,Aminu Tambuwal,gov:aminu-waziri-tambuwal,Sokoto,Peoples Democratic Party,,2348033155496,AWTambuwal,,1966-01-10,male,waziri-aminu-tambuwal,http://www.shineyoureye.org/media_root/images/waziri-aminu-tambuwal,,Waziri Aminu Tambuwal
 Dr,Darius Ishaku,gov:darius-ishaku,Taraba,Peoples Democratic Party,,,dariusdishaku,,1954-07-30,Male,darius-ishaku,http://www.shineyoureye.org/media_root/images/Taraba_-_Darius_Ishaku.jpg,,
 ,Mai Mala Buni,gov-mai-mala-buni,Yobe,All Progressives Congress,,,,,,,,https://theyworkforyou.github.io/shineyoureye-images/Governors/gov-mai-mala-buni/original.jpeg,,
-,Bello Mattawalle,gov-bello-mattawalle,Zamfara,Peoples Democratic Party,,,,,,,,https://theyworkforyou.github.io/shineyoureye-images/Governors/gov-bello-mattawalle/original.jpeg,,
+,Bello Mattawalle,gov-bello-mattawalle,Zamfara,Peoples Democratic Party,,,Bellomatawalle1,,,,,https://theyworkforyou.github.io/shineyoureye-images/Governors/gov-bello-mattawalle/original.jpeg,,
