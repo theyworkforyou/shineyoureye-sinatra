@@ -86,7 +86,7 @@ describe 'Honorables Page' do
         end
 
         it 'displays area name' do
-          person.css('.test-area').text.must_equal('Agege')
+          person.css('.test-area').text.must_equal('Agege (LGA)')
         end
 
         it 'does not displays party name' do
