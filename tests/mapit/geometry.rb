@@ -33,7 +33,7 @@ describe 'Mapit::Geometry' do
   end
 
   it 'raises an error if response status is not OK' do
-    bad_url = 'http://notfound.com'
+    bad_url = 'https://notfound.com'
     stub_request(:get, bad_url).to_return(status: 404)
     geometry = Mapit::Geometry.new(geojson_url: bad_url, geometry_url: 'irrelevant', user_agent: 'irrelevant')
 

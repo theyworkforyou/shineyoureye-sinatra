@@ -72,7 +72,7 @@ module Minitest
 
     DATASOURCE = 'https://github.com/everypolitician/everypolitician-data/raw/master/countries.json'
     REPO_URL = 'https://cdn.rawgit.com/everypolitician/everypolitician-data'
-    MAPIT_URL = 'http://nigeria.mapit.mysociety.org'
+    MAPIT_URL = 'https://nigeria.mapit.mysociety.org'
 
     EP_DISK_PATH = 'tests/fixtures/ep_data'
     MAPIT_DISK_PATH = 'tests/fixtures/mapit_data'
