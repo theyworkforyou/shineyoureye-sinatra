@@ -31,7 +31,7 @@ module Mapit
     end
 
     def http(uri)
-      Net::HTTP.new(uri.host, uri.port)
+      Net::HTTP.start(uri.host, uri.port, :use_ssl => true)
     end
 
     def request(uri)

@@ -31,7 +31,7 @@ set :contact_email, 'syeinfo@eienigeria.org'
 set :content_dir, File.join(__dir__, 'prose')
 set :datasource, ENV.fetch('DATASOURCE', 'https://github.com/everypolitician/everypolitician-data/raw/master/countries.json')
 set :index, EveryPolitician::Index.new(index_url: settings.datasource)
-set :mapit_url, 'http://nigeria.mapit.mysociety.org'
+set :mapit_url, 'https://nigeria.mapit.mysociety.org'
 set :mapit_user_agent, ENV.fetch('MAPIT_USER_AGENT', nil)
 set :twitter_user, 'NGShineYourEye'
 
