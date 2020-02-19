@@ -25,7 +25,10 @@ module Mapit
     attr_reader :geojson_url, :geometry_url, :user_agent
 
     def get(url)
-      response = http(URI(url)).request(request(URI(url)))
+      http = http(URI(url))
+      request = request(URI(url))
+      response = http.request(request)
+      http.finish if http.started?
       raise_if_response_not_ok(url, response.code)
       response.body
     end
