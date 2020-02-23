@@ -28,6 +28,11 @@ module Page
       places.find_all { |p| place_and_people_grouped_by_state.include? p.name }
     end
 
+    def filter_places_with_updated_profile
+      states = %w[Lagos Kano Ekiti Ondo Kwara Kogi Enugu Anambra].sort
+      filter_places_with_all_legislature.sort_by { |e| states.index(e.name) || Float::INFINITY }
+    end
+
     def current_term_start_year
       people_by_legislature.current_term_start_date.year
     end

@@ -200,6 +200,8 @@ get '/position/state-representatives/' do
     people_by_legislature: honorables
   )
 
+  @states_legislature = @page.filter_places_with_updated_profile
+
   erb :states
 end
 

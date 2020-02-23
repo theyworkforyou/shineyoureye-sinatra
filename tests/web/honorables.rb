@@ -10,9 +10,9 @@ describe 'Honorables Page' do
     subject.css('.page-title').text.must_include('State Houses of Assembly')
   end
 
-  it 'displays states alphabetically, from A to Z' do
+  it 'displays states alphabetically according to updated profiles, from A to Z' do
     subject.css('.states_and_legislature .media-heading').first.text
-           .must_equal('Abia')
+           .must_equal('Anambra')
     subject.css('.states_and_legislature .media-heading').last.text
            .must_equal('Zamfara')
   end
