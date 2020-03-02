@@ -8,6 +8,7 @@ module Page
       @title = title
       @places = places
       @people_by_legislature = people_by_legislature
+      @states = %w[Lagos Kano Ekiti Ondo Kwara Kogi Enugu Anambra].sort
     end
 
     def place_sort_by_parent_place
@@ -29,8 +30,11 @@ module Page
     end
 
     def filter_places_with_updated_profile
-      states = %w[Lagos Kano Ekiti Ondo Kwara Kogi Enugu Anambra].sort
-      filter_places_with_all_legislature.sort_by { |e| states.index(e.name) || Float::INFINITY }
+      filter_places_with_all_legislature.select { |e| states.include?(e.name) }
+    end
+
+    def filter_places_with_incomplete_profile
+      filter_places_with_all_legislature.select { |e| !states.include?(e.name) }
     end
 
     def current_term_start_year
@@ -39,6 +43,6 @@ module Page
 
     private
 
-    attr_reader :people_by_legislature
+    attr_reader :people_by_legislature, :states
   end
 end
