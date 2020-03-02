@@ -34,7 +34,7 @@ module Page
     end
 
     def filter_places_with_incomplete_profile
-      filter_places_with_all_legislature.select { |e| !states.include?(e.name) }
+      filter_places_with_all_legislature.reject { |e| states.include?(e.name) }
     end
 
     def current_term_start_year
