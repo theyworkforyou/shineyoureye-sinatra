@@ -1,5 +1,4 @@
 uuid,name,legislature_name,slug
-gov-abdullahi-sule,Abdullahi Sule,,abdullahi-sule
 gov-abdulrahman-abdulrazaq,Abdulrahman Abdulrazaq,,abdulrahman-abdulrazaq
 gov-ahmadu-umaru-finitiri,Ahmadu Umaru Finitiri,,ahmadu-umaru-finitiri
 gov-babagana-zulum,Babagana Zulum,,babagana-zulum
@@ -15,6 +14,7 @@ gov-mai-mala-buni,Mai Mala Buni,,mai-mala-buni
 gov-muhammad-badru,Muhammad Badru,,muhammad-badru
 gov:oluwarontimi-akeredolu,Oluwarotimi Akeredolu,,oluwarotimi-akeredolu
 gov-seyi-makinde,Seyi Makinde,,seyi-makinde
+gov-abdullahi-sule,Abdullahi Sule,,abdullahi-sule
 ead3c832-83ac-4764-9572-fa077e0e268a,Abass Agboworin,House of Representatives,abass-agboworin
 b2a7f72a-9ecf-4263-83f1-cb0f8783053c,Abdukadir Rahis,House of Representatives,abdukadir-rahis
 b25d4b6f-f2a3-449c-b117-61bb2431f978,Abdul Yakubu Shehu,House of Representatives,abdul-yakubu-shehu
@@ -178,7 +178,7 @@ ac122878-de91-4c5e-83d2-616466ae8dd3,Kabiru Amadu,House of Representatives,kabir
 75c372c3-d0ca-4286-92fc-c8cbad4acf58,Kabiru Idris,House of Representatives,kabiru-idris
 30ff9c6e-b40c-4c4c-b1b4-93292d909609,Kabiru Yahaya,House of Representatives,kabiru-yahaya
 c6115acd-13aa-4bd9-9fab-b2f0ab4dfed8,Karu Elisha,House of Representatives,karu-elisha
-10412415-496c-41e8-9b7b-5bfec5e4e6f0,Khadikja Bukar Ibrahim,House of Representatives,khadikja-bukar-ibrahim
+10412415-496c-41e8-9b7b-5bfec5e4e6f0,Khadija Bukar Ibrahim,House of Representatives,khadija-bukar-ibrahim
 dcc04e23-fd59-4c84-bea8-708a0a71cb72,Kingsley Uju,House of Representatives,kingsley-uju
 538a9138-6404-418b-8860-5a554d99bd35,Kokani Balla,House of Representatives,kokani-balla
 e2d842dd-2611-4252-92ed-8705a4983338,Kolapo Korede Osunsanya,House of Representatives,kolapo-korede-osunsanya
@@ -224,7 +224,7 @@ b6635f31-1ce6-412c-a899-ec5933b720d5,Muhammed Musa Pali,House of Representatives
 17c24323-fc52-474b-ae25-b223dcca3080,Muktar Shehu-Ladan,House of Representatives,muktar-shehu-ladan
 557d08dc-0bc1-4129-b082-6ac8b938978a,Muntari Dandutse,House of Representatives,muntari-dandutse
 356c08ec-a215-4f99-904a-3640b4cdf98a,Murtala Isah,House of Representatives,murtala-isah
-c632ebdb-d196-4c04-8e6f-d4094cc98dc7,Musa Umar Gari,House of Representatives,musa-umar-gari
+c632ebdb-d196-4c04-8e6f-d4094cc98dc7,Musa Umar Garo,House of Representatives,musa-umar-garo
 0e98e65d-e49b-4c35-99a1-495eaf13b9a2,Musliudeen Olaide Akinremi,House of Representatives,musliudeen-olaide-akinremi
 e47703c9-e588-43f8-ac1a-a2ec993b44fe,Nasir Abduwa,House of Representatives,nasir-abduwa
 3627b4c4-8201-400a-a78a-ef2a75bb84bf,Nasir Ali Ahmed,House of Representatives,nasir-ali-ahmed
@@ -262,7 +262,7 @@ db46a851-d314-47cd-85ce-954fc49a1095,Oriyomi Onanuga,House of Representatives,or
 709bd74e-5a24-4349-a39a-2d9898443c97,Owolabi Peter,House of Representatives,owolabi-peter
 30265162-65b9-48b4-bf04-19b89a17e5f4,Pascal Obi,House of Representatives,pascal-obi
 e2d23059-df3b-45c7-a748-198bdd3d86ec,Patrick Ifon,House of Representatives,patrick-ifon
-f4347186-6059-4c69-a985-81356618d64c,Peter Abiola,House of Representatives,peter-abiola
+f4347186-6059-4c69-a985-81356618d64c,Peter Abiola Makinde,House of Representatives,peter-abiola-makinde
 aa60a97d-b7d4-4fdc-b7b6-2aadc5fe0d14,Preye Influence,House of Representatives,preye-influence
 f9299f28-11b7-4ebd-82ed-39a85392866b,Rev Francis Waive,House of Representatives,rev-francis-waive
 4f331468-18f3-4701-8612-40851ad3f180,Richard Gbande,House of Representatives,richard-gbande
