@@ -61,7 +61,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
-    rdiscount (2.2.0.1)
+    rdiscount (2.2.0.2)
     require_all (2.0.0)
     rubocop (0.74.0)
       jaro_winkler (~> 1.5.1)
